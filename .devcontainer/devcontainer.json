@@ -19,6 +19,6 @@
         }
      },
     "remoteUser": "vscode",
-    "postStartCommand": "pg_ctl start -D /home/vscode/pgdata && cd /home/vscode/llvm-project && git pull && cd buildNinja && sudo ninja -j16 install clang",
+    "postStartCommand": "pg_ctl start -D /home/vscode/pgdata && cd /home/vscode/llvm-project && git pull && cd buildNinja && sudo ninja install clang",
     "forwardPorts": [5432]
 }
