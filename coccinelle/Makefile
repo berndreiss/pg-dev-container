@@ -1,7 +1,7 @@
 .PHONY: all bash reduce clean
-all: bash
+all: cocci
 
-bash:
+cocci:
 	@echo "Running Coccinelle related scripts..."
 	@$(MAKE) --no-print-directory pfree_repalloc
 	@$(MAKE) --no-print-directory char
@@ -22,4 +22,5 @@ reduce:
 	@cd scripts && bash reduceResults.sh char
 
 clean:
-	@rm -f results/*.out scripts/*.tmp
+	@rm -r results/* 
+	@rm -f scripts/*.tmp

@@ -3,19 +3,11 @@ pfree
 char *
 >json_manifest_scalar
 --
-/usr/local/src/postgresql/src/pl/plpython/plpy_exec.c:599:1
-pfree
-PLySavedArgs *
->PLy_function_drop_args
 /usr/local/src/postgresql/src/pl/plpython/plpy_exec.c:577:1
 pfree
 PLySavedArgs *
 >PLy_function_restore_args
 --
-/usr/local/src/postgresql/src/backend/utils/adt/xid8funcs.c:295:1
-pfree
-StringInfo
->buf_finalize
 /usr/local/src/postgresql/src/backend/utils/adt/ruleutils.c:12487:1
 pfree
 char *
@@ -42,21 +34,6 @@ NODE *
 pfree
 NODE *
 >plainnode
---
-/usr/local/src/postgresql/src/backend/utils/adt/xml.c:1278:1
-pfree
-PgXmlErrorContext *
->pg_xml_done
---
-/usr/local/src/postgresql/src/backend/utils/resowner/resowner.c:812:1
-pfree
-ResourceOwner
->ResourceOwnerDelete
---
-/usr/local/src/postgresql/src/backend/utils/mmgr/portalmem.c:599:1
-pfree
-Portal
->PortalDrop
 --
 /usr/local/src/postgresql/src/backend/nodes/bitmapset.c:846:2
 pfree
@@ -88,23 +65,11 @@ Bitmapset *
 repalloc
 SetConstraintState
 >SetConstraintStateAddItem
-/usr/local/src/postgresql/src/backend/commands/copyto.c:339:1
-pfree
-CopyToState
->EndCopy
 --
 /usr/local/src/postgresql/src/backend/commands/copyfrom.c:510:1
 pfree
 CopyMultiInsertBuffer *
 >CopyMultiInsertBufferCleanup
-/usr/local/src/postgresql/src/backend/commands/copyfrom.c:1754:1
-pfree
-CopyFromState
->EndCopyFrom
-/usr/local/src/postgresql/src/backend/replication/logical/worker.c:740:1
-pfree
-ApplyExecutionData *
->finish_edata
 --
 /usr/local/src/postgresql/src/backend/replication/logical/reorderbuffer.c:1492:1
 pfree
@@ -126,11 +91,6 @@ ReorderBufferTXN *
 pfree
 ReorderBufferTupleBuf *
 >ReorderBufferReturnTupleBuf
---
-/usr/local/src/postgresql/src/backend/replication/libpqwalreceiver/libpqwalreceiver.c:816:1
-pfree
-WalReceiverConn *
->libpqrcv_disconnect
 --
 /usr/local/src/postgresql/src/backend/tsearch/ts_parse.c:521:2
 pfree
@@ -189,20 +149,6 @@ pfree
 Page
 >PageRestoreTempPage
 --
-/usr/local/src/postgresql/src/backend/access/gin/ginbtree.c:748:3
-pfree
-GinBtreeStack *
->ginFinishSplit
---
-/usr/local/src/postgresql/src/backend/access/transam/generic_xlog.c:447:1
-pfree
-GenericXLogState *
->GenericXLogAbort
-/usr/local/src/postgresql/src/backend/access/transam/generic_xlog.c:434:1
-pfree
-GenericXLogState *
->GenericXLogFinish
---
 /usr/local/src/postgresql/src/backend/access/nbtree/nbtsort.c:693:1
 pfree
 Page
@@ -217,19 +163,6 @@ IndexTuple
 repalloc
 IndexTuple *
 >gistjoinvector
-/usr/local/src/postgresql/src/backend/access/index/genam.c:152:1
-pfree
-IndexScanDesc
->IndexScanEnd
---
-/usr/local/src/postgresql/src/backend/access/brin/brin.c:1353:1
-pfree
-BrinBuildState *
->terminate_brin_buildstate
-/usr/local/src/postgresql/src/backend/access/brin/brin_revmap.c:108:1
-pfree
-BrinRevmap *
->brinRevmapTerminate
 --
 /usr/local/src/postgresql/src/backend/access/brin/brin_tuple.c:452:9
 repalloc

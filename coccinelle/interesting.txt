@@ -8,3 +8,13 @@ pfree
 /usr/local/src/postgresql/src/backend/utils/adt/ruleutils.c:12487:1
 pfree
 >string_to_text
+
+/usr/local/src/postgresql/src/backend/replication/logical/reorderbuffer.c:577:1
+/*
+ * Free a ReorderBufferTupleBuf.
+ */
+void
+ReorderBufferReturnTupleBuf(ReorderBuffer *rb, ReorderBufferTupleBuf *tuple)
+{
+	pfree(tuple);
+}???
