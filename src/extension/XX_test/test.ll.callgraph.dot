@@ -1,0 +1,9 @@
+digraph "Call graph: test.ll" {
+	label="Call graph: test.ll";
+
+	Node0x55aea79efef0 [shape=record,label="{bms_test}"];
+	Node0x55aea79efef0 -> Node0x55aea79effa0;
+	Node0x55aea79efef0 -> Node0x55aea79f0460;
+	Node0x55aea79effa0 [shape=record,label="{bms_make_singleton}"];
+	Node0x55aea79f0460 [shape=record,label="{bms_add_member}"];
+}

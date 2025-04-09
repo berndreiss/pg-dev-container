@@ -28,7 +28,7 @@ Datum check_bms_membership(PG_FUNCTION_ARGS)
 
     for (i = 1; i <= max_value; i++)
     {
-        set = bms_add_member(set, i);
+        bms_add_member(set, i);
 
         if (!bms_is_member(i, set))
         {

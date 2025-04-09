@@ -1,0 +1,1 @@
+/home/vscode/llvm-project/buildNinja/bin/clang -Xclang -ast-dump test.c -I /usr/local/src/postgresql/src/include -I /usr/include -I /usr/include/x86_64-linux-gnu -I /usr/lib/llvm-14/lib/clang/14.0.6/include/

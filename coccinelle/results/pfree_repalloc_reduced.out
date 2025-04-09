@@ -1,0 +1,246 @@
+/usr/local/src/postgresql/src/bin/pg_verifybackup/parse_manifest.c:424:5
+pfree
+char *
+>json_manifest_scalar
+--
+/usr/local/src/postgresql/src/pl/plpython/plpy_exec.c:599:1
+pfree
+PLySavedArgs *
+>PLy_function_drop_args
+/usr/local/src/postgresql/src/pl/plpython/plpy_exec.c:577:1
+pfree
+PLySavedArgs *
+>PLy_function_restore_args
+--
+/usr/local/src/postgresql/src/backend/utils/adt/xid8funcs.c:295:1
+pfree
+StringInfo
+>buf_finalize
+/usr/local/src/postgresql/src/backend/utils/adt/ruleutils.c:12487:1
+pfree
+char *
+>string_to_text
+/usr/local/src/postgresql/src/backend/utils/adt/tsquery_rewrite.c:250:3
+pfree
+QTNode *
+>dofindsubquery
+/usr/local/src/postgresql/src/backend/utils/adt/acl.c:1321:3
+pfree
+Acl *
+>recursive_revoke
+--
+/usr/local/src/postgresql/src/backend/utils/adt/tsquery_cleanup.c:171:3
+pfree
+NODE *
+>clean_NOT_intree
+/usr/local/src/postgresql/src/backend/utils/adt/tsquery_cleanup.c:250:2
+pfree
+NODE *
+>clean_stopword_intree
+--
+/usr/local/src/postgresql/src/backend/utils/adt/tsquery_cleanup.c:90:1
+pfree
+NODE *
+>plainnode
+--
+/usr/local/src/postgresql/src/backend/utils/adt/xml.c:1278:1
+pfree
+PgXmlErrorContext *
+>pg_xml_done
+--
+/usr/local/src/postgresql/src/backend/utils/resowner/resowner.c:812:1
+pfree
+ResourceOwner
+>ResourceOwnerDelete
+--
+/usr/local/src/postgresql/src/backend/utils/mmgr/portalmem.c:599:1
+pfree
+Portal
+>PortalDrop
+--
+/usr/local/src/postgresql/src/backend/nodes/bitmapset.c:846:2
+pfree
+Bitmapset *
+>bms_add_members
+/usr/local/src/postgresql/src/backend/nodes/bitmapset.c:808:2
+pfree
+Bitmapset *
+>bms_del_member
+/usr/local/src/postgresql/src/backend/nodes/bitmapset.c:977:2
+pfree
+Bitmapset *
+>bms_del_members
+--
+/usr/local/src/postgresql/src/backend/nodes/bitmapset.c:938:2
+pfree
+Bitmapset *
+>bms_int_members
+/usr/local/src/postgresql/src/backend/nodes/bitmapset.c:773:20
+repalloc
+Bitmapset *
+>bms_add_member
+/usr/local/src/postgresql/src/backend/nodes/bitmapset.c:887:20
+repalloc
+Bitmapset *
+>bms_add_range
+--
+/usr/local/src/postgresql/src/backend/commands/trigger.c:5646:3
+repalloc
+SetConstraintState
+>SetConstraintStateAddItem
+/usr/local/src/postgresql/src/backend/commands/copyto.c:339:1
+pfree
+CopyToState
+>EndCopy
+--
+/usr/local/src/postgresql/src/backend/commands/copyfrom.c:510:1
+pfree
+CopyMultiInsertBuffer *
+>CopyMultiInsertBufferCleanup
+/usr/local/src/postgresql/src/backend/commands/copyfrom.c:1754:1
+pfree
+CopyFromState
+>EndCopyFrom
+/usr/local/src/postgresql/src/backend/replication/logical/worker.c:740:1
+pfree
+ApplyExecutionData *
+>finish_edata
+--
+/usr/local/src/postgresql/src/backend/replication/logical/reorderbuffer.c:1492:1
+pfree
+ReorderBufferIterTXNState *
+>ReorderBufferIterTXNFinish
+/usr/local/src/postgresql/src/backend/replication/logical/reorderbuffer.c:546:1
+pfree
+ReorderBufferChange *
+>ReorderBufferReturnChange
+/usr/local/src/postgresql/src/backend/replication/logical/reorderbuffer.c:608:1
+pfree
+Oid *
+>ReorderBufferReturnRelids
+/usr/local/src/postgresql/src/backend/replication/logical/reorderbuffer.c:462:1
+pfree
+ReorderBufferTXN *
+>ReorderBufferReturnTXN
+/usr/local/src/postgresql/src/backend/replication/logical/reorderbuffer.c:577:1
+pfree
+ReorderBufferTupleBuf *
+>ReorderBufferReturnTupleBuf
+--
+/usr/local/src/postgresql/src/backend/replication/libpqwalreceiver/libpqwalreceiver.c:816:1
+pfree
+WalReceiverConn *
+>libpqrcv_disconnect
+--
+/usr/local/src/postgresql/src/backend/tsearch/ts_parse.c:521:2
+pfree
+ParsedLex *
+>addHLParsedLex
+/usr/local/src/postgresql/src/backend/tsearch/ts_parse.c:535:2
+pfree
+TSLexeme *
+>addHLParsedLex
+/usr/local/src/postgresql/src/backend/tsearch/dict_thesaurus.c:308:26
+repalloc
+TheLexeme *
+>addCompiledLexeme
+/usr/local/src/postgresql/src/backend/catalog/pg_shdepend.c:547:2
+pfree
+Oid *
+>updateAclDependencies
+/usr/local/src/postgresql/src/backend/catalog/pg_shdepend.c:549:2
+pfree
+Oid *
+>updateAclDependencies
+--
+/usr/local/src/postgresql/src/backend/optimizer/geqo/geqo_eval.c:285:4
+pfree
+Clump *
+>merge_clump
+--
+/usr/local/src/postgresql/src/backend/optimizer/util/pathnode.c:857:2
+pfree
+Path *
+>add_partial_path
+/usr/local/src/postgresql/src/backend/optimizer/util/pathnode.c:627:3
+pfree
+Path *
+>add_path
+/usr/local/src/postgresql/src/backend/executor/execTuples.c:1270:1
+pfree
+TupleTableSlot *
+>ExecDropSingleTupleTableSlot
+/usr/local/src/postgresql/src/backend/executor/execTuples.c:1491:3
+pfree
+HeapTuple
+>ExecForceStoreHeapTuple
+/usr/local/src/postgresql/src/backend/executor/execTuples.c:1536:3
+pfree
+MinimalTuple
+>ExecForceStoreMinimalTuple
+--
+/usr/local/src/postgresql/src/backend/executor/execParallel.c:1207:1
+pfree
+ParallelExecutorInfo *
+>ExecParallelCleanup
+--
+/usr/local/src/postgresql/src/backend/storage/page/bufpage.c:431:1
+pfree
+Page
+>PageRestoreTempPage
+--
+/usr/local/src/postgresql/src/backend/access/gin/ginbtree.c:748:3
+pfree
+GinBtreeStack *
+>ginFinishSplit
+--
+/usr/local/src/postgresql/src/backend/access/transam/generic_xlog.c:447:1
+pfree
+GenericXLogState *
+>GenericXLogAbort
+/usr/local/src/postgresql/src/backend/access/transam/generic_xlog.c:434:1
+pfree
+GenericXLogState *
+>GenericXLogFinish
+--
+/usr/local/src/postgresql/src/backend/access/nbtree/nbtsort.c:693:1
+pfree
+Page
+>_bt_blwritepage
+--
+/usr/local/src/postgresql/src/backend/access/nbtree/nbtinsert.c:1435:2
+pfree
+IndexTuple
+>_bt_insertonpg
+--
+/usr/local/src/postgresql/src/backend/access/gist/gistutil.c:116:24
+repalloc
+IndexTuple *
+>gistjoinvector
+/usr/local/src/postgresql/src/backend/access/index/genam.c:152:1
+pfree
+IndexScanDesc
+>IndexScanEnd
+--
+/usr/local/src/postgresql/src/backend/access/brin/brin.c:1353:1
+pfree
+BrinBuildState *
+>terminate_brin_buildstate
+/usr/local/src/postgresql/src/backend/access/brin/brin_revmap.c:108:1
+pfree
+BrinRevmap *
+>brinRevmapTerminate
+--
+/usr/local/src/postgresql/src/backend/access/brin/brin_tuple.c:452:9
+repalloc
+BrinTuple *
+>brin_copy_tuple
+--
+/usr/local/src/postgresql/contrib/dblink/dblink.c:2557:2
+pfree
+remoteConn *
+>createNewConnection
+/usr/local/src/postgresql/contrib/dblink/dblink.c:2614:2
+pfree
+remoteConn *
+>dblink_security_check

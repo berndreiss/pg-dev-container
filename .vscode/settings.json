@@ -1,0 +1,6 @@
+{
+    "files.associations": {
+        "postgres.h": "c"
+    },
+    "cmake.sourceDirectory": "/workspaces/pg-dev-container/simpleDivideZeroTest"
+}

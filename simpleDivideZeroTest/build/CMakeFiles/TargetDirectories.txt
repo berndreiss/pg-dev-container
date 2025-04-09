@@ -1,0 +1,3 @@
+/home/vscode/simpleDivideZeroTest/build/CMakeFiles/TestProject.dir
+/home/vscode/simpleDivideZeroTest/build/CMakeFiles/edit_cache.dir
+/home/vscode/simpleDivideZeroTest/build/CMakeFiles/rebuild_cache.dir

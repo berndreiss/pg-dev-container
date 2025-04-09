@@ -1,0 +1,1 @@
+/home/vscode/llvm-project/buildNinja/bin/clang -cc1 -analyze -analyzer-checker=deadcode.UnassignedReturnValue code_bug.c -I /usr/local/src/postgresql/src/include -I /usr/include -I /usr/include/x86_64-linux-gnu -I /usr/lib/llvm-14/lib/clang/14.0.6/include/

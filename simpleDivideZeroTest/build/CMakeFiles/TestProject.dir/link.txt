@@ -1,0 +1,1 @@
+/usr/bin/cc CMakeFiles/TestProject.dir/src/intTest.c.o -o TestProject 

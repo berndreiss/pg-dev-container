@@ -1,0 +1,1 @@
+-checks="misc-unnassigned-return-value-module" intTest.c
