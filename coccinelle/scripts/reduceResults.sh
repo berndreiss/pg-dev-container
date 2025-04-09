@@ -48,7 +48,7 @@ remove "release"
 remove "detach"
 
 grep -Fv -f $EXCLUDE_FILE $TEMP > $OUT_FUNCTIONS
-grep -B 3 -F -f $OUT_FUNCTIONS $OUT_FILE > $OUT_REDUCED
+grep -A 3 -F -f $OUT_FUNCTIONS $OUT_FILE > $OUT_REDUCED
 echo "Without methods in exclude.txt"
 COUNT=$(cat $OUT_FUNCTIONS | wc -l)
 echo $COUNT

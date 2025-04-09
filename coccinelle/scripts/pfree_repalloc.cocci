@@ -16,10 +16,10 @@ p << pfree.p;
 t << pfree.t2;
 
 @@
-print(p[0].file + ":" + p[0].line + ":" + p[0].column);
-print("pfree")
-print(f"{t}")
 print(f">{f}")
+print(p[0].file + ":" + p[0].line + ":" + p[0].column);
+print("Use: pfree")
+print(f"Type: {t}")
 
 @repalloc@
 type t1;
@@ -41,8 +41,8 @@ p << repalloc.p;
 t << repalloc.t2;
 
 @@
-print(p[0].file + ":" + p[0].line + ":" + p[0].column);
-print("repalloc")
-print(f"{t}")
 print(f">{f}")
+print(p[0].file + ":" + p[0].line + ":" + p[0].column);
+print("Use: repalloc")
+print(f"Type: {t}")
 

@@ -15,7 +15,8 @@ f << pfree.f;
 p << pfree.p;
 
 @@
-print(p[0].file + ":" + p[0].line + ":" + p[0].column);
-print("pfree")
 print(f">{f}")
+print(p[0].file + ":" + p[0].line + ":" + p[0].column);
+print("Use: pfree")
+print("Type: char *")
 

@@ -1,6 +1,8 @@
-/usr/local/src/postgresql/src/bin/pg_verifybackup/parse_manifest.c:424:5
-pfree
 >json_manifest_scalar
-/usr/local/src/postgresql/src/backend/utils/adt/ruleutils.c:12487:1
-pfree
+/usr/local/src/postgresql/src/bin/pg_verifybackup/parse_manifest.c:424:5
+Use: pfree
+Type: char *
 >string_to_text
+/usr/local/src/postgresql/src/backend/utils/adt/ruleutils.c:12487:1
+Use: pfree
+Type: char *
