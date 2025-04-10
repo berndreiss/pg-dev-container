@@ -1,3 +1,4 @@
+    >ExecParallelCleanup
 >report_corruption_internal
 >pg_tzenumerate_end
 >pgfnames_cleanup

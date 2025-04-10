@@ -3,13 +3,19 @@ all: cocci
 
 cocci:
 	@echo "Running Coccinelle related scripts..."
-	@$(MAKE) --no-print-directory pfree_repalloc
+	@$(MAKE) --no-print-directory pfree
+	@$(MAKE) --no-print-directory repalloc
 	@$(MAKE) --no-print-directory char
 
-pfree_repalloc:
-	@cd scripts && bash runCocci.sh pfree_repalloc
-	@echo "##### RESULTS PFREE_REPALLOC #####"
-	@cd scripts && bash reduceResults.sh pfree_repalloc
+pfree:
+	@cd scripts && bash runCocci.sh pfree
+	@echo "##### RESULTS PFREE #####"
+	@cd scripts && bash reduceResults.sh pfree
+
+repalloc:
+	@cd scripts && bash runCocci.sh repalloc
+	@echo "##### RESULTS REPALLOC #####"
+	@cd scripts && bash reduceResults.sh repalloc
 
 char:
 	@cd scripts && bash runCocci.sh char

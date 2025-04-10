@@ -1,7 +1,3 @@
->json_manifest_scalar
-/usr/local/src/postgresql/src/bin/pg_verifybackup/parse_manifest.c:424:5
-Use: pfree
-Type: char *
 >string_to_text
 /usr/local/src/postgresql/src/backend/utils/adt/ruleutils.c:12487:1
 Use: pfree
@@ -12,6 +8,10 @@ Use: pfree
 Type: char *
 >emit_audit_message
 /usr/local/src/postgresql/src/test/modules/test_oat_hooks/test_oat_hooks.c:255:2
+Use: pfree
+Type: char *
+>json_manifest_scalar
+/usr/local/src/postgresql/src/bin/pg_verifybackup/parse_manifest.c:424:5
 Use: pfree
 Type: char *
 >report_corruption_internal

@@ -1,0 +1,26 @@
+>SetConstraintStateAddItem
+/usr/local/src/postgresql/src/backend/commands/trigger.c:5646:3
+Use: repalloc
+Type: SetConstraintState
+--
+>brin_copy_tuple
+/usr/local/src/postgresql/src/backend/access/brin/brin_tuple.c:452:9
+Use: repalloc
+Type: BrinTuple *
+>gistjoinvector
+/usr/local/src/postgresql/src/backend/access/gist/gistutil.c:116:24
+Use: repalloc
+Type: IndexTuple *
+>addCompiledLexeme
+/usr/local/src/postgresql/src/backend/tsearch/dict_thesaurus.c:308:26
+Use: repalloc
+Type: TheLexeme *
+--
+>bms_add_member
+/usr/local/src/postgresql/src/backend/nodes/bitmapset.c:773:20
+Use: repalloc
+Type: Bitmapset *
+>bms_add_range
+/usr/local/src/postgresql/src/backend/nodes/bitmapset.c:887:20
+Use: repalloc
+Type: Bitmapset *
