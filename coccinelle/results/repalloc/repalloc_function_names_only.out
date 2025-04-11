@@ -1,0 +1,12 @@
+>jsonpath_yyrealloc
+>xml_repalloc
+>repalloc0
+>bms_add_member
+>bms_add_range
+>SetConstraintStateAddItem
+>addCompiledLexeme
+>SPI_repalloc
+>gistjoinvector
+>brin_copy_tuple
+>core_yyrealloc
+>resize_intArrayType

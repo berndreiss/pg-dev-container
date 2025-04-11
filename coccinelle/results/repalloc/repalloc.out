@@ -1,0 +1,60 @@
+>jsonpath_yyrealloc
+/usr/local/src/postgresql/src/backend/utils/adt/jsonpath_scan.c:6164:9
+Use: repalloc
+Type: void *
+Return Type: void *
+>xml_repalloc
+/usr/local/src/postgresql/src/backend/utils/adt/xml.c:1927:8
+Use: repalloc
+Type: void *
+Return Type: void *
+>repalloc0
+/usr/local/src/postgresql/src/backend/utils/mmgr/mcxt.c:1574:7
+Use: repalloc
+Type: void *
+Return Type: void *
+>bms_add_member
+/usr/local/src/postgresql/src/backend/nodes/bitmapset.c:773:20
+Use: repalloc
+Type: Bitmapset *
+Return Type: Bitmapset *
+>bms_add_range
+/usr/local/src/postgresql/src/backend/nodes/bitmapset.c:887:20
+Use: repalloc
+Type: Bitmapset *
+Return Type: Bitmapset *
+>SetConstraintStateAddItem
+/usr/local/src/postgresql/src/backend/commands/trigger.c:5646:3
+Use: repalloc
+Type: SetConstraintState
+Return Type: SetConstraintState
+>addCompiledLexeme
+/usr/local/src/postgresql/src/backend/tsearch/dict_thesaurus.c:308:26
+Use: repalloc
+Type: TheLexeme *
+Return Type: TheLexeme *
+>SPI_repalloc
+/usr/local/src/postgresql/src/backend/executor/spi.c:1348:8
+Use: repalloc
+Type: void *
+Return Type: void *
+>gistjoinvector
+/usr/local/src/postgresql/src/backend/access/gist/gistutil.c:116:24
+Use: repalloc
+Type: IndexTuple *
+Return Type: IndexTuple *
+>brin_copy_tuple
+/usr/local/src/postgresql/src/backend/access/brin/brin_tuple.c:452:9
+Use: repalloc
+Type: BrinTuple *
+Return Type: BrinTuple *
+>core_yyrealloc
+/usr/local/src/postgresql/src/backend/parser/scan.c:9008:9
+Use: repalloc
+Type: void *
+Return Type: void *
+>resize_intArrayType
+/usr/local/src/postgresql/contrib/intarray/_int_tool.c:267:19
+Use: repalloc
+Type: ArrayType *
+Return Type: ArrayType *

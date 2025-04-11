@@ -16,10 +16,11 @@ t1 f (..., t2 i, ...){
 f << repalloc.f;
 p << repalloc.p;
 t << repalloc.t2;
-
+rt << repalloc.t1;
 @@
 print(f">{f}")
-print(p[0].file + ":" + p[0].line + ":" + p[0].column);
+print(p[0].file + ":" + p[0].line + ":" + p[0].column)
 print("Use: repalloc")
 print(f"Type: {t}")
+print(f"Return Type: {rt}")
 

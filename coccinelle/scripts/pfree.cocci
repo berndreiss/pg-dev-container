@@ -14,10 +14,12 @@ t1 f(..., t2 i, ...) {
 f << pfree.f;
 p << pfree.p;
 t << pfree.t2;
+rt << pfree.t1;
 
 @@
 print(f">{f}")
-print(p[0].file + ":" + p[0].line + ":" + p[0].column);
+print(p[0].file + ":" + p[0].line + ":" + p[0].column)
 print("Use: pfree")
 print(f"Type: {t}")
+print(f"Return Type: {rt}")
 

@@ -1,0 +1,25 @@
+>json_manifest_scalar
+/usr/local/src/postgresql/src/bin/pg_verifybackup/parse_manifest.c:424:5
+Use: pfree
+Type: char *
+Return Type: JsonParseErrorType
+>string_to_text
+/usr/local/src/postgresql/src/backend/utils/adt/ruleutils.c:12487:1
+Use: pfree
+Type: char *
+Return Type: text *
+>emit_audit_message
+/usr/local/src/postgresql/src/test/modules/test_oat_hooks/test_oat_hooks.c:253:2
+Use: pfree
+Type: char *
+Return Type: void
+>emit_audit_message
+/usr/local/src/postgresql/src/test/modules/test_oat_hooks/test_oat_hooks.c:255:2
+Use: pfree
+Type: char *
+Return Type: void
+>report_corruption_internal
+/usr/local/src/postgresql/contrib/amcheck/verify_heapam.c:841:1
+Use: pfree
+Type: char *
+Return Type: void

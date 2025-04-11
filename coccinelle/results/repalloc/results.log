@@ -1,0 +1,23 @@
+##### RESULTS REPALLOC #####
+Coccinelle found:
+12
+Without 'free':
+12
+Without 'destroy':
+12
+Without 'realloc':
+10
+Without 'resize':
+9
+Without 'repalloc':
+6
+Without 'close':
+6
+Without 'remove':
+6
+Without 'release':
+6
+Without 'detach':
+6
+Without methods in exclude.txt
+6

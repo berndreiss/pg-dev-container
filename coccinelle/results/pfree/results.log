@@ -1,0 +1,23 @@
+##### RESULTS PFREE #####
+Coccinelle found:
+175
+Without 'free':
+96
+Without 'destroy':
+81
+Without 'realloc':
+81
+Without 'resize':
+81
+Without 'repalloc':
+81
+Without 'close':
+71
+Without 'remove':
+69
+Without 'release':
+66
+Without 'detach':
+62
+Without methods in exclude.txt
+25

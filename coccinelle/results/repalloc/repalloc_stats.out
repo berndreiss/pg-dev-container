@@ -1,0 +1,11 @@
+all & 12
+free & 12
+destroy & 12
+realloc & 10
+resize & 9
+repalloc & 6
+close & 6
+remove & 6
+release & 6
+detach & 6
+excluded & 6
