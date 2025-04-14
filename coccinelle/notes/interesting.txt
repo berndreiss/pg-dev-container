@@ -1,0 +1,20 @@
+/usr/local/src/postgresql/src/backend/access/brin/brin_tuple.c:452:9
+repalloc
+BrinTuple *
+>brin_copy_tuple
+/usr/local/src/postgresql/src/bin/pg_verifybackup/parse_manifest.c:424:5
+pfree
+>json_manifest_scalar
+/usr/local/src/postgresql/src/backend/utils/adt/ruleutils.c:12487:1
+pfree
+>string_to_text
+
+/usr/local/src/postgresql/src/backend/replication/logical/reorderbuffer.c:577:1
+/*
+ * Free a ReorderBufferTupleBuf.
+ */
+void
+ReorderBufferReturnTupleBuf(ReorderBuffer *rb, ReorderBufferTupleBuf *tuple)
+{
+	pfree(tuple);
+}???

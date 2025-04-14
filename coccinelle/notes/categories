@@ -1,0 +1,4 @@
+Potential reallocate -> reassign return value
+Always free -> use after free check
+pfree on parameter not allocated with palloc
+only free on error

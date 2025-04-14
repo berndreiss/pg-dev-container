@@ -1,0 +1,153 @@
+>CopyMultiInsertBufferCleanup
+/usr/local/src/postgresql/src/backend/commands/copyfrom.c:510:1
+Use: pfree
+Type: CopyMultiInsertBuffer *
+--
+>updateAclDependencies
+/usr/local/src/postgresql/src/backend/catalog/pg_shdepend.c:547:2
+Use: pfree
+Type: Oid *
+>updateAclDependencies
+/usr/local/src/postgresql/src/backend/catalog/pg_shdepend.c:549:2
+Use: pfree
+Type: Oid *
+--
+>_bt_insertonpg
+/usr/local/src/postgresql/src/backend/access/nbtree/nbtinsert.c:1435:2
+Use: pfree
+Type: IndexTuple
+>_bt_blwritepage
+/usr/local/src/postgresql/src/backend/access/nbtree/nbtsort.c:693:1
+Use: pfree
+Type: Page
+--
+>merge_clump
+/usr/local/src/postgresql/src/backend/optimizer/geqo/geqo_eval.c:285:4
+Use: pfree
+Type: Clump *
+--
+>add_partial_path
+/usr/local/src/postgresql/src/backend/optimizer/util/pathnode.c:857:2
+Use: pfree
+Type: Path *
+>add_path
+/usr/local/src/postgresql/src/backend/optimizer/util/pathnode.c:627:3
+Use: pfree
+Type: Path *
+>addHLParsedLex
+/usr/local/src/postgresql/src/backend/tsearch/ts_parse.c:521:2
+Use: pfree
+Type: ParsedLex *
+>addHLParsedLex
+/usr/local/src/postgresql/src/backend/tsearch/ts_parse.c:535:2
+Use: pfree
+Type: TSLexeme *
+--
+>string_to_text
+/usr/local/src/postgresql/src/backend/utils/adt/ruleutils.c:12487:1
+Use: pfree
+Type: char *
+--
+>clean_NOT_intree
+/usr/local/src/postgresql/src/backend/utils/adt/tsquery_cleanup.c:171:3
+Use: pfree
+Type: NODE *
+>clean_stopword_intree
+/usr/local/src/postgresql/src/backend/utils/adt/tsquery_cleanup.c:250:2
+Use: pfree
+Type: NODE *
+--
+>plainnode
+/usr/local/src/postgresql/src/backend/utils/adt/tsquery_cleanup.c:90:1
+Use: pfree
+Type: NODE *
+>recursive_revoke
+/usr/local/src/postgresql/src/backend/utils/adt/acl.c:1321:3
+Use: pfree
+Type: Acl *
+--
+>dofindsubquery
+/usr/local/src/postgresql/src/backend/utils/adt/tsquery_rewrite.c:250:3
+Use: pfree
+Type: QTNode *
+--
+>bms_add_members
+/usr/local/src/postgresql/src/backend/nodes/bitmapset.c:846:2
+Use: pfree
+Type: Bitmapset *
+>bms_del_member
+/usr/local/src/postgresql/src/backend/nodes/bitmapset.c:808:2
+Use: pfree
+Type: Bitmapset *
+>bms_del_members
+/usr/local/src/postgresql/src/backend/nodes/bitmapset.c:977:2
+Use: pfree
+Type: Bitmapset *
+--
+>bms_int_members
+/usr/local/src/postgresql/src/backend/nodes/bitmapset.c:938:2
+Use: pfree
+Type: Bitmapset *
+--
+>PageRestoreTempPage
+/usr/local/src/postgresql/src/backend/storage/page/bufpage.c:431:1
+Use: pfree
+Type: Page
+--
+>ReorderBufferIterTXNFinish
+/usr/local/src/postgresql/src/backend/replication/logical/reorderbuffer.c:1492:1
+Use: pfree
+Type: ReorderBufferIterTXNState *
+>ReorderBufferReturnChange
+/usr/local/src/postgresql/src/backend/replication/logical/reorderbuffer.c:546:1
+Use: pfree
+Type: ReorderBufferChange *
+>ReorderBufferReturnRelids
+/usr/local/src/postgresql/src/backend/replication/logical/reorderbuffer.c:608:1
+Use: pfree
+Type: Oid *
+>ReorderBufferReturnTXN
+/usr/local/src/postgresql/src/backend/replication/logical/reorderbuffer.c:462:1
+Use: pfree
+Type: ReorderBufferTXN *
+>ReorderBufferReturnTupleBuf
+/usr/local/src/postgresql/src/backend/replication/logical/reorderbuffer.c:577:1
+Use: pfree
+Type: ReorderBufferTupleBuf *
+--
+>ExecParallelCleanup
+/usr/local/src/postgresql/src/backend/executor/execParallel.c:1207:1
+Use: pfree
+Type: ParallelExecutorInfo *
+--
+>ExecDropSingleTupleTableSlot
+/usr/local/src/postgresql/src/backend/executor/execTuples.c:1270:1
+Use: pfree
+Type: TupleTableSlot *
+>ExecForceStoreHeapTuple
+/usr/local/src/postgresql/src/backend/executor/execTuples.c:1491:3
+Use: pfree
+Type: HeapTuple
+>ExecForceStoreMinimalTuple
+/usr/local/src/postgresql/src/backend/executor/execTuples.c:1536:3
+Use: pfree
+Type: MinimalTuple
+--
+>PLy_function_restore_args
+/usr/local/src/postgresql/src/pl/plpython/plpy_exec.c:577:1
+Use: pfree
+Type: PLySavedArgs *
+--
+>json_manifest_scalar
+/usr/local/src/postgresql/src/bin/pg_verifybackup/parse_manifest.c:424:5
+Use: pfree
+Type: char *
+--
+>createNewConnection
+/usr/local/src/postgresql/contrib/dblink/dblink.c:2557:2
+Use: pfree
+Type: remoteConn *
+>dblink_security_check
+/usr/local/src/postgresql/contrib/dblink/dblink.c:2614:2
+Use: pfree
+Type: remoteConn *
