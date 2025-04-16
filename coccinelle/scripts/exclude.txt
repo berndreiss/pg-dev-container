@@ -28,12 +28,4 @@
 >pg_xml_done
 >buf_finalize
 >PLy_function_drop_args
->bms_del_member
->bms_add_members
->bms_int_members
->bms_del_members
->clean_stopword_intree
->clean_NOT_intree
 >freeAndGetParent
->recursive_revoke
->dofindsubquery

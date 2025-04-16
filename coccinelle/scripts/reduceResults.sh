@@ -55,7 +55,6 @@ remove "realloc"
 remove "resize"
 remove "repalloc"
 remove "close"
-remove "remove"
 remove "release"
 remove "detach"
 
