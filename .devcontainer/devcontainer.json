@@ -2,7 +2,7 @@
    "name": "PostgreSQL dev container",
    "build": {
         "dockerfile": "Dockerfile",
-        "args": { "PGVERSION": "16.4" }
+        "args": { "PGVERSION": "17.2" }
     },
     "runArgs": [ "--cap-add=SYS_PTRACE", "--security-opt", "seccomp=unconfined" ],
     "customizations": {
@@ -19,7 +19,7 @@
         }
      },
     "remoteUser": "vscode",
-    "postStartCommand": "pg_ctl start -D /home/vscode/pgdata && sudo apt -y install coccinelle",
+    "postStartCommand": "pg_ctl start -D /home/vscode/pgdata -l /home/vscode/postgresql.log && sudo apt -y install coccinelle",
     "tmp_removed": "&& cd /home/vscode/llvm-project && git pull && cd buildNinja && sudo ninja -j16 install clang",
     "forwardPorts": [5432]
 }

@@ -1,0 +1,70 @@
+>pg_realloc
+/usr/local/src/postgresql/src/common/fe_memutils.c:72:7
+Use: realloc
+Type: void *
+Return Type: void *
+>yyrealloc
+/usr/local/src/postgresql/src/backend/bootstrap/bootscanner.c:2245:8
+Use: realloc
+Type: void *
+Return Type: void *
+>yyrealloc
+/usr/local/src/postgresql/src/backend/utils/misc/guc-file.c:2096:8
+Use: realloc
+Type: void *
+Return Type: void *
+>yyrealloc
+/usr/local/src/postgresql/src/backend/replication/syncrep_scanner.c:2111:8
+Use: realloc
+Type: void *
+Return Type: void *
+>yyrealloc
+/usr/local/src/postgresql/src/backend/replication/repl_scanner.c:2436:8
+Use: realloc
+Type: void *
+Return Type: void *
+>ecpg_realloc
+/usr/local/src/postgresql/src/interfaces/ecpg/ecpglib/memory.c:35:25
+Use: realloc
+Type: void *
+Return Type: char *
+>yyrealloc
+/usr/local/src/postgresql/src/interfaces/ecpg/preproc/pgc.c:5035:8
+Use: realloc
+Type: void *
+Return Type: void *
+>yyrealloc
+/usr/local/src/postgresql/src/fe_utils/psqlscan.c:4970:8
+Use: realloc
+Type: void *
+Return Type: void *
+>erealloc
+/usr/local/src/postgresql/src/timezone/zic.c:442:17
+Use: realloc
+Type: void *
+Return Type: void *
+>yyrealloc
+/usr/local/src/postgresql/src/test/isolation/specscanner.c:2194:8
+Use: realloc
+Type: void *
+Return Type: void *
+>yyrealloc
+/usr/local/src/postgresql/src/bin/pgbench/exprscan.c:2631:8
+Use: realloc
+Type: void *
+Return Type: void *
+>yyrealloc
+/usr/local/src/postgresql/src/bin/psql/psqlscanslash.c:3116:8
+Use: realloc
+Type: void *
+Return Type: void *
+>yyrealloc
+/usr/local/src/postgresql/contrib/seg/segscan.c:2031:8
+Use: realloc
+Type: void *
+Return Type: void *
+>yyrealloc
+/usr/local/src/postgresql/contrib/cube/cubescan.c:2049:8
+Use: realloc
+Type: void *
+Return Type: void *

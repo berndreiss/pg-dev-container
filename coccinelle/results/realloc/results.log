@@ -1,0 +1,22 @@
+Coccinelle found:
+14
+Without 'free':
+14
+Without 'destroy':
+14
+Without 'realloc':
+0
+Without 'resize':
+0
+Without 'repalloc':
+0
+Without 'close':
+0
+Without 'remove':
+0
+Without 'release':
+0
+Without 'detach':
+0
+Without methods in exclude.txt
+0

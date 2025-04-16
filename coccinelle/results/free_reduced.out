@@ -1,0 +1,114 @@
+>SlabDelete
+/usr/local/src/postgresql/src/backend/utils/mmgr/slab.c:486:1
+Use: free
+Type: MemoryContext
+Return Type: void
+--
+>GenerationDelete
+/usr/local/src/postgresql/src/backend/utils/mmgr/generation.c:324:1
+Use: free
+Type: MemoryContext
+Return Type: void
+--
+>ecpg_sqlca_key_destructor
+/usr/local/src/postgresql/src/interfaces/ecpg/ecpglib/misc.c:130:1
+Use: free
+Type: void *
+Return Type: void
+--
+>output_deallocate_prepare_statement
+/usr/local/src/postgresql/src/interfaces/ecpg/preproc/output.c:196:1
+Use: free
+Type: char *
+Return Type: void
+>output_prepare_statement
+/usr/local/src/postgresql/src/interfaces/ecpg/preproc/output.c:178:1
+Use: free
+Type: char *
+Return Type: void
+>output_simple_statement
+/usr/local/src/postgresql/src/interfaces/ecpg/preproc/output.c:25:1
+Use: free
+Type: char *
+Return Type: void
+>output_statement
+/usr/local/src/postgresql/src/interfaces/ecpg/preproc/output.c:166:1
+Use: free
+Type: char *
+Return Type: void
+--
+>cat2_str
+/usr/local/src/postgresql/src/interfaces/ecpg/preproc/preproc.c:221:1
+Use: free
+Type: char *
+Return Type: char *
+>cat2_str
+/usr/local/src/postgresql/src/interfaces/ecpg/preproc/preproc.c:222:1
+Use: free
+Type: char *
+Return Type: char *
+>make2_str
+/usr/local/src/postgresql/src/interfaces/ecpg/preproc/preproc.c:253:1
+Use: free
+Type: char *
+Return Type: char *
+>make2_str
+/usr/local/src/postgresql/src/interfaces/ecpg/preproc/preproc.c:254:1
+Use: free
+Type: char *
+Return Type: char *
+>make3_str
+/usr/local/src/postgresql/src/interfaces/ecpg/preproc/preproc.c:266:1
+Use: free
+Type: char *
+Return Type: char *
+>make3_str
+/usr/local/src/postgresql/src/interfaces/ecpg/preproc/preproc.c:267:1
+Use: free
+Type: char *
+Return Type: char *
+>make3_str
+/usr/local/src/postgresql/src/interfaces/ecpg/preproc/preproc.c:268:1
+Use: free
+Type: char *
+Return Type: char *
+>dump_variables
+/usr/local/src/postgresql/src/interfaces/ecpg/preproc/variable.c:460:2
+Use: free
+Type: struct arguments *
+Return Type: void
+--
+>PQclear
+/usr/local/src/postgresql/src/interfaces/libpq/fe-exec.c:767:1
+Use: free
+Type: PGresult *
+Return Type: void
+--
+>ParallelBackupEnd
+/usr/local/src/postgresql/src/bin/pg_dump/parallel.c:1090:1
+Use: free
+Type: ParallelState *
+Return Type: void
+>init_spawned_worker_win32
+/usr/local/src/postgresql/src/bin/pg_dump/parallel.c:880:1
+Use: free
+Type: WorkerInfo *
+Return Type: unsigned __stdcall 
+--
+>DeCloneArchive
+/usr/local/src/postgresql/src/bin/pg_dump/pg_backup_archiver.c:4875:1
+Use: free
+Type: ArchiveHandle *
+Return Type: void
+--
+>restorePsetInfo
+/usr/local/src/postgresql/src/bin/psql/command.c:4962:1
+Use: free
+Type: printQueryOpt *
+Return Type: void
+--
+>writefile
+/usr/local/src/postgresql/src/bin/initdb/initdb.c:676:1
+Use: free
+Type: char * *
+Return Type: void
