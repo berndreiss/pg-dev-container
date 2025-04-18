@@ -31,7 +31,7 @@ RUN apt update \
    && su - vscode -c "/usr/local/postgresql-${PGVERSION}/bin/initdb -D /home/vscode/pgdata -E UTF-8"
 
 RUN su - root -c "apt -y install neovim ninja-build cmake"
-RUN su - vscode -c "cd /home/vscode && git clone --depth=1 https://github.com/berndreiss/llvm-project"
-RUN su - vscode -c "cd /home/vscode/llvm-project && mkdir buildNinja && cd buildNinja && cmake -DLLVM_ENABLE_PROJECTS=clang -DCMAKE_BUILD_TYPE=Release -G Ninja ../llvm"
+#RUN su - vscode -c "cd /home/vscode && git clone --depth=1 https://github.com/berndreiss/llvm-project"
+#RUN su - vscode -c "cd /home/vscode/llvm-project && mkdir buildNinja && cd buildNinja && cmake -DLLVM_ENABLE_PROJECTS=clang -DCMAKE_BUILD_TYPE=Release -G Ninja ../llvm"
 
 VOLUME /home/vscode/pgdata
