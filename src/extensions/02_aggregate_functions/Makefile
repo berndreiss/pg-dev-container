@@ -13,4 +13,8 @@ REGRESS_OPTS = --inputdir=test --load-extension=$(EXTENSION)
 PG_CONFIG ?= pg_config
 PGXS := $(shell $(PG_CONFIG) --pgxs)
 
+PG_CFLAGS += -fdump-tree-original
+PG_CFLAGS += -I/usr/local/postgresql-17.2/include/
+#PG_CPPFLAGS += -Xclang -ast-dump -fsyntax-only
+
 include $(PGXS)

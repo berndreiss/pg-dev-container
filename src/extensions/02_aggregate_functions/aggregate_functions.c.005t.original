@@ -1,0 +1,1140 @@
+
+;; Function vprintf (null)
+;; enabled by -tree-original
+
+
+{
+  # DEBUG BEGIN STMT;
+  return vfprintf (stdout, (const char *) __fmt, __arg);
+}
+
+
+;; Function getchar (null)
+;; enabled by -tree-original
+
+
+{
+  # DEBUG BEGIN STMT;
+  return getc (stdin);
+}
+
+
+;; Function fgetc_unlocked (null)
+;; enabled by -tree-original
+
+
+{
+  # DEBUG BEGIN STMT;
+  return __builtin_expect (__fp->_IO_read_ptr >= __fp->_IO_read_end, 0) != 0 ? __uflow (__fp) : (int) *(unsigned char *) __fp->_IO_read_ptr++ ;
+}
+
+
+;; Function getc_unlocked (null)
+;; enabled by -tree-original
+
+
+{
+  # DEBUG BEGIN STMT;
+  return __builtin_expect (__fp->_IO_read_ptr >= __fp->_IO_read_end, 0) != 0 ? __uflow (__fp) : (int) *(unsigned char *) __fp->_IO_read_ptr++ ;
+}
+
+
+;; Function getchar_unlocked (null)
+;; enabled by -tree-original
+
+
+{
+  # DEBUG BEGIN STMT;
+  return __builtin_expect (stdin->_IO_read_ptr >= stdin->_IO_read_end, 0) != 0 ? __uflow (stdin) : (int) *(unsigned char *) stdin->_IO_read_ptr++ ;
+}
+
+
+;; Function putchar (null)
+;; enabled by -tree-original
+
+
+{
+  # DEBUG BEGIN STMT;
+  return putc (__c, stdout);
+}
+
+
+;; Function fputc_unlocked (null)
+;; enabled by -tree-original
+
+
+{
+  # DEBUG BEGIN STMT;
+  return __builtin_expect (__stream->_IO_write_ptr >= __stream->_IO_write_end, 0) != 0 ? __overflow (__stream, (int) (unsigned char) __c) : (int) (unsigned char) (*__stream->_IO_write_ptr++  = (char) __c);
+}
+
+
+;; Function putc_unlocked (null)
+;; enabled by -tree-original
+
+
+{
+  # DEBUG BEGIN STMT;
+  return __builtin_expect (__stream->_IO_write_ptr >= __stream->_IO_write_end, 0) != 0 ? __overflow (__stream, (int) (unsigned char) __c) : (int) (unsigned char) (*__stream->_IO_write_ptr++  = (char) __c);
+}
+
+
+;; Function putchar_unlocked (null)
+;; enabled by -tree-original
+
+
+{
+  # DEBUG BEGIN STMT;
+  return __builtin_expect (stdout->_IO_write_ptr >= stdout->_IO_write_end, 0) != 0 ? __overflow (stdout, (int) (unsigned char) __c) : (int) (unsigned char) (*stdout->_IO_write_ptr++  = (char) __c);
+}
+
+
+;; Function getline (null)
+;; enabled by -tree-original
+
+
+{
+  # DEBUG BEGIN STMT;
+  return __getdelim (__lineptr, __n, 10, __stream);
+}
+
+
+;; Function feof_unlocked (null)
+;; enabled by -tree-original
+
+
+{
+  # DEBUG BEGIN STMT;
+  return (__stream->_flags & 16) != 0;
+}
+
+
+;; Function ferror_unlocked (null)
+;; enabled by -tree-original
+
+
+{
+  # DEBUG BEGIN STMT;
+  return (__stream->_flags & 32) != 0;
+}
+
+
+;; Function atoi (null)
+;; enabled by -tree-original
+
+
+{
+  # DEBUG BEGIN STMT;
+  return (int) strtol (__nptr, 0B, 10);
+}
+
+
+;; Function atol (null)
+;; enabled by -tree-original
+
+
+{
+  # DEBUG BEGIN STMT;
+  return strtol (__nptr, 0B, 10);
+}
+
+
+;; Function atoll (null)
+;; enabled by -tree-original
+
+
+{
+  # DEBUG BEGIN STMT;
+  return strtoll (__nptr, 0B, 10);
+}
+
+
+;; Function __bswap_16 (null)
+;; enabled by -tree-original
+
+
+{
+  # DEBUG BEGIN STMT;
+  return (__uint16_t) __builtin_bswap16 ((int) __bsx);
+}
+
+
+;; Function __bswap_32 (null)
+;; enabled by -tree-original
+
+
+{
+  # DEBUG BEGIN STMT;
+  return (__uint32_t) __builtin_bswap32 (__bsx);
+}
+
+
+;; Function __bswap_64 (null)
+;; enabled by -tree-original
+
+
+{
+  # DEBUG BEGIN STMT;
+  return (__uint64_t) __builtin_bswap64 (__bsx);
+}
+
+
+;; Function __uint16_identity (null)
+;; enabled by -tree-original
+
+
+{
+  # DEBUG BEGIN STMT;
+  return __x;
+}
+
+
+;; Function __uint32_identity (null)
+;; enabled by -tree-original
+
+
+{
+  # DEBUG BEGIN STMT;
+  return __x;
+}
+
+
+;; Function __uint64_identity (null)
+;; enabled by -tree-original
+
+
+{
+  # DEBUG BEGIN STMT;
+  return __x;
+}
+
+
+;; Function bsearch (null)
+;; enabled by -tree-original
+
+
+{
+  size_t __l;
+  size_t __u;
+  size_t __idx;
+  const void * __p;
+  int __comparison;
+
+  # DEBUG BEGIN STMT;
+    size_t __l;
+    size_t __u;
+    size_t __idx;
+  # DEBUG BEGIN STMT;
+    const void * __p;
+  # DEBUG BEGIN STMT;
+    int __comparison;
+  # DEBUG BEGIN STMT;
+  __l = 0;
+  # DEBUG BEGIN STMT;
+  __u = __nmemb;
+  # DEBUG BEGIN STMT;
+  goto <D.3099>;
+  <D.3100>:;
+  # DEBUG BEGIN STMT;
+  __idx = (__l + __u) / 2;
+  # DEBUG BEGIN STMT;
+  __p = __base + (sizetype) (__idx * __size);
+  # DEBUG BEGIN STMT;
+  __comparison = __compar (__key, __p);
+  # DEBUG BEGIN STMT;
+  if (__comparison < 0)
+    {
+      # DEBUG BEGIN STMT;
+      __u = __idx;
+    }
+  else
+    {
+      # DEBUG BEGIN STMT;
+      if (__comparison > 0)
+        {
+          # DEBUG BEGIN STMT;
+          __l = __idx + 1;
+        }
+      else
+        {
+          # DEBUG BEGIN STMT;
+          return (void *) __p;
+        }
+    }
+  <D.3099>:;
+  # DEBUG BEGIN STMT;
+  if (__l < __u) goto <D.3100>; else goto <D.3098>;
+  <D.3098>:;
+  # DEBUG BEGIN STMT;
+  return 0B;
+}
+
+
+;; Function atof (null)
+;; enabled by -tree-original
+
+
+{
+  # DEBUG BEGIN STMT;
+  return strtod (__nptr, 0B);
+}
+
+
+;; Function tolower (null)
+;; enabled by -tree-original
+
+
+{
+  # DEBUG BEGIN STMT;
+  return (unsigned int) __c + 128 <= 383 ? (int) *(*__ctype_tolower_loc () + (sizetype) ((long unsigned int) __c * 4)) : __c;
+}
+
+
+;; Function toupper (null)
+;; enabled by -tree-original
+
+
+{
+  # DEBUG BEGIN STMT;
+  return (unsigned int) __c + 128 <= 383 ? (int) *(*__ctype_toupper_loc () + (sizetype) ((long unsigned int) __c * 4)) : __c;
+}
+
+
+;; Function initReadOnlyStringInfo (null)
+;; enabled by -tree-original
+
+
+{
+  # DEBUG BEGIN STMT;
+  str->data = data;
+  # DEBUG BEGIN STMT;
+  str->len = len;
+  # DEBUG BEGIN STMT;
+  str->maxlen = 0;
+  # DEBUG BEGIN STMT;
+  str->cursor = 0;
+}
+
+
+;; Function initStringInfoFromString (null)
+;; enabled by -tree-original
+
+
+{
+  # DEBUG BEGIN STMT;
+  # DEBUG BEGIN STMT;
+  if (*(data + (sizetype) len) != 0)
+    {
+      # DEBUG BEGIN STMT;
+      ExceptionalCondition ((const char *) "data[len] == \'\\0\'", (const char *) "/usr/local/postgresql-17.2/include/server/lib/stringinfo.h", 150);
+    }
+  # DEBUG BEGIN STMT;
+  # DEBUG BEGIN STMT;
+  str->data = data;
+  # DEBUG BEGIN STMT;
+  str->len = len;
+  # DEBUG BEGIN STMT;
+  str->maxlen = len + 1;
+  # DEBUG BEGIN STMT;
+  str->cursor = 0;
+}
+
+
+;; Function MemoryContextSwitchTo (null)
+;; enabled by -tree-original
+
+
+{
+  struct MemoryContextData * old = CurrentMemoryContext;
+
+  # DEBUG BEGIN STMT;
+    struct MemoryContextData * old = CurrentMemoryContext;
+  # DEBUG BEGIN STMT;
+  CurrentMemoryContext = context;
+  # DEBUG BEGIN STMT;
+  return old;
+}
+
+
+;; Function DatumGetBool (null)
+;; enabled by -tree-original
+
+
+{
+  # DEBUG BEGIN STMT;
+  return X != 0;
+}
+
+
+;; Function BoolGetDatum (null)
+;; enabled by -tree-original
+
+
+{
+  # DEBUG BEGIN STMT;
+  return X != 0 ? 1 : 0;
+}
+
+
+;; Function DatumGetChar (null)
+;; enabled by -tree-original
+
+
+{
+  # DEBUG BEGIN STMT;
+  return (char) X;
+}
+
+
+;; Function CharGetDatum (null)
+;; enabled by -tree-original
+
+
+{
+  # DEBUG BEGIN STMT;
+  return (Datum) X;
+}
+
+
+;; Function Int8GetDatum (null)
+;; enabled by -tree-original
+
+
+{
+  # DEBUG BEGIN STMT;
+  return (Datum) X;
+}
+
+
+;; Function DatumGetUInt8 (null)
+;; enabled by -tree-original
+
+
+{
+  # DEBUG BEGIN STMT;
+  return (uint8) X;
+}
+
+
+;; Function UInt8GetDatum (null)
+;; enabled by -tree-original
+
+
+{
+  # DEBUG BEGIN STMT;
+  return (Datum) X;
+}
+
+
+;; Function DatumGetInt16 (null)
+;; enabled by -tree-original
+
+
+{
+  # DEBUG BEGIN STMT;
+  return (int16) X;
+}
+
+
+;; Function Int16GetDatum (null)
+;; enabled by -tree-original
+
+
+{
+  # DEBUG BEGIN STMT;
+  return (Datum) X;
+}
+
+
+;; Function DatumGetUInt16 (null)
+;; enabled by -tree-original
+
+
+{
+  # DEBUG BEGIN STMT;
+  return (uint16) X;
+}
+
+
+;; Function UInt16GetDatum (null)
+;; enabled by -tree-original
+
+
+{
+  # DEBUG BEGIN STMT;
+  return (Datum) X;
+}
+
+
+;; Function DatumGetInt32 (null)
+;; enabled by -tree-original
+
+
+{
+  # DEBUG BEGIN STMT;
+  return (int32) X;
+}
+
+
+;; Function Int32GetDatum (null)
+;; enabled by -tree-original
+
+
+{
+  # DEBUG BEGIN STMT;
+  return (Datum) X;
+}
+
+
+;; Function DatumGetUInt32 (null)
+;; enabled by -tree-original
+
+
+{
+  # DEBUG BEGIN STMT;
+  return (uint32) X;
+}
+
+
+;; Function UInt32GetDatum (null)
+;; enabled by -tree-original
+
+
+{
+  # DEBUG BEGIN STMT;
+  return (Datum) X;
+}
+
+
+;; Function DatumGetObjectId (null)
+;; enabled by -tree-original
+
+
+{
+  # DEBUG BEGIN STMT;
+  return (Oid) X;
+}
+
+
+;; Function ObjectIdGetDatum (null)
+;; enabled by -tree-original
+
+
+{
+  # DEBUG BEGIN STMT;
+  return (Datum) X;
+}
+
+
+;; Function DatumGetTransactionId (null)
+;; enabled by -tree-original
+
+
+{
+  # DEBUG BEGIN STMT;
+  return (TransactionId) X;
+}
+
+
+;; Function TransactionIdGetDatum (null)
+;; enabled by -tree-original
+
+
+{
+  # DEBUG BEGIN STMT;
+  return (Datum) X;
+}
+
+
+;; Function MultiXactIdGetDatum (null)
+;; enabled by -tree-original
+
+
+{
+  # DEBUG BEGIN STMT;
+  return (Datum) X;
+}
+
+
+;; Function DatumGetCommandId (null)
+;; enabled by -tree-original
+
+
+{
+  # DEBUG BEGIN STMT;
+  return (CommandId) X;
+}
+
+
+;; Function CommandIdGetDatum (null)
+;; enabled by -tree-original
+
+
+{
+  # DEBUG BEGIN STMT;
+  return (Datum) X;
+}
+
+
+;; Function DatumGetPointer (null)
+;; enabled by -tree-original
+
+
+{
+  # DEBUG BEGIN STMT;
+  return (char *) X;
+}
+
+
+;; Function PointerGetDatum (null)
+;; enabled by -tree-original
+
+
+{
+  # DEBUG BEGIN STMT;
+  return (Datum) X;
+}
+
+
+;; Function DatumGetCString (null)
+;; enabled by -tree-original
+
+
+{
+  # DEBUG BEGIN STMT;
+  return (char *) DatumGetPointer (X);
+}
+
+
+;; Function CStringGetDatum (null)
+;; enabled by -tree-original
+
+
+{
+  # DEBUG BEGIN STMT;
+  return PointerGetDatum ((const void *) X);
+}
+
+
+;; Function DatumGetName (null)
+;; enabled by -tree-original
+
+
+{
+  # DEBUG BEGIN STMT;
+  return (struct NameData *) DatumGetPointer (X);
+}
+
+
+;; Function NameGetDatum (null)
+;; enabled by -tree-original
+
+
+{
+  # DEBUG BEGIN STMT;
+  return CStringGetDatum ((const char *) &X->data);
+}
+
+
+;; Function DatumGetInt64 (null)
+;; enabled by -tree-original
+
+
+{
+  # DEBUG BEGIN STMT;
+  return (int64) X;
+}
+
+
+;; Function Int64GetDatum (null)
+;; enabled by -tree-original
+
+
+{
+  # DEBUG BEGIN STMT;
+  return (Datum) X;
+}
+
+
+;; Function DatumGetUInt64 (null)
+;; enabled by -tree-original
+
+
+{
+  # DEBUG BEGIN STMT;
+  return (uint64) X;
+}
+
+
+;; Function UInt64GetDatum (null)
+;; enabled by -tree-original
+
+
+{
+  # DEBUG BEGIN STMT;
+  return (Datum) X;
+}
+
+
+;; Function DatumGetFloat4 (null)
+;; enabled by -tree-original
+
+
+{
+  typedef union 
+  {
+    int32 value;
+    float4 retval;
+  } unionunion 
+  {
+    int32 value;
+    float4 retval;
+  };
+  union 
+  {
+    int32 value;
+    float4 retval;
+  } myunion;
+
+  # DEBUG BEGIN STMT;
+    union 
+  {
+    int32 value;
+    float4 retval;
+  } myunion;
+  # DEBUG BEGIN STMT;
+  myunion.value = DatumGetInt32 (X);
+  # DEBUG BEGIN STMT;
+  return myunion.retval;
+}
+
+
+;; Function Float4GetDatum (null)
+;; enabled by -tree-original
+
+
+{
+  typedef union 
+  {
+    float4 value;
+    int32 retval;
+  } unionunion 
+  {
+    float4 value;
+    int32 retval;
+  };
+  union 
+  {
+    float4 value;
+    int32 retval;
+  } myunion;
+
+  # DEBUG BEGIN STMT;
+    union 
+  {
+    float4 value;
+    int32 retval;
+  } myunion;
+  # DEBUG BEGIN STMT;
+  myunion.value = X;
+  # DEBUG BEGIN STMT;
+  return Int32GetDatum (myunion.retval);
+}
+
+
+;; Function DatumGetFloat8 (null)
+;; enabled by -tree-original
+
+
+{
+  typedef union 
+  {
+    int64 value;
+    float8 retval;
+  } unionunion 
+  {
+    int64 value;
+    float8 retval;
+  };
+  union 
+  {
+    int64 value;
+    float8 retval;
+  } myunion;
+
+  # DEBUG BEGIN STMT;
+    union 
+  {
+    int64 value;
+    float8 retval;
+  } myunion;
+  # DEBUG BEGIN STMT;
+  myunion.value = DatumGetInt64 (X);
+  # DEBUG BEGIN STMT;
+  return myunion.retval;
+}
+
+
+;; Function Float8GetDatum (null)
+;; enabled by -tree-original
+
+
+{
+  typedef union 
+  {
+    float8 value;
+    int64 retval;
+  } unionunion 
+  {
+    float8 value;
+    int64 retval;
+  };
+  union 
+  {
+    float8 value;
+    int64 retval;
+  } myunion;
+
+  # DEBUG BEGIN STMT;
+    union 
+  {
+    float8 value;
+    int64 retval;
+  } myunion;
+  # DEBUG BEGIN STMT;
+  myunion.value = X;
+  # DEBUG BEGIN STMT;
+  return Int64GetDatum (myunion.retval);
+}
+
+
+;; Function Pg_magic_func (null)
+;; enabled by -tree-original
+
+
+{
+  static const struct Pg_magic_struct Pg_magic_data = {.len=56, .version=1700, .funcmaxargs=100, .indexmaxkeys=32, .namedatalen=64, .float8byval=1, .abi_extra="PostgreSQL"};
+
+  # DEBUG BEGIN STMT;
+    static const struct Pg_magic_struct Pg_magic_data = {.len=56, .version=1700, .funcmaxargs=100, .indexmaxkeys=32, .namedatalen=64, .float8byval=1, .abi_extra="PostgreSQL"};
+  # DEBUG BEGIN STMT;
+  return &Pg_magic_data;
+}
+
+
+;; Function pg_finfo_int32_sum_trans (null)
+;; enabled by -tree-original
+
+
+{
+  static const struct Pg_finfo_record my_finfo = {.api_version=1};
+
+  # DEBUG BEGIN STMT;
+    static const struct Pg_finfo_record my_finfo = {.api_version=1};
+  # DEBUG BEGIN STMT;
+  return &my_finfo;
+}
+
+
+;; Function int32_sum_trans (null)
+;; enabled by -tree-original
+
+
+{
+  int64 state;
+  int64 newval;
+
+  # DEBUG BEGIN STMT;
+    int64 state;
+  # DEBUG BEGIN STMT;
+    int64 newval;
+  # DEBUG BEGIN STMT;
+  if (fcinfo->args[0].isnull != 0)
+    {
+      # DEBUG BEGIN STMT;
+      if (fcinfo->args[1].isnull != 0)
+        {
+          # DEBUG BEGIN STMT;
+          # DEBUG BEGIN STMT;
+          fcinfo->isnull = 1;
+          # DEBUG BEGIN STMT;
+          return 0;
+          # DEBUG BEGIN STMT;
+        }
+      # DEBUG BEGIN STMT;
+      state = (long int) DatumGetInt32 (fcinfo->args[1].value);
+      # DEBUG BEGIN STMT;
+      return Int64GetDatum (state);
+    }
+  # DEBUG BEGIN STMT;
+  state = DatumGetInt64 (fcinfo->args[0].value);
+  # DEBUG BEGIN STMT;
+  if (fcinfo->args[1].isnull != 0)
+    {
+      # DEBUG BEGIN STMT;
+      return Int64GetDatum (state);
+    }
+  # DEBUG BEGIN STMT;
+  newval = (long int) DatumGetInt32 (fcinfo->args[1].value) + (long int) state;
+  # DEBUG BEGIN STMT;
+  return Int64GetDatum (newval);
+}
+
+
+;; Function pg_finfo_int32_abs_avg_trans (null)
+;; enabled by -tree-original
+
+
+{
+  static const struct Pg_finfo_record my_finfo = {.api_version=1};
+
+  # DEBUG BEGIN STMT;
+    static const struct Pg_finfo_record my_finfo = {.api_version=1};
+  # DEBUG BEGIN STMT;
+  return &my_finfo;
+}
+
+
+;; Function pg_finfo_int32_abs_avg_final (null)
+;; enabled by -tree-original
+
+
+{
+  static const struct Pg_finfo_record my_finfo = {.api_version=1};
+
+  # DEBUG BEGIN STMT;
+    static const struct Pg_finfo_record my_finfo = {.api_version=1};
+  # DEBUG BEGIN STMT;
+  return &my_finfo;
+}
+
+
+;; Function int32_abs_avg_trans (null)
+;; enabled by -tree-original
+
+
+{
+  struct MemoryContextData * agg_context;
+  struct MemoryContextData * old_context;
+  struct int32_abs_avg_state * state;
+  static const char __func__[20] = "int32_abs_avg_trans";
+
+    static const char __func__[20] = "int32_abs_avg_trans";
+  # DEBUG BEGIN STMT;
+    struct MemoryContextData * agg_context;
+  # DEBUG BEGIN STMT;
+    struct MemoryContextData * old_context;
+  # DEBUG BEGIN STMT;
+    struct int32_abs_avg_state * state;
+  # DEBUG BEGIN STMT;
+  if (AggCheckCallContext (fcinfo, &agg_context) == 0)
+    {
+      # DEBUG BEGIN STMT;
+      {
+        int __errno_location;
+
+        # DEBUG BEGIN STMT;
+                int __errno_location;
+        # DEBUG BEGIN STMT;
+        if (errstart_cold (21, 0B) != 0)
+          {
+            # DEBUG BEGIN STMT;
+            errmsg_internal ((const char *) "aggregate function called in non-aggregate context");, errfinish ((const char *) "aggregate_functions.c", 67, (const char *) &__func__);;
+          }
+        # DEBUG BEGIN STMT;
+        if (1)
+          {
+            # DEBUG BEGIN STMT;
+            abort ();
+          }
+      }
+      # DEBUG BEGIN STMT;
+    }
+  # DEBUG BEGIN STMT;
+  old_context = MemoryContextSwitchTo (agg_context);
+  # DEBUG BEGIN STMT;
+  if (fcinfo->args[0].isnull != 0)
+    {
+      # DEBUG BEGIN STMT;
+      state = (struct int32_abs_avg_state *) palloc (16);
+      # DEBUG BEGIN STMT;
+      state->sum = 0;
+      # DEBUG BEGIN STMT;
+      state->count = 0;
+    }
+  else
+    {
+      # DEBUG BEGIN STMT;
+      state = (struct int32_abs_avg_state *) DatumGetPointer (fcinfo->args[0].value);
+    }
+  # DEBUG BEGIN STMT;
+  if ((int) !fcinfo->args[1].isnull)
+    {
+      # DEBUG BEGIN STMT;
+      SAVE_EXPR <ABS_EXPR <(int) DatumGetInt32 (fcinfo->args[1].value)>>;, state->sum = state->sum + (int64) SAVE_EXPR <ABS_EXPR <(int) DatumGetInt32 (fcinfo->args[1].value)>>;;
+      # DEBUG BEGIN STMT;
+      state->count++ ;
+    }
+  # DEBUG BEGIN STMT;
+  MemoryContextSwitchTo (old_context);
+  # DEBUG BEGIN STMT;
+  return PointerGetDatum ((const void *) state);
+}
+
+
+;; Function pg_finfo_int32_abs_combine (null)
+;; enabled by -tree-original
+
+
+{
+  static const struct Pg_finfo_record my_finfo = {.api_version=1};
+
+  # DEBUG BEGIN STMT;
+    static const struct Pg_finfo_record my_finfo = {.api_version=1};
+  # DEBUG BEGIN STMT;
+  return &my_finfo;
+}
+
+
+;; Function pg_finfo_int32_abs_avg_serialize (null)
+;; enabled by -tree-original
+
+
+{
+  static const struct Pg_finfo_record my_finfo = {.api_version=1};
+
+  # DEBUG BEGIN STMT;
+    static const struct Pg_finfo_record my_finfo = {.api_version=1};
+  # DEBUG BEGIN STMT;
+  return &my_finfo;
+}
+
+
+;; Function pg_finfo_int32_abs_avg_deserialize (null)
+;; enabled by -tree-original
+
+
+{
+  static const struct Pg_finfo_record my_finfo = {.api_version=1};
+
+  # DEBUG BEGIN STMT;
+    static const struct Pg_finfo_record my_finfo = {.api_version=1};
+  # DEBUG BEGIN STMT;
+  return &my_finfo;
+}
+
+
+;; Function int32_abs_avg_final (null)
+;; enabled by -tree-original
+
+
+{
+  struct int32_abs_avg_state * state;
+
+  # DEBUG BEGIN STMT;
+    struct int32_abs_avg_state * state;
+  # DEBUG BEGIN STMT;
+  # DEBUG BEGIN STMT;
+  if (fcinfo->args[0].isnull != 0)
+    {
+      # DEBUG BEGIN STMT;
+      ExceptionalCondition ((const char *) "PG_ARGISNULL(0) == false", (const char *) "aggregate_functions.c", 113);
+    }
+  # DEBUG BEGIN STMT;
+  # DEBUG BEGIN STMT;
+  state = (struct int32_abs_avg_state *) DatumGetPointer (fcinfo->args[0].value);
+  # DEBUG BEGIN STMT;
+  if (state->count == 0)
+    {
+      # DEBUG BEGIN STMT;
+      # DEBUG BEGIN STMT;
+      fcinfo->isnull = 1;
+      # DEBUG BEGIN STMT;
+      return 0;
+      # DEBUG BEGIN STMT;
+    }
+  # DEBUG BEGIN STMT;
+  return Float8GetDatum ((double) state->sum / (double) state->count);
+}
+
+
+;; Function int32_abs_combine (null)
+;; enabled by -tree-original
+
+
+{
+  struct int32_abs_avg_state * state1;
+  struct int32_abs_avg_state * state2;
+
+  # DEBUG BEGIN STMT;
+    struct int32_abs_avg_state * state1;
+  # DEBUG BEGIN STMT;
+    struct int32_abs_avg_state * state2;
+  # DEBUG BEGIN STMT;
+  if (fcinfo->args[0].isnull != 0)
+    {
+      # DEBUG BEGIN STMT;
+      return PointerGetDatum ((const void *) DatumGetPointer (fcinfo->args[1].value));
+    }
+  # DEBUG BEGIN STMT;
+  if (fcinfo->args[1].isnull != 0)
+    {
+      # DEBUG BEGIN STMT;
+      return PointerGetDatum ((const void *) DatumGetPointer (fcinfo->args[0].value));
+    }
+  # DEBUG BEGIN STMT;
+  state1 = (struct int32_abs_avg_state *) DatumGetPointer (fcinfo->args[0].value);
+  # DEBUG BEGIN STMT;
+  state2 = (struct int32_abs_avg_state *) DatumGetPointer (fcinfo->args[1].value);
+  # DEBUG BEGIN STMT;
+  state1->sum = state1->sum + state2->sum;
+  # DEBUG BEGIN STMT;
+  state1->count = state1->count + state2->count;
+  # DEBUG BEGIN STMT;
+  return PointerGetDatum ((const void *) state1);
+}
+
+
+;; Function int32_abs_avg_serialize (null)
+;; enabled by -tree-original
+
+
+{
+  struct int32_abs_avg_state * state = (struct int32_abs_avg_state *) DatumGetPointer (fcinfo->args[0].value);
+  struct bytea * result;
+
+  # DEBUG BEGIN STMT;
+    struct int32_abs_avg_state * state = (struct int32_abs_avg_state *) DatumGetPointer (fcinfo->args[0].value);
+  # DEBUG BEGIN STMT;
+    struct bytea * result;
+  # DEBUG BEGIN STMT;
+  result = (struct bytea *) palloc0 (20);
+  # DEBUG BEGIN STMT;
+  memcpy ((void * restrict) &((union varattrib_4b *) result)->va_4byte.va_data, (const void * restrict) state, 16);
+  # DEBUG BEGIN STMT;
+  ((union varattrib_4b *) result)->va_4byte.va_header = 64;
+  # DEBUG BEGIN STMT;
+  return PointerGetDatum ((const void *) result);
+}
+
+
+;; Function int32_abs_avg_deserialize (null)
+;; enabled by -tree-original
+
+
+{
+  struct bytea * bytes = (struct bytea *) pg_detoast_datum ((struct varlena *) DatumGetPointer (fcinfo->args[0].value));
+  struct int32_abs_avg_state * state;
+
+  # DEBUG BEGIN STMT;
+    struct bytea * bytes = (struct bytea *) pg_detoast_datum ((struct varlena *) DatumGetPointer (fcinfo->args[0].value));
+  # DEBUG BEGIN STMT;
+    struct int32_abs_avg_state * state;
+  # DEBUG BEGIN STMT;
+  state = (struct int32_abs_avg_state *) palloc0 (16);
+  # DEBUG BEGIN STMT;
+  memcpy ((void * restrict) state, (const void * restrict) &((union varattrib_4b *) bytes)->va_4byte.va_data, 16);
+  # DEBUG BEGIN STMT;
+  return PointerGetDatum ((const void *) state);
+}
+
