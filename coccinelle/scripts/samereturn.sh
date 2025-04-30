@@ -27,8 +27,12 @@ if [ -d $RESULTS_PATH ]; then
    exit 0
 fi
 
-if [ ! -f $RESULTS_PATH_ALL/freerealloc/$RESULTS_FILE_NAME.$RESULTS_FILE_EXT ]; then
-   echo "Need to run make freerealloc first!"
+if [ ! -f $RESULTS_PATH_ALL/freeexists/$RESULTS_FILE_NAME.$RESULTS_FILE_EXT ]; then
+   echo "Need to run make free first!"
+   exit 0
+fi
+if [ ! -f $RESULTS_PATH_ALL/reallocexists/$RESULTS_FILE_NAME.$RESULTS_FILE_EXT ]; then
+   echo "Need to run make realloc first!"
    exit 0
 fi
 
@@ -51,7 +55,7 @@ position p;
 @@
 t f(..., t i, ...) {
    <...
-   $arg@p(i)
+   $arg@p(..., i, ...)
    ...>
 }
 
@@ -79,7 +83,8 @@ fi
 #WE KEEP TRACK OF FUNCTIONS FOUND IN THE PREVIOUS ITERATION IN
 #THE FILE 'functionsLastIteration'
 #PASS INITIAL FUNCTION NAMES FOR 'ITERATION -1'
-grep "^>" $RESULTS_PATH/../freerealloc/$RESULTS_FILE_NAME.$RESULTS_FILE_EXT > $TMP_PATH/functionsLastIteration
+grep "^>" $RESULTS_PATH/../freeexists/$RESULTS_FILE_NAME.$RESULTS_FILE_EXT | cut -d ',' -f 1 | sort | uniq > $TMP_PATH/functionsLastIteration
+grep "^>" $RESULTS_PATH/../reallocexists/$RESULTS_FILE_NAME.$RESULTS_FILE_EXT | cut -d ',' -f 1 |sort | uniq >> $TMP_PATH/functionsLastIteration
 
 #LOGGING
 echo "STARTING -> $1"

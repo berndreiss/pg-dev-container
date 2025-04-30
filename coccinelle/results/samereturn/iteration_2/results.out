@@ -1,0 +1,4 @@
+>make_join_rel
+/usr/local/src/postgresql/src/backend/optimizer/path/joinrels.c:760:11
+Used: build_join_rel
+Type: RelOptInfo *

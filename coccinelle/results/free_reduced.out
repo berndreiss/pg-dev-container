@@ -1,0 +1,189 @@
+>ParallelBackupEnd,ParallelState *
+/usr/local/src/postgresql/src/bin/pg_dump/parallel.c:1090:1
+Used: free
+Ret. Type: void
+>init_spawned_worker_win32,WorkerInfo *
+/usr/local/src/postgresql/src/bin/pg_dump/parallel.c:880:1
+Used: free
+Ret. Type: unsigned __stdcall 
+>DeCloneArchive,ArchiveHandle *
+/usr/local/src/postgresql/src/bin/pg_dump/pg_backup_archiver.c:5067:1
+Used: free
+Ret. Type: void
+>free_keep_errno,void *
+--
+>restore_global_locale,save_locale_t
+/usr/local/src/postgresql/src/bin/initdb/initdb.c:395:1
+Used: free
+Ret. Type: void
+>writefile,char * *
+/usr/local/src/postgresql/src/bin/initdb/initdb.c:735:1
+Used: free
+Ret. Type: void
+>restorePsetInfo,printQueryOpt *
+/usr/local/src/postgresql/src/bin/psql/command.c:5051:1
+Used: free
+Ret. Type: void
+>free_copy_options,struct copy_options *
+--
+>output_prepare_statement,char *
+/usr/local/src/postgresql/src/interfaces/ecpg/preproc/output.c:178:1
+Used: free
+Ret. Type: void
+>output_simple_statement,char *
+/usr/local/src/postgresql/src/interfaces/ecpg/preproc/output.c:25:1
+Used: free
+Ret. Type: void
+>output_statement,char *
+/usr/local/src/postgresql/src/interfaces/ecpg/preproc/output.c:166:1
+Used: free
+Ret. Type: void
+>ECPGfree_type,struct ECPGtype *
+--
+>cat2_str,char *
+/usr/local/src/postgresql/src/interfaces/ecpg/preproc/preproc.c:221:1
+Used: free
+Ret. Type: char *
+>cat2_str,char *
+/usr/local/src/postgresql/src/interfaces/ecpg/preproc/preproc.c:222:1
+Used: free
+Ret. Type: char *
+>make2_str,char *
+/usr/local/src/postgresql/src/interfaces/ecpg/preproc/preproc.c:253:1
+Used: free
+Ret. Type: char *
+>make2_str,char *
+/usr/local/src/postgresql/src/interfaces/ecpg/preproc/preproc.c:254:1
+Used: free
+Ret. Type: char *
+>make3_str,char *
+/usr/local/src/postgresql/src/interfaces/ecpg/preproc/preproc.c:266:1
+Used: free
+Ret. Type: char *
+>make3_str,char *
+/usr/local/src/postgresql/src/interfaces/ecpg/preproc/preproc.c:267:1
+Used: free
+Ret. Type: char *
+>make3_str,char *
+/usr/local/src/postgresql/src/interfaces/ecpg/preproc/preproc.c:268:1
+Used: free
+Ret. Type: char *
+>PGTYPESchar_free,char *
+--
+>PQclear,PGresult *
+/usr/local/src/postgresql/src/interfaces/libpq/fe-exec.c:770:1
+Used: free
+Ret. Type: void
+>PQfreemem,void *
+--
+>EndCompressFileHandle,CompressFileHandle *
+/usr/local/src/postgresql/src/bin/pg_dump/compress_io.c:296:1
+Used: free_keep_errno
+Ret. Type: bool
+>EndCompressor,CompressorState *
+/usr/local/src/postgresql/src/bin/pg_dump/compress_io.c:152:1
+Used: pg_free
+Ret. Type: void
+>free_command,Command *
+--
+>HandleEndOfCopyStream,char *
+/usr/local/src/postgresql/src/bin/pg_basebackup/receivelog.c:1202:1
+Used: PQfreemem
+Ret. Type: PGresult *
+>pfree,void *
+--
+>insert_tobeinserted,char *
+/usr/local/src/postgresql/src/interfaces/ecpg/ecpglib/execute.c:1135:2
+Used: ecpg_free
+Ret. Type: bool
+>quote_postgres,char *
+/usr/local/src/postgresql/src/interfaces/ecpg/ecpglib/execute.c:77:2
+Used: ecpg_free
+Ret. Type: char *
+>PQfreeNotify,PGnotify *
+--
+>PLy_function_restore_args,PLySavedArgs *
+/usr/local/src/postgresql/src/pl/plpython/plpy_exec.c:577:1
+Used: pfree
+Ret. Type: void
+>CatCacheRemoveCList,CatCList *
+/usr/local/src/postgresql/src/backend/utils/cache/catcache.c:582:1
+Used: pfree
+Ret. Type: void
+>CatCacheRemoveCTup,CatCTup *
+/usr/local/src/postgresql/src/backend/utils/cache/catcache.c:538:1
+Used: pfree
+Ret. Type: void
+>RelationDestroyRelation,Relation
+--
+>string_to_text,char *
+/usr/local/src/postgresql/src/backend/utils/adt/ruleutils.c:13221:1
+Used: pfree
+Ret. Type: text *
+>close_tsvector_parser,TSVectorParseState
+--
+>plainnode,NODE *
+/usr/local/src/postgresql/src/backend/utils/adt/tsquery_cleanup.c:90:1
+Used: pfree
+Ret. Type: void
+>QTNFree,QTNode *
+--
+>CopyMultiInsertBufferCleanup,CopyMultiInsertBuffer *
+/usr/local/src/postgresql/src/backend/commands/copyfrom.c:506:1
+Used: pfree
+Ret. Type: void
+>EndCopyFrom,CopyFromState
+--
+>ReorderBufferIterTXNFinish,ReorderBufferIterTXNState *
+/usr/local/src/postgresql/src/backend/replication/logical/reorderbuffer.c:1505:1
+Used: pfree
+Ret. Type: void
+>ReorderBufferReturnChange,ReorderBufferChange *
+/usr/local/src/postgresql/src/backend/replication/logical/reorderbuffer.c:562:1
+Used: pfree
+Ret. Type: void
+>ReorderBufferReturnRelids,Oid *
+/usr/local/src/postgresql/src/backend/replication/logical/reorderbuffer.c:621:1
+Used: pfree
+Ret. Type: void
+>ReorderBufferReturnTXN,ReorderBufferTXN *
+/usr/local/src/postgresql/src/backend/replication/logical/reorderbuffer.c:478:1
+Used: pfree
+Ret. Type: void
+>ReorderBufferReturnTupleBuf,HeapTuple
+/usr/local/src/postgresql/src/backend/replication/logical/reorderbuffer.c:590:1
+Used: pfree
+Ret. Type: void
+>pa_free_worker_info,ParallelApplyWorkerInfo *
+--
+>ExecDropSingleTupleTableSlot,TupleTableSlot *
+/usr/local/src/postgresql/src/backend/executor/execTuples.c:1356:1
+Used: pfree
+Ret. Type: void
+>end_tup_output,TupOutputState *
+--
+>PageRestoreTempPage,Page
+/usr/local/src/postgresql/src/backend/storage/page/bufpage.c:431:1
+Used: pfree
+Ret. Type: void
+>read_stream_end,ReadStream *
+/usr/local/src/postgresql/src/backend/storage/aio/read_stream.c:784:1
+Used: pfree
+Ret. Type: void
+>dsm_detach,dsm_segment *
+--
+>TidStoreEndIterate,TidStoreIter *
+/usr/local/src/postgresql/src/backend/access/common/tidstore.c:544:1
+Used: pfree
+Ret. Type: void
+>toast_close_indexes,Relation *
+--
+>json_manifest_object_field_start,char *
+/usr/local/src/postgresql/src/common/parse_manifest.c:497:1
+Used: pfree
+Ret. Type: JsonParseErrorType
+>json_parse_manifest_incremental_shutdown,JsonManifestParseIncrementalState *
+/usr/local/src/postgresql/src/common/parse_manifest.c:174:1
+Used: pfree
+Ret. Type: void
+>destroyStringInfo,StringInfo

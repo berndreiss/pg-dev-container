@@ -1,0 +1,3 @@
+>repalloc,void *
+>repalloc,Size
+>growalloc,void *

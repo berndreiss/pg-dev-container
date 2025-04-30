@@ -2,15 +2,37 @@
 all: cocci
 
 cocci:
+	@$(MAKE) --no-print-directory clean
 	@echo "Running Coccinelle related scripts..." 
-	@$(MAKE) --no-print-directory freerealloc
+	@$(MAKE) --no-print-directory free
+	@$(MAKE) --no-print-directory realloc
+	@$(MAKE) --no-print-directory freestrict
+	@$(MAKE) --no-print-directory reallocstrict
 	@$(MAKE) --no-print-directory samereturn
 
-freerealloc:
-	@echo "Running script for free/realloc..."
-	@cd scripts && bash runCocci.sh freerealloc
-	@echo "##### RESULTS FREE / REALLOC #####" >> results/freerealloc/results.log
-	@cd scripts && bash reduceResults.sh freerealloc
+free:
+	@echo "Running script for free..."
+	@cd scripts && bash runCocci.sh free "exists"
+	@echo "##### RESULTS FREE #####" >> results/freeexists/results.log
+	@cd scripts && bash reduceResults.sh freeexists
+
+realloc:
+	@echo "Running script for realloc..."
+	@cd scripts && bash runCocci.sh realloc "exists"
+	@echo "##### RESULTS REALLOC #####" >> results/reallocexists/results.log
+	@cd scripts && bash reduceResults.sh reallocexists
+
+freestrict:
+	@echo "Running script for freestrict..."
+	@cd scripts && bash runCocci.sh free ""
+	@echo "##### RESULTS FREE STICT #####" >> results/free/results.log
+	@cd scripts && bash reduceResults.sh free
+
+reallocstrict:
+	@echo "Running script for reallocstrict..."
+	@cd scripts && bash runCocci.sh realloc ""
+	@echo "##### RESULTS REALLOC STRICT #####" >> results/realloc/results.log
+	@cd scripts && bash reduceResults.sh realloc
 
 samereturn:
 	@echo "Running script for same return type..."
@@ -24,3 +46,4 @@ print:
 clean:
 	@if [ "$$(ls -A results | wc -l)" -eq 0 ]; then echo "Nothing to clean"; else rm -r results/*; fi
 	@rm -f scripts/*.tmp
+	@rm -rf logs

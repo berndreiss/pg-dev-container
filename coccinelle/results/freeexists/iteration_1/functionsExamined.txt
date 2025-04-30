@@ -1,0 +1,42 @@
+>ParallelBackupEnd,ParallelState *
+>init_spawned_worker_win32,WorkerInfo *
+>DeCloneArchive,ArchiveHandle *
+>free_keep_errno,void *
+>restore_global_locale,save_locale_t
+>writefile,char * *
+>restorePsetInfo,printQueryOpt *
+>free_copy_options,struct copy_options *
+>free_readfile,char * *
+>closedir,DIR *
+>GenerationBlockFree,GenerationBlock *
+>GenerationDelete,MemoryContext
+>BumpBlockFree,BumpBlock *
+>BumpDelete,MemoryContext
+>SlabDelete,MemoryContext
+>SN_close_env,struct SN_env *
+>pg_free,void *
+>conditional_stack_destroy,ConditionalStack
+>psql_scan_destroy,PsqlScanState
+>output_deallocate_prepare_statement,char *
+>output_prepare_statement,char *
+>output_simple_statement,char *
+>output_statement,char *
+>dump_variables,struct arguments *
+>ECPGfree_type,struct ECPGtype *
+>cat2_str,char *
+>make2_str,char *
+>make3_str,char *
+>PGTYPESchar_free,char *
+>PGTYPESinterval_free,interval *
+>PGTYPESdate_free,date *
+>PGTYPESdecimal_free,decimal *
+>PGTYPESnumeric_free,numeric *
+>ecpg_sqlca_key_destructor,void *
+>ecpg_free,void *
+>PQclear,PGresult *
+>PQfreemem,void *
+>SSLerrfree,char *
+>PQconninfoFree,PQconninfoOption *
+>freePGconn,PGconn *
+>destroyPQExpBuffer,PQExpBuffer
+>PQfreeCancel,PGcancel *

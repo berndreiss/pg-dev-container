@@ -1,0 +1,8 @@
+>xml_repalloc,size_t
+>xml_repalloc,void *
+>repalloc0,void *
+>repalloc0,Size
+>SPI_repalloc,void *
+>SPI_repalloc,Size
+>gistjoinvector,IndexTuple *
+>resize_intArrayType,ArrayType *

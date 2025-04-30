@@ -1,0 +1,96 @@
+>yyrealloc,void *
+/usr/local/src/postgresql/src/bin/pgbench/exprscan.c:2631:8
+Used: realloc
+Ret. Type: void *
+>yyrealloc,yy_size_t
+/usr/local/src/postgresql/src/bin/pgbench/exprscan.c:2631:8
+Used: realloc
+Ret. Type: void *
+>yyrealloc,void *
+/usr/local/src/postgresql/src/bin/psql/psqlscanslash.c:3118:8
+Used: realloc
+Ret. Type: void *
+>yyrealloc,yy_size_t
+/usr/local/src/postgresql/src/bin/psql/psqlscanslash.c:3118:8
+Used: realloc
+Ret. Type: void *
+>yyrealloc,void *
+/usr/local/src/postgresql/src/backend/utils/misc/guc-file.c:2096:8
+Used: realloc
+Ret. Type: void *
+>yyrealloc,yy_size_t
+/usr/local/src/postgresql/src/backend/utils/misc/guc-file.c:2096:8
+Used: realloc
+Ret. Type: void *
+>yyrealloc,void *
+/usr/local/src/postgresql/src/backend/bootstrap/bootscanner.c:2245:8
+Used: realloc
+Ret. Type: void *
+>yyrealloc,yy_size_t
+/usr/local/src/postgresql/src/backend/bootstrap/bootscanner.c:2245:8
+Used: realloc
+Ret. Type: void *
+>yyrealloc,void *
+/usr/local/src/postgresql/src/backend/replication/repl_scanner.c:2476:8
+Used: realloc
+Ret. Type: void *
+>yyrealloc,yy_size_t
+/usr/local/src/postgresql/src/backend/replication/repl_scanner.c:2476:8
+Used: realloc
+Ret. Type: void *
+>yyrealloc,void *
+/usr/local/src/postgresql/src/backend/replication/syncrep_scanner.c:2111:8
+Used: realloc
+Ret. Type: void *
+>yyrealloc,yy_size_t
+/usr/local/src/postgresql/src/backend/replication/syncrep_scanner.c:2111:8
+Used: realloc
+Ret. Type: void *
+>pg_realloc,size_t
+/usr/local/src/postgresql/src/common/fe_memutils.c:72:7
+Used: realloc
+Ret. Type: void *
+>pg_realloc,void *
+/usr/local/src/postgresql/src/common/fe_memutils.c:72:7
+Used: realloc
+Ret. Type: void *
+>yyrealloc,void *
+/usr/local/src/postgresql/src/fe_utils/psqlscan.c:5216:8
+Used: realloc
+Ret. Type: void *
+>yyrealloc,yy_size_t
+/usr/local/src/postgresql/src/fe_utils/psqlscan.c:5216:8
+Used: realloc
+Ret. Type: void *
+>yyrealloc,void *
+/usr/local/src/postgresql/src/interfaces/ecpg/preproc/pgc.c:5072:8
+Used: realloc
+Ret. Type: void *
+>yyrealloc,yy_size_t
+/usr/local/src/postgresql/src/interfaces/ecpg/preproc/pgc.c:5072:8
+Used: realloc
+Ret. Type: void *
+>ecpg_realloc,long
+/usr/local/src/postgresql/src/interfaces/ecpg/ecpglib/memory.c:35:25
+Used: realloc
+Ret. Type: char *
+>ecpg_realloc,void *
+/usr/local/src/postgresql/src/interfaces/ecpg/ecpglib/memory.c:35:25
+Used: realloc
+Ret. Type: char *
+>yyrealloc,void *
+/usr/local/src/postgresql/src/test/isolation/specscanner.c:2194:8
+Used: realloc
+Ret. Type: void *
+>yyrealloc,yy_size_t
+/usr/local/src/postgresql/src/test/isolation/specscanner.c:2194:8
+Used: realloc
+Ret. Type: void *
+>erealloc,size_t
+/usr/local/src/postgresql/src/timezone/zic.c:442:17
+Used: realloc
+Ret. Type: void *
+>erealloc,void *
+/usr/local/src/postgresql/src/timezone/zic.c:442:17
+Used: realloc
+Ret. Type: void *
