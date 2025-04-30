@@ -1,5 +1,5 @@
 #/bin/bash
-mkdir -p ../results
-mkdir -p ../results/$1
 
-spatch --sp-file $1.cocci /usr/local/src/postgresql -very_quiet > ../results/$1/$1.out
+mkdir -p ../logs
+datetime="$(date '+%Y-%m-%d_%H-%M-%S')"
+sh $1.sh /usr/local/src/postgresql > ../logs/$datetime.log 2>&1

@@ -1,5 +1,0 @@
->json_manifest_scalar
->string_to_text
->emit_audit_message
->emit_audit_message
->report_corruption_internal

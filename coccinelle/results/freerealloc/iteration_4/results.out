@@ -1,0 +1,60 @@
+>UnregisterSnapshotFromOwner
+/usr/local/src/postgresql/src/backend/utils/time/snapmgr.c:855:1
+Used: UnregisterSnapshotNoOwner
+Type: Snapshot
+Ret. Type: void
+>bms_add_member
+/usr/local/src/postgresql/src/backend/nodes/bitmapset.c:854:5
+Used: bms_copy_and_free
+Type: Bitmapset *
+Ret. Type: Bitmapset *
+>bms_add_members
+/usr/local/src/postgresql/src/backend/nodes/bitmapset.c:933:6
+Used: bms_copy_and_free
+Type: Bitmapset *
+Ret. Type: Bitmapset *
+>bms_add_range
+/usr/local/src/postgresql/src/backend/nodes/bitmapset.c:1033:6
+Used: bms_copy_and_free
+Type: Bitmapset *
+Ret. Type: Bitmapset *
+>bms_del_member
+/usr/local/src/postgresql/src/backend/nodes/bitmapset.c:884:5
+Used: bms_copy_and_free
+Type: Bitmapset *
+Ret. Type: Bitmapset *
+>bms_del_members
+/usr/local/src/postgresql/src/backend/nodes/bitmapset.c:1174:6
+Used: bms_copy_and_free
+Type: Bitmapset *
+Ret. Type: Bitmapset *
+>bms_int_members
+/usr/local/src/postgresql/src/backend/nodes/bitmapset.c:1150:5
+Used: bms_copy_and_free
+Type: Bitmapset *
+Ret. Type: Bitmapset *
+>bms_join
+/usr/local/src/postgresql/src/backend/nodes/bitmapset.c:1244:6
+Used: bms_copy_and_free
+Type: Bitmapset *
+Ret. Type: Bitmapset *
+>bms_join
+/usr/local/src/postgresql/src/backend/nodes/bitmapset.c:1252:6
+Used: bms_copy_and_free
+Type: Bitmapset *
+Ret. Type: Bitmapset *
+>bms_replace_members
+/usr/local/src/postgresql/src/backend/nodes/bitmapset.c:1004:5
+Used: bms_copy_and_free
+Type: Bitmapset *
+Ret. Type: Bitmapset *
+>ReorderBufferFreeSnap
+/usr/local/src/postgresql/src/backend/replication/logical/reorderbuffer.c:1897:2
+Used: SnapBuildSnapDecRefcount
+Type: Snapshot
+Ret. Type: void
+>pa_xact_finish
+/usr/local/src/postgresql/src/backend/replication/logical/applyparallelworker.c:1638:1
+Used: pa_free_worker
+Type: ParallelApplyWorkerInfo *
+Ret. Type: void
