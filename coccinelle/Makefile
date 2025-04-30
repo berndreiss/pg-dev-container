@@ -4,12 +4,19 @@ all: cocci
 cocci:
 	@echo "Running Coccinelle related scripts..." 
 	@$(MAKE) --no-print-directory freerealloc
+	@$(MAKE) --no-print-directory samereturn
 
 freerealloc:
 	@echo "Running script for free/realloc..."
 	@cd scripts && bash runCocci.sh freerealloc
-	@echo "##### RESULTS FREE / RELLOC #####" >> results/freerealloc/results.log
+	@echo "##### RESULTS FREE / REALLOC #####" >> results/freerealloc/results.log
 	@cd scripts && bash reduceResults.sh freerealloc
+
+samereturn:
+	@echo "Running script for same return type..."
+	@cd scripts && bash runCocci.sh samereturn
+	@echo "##### RESULTS FREE / RELLOC #####" >> results/samereturn/results.log
+	@cd scripts && bash reduceResults.sh samereturn
 
 print:
 	@@if [ -f results/pfree/results.log ]; then cat results/pfree/results.log; fi

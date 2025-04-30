@@ -17,7 +17,7 @@ TEMP_1=temp1.tmp
 STATS_FILE=../results/$1/stats.out
 OUT_FILE=../results/$1/results.out
 OUT_FUNCTIONS=../results/$1/function_names_only.out
-OUT_REDUCED=../results/reduced.out
+OUT_REDUCED=../results/$1_reduced.out
 EXCLUDE_FILE=exclude.txt
 
 #START WITH A CLEAN SLATE: REMOVE THE STATS FILE IF IT EXISTS

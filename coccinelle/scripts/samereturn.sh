@@ -12,17 +12,23 @@ ITERATION=0
 RESULTS_FILE_NAME=results
 RESULTS_FILE_EXT=out
 IT_PREFIX=iteration_
-RESULTS_PATH=../results/freerealloc
+RESULTS_PATH=../results/samereturn
+RESULTS_PATH_ALL=../results
 RESULTS_FILE=$RESULTS_PATH/$RESULTS_FILE_NAME.$RESULTS_FILE_EXT
 TMP_PATH=tmp
-PRINTED_LINES=4
+PRINTED_LINES=3
 
 if [ -d $TMP_PATH ]; then
    rm -rf $TMP_PATH
 fi
 
 if [ -d $RESULTS_PATH ]; then
-   echo "Results directory already exists."
+   echo "Results directory for same return type already exists."
+   exit 0
+fi
+
+if [ ! -f $RESULTS_PATH_ALL/freerealloc/$RESULTS_FILE_NAME.$RESULTS_FILE_EXT ]; then
+   echo "Need to run make freerealloc first!"
    exit 0
 fi
 
@@ -38,12 +44,12 @@ createScript(){
    do
    echo "
 @func$counter@
-type t1, t2;
+type t;
 identifier f, i;
 position p;
 
 @@
-t1 f(..., t2 i, ...) {
+t f(..., t i, ...) {
    <...
    $arg@p(i)
    ...>
@@ -52,15 +58,13 @@ t1 f(..., t2 i, ...) {
 @script:python@
 f << func$counter.f;
 p << func$counter.p;
-t << func$counter.t2;
-rt << func$counter.t1;
+t << func$counter.t;
 
 @@
 print(f\">{f}\")
 print(p[0].file + \":\" + p[0].line + \":\" + p[0].column)
 print(f\"Used: $arg\")
 print(f\"Type: {t}\")
-print(f\"Ret. Type: {rt}\")
 
    " >> $TMP_PATH/$ITERATION.cocci
    counter=$((counter+1))
@@ -75,8 +79,7 @@ fi
 #WE KEEP TRACK OF FUNCTIONS FOUND IN THE PREVIOUS ITERATION IN
 #THE FILE 'functionsLastIteration'
 #PASS INITIAL FUNCTION NAMES FOR 'ITERATION -1'
-echo ">free" >> $TMP_PATH/functionsLastIteration
-echo ">realloc" >> $TMP_PATH/functionsLastIteration
+grep "^>" $RESULTS_PATH/../freerealloc/$RESULTS_FILE_NAME.$RESULTS_FILE_EXT > $TMP_PATH/functionsLastIteration
 
 #LOGGING
 echo "STARTING -> $1"
