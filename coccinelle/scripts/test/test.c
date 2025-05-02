@@ -1,5 +1,6 @@
 
 int test(int i){
+   somefunc();
    free(i);
 }
 
