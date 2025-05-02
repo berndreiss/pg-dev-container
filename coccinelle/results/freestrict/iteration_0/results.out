@@ -23,6 +23,14 @@ Ret. Type: void
 /usr/local/src/postgresql/src/bin/psql/command.c:5051:1
 Used: free
 Ret. Type: void
+>free_copy_options,struct copy_options *
+/usr/local/src/postgresql/src/bin/psql/copy.c:72:1
+Used: free
+Ret. Type: void
+>free_readfile,char * *
+/usr/local/src/postgresql/src/bin/pg_ctl/pg_ctl.c:420:1
+Used: free
+Ret. Type: void
 >closedir,DIR *
 /usr/local/src/postgresql/src/port/dirent.c:134:1
 Used: free
@@ -45,6 +53,10 @@ Used: free
 Ret. Type: void
 >SlabDelete,MemoryContext
 /usr/local/src/postgresql/src/backend/utils/mmgr/slab.c:490:1
+Used: free
+Ret. Type: void
+>SN_close_env,struct SN_env *
+/usr/local/src/postgresql/src/backend/snowball/libstemmer/api.c:48:4
 Used: free
 Ret. Type: void
 >pg_free,void *
@@ -141,6 +153,14 @@ Used: free
 Ret. Type: void
 >freePGconn,PGconn *
 /usr/local/src/postgresql/src/interfaces/libpq/fe-connect.c:4708:1
+Used: free
+Ret. Type: void
+>PQconninfoFree,PQconninfoOption *
+/usr/local/src/postgresql/src/interfaces/libpq/fe-connect.c:6997:1
+Used: free
+Ret. Type: void
+>destroyPQExpBuffer,PQExpBuffer
+/usr/local/src/postgresql/src/interfaces/libpq/pqexpbuffer.c:119:2
 Used: free
 Ret. Type: void
 >PQfreeCancel,PGcancel *

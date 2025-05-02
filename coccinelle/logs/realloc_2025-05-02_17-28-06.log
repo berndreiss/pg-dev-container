@@ -4517,7 +4517,7 @@ Skipping: /usr/local/src/postgresql/contrib/ltree/crc32.c
 HANDLING: /usr/local/src/postgresql/contrib/ltree/ltxtquery_io.c
 Skipping: /usr/local/src/postgresql/contrib/pgrowlocks/pgrowlocks.c
 #################################
-TIME PASSED: 5 SECONDS
+TIME PASSED: 6 SECONDS
 ########## ITERATION 3 ##########
 init_defs_builtins: /usr/lib/coccinelle/standard.h
 warning: bms_add_member3: metavariable t2 not used in the - or context code
@@ -5718,6 +5718,7 @@ HANDLING: /usr/local/src/postgresql/src/interfaces/ecpg/preproc/type.c
 HANDLING: /usr/local/src/postgresql/src/interfaces/ecpg/preproc/ecpg_keywords.c
 HANDLING: /usr/local/src/postgresql/src/interfaces/ecpg/preproc/preproc.c
 Unable to parse #if condition: defined size_t
+Note: processing took    10.3s: /usr/local/src/postgresql/src/interfaces/ecpg/preproc/preproc.c
 HANDLING: /usr/local/src/postgresql/src/interfaces/ecpg/pgtypeslib/timestamp.c
 HANDLING: /usr/local/src/postgresql/src/interfaces/ecpg/pgtypeslib/common.c
 HANDLING: /usr/local/src/postgresql/src/interfaces/ecpg/pgtypeslib/interval.c
@@ -6038,8 +6039,8 @@ HANDLING: /usr/local/src/postgresql/contrib/ltree/crc32.c
 HANDLING: /usr/local/src/postgresql/contrib/ltree/ltxtquery_io.c
 HANDLING: /usr/local/src/postgresql/contrib/pgrowlocks/pgrowlocks.c
 #################################
-TIME PASSED: 42 SECONDS
+TIME PASSED: 43 SECONDS
 #################################
 DONE
 NUMBER OF ITERATIONS: 4
-TIME PASSED OVERALL: 1 MINUTES 5 SECONDS
+TIME PASSED OVERALL: 1 MINUTES 7 SECONDS

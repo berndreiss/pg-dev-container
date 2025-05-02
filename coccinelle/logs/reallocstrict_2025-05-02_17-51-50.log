@@ -3010,7 +3010,7 @@ Skipping: /usr/local/src/postgresql/contrib/ltree/crc32.c
 Skipping: /usr/local/src/postgresql/contrib/ltree/ltxtquery_io.c
 Skipping: /usr/local/src/postgresql/contrib/pgrowlocks/pgrowlocks.c
 #################################
-TIME PASSED: 6 SECONDS
+TIME PASSED: 9 SECONDS
 ########## ITERATION 2 ##########
 init_defs_builtins: /usr/lib/coccinelle/standard.h
 (ONCE) Expected tokens repalloc growalloc
@@ -4515,10 +4515,12 @@ Skipping: /usr/local/src/postgresql/contrib/ltree/crc32.c
 HANDLING: /usr/local/src/postgresql/contrib/ltree/ltxtquery_io.c
 Skipping: /usr/local/src/postgresql/contrib/pgrowlocks/pgrowlocks.c
 #################################
-TIME PASSED: 5 SECONDS
+TIME PASSED: 6 SECONDS
 ########## ITERATION 3 ##########
 init_defs_builtins: /usr/lib/coccinelle/standard.h
-warning: gistjoinvector3: metavariable t2 not used in the - or context code
+warning: gistjoinvector30: metavariable t2 not used in the - or context code
+warning: gistjoinvector31: metavariable t2 not used in the - or context code
+warning: gistjoinvector32: metavariable t2 not used in the - or context code
 (ONCE) Expected tokens xml_repalloc repalloc0 SPI_repalloc gistjoinvector IndexTuple
 Skipping: /usr/local/src/postgresql/src/tools/testint128.c
 Skipping: /usr/local/src/postgresql/src/tools/pg_bsd_indent/lexi.c
@@ -6021,8 +6023,8 @@ Skipping: /usr/local/src/postgresql/contrib/ltree/crc32.c
 Skipping: /usr/local/src/postgresql/contrib/ltree/ltxtquery_io.c
 Skipping: /usr/local/src/postgresql/contrib/pgrowlocks/pgrowlocks.c
 #################################
-TIME PASSED: 0 SECONDS
+TIME PASSED: 1 SECONDS
 #################################
 DONE
 NUMBER OF ITERATIONS: 4
-TIME PASSED OVERALL: 0 MINUTES 24 SECONDS
+TIME PASSED OVERALL: 0 MINUTES 29 SECONDS

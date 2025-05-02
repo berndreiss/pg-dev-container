@@ -1,0 +1,180 @@
+>addHLParsedLex,ParsedLex *
+/usr/local/src/postgresql/src/backend/tsearch/ts_parse.c:521:2
+Used: pfree
+Ret. Type: void
+>add_partial_path,Path *
+/usr/local/src/postgresql/src/backend/optimizer/util/pathnode.c:850:2
+Used: pfree
+Ret. Type: void
+>add_path,Path *
+/usr/local/src/postgresql/src/backend/optimizer/util/pathnode.c:620:3
+Used: pfree
+Ret. Type: void
+>avlFree,avl_node *
+/usr/local/src/postgresql/src/bin/psql/crosstabview.c:464:3
+Used: pg_free
+Ret. Type: void
+>bms_add_members,Bitmapset *
+/usr/local/src/postgresql/src/backend/nodes/bitmapset.c:957:2
+Used: pfree
+Ret. Type: Bitmapset *
+>bms_del_member,Bitmapset *
+/usr/local/src/postgresql/src/backend/nodes/bitmapset.c:907:2
+Used: pfree
+Ret. Type: Bitmapset *
+>bms_del_members,Bitmapset *
+/usr/local/src/postgresql/src/backend/nodes/bitmapset.c:1211:3
+Used: pfree
+Ret. Type: Bitmapset *
+>bms_int_members,Bitmapset *
+/usr/local/src/postgresql/src/backend/nodes/bitmapset.c:1123:2
+Used: pfree
+Ret. Type: Bitmapset *
+>bms_int_members,Bitmapset *
+/usr/local/src/postgresql/src/backend/nodes/bitmapset.c:1142:2
+Used: pfree
+Ret. Type: Bitmapset *
+>bms_replace_members,Bitmapset *
+/usr/local/src/postgresql/src/backend/nodes/bitmapset.c:983:2
+Used: pfree
+Ret. Type: Bitmapset *
+>bool_substitute_hook,char *
+/usr/local/src/postgresql/src/bin/psql/startup.c:868:2
+Used: pg_free
+Ret. Type: char *
+>_bt_insertonpg,IndexTuple
+/usr/local/src/postgresql/src/backend/access/nbtree/nbtinsert.c:1435:2
+Used: pfree
+Ret. Type: void
+>CatCacheRemoveCTup,CatCTup *
+/usr/local/src/postgresql/src/backend/utils/cache/catcache.c:538:1
+Used: pfree
+Ret. Type: void
+>clean_NOT_intree,NODE *
+/usr/local/src/postgresql/src/backend/utils/adt/tsquery_cleanup.c:171:3
+Used: pfree
+Ret. Type: NODE *
+>clean_NOT_intree,NODE *
+/usr/local/src/postgresql/src/backend/utils/adt/tsquery_cleanup.c:177:3
+Used: pfree
+Ret. Type: NODE *
+>clean_NOT_intree,NODE *
+/usr/local/src/postgresql/src/backend/utils/adt/tsquery_cleanup.c:182:3
+Used: pfree
+Ret. Type: NODE *
+>clean_stopword_intree,NODE *
+/usr/local/src/postgresql/src/backend/utils/adt/tsquery_cleanup.c:250:2
+Used: pfree
+Ret. Type: NODE *
+>clean_stopword_intree,NODE *
+/usr/local/src/postgresql/src/backend/utils/adt/tsquery_cleanup.c:320:3
+Used: pfree
+Ret. Type: NODE *
+>clean_stopword_intree,NODE *
+/usr/local/src/postgresql/src/backend/utils/adt/tsquery_cleanup.c:339:3
+Used: pfree
+Ret. Type: NODE *
+>createNewConnection,remoteConn *
+/usr/local/src/postgresql/contrib/dblink/dblink.c:2572:2
+Used: pfree
+Ret. Type: void
+>dblink_security_check,remoteConn *
+/usr/local/src/postgresql/contrib/dblink/dblink.c:2628:2
+Used: pfree
+Ret. Type: void
+>deallocate_one,struct prepared_statement *
+/usr/local/src/postgresql/src/interfaces/ecpg/ecpglib/prepare.c:309:1
+Used: ecpg_free
+Ret. Type: bool
+>dofindsubquery,QTNode *
+/usr/local/src/postgresql/src/backend/utils/adt/tsquery_rewrite.c:250:3
+Used: pfree
+Ret. Type: QTNode *
+>dump_variables,struct arguments *
+/usr/local/src/postgresql/src/interfaces/ecpg/preproc/variable.c:460:2
+Used: free
+Ret. Type: void
+>ecpg_finish,struct connection *
+/usr/local/src/postgresql/src/interfaces/ecpg/ecpglib/connect.c:139:2
+Used: ecpg_free
+Ret. Type: void
+>ExecForceStoreHeapTuple,HeapTuple
+/usr/local/src/postgresql/src/backend/executor/execTuples.c:1577:3
+Used: pfree
+Ret. Type: void
+>ExecForceStoreHeapTuple,HeapTuple
+/usr/local/src/postgresql/src/backend/executor/execTuples.c:1589:3
+Used: pfree
+Ret. Type: void
+>ExecForceStoreMinimalTuple,MinimalTuple
+/usr/local/src/postgresql/src/backend/executor/execTuples.c:1622:3
+Used: pfree
+Ret. Type: void
+>freeGinBtreeStack,GinBtreeStack *
+/usr/local/src/postgresql/src/backend/access/gin/ginbtree.c:207:2
+Used: pfree
+Ret. Type: void
+>freeJsonLexContext,JsonLexContext *
+/usr/local/src/postgresql/src/common/jsonapi.c:502:2
+Used: pfree
+Ret. Type: void
+>free_variable,struct variable *
+/usr/local/src/postgresql/src/interfaces/ecpg/ecpglib/execute.c:90:2
+Used: ecpg_free
+Ret. Type: void
+>ginFinishSplit,GinBtreeStack *
+/usr/local/src/postgresql/src/backend/access/gin/ginbtree.c:752:3
+Used: pfree
+Ret. Type: void
+>HandleEndOfCopyStream,char *
+/usr/local/src/postgresql/src/bin/pg_basebackup/receivelog.c:1202:1
+Used: PQfreemem
+Ret. Type: PGresult *
+>insert_tobeinserted,char *
+/usr/local/src/postgresql/src/interfaces/ecpg/ecpglib/execute.c:1135:2
+Used: ecpg_free
+Ret. Type: bool
+>insert_tobeinserted,char *
+/usr/local/src/postgresql/src/interfaces/ecpg/ecpglib/execute.c:1154:1
+Used: ecpg_free
+Ret. Type: bool
+>json_manifest_scalar,char *
+/usr/local/src/postgresql/src/common/parse_manifest.c:549:5
+Used: pfree
+Ret. Type: JsonParseErrorType
+>list_free_private,List *
+/usr/local/src/postgresql/src/backend/nodes/list.c:1534:1
+Used: pfree
+Ret. Type: void
+>merge_clump,Clump *
+/usr/local/src/postgresql/src/backend/optimizer/geqo/geqo_eval.c:285:4
+Used: pfree
+Ret. Type: List *
+>pagetable_free,void *
+/usr/local/src/postgresql/src/backend/nodes/tidbitmap.c:1528:2
+Used: pfree
+Ret. Type: void
+>ParallelBackupEnd,ParallelState *
+/usr/local/src/postgresql/src/bin/pg_dump/parallel.c:1090:1
+Used: free
+Ret. Type: void
+>PQclear,PGresult *
+/usr/local/src/postgresql/src/interfaces/libpq/fe-exec.c:770:1
+Used: free
+Ret. Type: void
+>quote_postgres,char *
+/usr/local/src/postgresql/src/interfaces/ecpg/ecpglib/execute.c:77:2
+Used: ecpg_free
+Ret. Type: char *
+>recursive_revoke,Acl *
+/usr/local/src/postgresql/src/backend/utils/adt/acl.c:1336:3
+Used: pfree
+Ret. Type: Acl *
+>ReorderBufferFreeSnap,Snapshot
+/usr/local/src/postgresql/src/backend/replication/logical/reorderbuffer.c:1895:2
+Used: pfree
+Ret. Type: void
+>SSLerrfree,char *
+/usr/local/src/postgresql/src/interfaces/libpq/fe-secure-openssl.c:1785:2
+Used: free
+Ret. Type: void

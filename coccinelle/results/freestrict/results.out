@@ -22,6 +22,14 @@ Ret. Type: void
 /usr/local/src/postgresql/src/bin/psql/command.c:5051:1
 Used: free
 Ret. Type: void
+>free_copy_options,struct copy_options *
+/usr/local/src/postgresql/src/bin/psql/copy.c:72:1
+Used: free
+Ret. Type: void
+>free_readfile,char * *
+/usr/local/src/postgresql/src/bin/pg_ctl/pg_ctl.c:420:1
+Used: free
+Ret. Type: void
 >closedir,DIR *
 /usr/local/src/postgresql/src/port/dirent.c:134:1
 Used: free
@@ -44,6 +52,10 @@ Used: free
 Ret. Type: void
 >SlabDelete,MemoryContext
 /usr/local/src/postgresql/src/backend/utils/mmgr/slab.c:490:1
+Used: free
+Ret. Type: void
+>SN_close_env,struct SN_env *
+/usr/local/src/postgresql/src/backend/snowball/libstemmer/api.c:48:4
 Used: free
 Ret. Type: void
 >pg_free,void *
@@ -142,6 +154,14 @@ Ret. Type: void
 /usr/local/src/postgresql/src/interfaces/libpq/fe-connect.c:4708:1
 Used: free
 Ret. Type: void
+>PQconninfoFree,PQconninfoOption *
+/usr/local/src/postgresql/src/interfaces/libpq/fe-connect.c:6997:1
+Used: free
+Ret. Type: void
+>destroyPQExpBuffer,PQExpBuffer
+/usr/local/src/postgresql/src/interfaces/libpq/pqexpbuffer.c:119:2
+Used: free
+Ret. Type: void
 >PQfreeCancel,PGcancel *
 /usr/local/src/postgresql/src/interfaces/libpq/fe-cancel.c:419:1
 Used: free
@@ -154,6 +174,10 @@ Ret. Type: bool
 /usr/local/src/postgresql/src/bin/pg_dump/compress_io.c:152:1
 Used: pg_free
 Ret. Type: void
+>make_func,PgBenchExprList *
+/usr/local/src/postgresql/src/bin/pgbench/exprparse.c:2091:2
+Used: pg_free
+Ret. Type: PgBenchExpr *
 >free_command,Command *
 /usr/local/src/postgresql/src/bin/pgbench/pgbench.c:5590:1
 Used: pg_free
@@ -180,6 +204,10 @@ Used: pg_free
 Ret. Type: void
 >descriptor_free,struct descriptor *
 /usr/local/src/postgresql/src/interfaces/ecpg/ecpglib/descriptor.c:744:1
+Used: ecpg_free
+Ret. Type: void
+>free_statement,struct statement *
+/usr/local/src/postgresql/src/interfaces/ecpg/ecpglib/execute.c:107:1
 Used: ecpg_free
 Ret. Type: void
 >PQfreeNotify,PGnotify *
@@ -301,6 +329,18 @@ Ret. Type: JsonbIterator *
 /usr/local/src/postgresql/src/backend/utils/adt/tsquery_cleanup.c:90:1
 Used: pfree
 Ret. Type: void
+>freetree,NODE *
+/usr/local/src/postgresql/src/backend/utils/adt/tsquery_cleanup.c:126:1
+Used: pfree
+Ret. Type: void
+>QTNFree,QTNode *
+/usr/local/src/postgresql/src/backend/utils/adt/tsquery_util.c:88:1
+Used: pfree
+Ret. Type: void
+>jsonpath_yyfree,void *
+/usr/local/src/postgresql/src/backend/utils/adt/jsonpath_scan.c:6184:2
+Used: pfree
+Ret. Type: void
 >ReleaseDummy,HeapTuple
 /usr/local/src/postgresql/src/backend/utils/adt/selfuncs.c:4976:1
 Used: pfree
@@ -309,12 +349,20 @@ Ret. Type: void
 /usr/local/src/postgresql/src/backend/utils/adt/xml.c:1320:1
 Used: pfree
 Ret. Type: void
+>xml_pfree,void *
+/usr/local/src/postgresql/src/backend/utils/adt/xml.c:1978:2
+Used: pfree
+Ret. Type: void
 >FreeSnapshot,Snapshot
 /usr/local/src/postgresql/src/backend/utils/time/snapmgr.c:636:1
 Used: pfree
 Ret. Type: void
 >ResourceOwnerDelete,ResourceOwner
 /usr/local/src/postgresql/src/backend/utils/resowner/resowner.c:881:1
+Used: pfree
+Ret. Type: void
+>guc_free,void *
+/usr/local/src/postgresql/src/backend/utils/misc/guc.c:701:2
 Used: pfree
 Ret. Type: void
 >FreeConfigVariable,ConfigVariable *
@@ -329,6 +377,10 @@ Ret. Type: void
 /usr/local/src/postgresql/src/backend/utils/mmgr/dsa.c:1971:1
 Used: pfree
 Ret. Type: void
+>pgstat_release_entry_ref,PgStat_EntryRef *
+/usr/local/src/postgresql/src/backend/utils/activity/pgstat_shmem.c:617:2
+Used: pfree
+Ret. Type: void
 >tbm_end_iterate,TBMIterator *
 /usr/local/src/postgresql/src/backend/nodes/tidbitmap.c:1148:1
 Used: pfree
@@ -341,6 +393,10 @@ Ret. Type: void
 /usr/local/src/postgresql/src/backend/nodes/tidbitmap.c:330:1
 Used: pfree
 Ret. Type: void
+>bms_free,Bitmapset *
+/usr/local/src/postgresql/src/backend/nodes/bitmapset.c:242:2
+Used: pfree
+Ret. Type: void
 >jit_release_context,JitContext *
 /usr/local/src/postgresql/src/backend/jit/jit.c:142:1
 Used: pfree
@@ -349,12 +405,20 @@ Ret. Type: void
 /usr/local/src/postgresql/src/backend/commands/matview.c:539:1
 Used: pfree
 Ret. Type: void
+>vac_close_indexes,Relation *
+/usr/local/src/postgresql/src/backend/commands/vacuum.c:2340:1
+Used: pfree
+Ret. Type: void
 >serializeAnalyzeDestroy,DestReceiver *
 /usr/local/src/postgresql/src/backend/commands/explain.c:5549:1
 Used: pfree
 Ret. Type: void
 >intorel_destroy,DestReceiver *
 /usr/local/src/postgresql/src/backend/commands/createas.c:629:1
+Used: pfree
+Ret. Type: void
+>FreeTriggerDesc,TriggerDesc *
+/usr/local/src/postgresql/src/backend/commands/trigger.c:2168:1
 Used: pfree
 Ret. Type: void
 >EndCopy,CopyToState
@@ -419,6 +483,18 @@ Used: pfree
 Ret. Type: void
 >TParserCopyClose,TParser *
 /usr/local/src/postgresql/src/backend/tsearch/wparser_def.c:410:1
+Used: pfree
+Ret. Type: void
+>addHLParsedLex,TSLexeme *
+/usr/local/src/postgresql/src/backend/tsearch/ts_parse.c:535:2
+Used: pfree
+Ret. Type: void
+>updateAclDependenciesWorker,Oid *
+/usr/local/src/postgresql/src/backend/catalog/pg_shdepend.c:592:2
+Used: pfree
+Ret. Type: void
+>updateAclDependenciesWorker,Oid *
+/usr/local/src/postgresql/src/backend/catalog/pg_shdepend.c:594:2
 Used: pfree
 Ret. Type: void
 >CatalogCloseIndexes,CatalogIndexState
@@ -495,6 +571,10 @@ Used: pfree
 Ret. Type: void
 >ExecParallelCleanup,ParallelExecutorInfo *
 /usr/local/src/postgresql/src/backend/executor/execParallel.c:1212:1
+Used: pfree
+Ret. Type: void
+>FreeAccessStrategy,BufferAccessStrategy
+/usr/local/src/postgresql/src/backend/storage/buffer/freelist.c:685:2
 Used: pfree
 Ret. Type: void
 >BufFileClose,BufFile *
@@ -661,6 +741,10 @@ Ret. Type: void
 /usr/local/src/postgresql/src/backend/lib/bloomfilter.c:128:1
 Used: pfree
 Ret. Type: void
+>core_yyfree,void *
+/usr/local/src/postgresql/src/backend/parser/scan.c:11825:2
+Used: pfree
+Ret. Type: void
 >free_parsestate,ParseState *
 /usr/local/src/postgresql/src/backend/parser/parse_node.c:88:1
 Used: pfree
@@ -697,6 +781,14 @@ Ret. Type: void
 /usr/local/src/postgresql/src/common/blkreftable.c:858:1
 Used: pfree
 Ret. Type: void
+>emit_audit_message,char *
+/usr/local/src/postgresql/src/test/modules/test_oat_hooks/test_oat_hooks.c:253:2
+Used: pfree
+Ret. Type: void
+>emit_audit_message,char *
+/usr/local/src/postgresql/src/test/modules/test_oat_hooks/test_oat_hooks.c:255:2
+Used: pfree
+Ret. Type: void
 >irbt_free,RBTNode *
 /usr/local/src/postgresql/src/test/modules/test_rbtree/test_rbtree.c:73:1
 Used: pfree
@@ -713,6 +805,10 @@ Ret. Type: void
 /usr/local/src/postgresql/contrib/pgcrypto/pgp-pgsql.c:100:1
 Used: pfree
 Ret. Type: void
+>pgp_mpi_free,PGP_MPI *
+/usr/local/src/postgresql/contrib/pgcrypto/pgp-mpi.c:75:1
+Used: pfree
+Ret. Type: int
 >mbuf_free,MBuf *
 /usr/local/src/postgresql/contrib/pgcrypto/mbuf.c:69:1
 Used: pfree
@@ -727,6 +823,10 @@ Used: pfree
 Ret. Type: void
 >combo_free,PX_Combo *
 /usr/local/src/postgresql/contrib/pgcrypto/px.c:237:1
+Used: pfree
+Ret. Type: void
+>pgp_key_free,PGP_PubKey *
+/usr/local/src/postgresql/contrib/pgcrypto/pgp-pubkey.c:80:1
 Used: pfree
 Ret. Type: void
 >pgp_free,PGP_Context *

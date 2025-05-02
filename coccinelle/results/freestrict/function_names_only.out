@@ -4,12 +4,15 @@
 >restore_global_locale,save_locale_t
 >writefile,char * *
 >restorePsetInfo,printQueryOpt *
+>free_copy_options,struct copy_options *
+>free_readfile,char * *
 >closedir,DIR *
 >GenerationBlockFree,GenerationBlock *
 >GenerationDelete,MemoryContext
 >BumpBlockFree,BumpBlock *
 >BumpDelete,MemoryContext
 >SlabDelete,MemoryContext
+>SN_close_env,struct SN_env *
 >pg_free,void *
 >conditional_stack_destroy,ConditionalStack
 >psql_scan_destroy,PsqlScanState
@@ -34,9 +37,12 @@
 >ecpg_free,void *
 >PQfreemem,void *
 >freePGconn,PGconn *
+>PQconninfoFree,PQconninfoOption *
+>destroyPQExpBuffer,PQExpBuffer
 >PQfreeCancel,PGcancel *
 >EndCompressFileHandle,CompressFileHandle *
 >EndCompressor,CompressorState *
+>make_func,PgBenchExprList *
 >free_command,Command *
 >free_socket_set,socket_set *
 >free_socket_set,socket_set *
@@ -44,6 +50,7 @@
 >tar_free,WalWriteMethod *
 >pfree,void *
 >descriptor_free,struct descriptor *
+>free_statement,struct statement *
 >PQfreeNotify,PGnotify *
 >local_destroy,rewind_source *
 >XLogReaderFree,XLogReaderState *
@@ -73,20 +80,29 @@
 >close_tsvector_parser,TSVectorParseState
 >freeAndGetParent,JsonbIterator *
 >plainnode,NODE *
+>freetree,NODE *
+>QTNFree,QTNode *
+>jsonpath_yyfree,void *
 >ReleaseDummy,HeapTuple
 >pg_xml_done,PgXmlErrorContext *
+>xml_pfree,void *
 >FreeSnapshot,Snapshot
 >ResourceOwnerDelete,ResourceOwner
+>guc_free,void *
 >FreeConfigVariable,ConfigVariable *
 >PortalDrop,Portal
 >dsa_detach,dsa_area *
+>pgstat_release_entry_ref,PgStat_EntryRef *
 >tbm_end_iterate,TBMIterator *
 >tbm_end_shared_iterate,TBMSharedIterator *
 >tbm_free,TIDBitmap *
+>bms_free,Bitmapset *
 >jit_release_context,JitContext *
 >transientrel_destroy,DestReceiver *
+>vac_close_indexes,Relation *
 >serializeAnalyzeDestroy,DestReceiver *
 >intorel_destroy,DestReceiver *
+>FreeTriggerDesc,TriggerDesc *
 >EndCopy,CopyToState
 >copy_dest_destroy,DestReceiver *
 >parallel_vacuum_end,ParallelVacuumState *
@@ -103,6 +119,9 @@
 >libpqrcv_disconnect,WalReceiverConn *
 >TParserClose,TParser *
 >TParserCopyClose,TParser *
+>addHLParsedLex,TSLexeme *
+>updateAclDependenciesWorker,Oid *
+>updateAclDependenciesWorker,Oid *
 >CatalogCloseIndexes,CatalogIndexState
 >FreeSubscription,Subscription *
 >free_object_addresses,ObjectAddresses *
@@ -122,6 +141,7 @@
 >SPI_pfree,void *
 >FreeExprContext,ExprContext *
 >ExecParallelCleanup,ParallelExecutorInfo *
+>FreeAccessStrategy,BufferAccessStrategy
 >BufFileClose,BufFile *
 >inv_close,LargeObjectDesc *
 >PageRestoreTempPage,Page
@@ -163,6 +183,7 @@
 >BipartiteMatchFree,BipartiteMatchState *
 >pairingheap_free,pairingheap *
 >bloom_free,bloom_filter *
+>core_yyfree,void *
 >free_parsestate,ParseState *
 >json_manifest_object_field_start,char *
 >json_parse_manifest_incremental_shutdown,JsonManifestParseIncrementalState *
@@ -172,14 +193,18 @@
 >BlockRefTableFreeEntry,BlockRefTableEntry *
 >DestroyBlockRefTableReader,BlockRefTableReader *
 >DestroyBlockRefTableWriter,BlockRefTableWriter *
+>emit_audit_message,char *
+>emit_audit_message,char *
 >irbt_free,RBTNode *
 >pg_tzenumerate_end,pg_tzenum *
 >pgp_cfb_free,PGP_CFB *
 >clear_and_pfree,text *
+>pgp_mpi_free,PGP_MPI *
 >mbuf_free,MBuf *
 >pullf_free,PullFilter *
 >pushf_free,PushFilter *
 >combo_free,PX_Combo *
+>pgp_key_free,PGP_PubKey *
 >pgp_free,PGP_Context *
 >digest_free,PX_MD *
 >free_openssl_cipher,OSSLCipher *

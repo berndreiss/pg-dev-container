@@ -6,6 +6,10 @@ Ret. Type: bool
 /usr/local/src/postgresql/src/bin/pg_dump/compress_io.c:152:1
 Used: pg_free
 Ret. Type: void
+>make_func,PgBenchExprList *
+/usr/local/src/postgresql/src/bin/pgbench/exprparse.c:2091:2
+Used: pg_free
+Ret. Type: PgBenchExpr *
 >free_command,Command *
 /usr/local/src/postgresql/src/bin/pgbench/pgbench.c:5590:1
 Used: pg_free
@@ -32,6 +36,10 @@ Used: pg_free
 Ret. Type: void
 >descriptor_free,struct descriptor *
 /usr/local/src/postgresql/src/interfaces/ecpg/ecpglib/descriptor.c:744:1
+Used: ecpg_free
+Ret. Type: void
+>free_statement,struct statement *
+/usr/local/src/postgresql/src/interfaces/ecpg/ecpglib/execute.c:107:1
 Used: ecpg_free
 Ret. Type: void
 >PQfreeNotify,PGnotify *

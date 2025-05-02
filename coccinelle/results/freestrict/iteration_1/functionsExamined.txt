@@ -4,12 +4,15 @@
 >restore_global_locale,save_locale_t
 >writefile,char * *
 >restorePsetInfo,printQueryOpt *
+>free_copy_options,struct copy_options *
+>free_readfile,char * *
 >closedir,DIR *
 >GenerationBlockFree,GenerationBlock *
 >GenerationDelete,MemoryContext
 >BumpBlockFree,BumpBlock *
 >BumpDelete,MemoryContext
 >SlabDelete,MemoryContext
+>SN_close_env,struct SN_env *
 >pg_free,void *
 >conditional_stack_destroy,ConditionalStack
 >psql_scan_destroy,PsqlScanState
@@ -30,4 +33,6 @@
 >ecpg_free,void *
 >PQfreemem,void *
 >freePGconn,PGconn *
+>PQconninfoFree,PQconninfoOption *
+>destroyPQExpBuffer,PQExpBuffer
 >PQfreeCancel,PGcancel *

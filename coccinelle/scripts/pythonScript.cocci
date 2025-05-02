@@ -1,15 +1,3 @@
-@__METAFUNCTION__ exists@
-type t1, t2;
-identifier f, i;
-position p;
-
-@@
-t1 f(..., __TYPE__ i, ...) {
-  <+...
-  __FUNCTION__@p(..., i, ...)
-  ...+>
-}
-
 @script:python@
 f << __METAFUNCTION__.f;
 p << __METAFUNCTION__.p;
