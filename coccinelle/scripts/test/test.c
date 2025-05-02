@@ -41,3 +41,14 @@ int testTwice(int i){
    free(i);
    free(i);
 }
+
+int testNULL(int i){
+   if (i == NULL)
+      return;
+   free(i);
+}
+
+int testIfI(int i){
+   if (i)
+      free(i);
+}
