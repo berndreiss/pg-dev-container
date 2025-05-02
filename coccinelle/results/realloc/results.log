@@ -1,29 +1,29 @@
-##### RESULTS REALLOC STRICT #####
+##### RESULTS REALLOC #####
 Coccinelle found:
-35
+67
 Without 'free':
-35
+67
 Without 'destroy':
-35
+67
 Without 'delete':
-35
+67
 Without 'close':
-35
+67
 Without 'destruct':
-35
+67
 Without 'realloc':
-11
+39
 Without 'resize':
-10
+38
 Without 'repalloc':
-2
+30
 Without 'dealloc':
-2
+30
 Without 'close':
-2
+30
 Without 'release':
-2
+30
 Without 'detach':
-2
+30
 Without methods in exclude.txt
-2
+30

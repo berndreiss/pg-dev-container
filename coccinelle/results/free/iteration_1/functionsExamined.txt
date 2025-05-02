@@ -21,6 +21,7 @@
 >output_prepare_statement,char *
 >output_simple_statement,char *
 >output_statement,char *
+>dump_variables,struct arguments *
 >ECPGfree_type,struct ECPGtype *
 >cat2_str,char *
 >make2_str,char *
@@ -34,6 +35,8 @@
 >ecpg_free,void *
 >PQclear,PGresult *
 >PQfreemem,void *
+>SSLerrfree,char *
 >PQconninfoFree,PQconninfoOption *
 >freePGconn,PGconn *
+>destroyPQExpBuffer,PQExpBuffer
 >PQfreeCancel,PGcancel *

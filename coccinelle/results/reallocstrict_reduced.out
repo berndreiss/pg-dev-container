@@ -1,0 +1,10 @@
+>growalloc,void *
+/usr/local/src/postgresql/src/timezone/zic.c:464:9
+Used: erealloc
+Ret. Type: void *
+>xml_repalloc,size_t
+--
+>gistjoinvector,IndexTuple *
+/usr/local/src/postgresql/src/backend/access/gist/gistutil.c:115:24
+Used: repalloc
+Ret. Type: IndexTuple *

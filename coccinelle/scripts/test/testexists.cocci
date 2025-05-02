@@ -5,9 +5,9 @@ position p;
 
 @@
 t1 f(..., t2 i, ...) {
-  ...
-  free@p(i)
-  ...
+  <+...
+  free@p(..., i, ...)
+  ...+>
 }
 
 @script:python@

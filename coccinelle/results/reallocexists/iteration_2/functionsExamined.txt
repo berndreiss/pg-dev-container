@@ -1,6 +1,0 @@
->yy_get_next_buffer,yyscan_t
->yyensure_buffer_stack,yyscan_t
->repalloc,void *
->repalloc,Size
->ecpg_store_input,const int
->growalloc,void *

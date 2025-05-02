@@ -1,0 +1,34 @@
+>yyrealloc,void *
+>yyrealloc,void *
+>yyrealloc,void *
+>yyrealloc,void *
+>yyrealloc,void *
+>yyrealloc,void *
+>yyrealloc,void *
+>yyrealloc,void *
+>yyrealloc,void *
+>yyrealloc,yy_size_t
+>yyrealloc,yy_size_t
+>yyrealloc,yy_size_t
+>yyrealloc,yy_size_t
+>yyrealloc,yy_size_t
+>yyrealloc,yy_size_t
+>yyrealloc,yy_size_t
+>yyrealloc,yy_size_t
+>yyrealloc,yy_size_t
+>pg_realloc,size_t
+>pg_realloc,void *
+>ecpg_realloc,long
+>ecpg_realloc,void *
+>erealloc,size_t
+>erealloc,void *
+>repalloc,void *
+>repalloc,Size
+>growalloc,void *
+>xml_repalloc,size_t
+>xml_repalloc,void *
+>repalloc0,void *
+>repalloc0,Size
+>SPI_repalloc,void *
+>SPI_repalloc,Size
+>gistjoinvector,IndexTuple *

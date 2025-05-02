@@ -1,14 +1,19 @@
 >EndCompressFileHandle,CompressFileHandle *
 >EndCompressor,CompressorState *
+>make_func,PgBenchExprList *
 >free_command,Command *
 >free_socket_set,socket_set *
+>bool_substitute_hook,char *
+>avlFree,avl_node *
 >dir_free,WalWriteMethod *
 >tar_free,WalWriteMethod *
 >HandleEndOfCopyStream,char *
 >pfree,void *
 >descriptor_free,struct descriptor *
+>ecpg_finish,struct connection *
 >deallocate_one,struct prepared_statement *
 >free_statement,struct statement *
+>free_variable,struct variable *
 >insert_tobeinserted,char *
 >quote_postgres,char *
 >PQfreeNotify,PGnotify *

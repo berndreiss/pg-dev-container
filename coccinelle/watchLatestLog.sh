@@ -10,9 +10,11 @@ if [ $# -gt 0 ]; then
    fi 
 fi
 
-while [ 0 -lt 1 ]; do
+
+while [ 1 -lt 2 ]; do
    clear;
-   grep -A 1 "####" "$(ls -t logs/*)";
+   ls -t logs/* | head -1
+   grep -Ev '^(HANDLING|Skipping)\b' "$(ls -t logs/* | head -1)" | grep -vi 'metavariable t2 not used';
    sleep $sleepiness;
 done
 

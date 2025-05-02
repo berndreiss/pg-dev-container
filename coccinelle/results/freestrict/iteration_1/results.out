@@ -1,0 +1,40 @@
+>EndCompressFileHandle,CompressFileHandle *
+/usr/local/src/postgresql/src/bin/pg_dump/compress_io.c:296:1
+Used: free_keep_errno
+Ret. Type: bool
+>EndCompressor,CompressorState *
+/usr/local/src/postgresql/src/bin/pg_dump/compress_io.c:152:1
+Used: pg_free
+Ret. Type: void
+>free_command,Command *
+/usr/local/src/postgresql/src/bin/pgbench/pgbench.c:5590:1
+Used: pg_free
+Ret. Type: void
+>free_socket_set,socket_set *
+/usr/local/src/postgresql/src/bin/pgbench/pgbench.c:7801:1
+Used: pg_free
+Ret. Type: void
+>free_socket_set,socket_set *
+/usr/local/src/postgresql/src/bin/pgbench/pgbench.c:7868:1
+Used: pg_free
+Ret. Type: void
+>dir_free,WalWriteMethod *
+/usr/local/src/postgresql/src/bin/pg_basebackup/walmethods.c:635:1
+Used: pg_free
+Ret. Type: void
+>tar_free,WalWriteMethod *
+/usr/local/src/postgresql/src/bin/pg_basebackup/walmethods.c:1345:1
+Used: pg_free
+Ret. Type: void
+>pfree,void *
+/usr/local/src/postgresql/src/common/fe_memutils.c:135:1
+Used: pg_free
+Ret. Type: void
+>descriptor_free,struct descriptor *
+/usr/local/src/postgresql/src/interfaces/ecpg/ecpglib/descriptor.c:744:1
+Used: ecpg_free
+Ret. Type: void
+>PQfreeNotify,PGnotify *
+/usr/local/src/postgresql/src/interfaces/libpq/fe-exec.c:4051:1
+Used: PQfreemem
+Ret. Type: void

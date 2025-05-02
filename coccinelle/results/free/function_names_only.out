@@ -21,6 +21,7 @@
 >output_prepare_statement,char *
 >output_simple_statement,char *
 >output_statement,char *
+>dump_variables,struct arguments *
 >ECPGfree_type,struct ECPGtype *
 >cat2_str,char *
 >cat2_str,char *
@@ -38,21 +39,29 @@
 >ecpg_free,void *
 >PQclear,PGresult *
 >PQfreemem,void *
+>SSLerrfree,char *
 >PQconninfoFree,PQconninfoOption *
 >freePGconn,PGconn *
+>destroyPQExpBuffer,PQExpBuffer
 >PQfreeCancel,PGcancel *
 >EndCompressFileHandle,CompressFileHandle *
 >EndCompressor,CompressorState *
+>make_func,PgBenchExprList *
 >free_command,Command *
 >free_socket_set,socket_set *
 >free_socket_set,socket_set *
+>bool_substitute_hook,char *
+>avlFree,avl_node *
 >dir_free,WalWriteMethod *
 >tar_free,WalWriteMethod *
 >HandleEndOfCopyStream,char *
 >pfree,void *
 >descriptor_free,struct descriptor *
+>ecpg_finish,struct connection *
 >deallocate_one,struct prepared_statement *
 >free_statement,struct statement *
+>free_variable,struct variable *
+>insert_tobeinserted,char *
 >insert_tobeinserted,char *
 >quote_postgres,char *
 >PQfreeNotify,PGnotify *
@@ -82,22 +91,42 @@
 >array_free_iterator,ArrayIterator
 >buf_finalize,StringInfo
 >string_to_text,char *
+>dofindsubquery,QTNode *
+>recursive_revoke,Acl *
 >close_tsvector_parser,TSVectorParseState
 >freeAndGetParent,JsonbIterator *
+>clean_NOT_intree,NODE *
+>clean_NOT_intree,NODE *
+>clean_NOT_intree,NODE *
+>clean_stopword_intree,NODE *
+>clean_stopword_intree,NODE *
+>clean_stopword_intree,NODE *
 >freetree,NODE *
 >plainnode,NODE *
 >QTNFree,QTNode *
+>jsonpath_yyfree,void *
 >ReleaseDummy,HeapTuple
 >pg_xml_done,PgXmlErrorContext *
+>xml_pfree,void *
 >FreeSnapshot,Snapshot
 >ResourceOwnerDelete,ResourceOwner
+>guc_free,void *
 >FreeConfigVariable,ConfigVariable *
 >PortalDrop,Portal
 >dsa_detach,dsa_area *
+>pgstat_release_entry_ref,PgStat_EntryRef *
 >list_free_private,List *
+>pagetable_free,void *
 >tbm_end_iterate,TBMIterator *
 >tbm_end_shared_iterate,TBMSharedIterator *
 >tbm_free,TIDBitmap *
+>bms_add_members,Bitmapset *
+>bms_del_member,Bitmapset *
+>bms_del_members,Bitmapset *
+>bms_free,Bitmapset *
+>bms_int_members,Bitmapset *
+>bms_int_members,Bitmapset *
+>bms_replace_members,Bitmapset *
 >jit_release_context,JitContext *
 >transientrel_destroy,DestReceiver *
 >vac_close_indexes,Relation *
@@ -110,6 +139,7 @@
 >CopyMultiInsertBufferCleanup,CopyMultiInsertBuffer *
 >EndCopyFrom,CopyFromState
 >finish_edata,ApplyExecutionData *
+>ReorderBufferFreeSnap,Snapshot
 >ReorderBufferIterTXNFinish,ReorderBufferIterTXNState *
 >ReorderBufferReturnChange,ReorderBufferChange *
 >ReorderBufferReturnRelids,Oid *
@@ -120,6 +150,10 @@
 >libpqrcv_disconnect,WalReceiverConn *
 >TParserClose,TParser *
 >TParserCopyClose,TParser *
+>addHLParsedLex,ParsedLex *
+>addHLParsedLex,TSLexeme *
+>updateAclDependenciesWorker,Oid *
+>updateAclDependenciesWorker,Oid *
 >CatalogCloseIndexes,CatalogIndexState
 >FreeSubscription,Subscription *
 >free_object_addresses,ObjectAddresses *
@@ -127,9 +161,15 @@
 >free_chromo,Chromosome *
 >free_pool,Pool *
 >free_city_table,City *
+>merge_clump,Clump *
 >free_edge_table,Edge *
+>add_partial_path,Path *
+>add_path,Path *
 >free_child_join_sjinfo,SpecialJoinInfo *
 >ExecDropSingleTupleTableSlot,TupleTableSlot *
+>ExecForceStoreHeapTuple,HeapTuple
+>ExecForceStoreHeapTuple,HeapTuple
+>ExecForceStoreMinimalTuple,MinimalTuple
 >end_tup_output,TupOutputState *
 >sqlfunction_destroy,DestReceiver *
 >DestroyTupleQueueReader,TupleQueueReader *
@@ -139,6 +179,7 @@
 >SPI_pfree,void *
 >FreeExprContext,ExprContext *
 >ExecParallelCleanup,ParallelExecutorInfo *
+>FreeAccessStrategy,BufferAccessStrategy
 >BufFileClose,BufFile *
 >inv_close,LargeObjectDesc *
 >PageRestoreTempPage,Page
@@ -149,6 +190,8 @@
 >FreeWaitEventSetAfterFork,WaitEventSet *
 >generator_free,CombinationGenerator *
 >DependencyGenerator_free,DependencyGenerator
+>freeGinBtreeStack,GinBtreeStack *
+>ginFinishSplit,GinBtreeStack *
 >spgFreeSearchItem,SpGistSearchItem *
 >FreeFakeRelcacheEntry,Relation
 >DestroyParallelContext,ParallelContext *
@@ -167,6 +210,7 @@
 >TidStoreEndIterate,TidStoreIter *
 >toast_close_indexes,Relation *
 >_bt_spooldestroy,BTSpool *
+>_bt_insertonpg,IndexTuple
 >FreeBulkInsertState,BulkInsertState
 >_h_spooldestroy,HSpool *
 >IndexScanEnd,IndexScanDesc
@@ -180,15 +224,20 @@
 >BipartiteMatchFree,BipartiteMatchState *
 >pairingheap_free,pairingheap *
 >bloom_free,bloom_filter *
+>core_yyfree,void *
 >free_parsestate,ParseState *
 >json_manifest_object_field_start,char *
+>json_manifest_scalar,char *
 >json_parse_manifest_incremental_shutdown,JsonManifestParseIncrementalState *
 >destroyStringInfo,StringInfo
 >pgfnames_cleanup,char * *
+>freeJsonLexContext,JsonLexContext *
 >binaryheap_free,binaryheap *
 >BlockRefTableFreeEntry,BlockRefTableEntry *
 >DestroyBlockRefTableReader,BlockRefTableReader *
 >DestroyBlockRefTableWriter,BlockRefTableWriter *
+>emit_audit_message,char *
+>emit_audit_message,char *
 >irbt_free,RBTNode *
 >pg_tzenumerate_end,pg_tzenum *
 >pgp_cfb_free,PGP_CFB *
@@ -206,4 +255,6 @@
 >gen_ossl_free,PX_Cipher *
 >z_free,void *
 >hmac_free,PX_HMAC *
+>createNewConnection,remoteConn *
+>dblink_security_check,remoteConn *
 >report_corruption_internal,char *

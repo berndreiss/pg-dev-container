@@ -110,6 +110,76 @@ Ret. Type: void *
 /usr/local/src/postgresql/src/timezone/zic.c:442:17
 Used: realloc
 Ret. Type: void *
+>yy_get_next_buffer,yyscan_t
+/usr/local/src/postgresql/src/bin/pgbench/exprscan.c:1711:5
+Used: yyrealloc
+Ret. Type: int
+>yy_get_next_buffer,yyscan_t
+/usr/local/src/postgresql/src/bin/pgbench/exprscan.c:1711:5
+Used: yyrealloc
+Ret. Type: int
+>yy_get_next_buffer,yyscan_t
+/usr/local/src/postgresql/src/bin/pgbench/exprscan.c:1761:49
+Used: yyrealloc
+Ret. Type: int
+--
+>yy_get_next_buffer,yyscan_t
+/usr/local/src/postgresql/src/bin/psql/psqlscanslash.c:2223:5
+Used: yyrealloc
+Ret. Type: int
+>yy_get_next_buffer,yyscan_t
+/usr/local/src/postgresql/src/bin/psql/psqlscanslash.c:2223:5
+Used: yyrealloc
+Ret. Type: int
+>yy_get_next_buffer,yyscan_t
+/usr/local/src/postgresql/src/bin/psql/psqlscanslash.c:2273:49
+Used: yyrealloc
+Ret. Type: int
+--
+>yy_get_next_buffer,yyscan_t
+/usr/local/src/postgresql/src/backend/parser/scan.c:10551:5
+Used: yyrealloc
+Ret. Type: int
+>yy_get_next_buffer,yyscan_t
+/usr/local/src/postgresql/src/backend/parser/scan.c:10551:5
+Used: yyrealloc
+Ret. Type: int
+>yy_get_next_buffer,yyscan_t
+/usr/local/src/postgresql/src/backend/parser/scan.c:10601:49
+Used: yyrealloc
+Ret. Type: int
+--
+>yy_get_next_buffer,yyscan_t
+/usr/local/src/postgresql/src/fe_utils/psqlscan.c:4321:5
+Used: yyrealloc
+Ret. Type: int
+>yy_get_next_buffer,yyscan_t
+/usr/local/src/postgresql/src/fe_utils/psqlscan.c:4321:5
+Used: yyrealloc
+Ret. Type: int
+>yy_get_next_buffer,yyscan_t
+/usr/local/src/postgresql/src/fe_utils/psqlscan.c:4371:49
+Used: yyrealloc
+Ret. Type: int
+>yyensure_buffer_stack,yyscan_t
+/usr/local/src/postgresql/src/bin/pgbench/exprscan.c:2176:51
+Used: yyrealloc
+Ret. Type: void
+--
+>yyensure_buffer_stack,yyscan_t
+/usr/local/src/postgresql/src/bin/psql/psqlscanslash.c:2663:51
+Used: yyrealloc
+Ret. Type: void
+--
+>yyensure_buffer_stack,yyscan_t
+/usr/local/src/postgresql/src/backend/parser/scan.c:10995:51
+Used: yyrealloc
+Ret. Type: void
+--
+>yyensure_buffer_stack,yyscan_t
+/usr/local/src/postgresql/src/fe_utils/psqlscan.c:4761:51
+Used: yyrealloc
+Ret. Type: void
 >repalloc,void *
 /usr/local/src/postgresql/src/common/fe_memutils.c:174:8
 Used: pg_realloc
@@ -118,9 +188,33 @@ Ret. Type: void *
 /usr/local/src/postgresql/src/common/fe_memutils.c:174:8
 Used: pg_realloc
 Ret. Type: void *
+>ecpg_store_input,const int
+/usr/local/src/postgresql/src/interfaces/ecpg/ecpglib/execute.c:897:22
+Used: ecpg_realloc
+Ret. Type: bool
+>ecpg_store_input,const int
+/usr/local/src/postgresql/src/interfaces/ecpg/ecpglib/execute.c:944:22
+Used: ecpg_realloc
+Ret. Type: bool
+>ecpg_store_input,const int
+/usr/local/src/postgresql/src/interfaces/ecpg/ecpglib/execute.c:991:22
+Used: ecpg_realloc
+Ret. Type: bool
+>ecpg_store_input,const int
+/usr/local/src/postgresql/src/interfaces/ecpg/ecpglib/execute.c:1038:22
+Used: ecpg_realloc
+Ret. Type: bool
 >growalloc,void *
 /usr/local/src/postgresql/src/timezone/zic.c:464:9
 Used: erealloc
+Ret. Type: void *
+>jsonpath_yyrealloc,void *
+/usr/local/src/postgresql/src/backend/utils/adt/jsonpath_scan.c:6175:9
+Used: repalloc
+Ret. Type: void *
+>jsonpath_yyrealloc,yy_size_t
+/usr/local/src/postgresql/src/backend/utils/adt/jsonpath_scan.c:6175:9
+Used: repalloc
 Ret. Type: void *
 >xml_repalloc,size_t
 /usr/local/src/postgresql/src/backend/utils/adt/xml.c:1969:8
@@ -138,6 +232,30 @@ Ret. Type: void *
 /usr/local/src/postgresql/src/backend/utils/mmgr/mcxt.c:1627:7
 Used: repalloc
 Ret. Type: void *
+>bms_add_member,Bitmapset *
+/usr/local/src/postgresql/src/backend/nodes/bitmapset.c:836:20
+Used: repalloc
+Ret. Type: Bitmapset *
+>bms_add_range,Bitmapset *
+/usr/local/src/postgresql/src/backend/nodes/bitmapset.c:1055:20
+Used: repalloc
+Ret. Type: Bitmapset *
+>bms_replace_members,Bitmapset *
+/usr/local/src/postgresql/src/backend/nodes/bitmapset.c:988:20
+Used: repalloc
+Ret. Type: Bitmapset *
+>SetConstraintStateAddItem,SetConstraintState
+/usr/local/src/postgresql/src/backend/commands/trigger.c:5639:3
+Used: repalloc
+Ret. Type: SetConstraintState
+>ReorderBufferSerializeReserve,Size
+/usr/local/src/postgresql/src/backend/replication/logical/reorderbuffer.c:3529:15
+Used: repalloc
+Ret. Type: void
+>addCompiledLexeme,TheLexeme *
+/usr/local/src/postgresql/src/backend/tsearch/dict_thesaurus.c:308:26
+Used: repalloc
+Ret. Type: TheLexeme *
 >SPI_repalloc,void *
 /usr/local/src/postgresql/src/backend/executor/spi.c:1350:8
 Used: repalloc
@@ -150,6 +268,22 @@ Ret. Type: void *
 /usr/local/src/postgresql/src/backend/access/gist/gistutil.c:115:24
 Used: repalloc
 Ret. Type: IndexTuple *
+>brin_copy_tuple,BrinTuple *
+/usr/local/src/postgresql/src/backend/access/brin/brin_tuple.c:452:9
+Used: repalloc
+Ret. Type: BrinTuple *
+>brin_copy_tuple,Size
+/usr/local/src/postgresql/src/backend/access/brin/brin_tuple.c:452:9
+Used: repalloc
+Ret. Type: BrinTuple *
+>core_yyrealloc,void *
+/usr/local/src/postgresql/src/backend/parser/scan.c:11816:9
+Used: repalloc
+Ret. Type: void *
+>core_yyrealloc,yy_size_t
+/usr/local/src/postgresql/src/backend/parser/scan.c:11816:9
+Used: repalloc
+Ret. Type: void *
 >resize_intArrayType,ArrayType *
 /usr/local/src/postgresql/contrib/intarray/_int_tool.c:268:19
 Used: repalloc

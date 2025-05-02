@@ -7,9 +7,12 @@ position p;
 t1 f(..., t2 i, ...) {
   ...
   when != if(...){ ... return ...;}
-  free@p(i)
-  ...
+  free@p(..., i, ...)
+  <... when any
+  free(..., i, ...)
+  ...>
 }
+
 
 @script:python@
 f << free.f;

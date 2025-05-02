@@ -41,11 +41,19 @@ createScript(){
    fname=$(echo "$arg" | cut -d',' -f1)
    ftype=$(echo "$arg" | cut -d',' -f2 | xargs)
 
+   if [ "$ftype" = "constint" ]; then
+      continue
+   fi
+
    if [ "$ftype" = "long" ]; then
       continue
    fi
 
-   if [[ "$ftype" == *"size"* ]]; then
+   if [ "$ftype" = "size_t" ]; then
+      continue
+   fi
+
+   if [ "$ftype" = "yy_size_t" ]; then
       continue
    fi
 
@@ -53,39 +61,28 @@ createScript(){
       continue
    fi
    
+   if [[ "$ftype" == "struct"* ]]; then
+      ftype=$(echo $ftype | sed "s/struct/struct /")
+   fi
+
+   if [[ "$ftype" == *"*"* ]]; then
+      ftype="$(echo "$ftype" | sed 's/*/ */')"
+   fi
+   
    pythonType=$ftype
 
-   if [ "$ftype" = "void*" ]; then
+   if [ "$ftype" = "void *" ]; then
       pythonType="{t}"
       ftype="t2"
    fi
 
-   echo "
-@func$counter $COCCI_ADDITION@
-type t1, t2;
-identifier f, i;
-position p;
+   cat proto$COCCI_ADDITION.cocci \
+      | sed -e "s/__METAFUNCTION__/$fname$counter/g" \
+            -e "s/__FUNCTION__/$fname/g" \
+            -e "s/__TYPE__/$ftype/g" \
+            -e "s/__PYTHONTYPE__/$pythonType/g" \
+            >> $TMP_PATH/$ITERATION.cocci
 
-@@
-t1 f(..., $ftype i, ...) {
-   ...
-   $fname@p(..., i, ...)
-   ...
-}
-
-@script:python@
-f << func$counter.f;
-p << func$counter.p;
-t << func$counter.t2;
-rt << func$counter.t1;
-
-@@
-print(f\">{f},$pythonType\")
-print(p[0].file + \":\" + p[0].line + \":\" + p[0].column)
-print(f\"Used: $fname\")
-print(f\"Ret. Type: {rt}\")
-
-   " >> $TMP_PATH/$ITERATION.cocci
    counter=$((counter+1))
    done
 }

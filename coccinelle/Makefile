@@ -12,27 +12,27 @@ cocci:
 
 free:
 	@echo "Running script for free..."
-	@cd scripts && bash runCocci.sh free "exists"
-	@echo "##### RESULTS FREE #####" >> results/freeexists/results.log
-	@cd scripts && bash reduceResults.sh freeexists
+	@cd scripts && bash runCocci.sh free ""
+	@echo "##### RESULTS FREE #####" >> results/free/results.log
+	@cd scripts && bash reduceResults.sh free
 
 realloc:
 	@echo "Running script for realloc..."
-	@cd scripts && bash runCocci.sh realloc "exists"
-	@echo "##### RESULTS REALLOC #####" >> results/reallocexists/results.log
-	@cd scripts && bash reduceResults.sh reallocexists
+	@cd scripts && bash runCocci.sh realloc ""
+	@echo "##### RESULTS REALLOC #####" >> results/realloc/results.log
+	@cd scripts && bash reduceResults.sh realloc
 
 freestrict:
 	@echo "Running script for freestrict..."
-	@cd scripts && bash runCocci.sh free ""
-	@echo "##### RESULTS FREE STICT #####" >> results/free/results.log
-	@cd scripts && bash reduceResults.sh free
+	@cd scripts && bash runCocci.sh free "strict"
+	@echo "##### RESULTS FREE STICT #####" >> results/freestrict/results.log
+	@cd scripts && bash reduceResults.sh freestrict
 
 reallocstrict:
 	@echo "Running script for reallocstrict..."
-	@cd scripts && bash runCocci.sh realloc ""
-	@echo "##### RESULTS REALLOC STRICT #####" >> results/realloc/results.log
-	@cd scripts && bash reduceResults.sh realloc
+	@cd scripts && bash runCocci.sh realloc "strict"
+	@echo "##### RESULTS REALLOC STRICT #####" >> results/reallocstrict/results.log
+	@cd scripts && bash reduceResults.sh reallocstrict
 
 samereturn:
 	@echo "Running script for same return type..."

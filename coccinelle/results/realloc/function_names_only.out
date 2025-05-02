@@ -22,14 +22,46 @@
 >ecpg_realloc,void *
 >erealloc,size_t
 >erealloc,void *
+>yy_get_next_buffer,yyscan_t
+>yy_get_next_buffer,yyscan_t
+>yy_get_next_buffer,yyscan_t
+>yy_get_next_buffer,yyscan_t
+>yy_get_next_buffer,yyscan_t
+>yy_get_next_buffer,yyscan_t
+>yy_get_next_buffer,yyscan_t
+>yy_get_next_buffer,yyscan_t
+>yy_get_next_buffer,yyscan_t
+>yy_get_next_buffer,yyscan_t
+>yy_get_next_buffer,yyscan_t
+>yy_get_next_buffer,yyscan_t
+>yyensure_buffer_stack,yyscan_t
+>yyensure_buffer_stack,yyscan_t
+>yyensure_buffer_stack,yyscan_t
+>yyensure_buffer_stack,yyscan_t
 >repalloc,void *
 >repalloc,Size
+>ecpg_store_input,const int
+>ecpg_store_input,const int
+>ecpg_store_input,const int
+>ecpg_store_input,const int
 >growalloc,void *
+>jsonpath_yyrealloc,void *
+>jsonpath_yyrealloc,yy_size_t
 >xml_repalloc,size_t
 >xml_repalloc,void *
 >repalloc0,void *
 >repalloc0,Size
+>bms_add_member,Bitmapset *
+>bms_add_range,Bitmapset *
+>bms_replace_members,Bitmapset *
+>SetConstraintStateAddItem,SetConstraintState
+>ReorderBufferSerializeReserve,Size
+>addCompiledLexeme,TheLexeme *
 >SPI_repalloc,void *
 >SPI_repalloc,Size
 >gistjoinvector,IndexTuple *
+>brin_copy_tuple,BrinTuple *
+>brin_copy_tuple,Size
+>core_yyrealloc,void *
+>core_yyrealloc,yy_size_t
 >resize_intArrayType,ArrayType *

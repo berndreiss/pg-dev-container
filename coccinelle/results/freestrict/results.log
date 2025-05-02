@@ -1,0 +1,29 @@
+##### RESULTS FREE STICT #####
+Coccinelle found:
+190
+Without 'free':
+102
+Without 'destroy':
+80
+Without 'delete':
+76
+Without 'close':
+66
+Without 'destruct':
+65
+Without 'realloc':
+65
+Without 'resize':
+65
+Without 'repalloc':
+65
+Without 'dealloc':
+64
+Without 'close':
+64
+Without 'release':
+62
+Without 'detach':
+57
+Without methods in exclude.txt
+33

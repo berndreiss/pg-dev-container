@@ -1,0 +1,9 @@
+>EndCompressFileHandle,CompressFileHandle *
+>EndCompressor,CompressorState *
+>free_command,Command *
+>free_socket_set,socket_set *
+>dir_free,WalWriteMethod *
+>tar_free,WalWriteMethod *
+>pfree,void *
+>descriptor_free,struct descriptor *
+>PQfreeNotify,PGnotify *

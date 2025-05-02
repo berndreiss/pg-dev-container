@@ -6,6 +6,10 @@ Ret. Type: bool
 /usr/local/src/postgresql/src/bin/pg_dump/compress_io.c:152:1
 Used: pg_free
 Ret. Type: void
+>make_func,PgBenchExprList *
+/usr/local/src/postgresql/src/bin/pgbench/exprparse.c:2091:2
+Used: pg_free
+Ret. Type: PgBenchExpr *
 >free_command,Command *
 /usr/local/src/postgresql/src/bin/pgbench/pgbench.c:5590:1
 Used: pg_free
@@ -16,6 +20,14 @@ Used: pg_free
 Ret. Type: void
 >free_socket_set,socket_set *
 /usr/local/src/postgresql/src/bin/pgbench/pgbench.c:7868:1
+Used: pg_free
+Ret. Type: void
+>bool_substitute_hook,char *
+/usr/local/src/postgresql/src/bin/psql/startup.c:868:2
+Used: pg_free
+Ret. Type: char *
+>avlFree,avl_node *
+/usr/local/src/postgresql/src/bin/psql/crosstabview.c:464:3
 Used: pg_free
 Ret. Type: void
 >dir_free,WalWriteMethod *
@@ -38,6 +50,10 @@ Ret. Type: void
 /usr/local/src/postgresql/src/interfaces/ecpg/ecpglib/descriptor.c:744:1
 Used: ecpg_free
 Ret. Type: void
+>ecpg_finish,struct connection *
+/usr/local/src/postgresql/src/interfaces/ecpg/ecpglib/connect.c:139:2
+Used: ecpg_free
+Ret. Type: void
 >deallocate_one,struct prepared_statement *
 /usr/local/src/postgresql/src/interfaces/ecpg/ecpglib/prepare.c:309:1
 Used: ecpg_free
@@ -46,8 +62,16 @@ Ret. Type: bool
 /usr/local/src/postgresql/src/interfaces/ecpg/ecpglib/execute.c:107:1
 Used: ecpg_free
 Ret. Type: void
+>free_variable,struct variable *
+/usr/local/src/postgresql/src/interfaces/ecpg/ecpglib/execute.c:90:2
+Used: ecpg_free
+Ret. Type: void
 >insert_tobeinserted,char *
 /usr/local/src/postgresql/src/interfaces/ecpg/ecpglib/execute.c:1135:2
+Used: ecpg_free
+Ret. Type: bool
+>insert_tobeinserted,char *
+/usr/local/src/postgresql/src/interfaces/ecpg/ecpglib/execute.c:1154:1
 Used: ecpg_free
 Ret. Type: bool
 >quote_postgres,char *
