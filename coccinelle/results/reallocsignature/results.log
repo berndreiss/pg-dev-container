@@ -1,0 +1,29 @@
+##### RESULTS REALLOC SIGNATURE #####
+Coccinelle found:
+12
+Without 'free':
+12
+Without 'destroy':
+12
+Without 'delete':
+12
+Without 'close':
+12
+Without 'destruct':
+12
+Without 'realloc':
+3
+Without 'resize':
+3
+Without 'repalloc':
+0
+Without 'dealloc':
+0
+Without 'close':
+0
+Without 'release':
+0
+Without 'detach':
+0
+Without methods in exclude.txt
+0

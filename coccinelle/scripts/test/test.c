@@ -4,7 +4,7 @@ int test(int i){
    free(i);
 }
 
-int test2(int i){
+int test2(int i, Othertype o){
    free(i);
 }
 

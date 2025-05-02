@@ -16,6 +16,7 @@ RESULTS_PATH=../results/$2$3
 RESULTS_FILE=$RESULTS_PATH/$RESULTS_FILE_NAME.$RESULTS_FILE_EXT
 TMP_PATH=tmp
 PRINTED_LINES=3
+FUNCTION=$2
 COCCI_ADDITION=$3
 
 if [ -d $TMP_PATH ]; then
@@ -76,7 +77,7 @@ createScript(){
       ftype="t2"
    fi
 
-   cat proto$COCCI_ADDITION.cocci \
+   cat proto$FUNCTION$COCCI_ADDITION.cocci \
       | sed -e "s/__METAFUNCTION__/$fname$counter/g" \
             -e "s/__FUNCTION__/$fname/g" \
             -e "s/__TYPE__/$ftype/g" \

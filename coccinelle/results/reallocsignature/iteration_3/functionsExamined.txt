@@ -1,0 +1,3 @@
+>xml_repalloc,void *
+>jsonpath_yyrealloc,void *
+>SPI_repalloc,void *

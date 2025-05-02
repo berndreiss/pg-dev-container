@@ -1,0 +1,29 @@
+##### RESULTS FREE SIGNATURE #####
+Coccinelle found:
+199
+Without 'free':
+100
+Without 'destroy':
+78
+Without 'delete':
+74
+Without 'close':
+65
+Without 'destruct':
+63
+Without 'realloc':
+63
+Without 'resize':
+63
+Without 'repalloc':
+63
+Without 'dealloc':
+61
+Without 'close':
+61
+Without 'release':
+59
+Without 'detach':
+54
+Without methods in exclude.txt
+33

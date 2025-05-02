@@ -1,0 +1,19 @@
+>addCompiledLexeme,TheLexeme *
+>bms_add_member,Bitmapset *
+>bms_add_range,Bitmapset *
+>bms_replace_members,Bitmapset *
+>brin_copy_tuple,BrinTuple *
+>core_yyrealloc,void *
+>ecpg_realloc,void *
+>erealloc,void *
+>gistjoinvector,IndexTuple *
+>growalloc,void *
+>jsonpath_yyrealloc,void *
+>pg_realloc,void *
+>repalloc0,void *
+>repalloc,void *
+>resize_intArrayType,ArrayType *
+>SetConstraintStateAddItem,SetConstraintState
+>SPI_repalloc,void *
+>xml_repalloc,void *
+>yyrealloc,void *

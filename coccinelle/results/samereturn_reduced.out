@@ -1,0 +1,80 @@
+>clean_NOT_intree
+/usr/local/src/postgresql/src/backend/utils/adt/tsquery_cleanup.c:171:3
+Used: pfree
+Type: NODE *
+--
+>clean_NOT_intree
+/usr/local/src/postgresql/src/backend/utils/adt/tsquery_cleanup.c:146:2
+Used: freetree
+Type: NODE *
+>clean_stopword_intree
+/usr/local/src/postgresql/src/backend/utils/adt/tsquery_cleanup.c:250:2
+Used: pfree
+Type: NODE *
+--
+>clean_stopword_intree
+/usr/local/src/postgresql/src/backend/utils/adt/tsquery_cleanup.c:262:3
+Used: freetree
+Type: NODE *
+>recursive_revoke
+/usr/local/src/postgresql/src/backend/utils/adt/acl.c:1336:3
+Used: pfree
+Type: Acl *
+>dofindsubquery
+/usr/local/src/postgresql/src/backend/utils/adt/tsquery_rewrite.c:250:3
+Used: pfree
+Type: QTNode *
+>dofindsubquery
+/usr/local/src/postgresql/src/backend/utils/adt/tsquery_rewrite.c:243:3
+Used: QTNFree
+Type: QTNode *
+>findeq
+/usr/local/src/postgresql/src/backend/utils/adt/tsquery_rewrite.c:61:4
+Used: QTNFree
+Type: QTNode *
+>bms_add_members
+/usr/local/src/postgresql/src/backend/nodes/bitmapset.c:957:2
+Used: pfree
+Type: Bitmapset *
+>bms_del_member
+/usr/local/src/postgresql/src/backend/nodes/bitmapset.c:907:2
+Used: pfree
+Type: Bitmapset *
+>bms_del_members
+/usr/local/src/postgresql/src/backend/nodes/bitmapset.c:1211:3
+Used: pfree
+Type: Bitmapset *
+>bms_int_members
+/usr/local/src/postgresql/src/backend/nodes/bitmapset.c:1123:2
+Used: pfree
+Type: Bitmapset *
+>bms_replace_members
+/usr/local/src/postgresql/src/backend/nodes/bitmapset.c:983:2
+Used: pfree
+Type: Bitmapset *
+>bms_copy_and_free
+--
+>quote_postgres
+/usr/local/src/postgresql/src/interfaces/ecpg/ecpglib/execute.c:77:2
+Used: ecpg_free
+Type: char *
+>bool_substitute_hook
+/usr/local/src/postgresql/src/bin/psql/startup.c:868:2
+Used: pg_free
+Type: char *
+>bms_add_member
+/usr/local/src/postgresql/src/backend/nodes/bitmapset.c:854:5
+Used: bms_copy_and_free
+Type: Bitmapset *
+>bms_add_range
+/usr/local/src/postgresql/src/backend/nodes/bitmapset.c:1033:6
+Used: bms_copy_and_free
+Type: Bitmapset *
+>bms_join
+/usr/local/src/postgresql/src/backend/nodes/bitmapset.c:1244:6
+Used: bms_copy_and_free
+Type: Bitmapset *
+>bms_join
+/usr/local/src/postgresql/src/backend/nodes/bitmapset.c:1252:6
+Used: bms_copy_and_free
+Type: Bitmapset *

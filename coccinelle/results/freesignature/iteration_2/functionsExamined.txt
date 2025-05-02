@@ -1,0 +1,15 @@
+>pfree,void *
+>FreeDir,DIR *
+>ecpg_finish,struct connection *
+>descriptor_free,struct descriptor *
+>free_statement,struct statement *
+>free_variable,struct variable *
+>PQfinish,PGconn *
+>PQfreeNotify,PGnotify *
+>free_command,Command *
+>free_socket_set,socket_set *
+>EndCompressFileHandle,CompressFileHandle *
+>dir_free,WalWriteMethod *
+>tar_free,WalWriteMethod *
+>bool_substitute_hook,char *
+>ClearOrSaveResult,PGresult *
