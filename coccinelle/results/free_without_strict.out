@@ -1,0 +1,70 @@
+>addHLParsedLex,ParsedLex *
+>addHLParsedLex,TSLexeme *
+>add_partial_path,Path *
+>add_path,Path *
+>avlFree,avl_node *
+>bms_add_members,Bitmapset *
+>bms_del_member,Bitmapset *
+>bms_del_members,Bitmapset *
+>bms_free,Bitmapset *
+>bms_int_members,Bitmapset *
+>bms_int_members,Bitmapset *
+>bms_replace_members,Bitmapset *
+>bool_substitute_hook,char *
+>_bt_insertonpg,IndexTuple
+>CatCacheRemoveCTup,CatCTup *
+>clean_NOT_intree,NODE *
+>clean_NOT_intree,NODE *
+>clean_NOT_intree,NODE *
+>clean_stopword_intree,NODE *
+>clean_stopword_intree,NODE *
+>clean_stopword_intree,NODE *
+>core_yyfree,void *
+>createNewConnection,remoteConn *
+>dblink_security_check,remoteConn *
+>deallocate_one,struct prepared_statement *
+>destroyPQExpBuffer,PQExpBuffer
+>dofindsubquery,QTNode *
+>dump_variables,struct arguments *
+>ecpg_finish,struct connection *
+>emit_audit_message,char *
+>emit_audit_message,char *
+>ExecForceStoreHeapTuple,HeapTuple
+>ExecForceStoreHeapTuple,HeapTuple
+>ExecForceStoreMinimalTuple,MinimalTuple
+>FreeAccessStrategy,BufferAccessStrategy
+>free_copy_options,struct copy_options *
+>freeGinBtreeStack,GinBtreeStack *
+>freeJsonLexContext,JsonLexContext *
+>free_readfile,char * *
+>free_statement,struct statement *
+>freetree,NODE *
+>FreeTriggerDesc,TriggerDesc *
+>free_variable,struct variable *
+>ginFinishSplit,GinBtreeStack *
+>guc_free,void *
+>HandleEndOfCopyStream,char *
+>insert_tobeinserted,char *
+>insert_tobeinserted,char *
+>json_manifest_scalar,char *
+>jsonpath_yyfree,void *
+>list_free_private,List *
+>make_func,PgBenchExprList *
+>merge_clump,Clump *
+>pagetable_free,void *
+>ParallelBackupEnd,ParallelState *
+>pgp_key_free,PGP_PubKey *
+>pgp_mpi_free,PGP_MPI *
+>pgstat_release_entry_ref,PgStat_EntryRef *
+>PQclear,PGresult *
+>PQconninfoFree,PQconninfoOption *
+>QTNFree,QTNode *
+>quote_postgres,char *
+>recursive_revoke,Acl *
+>ReorderBufferFreeSnap,Snapshot
+>SN_close_env,struct SN_env *
+>SSLerrfree,char *
+>updateAclDependenciesWorker,Oid *
+>updateAclDependenciesWorker,Oid *
+>vac_close_indexes,Relation *
+>xml_pfree,void *

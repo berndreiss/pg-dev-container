@@ -1,0 +1,33 @@
+>addCompiledLexeme,TheLexeme *
+>bms_add_member,Bitmapset *
+>bms_add_range,Bitmapset *
+>bms_replace_members,Bitmapset *
+>brin_copy_tuple,BrinTuple *
+>brin_copy_tuple,Size
+>core_yyrealloc,void *
+>core_yyrealloc,yy_size_t
+>ecpg_store_input,const int
+>ecpg_store_input,const int
+>ecpg_store_input,const int
+>ecpg_store_input,const int
+>jsonpath_yyrealloc,void *
+>jsonpath_yyrealloc,yy_size_t
+>ReorderBufferSerializeReserve,Size
+>resize_intArrayType,ArrayType *
+>SetConstraintStateAddItem,SetConstraintState
+>yyensure_buffer_stack,yyscan_t
+>yyensure_buffer_stack,yyscan_t
+>yyensure_buffer_stack,yyscan_t
+>yyensure_buffer_stack,yyscan_t
+>yy_get_next_buffer,yyscan_t
+>yy_get_next_buffer,yyscan_t
+>yy_get_next_buffer,yyscan_t
+>yy_get_next_buffer,yyscan_t
+>yy_get_next_buffer,yyscan_t
+>yy_get_next_buffer,yyscan_t
+>yy_get_next_buffer,yyscan_t
+>yy_get_next_buffer,yyscan_t
+>yy_get_next_buffer,yyscan_t
+>yy_get_next_buffer,yyscan_t
+>yy_get_next_buffer,yyscan_t
+>yy_get_next_buffer,yyscan_t
