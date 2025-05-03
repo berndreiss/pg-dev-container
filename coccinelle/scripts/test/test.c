@@ -49,7 +49,34 @@ int testNULL(int i){
    free(i);
 }
 
+int testEXCLAMATION(int i){
+   if (!i)
+      return;
+   free(i);
+}
+
 int testIfI(int i){
    if (i)
       free(i);
+}
+
+int testIfINULL(int i){
+   if (i == NULL)
+      return;
+   if (i)
+      free(i);
+}
+int testIfIfINULL(int i){
+   if (i == NULL)
+      return;
+   if (i < 3)
+      return;
+   if (i)
+      free(i);
+}
+
+
+int testTwo(int i, int j){
+   free(i);
+   free(j);
 }
