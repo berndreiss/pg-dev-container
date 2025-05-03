@@ -1,3 +1,0 @@
->bms_add_member
->bms_add_range
->bms_join

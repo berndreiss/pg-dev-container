@@ -80,3 +80,47 @@ int testTwo(int i, int j){
    free(i);
    free(j);
 }
+
+int dependant1(int i, bool b){
+   if (b)
+      free(i);
+}
+
+int dependantMULTIPLE(int i, bool b){
+   if (b)
+      free(i);
+   if (b)
+      free(i);
+}
+
+int dependant2(bool b, int i){
+   if (b)
+      free(i);
+}
+
+int dependant3(int i, void * B){
+   if (B->b)
+      free(i);
+}
+
+int dependant3MULTIPLE(int i, void * B){
+   if (B->b)
+      free(i)
+   if (B->b)
+      free(i)
+}
+
+int dependant4(void * B, int i){
+   if (B->b)
+      free(i);
+}
+
+int dependant5(void * B, int i){
+   if (B.b)
+      free(i);
+}
+
+int dependant6(int i, void * B){
+   if (B.b)
+      free(i);
+}

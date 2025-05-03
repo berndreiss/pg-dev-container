@@ -17,5 +17,5 @@ awk '
             print $0
         }
     }
-' $1 | grep ">" | sort | uniq
+' $1 | grep "^>" | sort | uniq
 
