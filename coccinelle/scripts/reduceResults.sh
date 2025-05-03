@@ -49,33 +49,25 @@ echo "all & $COUNT" >> $STATS_FILE
 cp $OUT_FILE $TEMP
 
 #REMOVE KEYWORDS
-remove "free"
-remove "destroy"
-remove "delete"
-remove "close"
-remove "destruct"
-remove "realloc"
-remove "resize"
-remove "repalloc"
-remove "dealloc"
-remove "close"
-remove "release"
-remove "detach"
+#remove "free"
+#remove "destroy"
+#remove "delete"
+#remove "close"
+#remove "destruct"
+#remove "realloc"
+#remove "resize"
+#remove "repalloc"
+#remove "dealloc"
+#remove "close"
+#remove "release"
+#remove "detach"
 
-#EXCLUDE FUNCTIONS IN EXCLUDE_FILE
-grep -Fv -f $EXCLUDE_FILE $TEMP > $OUT_FUNCTIONS
 #RETRIEVE RELEVANT ENTRIES IN OUT_FILE AND PRINT IT TO OUT_REDUCED
-grep -A 4 -F -f $OUT_FUNCTIONS $OUT_FILE > $OUT_REDUCED
-
-#OUTPUT STATS
-echo "Without methods in exclude.txt" >> $LOG_FILE
-COUNT=$(cat $OUT_FUNCTIONS | wc -l)
-echo $COUNT >> $LOG_FILE
-echo "excluded & $COUNT" >> $STATS_FILE 
+#grep -A 3 -F -f $OUT_FUNCTIONS $OUT_FILE > $OUT_REDUCED
 
 #OVERWRITE THE REDUCED SET OF FUNCTIONS IN THE OUT_FUNCTIONS FILE 
 #WITH ALL INITIALLY FOUND FUNCTIONS
-cat $OUT_FILE | grep ">" > $OUT_FUNCTIONS
+cat $OUT_FILE | grep ">" | sort | uniq > $OUT_FUNCTIONS
 
 #PRINT THE LOG FILE
 cat $LOG_FILE

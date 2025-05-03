@@ -77,7 +77,7 @@ createScript(){
       ftype="t2"
    fi
 
-   cat proto$FUNCTION$COCCI_ADDITION.cocci \
+   cat prototypes/proto$FUNCTION$COCCI_ADDITION.cocci \
       | sed -e "s/__METAFUNCTION__/$fname$counter/g" \
             -e "s/__FUNCTION__/$fname/g" \
             -e "s/__TYPE__/$ftype/g" \
