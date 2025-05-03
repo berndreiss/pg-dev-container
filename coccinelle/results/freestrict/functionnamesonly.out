@@ -1,0 +1,205 @@
+>addHLParsedLex,TSLexeme *
+>array_free_iterator,ArrayIterator
+>bbstreamer_gzip_decompressor_free,bbstreamer *
+>bbstreamer_lz4_compressor_free,bbstreamer *
+>bbstreamer_lz4_decompressor_free,bbstreamer *
+>bbstreamer_recovery_injector_free,bbstreamer *
+>bbstreamer_tar_archiver_free,bbstreamer *
+>bbstreamer_tar_terminator_free,bbstreamer *
+>bbstreamer_zstd_compressor_free,bbstreamer *
+>bbstreamer_zstd_decompressor_free,bbstreamer *
+>binaryheap_free,binaryheap *
+>BipartiteMatchFree,BipartiteMatchState *
+>BlockRefTableFreeEntry,BlockRefTableEntry *
+>bloom_free,bloom_filter *
+>bms_free,Bitmapset *
+>brin_free_tuple,BrinTuple *
+>brinRevmapTerminate,BrinRevmap *
+>_bt_spooldestroy,BTSpool *
+>BufFileClose,BufFile *
+>buf_finalize,StringInfo
+>BumpBlockFree,BumpBlock *
+>BumpDelete,MemoryContext
+>cat2_str,char *
+>CatalogCloseIndexes,CatalogIndexState
+>CatCacheRemoveCList,CatCList *
+>clear_and_pfree,text *
+>closedir,DIR *
+>close_tsvector_parser,TSVectorParseState
+>combo_free,PX_Combo *
+>conditional_stack_destroy,ConditionalStack
+>copy_dest_destroy,DestReceiver *
+>CopyMultiInsertBufferCleanup,CopyMultiInsertBuffer *
+>core_yyfree,void *
+>DeCloneArchive,ArchiveHandle *
+>DependencyGenerator_free,DependencyGenerator
+>descriptor_free,struct descriptor *
+>DestroyBlockRefTableReader,BlockRefTableReader *
+>DestroyBlockRefTableWriter,BlockRefTableWriter *
+>DestroyParallelContext,ParallelContext *
+>destroyPQExpBuffer,PQExpBuffer
+>destroyStringInfo,StringInfo
+>DestroyTupleQueueReader,TupleQueueReader *
+>digest_free,PX_MD *
+>dir_free,WalWriteMethod *
+>dsa_detach,dsa_area *
+>dshash_destroy,dshash_table *
+>dshash_detach,dshash_table *
+>dsm_detach,dsm_segment *
+>ECPGfree_type,struct ECPGtype *
+>ecpg_free,void *
+>ecpg_sqlca_key_destructor,void *
+>emit_audit_message,char *
+>EndCompressFileHandle,CompressFileHandle *
+>EndCompressor,CompressorState *
+>EndCopy,CopyToState
+>EndCopyFrom,CopyFromState
+>end_tup_output,TupOutputState *
+>ExecDropSingleTupleTableSlot,TupleTableSlot *
+>ExecHashTableDestroy,HashJoinTable
+>ExecParallelCleanup,ParallelExecutorInfo *
+>finish_edata,ApplyExecutionData *
+>FreeAccessStrategy,BufferAccessStrategy
+>freeAndGetParent,JsonbIterator *
+>free_attrmap,AttrMap *
+>FreeBulkInsertState,BulkInsertState
+>free_child_join_sjinfo,SpecialJoinInfo *
+>free_chromo,Chromosome *
+>free_city_table,City *
+>free_command,Command *
+>FreeConfigVariable,ConfigVariable *
+>free_conversion_map,TupleConversionMap *
+>free_copy_options,struct copy_options *
+>free_edge_table,Edge *
+>FreeErrorData,ErrorData *
+>FreeExprContext,ExprContext *
+>FreeFakeRelcacheEntry,Relation
+>free_keep_errno,void *
+>free_object_addresses,ObjectAddresses *
+>free_openssl_cipher,OSSLCipher *
+>free_openssl_digest,OSSLDigest *
+>free_parsestate,ParseState *
+>freePGconn,PGconn *
+>free_pool,Pool *
+>FreeQueryDesc,QueryDesc *
+>free_readfile,char * *
+>FreeSnapshot,Snapshot
+>free_socket_set,socket_set *
+>free_statement,struct statement *
+>FreeSubscription,Subscription *
+>freetree,NODE *
+>FreeTriggerDesc,TriggerDesc *
+>FreeTupleDesc,TupleDesc
+>FreeWaitEventSetAfterFork,WaitEventSet *
+>FreeWaitEventSet,WaitEventSet *
+>GenerationBlockFree,GenerationBlock *
+>GenerationDelete,MemoryContext
+>generator_free,CombinationGenerator *
+>GenericXLogAbort,GenericXLogState *
+>GenericXLogFinish,GenericXLogState *
+>gen_ossl_free,PX_Cipher *
+>guc_free,void *
+>gzip_pfree,void *
+>heap_free_minimal_tuple,MinimalTuple
+>heap_freetuple,HeapTuple
+>hmac_free,PX_HMAC *
+>_h_spooldestroy,HSpool *
+>IndexScanEnd,IndexScanDesc
+>init_spawned_worker_win32,WorkerInfo *
+>intorel_destroy,DestReceiver *
+>inv_close,LargeObjectDesc *
+>irbt_free,RBTNode *
+>jit_release_context,JitContext *
+>json_manifest_object_field_start,char *
+>json_parse_manifest_incremental_shutdown,JsonManifestParseIncrementalState *
+>jsonpath_yyfree,void *
+>libpqrcv_disconnect,WalReceiverConn *
+>local_destroy,rewind_source *
+>LogicalTapeClose,LogicalTape *
+>LogicalTapeSetClose,LogicalTapeSet *
+>lrq_free,LsnReadQueue *
+>make2_str,char *
+>make3_str,char *
+>make_func,PgBenchExprList *
+>mbuf_free,MBuf *
+>output_deallocate_prepare_statement,char *
+>output_prepare_statement,char *
+>output_simple_statement,char *
+>output_statement,char *
+>pa_free_worker_info,ParallelApplyWorkerInfo *
+>PageRestoreTempPage,Page
+>pairingheap_free,pairingheap *
+>parallel_vacuum_end,ParallelVacuumState *
+>pfree,void *
+>pgfnames_cleanup,char * *
+>pg_free,void *
+>pgp_cfb_free,PGP_CFB *
+>pgp_free,PGP_Context *
+>pgp_key_free,PGP_PubKey *
+>pgp_mpi_free,PGP_MPI *
+>pgstat_release_entry_ref,PgStat_EntryRef *
+>PGTYPESchar_free,char *
+>PGTYPESdate_free,date *
+>PGTYPESdecimal_free,decimal *
+>PGTYPESinterval_free,interval *
+>PGTYPESnumeric_free,numeric *
+>pg_tzenumerate_end,pg_tzenum *
+>pg_xml_done,PgXmlErrorContext *
+>plainnode,NODE *
+>PLy_function_drop_args,PLySavedArgs *
+>PLy_function_restore_args,PLySavedArgs *
+>PortalDrop,Portal
+>PQconninfoFree,PQconninfoOption *
+>PQfreeCancel,PGcancel *
+>PQfreemem,void *
+>PQfreeNotify,PGnotify *
+>printtup_destroy,DestReceiver *
+>psql_scan_destroy,PsqlScanState
+>pullf_free,PullFilter *
+>pushf_free,PushFilter *
+>QTNFree,QTNode *
+>read_stream_end,ReadStream *
+>RelationDestroyRelation,Relation
+>ReleaseDummy,HeapTuple
+>ReorderBufferIterTXNFinish,ReorderBufferIterTXNState *
+>ReorderBufferReturnChange,ReorderBufferChange *
+>ReorderBufferReturnRelids,Oid *
+>ReorderBufferReturnTupleBuf,HeapTuple
+>ReorderBufferReturnTXN,ReorderBufferTXN *
+>report_corruption_internal,char *
+>ResourceOwnerDelete,ResourceOwner
+>restore_global_locale,save_locale_t
+>restorePsetInfo,printQueryOpt *
+>serializeAnalyzeDestroy,DestReceiver *
+>shm_mq_detach,shm_mq_handle *
+>SlabDelete,MemoryContext
+>SnapBuildFreeSnapshot,Snapshot
+>SN_close_env,struct SN_env *
+>spgFreeSearchItem,SpGistSearchItem *
+>SPI_pfree,void *
+>sqlfunction_destroy,DestReceiver *
+>string_to_text,char *
+>systable_endscan_ordered,SysScanDesc
+>systable_endscan,SysScanDesc
+>tar_free,WalWriteMethod *
+>tbm_end_iterate,TBMIterator *
+>tbm_end_shared_iterate,TBMSharedIterator *
+>tbm_free,TIDBitmap *
+>terminate_brin_buildstate,BrinBuildState *
+>TidStoreDestroy,TidStore *
+>TidStoreDetach,TidStore *
+>TidStoreEndIterate,TidStoreIter *
+>toast_close_indexes,Relation *
+>TParserClose,TParser *
+>TParserCopyClose,TParser *
+>tqueueDestroyReceiver,DestReceiver *
+>transientrel_destroy,DestReceiver *
+>tstoreDestroyReceiver,DestReceiver *
+>tuplestore_end,Tuplestorestate *
+>updateAclDependenciesWorker,Oid *
+>vac_close_indexes,Relation *
+>writefile,char * *
+>XLogPrefetcherFree,XLogPrefetcher *
+>XLogReaderFree,XLogReaderState *
+>xml_pfree,void *
+>z_free,void *

@@ -1,0 +1,4 @@
+>jsonpath_yyrealloc,void *
+/usr/local/src/postgresql/src/backend/utils/adt/jsonpath_scan.c:6175:9
+Used: repalloc
+Ret. Type: void *

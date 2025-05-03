@@ -1,0 +1,132 @@
+>cat2_str,char *
+/usr/local/src/postgresql/src/interfaces/ecpg/preproc/preproc.c:221:1
+Used: free
+Ret. Type: char *
+>cat2_str,char *
+/usr/local/src/postgresql/src/interfaces/ecpg/preproc/preproc.c:222:1
+Used: free
+Ret. Type: char *
+>make2_str,char *
+/usr/local/src/postgresql/src/interfaces/ecpg/preproc/preproc.c:253:1
+Used: free
+Ret. Type: char *
+>make2_str,char *
+/usr/local/src/postgresql/src/interfaces/ecpg/preproc/preproc.c:254:1
+Used: free
+Ret. Type: char *
+>make3_str,char *
+/usr/local/src/postgresql/src/interfaces/ecpg/preproc/preproc.c:266:1
+Used: free
+Ret. Type: char *
+>make3_str,char *
+/usr/local/src/postgresql/src/interfaces/ecpg/preproc/preproc.c:267:1
+Used: free
+Ret. Type: char *
+>make3_str,char *
+/usr/local/src/postgresql/src/interfaces/ecpg/preproc/preproc.c:268:1
+Used: free
+Ret. Type: char *
+--
+>free_socket_set,socket_set *
+/usr/local/src/postgresql/src/bin/pgbench/pgbench.c:7801:1
+Used: pg_free
+Ret. Type: void
+>free_socket_set,socket_set *
+/usr/local/src/postgresql/src/bin/pgbench/pgbench.c:7868:1
+Used: pg_free
+Ret. Type: void
+--
+>insert_tobeinserted,char *
+/usr/local/src/postgresql/src/interfaces/ecpg/ecpglib/execute.c:1135:2
+Used: ecpg_free
+Ret. Type: bool
+>insert_tobeinserted,char *
+/usr/local/src/postgresql/src/interfaces/ecpg/ecpglib/execute.c:1154:1
+Used: ecpg_free
+Ret. Type: bool
+--
+>XLogReaderFree,XLogReaderState *
+/usr/local/src/postgresql/src/bin/pg_rewind/xlogreader.c:173:1
+Used: pfree
+Ret. Type: void
+--
+>XLogReaderFree,XLogReaderState *
+/usr/local/src/postgresql/src/bin/pg_waldump/xlogreader.c:173:1
+Used: pfree
+Ret. Type: void
+--
+>XLogReaderFree,XLogReaderState *
+/usr/local/src/postgresql/src/backend/access/transam/xlogreader.c:173:1
+Used: pfree
+Ret. Type: void
+--
+>gzip_pfree,void *
+/usr/local/src/postgresql/src/bin/pg_basebackup/bbstreamer_gzip.c:362:1
+Used: pfree
+Ret. Type: void
+--
+>gzip_pfree,void *
+/usr/local/src/postgresql/src/backend/backup/basebackup_gzip.c:301:1
+Used: pfree
+Ret. Type: void
+--
+>clean_NOT_intree,NODE *
+/usr/local/src/postgresql/src/backend/utils/adt/tsquery_cleanup.c:171:3
+Used: pfree
+Ret. Type: NODE *
+>clean_NOT_intree,NODE *
+/usr/local/src/postgresql/src/backend/utils/adt/tsquery_cleanup.c:177:3
+Used: pfree
+Ret. Type: NODE *
+>clean_NOT_intree,NODE *
+/usr/local/src/postgresql/src/backend/utils/adt/tsquery_cleanup.c:182:3
+Used: pfree
+Ret. Type: NODE *
+>clean_stopword_intree,NODE *
+/usr/local/src/postgresql/src/backend/utils/adt/tsquery_cleanup.c:250:2
+Used: pfree
+Ret. Type: NODE *
+>clean_stopword_intree,NODE *
+/usr/local/src/postgresql/src/backend/utils/adt/tsquery_cleanup.c:320:3
+Used: pfree
+Ret. Type: NODE *
+>clean_stopword_intree,NODE *
+/usr/local/src/postgresql/src/backend/utils/adt/tsquery_cleanup.c:339:3
+Used: pfree
+Ret. Type: NODE *
+--
+>bms_int_members,Bitmapset *
+/usr/local/src/postgresql/src/backend/nodes/bitmapset.c:1123:2
+Used: pfree
+Ret. Type: Bitmapset *
+>bms_int_members,Bitmapset *
+/usr/local/src/postgresql/src/backend/nodes/bitmapset.c:1142:2
+Used: pfree
+Ret. Type: Bitmapset *
+--
+>updateAclDependenciesWorker,Oid *
+/usr/local/src/postgresql/src/backend/catalog/pg_shdepend.c:592:2
+Used: pfree
+Ret. Type: void
+>updateAclDependenciesWorker,Oid *
+/usr/local/src/postgresql/src/backend/catalog/pg_shdepend.c:594:2
+Used: pfree
+Ret. Type: void
+--
+>ExecForceStoreHeapTuple,HeapTuple
+/usr/local/src/postgresql/src/backend/executor/execTuples.c:1577:3
+Used: pfree
+Ret. Type: void
+>ExecForceStoreHeapTuple,HeapTuple
+/usr/local/src/postgresql/src/backend/executor/execTuples.c:1589:3
+Used: pfree
+Ret. Type: void
+--
+>emit_audit_message,char *
+/usr/local/src/postgresql/src/test/modules/test_oat_hooks/test_oat_hooks.c:253:2
+Used: pfree
+Ret. Type: void
+>emit_audit_message,char *
+/usr/local/src/postgresql/src/test/modules/test_oat_hooks/test_oat_hooks.c:255:2
+Used: pfree
+Ret. Type: void

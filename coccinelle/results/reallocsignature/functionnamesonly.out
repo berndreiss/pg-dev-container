@@ -1,0 +1,7 @@
+>erealloc,void *
+>jsonpath_yyrealloc,void *
+>pg_realloc,void *
+>repalloc,void *
+>SPI_repalloc,void *
+>xml_repalloc,void *
+>yyrealloc,void *

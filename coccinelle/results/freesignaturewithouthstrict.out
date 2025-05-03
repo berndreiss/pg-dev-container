@@ -1,0 +1,47 @@
+>PQclear,PGresult *
+/usr/local/src/postgresql/src/interfaces/libpq/fe-exec.c:770:1
+Used: free
+Ret. Type: void
+--
+>SSLerrfree,char *
+/usr/local/src/postgresql/src/interfaces/libpq/fe-secure-openssl.c:1785:2
+Used: free
+Ret. Type: void
+--
+>bool_substitute_hook,char *
+/usr/local/src/postgresql/src/bin/psql/startup.c:868:2
+Used: pg_free
+Ret. Type: char *
+--
+>ecpg_finish,struct connection *
+/usr/local/src/postgresql/src/interfaces/ecpg/ecpglib/connect.c:139:2
+Used: ecpg_free
+Ret. Type: void
+--
+>free_variable,struct variable *
+/usr/local/src/postgresql/src/interfaces/ecpg/ecpglib/execute.c:90:2
+Used: ecpg_free
+Ret. Type: void
+--
+>clean_NOT_intree,NODE *
+/usr/local/src/postgresql/src/backend/utils/adt/tsquery_cleanup.c:171:3
+Used: pfree
+Ret. Type: NODE *
+>clean_NOT_intree,NODE *
+/usr/local/src/postgresql/src/backend/utils/adt/tsquery_cleanup.c:177:3
+Used: pfree
+Ret. Type: NODE *
+>clean_NOT_intree,NODE *
+/usr/local/src/postgresql/src/backend/utils/adt/tsquery_cleanup.c:182:3
+Used: pfree
+Ret. Type: NODE *
+--
+>freeGinBtreeStack,GinBtreeStack *
+/usr/local/src/postgresql/src/backend/access/gin/ginbtree.c:207:2
+Used: pfree
+Ret. Type: void
+--
+>freeJsonLexContext,JsonLexContext *
+/usr/local/src/postgresql/src/common/jsonapi.c:502:2
+Used: pfree
+Ret. Type: void
