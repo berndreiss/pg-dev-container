@@ -124,3 +124,23 @@ int dependant6(int i, void * B){
    if (B.b)
       free(i);
 }
+
+int testEreport(int i){
+   if (i > 2){
+      if (i)
+         free(i);
+
+      ereport(ERROR);
+   }
+
+}
+int testEreport2(int i){
+      if (i > 3)
+         return;
+
+      if (i)
+         free(i);
+
+      ereport(ERROR);
+
+}

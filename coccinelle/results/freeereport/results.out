@@ -1,0 +1,8 @@
+>createNewConnection,remoteConn *
+/usr/local/src/postgresql/contrib/dblink/dblink.c:2572:2
+Used: pfree
+Ret. Type: void
+>dblink_security_check,remoteConn *
+/usr/local/src/postgresql/contrib/dblink/dblink.c:2628:2
+Used: pfree
+Ret. Type: void

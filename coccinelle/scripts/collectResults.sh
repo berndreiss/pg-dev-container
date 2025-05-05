@@ -19,20 +19,24 @@ grep "^>" $RESULTS/$1/results.out | sort | uniq > $RESULTS/$1/functionnamesonly.
 grep "^>" $RESULTS/$1strict/results.out | sort | uniq > $RESULTS/$1strict/functionnamesonly.out
 grep "^>" $RESULTS/$1signature/results.out | sort | uniq > $RESULTS/$1signature/functionnamesonly.out
 grep "^>" $RESULTS/$1dependent/results.out | cut -d ',' -f 1,2 | sort | uniq > $RESULTS/$1dependent/functionnamesonly.out
+grep "^>" $RESULTS/$1ereport/results.out | sort | uniq > $RESULTS/$1ereport/functionnamesonly.out
 
 if [[ "$1" == "realloc" ]]; then
    reduceRealloc 
    reduceRealloc strict
    reduceRealloc signature
+   reduceRealloc ereport
 fi
 
 comm -23 $RESULTS/$1/functionnamesonly.out $RESULTS/$1strict/functionnamesonly.out | sort | uniq > allwithoutstrict.tmp
 comm -23 allwithoutstrict.tmp $RESULTS/$1dependent/functionnamesonly.out > allwithoutstrictdependent.tmp
+comm -23 allwithoutstrictdependent.tmp $RESULTS/$1ereport/functionnamesonly.out > allwithoutstrictdependentereport.tmp
 comm -23 $RESULTS/$1strict/functionnamesonly.out $RESULTS/$1signature/functionnamesonly.out > strictwithoutsignature.tmp
 comm -23 $RESULTS/$1signature/functionnamesonly.out $RESULTS/$1strict/functionnamesonly.out > signaturewithoutstrict.tmp
 
 grep -A 3 -F -f allwithoutstrict.tmp $RESULTS/$1/results.out > $RESULTS/$1allwithoutstrict.out
 grep -A 3 -F -f allwithoutstrictdependent.tmp $RESULTS/$1/results.out > $RESULTS/$1allwithoutstrictdependent.out
+grep -A 3 -F -f allwithoutstrictdependentereport.tmp $RESULTS/$1/results.out > $RESULTS/$1allwithoutstrictdependentereport.out
 grep -A 3 -F -f strictwithoutsignature.tmp $RESULTS/$1/results.out > $RESULTS/$1strictwithouthsignature.out
 grep -A 3 -F -f signaturewithoutstrict.tmp $RESULTS/$1/results.out > $RESULTS/$1signaturewithouthstrict.out
 
@@ -43,15 +47,17 @@ grep -A 3 -F -f doubled.tmp $RESULTS/$1/results.out > $RESULTS/$1doubled.out
 
 echo "$1" > $STATS_FILE
 echo "ALL:" >> $STATS_FILE
-grep "^>" $RESULTS/$1/results.out | sort | uniq | wc -l >> $STATS_FILE
+grep "^>" $RESULTS/$1/functionnamesonly.out | wc -l >> $STATS_FILE
 echo "STRICT:" >> $STATS_FILE
-grep "^>" $RESULTS/$1strict/results.out | sort | uniq | wc -l >> $STATS_FILE
+grep "^>" $RESULTS/$1strict/functionnamesonly.out | wc -l >> $STATS_FILE
 echo "SIGNATURE:" >> $STATS_FILE
-grep "^>" $RESULTS/$1signature/results.out | sort | uniq | wc -l >> $STATS_FILE
+grep "^>" $RESULTS/$1signature/functionnamesonly.out | wc -l >> $STATS_FILE
 echo "ALL WITHOUT STRICT:" >> $STATS_FILE
 grep "^>" $RESULTS/$1allwithoutstrict.out | sort | uniq | wc -l >> $STATS_FILE
 echo "ALL WITHOUT STRICT AND DEPENDENT:" >> $STATS_FILE
 grep "^>" $RESULTS/$1allwithoutstrictdependent.out | sort | uniq | wc -l >> $STATS_FILE
+echo "ALL WITHOUT STRICT, DEPENDENT, AND EREPORT:" >> $STATS_FILE
+grep "^>" $RESULTS/$1allwithoutstrictdependentereport.out | sort | uniq | wc -l >> $STATS_FILE
 echo "STRICT WITHOUT SIGNATURE:" >> $STATS_FILE
 grep "^>" $RESULTS/$1strictwithouthsignature.out | sort | uniq | wc -l >> $STATS_FILE
 echo "SIGNATURE WITHOUT STRICT:" >> $STATS_FILE
@@ -61,7 +67,9 @@ grep "^>" $RESULTS/$1doubled.out | sort | uniq | wc -l >> $STATS_FILE
 echo "SAME RETURN:" >> $STATS_FILE
 grep "^>" $RESULTS/$1samereturn.out | sort | uniq | wc -l >> $STATS_FILE
 echo "DEPENDENT:" >> $STATS_FILE
-grep "^>" $RESULTS/$1dependent/results.out | sort | uniq | wc -l >> $STATS_FILE
+grep "^>" $RESULTS/$1dependent/functionnamesonly.out | wc -l >> $STATS_FILE
+echo "EREPORT:" >> $STATS_FILE
+grep "^>" $RESULTS/$1ereport/functionnamesonly.out | wc -l >> $STATS_FILE
 echo "" >> $STATS_FILE
 
 cat $STATS_FILE

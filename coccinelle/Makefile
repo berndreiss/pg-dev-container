@@ -11,7 +11,9 @@ cocci:
 	@$(MAKE) --no-print-directory freesignature
 	@$(MAKE) --no-print-directory reallocsignature
 	@$(MAKE) --no-print-directory freedependent
-		@$(MAKE) --no-print-directory reallocdependent
+	@$(MAKE) --no-print-directory reallocdependent
+	@$(MAKE) --no-print-directory freeereport
+	@$(MAKE) --no-print-directory reallocereport
 	@$(MAKE) --no-print-directory collect
 
 free:
@@ -45,6 +47,14 @@ freedependent:
 reallocdependent:
 	@echo "Running script for reallocdependent..."
 	@cd scripts && bash runCocci.sh realloc "dependent"
+
+freeereport:
+	@echo "Running script for freeereport..."
+	@cd scripts && bash runCocci.sh free "ereport"
+
+reallocereport:
+	@echo "Running script for reallocereport..."
+	@cd scripts && bash runCocci.sh realloc "ereport"
 
 collect:
 	@cd scripts && bash collectResults.sh

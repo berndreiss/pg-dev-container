@@ -97,11 +97,13 @@ fi
 #WE KEEP TRACK OF FUNCTIONS FOUND IN THE PREVIOUS ITERATION IN
 #THE FILE 'functionsLastIteration'
 #PASS INITIAL FUNCTION NAMES FOR 'ITERATION -1'
-if [[ "$3" == "dependent" ]]; then
+if [[ "$3" == "dependent" || "$3" == "ereport" ]]; then
 grep "^>" $RESULTS/$2/$RESULTS_FILE_NAME.$RESULTS_FILE_EXT | sort | uniq >> $TMP_PATH/functionsLastIteration
 else
 echo ">$2,void *" >> $TMP_PATH/functionsLastIteration
 fi
+
+EXCLUDED=$(cat $2$3Excluded.txt)
 
 #LOGGING
 echo "STARTING -> $1"
@@ -131,7 +133,10 @@ while [ -f $TMP_PATH/functionsLastIteration ]; do
    spatch --sp-file $TMP_PATH/$ITERATION.cocci $1 >> $IT_RESULTS_FILE
 
    #GET ALL FUNCTION NAMES FROM THE RESULTS
-   grep '>' $IT_RESULTS_FILE | while IFS= read -r line; do 
+   grep '>' $IT_RESULTS_FILE | while IFS= read -r line; do
+      
+      if [[ "$EXCLUDED" == *"$line"* ]]; then continue; fi
+
       #IF THEY HAVE NOT BEEN FOUND BEFORE, ADD THEM TO THE OVERALL RESULTS
       #AND EXAMINE THE FUNCTION WITH COCCINELLE IN THE NEXT ITERATION
       if ! grep -Fxq "$line" $RESULTS_FILE; then 

@@ -1,0 +1,12 @@
+>recursive_revoke,Acl *
+/usr/local/src/postgresql/src/backend/utils/adt/acl.c:1336:3
+Used: pfree
+Ret. Type: Acl *
+>createNewConnection,remoteConn *
+/usr/local/src/postgresql/contrib/dblink/dblink.c:2572:2
+Used: pfree
+Ret. Type: void
+>dblink_security_check,remoteConn *
+/usr/local/src/postgresql/contrib/dblink/dblink.c:2628:2
+Used: pfree
+Ret. Type: void
