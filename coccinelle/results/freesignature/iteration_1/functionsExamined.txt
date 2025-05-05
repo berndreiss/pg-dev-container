@@ -1,28 +1,28 @@
->pg_free,void *
->SlabDelete,MemoryContext
->BumpDelete,MemoryContext
+>init_spawned_worker_win32,WorkerInfo *
+>DeCloneArchive,ArchiveHandle *
+>free_keep_errno,void *
+>free_copy_options,struct copy_options *
+>free_readfile,char * *
+>closedir,DIR *
 >GenerationDelete,MemoryContext
->PGTYPESdecimal_free,decimal *
->PGTYPESnumeric_free,numeric *
->PGTYPESinterval_free,interval *
->PGTYPESchar_free,char *
->PGTYPESdate_free,date *
->ecpg_sqlca_key_destructor,void *
->ecpg_free,void *
+>BumpDelete,MemoryContext
+>SlabDelete,MemoryContext
+>pg_free,void *
+>conditional_stack_destroy,ConditionalStack
+>psql_scan_destroy,PsqlScanState
 >output_deallocate_prepare_statement,char *
 >ECPGfree_type,struct ECPGtype *
->destroyPQExpBuffer,PQExpBuffer
->PQfreeCancel,PGcancel *
->PQconninfoFree,PQconninfoOption *
->freePGconn,PGconn *
+>PGTYPESchar_free,char *
+>PGTYPESinterval_free,interval *
+>PGTYPESdate_free,date *
+>PGTYPESdecimal_free,decimal *
+>PGTYPESnumeric_free,numeric *
+>ecpg_sqlca_key_destructor,void *
+>ecpg_free,void *
 >PQclear,PGresult *
 >PQfreemem,void *
 >SSLerrfree,char *
->conditional_stack_destroy,ConditionalStack
->psql_scan_destroy,PsqlScanState
->closedir,DIR *
->free_keep_errno,void *
->init_spawned_worker_win32,WorkerInfo *
->DeCloneArchive,ArchiveHandle *
->free_readfile,char * *
->free_copy_options,struct copy_options *
+>PQconninfoFree,PQconninfoOption *
+>freePGconn,PGconn *
+>destroyPQExpBuffer,PQExpBuffer
+>PQfreeCancel,PGcancel *

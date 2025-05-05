@@ -12,7 +12,8 @@ ITERATION=0
 RESULTS_FILE_NAME=results
 RESULTS_FILE_EXT=out
 IT_PREFIX=iteration_
-RESULTS_PATH=../results/$2$3
+RESULTS=../results
+RESULTS_PATH=$RESULTS/$2$3
 RESULTS_FILE=$RESULTS_PATH/$RESULTS_FILE_NAME.$RESULTS_FILE_EXT
 TMP_PATH=tmp
 PRINTED_LINES=3
@@ -96,7 +97,11 @@ fi
 #WE KEEP TRACK OF FUNCTIONS FOUND IN THE PREVIOUS ITERATION IN
 #THE FILE 'functionsLastIteration'
 #PASS INITIAL FUNCTION NAMES FOR 'ITERATION -1'
+if [[ "$3" == "dependent" ]]; then
+grep "^>" $RESULTS/$2/$RESULTS_FILE_NAME.$RESULTS_FILE_EXT | sort | uniq >> $TMP_PATH/functionsLastIteration
+else
 echo ">$2,void *" >> $TMP_PATH/functionsLastIteration
+fi
 
 #LOGGING
 echo "STARTING -> $1"

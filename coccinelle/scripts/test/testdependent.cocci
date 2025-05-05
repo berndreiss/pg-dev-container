@@ -5,11 +5,9 @@ position p;
 
 @@
 t1 f(..., t2 i, ..., t3 b, ...) {
-  ...
-  if (b) {... free@p(..., i, ...) ...}
-  <... when any
-  free(i)
-  ...>
+  <+...
+  if (b) {... pfree@p(..., i, ...) ...}
+  ...+>
 }
 
 @script:python@

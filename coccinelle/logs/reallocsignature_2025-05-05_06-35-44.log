@@ -1507,7 +1507,7 @@ Skipping: /usr/local/src/postgresql/contrib/pgrowlocks/pgrowlocks.c
 TIME PASSED: 13 SECONDS
 ########## ITERATION 1 ##########
 init_defs_builtins: /usr/lib/coccinelle/standard.h
-(ONCE) Expected tokens yyrealloc pg_realloc erealloc ecpg_realloc
+(ONCE) Expected tokens yyrealloc pg_realloc erealloc
 Skipping: /usr/local/src/postgresql/src/tools/testint128.c
 Skipping: /usr/local/src/postgresql/src/tools/pg_bsd_indent/lexi.c
 Skipping: /usr/local/src/postgresql/src/tools/pg_bsd_indent/io.c
@@ -2771,9 +2771,9 @@ Skipping: /usr/local/src/postgresql/src/interfaces/ecpg/ecpglib/connect.c
 Skipping: /usr/local/src/postgresql/src/interfaces/ecpg/ecpglib/typename.c
 Skipping: /usr/local/src/postgresql/src/interfaces/ecpg/ecpglib/sqlda.c
 Skipping: /usr/local/src/postgresql/src/interfaces/ecpg/ecpglib/prepare.c
-HANDLING: /usr/local/src/postgresql/src/interfaces/ecpg/ecpglib/memory.c
+Skipping: /usr/local/src/postgresql/src/interfaces/ecpg/ecpglib/memory.c
 Skipping: /usr/local/src/postgresql/src/interfaces/ecpg/ecpglib/error.c
-HANDLING: /usr/local/src/postgresql/src/interfaces/ecpg/ecpglib/execute.c
+Skipping: /usr/local/src/postgresql/src/interfaces/ecpg/ecpglib/execute.c
 Skipping: /usr/local/src/postgresql/src/interfaces/ecpg/ecpglib/data.c
 Skipping: /usr/local/src/postgresql/src/interfaces/libpq/fe-trace.c
 Skipping: /usr/local/src/postgresql/src/interfaces/libpq/fe-secure.c
@@ -3010,10 +3010,10 @@ Skipping: /usr/local/src/postgresql/contrib/ltree/crc32.c
 Skipping: /usr/local/src/postgresql/contrib/ltree/ltxtquery_io.c
 Skipping: /usr/local/src/postgresql/contrib/pgrowlocks/pgrowlocks.c
 #################################
-TIME PASSED: 9 SECONDS
+TIME PASSED: 4 SECONDS
 ########## ITERATION 2 ##########
 init_defs_builtins: /usr/lib/coccinelle/standard.h
-(ONCE) Expected tokens repalloc growalloc
+(ONCE) Expected tokens repalloc
 Skipping: /usr/local/src/postgresql/src/tools/testint128.c
 Skipping: /usr/local/src/postgresql/src/tools/pg_bsd_indent/lexi.c
 Skipping: /usr/local/src/postgresql/src/tools/pg_bsd_indent/io.c
@@ -4354,7 +4354,7 @@ Skipping: /usr/local/src/postgresql/src/test/modules/test_parser/test_parser.c
 Skipping: /usr/local/src/postgresql/src/test/modules/delay_execution/delay_execution.c
 Skipping: /usr/local/src/postgresql/src/test/locale/test-ctype.c
 Skipping: /usr/local/src/postgresql/src/timezone/localtime.c
-HANDLING: /usr/local/src/postgresql/src/timezone/zic.c
+Skipping: /usr/local/src/postgresql/src/timezone/zic.c
 Skipping: /usr/local/src/postgresql/src/timezone/strftime.c
 Skipping: /usr/local/src/postgresql/src/timezone/pgtz.c
 HANDLING: /usr/local/src/postgresql/contrib/pg_visibility/pg_visibility.c
@@ -4515,13 +4515,10 @@ Skipping: /usr/local/src/postgresql/contrib/ltree/crc32.c
 HANDLING: /usr/local/src/postgresql/contrib/ltree/ltxtquery_io.c
 Skipping: /usr/local/src/postgresql/contrib/pgrowlocks/pgrowlocks.c
 #################################
-TIME PASSED: 6 SECONDS
+TIME PASSED: 4 SECONDS
 ########## ITERATION 3 ##########
 init_defs_builtins: /usr/lib/coccinelle/standard.h
-warning: gistjoinvector30: metavariable t2 not used in the - or context code
-warning: gistjoinvector31: metavariable t2 not used in the - or context code
-warning: gistjoinvector32: metavariable t2 not used in the - or context code
-(ONCE) Expected tokens xml_repalloc repalloc0 SPI_repalloc gistjoinvector IndexTuple
+(ONCE) Expected tokens xml_repalloc jsonpath_yyrealloc SPI_repalloc
 Skipping: /usr/local/src/postgresql/src/tools/testint128.c
 Skipping: /usr/local/src/postgresql/src/tools/pg_bsd_indent/lexi.c
 Skipping: /usr/local/src/postgresql/src/tools/pg_bsd_indent/io.c
@@ -4856,7 +4853,7 @@ Skipping: /usr/local/src/postgresql/src/backend/utils/adt/encode.c
 Skipping: /usr/local/src/postgresql/src/backend/utils/adt/expandedrecord.c
 Skipping: /usr/local/src/postgresql/src/backend/utils/adt/hbafuncs.c
 Skipping: /usr/local/src/postgresql/src/backend/utils/adt/rangetypes_spgist.c
-Skipping: /usr/local/src/postgresql/src/backend/utils/adt/jsonpath_scan.c
+HANDLING: /usr/local/src/postgresql/src/backend/utils/adt/jsonpath_scan.c
 Skipping: /usr/local/src/postgresql/src/backend/utils/adt/datetime.c
 Skipping: /usr/local/src/postgresql/src/backend/utils/adt/multirangetypes.c
 Skipping: /usr/local/src/postgresql/src/backend/utils/adt/oid.c
@@ -4948,7 +4945,7 @@ Skipping: /usr/local/src/postgresql/src/backend/utils/mmgr/memdebug.c
 Skipping: /usr/local/src/postgresql/src/backend/utils/mmgr/generation.c
 Skipping: /usr/local/src/postgresql/src/backend/utils/mmgr/aset.c
 Skipping: /usr/local/src/postgresql/src/backend/utils/mmgr/portalmem.c
-HANDLING: /usr/local/src/postgresql/src/backend/utils/mmgr/mcxt.c
+Skipping: /usr/local/src/postgresql/src/backend/utils/mmgr/mcxt.c
 Skipping: /usr/local/src/postgresql/src/backend/utils/mmgr/freepage.c
 Skipping: /usr/local/src/postgresql/src/backend/utils/mmgr/bump.c
 Skipping: /usr/local/src/postgresql/src/backend/utils/mmgr/slab.c
@@ -5540,13 +5537,13 @@ Skipping: /usr/local/src/postgresql/src/backend/access/hash/hashinsert.c
 Skipping: /usr/local/src/postgresql/src/backend/access/hash/hashpage.c
 Skipping: /usr/local/src/postgresql/src/backend/access/hash/hash.c
 Skipping: /usr/local/src/postgresql/src/backend/access/gist/gistbuildbuffers.c
-HANDLING: /usr/local/src/postgresql/src/backend/access/gist/gistutil.c
-HANDLING: /usr/local/src/postgresql/src/backend/access/gist/gist.c
+Skipping: /usr/local/src/postgresql/src/backend/access/gist/gistutil.c
+Skipping: /usr/local/src/postgresql/src/backend/access/gist/gist.c
 Skipping: /usr/local/src/postgresql/src/backend/access/gist/gistproc.c
 Skipping: /usr/local/src/postgresql/src/backend/access/gist/gistxlog.c
 Skipping: /usr/local/src/postgresql/src/backend/access/gist/gistget.c
 Skipping: /usr/local/src/postgresql/src/backend/access/gist/gistscan.c
-HANDLING: /usr/local/src/postgresql/src/backend/access/gist/gistbuild.c
+Skipping: /usr/local/src/postgresql/src/backend/access/gist/gistbuild.c
 Skipping: /usr/local/src/postgresql/src/backend/access/gist/gistsplit.c
 Skipping: /usr/local/src/postgresql/src/backend/access/gist/gistvalidate.c
 Skipping: /usr/local/src/postgresql/src/backend/access/gist/gistvacuum.c
@@ -6027,4 +6024,4 @@ TIME PASSED: 1 SECONDS
 #################################
 DONE
 NUMBER OF ITERATIONS: 4
-TIME PASSED OVERALL: 0 MINUTES 29 SECONDS
+TIME PASSED OVERALL: 0 MINUTES 22 SECONDS

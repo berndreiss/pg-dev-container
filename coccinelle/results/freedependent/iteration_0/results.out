@@ -1,0 +1,20 @@
+>ExecForceStoreHeapTuple,HeapTuple, shouldFree
+/usr/local/src/postgresql/src/backend/executor/execTuples.c:1577:3
+Used: pfree
+Ret. Type: void
+>ExecForceStoreHeapTuple,HeapTuple, shouldFree
+/usr/local/src/postgresql/src/backend/executor/execTuples.c:1589:3
+Used: pfree
+Ret. Type: void
+>ExecForceStoreMinimalTuple,MinimalTuple, shouldFree
+/usr/local/src/postgresql/src/backend/executor/execTuples.c:1622:3
+Used: pfree
+Ret. Type: void
+>ginFinishSplit,GinBtreeStack *, freestack
+/usr/local/src/postgresql/src/backend/access/gin/ginbtree.c:752:3
+Used: pfree
+Ret. Type: void
+>_bt_insertonpg,IndexTuple, postingoff
+/usr/local/src/postgresql/src/backend/access/nbtree/nbtinsert.c:1435:2
+Used: pfree
+Ret. Type: void

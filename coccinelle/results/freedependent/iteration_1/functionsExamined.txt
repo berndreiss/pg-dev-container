@@ -1,0 +1,4 @@
+>ExecForceStoreHeapTuple,HeapTuple, shouldFree
+>ExecForceStoreMinimalTuple,MinimalTuple, shouldFree
+>ginFinishSplit,GinBtreeStack *, freestack
+>_bt_insertonpg,IndexTuple, postingoff

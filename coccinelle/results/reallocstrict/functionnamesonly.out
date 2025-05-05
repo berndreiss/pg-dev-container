@@ -1,18 +1,10 @@
->ecpg_realloc,long
 >ecpg_realloc,void *
->erealloc,size_t
 >erealloc,void *
 >gistjoinvector,IndexTuple *
 >growalloc,void *
->pg_realloc,size_t
 >pg_realloc,void *
->repalloc0,Size
 >repalloc0,void *
->repalloc,Size
 >repalloc,void *
->SPI_repalloc,Size
 >SPI_repalloc,void *
->xml_repalloc,size_t
 >xml_repalloc,void *
 >yyrealloc,void *
->yyrealloc,yy_size_t

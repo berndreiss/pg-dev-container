@@ -3,19 +3,32 @@
 >bms_add_range,Bitmapset *
 >bms_replace_members,Bitmapset *
 >brin_copy_tuple,BrinTuple *
+>brin_copy_tuple,Size
 >core_yyrealloc,void *
+>core_yyrealloc,yy_size_t
+>ecpg_realloc,long
 >ecpg_realloc,void *
+>ecpg_store_input,const int
+>erealloc,size_t
 >erealloc,void *
 >gistjoinvector,IndexTuple *
 >growalloc,void *
 >jsonpath_yyrealloc,void *
+>jsonpath_yyrealloc,yy_size_t
+>pg_realloc,size_t
 >pg_realloc,void *
+>ReorderBufferSerializeReserve,Size
+>repalloc0,Size
 >repalloc0,void *
+>repalloc,Size
 >repalloc,void *
 >resize_intArrayType,ArrayType *
 >SetConstraintStateAddItem,SetConstraintState
+>SPI_repalloc,Size
 >SPI_repalloc,void *
+>xml_repalloc,size_t
 >xml_repalloc,void *
 >yyensure_buffer_stack,yyscan_t
 >yy_get_next_buffer,yyscan_t
 >yyrealloc,void *
+>yyrealloc,yy_size_t

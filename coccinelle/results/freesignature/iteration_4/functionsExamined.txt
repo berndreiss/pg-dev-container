@@ -1,11 +1,11 @@
->EndCopyTo,CopyToState
->DecrTupleDescRefCount,TupleDesc
->index_endscan,IndexScanDesc
 >UnregisterSnapshotNoOwner,Snapshot
 >bms_copy_and_free,Bitmapset *
->SnapBuildSnapDecRefcount,Snapshot
+>EndCopyTo,CopyToState
 >pa_free_worker,ParallelApplyWorkerInfo *
+>SnapBuildSnapDecRefcount,Snapshot
 >SPI_freetuple,HeapTuple
+>DecrTupleDescRefCount,TupleDesc
+>index_endscan,IndexScanDesc
 >descriptor_destructor,void *
 >test_nosync,PGconn *
 >pushf_free_all,PushFilter *
