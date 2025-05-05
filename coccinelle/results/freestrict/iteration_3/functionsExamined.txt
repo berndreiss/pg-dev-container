@@ -36,6 +36,7 @@
 >PortalDrop,Portal
 >dsa_detach,dsa_area *
 >pgstat_release_entry_ref,PgStat_EntryRef *
+>list_free_private,List *
 >tbm_end_iterate,TBMIterator *
 >tbm_end_shared_iterate,TBMSharedIterator *
 >tbm_free,TIDBitmap *
@@ -63,6 +64,7 @@
 >TParserClose,TParser *
 >TParserCopyClose,TParser *
 >addHLParsedLex,TSLexeme *
+>addHLParsedLex,ParsedLex *
 >updateAclDependenciesWorker,Oid *
 >CatalogCloseIndexes,CatalogIndexState
 >FreeSubscription,Subscription *
@@ -94,6 +96,7 @@
 >FreeWaitEventSetAfterFork,WaitEventSet *
 >generator_free,CombinationGenerator *
 >DependencyGenerator_free,DependencyGenerator
+>freeGinBtreeStack,GinBtreeStack *
 >spgFreeSearchItem,SpGistSearchItem *
 >FreeFakeRelcacheEntry,Relation
 >DestroyParallelContext,ParallelContext *

@@ -1,0 +1,2 @@
+>jsonpath_yyrealloc,yy_size_t, ptr
+>core_yyrealloc,yy_size_t, ptr

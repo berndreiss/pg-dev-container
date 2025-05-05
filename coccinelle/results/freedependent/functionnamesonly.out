@@ -2,3 +2,5 @@
 >ExecForceStoreHeapTuple,HeapTuple
 >ExecForceStoreMinimalTuple,MinimalTuple
 >ginFinishSplit,GinBtreeStack *
+>quote_postgres,char *
+>ReorderBufferFreeSnap,Snapshot

@@ -42,6 +42,10 @@ Ret. Type: void
 /usr/local/src/postgresql/src/interfaces/ecpg/ecpglib/execute.c:107:1
 Used: ecpg_free
 Ret. Type: void
+>free_variable,struct variable *
+/usr/local/src/postgresql/src/interfaces/ecpg/ecpglib/execute.c:90:2
+Used: ecpg_free
+Ret. Type: void
 >PQfreeNotify,PGnotify *
 /usr/local/src/postgresql/src/interfaces/libpq/fe-exec.c:4051:1
 Used: PQfreemem

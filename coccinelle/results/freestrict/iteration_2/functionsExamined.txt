@@ -8,4 +8,5 @@
 >pfree,void *
 >descriptor_free,struct descriptor *
 >free_statement,struct statement *
+>free_variable,struct variable *
 >PQfreeNotify,PGnotify *

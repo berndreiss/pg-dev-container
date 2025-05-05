@@ -1,4 +1,4 @@
-@free0 forall@
+@free0 exists@
 type t1, t2, t3;
 identifier f, i, b;
 position p;
@@ -6,7 +6,7 @@ position p;
 @@
 t1 f(..., t2 i, ..., t3 b, ...) {
   <+...
-  if (b) {... pfree@p(..., i, ...) ...}
+  if (b) {... free@p(..., i, ...) ...}
   ...+>
 }
 
@@ -17,7 +17,7 @@ i << free0.i;
 @@
 print(f" >{f}, {i}")
 
-@free1 forall@
+@free1 exists@
 type t1, t2, t3;
 identifier f, i, b;
 position p;
@@ -38,7 +38,7 @@ i << free1.i;
 @@
 print(f" >{f}, {i}")
 
-@free2 forall@
+@free2 exists@
 type t1, t2, t3;
 identifier f, i, b, a;
 position p;
@@ -47,6 +47,7 @@ position p;
 t1 f(..., t2 i, ..., t3 b, ...) {
   ...
   if (b->a) {... free@p(..., i, ...) ...}
+  else {...}
   <... when any
   free(i)
   ...>
@@ -59,7 +60,7 @@ i << free2.i;
 @@
 print(f" >{f}, {i}")
 
-@free3 forall@
+@free3 exists@
 type t1, t2, t3;
 identifier f, i, b, a;
 position p;
@@ -81,7 +82,7 @@ i << free3.i;
 print(f" >{f}, {i}")
 
 
-@free4 forall@
+@free4 exists@
 type t1, t2, t3;
 identifier f, i, b, a;
 position p;
@@ -102,7 +103,7 @@ i << free4.i;
 @@
 print(f" >{f}, {i}")
 
-@free5 forall@
+@free5 exists@
 type t1, t2, t3;
 identifier f, i, b, a;
 position p;
@@ -119,6 +120,28 @@ t1 f(..., t3 b, ..., t2 i, ...) {
 @script:python@
 f << free5.f;
 i << free5.i;
+
+@@
+print(f" >{f}, {i}")
+
+
+@free6 exists@
+type t1, t2;
+identifier f, i, a;
+position p;
+
+@@
+t1 f( ..., struct SOME i, ...) {
+  ...
+	  if (i.a) {... free@p(..., i, ...) ...}
+  <... when any
+  free(i)
+  ...>
+}
+
+@script:python@
+f << free6.f;
+i << free6.i;
 
 @@
 print(f" >{f}, {i}")

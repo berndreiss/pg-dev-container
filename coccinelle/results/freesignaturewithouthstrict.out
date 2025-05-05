@@ -18,11 +18,6 @@ Ret. Type: char *
 Used: ecpg_free
 Ret. Type: void
 --
->free_variable,struct variable *
-/usr/local/src/postgresql/src/interfaces/ecpg/ecpglib/execute.c:90:2
-Used: ecpg_free
-Ret. Type: void
---
 >clean_NOT_intree,NODE *
 /usr/local/src/postgresql/src/backend/utils/adt/tsquery_cleanup.c:171:3
 Used: pfree
@@ -35,11 +30,6 @@ Ret. Type: NODE *
 /usr/local/src/postgresql/src/backend/utils/adt/tsquery_cleanup.c:182:3
 Used: pfree
 Ret. Type: NODE *
---
->freeGinBtreeStack,GinBtreeStack *
-/usr/local/src/postgresql/src/backend/access/gin/ginbtree.c:207:2
-Used: pfree
-Ret. Type: void
 --
 >freeJsonLexContext,JsonLexContext *
 /usr/local/src/postgresql/src/common/jsonapi.c:502:2

@@ -94,3 +94,51 @@ i << free3.i;
 @@
 print(f" >{f}, {i}")
 
+@free4 forall@
+type t1, t2;
+identifier f, i;
+position p;
+
+@@
+t1 f(..., t2 i, ...) {
+  ...
+  if (i == NIL) {... return ...;}
+  ... when != if(...){ ... return ...;}
+  free@p(..., i, ...)
+  <... when any
+  free(i)
+  ...>
+}
+
+@script:python@
+f << free4.f;
+i << free4.i;
+
+@@
+print(f" >{f}, {i}")
+
+@free5 forall@
+type t1, t2;
+identifier f, i;
+position p;
+
+@@
+t1 f(..., t2 i, ...) {
+  ...
+  if (i == NIL) {... return ...;}
+  ... when != if(...){ ... return ...;}
+  if (i){...
+  free@p(..., i, ...)
+  ...}
+  <... when any
+  free(i)
+  ...>
+}
+
+
+@script:python@
+f << free5.f;
+i << free5.i;
+
+@@
+print(f" >{f}, {i}")

@@ -1,3 +1,4 @@
+>addHLParsedLex,ParsedLex *
 >addHLParsedLex,TSLexeme *
 >array_free_iterator,ArrayIterator
 >bbstreamer_gzip_decompressor_free,bbstreamer *
@@ -74,6 +75,7 @@
 >FreeErrorData,ErrorData *
 >FreeExprContext,ExprContext *
 >FreeFakeRelcacheEntry,Relation
+>freeGinBtreeStack,GinBtreeStack *
 >free_keep_errno,void *
 >free_object_addresses,ObjectAddresses *
 >free_openssl_cipher,OSSLCipher *
@@ -90,6 +92,7 @@
 >freetree,NODE *
 >FreeTriggerDesc,TriggerDesc *
 >FreeTupleDesc,TupleDesc
+>free_variable,struct variable *
 >FreeWaitEventSetAfterFork,WaitEventSet *
 >FreeWaitEventSet,WaitEventSet *
 >GenerationBlockFree,GenerationBlock *
@@ -114,6 +117,7 @@
 >json_parse_manifest_incremental_shutdown,JsonManifestParseIncrementalState *
 >jsonpath_yyfree,void *
 >libpqrcv_disconnect,WalReceiverConn *
+>list_free_private,List *
 >local_destroy,rewind_source *
 >LogicalTapeClose,LogicalTape *
 >LogicalTapeSetClose,LogicalTapeSet *

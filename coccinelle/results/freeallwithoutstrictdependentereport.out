@@ -41,10 +41,6 @@ Ret. Type: void
 Used: ecpg_free
 Ret. Type: bool
 --
->free_variable,struct variable *
-/usr/local/src/postgresql/src/interfaces/ecpg/ecpglib/execute.c:90:2
-Used: ecpg_free
-Ret. Type: void
 >insert_tobeinserted,char *
 /usr/local/src/postgresql/src/interfaces/ecpg/ecpglib/execute.c:1135:2
 Used: ecpg_free
@@ -53,10 +49,6 @@ Ret. Type: bool
 /usr/local/src/postgresql/src/interfaces/ecpg/ecpglib/execute.c:1154:1
 Used: ecpg_free
 Ret. Type: bool
->quote_postgres,char *
-/usr/local/src/postgresql/src/interfaces/ecpg/ecpglib/execute.c:77:2
-Used: ecpg_free
-Ret. Type: char *
 --
 >CatCacheRemoveCTup,CatCTup *
 /usr/local/src/postgresql/src/backend/utils/cache/catcache.c:538:1
@@ -97,10 +89,6 @@ Ret. Type: NODE *
 Used: pfree
 Ret. Type: NODE *
 --
->list_free_private,List *
-/usr/local/src/postgresql/src/backend/nodes/list.c:1534:1
-Used: pfree
-Ret. Type: void
 >pagetable_free,void *
 /usr/local/src/postgresql/src/backend/nodes/tidbitmap.c:1528:2
 Used: pfree
@@ -132,16 +120,6 @@ Ret. Type: Bitmapset *
 Used: pfree
 Ret. Type: Bitmapset *
 --
->ReorderBufferFreeSnap,Snapshot
-/usr/local/src/postgresql/src/backend/replication/logical/reorderbuffer.c:1895:2
-Used: pfree
-Ret. Type: void
---
->addHLParsedLex,ParsedLex *
-/usr/local/src/postgresql/src/backend/tsearch/ts_parse.c:521:2
-Used: pfree
-Ret. Type: void
---
 >merge_clump,Clump *
 /usr/local/src/postgresql/src/backend/optimizer/geqo/geqo_eval.c:285:4
 Used: pfree
@@ -153,11 +131,6 @@ Used: pfree
 Ret. Type: void
 >add_path,Path *
 /usr/local/src/postgresql/src/backend/optimizer/util/pathnode.c:620:3
-Used: pfree
-Ret. Type: void
---
->freeGinBtreeStack,GinBtreeStack *
-/usr/local/src/postgresql/src/backend/access/gin/ginbtree.c:207:2
 Used: pfree
 Ret. Type: void
 --

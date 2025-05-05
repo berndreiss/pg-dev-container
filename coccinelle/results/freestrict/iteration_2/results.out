@@ -154,6 +154,10 @@ Ret. Type: void
 /usr/local/src/postgresql/src/backend/utils/activity/pgstat_shmem.c:617:2
 Used: pfree
 Ret. Type: void
+>list_free_private,List *
+/usr/local/src/postgresql/src/backend/nodes/list.c:1534:1
+Used: pfree
+Ret. Type: void
 >tbm_end_iterate,TBMIterator *
 /usr/local/src/postgresql/src/backend/nodes/tidbitmap.c:1148:1
 Used: pfree
@@ -260,6 +264,10 @@ Used: pfree
 Ret. Type: void
 >addHLParsedLex,TSLexeme *
 /usr/local/src/postgresql/src/backend/tsearch/ts_parse.c:535:2
+Used: pfree
+Ret. Type: void
+>addHLParsedLex,ParsedLex *
+/usr/local/src/postgresql/src/backend/tsearch/ts_parse.c:521:2
 Used: pfree
 Ret. Type: void
 >updateAclDependenciesWorker,Oid *
@@ -392,6 +400,10 @@ Used: pfree
 Ret. Type: void
 >DependencyGenerator_free,DependencyGenerator
 /usr/local/src/postgresql/src/backend/statistics/dependencies.c:199:1
+Used: pfree
+Ret. Type: void
+>freeGinBtreeStack,GinBtreeStack *
+/usr/local/src/postgresql/src/backend/access/gin/ginbtree.c:207:2
 Used: pfree
 Ret. Type: void
 >spgFreeSearchItem,SpGistSearchItem *

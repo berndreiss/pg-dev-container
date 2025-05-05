@@ -1,3 +1,7 @@
+>ReorderBufferFreeSnap,Snapshot, snap->copied
+/usr/local/src/postgresql/src/backend/replication/logical/reorderbuffer.c:1895:2
+Used: pfree
+Ret. Type: void
 >ExecForceStoreHeapTuple,HeapTuple, shouldFree
 /usr/local/src/postgresql/src/backend/executor/execTuples.c:1577:3
 Used: pfree
@@ -18,3 +22,7 @@ Ret. Type: void
 /usr/local/src/postgresql/src/backend/access/nbtree/nbtinsert.c:1435:2
 Used: pfree
 Ret. Type: void
+>quote_postgres,char *, quote
+/usr/local/src/postgresql/src/interfaces/ecpg/ecpglib/execute.c:77:2
+Used: ecpg_free
+Ret. Type: char *

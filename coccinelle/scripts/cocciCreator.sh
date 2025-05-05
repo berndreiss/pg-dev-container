@@ -43,6 +43,14 @@ createScript(){
    fname=$(echo "$arg" | cut -d',' -f1)
    ftype=$(echo "$arg" | cut -d',' -f2 | xargs)
 
+   if [[ "$ftype" == "char*" && "$COCCI_ADDITION" == "dependent" ]]; then
+      continue;
+   fi
+
+   if [[ "$ftype" == "char**" && "$COCCI_ADDITION" == "dependent" ]]; then
+      continue;
+   fi
+
    if [ "$ftype" = "constint" ]; then
       continue
    fi
@@ -78,12 +86,29 @@ createScript(){
       ftype="t2"
    fi
 
-   cat prototypes/proto$FUNCTION$COCCI_ADDITION.cocci \
+   PROTO_FILE=prototypes/proto$COCCI_ADDITION.cocci
+
+   if [ -f prototypes/proto$FUNCTION$COCCI_ADDITION.cocci ]; then
+      PROTO_FILE=prototypes/proto$FUNCTION$COCCI_ADDITION.cocci
+   fi
+
+   cat $PROTO_FILE \
       | sed -e "s/__METAFUNCTION__/$fname$counter/g" \
             -e "s/__FUNCTION__/$fname/g" \
             -e "s/__TYPE__/$ftype/g" \
             -e "s/__PYTHONTYPE__/$pythonType/g" \
             >> $TMP_PATH/$ITERATION.cocci
+
+   if [[ ! "$ftype" == *"*"* && "$COCCI_ADDITION" == "dependent" ]]; then
+      cat prototypes/protodependentstruct.cocci \
+         | sed -e "s/__METAFUNCTION__/$fname$counter/g" \
+               -e "s/__FUNCTION__/$fname/g" \
+               -e "s/__TYPE__/$ftype/g" \
+               -e "s/__PYTHONTYPE__/$pythonType/g" \
+               >> $TMP_PATH/$ITERATION.cocci
+   
+
+   fi
 
    counter=$((counter+1))
    done
@@ -103,7 +128,9 @@ else
 echo ">$2,void *" >> $TMP_PATH/functionsLastIteration
 fi
 
-EXCLUDED=$(cat $2$3Excluded.txt)
+if [ -f $2$3Excluded.txt ]; then
+   EXCLUDED=$(cat $2$3Excluded.txt)
+fi
 
 #LOGGING
 echo "STARTING -> $1"
@@ -166,4 +193,4 @@ echo "NUMBER OF ITERATIONS: $ITERATION"
 echo "TIME PASSED OVERALL: $ELAPSED_MINUTES MINUTES $ELAPSED_SECONDS_REMAINING SECONDS"
 
 #CLEAN UP
-rm -rf tmp
+#rm -rf tmp

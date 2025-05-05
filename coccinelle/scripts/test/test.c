@@ -48,6 +48,12 @@ int testNULL(int i){
       return;
    free(i);
 }
+int testNIL(int i){
+   if (i == NIL)
+      return;
+   free(i);
+}
+
 
 int testEXCLAMATION(int i){
    if (!i)
@@ -57,6 +63,11 @@ int testEXCLAMATION(int i){
 
 int testIfI(int i){
    if (i)
+      free(i);
+}
+
+int testWhileI(int i){
+   while (i)
       free(i);
 }
 
@@ -109,6 +120,63 @@ int dependant3MULTIPLE(int i, void * B){
    if (B->b)
       free(i)
 }
+int testIfINULL(int i){
+   if (i == NULL)
+      return;
+   if (i)
+      free(i);
+}
+int testIfIfINULL(int i){
+   if (i == NULL)
+      return;
+   if (i < 3)
+      return;
+   if (i)
+      free(i);
+}
+
+
+int testTwo(int i, int j){
+   free(i);
+   free(j);
+}
+
+int dependant1(int i, bool b){
+   if (b)
+      free(i);
+}
+
+int dependantMULTIPLE(int i, bool b){
+   if (b)
+      free(i);
+   if (b)
+      free(i);
+}
+
+int dependant2(bool b, int i){
+   if (b)
+      free(i);
+}
+
+int dependant3(int i, void * B){
+   if (B->b)
+      free(i);
+}
+
+int dependant3ELSE(int i, void * B){
+   if (B->b)
+      free(i);
+   else
+      return;
+}
+
+
+int dependant3MULTIPLE(int i, void * B){
+   if (B->b)
+      free(i)
+   if (B->b)
+      free(i)
+}
 
 int dependant4(void * B, int i){
    if (B->b)
@@ -122,6 +190,11 @@ int dependant5(void * B, int i){
 
 int dependant6(int i, void * B){
    if (B.b)
+      free(i);
+}
+
+int dependant7Self(struct SOME i){
+   if (i.b)
       free(i);
 }
 
