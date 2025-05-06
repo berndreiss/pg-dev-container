@@ -1297,7 +1297,7 @@ HANDLING: /usr/local/src/postgresql/src/interfaces/ecpg/preproc/type.c
 HANDLING: /usr/local/src/postgresql/src/interfaces/ecpg/preproc/ecpg_keywords.c
 HANDLING: /usr/local/src/postgresql/src/interfaces/ecpg/preproc/preproc.c
 Unable to parse #if condition: defined size_t
-Note: processing took    15.8s: /usr/local/src/postgresql/src/interfaces/ecpg/preproc/preproc.c
+Note: processing took    15.0s: /usr/local/src/postgresql/src/interfaces/ecpg/preproc/preproc.c
 HANDLING: /usr/local/src/postgresql/src/interfaces/ecpg/pgtypeslib/timestamp.c
 HANDLING: /usr/local/src/postgresql/src/interfaces/ecpg/pgtypeslib/common.c
 HANDLING: /usr/local/src/postgresql/src/interfaces/ecpg/pgtypeslib/interval.c
@@ -1618,7 +1618,7 @@ HANDLING: /usr/local/src/postgresql/contrib/ltree/crc32.c
 HANDLING: /usr/local/src/postgresql/contrib/ltree/ltxtquery_io.c
 HANDLING: /usr/local/src/postgresql/contrib/pgrowlocks/pgrowlocks.c
 #################################
-TIME PASSED: 159 SECONDS
+TIME PASSED: 154 SECONDS
 ########## ITERATION 1 ##########
 Fatal error: exception Sys_error("tmp/1.cocci: No such file or directory")
 #################################
@@ -1626,4 +1626,4 @@ TIME PASSED: 0 SECONDS
 #################################
 DONE
 NUMBER OF ITERATIONS: 2
-TIME PASSED OVERALL: 2 MINUTES 39 SECONDS
+TIME PASSED OVERALL: 2 MINUTES 34 SECONDS

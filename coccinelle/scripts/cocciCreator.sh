@@ -1,5 +1,14 @@
 #!/bin/bash
 
+#THIS SCRIPT CREATES COCCI SCRIPTS THAT RECURSIVELY SEARCH THE
+#PROVIDED CODE BASE FOR PATTERNS AND ACCEPTS THE FOLLOWING PARAMETERS:
+#  
+#  $1: THE CODE BASE
+#  $2: THE INTIAL FUNCTION TO BE EXAMINED
+#  $3: THE PROTOTYPE TO BE USED
+#
+#RESULTS WILL BE SAVED IN THE DEDICATED DIRECTORY DEFINED BELOW
+#FOR EACH ITERATION A SEPARATE SUB DIRECTORY IS CREATED
 
 if [ $# -lt 1 ]; then
    echo "Please pass a directory or file name to be processed."
@@ -9,16 +18,18 @@ fi
 
 #DEFINE PATHS AND PARAMETERS
 ITERATION=0
-RESULTS_FILE_NAME=results
-RESULTS_FILE_EXT=out
+CODE_BASE=$1
+FUNCTION=$2
+PROTOTYPE=$3
+RESULTS_FILE_NAME=results.out
 IT_PREFIX=iteration_
 RESULTS=../results
-RESULTS_PATH=$RESULTS/$2$3
-RESULTS_FILE=$RESULTS_PATH/$RESULTS_FILE_NAME.$RESULTS_FILE_EXT
+RESULTS_PATH=$RESULTS/$FUNCTION$PROTOTYPE
+RESULTS_FILE=$RESULTS_PATH/$RESULTS_FILE_NAME
 TMP_PATH=tmp
 PRINTED_LINES=3
-FUNCTION=$2
-COCCI_ADDITION=$3
+MANUALLY_ADDED=exceptions/$FUNCTION$PROTOTYPE.add
+MANUALLY_EXCLUDED=exceptions/$FUNCTION$PROTOTYPE.exclude
 
 if [ -d $TMP_PATH ]; then
    rm -rf $TMP_PATH
@@ -33,65 +44,69 @@ fi
 mkdir  $RESULTS_PATH
 mkdir  $TMP_PATH
 
-#FUNCTION THAT CREATES A COCCI SCRIPT THAT CHECKS FOR ALL FUNCTION
+#FUNCTION THAT CREATES A COCCI SCRIPT THAT CHECKS FOR ALL FUNCTION/TYPE
 #NAMES PASSED TO IT IN THE TMP_PATH AS $ITERATION.cocci
 createScript(){
+   #COUNTER ADDED TO FUNCTION NAMES IN RULES TO BE UNAMBIGUOUS
    counter=0
+
+   #ITERATE OVER FUNCTIONS
    for arg in "$@"
    do
 
+   #RETRIEVE AND SANITIZE FUNCTION AND TYPE NAMES
    fname=$(echo "$arg" | cut -d',' -f1)
-   ftype=$(echo "$arg" | cut -d',' -f2 | xargs)
+   ftype=$(echo "$arg" | cut -d',' -f2)
 
-   if [[ "$ftype" == "char*" && "$COCCI_ADDITION" == "dependent" ]]; then
+   #PREVENT TRYING TO ACCESS FIELDS OF char* AND char**
+   if [[ "$ftype" == "char*" && "$PROTOTYPE" == "dependent" ]]; then
+      continue;
+   fi
+   if [[ "$ftype" == "char**" && "$PROTOTYPE" == "dependent" ]]; then
       continue;
    fi
 
-   if [[ "$ftype" == "char**" && "$COCCI_ADDITION" == "dependent" ]]; then
-      continue;
-   fi
-
+   #IGNORE 'UNFREEABLE' TYPES -> THESE ARE ONLY ADDED IN REALLOC
    if [ "$ftype" = "constint" ]; then
       continue
    fi
-
    if [ "$ftype" = "long" ]; then
       continue
    fi
-
    if [ "$ftype" = "size_t" ]; then
       continue
    fi
-
    if [ "$ftype" = "yy_size_t" ]; then
       continue
    fi
-
    if [ "$ftype" = "Size" ]; then
       continue
    fi
    
+   #EXPAND COMPRESSED TYPES
    if [[ "$ftype" == "struct"* ]]; then
       ftype=$(echo $ftype | sed "s/struct/struct /")
    fi
-
    if [[ "$ftype" == *"*"* ]]; then
       ftype="$(echo "$ftype" | sed 's/*/ */')"
    fi
    
+   #PASS WILD CARD TO PYTHON SCRIPT IN THE COCCI FILE IF 
+   #TYPE='void *', TYPE OTHERWISE
    pythonType=$ftype
-
    if [ "$ftype" = "void *" ]; then
       pythonType="{t}"
       ftype="t2"
    fi
 
-   PROTO_FILE=prototypes/proto$COCCI_ADDITION.cocci
-
-   if [ -f prototypes/proto$FUNCTION$COCCI_ADDITION.cocci ]; then
-      PROTO_FILE=prototypes/proto$FUNCTION$COCCI_ADDITION.cocci
+   #GET THE PROTOFILE -> THE IF CONDITION CHECKS, WHETHER
+   #THERE IS A FUNCTION SPECIFIC PROTOTYPE (I.E. FOR SIGNATURE)
+   PROTO_FILE=prototypes/proto$PROTOTYPE.cocci
+   if [ -f prototypes/proto$FUNCTION$PROTOTYPE.cocci ]; then
+      PROTO_FILE=prototypes/proto$FUNCTION$PROTOTYPE.cocci
    fi
 
+   #REPLACE THE PLACEHOLDERS WITH FUNCTION/TYPE NAMES
    cat $PROTO_FILE \
       | sed -e "s/__METAFUNCTION__/$fname$counter/g" \
             -e "s/__FUNCTION__/$fname/g" \
@@ -99,15 +114,15 @@ createScript(){
             -e "s/__PYTHONTYPE__/$pythonType/g" \
             >> $TMP_PATH/$ITERATION.cocci
 
-   if [[ ! "$ftype" == *"*"* && "$COCCI_ADDITION" == "dependent" ]]; then
+   #FOR DEPENDENT ADD STRUCT LIKE ACCESS IF THE TYPE IS NOT A POINTER
+   #ALLOWS FOR STATEMENTS LIKE if (B.a) IN THE COCCI SCRIPTS
+   if [[ ! "$ftype" == *"*"* && "$PROTOTYPE" == "dependent" ]]; then
       cat prototypes/protodependentstruct.cocci \
          | sed -e "s/__METAFUNCTION__/$fname$counter/g" \
                -e "s/__FUNCTION__/$fname/g" \
                -e "s/__TYPE__/$ftype/g" \
                -e "s/__PYTHONTYPE__/$pythonType/g" \
                >> $TMP_PATH/$ITERATION.cocci
-   
-
    fi
 
    counter=$((counter+1))
@@ -122,18 +137,31 @@ fi
 #WE KEEP TRACK OF FUNCTIONS FOUND IN THE PREVIOUS ITERATION IN
 #THE FILE 'functionsLastIteration'
 #PASS INITIAL FUNCTION NAMES FOR 'ITERATION -1'
-if [[ "$3" == "dependent" || "$3" == "ereport" ]]; then
-grep "^>" $RESULTS/$2/$RESULTS_FILE_NAME.$RESULTS_FILE_EXT | sort | uniq >> $TMP_PATH/functionsLastIteration
+if [[ "$PROTOTYPE" == "dependent" || "$PROTOTYPE" == "ereport" ]]; then
+  grep "^>" $RESULTS/$FUNCTION/$RESULTS_FILE_NAME | sort | uniq >> $TMP_PATH/functionsLastIteration
 else
-echo ">$2,void *" >> $TMP_PATH/functionsLastIteration
+  echo ">$FUNCTION,void *" >> $TMP_PATH/functionsLastIteration
 fi
 
-if [ -f $2$3Excluded.txt ]; then
-   EXCLUDED=$(cat $2$3Excluded.txt)
+#RETRIEVE FUNCTIONS TO MANUALLY EXCLUDE IF FILE EXISTS
+if [ -f $MANUALLY_EXCLUDED ]; then
+   EXCLUDED=$(cat $MANUALLY_EXCLUDED)
+fi
+
+#RETRIEVE FUNCTIONS TO MANUALLY ADD IF FILE EXISTS
+if [ -f $MANUALLY_ADDED ]; then
+   if [[ "$PROTOTYPE" == "dependent" ]]; then 
+      cat $MANUALLY_ADDED | cut -d ',' -f 1,2 | sort | uniq > added.tmp
+      grep -A $PRINTED_LINES -F -f added.tmp $RESULTS/$FUNCTION/$RESULTS_FILE_NAME >> $RESULTS_FILE
+      awk -F ',' 'NR==FNR {key = $1 FS $2; map[key] = $0; next} {print (map[$0] ? map[$0] : $0)}' $MANUALLY_ADDED $RESULTS_FILE > out.tmp
+      mv out.tmp $RESULTS_FILE
+   else 
+      grep -A $PRINTED_LINES -F -f $MANUALLY_ADDED $RESULTS/$FUNCTION/$RESULTS_FILE_NAME >> $RESULTS_FILE; 
+   fi
 fi
 
 #LOGGING
-echo "STARTING -> $1"
+echo "STARTING -> $CODE_BASE"
 START_OVERALL=$(date +%s)
 
 #KEEP ITERATING WHILE FILE functionsLastIteration EXISTS
@@ -145,7 +173,7 @@ while [ -f $TMP_PATH/functionsLastIteration ]; do
 
    #PATH AND FILE FOR RESULTS OF ITERATION
    IT_RESULTS_PATH=$RESULTS_PATH/$IT_PREFIX$ITERATION
-   IT_RESULTS_FILE=$IT_RESULTS_PATH/$RESULTS_FILE_NAME.$RESULTS_FILE_EXT
+   IT_RESULTS_FILE=$IT_RESULTS_PATH/$RESULTS_FILE_NAME
    mkdir -p $IT_RESULTS_PATH
 
    #LOG FUNCTIONS EXAMINED IN THIS ITERATION
@@ -157,7 +185,7 @@ while [ -f $TMP_PATH/functionsLastIteration ]; do
 
    #CREATE THE COCCINELLE SCRIPT AND RUN IT
    createScript $functionNames
-   spatch --sp-file $TMP_PATH/$ITERATION.cocci $1 >> $IT_RESULTS_FILE
+   spatch --sp-file $TMP_PATH/$ITERATION.cocci $CODE_BASE >> $IT_RESULTS_FILE
 
    #GET ALL FUNCTION NAMES FROM THE RESULTS
    grep '>' $IT_RESULTS_FILE | while IFS= read -r line; do
@@ -193,4 +221,4 @@ echo "NUMBER OF ITERATIONS: $ITERATION"
 echo "TIME PASSED OVERALL: $ELAPSED_MINUTES MINUTES $ELAPSED_SECONDS_REMAINING SECONDS"
 
 #CLEAN UP
-#rm -rf tmp
+rm -rf tmp

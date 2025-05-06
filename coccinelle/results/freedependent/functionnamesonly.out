@@ -1,6 +1,14 @@
+>avlFree,avl_node *
+>bool_substitute_hook,char *
 >_bt_insertonpg,IndexTuple
+>CatCacheRemoveCTup,CatCTup *
+>dump_variables,struct arguments *
+>ecpg_finish,struct connection *
 >ExecForceStoreHeapTuple,HeapTuple
 >ExecForceStoreMinimalTuple,MinimalTuple
 >ginFinishSplit,GinBtreeStack *
+>pagetable_free,void *
+>ParallelBackupEnd,ParallelState *
+>PQclear,PGresult *
 >quote_postgres,char *
 >ReorderBufferFreeSnap,Snapshot

@@ -198,6 +198,17 @@ int dependant7Self(struct SOME i){
       free(i);
 }
 
+int dependent8Equ(void * B, int i){
+   if (2 == B->some)
+      free(i);
+}
+
+int dependent8Bigger(void *B, int i){
+   if (B->some == 1)
+      free(i);
+}
+
+
 int testEreport(int i){
    if (i > 2){
       if (i)

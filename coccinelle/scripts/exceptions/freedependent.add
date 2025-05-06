@@ -1,0 +1,8 @@
+>ParallelBackupEnd,ParallelState *,pstate->numWorkers
+>dump_variables,struct arguments *,mode
+>PQclear,PGresult *,(const PGresult *) res
+>bool_substitute_hook,char *, newval[0]
+>avlFree,avl_node *,node == tree->root && node != tree->end
+>ecpg_finish,struct connection *,act != NULL
+>CatCacheRemoveCTup,CatCTup *,ct->c_list
+>pagetable_free,void *,tbm->dsa == NULL

@@ -45,12 +45,10 @@ position p;
 
 @@
 t1 f(..., t2 i, ..., t3 b, ...) {
-  ...
+  <+...
   if (b->a) {... free@p(..., i, ...) ...}
   else {...}
-  <... when any
-  free(i)
-  ...>
+  ...+>
 }
 
 @script:python@
@@ -61,18 +59,25 @@ i << free2.i;
 print(f" >{f}, {i}")
 
 @free3 exists@
+expression val;
 type t1, t2, t3;
 identifier f, i, b, a;
 position p;
+binary_operator op;
 
 @@
 t1 f(..., t3 b, ..., t2 i, ...) {
-  ...
-  if (b->a) {... free@p(..., i, ...) ...}
-  <... when any
-  free(i)
-  ...>
+  <+... 
+  if
+  (
+  (val == b->a) 
+  |
+  (b->a == val) 
+  )
+  {... free@p(..., i, ...) ...}
+  ...+>
 }
+
 
 @script:python@
 f << free3.f;
