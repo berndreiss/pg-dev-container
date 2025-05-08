@@ -57,7 +57,7 @@ reallocereport:
 	@cd scripts && bash runCocci.sh realloc "ereport"
 
 collect:
-	@cd scripts && bash collectResults.sh
+	@cd scripts && bash collectResults.sh && bash formatLatex.sh
 
 print:
 	@@if [ -f results/pfree/results.log ]; then cat results/pfree/results.log; fi
