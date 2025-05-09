@@ -3,7 +3,13 @@
 #THIS SCRIPT ASSUMES THAT make HAS BEEN CALLED AND ALL THE NEEDED DIRECTORIES EXIST
 
 RESULTS=../results
+COLLECTED=$RESULTS/collected
 PRINT_LINES=2
+REASSIGN=C1
+STRICT=C2
+DEPENDENT=C3
+ERROR=C4
+ARBITRARY=C5
 
 
 #THIS FUNCTION SANITIZES THE OUPUT OF THE REALLOC SCRIPTS SINCE SOME TYPES
@@ -29,12 +35,16 @@ collect(){
    if [[ -d $RESULTS/$1samereturn ]]; then
       rm -rf $RESULTS/$1samereturn
    fi
+   if [[ -d $COLLECTED ]]; then
+      rm -rf $COLLECTED
+   fi
 
    mkdir $RESULTS/$1arbitrary
    mkdir $RESULTS/$1samereturn
+   mkdir $COLLECTED
 
    #DEFINE FILE STATS WILL BE PRINTED TO
-   STATS_FILE=$RESULTS/$1stats.out
+   STATS_FILE=$COLLECTED/$1_stats.out
 
    #REDUCE RESULTS TO FUNCTION NAMES + TYPE + FILE ONLY AND ELIMINATE DUPLICATES
    grep "^>" $RESULTS/$1/results.out | cut -d ':' -f 1 | sort | uniq > $RESULTS/$1/functionnamesonly.out
@@ -72,6 +82,7 @@ collect(){
 
    #GET RID OF DUPLICATES    
    cat samereturn.tmp | cut -d ':' -f 1 | sort | uniq > $RESULTS/$1samereturn/functionnamesonly.out
+   cp $RESULTS/$1samereturn/functionnamesonly.out $COLLECTED/$1_${REASSIGN}_functionsonly.out
    
    #SANITIZE REALLOC RESULTS
    if [[ "$1" == "realloc" ]]; then
@@ -80,16 +91,20 @@ collect(){
 
    #PRINT FUNCTIONS WITH INFORMATION
    grep -A $PRINT_LINES -F -f samereturn.tmp $RESULTS/$1/results.out > $RESULTS/$1samereturn/results.out
+   cp $RESULTS/$1samereturn/results.out $COLLECTED/$1_$REASSIGN.out
 
    #REMOVE OVERLAPPING FUNCTIONS
    #  ->REMOVE SAME RETURN FROM STRICT
    comm -23 $RESULTS/$1strict/functionnamesonly.out $RESULTS/$1samereturn/functionnamesonly.out > strictwithoutsamereturn.tmp
-   grep -A $PRINT_LINES -F -f strictwithoutsamereturn.tmp $RESULTS/$1/results.out > $RESULTS/$1strictreduced.out
+   grep -A $PRINT_LINES -F -f strictwithoutsamereturn.tmp $RESULTS/$1/results.out > $COLLECTED/${STRICT}_$1.out
    
    #  ->REMOVE SAME RETURN AND STRICT FROM DEPENDENT
    comm -23 $RESULTS/$1dependent/functionnamesonly.out $RESULTS/$1samereturn/functionnamesonly.out > dependentwithoutsamereturn.tmp
    comm -23 dependentwithoutsamereturn.tmp $RESULTS/$1strict/functionnamesonly.out > dependentwithoutsamereturnstrict.tmp
-   grep -A $PRINT_LINES -F -f dependentwithoutsamereturnstrict.tmp $RESULTS/$1/results.out > $RESULTS/$1dependentreduced.out
+   grep -A $PRINT_LINES -F -f dependentwithoutsamereturnstrict.tmp $RESULTS/$1/results.out > $COLLECTED/${DEPENDENT}_$1.out
+
+   cp $RESULTS/$1ereport/results.out $COLLECTED/${ERROR}_$1.out
+   cp $RESULTS/$1ereport/functionnamesonly.out $COLLECTED/${ERROR}_$1_functionsonly.out
 
    #REDUCE ALL FUNCTIONS UNTIL WE ARRIVE AT ARBITRARY FUNCTIONS
    #RETRIEVE ALL FUNCTIONS THAT ARE NOT SUPPOSED TO BE REASSIGNED
@@ -110,6 +125,7 @@ collect(){
    #grep -A $PRINT_LINES -F -f allwithoutreassignedstrict.tmp $RESULTS/$1/results.out > $RESULTS/$1allwithoutreassignedstrict.out
    #grep -A $PRINT_LINES -F -f allwithoutreassignedstrictdependent.tmp $RESULTS/$1/results.out > $RESULTS/$1allwithoutreassignedstrictdependent.out
    cat allwithoutreassignedstrictdependentereport.tmp | sort |uniq > $RESULTS/$1arbitrary/functionnamesonly.out
+   cp $RESULTS/$1arbitrary/functionnamesonly.out $COLLECTED/${ARBITRARY}_$1_functionsonly.out
    grep -A $PRINT_LINES -F -f strictwithoutsignature.tmp $RESULTS/$1/results.out > $RESULTS/$1strictwithouthsignature.out
    grep -A $PRINT_LINES -F -f signaturewithoutstrict.tmp $RESULTS/$1/results.out > $RESULTS/$1signaturewithouthstrict.out
 
@@ -120,7 +136,7 @@ collect(){
 
    #PRINT FUNCTIONS WITH INFORMATION
    grep -A $PRINT_LINES -F -f $RESULTS/$1arbitrary/functionnamesonly.out $RESULTS/$1/results.out > $RESULTS/$1arbitrary/results.out
-
+   cp $RESULTS/$1arbitrary/results.out $COLLECTED/${ARBITRARY}_$1.out
 
    #GET ALL FUNCTIONS THAT APPEAR MORE THAN ONCE IN THE RESULTS
    cat $RESULTS/$1/results.out | grep ">" | sort | uniq -d > doubled.tmp
@@ -133,9 +149,9 @@ collect(){
    echo "SAME RETURN:" >> $STATS_FILE
    grep "^>" $RESULTS/$1samereturn/functionnamesonly.out | cut -d ':' -f 1 | wc -l >> $STATS_FILE
    echo "STRICT:" >> $STATS_FILE
-   grep "^>" $RESULTS/$1strictreduced.out | cut -d ':' -f 1 | sort | uniq | wc -l >> $STATS_FILE
+   grep "^>" $COLLECTED/${STRICT}_$1.out | cut -d ':' -f 1 | sort | uniq | wc -l >> $STATS_FILE
    echo "DEPENDENT:" >> $STATS_FILE
-   grep "^>" $RESULTS/$1dependentreduced.out | cut -d ':' -f 1 | sort | uniq | wc -l >> $STATS_FILE
+   grep "^>" $COLLECTED/${DEPENDENT}_$1.out | cut -d ':' -f 1 | sort | uniq | wc -l >> $STATS_FILE
    echo "EREPORT:" >> $STATS_FILE
    grep "^>" $RESULTS/$1ereport/functionnamesonly.out | cut -d ':' -f 1 | wc -l >> $STATS_FILE
    echo "SIGNATURE:" >> $STATS_FILE
