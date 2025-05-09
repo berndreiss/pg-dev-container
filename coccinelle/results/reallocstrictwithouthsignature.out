@@ -1,19 +1,27 @@
->ecpg_realloc,void *
-/usr/local/src/postgresql/src/interfaces/ecpg/ecpglib/memory.c:35:25
+>yyrealloc,void *, /usr/local/src/postgresql/src/bin/pgbench/exprscan.c:2631:8
+Used: realloc
+Ret. Type: void *
+--
+>yyrealloc,void *, /usr/local/src/postgresql/src/bin/psql/psqlscanslash.c:3118:8
+Used: realloc
+Ret. Type: void *
+--
+>yyrealloc,void *, /usr/local/src/postgresql/src/fe_utils/psqlscan.c:5216:8
+Used: realloc
+Ret. Type: void *
+--
+>ecpg_realloc,void *, /usr/local/src/postgresql/src/interfaces/ecpg/ecpglib/memory.c:35:25
 Used: realloc
 Ret. Type: char *
 --
->growalloc,void *
-/usr/local/src/postgresql/src/timezone/zic.c:464:9
+>growalloc,void *, /usr/local/src/postgresql/src/timezone/zic.c:464:9
 Used: erealloc
 Ret. Type: void *
 --
->repalloc0,void *
-/usr/local/src/postgresql/src/backend/utils/mmgr/mcxt.c:1627:7
+>repalloc0,void *, /usr/local/src/postgresql/src/backend/utils/mmgr/mcxt.c:1627:7
 Used: repalloc
 Ret. Type: void *
 --
->gistjoinvector,IndexTuple *
-/usr/local/src/postgresql/src/backend/access/gist/gistutil.c:115:24
+>gistjoinvector,IndexTuple *, /usr/local/src/postgresql/src/backend/access/gist/gistutil.c:115:24
 Used: repalloc
 Ret. Type: IndexTuple *

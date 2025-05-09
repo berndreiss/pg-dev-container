@@ -1,0 +1,8 @@
+>yyensure_buffer_stack,yyscan_t, /usr/local/src/postgresql/src/backend/parser/scan.c
+>yyensure_buffer_stack,yyscan_t, /usr/local/src/postgresql/src/bin/pgbench/exprscan.c
+>yyensure_buffer_stack,yyscan_t, /usr/local/src/postgresql/src/bin/psql/psqlscanslash.c
+>yyensure_buffer_stack,yyscan_t, /usr/local/src/postgresql/src/fe_utils/psqlscan.c
+>yy_get_next_buffer,yyscan_t, /usr/local/src/postgresql/src/backend/parser/scan.c
+>yy_get_next_buffer,yyscan_t, /usr/local/src/postgresql/src/bin/pgbench/exprscan.c
+>yy_get_next_buffer,yyscan_t, /usr/local/src/postgresql/src/bin/psql/psqlscanslash.c
+>yy_get_next_buffer,yyscan_t, /usr/local/src/postgresql/src/fe_utils/psqlscan.c

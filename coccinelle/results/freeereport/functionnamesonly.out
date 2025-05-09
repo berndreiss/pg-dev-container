@@ -1,2 +1,2 @@
->createNewConnection,remoteConn *
->dblink_security_check,remoteConn *
+>createNewConnection,remoteConn *, /usr/local/src/postgresql/contrib/dblink/dblink.c
+>dblink_security_check,remoteConn *, /usr/local/src/postgresql/contrib/dblink/dblink.c

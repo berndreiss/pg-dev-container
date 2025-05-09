@@ -1,8 +1,8 @@
->ParallelBackupEnd,ParallelState *,pstate->numWorkers
->dump_variables,struct arguments *,mode
->PQclear,PGresult *,(const PGresult *) res
->bool_substitute_hook,char *, newval[0]
->avlFree,avl_node *,node == tree->root && node != tree->end
->ecpg_finish,struct connection *,act != NULL
->CatCacheRemoveCTup,CatCTup *,ct->c_list
->pagetable_free,void *,tbm->dsa == NULL
+>ParallelBackupEnd,ParallelState *, /usr/local/src/postgresql/src/bin/pg_dump/parallel.c:1090:1,pstate->numWorkers
+>dump_variables,struct arguments *, /usr/local/src/postgresql/src/interfaces/ecpg/preproc/variable.c:460:2,mode
+>PQclear,PGresult *, /usr/local/src/postgresql/src/interfaces/libpq/fe-exec.c:770:1,(const PGresult *) res
+>bool_substitute_hook,char *, /usr/local/src/postgresql/src/bin/psql/startup.c:868:2, newval[0]
+>avlFree,avl_node *, /usr/local/src/postgresql/src/bin/psql/crosstabview.c:464:3,node == tree->root && node != tree->end
+>ecpg_finish,struct connection *, /usr/local/src/postgresql/src/interfaces/ecpg/ecpglib/connect.c:139:2,act != NULL
+>CatCacheRemoveCTup,CatCTup *, /usr/local/src/postgresql/src/backend/utils/cache/catcache.c:538:1,ct->c_list
+>pagetable_free,void *, /usr/local/src/postgresql/src/backend/nodes/tidbitmap.c:1528:2,tbm->dsa == NULL

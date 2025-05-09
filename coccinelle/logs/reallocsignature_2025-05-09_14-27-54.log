@@ -4515,7 +4515,7 @@ Skipping: /usr/local/src/postgresql/contrib/ltree/crc32.c
 HANDLING: /usr/local/src/postgresql/contrib/ltree/ltxtquery_io.c
 Skipping: /usr/local/src/postgresql/contrib/pgrowlocks/pgrowlocks.c
 #################################
-TIME PASSED: 4 SECONDS
+TIME PASSED: 5 SECONDS
 ########## ITERATION 3 ##########
 init_defs_builtins: /usr/lib/coccinelle/standard.h
 (ONCE) Expected tokens xml_repalloc jsonpath_yyrealloc SPI_repalloc
@@ -6020,7 +6020,7 @@ Skipping: /usr/local/src/postgresql/contrib/ltree/crc32.c
 Skipping: /usr/local/src/postgresql/contrib/ltree/ltxtquery_io.c
 Skipping: /usr/local/src/postgresql/contrib/pgrowlocks/pgrowlocks.c
 #################################
-TIME PASSED: 1 SECONDS
+TIME PASSED: 0 SECONDS
 #################################
 DONE
 NUMBER OF ITERATIONS: 4

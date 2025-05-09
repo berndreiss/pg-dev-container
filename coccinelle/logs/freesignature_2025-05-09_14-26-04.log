@@ -2700,7 +2700,7 @@ HANDLING: /usr/local/src/postgresql/src/interfaces/ecpg/preproc/type.c
 Skipping: /usr/local/src/postgresql/src/interfaces/ecpg/preproc/ecpg_keywords.c
 HANDLING: /usr/local/src/postgresql/src/interfaces/ecpg/preproc/preproc.c
 Unable to parse #if condition: defined size_t
-Note: processing took    10.1s: /usr/local/src/postgresql/src/interfaces/ecpg/preproc/preproc.c
+Note: processing took    10.2s: /usr/local/src/postgresql/src/interfaces/ecpg/preproc/preproc.c
 Skipping: /usr/local/src/postgresql/src/interfaces/ecpg/pgtypeslib/timestamp.c
 HANDLING: /usr/local/src/postgresql/src/interfaces/ecpg/pgtypeslib/common.c
 HANDLING: /usr/local/src/postgresql/src/interfaces/ecpg/pgtypeslib/interval.c
@@ -4531,7 +4531,7 @@ Skipping: /usr/local/src/postgresql/contrib/ltree/crc32.c
 HANDLING: /usr/local/src/postgresql/contrib/ltree/ltxtquery_io.c
 Skipping: /usr/local/src/postgresql/contrib/pgrowlocks/pgrowlocks.c
 #################################
-TIME PASSED: 23 SECONDS
+TIME PASSED: 24 SECONDS
 ########## ITERATION 3 ##########
 init_defs_builtins: /usr/lib/coccinelle/standard.h
 (ONCE) Expected tokens xml_pfree tuplestore_end tstoreDestroyReceiver transientrel_destroy tqueueDestroyReceiver terminate_brin_buildstate tbm_free tbm_end_shared_iterate tbm_end_iterate systable_endscan_ordered systable_endscan string_to_text sqlfunction_destroy shm_mq_detach serializeAnalyzeDestroy read_stream_end pushf_free pullf_free printtup_destroy pgp_mpi_free pgp_key_free pgp_free pgp_cfb_free pgfnames_cleanup pg_tzenumerate_end pairingheap_free pa_free_worker_info mbuf_free lrq_free local_destroy libpqrcv_disconnect jsonpath_yyfree json_parse_manifest_incremental_shutdown jit_release_context inv_close intorel_destroy hmac_free heap_freetuple heap_free_minimal_tuple guc_free generator_free gen_ossl_free freetree free_parsestate free_openssl_digest free_openssl_cipher free_object_addresses free_conversion_map free_child_join_sjinfo free_attrmap freeJsonLexContext freeGinBtreeStack freeAndGetParent finish_edata exit_nicely end_tup_output ecpg_do_epilogue dumpTablespaces dumpRoleMembership dumpRoleGUCPrivs dsm_detach dshash_detach dshash_destroy dsa_detach disconnectDatabase digest_free destroyStringInfo descriptor_deallocate_all copy_dest_destroy combo_free close_tsvector_parser clear_and_pfree clean_NOT_intree buf_finalize brin_free_tuple brinRevmapTerminate bms_free bloom_free binaryheap_free bbstreamer_zstd_decompressor_free bbstreamer_zstd_compressor_free bbstreamer_tar_terminator_free bbstreamer_tar_archiver_free bbstreamer_recovery_injector_free bbstreamer_lz4_decompressor_free bbstreamer_lz4_compressor_free bbstreamer_gzip_decompressor_free array_free_iterator _h_spooldestroy _bt_spooldestroy XLogReaderFree XLogPrefetcherFree TidStoreEndIterate TidStoreDetach TidStoreDestroy TParserCopyClose TParserClose SnapBuildFreeSnapshot SPI_pfree ResourceOwnerDelete ReorderBufferReturnTupleBuf ReleaseDummy QTNFree PLy_function_drop_args LogicalTapeSetClose LogicalTapeClose IndexScanEnd GenericXLogFinish GenericXLogAbort FreeWaitEventSetAfterFork FreeWaitEventSet FreeTupleDesc FreeTriggerDesc FreeSubscription FreeSnapshot FreeQueryDesc FreeFakeRelcacheEntry FreeErrorData FreeConfigVariable FreeBulkInsertState FreeAccessStrategy ExecParallelCleanup ExecHashTableDestroy ExecDropSingleTupleTableSlot EndCopyFrom EndCopy DestroyTupleQueueReader DestroyParallelContext DestroyBlockRefTableWriter DestroyBlockRefTableReader DependencyGenerator_free CatalogCloseIndexes BufFileClose BlockRefTableFreeEntry BipartiteMatchFree
@@ -6036,10 +6036,10 @@ Skipping: /usr/local/src/postgresql/contrib/ltree/crc32.c
 Skipping: /usr/local/src/postgresql/contrib/ltree/ltxtquery_io.c
 Skipping: /usr/local/src/postgresql/contrib/pgrowlocks/pgrowlocks.c
 #################################
-TIME PASSED: 35 SECONDS
+TIME PASSED: 38 SECONDS
 ########## ITERATION 4 ##########
 init_defs_builtins: /usr/lib/coccinelle/standard.h
-(ONCE) Expected tokens test_nosync pushf_free_all pa_free_worker index_endscan descriptor_destructor bms_copy_and_free UnregisterSnapshotNoOwner SnapBuildSnapDecRefcount SPI_freetuple EndCopyTo DecrTupleDescRefCount
+(ONCE) Expected tokens test_nosync pushf_free_all pa_free_worker index_endscan descriptor_destructor clean_NOT_intree bms_copy_and_free UnregisterSnapshotNoOwner SnapBuildSnapDecRefcount SPI_freetuple EndCopyTo DecrTupleDescRefCount
 Skipping: /usr/local/src/postgresql/src/tools/testint128.c
 Skipping: /usr/local/src/postgresql/src/tools/pg_bsd_indent/lexi.c
 Skipping: /usr/local/src/postgresql/src/tools/pg_bsd_indent/io.c
@@ -6345,7 +6345,7 @@ Skipping: /usr/local/src/postgresql/src/backend/utils/adt/array_userfuncs.c
 Skipping: /usr/local/src/postgresql/src/backend/utils/adt/bool.c
 Skipping: /usr/local/src/postgresql/src/backend/utils/adt/jsonb_util.c
 Skipping: /usr/local/src/postgresql/src/backend/utils/adt/network_spgist.c
-Skipping: /usr/local/src/postgresql/src/backend/utils/adt/tsquery_cleanup.c
+HANDLING: /usr/local/src/postgresql/src/backend/utils/adt/tsquery_cleanup.c
 Skipping: /usr/local/src/postgresql/src/backend/utils/adt/char.c
 Skipping: /usr/local/src/postgresql/src/backend/utils/adt/geo_spgist.c
 Skipping: /usr/local/src/postgresql/src/backend/utils/adt/network_gist.c
@@ -7541,8 +7541,8 @@ Skipping: /usr/local/src/postgresql/contrib/ltree/crc32.c
 Skipping: /usr/local/src/postgresql/contrib/ltree/ltxtquery_io.c
 Skipping: /usr/local/src/postgresql/contrib/pgrowlocks/pgrowlocks.c
 #################################
-TIME PASSED: 2 SECONDS
+TIME PASSED: 1 SECONDS
 #################################
 DONE
 NUMBER OF ITERATIONS: 5
-TIME PASSED OVERALL: 1 MINUTES 47 SECONDS
+TIME PASSED OVERALL: 1 MINUTES 50 SECONDS

@@ -1,245 +1,191 @@
->restore_global_locale,save_locale_t
-/usr/local/src/postgresql/src/bin/initdb/initdb.c:395:1
+>restore_global_locale,save_locale_t, /usr/local/src/postgresql/src/bin/initdb/initdb.c:395:1
 Used: free
 Ret. Type: void
->writefile,char * *
-/usr/local/src/postgresql/src/bin/initdb/initdb.c:735:1
+>writefile,char * *, /usr/local/src/postgresql/src/bin/initdb/initdb.c:735:1
 Used: free
 Ret. Type: void
->restorePsetInfo,printQueryOpt *
-/usr/local/src/postgresql/src/bin/psql/command.c:5051:1
+>restorePsetInfo,printQueryOpt *, /usr/local/src/postgresql/src/bin/psql/command.c:5051:1
 Used: free
 Ret. Type: void
 --
->GenerationBlockFree,GenerationBlock *
-/usr/local/src/postgresql/src/backend/utils/mmgr/generation.c:680:1
+>GenerationBlockFree,GenerationBlock *, /usr/local/src/postgresql/src/backend/utils/mmgr/generation.c:680:1
 Used: free
 Ret. Type: void
 --
->BumpBlockFree,BumpBlock *
-/usr/local/src/postgresql/src/backend/utils/mmgr/bump.c:609:1
+>BumpBlockFree,BumpBlock *, /usr/local/src/postgresql/src/backend/utils/mmgr/bump.c:609:1
 Used: free
 Ret. Type: void
 --
->SN_close_env,struct SN_env *
-/usr/local/src/postgresql/src/backend/snowball/libstemmer/api.c:48:4
+>SN_close_env,struct SN_env *, /usr/local/src/postgresql/src/backend/snowball/libstemmer/api.c:48:4
 Used: free
 Ret. Type: void
 --
->output_prepare_statement,char *
-/usr/local/src/postgresql/src/interfaces/ecpg/preproc/output.c:178:1
+>output_prepare_statement,char *, /usr/local/src/postgresql/src/interfaces/ecpg/preproc/output.c:178:1
 Used: free
 Ret. Type: void
->output_simple_statement,char *
-/usr/local/src/postgresql/src/interfaces/ecpg/preproc/output.c:25:1
+>output_simple_statement,char *, /usr/local/src/postgresql/src/interfaces/ecpg/preproc/output.c:25:1
 Used: free
 Ret. Type: void
->output_statement,char *
-/usr/local/src/postgresql/src/interfaces/ecpg/preproc/output.c:166:1
+>output_statement,char *, /usr/local/src/postgresql/src/interfaces/ecpg/preproc/output.c:166:1
 Used: free
 Ret. Type: void
 --
->cat2_str,char *
-/usr/local/src/postgresql/src/interfaces/ecpg/preproc/preproc.c:221:1
+>cat2_str,char *, /usr/local/src/postgresql/src/interfaces/ecpg/preproc/preproc.c:221:1
 Used: free
 Ret. Type: char *
->cat2_str,char *
-/usr/local/src/postgresql/src/interfaces/ecpg/preproc/preproc.c:222:1
+>cat2_str,char *, /usr/local/src/postgresql/src/interfaces/ecpg/preproc/preproc.c:222:1
 Used: free
 Ret. Type: char *
->make2_str,char *
-/usr/local/src/postgresql/src/interfaces/ecpg/preproc/preproc.c:253:1
+>make2_str,char *, /usr/local/src/postgresql/src/interfaces/ecpg/preproc/preproc.c:253:1
 Used: free
 Ret. Type: char *
->make2_str,char *
-/usr/local/src/postgresql/src/interfaces/ecpg/preproc/preproc.c:254:1
+>make2_str,char *, /usr/local/src/postgresql/src/interfaces/ecpg/preproc/preproc.c:254:1
 Used: free
 Ret. Type: char *
->make3_str,char *
-/usr/local/src/postgresql/src/interfaces/ecpg/preproc/preproc.c:266:1
+>make3_str,char *, /usr/local/src/postgresql/src/interfaces/ecpg/preproc/preproc.c:266:1
 Used: free
 Ret. Type: char *
->make3_str,char *
-/usr/local/src/postgresql/src/interfaces/ecpg/preproc/preproc.c:267:1
+>make3_str,char *, /usr/local/src/postgresql/src/interfaces/ecpg/preproc/preproc.c:267:1
 Used: free
 Ret. Type: char *
->make3_str,char *
-/usr/local/src/postgresql/src/interfaces/ecpg/preproc/preproc.c:268:1
+>make3_str,char *, /usr/local/src/postgresql/src/interfaces/ecpg/preproc/preproc.c:268:1
 Used: free
 Ret. Type: char *
 --
->EndCompressor,CompressorState *
-/usr/local/src/postgresql/src/bin/pg_dump/compress_io.c:152:1
+>EndCompressor,CompressorState *, /usr/local/src/postgresql/src/bin/pg_dump/compress_io.c:152:1
 Used: pg_free
 Ret. Type: void
->make_func,PgBenchExprList *
-/usr/local/src/postgresql/src/bin/pgbench/exprparse.c:2091:2
+>make_func,PgBenchExprList *, /usr/local/src/postgresql/src/bin/pgbench/exprparse.c:2091:2
 Used: pg_free
 Ret. Type: PgBenchExpr *
 --
->gzip_pfree,void *
-/usr/local/src/postgresql/src/bin/pg_basebackup/bbstreamer_gzip.c:362:1
+>gzip_pfree,void *, /usr/local/src/postgresql/src/bin/pg_basebackup/bbstreamer_gzip.c:362:1
 Used: pfree
 Ret. Type: void
 --
->gzip_pfree,void *
-/usr/local/src/postgresql/src/backend/backup/basebackup_gzip.c:301:1
+>PLy_function_restore_args,PLySavedArgs *, /usr/local/src/postgresql/src/pl/plpython/plpy_exec.c:577:1
+Used: pfree
+Ret. Type: void
+>CatCacheRemoveCList,CatCList *, /usr/local/src/postgresql/src/backend/utils/cache/catcache.c:582:1
 Used: pfree
 Ret. Type: void
 --
->PLy_function_restore_args,PLySavedArgs *
-/usr/local/src/postgresql/src/pl/plpython/plpy_exec.c:577:1
-Used: pfree
-Ret. Type: void
->CatCacheRemoveCList,CatCList *
-/usr/local/src/postgresql/src/backend/utils/cache/catcache.c:582:1
+>RelationDestroyRelation,Relation, /usr/local/src/postgresql/src/backend/utils/cache/relcache.c:2513:1
 Used: pfree
 Ret. Type: void
 --
->RelationDestroyRelation,Relation
-/usr/local/src/postgresql/src/backend/utils/cache/relcache.c:2513:1
+>plainnode,NODE *, /usr/local/src/postgresql/src/backend/utils/adt/tsquery_cleanup.c:90:1
 Used: pfree
 Ret. Type: void
 --
->plainnode,NODE *
-/usr/local/src/postgresql/src/backend/utils/adt/tsquery_cleanup.c:90:1
+>pg_xml_done,PgXmlErrorContext *, /usr/local/src/postgresql/src/backend/utils/adt/xml.c:1320:1
 Used: pfree
 Ret. Type: void
 --
->pg_xml_done,PgXmlErrorContext *
-/usr/local/src/postgresql/src/backend/utils/adt/xml.c:1320:1
+>PortalDrop,Portal, /usr/local/src/postgresql/src/backend/utils/mmgr/portalmem.c:598:1
 Used: pfree
 Ret. Type: void
 --
->PortalDrop,Portal
-/usr/local/src/postgresql/src/backend/utils/mmgr/portalmem.c:598:1
+>pgstat_release_entry_ref,PgStat_EntryRef *, /usr/local/src/postgresql/src/backend/utils/activity/pgstat_shmem.c:617:2
+Used: pfree
+Ret. Type: void
+>list_free_private,List *, /usr/local/src/postgresql/src/backend/nodes/list.c:1534:1
 Used: pfree
 Ret. Type: void
 --
->pgstat_release_entry_ref,PgStat_EntryRef *
-/usr/local/src/postgresql/src/backend/utils/activity/pgstat_shmem.c:617:2
-Used: pfree
-Ret. Type: void
->list_free_private,List *
-/usr/local/src/postgresql/src/backend/nodes/list.c:1534:1
+>vac_close_indexes,Relation *, /usr/local/src/postgresql/src/backend/commands/vacuum.c:2340:1
 Used: pfree
 Ret. Type: void
 --
->vac_close_indexes,Relation *
-/usr/local/src/postgresql/src/backend/commands/vacuum.c:2340:1
+>parallel_vacuum_end,ParallelVacuumState *, /usr/local/src/postgresql/src/backend/commands/vacuumparallel.c:458:1
+Used: pfree
+Ret. Type: void
+>CopyMultiInsertBufferCleanup,CopyMultiInsertBuffer *, /usr/local/src/postgresql/src/backend/commands/copyfrom.c:506:1
 Used: pfree
 Ret. Type: void
 --
->parallel_vacuum_end,ParallelVacuumState *
-/usr/local/src/postgresql/src/backend/commands/vacuumparallel.c:458:1
+>ReorderBufferIterTXNFinish,ReorderBufferIterTXNState *, /usr/local/src/postgresql/src/backend/replication/logical/reorderbuffer.c:1505:1
 Used: pfree
 Ret. Type: void
->CopyMultiInsertBufferCleanup,CopyMultiInsertBuffer *
-/usr/local/src/postgresql/src/backend/commands/copyfrom.c:506:1
+>ReorderBufferReturnChange,ReorderBufferChange *, /usr/local/src/postgresql/src/backend/replication/logical/reorderbuffer.c:562:1
 Used: pfree
 Ret. Type: void
---
->ReorderBufferIterTXNFinish,ReorderBufferIterTXNState *
-/usr/local/src/postgresql/src/backend/replication/logical/reorderbuffer.c:1505:1
+>ReorderBufferReturnRelids,Oid *, /usr/local/src/postgresql/src/backend/replication/logical/reorderbuffer.c:621:1
 Used: pfree
 Ret. Type: void
->ReorderBufferReturnChange,ReorderBufferChange *
-/usr/local/src/postgresql/src/backend/replication/logical/reorderbuffer.c:562:1
-Used: pfree
-Ret. Type: void
->ReorderBufferReturnRelids,Oid *
-/usr/local/src/postgresql/src/backend/replication/logical/reorderbuffer.c:621:1
-Used: pfree
-Ret. Type: void
->ReorderBufferReturnTXN,ReorderBufferTXN *
-/usr/local/src/postgresql/src/backend/replication/logical/reorderbuffer.c:478:1
+>ReorderBufferReturnTXN,ReorderBufferTXN *, /usr/local/src/postgresql/src/backend/replication/logical/reorderbuffer.c:478:1
 Used: pfree
 Ret. Type: void
 --
->addHLParsedLex,ParsedLex *
-/usr/local/src/postgresql/src/backend/tsearch/ts_parse.c:521:2
+>addHLParsedLex,ParsedLex *, /usr/local/src/postgresql/src/backend/tsearch/ts_parse.c:521:2
 Used: pfree
 Ret. Type: void
->addHLParsedLex,TSLexeme *
-/usr/local/src/postgresql/src/backend/tsearch/ts_parse.c:535:2
+>addHLParsedLex,TSLexeme *, /usr/local/src/postgresql/src/backend/tsearch/ts_parse.c:535:2
 Used: pfree
 Ret. Type: void
->updateAclDependenciesWorker,Oid *
-/usr/local/src/postgresql/src/backend/catalog/pg_shdepend.c:592:2
+>updateAclDependenciesWorker,Oid *, /usr/local/src/postgresql/src/backend/catalog/pg_shdepend.c:592:2
 Used: pfree
 Ret. Type: void
->updateAclDependenciesWorker,Oid *
-/usr/local/src/postgresql/src/backend/catalog/pg_shdepend.c:594:2
+>updateAclDependenciesWorker,Oid *, /usr/local/src/postgresql/src/backend/catalog/pg_shdepend.c:594:2
 Used: pfree
 Ret. Type: void
 --
->free_chromo,Chromosome *
-/usr/local/src/postgresql/src/backend/optimizer/geqo/geqo_pool.c:179:1
+>free_chromo,Chromosome *, /usr/local/src/postgresql/src/backend/optimizer/geqo/geqo_pool.c:179:1
 Used: pfree
 Ret. Type: void
->free_pool,Pool *
-/usr/local/src/postgresql/src/backend/optimizer/geqo/geqo_pool.c:83:1
+>free_pool,Pool *, /usr/local/src/postgresql/src/backend/optimizer/geqo/geqo_pool.c:83:1
 Used: pfree
 Ret. Type: void
->free_city_table,City *
-/usr/local/src/postgresql/src/backend/optimizer/geqo/geqo_recombination.c:89:1
+>free_city_table,City *, /usr/local/src/postgresql/src/backend/optimizer/geqo/geqo_recombination.c:89:1
 Used: pfree
 Ret. Type: void
 --
->free_edge_table,Edge *
-/usr/local/src/postgresql/src/backend/optimizer/geqo/geqo_erx.c:78:1
+>free_edge_table,Edge *, /usr/local/src/postgresql/src/backend/optimizer/geqo/geqo_erx.c:78:1
 Used: pfree
 Ret. Type: void
 --
->FreeExprContext,ExprContext *
-/usr/local/src/postgresql/src/backend/executor/execUtils.c:428:1
+>FreeExprContext,ExprContext *, /usr/local/src/postgresql/src/backend/executor/execUtils.c:428:1
 Used: pfree
 Ret. Type: void
 --
->PageRestoreTempPage,Page
-/usr/local/src/postgresql/src/backend/storage/page/bufpage.c:431:1
+>gzip_pfree,void *, /usr/local/src/postgresql/src/backend/backup/basebackup_gzip.c:301:1
 Used: pfree
 Ret. Type: void
 --
->spgFreeSearchItem,SpGistSearchItem *
-/usr/local/src/postgresql/src/backend/access/spgist/spgscan.c:99:1
+>PageRestoreTempPage,Page, /usr/local/src/postgresql/src/backend/storage/page/bufpage.c:431:1
 Used: pfree
 Ret. Type: void
 --
->toast_close_indexes,Relation *
-/usr/local/src/postgresql/src/backend/access/common/toast_internals.c:630:1
+>spgFreeSearchItem,SpGistSearchItem *, /usr/local/src/postgresql/src/backend/access/spgist/spgscan.c:99:1
 Used: pfree
 Ret. Type: void
 --
->core_yyfree,void *
-/usr/local/src/postgresql/src/backend/parser/scan.c:11825:2
+>toast_close_indexes,Relation *, /usr/local/src/postgresql/src/backend/access/common/toast_internals.c:630:1
 Used: pfree
 Ret. Type: void
 --
->json_manifest_object_field_start,char *
-/usr/local/src/postgresql/src/common/parse_manifest.c:497:1
+>core_yyfree,void *, /usr/local/src/postgresql/src/backend/parser/scan.c:11825:2
+Used: pfree
+Ret. Type: void
+--
+>json_manifest_object_field_start,char *, /usr/local/src/postgresql/src/common/parse_manifest.c:497:1
 Used: pfree
 Ret. Type: JsonParseErrorType
 --
->emit_audit_message,char *
-/usr/local/src/postgresql/src/test/modules/test_oat_hooks/test_oat_hooks.c:253:2
+>emit_audit_message,char *, /usr/local/src/postgresql/src/test/modules/test_oat_hooks/test_oat_hooks.c:253:2
 Used: pfree
 Ret. Type: void
->emit_audit_message,char *
-/usr/local/src/postgresql/src/test/modules/test_oat_hooks/test_oat_hooks.c:255:2
+>emit_audit_message,char *, /usr/local/src/postgresql/src/test/modules/test_oat_hooks/test_oat_hooks.c:255:2
 Used: pfree
 Ret. Type: void
->irbt_free,RBTNode *
-/usr/local/src/postgresql/src/test/modules/test_rbtree/test_rbtree.c:73:1
+>irbt_free,RBTNode *, /usr/local/src/postgresql/src/test/modules/test_rbtree/test_rbtree.c:73:1
 Used: pfree
 Ret. Type: void
 --
->z_free,void *
-/usr/local/src/postgresql/contrib/pgcrypto/pgp-compress.c:66:1
+>z_free,void *, /usr/local/src/postgresql/contrib/pgcrypto/pgp-compress.c:66:1
 Used: pfree
 Ret. Type: void
 --
->report_corruption_internal,char *
-/usr/local/src/postgresql/contrib/amcheck/verify_heapam.c:841:1
+>report_corruption_internal,char *, /usr/local/src/postgresql/contrib/amcheck/verify_heapam.c:841:1
 Used: pfree
 Ret. Type: void

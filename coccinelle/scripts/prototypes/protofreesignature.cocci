@@ -17,7 +17,6 @@ t << __METAFUNCTION__.t2;
 rt << __METAFUNCTION__.t1;
 
 @@
-print(f">{f},{t}")
-print(p[0].file + ":" + p[0].line + ":" + p[0].column)
+print(f">{f},{t}, " + p[0].file + ":" + p[0].line + ":" + p[0].column)
 print(f"Used: __FUNCTION__")
 print(f"Ret. Type: {rt}")

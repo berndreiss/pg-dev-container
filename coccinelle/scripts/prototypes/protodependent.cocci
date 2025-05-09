@@ -18,8 +18,7 @@ rt << __METAFUNCTION__0.t1;
 b << __METAFUNCTION__0.b;
 
 @@
-print(f">{f},__PYTHONTYPE__, {b}")
-print(p[0].file + ":" + p[0].line + ":" + p[0].column)
+print(f">{f},__PYTHONTYPE__, " + p[0].file + ":" + p[0].line + ":" + p[0].column + f",{b}")
 print(f"Used: __FUNCTION__")
 print(f"Ret. Type: {rt}")
 
@@ -43,8 +42,7 @@ rt << __METAFUNCTION__1.t1;
 b << __METAFUNCTION__1.b;
 
 @@
-print(f">{f},__PYTHONTYPE__, {b}")
-print(p[0].file + ":" + p[0].line + ":" + p[0].column)
+print(f">{f},__PYTHONTYPE__, " + p[0].file + ":" + p[0].line + ":" + p[0].column + f",{b}")
 print(f"Used: __FUNCTION__")
 print(f"Ret. Type: {rt}")
 
@@ -69,8 +67,7 @@ b << __METAFUNCTION__2.b;
 a << __METAFUNCTION__2.a;
 
 @@
-print(f">{f},__PYTHONTYPE__, {b}->{a}")
-print(p[0].file + ":" + p[0].line + ":" + p[0].column)
+print(f">{f},__PYTHONTYPE__, " + p[0].file + ":" + p[0].line + ":" + p[0].column + F",{b}->{a}")
 print(f"Used: __FUNCTION__")
 print(f"Ret. Type: {rt}")
 
@@ -95,8 +92,7 @@ b << __METAFUNCTION__3.b;
 a << __METAFUNCTION__3.a;
 
 @@
-print(f">{f},__PYTHONTYPE__, {b}->{a}")
-print(p[0].file + ":" + p[0].line + ":" + p[0].column)
+print(f">{f},__PYTHONTYPE__, " + p[0].file + ":" + p[0].line + ":" + p[0].column + f",{b}->{a}")
 print(f"Used: __FUNCTION__")
 print(f"Ret. Type: {rt}")
 
@@ -121,8 +117,7 @@ rt << __METAFUNCTION__4.t1;
 b << __METAFUNCTION__4.b;
 
 @@
-print(f">{f},__PYTHONTYPE__, {b}")
-print(p[0].file + ":" + p[0].line + ":" + p[0].column)
+print(f">{f},__PYTHONTYPE__, " + p[0].file + ":" + p[0].line + ":" + p[0].column + f",{b}")
 print(f"Used: __FUNCTION__")
 print(f"Ret. Type: {rt}")
 
@@ -147,8 +142,7 @@ rt << __METAFUNCTION__7.t1;
 b << __METAFUNCTION__7.b;
 
 @@
-print(f">{f},__PYTHONTYPE__, {b}")
-print(p[0].file + ":" + p[0].line + ":" + p[0].column)
+print(f">{f},__PYTHONTYPE__, " + p[0].file + ":" + p[0].line + ":" + p[0].column + f",{b}")
 print(f"Used: __FUNCTION__")
 print(f"Ret. Type: {rt}")
 
@@ -174,8 +168,7 @@ b << __METAFUNCTION__8.b;
 a << __METAFUNCTION__8.a;
 
 @@
-print(f">{f},__PYTHONTYPE__, {b}->{a}")
-print(p[0].file + ":" + p[0].line + ":" + p[0].column)
+print(f">{f},__PYTHONTYPE__, " + p[0].file + ":" + p[0].line + ":" + p[0].column + f",{b}->{a}")
 print(f"Used: __FUNCTION__")
 print(f"Ret. Type: {rt}")
 
@@ -201,9 +194,7 @@ b << __METAFUNCTION__9.b;
 a << __METAFUNCTION__9.a;
 
 @@
-print(f">{f},__PYTHONTYPE__, {b}.{a}")
-print(f">{f},__PYTHONTYPE__")
-print(p[0].file + ":" + p[0].line + ":" + p[0].column)
+print(f">{f},__PYTHONTYPE__, " + p[0].file + ":" + p[0].line + ":" + p[0].column + f",{b}.{a}")
 print(f"Used: __FUNCTION__")
 print(f"Ret. Type: {rt}")
 
@@ -228,8 +219,7 @@ a << __METAFUNCTION__10.a;
 i << __METAFUNCTION__10.i;
 
 @@
-print(f">{f},__PYTHONTYPE__, {i}->{a}")
-print(p[0].file + ":" + p[0].line + ":" + p[0].column)
+print(f">{f},__PYTHONTYPE__, " + p[0].file + ":" + p[0].line + ":" + p[0].column + f",{i}->{a}")
 print(f"Used: __FUNCTION__")
 print(f"Ret. Type: {rt}")
 
@@ -255,8 +245,7 @@ a << __METAFUNCTION__11.a;
 i << __METAFUNCTION__11.i;
 
 @@
-print(f">{f},__PYTHONTYPE__, {i}->{a}")
-print(p[0].file + ":" + p[0].line + ":" + p[0].column)
+print(f">{f},__PYTHONTYPE__, " + p[0].file + ":" + p[0].line + ":" + p[0].column + f",{i}->{a}")
 print(f"Used: __FUNCTION__")
 print(f"Ret. Type: {rt}")
 

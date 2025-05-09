@@ -1,0 +1,15 @@
+>bms_add_members,Bitmapset *, /usr/local/src/postgresql/src/backend/nodes/bitmapset.c
+>bms_del_member,Bitmapset *, /usr/local/src/postgresql/src/backend/nodes/bitmapset.c
+>bms_del_members,Bitmapset *, /usr/local/src/postgresql/src/backend/nodes/bitmapset.c
+>bms_int_members,Bitmapset *, /usr/local/src/postgresql/src/backend/nodes/bitmapset.c
+>bms_replace_members,Bitmapset *, /usr/local/src/postgresql/src/backend/nodes/bitmapset.c
+>bool_substitute_hook,char *, /usr/local/src/postgresql/src/bin/psql/startup.c
+>cat2_str,char *, /usr/local/src/postgresql/src/interfaces/ecpg/preproc/preproc.c
+>clean_NOT_intree,NODE *, /usr/local/src/postgresql/src/backend/utils/adt/tsquery_cleanup.c
+>clean_stopword_intree,NODE *, /usr/local/src/postgresql/src/backend/utils/adt/tsquery_cleanup.c
+>dofindsubquery,QTNode *, /usr/local/src/postgresql/src/backend/utils/adt/tsquery_rewrite.c
+>freeAndGetParent,JsonbIterator *, /usr/local/src/postgresql/src/backend/utils/adt/jsonb_util.c
+>make2_str,char *, /usr/local/src/postgresql/src/interfaces/ecpg/preproc/preproc.c
+>make3_str,char *, /usr/local/src/postgresql/src/interfaces/ecpg/preproc/preproc.c
+>quote_postgres,char *, /usr/local/src/postgresql/src/interfaces/ecpg/ecpglib/execute.c
+>recursive_revoke,Acl *, /usr/local/src/postgresql/src/backend/utils/adt/acl.c

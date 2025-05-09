@@ -27,7 +27,7 @@ RESULTS=../results
 RESULTS_PATH=$RESULTS/$FUNCTION$PROTOTYPE
 RESULTS_FILE=$RESULTS_PATH/$RESULTS_FILE_NAME
 TMP_PATH=tmp
-PRINTED_LINES=3
+PRINTED_LINES=2
 MANUALLY_ADDED=exceptions/$FUNCTION$PROTOTYPE.add
 MANUALLY_EXCLUDED=exceptions/$FUNCTION$PROTOTYPE.exclude
 
@@ -151,7 +151,7 @@ fi
 #RETRIEVE FUNCTIONS TO MANUALLY ADD IF FILE EXISTS
 if [ -f $MANUALLY_ADDED ]; then
    if [[ "$PROTOTYPE" == "dependent" ]]; then 
-      cat $MANUALLY_ADDED | cut -d ',' -f 1,2 | sort | uniq > added.tmp
+      cat $MANUALLY_ADDED | cut -d ',' -f 1,2,3 | sort | uniq > added.tmp
       grep -A $PRINTED_LINES -F -f added.tmp $RESULTS/$FUNCTION/$RESULTS_FILE_NAME >> $RESULTS_FILE
       awk -F ',' 'NR==FNR {key = $1 FS $2; map[key] = $0; next} {print (map[$0] ? map[$0] : $0)}' $MANUALLY_ADDED $RESULTS_FILE > out.tmp
       mv out.tmp $RESULTS_FILE

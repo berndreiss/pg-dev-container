@@ -1,0 +1,3 @@
+>ecpg_realloc,void *, /usr/local/src/postgresql/src/interfaces/ecpg/ecpglib/memory.c:35:25
+Used: realloc
+Ret. Type: char *

@@ -1,16 +1,232 @@
 STARTING -> /usr/local/src/postgresql
 ########## ITERATION 0 ##########
 init_defs_builtins: /usr/lib/coccinelle/standard.h
-warning: addCompiledLexeme0: metavariable t2 not used in the - or context code
-warning: bms_add_member1: metavariable t2 not used in the - or context code
-warning: bms_add_range2: metavariable t2 not used in the - or context code
-warning: bms_replace_members3: metavariable t2 not used in the - or context code
-warning: brin_copy_tuple4: metavariable t2 not used in the - or context code
-warning: gistjoinvector8: metavariable t2 not used in the - or context code
-warning: resize_intArrayType14: metavariable t2 not used in the - or context code
-warning: SetConstraintStateAddItem15: metavariable t2 not used in the - or context code
-warning: yyensure_buffer_stack18: metavariable t2 not used in the - or context code
-warning: yy_get_next_buffer19: metavariable t2 not used in the - or context code
+warning: addCompiledLexeme00: metavariable t2 not used in the - or context code
+warning: addCompiledLexeme01: metavariable t2 not used in the - or context code
+warning: addCompiledLexeme02: metavariable t2 not used in the - or context code
+warning: addCompiledLexeme03: metavariable t2 not used in the - or context code
+warning: addCompiledLexeme04: metavariable t2 not used in the - or context code
+warning: addCompiledLexeme07: metavariable t2 not used in the - or context code
+warning: addCompiledLexeme08: metavariable t2 not used in the - or context code
+warning: addCompiledLexeme09: metavariable t2 not used in the - or context code
+warning: addCompiledLexeme010: metavariable t2 not used in the - or context code
+warning: addCompiledLexeme011: metavariable t2 not used in the - or context code
+warning: bms_add_member10: metavariable t2 not used in the - or context code
+warning: bms_add_member11: metavariable t2 not used in the - or context code
+warning: bms_add_member12: metavariable t2 not used in the - or context code
+warning: bms_add_member13: metavariable t2 not used in the - or context code
+warning: bms_add_member14: metavariable t2 not used in the - or context code
+warning: bms_add_member17: metavariable t2 not used in the - or context code
+warning: bms_add_member18: metavariable t2 not used in the - or context code
+warning: bms_add_member19: metavariable t2 not used in the - or context code
+warning: bms_add_member110: metavariable t2 not used in the - or context code
+warning: bms_add_member111: metavariable t2 not used in the - or context code
+warning: bms_add_range20: metavariable t2 not used in the - or context code
+warning: bms_add_range21: metavariable t2 not used in the - or context code
+warning: bms_add_range22: metavariable t2 not used in the - or context code
+warning: bms_add_range23: metavariable t2 not used in the - or context code
+warning: bms_add_range24: metavariable t2 not used in the - or context code
+warning: bms_add_range27: metavariable t2 not used in the - or context code
+warning: bms_add_range28: metavariable t2 not used in the - or context code
+warning: bms_add_range29: metavariable t2 not used in the - or context code
+warning: bms_add_range210: metavariable t2 not used in the - or context code
+warning: bms_add_range211: metavariable t2 not used in the - or context code
+warning: bms_replace_members30: metavariable t2 not used in the - or context code
+warning: bms_replace_members31: metavariable t2 not used in the - or context code
+warning: bms_replace_members32: metavariable t2 not used in the - or context code
+warning: bms_replace_members33: metavariable t2 not used in the - or context code
+warning: bms_replace_members34: metavariable t2 not used in the - or context code
+warning: bms_replace_members37: metavariable t2 not used in the - or context code
+warning: bms_replace_members38: metavariable t2 not used in the - or context code
+warning: bms_replace_members39: metavariable t2 not used in the - or context code
+warning: bms_replace_members310: metavariable t2 not used in the - or context code
+warning: bms_replace_members311: metavariable t2 not used in the - or context code
+warning: brin_copy_tuple40: metavariable t2 not used in the - or context code
+warning: brin_copy_tuple41: metavariable t2 not used in the - or context code
+warning: brin_copy_tuple42: metavariable t2 not used in the - or context code
+warning: brin_copy_tuple43: metavariable t2 not used in the - or context code
+warning: brin_copy_tuple44: metavariable t2 not used in the - or context code
+warning: brin_copy_tuple47: metavariable t2 not used in the - or context code
+warning: brin_copy_tuple48: metavariable t2 not used in the - or context code
+warning: brin_copy_tuple49: metavariable t2 not used in the - or context code
+warning: brin_copy_tuple410: metavariable t2 not used in the - or context code
+warning: brin_copy_tuple411: metavariable t2 not used in the - or context code
+warning: gistjoinvector80: metavariable t2 not used in the - or context code
+warning: gistjoinvector81: metavariable t2 not used in the - or context code
+warning: gistjoinvector82: metavariable t2 not used in the - or context code
+warning: gistjoinvector83: metavariable t2 not used in the - or context code
+warning: gistjoinvector84: metavariable t2 not used in the - or context code
+warning: gistjoinvector87: metavariable t2 not used in the - or context code
+warning: gistjoinvector88: metavariable t2 not used in the - or context code
+warning: gistjoinvector89: metavariable t2 not used in the - or context code
+warning: gistjoinvector810: metavariable t2 not used in the - or context code
+warning: gistjoinvector811: metavariable t2 not used in the - or context code
+warning: resize_intArrayType140: metavariable t2 not used in the - or context code
+warning: resize_intArrayType141: metavariable t2 not used in the - or context code
+warning: resize_intArrayType142: metavariable t2 not used in the - or context code
+warning: resize_intArrayType143: metavariable t2 not used in the - or context code
+warning: resize_intArrayType144: metavariable t2 not used in the - or context code
+warning: resize_intArrayType147: metavariable t2 not used in the - or context code
+warning: resize_intArrayType148: metavariable t2 not used in the - or context code
+warning: resize_intArrayType149: metavariable t2 not used in the - or context code
+warning: resize_intArrayType1410: metavariable t2 not used in the - or context code
+warning: resize_intArrayType1411: metavariable t2 not used in the - or context code
+warning: SetConstraintStateAddItem150: metavariable t2 not used in the - or context code
+warning: SetConstraintStateAddItem151: metavariable t2 not used in the - or context code
+warning: SetConstraintStateAddItem152: metavariable t2 not used in the - or context code
+warning: SetConstraintStateAddItem153: metavariable t2 not used in the - or context code
+warning: SetConstraintStateAddItem154: metavariable t2 not used in the - or context code
+warning: SetConstraintStateAddItem157: metavariable t2 not used in the - or context code
+warning: SetConstraintStateAddItem158: metavariable t2 not used in the - or context code
+warning: SetConstraintStateAddItem159: metavariable t2 not used in the - or context code
+warning: SetConstraintStateAddItem1510: metavariable t2 not used in the - or context code
+warning: SetConstraintStateAddItem1511: metavariable t2 not used in the - or context code
+warning: SetConstraintStateAddItem1512: metavariable t2 not used in the - or context code
+warning: SetConstraintStateAddItem1513: metavariable t2 not used in the - or context code
+warning: yyensure_buffer_stack180: metavariable t2 not used in the - or context code
+warning: yyensure_buffer_stack181: metavariable t2 not used in the - or context code
+warning: yyensure_buffer_stack182: metavariable t2 not used in the - or context code
+warning: yyensure_buffer_stack183: metavariable t2 not used in the - or context code
+warning: yyensure_buffer_stack184: metavariable t2 not used in the - or context code
+warning: yyensure_buffer_stack187: metavariable t2 not used in the - or context code
+warning: yyensure_buffer_stack188: metavariable t2 not used in the - or context code
+warning: yyensure_buffer_stack189: metavariable t2 not used in the - or context code
+warning: yyensure_buffer_stack1810: metavariable t2 not used in the - or context code
+warning: yyensure_buffer_stack1811: metavariable t2 not used in the - or context code
+warning: yyensure_buffer_stack1812: metavariable t2 not used in the - or context code
+warning: yyensure_buffer_stack1813: metavariable t2 not used in the - or context code
+warning: yyensure_buffer_stack190: metavariable t2 not used in the - or context code
+warning: yyensure_buffer_stack191: metavariable t2 not used in the - or context code
+warning: yyensure_buffer_stack192: metavariable t2 not used in the - or context code
+warning: yyensure_buffer_stack193: metavariable t2 not used in the - or context code
+warning: yyensure_buffer_stack194: metavariable t2 not used in the - or context code
+warning: yyensure_buffer_stack197: metavariable t2 not used in the - or context code
+warning: yyensure_buffer_stack198: metavariable t2 not used in the - or context code
+warning: yyensure_buffer_stack199: metavariable t2 not used in the - or context code
+warning: yyensure_buffer_stack1910: metavariable t2 not used in the - or context code
+warning: yyensure_buffer_stack1911: metavariable t2 not used in the - or context code
+warning: yyensure_buffer_stack1912: metavariable t2 not used in the - or context code
+warning: yyensure_buffer_stack1913: metavariable t2 not used in the - or context code
+warning: yyensure_buffer_stack200: metavariable t2 not used in the - or context code
+warning: yyensure_buffer_stack201: metavariable t2 not used in the - or context code
+warning: yyensure_buffer_stack202: metavariable t2 not used in the - or context code
+warning: yyensure_buffer_stack203: metavariable t2 not used in the - or context code
+warning: yyensure_buffer_stack204: metavariable t2 not used in the - or context code
+warning: yyensure_buffer_stack207: metavariable t2 not used in the - or context code
+warning: yyensure_buffer_stack208: metavariable t2 not used in the - or context code
+warning: yyensure_buffer_stack209: metavariable t2 not used in the - or context code
+warning: yyensure_buffer_stack2010: metavariable t2 not used in the - or context code
+warning: yyensure_buffer_stack2011: metavariable t2 not used in the - or context code
+warning: yyensure_buffer_stack2012: metavariable t2 not used in the - or context code
+warning: yyensure_buffer_stack2013: metavariable t2 not used in the - or context code
+warning: yyensure_buffer_stack210: metavariable t2 not used in the - or context code
+warning: yyensure_buffer_stack211: metavariable t2 not used in the - or context code
+warning: yyensure_buffer_stack212: metavariable t2 not used in the - or context code
+warning: yyensure_buffer_stack213: metavariable t2 not used in the - or context code
+warning: yyensure_buffer_stack214: metavariable t2 not used in the - or context code
+warning: yyensure_buffer_stack217: metavariable t2 not used in the - or context code
+warning: yyensure_buffer_stack218: metavariable t2 not used in the - or context code
+warning: yyensure_buffer_stack219: metavariable t2 not used in the - or context code
+warning: yyensure_buffer_stack2110: metavariable t2 not used in the - or context code
+warning: yyensure_buffer_stack2111: metavariable t2 not used in the - or context code
+warning: yyensure_buffer_stack2112: metavariable t2 not used in the - or context code
+warning: yyensure_buffer_stack2113: metavariable t2 not used in the - or context code
+warning: yy_get_next_buffer220: metavariable t2 not used in the - or context code
+warning: yy_get_next_buffer221: metavariable t2 not used in the - or context code
+warning: yy_get_next_buffer222: metavariable t2 not used in the - or context code
+warning: yy_get_next_buffer223: metavariable t2 not used in the - or context code
+warning: yy_get_next_buffer224: metavariable t2 not used in the - or context code
+warning: yy_get_next_buffer227: metavariable t2 not used in the - or context code
+warning: yy_get_next_buffer228: metavariable t2 not used in the - or context code
+warning: yy_get_next_buffer229: metavariable t2 not used in the - or context code
+warning: yy_get_next_buffer2210: metavariable t2 not used in the - or context code
+warning: yy_get_next_buffer2211: metavariable t2 not used in the - or context code
+warning: yy_get_next_buffer2212: metavariable t2 not used in the - or context code
+warning: yy_get_next_buffer2213: metavariable t2 not used in the - or context code
+warning: yy_get_next_buffer230: metavariable t2 not used in the - or context code
+warning: yy_get_next_buffer231: metavariable t2 not used in the - or context code
+warning: yy_get_next_buffer232: metavariable t2 not used in the - or context code
+warning: yy_get_next_buffer233: metavariable t2 not used in the - or context code
+warning: yy_get_next_buffer234: metavariable t2 not used in the - or context code
+warning: yy_get_next_buffer237: metavariable t2 not used in the - or context code
+warning: yy_get_next_buffer238: metavariable t2 not used in the - or context code
+warning: yy_get_next_buffer239: metavariable t2 not used in the - or context code
+warning: yy_get_next_buffer2310: metavariable t2 not used in the - or context code
+warning: yy_get_next_buffer2311: metavariable t2 not used in the - or context code
+warning: yy_get_next_buffer2312: metavariable t2 not used in the - or context code
+warning: yy_get_next_buffer2313: metavariable t2 not used in the - or context code
+warning: yy_get_next_buffer240: metavariable t2 not used in the - or context code
+warning: yy_get_next_buffer241: metavariable t2 not used in the - or context code
+warning: yy_get_next_buffer242: metavariable t2 not used in the - or context code
+warning: yy_get_next_buffer243: metavariable t2 not used in the - or context code
+warning: yy_get_next_buffer244: metavariable t2 not used in the - or context code
+warning: yy_get_next_buffer247: metavariable t2 not used in the - or context code
+warning: yy_get_next_buffer248: metavariable t2 not used in the - or context code
+warning: yy_get_next_buffer249: metavariable t2 not used in the - or context code
+warning: yy_get_next_buffer2410: metavariable t2 not used in the - or context code
+warning: yy_get_next_buffer2411: metavariable t2 not used in the - or context code
+warning: yy_get_next_buffer2412: metavariable t2 not used in the - or context code
+warning: yy_get_next_buffer2413: metavariable t2 not used in the - or context code
+warning: yy_get_next_buffer250: metavariable t2 not used in the - or context code
+warning: yy_get_next_buffer251: metavariable t2 not used in the - or context code
+warning: yy_get_next_buffer252: metavariable t2 not used in the - or context code
+warning: yy_get_next_buffer253: metavariable t2 not used in the - or context code
+warning: yy_get_next_buffer254: metavariable t2 not used in the - or context code
+warning: yy_get_next_buffer257: metavariable t2 not used in the - or context code
+warning: yy_get_next_buffer258: metavariable t2 not used in the - or context code
+warning: yy_get_next_buffer259: metavariable t2 not used in the - or context code
+warning: yy_get_next_buffer2510: metavariable t2 not used in the - or context code
+warning: yy_get_next_buffer2511: metavariable t2 not used in the - or context code
+warning: yy_get_next_buffer2512: metavariable t2 not used in the - or context code
+warning: yy_get_next_buffer2513: metavariable t2 not used in the - or context code
+warning: yy_get_next_buffer260: metavariable t2 not used in the - or context code
+warning: yy_get_next_buffer261: metavariable t2 not used in the - or context code
+warning: yy_get_next_buffer262: metavariable t2 not used in the - or context code
+warning: yy_get_next_buffer263: metavariable t2 not used in the - or context code
+warning: yy_get_next_buffer264: metavariable t2 not used in the - or context code
+warning: yy_get_next_buffer267: metavariable t2 not used in the - or context code
+warning: yy_get_next_buffer268: metavariable t2 not used in the - or context code
+warning: yy_get_next_buffer269: metavariable t2 not used in the - or context code
+warning: yy_get_next_buffer2610: metavariable t2 not used in the - or context code
+warning: yy_get_next_buffer2611: metavariable t2 not used in the - or context code
+warning: yy_get_next_buffer2612: metavariable t2 not used in the - or context code
+warning: yy_get_next_buffer2613: metavariable t2 not used in the - or context code
+warning: yy_get_next_buffer270: metavariable t2 not used in the - or context code
+warning: yy_get_next_buffer271: metavariable t2 not used in the - or context code
+warning: yy_get_next_buffer272: metavariable t2 not used in the - or context code
+warning: yy_get_next_buffer273: metavariable t2 not used in the - or context code
+warning: yy_get_next_buffer274: metavariable t2 not used in the - or context code
+warning: yy_get_next_buffer277: metavariable t2 not used in the - or context code
+warning: yy_get_next_buffer278: metavariable t2 not used in the - or context code
+warning: yy_get_next_buffer279: metavariable t2 not used in the - or context code
+warning: yy_get_next_buffer2710: metavariable t2 not used in the - or context code
+warning: yy_get_next_buffer2711: metavariable t2 not used in the - or context code
+warning: yy_get_next_buffer2712: metavariable t2 not used in the - or context code
+warning: yy_get_next_buffer2713: metavariable t2 not used in the - or context code
+warning: yy_get_next_buffer280: metavariable t2 not used in the - or context code
+warning: yy_get_next_buffer281: metavariable t2 not used in the - or context code
+warning: yy_get_next_buffer282: metavariable t2 not used in the - or context code
+warning: yy_get_next_buffer283: metavariable t2 not used in the - or context code
+warning: yy_get_next_buffer284: metavariable t2 not used in the - or context code
+warning: yy_get_next_buffer287: metavariable t2 not used in the - or context code
+warning: yy_get_next_buffer288: metavariable t2 not used in the - or context code
+warning: yy_get_next_buffer289: metavariable t2 not used in the - or context code
+warning: yy_get_next_buffer2810: metavariable t2 not used in the - or context code
+warning: yy_get_next_buffer2811: metavariable t2 not used in the - or context code
+warning: yy_get_next_buffer2812: metavariable t2 not used in the - or context code
+warning: yy_get_next_buffer2813: metavariable t2 not used in the - or context code
+warning: yy_get_next_buffer290: metavariable t2 not used in the - or context code
+warning: yy_get_next_buffer291: metavariable t2 not used in the - or context code
+warning: yy_get_next_buffer292: metavariable t2 not used in the - or context code
+warning: yy_get_next_buffer293: metavariable t2 not used in the - or context code
+warning: yy_get_next_buffer294: metavariable t2 not used in the - or context code
+warning: yy_get_next_buffer297: metavariable t2 not used in the - or context code
+warning: yy_get_next_buffer298: metavariable t2 not used in the - or context code
+warning: yy_get_next_buffer299: metavariable t2 not used in the - or context code
+warning: yy_get_next_buffer2910: metavariable t2 not used in the - or context code
+warning: yy_get_next_buffer2911: metavariable t2 not used in the - or context code
+warning: yy_get_next_buffer2912: metavariable t2 not used in the - or context code
+warning: yy_get_next_buffer2913: metavariable t2 not used in the - or context code
 HANDLING: /usr/local/src/postgresql/src/tools/testint128.c
 HANDLING: /usr/local/src/postgresql/src/tools/pg_bsd_indent/lexi.c
 HANDLING: /usr/local/src/postgresql/src/tools/pg_bsd_indent/io.c
@@ -1084,6 +1300,7 @@ HANDLING: /usr/local/src/postgresql/src/backend/parser/scan.c
 HANDLING: /usr/local/src/postgresql/src/backend/parser/parse_utilcmd.c
 HANDLING: /usr/local/src/postgresql/src/backend/parser/gram.c
 Unable to parse #if condition: defined size_t
+Note: processing took    10.2s: /usr/local/src/postgresql/src/backend/parser/gram.c
 HANDLING: /usr/local/src/postgresql/src/backend/parser/parse_node.c
 HANDLING: /usr/local/src/postgresql/src/backend/parser/parse_param.c
 HANDLING: /usr/local/src/postgresql/src/backend/parser/scansup.c
@@ -1201,6 +1418,7 @@ HANDLING: /usr/local/src/postgresql/src/interfaces/ecpg/preproc/type.c
 HANDLING: /usr/local/src/postgresql/src/interfaces/ecpg/preproc/ecpg_keywords.c
 HANDLING: /usr/local/src/postgresql/src/interfaces/ecpg/preproc/preproc.c
 Unable to parse #if condition: defined size_t
+Note: processing took    20.1s: /usr/local/src/postgresql/src/interfaces/ecpg/preproc/preproc.c
 HANDLING: /usr/local/src/postgresql/src/interfaces/ecpg/pgtypeslib/timestamp.c
 HANDLING: /usr/local/src/postgresql/src/interfaces/ecpg/pgtypeslib/common.c
 HANDLING: /usr/local/src/postgresql/src/interfaces/ecpg/pgtypeslib/interval.c
@@ -1521,8 +1739,12 @@ HANDLING: /usr/local/src/postgresql/contrib/ltree/crc32.c
 HANDLING: /usr/local/src/postgresql/contrib/ltree/ltxtquery_io.c
 HANDLING: /usr/local/src/postgresql/contrib/pgrowlocks/pgrowlocks.c
 #################################
-TIME PASSED: 44 SECONDS
+TIME PASSED: 260 SECONDS
+########## ITERATION 1 ##########
+Fatal error: exception Sys_error("tmp/1.cocci: No such file or directory")
+#################################
+TIME PASSED: 0 SECONDS
 #################################
 DONE
-NUMBER OF ITERATIONS: 1
-TIME PASSED OVERALL: 0 MINUTES 44 SECONDS
+NUMBER OF ITERATIONS: 2
+TIME PASSED OVERALL: 4 MINUTES 20 SECONDS

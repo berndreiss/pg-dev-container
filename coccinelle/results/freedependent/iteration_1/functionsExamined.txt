@@ -1,6 +1,7 @@
->ReorderBufferFreeSnap,Snapshot, snap->copied
->ExecForceStoreHeapTuple,HeapTuple, shouldFree
->ExecForceStoreMinimalTuple,MinimalTuple, shouldFree
->ginFinishSplit,GinBtreeStack *, freestack
->_bt_insertonpg,IndexTuple, postingoff
->quote_postgres,char *, quote
+>ReorderBufferFreeSnap,Snapshot, /usr/local/src/postgresql/src/backend/replication/logical/reorderbuffer.c:1895:2,snap->copied
+>ExecForceStoreHeapTuple,HeapTuple, /usr/local/src/postgresql/src/backend/executor/execTuples.c:1577:3,shouldFree
+>ExecForceStoreHeapTuple,HeapTuple, /usr/local/src/postgresql/src/backend/executor/execTuples.c:1589:3,shouldFree
+>ExecForceStoreMinimalTuple,MinimalTuple, /usr/local/src/postgresql/src/backend/executor/execTuples.c:1622:3,shouldFree
+>ginFinishSplit,GinBtreeStack *, /usr/local/src/postgresql/src/backend/access/gin/ginbtree.c:752:3,freestack
+>_bt_insertonpg,IndexTuple, /usr/local/src/postgresql/src/backend/access/nbtree/nbtinsert.c:1435:2,postingoff
+>quote_postgres,char *, /usr/local/src/postgresql/src/interfaces/ecpg/ecpglib/execute.c:77:2,quote

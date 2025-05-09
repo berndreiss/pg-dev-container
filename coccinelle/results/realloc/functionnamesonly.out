@@ -1,21 +1,35 @@
->addCompiledLexeme,TheLexeme *
->bms_add_member,Bitmapset *
->bms_add_range,Bitmapset *
->bms_replace_members,Bitmapset *
->brin_copy_tuple,BrinTuple *
->core_yyrealloc,void *
->ecpg_realloc,void *
->erealloc,void *
->gistjoinvector,IndexTuple *
->growalloc,void *
->jsonpath_yyrealloc,void *
->pg_realloc,void *
->repalloc0,void *
->repalloc,void *
->resize_intArrayType,ArrayType *
->SetConstraintStateAddItem,SetConstraintState
->SPI_repalloc,void *
->xml_repalloc,void *
->yyensure_buffer_stack,yyscan_t
->yy_get_next_buffer,yyscan_t
->yyrealloc,void *
+>addCompiledLexeme,TheLexeme *, /usr/local/src/postgresql/src/backend/tsearch/dict_thesaurus.c
+>bms_add_member,Bitmapset *, /usr/local/src/postgresql/src/backend/nodes/bitmapset.c
+>bms_add_range,Bitmapset *, /usr/local/src/postgresql/src/backend/nodes/bitmapset.c
+>bms_replace_members,Bitmapset *, /usr/local/src/postgresql/src/backend/nodes/bitmapset.c
+>brin_copy_tuple,BrinTuple *, /usr/local/src/postgresql/src/backend/access/brin/brin_tuple.c
+>core_yyrealloc,void *, /usr/local/src/postgresql/src/backend/parser/scan.c
+>ecpg_realloc,void *, /usr/local/src/postgresql/src/interfaces/ecpg/ecpglib/memory.c
+>erealloc,void *, /usr/local/src/postgresql/src/timezone/zic.c
+>gistjoinvector,IndexTuple *, /usr/local/src/postgresql/src/backend/access/gist/gistutil.c
+>growalloc,void *, /usr/local/src/postgresql/src/timezone/zic.c
+>jsonpath_yyrealloc,void *, /usr/local/src/postgresql/src/backend/utils/adt/jsonpath_scan.c
+>pg_realloc,void *, /usr/local/src/postgresql/src/common/fe_memutils.c
+>repalloc0,void *, /usr/local/src/postgresql/src/backend/utils/mmgr/mcxt.c
+>repalloc,void *, /usr/local/src/postgresql/src/common/fe_memutils.c
+>resize_intArrayType,ArrayType *, /usr/local/src/postgresql/contrib/intarray/_int_tool.c
+>SetConstraintStateAddItem,SetConstraintState, /usr/local/src/postgresql/src/backend/commands/trigger.c
+>SPI_repalloc,void *, /usr/local/src/postgresql/src/backend/executor/spi.c
+>xml_repalloc,void *, /usr/local/src/postgresql/src/backend/utils/adt/xml.c
+>yyensure_buffer_stack,yyscan_t, /usr/local/src/postgresql/src/backend/parser/scan.c
+>yyensure_buffer_stack,yyscan_t, /usr/local/src/postgresql/src/bin/pgbench/exprscan.c
+>yyensure_buffer_stack,yyscan_t, /usr/local/src/postgresql/src/bin/psql/psqlscanslash.c
+>yyensure_buffer_stack,yyscan_t, /usr/local/src/postgresql/src/fe_utils/psqlscan.c
+>yy_get_next_buffer,yyscan_t, /usr/local/src/postgresql/src/backend/parser/scan.c
+>yy_get_next_buffer,yyscan_t, /usr/local/src/postgresql/src/bin/pgbench/exprscan.c
+>yy_get_next_buffer,yyscan_t, /usr/local/src/postgresql/src/bin/psql/psqlscanslash.c
+>yy_get_next_buffer,yyscan_t, /usr/local/src/postgresql/src/fe_utils/psqlscan.c
+>yyrealloc,void *, /usr/local/src/postgresql/src/backend/bootstrap/bootscanner.c
+>yyrealloc,void *, /usr/local/src/postgresql/src/backend/replication/repl_scanner.c
+>yyrealloc,void *, /usr/local/src/postgresql/src/backend/replication/syncrep_scanner.c
+>yyrealloc,void *, /usr/local/src/postgresql/src/backend/utils/misc/guc-file.c
+>yyrealloc,void *, /usr/local/src/postgresql/src/bin/pgbench/exprscan.c
+>yyrealloc,void *, /usr/local/src/postgresql/src/bin/psql/psqlscanslash.c
+>yyrealloc,void *, /usr/local/src/postgresql/src/fe_utils/psqlscan.c
+>yyrealloc,void *, /usr/local/src/postgresql/src/interfaces/ecpg/preproc/pgc.c
+>yyrealloc,void *, /usr/local/src/postgresql/src/test/isolation/specscanner.c

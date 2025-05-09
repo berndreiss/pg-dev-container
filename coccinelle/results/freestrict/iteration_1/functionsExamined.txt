@@ -1,38 +1,42 @@
->init_spawned_worker_win32,WorkerInfo *
->DeCloneArchive,ArchiveHandle *
->free_keep_errno,void *
->restore_global_locale,save_locale_t
->writefile,char * *
->restorePsetInfo,printQueryOpt *
->free_copy_options,struct copy_options *
->free_readfile,char * *
->closedir,DIR *
->GenerationBlockFree,GenerationBlock *
->GenerationDelete,MemoryContext
->BumpBlockFree,BumpBlock *
->BumpDelete,MemoryContext
->SlabDelete,MemoryContext
->SN_close_env,struct SN_env *
->pg_free,void *
->conditional_stack_destroy,ConditionalStack
->psql_scan_destroy,PsqlScanState
->output_deallocate_prepare_statement,char *
->output_prepare_statement,char *
->output_simple_statement,char *
->output_statement,char *
->ECPGfree_type,struct ECPGtype *
->cat2_str,char *
->make2_str,char *
->make3_str,char *
->PGTYPESchar_free,char *
->PGTYPESinterval_free,interval *
->PGTYPESdate_free,date *
->PGTYPESdecimal_free,decimal *
->PGTYPESnumeric_free,numeric *
->ecpg_sqlca_key_destructor,void *
->ecpg_free,void *
->PQfreemem,void *
->freePGconn,PGconn *
->PQconninfoFree,PQconninfoOption *
->destroyPQExpBuffer,PQExpBuffer
->PQfreeCancel,PGcancel *
+>init_spawned_worker_win32,WorkerInfo *, /usr/local/src/postgresql/src/bin/pg_dump/parallel.c:880:1
+>DeCloneArchive,ArchiveHandle *, /usr/local/src/postgresql/src/bin/pg_dump/pg_backup_archiver.c:5067:1
+>free_keep_errno,void *, /usr/local/src/postgresql/src/bin/pg_dump/compress_io.c:183:1
+>restore_global_locale,save_locale_t, /usr/local/src/postgresql/src/bin/initdb/initdb.c:395:1
+>writefile,char * *, /usr/local/src/postgresql/src/bin/initdb/initdb.c:735:1
+>restorePsetInfo,printQueryOpt *, /usr/local/src/postgresql/src/bin/psql/command.c:5051:1
+>free_copy_options,struct copy_options *, /usr/local/src/postgresql/src/bin/psql/copy.c:72:1
+>free_readfile,char * *, /usr/local/src/postgresql/src/bin/pg_ctl/pg_ctl.c:420:1
+>closedir,DIR *, /usr/local/src/postgresql/src/port/dirent.c:134:1
+>GenerationBlockFree,GenerationBlock *, /usr/local/src/postgresql/src/backend/utils/mmgr/generation.c:680:1
+>GenerationDelete,MemoryContext, /usr/local/src/postgresql/src/backend/utils/mmgr/generation.c:333:1
+>BumpBlockFree,BumpBlock *, /usr/local/src/postgresql/src/backend/utils/mmgr/bump.c:609:1
+>BumpDelete,MemoryContext, /usr/local/src/postgresql/src/backend/utils/mmgr/bump.c:283:1
+>SlabDelete,MemoryContext, /usr/local/src/postgresql/src/backend/utils/mmgr/slab.c:490:1
+>SN_close_env,struct SN_env *, /usr/local/src/postgresql/src/backend/snowball/libstemmer/api.c:48:4
+>pg_free,void *, /usr/local/src/postgresql/src/common/fe_memutils.c:107:1
+>conditional_stack_destroy,ConditionalStack, /usr/local/src/postgresql/src/fe_utils/conditional.c:46:1
+>psql_scan_destroy,PsqlScanState, /usr/local/src/postgresql/src/fe_utils/psqlscan.c:5270:1
+>output_deallocate_prepare_statement,char *, /usr/local/src/postgresql/src/interfaces/ecpg/preproc/output.c:196:1
+>output_prepare_statement,char *, /usr/local/src/postgresql/src/interfaces/ecpg/preproc/output.c:178:1
+>output_simple_statement,char *, /usr/local/src/postgresql/src/interfaces/ecpg/preproc/output.c:25:1
+>output_statement,char *, /usr/local/src/postgresql/src/interfaces/ecpg/preproc/output.c:166:1
+>ECPGfree_type,struct ECPGtype *, /usr/local/src/postgresql/src/interfaces/ecpg/preproc/type.c:689:1
+>cat2_str,char *, /usr/local/src/postgresql/src/interfaces/ecpg/preproc/preproc.c:221:1
+>cat2_str,char *, /usr/local/src/postgresql/src/interfaces/ecpg/preproc/preproc.c:222:1
+>make2_str,char *, /usr/local/src/postgresql/src/interfaces/ecpg/preproc/preproc.c:253:1
+>make2_str,char *, /usr/local/src/postgresql/src/interfaces/ecpg/preproc/preproc.c:254:1
+>make3_str,char *, /usr/local/src/postgresql/src/interfaces/ecpg/preproc/preproc.c:266:1
+>make3_str,char *, /usr/local/src/postgresql/src/interfaces/ecpg/preproc/preproc.c:267:1
+>make3_str,char *, /usr/local/src/postgresql/src/interfaces/ecpg/preproc/preproc.c:268:1
+>PGTYPESchar_free,char *, /usr/local/src/postgresql/src/interfaces/ecpg/pgtypeslib/common.c:147:1
+>PGTYPESinterval_free,interval *, /usr/local/src/postgresql/src/interfaces/ecpg/pgtypeslib/interval.c:999:1
+>PGTYPESdate_free,date *, /usr/local/src/postgresql/src/interfaces/ecpg/pgtypeslib/datetime.c:27:1
+>PGTYPESdecimal_free,decimal *, /usr/local/src/postgresql/src/interfaces/ecpg/pgtypeslib/numeric.c:394:1
+>PGTYPESnumeric_free,numeric *, /usr/local/src/postgresql/src/interfaces/ecpg/pgtypeslib/numeric.c:388:1
+>ecpg_sqlca_key_destructor,void *, /usr/local/src/postgresql/src/interfaces/ecpg/ecpglib/misc.c:98:1
+>ecpg_free,void *, /usr/local/src/postgresql/src/interfaces/ecpg/ecpglib/memory.c:15:1
+>PQfreemem,void *, /usr/local/src/postgresql/src/interfaces/libpq/fe-exec.c:4034:1
+>freePGconn,PGconn *, /usr/local/src/postgresql/src/interfaces/libpq/fe-connect.c:4708:1
+>PQconninfoFree,PQconninfoOption *, /usr/local/src/postgresql/src/interfaces/libpq/fe-connect.c:6997:1
+>destroyPQExpBuffer,PQExpBuffer, /usr/local/src/postgresql/src/interfaces/libpq/pqexpbuffer.c:119:2
+>PQfreeCancel,PGcancel *, /usr/local/src/postgresql/src/interfaces/libpq/fe-cancel.c:419:1

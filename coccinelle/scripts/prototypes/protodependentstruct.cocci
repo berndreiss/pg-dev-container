@@ -19,8 +19,7 @@ a << __METAFUNCTION__12.a;
 i << __METAFUNCTION__12.i;
 
 @@
-print(f">{f},__PYTHONTYPE__, {i}.{a}")
-print(p[0].file + ":" + p[0].line + ":" + p[0].column)
+print(f">{f},__PYTHONTYPE__, " + p[0].file + ":" + p[0].line + ":" + p[0].column + f", {i}.{a}")
 print(f"Used: __FUNCTION__")
 print(f"Ret. Type: {rt}")
 
@@ -46,8 +45,7 @@ a << __METAFUNCTION__13.a;
 i << __METAFUNCTION__13.i;
 
 @@
-print(f">{f},__PYTHONTYPE__, {i}.{a}")
-print(p[0].file + ":" + p[0].line + ":" + p[0].column)
+print(f">{f},__PYTHONTYPE__, " + p[0].file + ":" + p[0].line + ":" + p[0].column + f", {i}.{a}")
 print(f"Used: __FUNCTION__")
 print(f"Ret. Type: {rt}")
 
