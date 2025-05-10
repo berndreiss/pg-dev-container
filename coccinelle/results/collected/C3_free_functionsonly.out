@@ -1,5 +1,4 @@
 >avlFree,avl_node *, /usr/local/src/postgresql/src/bin/psql/crosstabview.c:464:3
->bool_substitute_hook,char *, /usr/local/src/postgresql/src/bin/psql/startup.c:868:2
 >_bt_insertonpg,IndexTuple, /usr/local/src/postgresql/src/backend/access/nbtree/nbtinsert.c:1435:2
 >CatCacheRemoveCTup,CatCTup *, /usr/local/src/postgresql/src/backend/utils/cache/catcache.c:538:1
 >dump_variables,struct arguments *, /usr/local/src/postgresql/src/interfaces/ecpg/preproc/variable.c:460:2

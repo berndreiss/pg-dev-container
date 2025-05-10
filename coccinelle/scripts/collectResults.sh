@@ -11,6 +11,11 @@ DEPENDENT=C3
 ERROR=C4
 ARBITRARY=C5
 
+if [[ -d $COLLECTED ]]; then
+   rm -rf $COLLECTED
+fi
+
+mkdir $COLLECTED
 
 #THIS FUNCTION SANITIZES THE OUPUT OF THE REALLOC SCRIPTS SINCE SOME TYPES
 #LIKE int OR size_t HAVE BEEN ADDED TOO
@@ -35,16 +40,11 @@ collect(){
    if [[ -d $RESULTS/$1samereturn ]]; then
       rm -rf $RESULTS/$1samereturn
    fi
-   if [[ -d $COLLECTED ]]; then
-      rm -rf $COLLECTED
-   fi
-
    mkdir $RESULTS/$1arbitrary
    mkdir $RESULTS/$1samereturn
-   mkdir $COLLECTED
 
    #DEFINE FILE STATS WILL BE PRINTED TO
-   STATS_FILE=$COLLECTED/$1_stats.out
+   STATS_FILE=$COLLECTED/stats_$1.out
 
    #REDUCE RESULTS TO FUNCTION NAMES + TYPE + FILE ONLY AND ELIMINATE DUPLICATES
    grep "^>" $RESULTS/$1/results.out | cut -d ':' -f 1 | sort | uniq > $RESULTS/$1/functionnamesonly.out
@@ -82,7 +82,7 @@ collect(){
 
    #GET RID OF DUPLICATES    
    cat samereturn.tmp | cut -d ':' -f 1 | sort | uniq > $RESULTS/$1samereturn/functionnamesonly.out
-   cp $RESULTS/$1samereturn/functionnamesonly.out $COLLECTED/$1_${REASSIGN}_functionsonly.out
+   cp $RESULTS/$1samereturn/functionnamesonly.out $COLLECTED/${REASSIGN}_$1_functionsonly.out
    
    #SANITIZE REALLOC RESULTS
    if [[ "$1" == "realloc" ]]; then
@@ -91,7 +91,7 @@ collect(){
 
    #PRINT FUNCTIONS WITH INFORMATION
    grep -A $PRINT_LINES -F -f samereturn.tmp $RESULTS/$1/results.out > $RESULTS/$1samereturn/results.out
-   cp $RESULTS/$1samereturn/results.out $COLLECTED/$1_$REASSIGN.out
+   cp $RESULTS/$1samereturn/results.out $COLLECTED/${REASSIGN}_$1.out
 
    #REMOVE OVERLAPPING FUNCTIONS
    #  ->REMOVE SAME RETURN FROM STRICT
@@ -141,6 +141,13 @@ collect(){
    #GET ALL FUNCTIONS THAT APPEAR MORE THAN ONCE IN THE RESULTS
    cat $RESULTS/$1/results.out | grep ">" | sort | uniq -d > doubled.tmp
    grep -A $PRINT_LINES -F -f doubled.tmp $RESULTS/$1/results.out > $RESULTS/$1doubled.out
+
+   #RETRIEVE FULL FUNCTION NAMES ONLY WITH ALL INFORMATION FOR COLLECTED
+   grep "^>" $COLLECTED/${REASSIGN}_$1.out | sort | uniq > $COLLECTED/${REASSIGN}_$1_functionsonly.out
+   grep "^>" $COLLECTED/${STRICT}_$1.out | sort | uniq > $COLLECTED/${STRICT}_$1_functionsonly.out
+   grep "^>" $COLLECTED/${DEPENDENT}_$1.out | sort | uniq > $COLLECTED/${DEPENDENT}_$1_functionsonly.out
+   grep "^>" $COLLECTED/${ERROR}_$1.out | sort | uniq > $COLLECTED/${ERROR}_$1_functionsonly.out
+   grep "^>" $COLLECTED/${ARBITRARY}_$1.out | sort | uniq > $COLLECTED/${ARBITRARY}_$1_functionsonly.out
 
    #PRINT STATS TO THE STATS_FILE
    echo "$1" > $STATS_FILE
