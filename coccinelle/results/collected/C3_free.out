@@ -10,6 +10,9 @@ Ret. Type: void
 Used: free
 Ret. Type: void
 --
+>bool_substitute_hook,char *, /usr/local/src/postgresql/src/bin/psql/startup.c:868:2
+Used: pg_free
+Ret. Type: char *
 >avlFree,avl_node *, /usr/local/src/postgresql/src/bin/psql/crosstabview.c:464:3
 Used: pg_free
 Ret. Type: void
@@ -17,6 +20,10 @@ Ret. Type: void
 >ecpg_finish,struct connection *, /usr/local/src/postgresql/src/interfaces/ecpg/ecpglib/connect.c:139:2
 Used: ecpg_free
 Ret. Type: void
+--
+>quote_postgres,char *, /usr/local/src/postgresql/src/interfaces/ecpg/ecpglib/execute.c:77:2
+Used: ecpg_free
+Ret. Type: char *
 --
 >CatCacheRemoveCTup,CatCTup *, /usr/local/src/postgresql/src/backend/utils/cache/catcache.c:538:1
 Used: pfree

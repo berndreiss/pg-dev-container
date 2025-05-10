@@ -95,12 +95,15 @@ collect(){
 
    #REMOVE OVERLAPPING FUNCTIONS
    #  ->REMOVE SAME RETURN FROM STRICT
-   comm -23 $RESULTS/$1strict/functionnamesonly.out $RESULTS/$1samereturn/functionnamesonly.out > strictwithoutsamereturn.tmp
-   grep -A $PRINT_LINES -F -f strictwithoutsamereturn.tmp $RESULTS/$1/results.out > $COLLECTED/${STRICT}_$1.out
+   #comm -23 $RESULTS/$1strict/functionnamesonly.out $RESULTS/$1samereturn/functionnamesonly.out > strictwithoutsamereturn.tmp#VERSION WITH SAME RETURN REMOVED
+   #grep -A $PRINT_LINES -F -f strictwithoutsamereturn.tmp $RESULTS/$1/results.out > $COLLECTED/${STRICT}_$1.out#VERSION WITH SAME RETURN REMOVED
+   cp $RESULTS/$1strict/functionnamesonly.out $COLLECTED/${STRICT}_$1.out
    
    #  ->REMOVE SAME RETURN AND STRICT FROM DEPENDENT
-   comm -23 $RESULTS/$1dependent/functionnamesonly.out $RESULTS/$1samereturn/functionnamesonly.out > dependentwithoutsamereturn.tmp
-   comm -23 dependentwithoutsamereturn.tmp $RESULTS/$1strict/functionnamesonly.out > dependentwithoutsamereturnstrict.tmp
+   #comm -23 $RESULTS/$1dependent/functionnamesonly.out $RESULTS/$1samereturn/functionnamesonly.out > dependentwithoutsamereturn.tmp#VERSION WITH SAME RETURN REMOVED
+   #comm -23 dependentwithoutsamereturn.tmp $RESULTS/$1strict/functionnamesonly.out > dependentwithoutsamereturnstrict.tmp#VERSION WITH SAME RETURN REMOVED
+   #grep -A $PRINT_LINES -F -f dependentwithoutsamereturnstrict.tmp $RESULTS/$1/results.out > $COLLECTED/${DEPENDENT}_$1.out#VERSION WITH SAME RETURN REMOVED
+   comm -23 $RESULTS/$1dependent/functionnamesonly.out $RESULTS/$1strict/functionnamesonly.out > dependentwithoutsamereturnstrict.tmp
    grep -A $PRINT_LINES -F -f dependentwithoutsamereturnstrict.tmp $RESULTS/$1/results.out > $COLLECTED/${DEPENDENT}_$1.out
 
    cp $RESULTS/$1ereport/results.out $COLLECTED/${ERROR}_$1.out
@@ -108,9 +111,10 @@ collect(){
 
    #REDUCE ALL FUNCTIONS UNTIL WE ARRIVE AT ARBITRARY FUNCTIONS
    #RETRIEVE ALL FUNCTIONS THAT ARE NOT SUPPOSED TO BE REASSIGNED
-   comm -23 $RESULTS/$1/functionnamesonly.out $RESULTS/$1samereturn/functionnamesonly.out | sort | uniq > allwithoutreassigned.tmp
+   #comm -23 $RESULTS/$1/functionnamesonly.out $RESULTS/$1samereturn/functionnamesonly.out | sort | uniq > allwithoutreassigned.tmp
    #RETRIEVE ALL FUNCTIONS THAT ARE NOT REASSINGED OR STRICT
-   comm -23 allwithoutreassigned.tmp $RESULTS/$1strict/functionnamesonly.out | sort | uniq > allwithoutreassignedstrict.tmp
+   #comm -23 allwithoutreassigned.tmp $RESULTS/$1strict/functionnamesonly.out | sort | uniq > allwithoutreassignedstrict.tmp#VERSION WITH SAME RETURN REMOVED
+   comm -23 $RESULTS/$1/functionnamesonly.out $RESULTS/$1strict/functionnamesonly.out | sort | uniq > allwithoutreassignedstrict.tmp
    #RETRIEVE ALL FUNCTIONS THAT ARE NOT REASSIGNED, STRICT AND DEPENDENT
    comm -23 allwithoutreassignedstrict.tmp $RESULTS/$1dependent/functionnamesonly.out | sort | uniq > allwithoutreassignedstrictdependent.tmp
    #RETRIEVE ALL FUNCTIONS THAT ARE NOT REASSIGNED, STRICT, DEPENDENT, AND EREPORT
