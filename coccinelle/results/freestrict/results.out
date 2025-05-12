@@ -1,3 +1,17 @@
+>ecpg_finish,struct connection *, /usr/local/src/postgresql/src/interfaces/ecpg/ecpglib/connect.c:139:2
+Used: ecpg_free
+Ret. Type: void
+--
+>insert_tobeinserted,char *, /usr/local/src/postgresql/src/interfaces/ecpg/ecpglib/execute.c:1135:2
+Used: ecpg_free
+Ret. Type: bool
+>insert_tobeinserted,char *, /usr/local/src/postgresql/src/interfaces/ecpg/ecpglib/execute.c:1154:1
+Used: ecpg_free
+Ret. Type: bool
+--
+>CatCacheRemoveCTup,CatCTup *, /usr/local/src/postgresql/src/backend/utils/cache/catcache.c:538:1
+Used: pfree
+Ret. Type: void
 >init_spawned_worker_win32,WorkerInfo *, /usr/local/src/postgresql/src/bin/pg_dump/parallel.c:880:1
 Used: free
 Ret. Type: unsigned __stdcall 

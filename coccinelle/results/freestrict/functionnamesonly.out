@@ -24,6 +24,7 @@
 >cat2_str,char *, /usr/local/src/postgresql/src/interfaces/ecpg/preproc/preproc.c
 >CatalogCloseIndexes,CatalogIndexState, /usr/local/src/postgresql/src/backend/catalog/indexing.c
 >CatCacheRemoveCList,CatCList *, /usr/local/src/postgresql/src/backend/utils/cache/catcache.c
+>CatCacheRemoveCTup,CatCTup *, /usr/local/src/postgresql/src/backend/utils/cache/catcache.c
 >clear_and_pfree,text *, /usr/local/src/postgresql/contrib/pgcrypto/pgp-pgsql.c
 >closedir,DIR *, /usr/local/src/postgresql/src/port/dirent.c
 >close_tsvector_parser,TSVectorParseState, /usr/local/src/postgresql/src/backend/utils/adt/tsvector_parser.c
@@ -47,6 +48,7 @@
 >dshash_destroy,dshash_table *, /usr/local/src/postgresql/src/backend/lib/dshash.c
 >dshash_detach,dshash_table *, /usr/local/src/postgresql/src/backend/lib/dshash.c
 >dsm_detach,dsm_segment *, /usr/local/src/postgresql/src/backend/storage/ipc/dsm.c
+>ecpg_finish,struct connection *, /usr/local/src/postgresql/src/interfaces/ecpg/ecpglib/connect.c
 >ECPGfree_type,struct ECPGtype *, /usr/local/src/postgresql/src/interfaces/ecpg/preproc/type.c
 >ecpg_free,void *, /usr/local/src/postgresql/src/interfaces/ecpg/ecpglib/memory.c
 >ecpg_sqlca_key_destructor,void *, /usr/local/src/postgresql/src/interfaces/ecpg/ecpglib/misc.c
@@ -110,6 +112,7 @@
 >_h_spooldestroy,HSpool *, /usr/local/src/postgresql/src/backend/access/hash/hashsort.c
 >IndexScanEnd,IndexScanDesc, /usr/local/src/postgresql/src/backend/access/index/genam.c
 >init_spawned_worker_win32,WorkerInfo *, /usr/local/src/postgresql/src/bin/pg_dump/parallel.c
+>insert_tobeinserted,char *, /usr/local/src/postgresql/src/interfaces/ecpg/ecpglib/execute.c
 >intorel_destroy,DestReceiver *, /usr/local/src/postgresql/src/backend/commands/createas.c
 >inv_close,LargeObjectDesc *, /usr/local/src/postgresql/src/backend/storage/large_object/inv_api.c
 >irbt_free,RBTNode *, /usr/local/src/postgresql/src/test/modules/test_rbtree/test_rbtree.c

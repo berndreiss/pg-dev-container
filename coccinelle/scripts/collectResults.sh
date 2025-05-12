@@ -167,8 +167,8 @@ collect(){
    grep "^>" $RESULTS/$1ereport/functionnamesonly.out | cut -d ':' -f 1 | wc -l >> $STATS_FILE
    echo "SIGNATURE:" >> $STATS_FILE
    grep "^>" $RESULTS/$1signature/functionnamesonly.out | wc -l >> $STATS_FILE
-   echo "ALL WITHOUT REASSIGNED:" >> $STATS_FILE
-   grep "^>" allwithoutreassigned.tmp | sort | uniq | wc -l >> $STATS_FILE
+   #echo "ALL WITHOUT REASSIGNED:" >> $STATS_FILE
+   #grep "^>" allwithoutreassigned.tmp | sort | uniq | wc -l >> $STATS_FILE
    echo "ALL WITHOUT REASSIGNED AND STRICT:" >> $STATS_FILE
    grep "^>" allwithoutreassignedstrict.tmp | sort | uniq | wc -l >> $STATS_FILE
    echo "ALL WITHOUT REASSIGNED, STRICT, AND DEPENDENT:" >> $STATS_FILE

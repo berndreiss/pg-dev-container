@@ -60,7 +60,7 @@ Unable to parse #if condition: defined size_t
 HANDLING: /usr/local/src/postgresql/src/bin/pgbench/pgbench.c
 HANDLING: /usr/local/src/postgresql/src/bin/psql/startup.c
 HANDLING: /usr/local/src/postgresql/src/bin/psql/describe.c
-Note: processing took    14.6s: /usr/local/src/postgresql/src/bin/psql/describe.c
+Note: processing took    14.7s: /usr/local/src/postgresql/src/bin/psql/describe.c
 HANDLING: /usr/local/src/postgresql/src/bin/psql/crosstabview.c
 HANDLING: /usr/local/src/postgresql/src/bin/psql/common.c
 HANDLING: /usr/local/src/postgresql/src/bin/psql/large_obj.c
@@ -69,7 +69,7 @@ HANDLING: /usr/local/src/postgresql/src/bin/psql/command.c
 HANDLING: /usr/local/src/postgresql/src/bin/psql/psqlscanslash.c
 HANDLING: /usr/local/src/postgresql/src/bin/psql/stringutils.c
 HANDLING: /usr/local/src/postgresql/src/bin/psql/tab-complete.c
-Note: processing took  1085.5s: /usr/local/src/postgresql/src/bin/psql/tab-complete.c
+Note: processing took  1031.7s: /usr/local/src/postgresql/src/bin/psql/tab-complete.c
 HANDLING: /usr/local/src/postgresql/src/bin/psql/help.c
 Skipping: /usr/local/src/postgresql/src/bin/psql/sql_help.c
 HANDLING: /usr/local/src/postgresql/src/bin/psql/copy.c
@@ -1295,7 +1295,7 @@ Skipping: /usr/local/src/postgresql/src/interfaces/libpq/fe-secure-gssapi.c
 HANDLING: /usr/local/src/postgresql/src/interfaces/libpq/fe-print.c
 Skipping: /usr/local/src/postgresql/src/interfaces/libpq/fe-misc.c
 HANDLING: /usr/local/src/postgresql/src/interfaces/libpq/fe-connect.c
-Note: processing took   124.8s: /usr/local/src/postgresql/src/interfaces/libpq/fe-connect.c
+Note: processing took   125.6s: /usr/local/src/postgresql/src/interfaces/libpq/fe-connect.c
 Skipping: /usr/local/src/postgresql/src/interfaces/libpq/test/libpq_testclient.c
 Skipping: /usr/local/src/postgresql/src/interfaces/libpq/test/libpq_uri_regress.c
 HANDLING: /usr/local/src/postgresql/src/interfaces/libpq/fe-auth.c
@@ -1515,7 +1515,7 @@ Skipping: /usr/local/src/postgresql/contrib/ltree/crc32.c
 Skipping: /usr/local/src/postgresql/contrib/ltree/ltxtquery_io.c
 Skipping: /usr/local/src/postgresql/contrib/pgrowlocks/pgrowlocks.c
 #################################
-TIME PASSED: 1273 SECONDS
+TIME PASSED: 1220 SECONDS
 ########## ITERATION 1 ##########
 init_defs_builtins: /usr/lib/coccinelle/standard.h
 warning: init_spawned_worker_win3200: metavariable t2 not used in the - or context code
@@ -3041,7 +3041,7 @@ HANDLING: /usr/local/src/postgresql/src/interfaces/ecpg/preproc/type.c
 HANDLING: /usr/local/src/postgresql/src/interfaces/ecpg/preproc/ecpg_keywords.c
 HANDLING: /usr/local/src/postgresql/src/interfaces/ecpg/preproc/preproc.c
 Unable to parse #if condition: defined size_t
-Note: processing took    15.7s: /usr/local/src/postgresql/src/interfaces/ecpg/preproc/preproc.c
+Note: processing took    15.8s: /usr/local/src/postgresql/src/interfaces/ecpg/preproc/preproc.c
 HANDLING: /usr/local/src/postgresql/src/interfaces/ecpg/pgtypeslib/timestamp.c
 HANDLING: /usr/local/src/postgresql/src/interfaces/ecpg/pgtypeslib/common.c
 HANDLING: /usr/local/src/postgresql/src/interfaces/ecpg/pgtypeslib/interval.c
@@ -4663,7 +4663,7 @@ HANDLING: /usr/local/src/postgresql/src/interfaces/ecpg/preproc/type.c
 HANDLING: /usr/local/src/postgresql/src/interfaces/ecpg/preproc/ecpg_keywords.c
 HANDLING: /usr/local/src/postgresql/src/interfaces/ecpg/preproc/preproc.c
 Unable to parse #if condition: defined size_t
-Note: processing took    11.1s: /usr/local/src/postgresql/src/interfaces/ecpg/preproc/preproc.c
+Note: processing took    11.0s: /usr/local/src/postgresql/src/interfaces/ecpg/preproc/preproc.c
 HANDLING: /usr/local/src/postgresql/src/interfaces/ecpg/pgtypeslib/timestamp.c
 HANDLING: /usr/local/src/postgresql/src/interfaces/ecpg/pgtypeslib/common.c
 HANDLING: /usr/local/src/postgresql/src/interfaces/ecpg/pgtypeslib/interval.c
@@ -4984,7 +4984,7 @@ HANDLING: /usr/local/src/postgresql/contrib/ltree/crc32.c
 HANDLING: /usr/local/src/postgresql/contrib/ltree/ltxtquery_io.c
 HANDLING: /usr/local/src/postgresql/contrib/pgrowlocks/pgrowlocks.c
 #################################
-TIME PASSED: 118 SECONDS
+TIME PASSED: 116 SECONDS
 ########## ITERATION 3 ##########
 init_defs_builtins: /usr/lib/coccinelle/standard.h
 warning: local_destroy00: metavariable t2 not used in the - or context code
@@ -7581,7 +7581,7 @@ HANDLING: /usr/local/src/postgresql/src/interfaces/ecpg/preproc/type.c
 HANDLING: /usr/local/src/postgresql/src/interfaces/ecpg/preproc/ecpg_keywords.c
 HANDLING: /usr/local/src/postgresql/src/interfaces/ecpg/preproc/preproc.c
 Unable to parse #if condition: defined size_t
-Note: processing took    32.4s: /usr/local/src/postgresql/src/interfaces/ecpg/preproc/preproc.c
+Note: processing took    32.3s: /usr/local/src/postgresql/src/interfaces/ecpg/preproc/preproc.c
 HANDLING: /usr/local/src/postgresql/src/interfaces/ecpg/pgtypeslib/timestamp.c
 HANDLING: /usr/local/src/postgresql/src/interfaces/ecpg/pgtypeslib/common.c
 HANDLING: /usr/local/src/postgresql/src/interfaces/ecpg/pgtypeslib/interval.c
@@ -7906,4 +7906,4 @@ TIME PASSED: 628 SECONDS
 #################################
 DONE
 NUMBER OF ITERATIONS: 4
-TIME PASSED OVERALL: 36 MINUTES 51 SECONDS
+TIME PASSED OVERALL: 35 MINUTES 56 SECONDS

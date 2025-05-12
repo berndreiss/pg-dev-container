@@ -59,6 +59,13 @@ Ret. Type: void
 Used: pg_free
 Ret. Type: PgBenchExpr *
 --
+>insert_tobeinserted,char *, /usr/local/src/postgresql/src/interfaces/ecpg/ecpglib/execute.c:1135:2
+Used: ecpg_free
+Ret. Type: bool
+>insert_tobeinserted,char *, /usr/local/src/postgresql/src/interfaces/ecpg/ecpglib/execute.c:1154:1
+Used: ecpg_free
+Ret. Type: bool
+--
 >gzip_pfree,void *, /usr/local/src/postgresql/src/bin/pg_basebackup/bbstreamer_gzip.c:362:1
 Used: pfree
 Ret. Type: void
@@ -69,7 +76,9 @@ Ret. Type: void
 >CatCacheRemoveCList,CatCList *, /usr/local/src/postgresql/src/backend/utils/cache/catcache.c:582:1
 Used: pfree
 Ret. Type: void
---
+>CatCacheRemoveCTup,CatCTup *, /usr/local/src/postgresql/src/backend/utils/cache/catcache.c:538:1
+Used: pfree
+Ret. Type: void
 >RelationDestroyRelation,Relation, /usr/local/src/postgresql/src/backend/utils/cache/relcache.c:2513:1
 Used: pfree
 Ret. Type: void

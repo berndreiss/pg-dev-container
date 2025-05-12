@@ -10,13 +10,6 @@ Ret. Type: PGresult *
 Used: ecpg_free
 Ret. Type: bool
 --
->insert_tobeinserted,char *, /usr/local/src/postgresql/src/interfaces/ecpg/ecpglib/execute.c:1135:2
-Used: ecpg_free
-Ret. Type: bool
->insert_tobeinserted,char *, /usr/local/src/postgresql/src/interfaces/ecpg/ecpglib/execute.c:1154:1
-Used: ecpg_free
-Ret. Type: bool
---
 >dofindsubquery,QTNode *, /usr/local/src/postgresql/src/backend/utils/adt/tsquery_rewrite.c:250:3
 Used: pfree
 Ret. Type: QTNode *

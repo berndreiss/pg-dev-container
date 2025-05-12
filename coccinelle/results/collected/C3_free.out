@@ -17,17 +17,9 @@ Ret. Type: char *
 Used: pg_free
 Ret. Type: void
 --
->ecpg_finish,struct connection *, /usr/local/src/postgresql/src/interfaces/ecpg/ecpglib/connect.c:139:2
-Used: ecpg_free
-Ret. Type: void
---
 >quote_postgres,char *, /usr/local/src/postgresql/src/interfaces/ecpg/ecpglib/execute.c:77:2
 Used: ecpg_free
 Ret. Type: char *
---
->CatCacheRemoveCTup,CatCTup *, /usr/local/src/postgresql/src/backend/utils/cache/catcache.c:538:1
-Used: pfree
-Ret. Type: void
 --
 >pagetable_free,void *, /usr/local/src/postgresql/src/backend/nodes/tidbitmap.c:1528:2
 Used: pfree

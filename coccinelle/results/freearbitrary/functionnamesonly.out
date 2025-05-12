@@ -11,7 +11,6 @@
 >dofindsubquery,QTNode *, /usr/local/src/postgresql/src/backend/utils/adt/tsquery_rewrite.c
 >freeJsonLexContext,JsonLexContext *, /usr/local/src/postgresql/src/common/jsonapi.c
 >HandleEndOfCopyStream,char *, /usr/local/src/postgresql/src/bin/pg_basebackup/receivelog.c
->insert_tobeinserted,char *, /usr/local/src/postgresql/src/interfaces/ecpg/ecpglib/execute.c
 >json_manifest_scalar,char *, /usr/local/src/postgresql/src/common/parse_manifest.c
 >merge_clump,Clump *, /usr/local/src/postgresql/src/backend/optimizer/geqo/geqo_eval.c
 >recursive_revoke,Acl *, /usr/local/src/postgresql/src/backend/utils/adt/acl.c
