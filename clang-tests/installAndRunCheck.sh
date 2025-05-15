@@ -1,4 +1,4 @@
 #!/bin/bash
-cd ../llvm-project-v19.1.7/config/ && ./install.sh
+cd $LLVM_HOME/config/ && git pull && ./install.sh
 cd -
 ./runCheck.sh
