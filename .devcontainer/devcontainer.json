@@ -19,7 +19,6 @@
         }
      },
     "remoteUser": "vscode",
-    "postStartCommand": "pg_ctl start -D /home/vscode/pgdata -l /home/vscode/postgresql.log && sudo apt -y install coccinelle",
-    "tmp_removed": "&& cd /home/vscode/llvm-project && git pull && cd buildNinja && sudo ninja -j16 install clang",
+    "postStartCommand": "pg_ctl start -D /home/vscode/pgdata -l /home/vscode/postgresql.log && su root && apt -y install coccinelle && cd /workspaces/pg-dev-container && if [[ -d llvm-project ]];then cd llvm-project; git pull; cd config; ./install; fi"
     "forwardPorts": [5432]
 }
