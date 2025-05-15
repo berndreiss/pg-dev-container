@@ -1,0 +1,1 @@
+/usr/bin/clang++ -fPIC -Xlinker --dependency-file=CMakeFiles/MyChecker.dir/link.d -shared -Wl,-soname,libMyChecker.so -o libMyChecker.so CMakeFiles/MyChecker.dir/MyChecker.cpp.o  /usr/lib/libclang-cpp.so.19.1

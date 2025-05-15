@@ -1,0 +1,9 @@
+/home/bernd/repos/pg_ladybug/src/postgreschecker/build/CMakeFiles/intrinsics_gen.dir
+/home/bernd/repos/pg_ladybug/src/postgreschecker/build/CMakeFiles/omp_gen.dir
+/home/bernd/repos/pg_ladybug/src/postgreschecker/build/CMakeFiles/acc_gen.dir
+/home/bernd/repos/pg_ladybug/src/postgreschecker/build/CMakeFiles/ARMTargetParserTableGen.dir
+/home/bernd/repos/pg_ladybug/src/postgreschecker/build/CMakeFiles/AArch64TargetParserTableGen.dir
+/home/bernd/repos/pg_ladybug/src/postgreschecker/build/CMakeFiles/RISCVTargetParserTableGen.dir
+/home/bernd/repos/pg_ladybug/src/postgreschecker/build/CMakeFiles/postgres.dir
+/home/bernd/repos/pg_ladybug/src/postgreschecker/build/CMakeFiles/edit_cache.dir
+/home/bernd/repos/pg_ladybug/src/postgreschecker/build/CMakeFiles/rebuild_cache.dir
