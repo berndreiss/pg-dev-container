@@ -1,2 +1,2 @@
 #!/bin/bash
-$LLVM_HOME/install/bin/clang --analyze -Xanalyzer -analyzer-checker=postgres.Postgres-Checker test.c
+$LLVM_HOME/release/bin/clang --analyze -Xanalyzer -analyzer-checker=postgres.Postgres-Checker test.c
