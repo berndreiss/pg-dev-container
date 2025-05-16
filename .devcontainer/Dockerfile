@@ -34,6 +34,6 @@ RUN su - root -c "apt -y install neovim ninja-build cmake"
 #RUN su - vscode -c "cd  /home/vscode && git clone --depth=1 https://github.com/berndreiss/llvm-project"
 
 ENV LLVM_HOME=/home/vscode/llvm-project
-ENV LLVM_INSTALL_CORES=10
+ENV LLVM_INSTALL_CORES=5
 
 VOLUME /home/vscode/pgdata

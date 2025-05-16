@@ -5,22 +5,33 @@
 
 struct Test{
   int field;
-  void * pointer;
+  char * pointer;
 };
 
 void customFree(char *s){
   free(s);
 }
+void second(char *s){
+  pfree(s, 2);
+}
+void first(char *s){
+  second(s);
+
+}
 
 int main(int a, char **args){
-  //struct Test test;
+  struct Test test;
   //test.field = 4;
   //test.field = 'a';
   //test.field++;
-  char *str = malloc(10 * sizeof(char));
+  test.pointer = malloc(10 * sizeof(char));
   //char *str2 = malloc(10 * sizeof(char));
 
-  customFree(str);
+  //free(test.pointer);
+  //free(test.pointer);
+  first(test.pointer);
+  first(test.pointer);
+  //pfree(str, 2);
   //test.pointer = malloc(10 * sizeof(char));
   //printf("%d\n", test.field);
   //strcpy(str, "Hello!\n\0");
@@ -33,6 +44,6 @@ int main(int a, char **args){
   //printf(str);
 
   //printf("%d", test.field);
-  char c = str[0];
+  //char c = test.pointer[0];
 
 }
