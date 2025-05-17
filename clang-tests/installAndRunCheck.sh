@@ -1,4 +1,11 @@
 #!/bin/bash
-cd $LLVM_HOME/config/ && git pull && ./install.sh
+cd /home/vscode/pg_ladybug
+git pull
+cmake -S . -B build
+make -C build
+sudo make -C build install
 cd -
-./runCheck.sh
+clang-19 --analyze \
+	-Xclang -load -Xclang /usr/local/lib/libPostgresChecker.so \
+	-Xanalyzer -analyzer-checker=postgres.PostgresChecker \
+	test.c

@@ -1,2 +1,3 @@
 
-void pfree(void *p, int i);
+void *palloc(int size);
+void pfree(void *p);

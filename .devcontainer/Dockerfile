@@ -2,7 +2,7 @@ FROM mcr.microsoft.com/devcontainers/base:bookworm
 ARG PGVERSION
 
 RUN apt update \
-   && apt -y install python3-bpfcc systemtap-sdt-dev flex bison lcov build-essential libxml2-dev libssl-dev zlib1g-dev libreadline-dev llvm llvm-15 llvm-15-dev clang libicu-dev icu-devtools pkgconf vim gdb linux-perf \
+      && apt -y install python3-bpfcc systemtap-sdt-dev flex bison lcov build-essential libxml2-dev libssl-dev zlib1g-dev libreadline-dev llvm llvm-15 llvm-15-dev clang libicu-dev icu-devtools pkgconf vim gdb linux-perf \
    && mkdir -p /usr/local/src/postgresql \ 
    && wget -q -O /tmp/postgresql.tar.bz2 https://ftp.postgresql.org/pub/source/v${PGVERSION}/postgresql-${PGVERSION}.tar.bz2 \
    && tar jxf /tmp/postgresql.tar.bz2 --strip-components 1 -C /usr/local/src/postgresql \
@@ -30,10 +30,8 @@ RUN apt update \
    && su - vscode -c "mkdir /home/vscode/pgdata" \
    && su - vscode -c "/usr/local/postgresql-${PGVERSION}/bin/initdb -D /home/vscode/pgdata -E UTF-8"
 
-RUN su - root -c "apt -y install neovim ninja-build cmake"
-#RUN su - vscode -c "cd  /home/vscode && git clone --depth=1 https://github.com/berndreiss/llvm-project"
-
-ENV LLVM_HOME=/home/vscode/llvm-project
-ENV LLVM_INSTALL_CORES=5
+RUN su - root -c "apt -y install cmake llvm-19 llvm-19-dev clang-19 libclang-19-dev clang-tidy-19"
+RUN su - root -c "apt -y install neovim ninja-build coccinelle"
+RUN su - root -c "apt -y remove llvm-14*"
 
 VOLUME /home/vscode/pgdata
