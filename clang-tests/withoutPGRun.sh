@@ -1,2 +1,3 @@
 #!/bin/bash
-clang --analyze test.c
+clear
+clang-19 --analyze test.c
