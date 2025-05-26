@@ -16,14 +16,6 @@
 >SetConstraintStateAddItem,SetConstraintState, /usr/local/src/postgresql/src/backend/commands/trigger.c
 >SPI_repalloc,void *, /usr/local/src/postgresql/src/backend/executor/spi.c
 >xml_repalloc,void *, /usr/local/src/postgresql/src/backend/utils/adt/xml.c
->yyensure_buffer_stack,yyscan_t, /usr/local/src/postgresql/src/backend/parser/scan.c
->yyensure_buffer_stack,yyscan_t, /usr/local/src/postgresql/src/bin/pgbench/exprscan.c
->yyensure_buffer_stack,yyscan_t, /usr/local/src/postgresql/src/bin/psql/psqlscanslash.c
->yyensure_buffer_stack,yyscan_t, /usr/local/src/postgresql/src/fe_utils/psqlscan.c
->yy_get_next_buffer,yyscan_t, /usr/local/src/postgresql/src/backend/parser/scan.c
->yy_get_next_buffer,yyscan_t, /usr/local/src/postgresql/src/bin/pgbench/exprscan.c
->yy_get_next_buffer,yyscan_t, /usr/local/src/postgresql/src/bin/psql/psqlscanslash.c
->yy_get_next_buffer,yyscan_t, /usr/local/src/postgresql/src/fe_utils/psqlscan.c
 >yyrealloc,void *, /usr/local/src/postgresql/src/backend/bootstrap/bootscanner.c
 >yyrealloc,void *, /usr/local/src/postgresql/src/backend/replication/repl_scanner.c
 >yyrealloc,void *, /usr/local/src/postgresql/src/backend/replication/syncrep_scanner.c

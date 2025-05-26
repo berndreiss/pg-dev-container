@@ -5,11 +5,11 @@
 RESULTS=../results
 COLLECTED=$RESULTS/collected
 PRINT_LINES=2
-REASSIGN=C1
-STRICT=C2
-DEPENDENT=C3
-ERROR=C4
-ARBITRARY=C5
+STRICT=C1
+DEPENDENT=C2
+ERROR=C3
+ARBITRARY=C4
+REASSIGN=C5 
 
 if [[ -d $COLLECTED ]]; then
    rm -rf $COLLECTED
@@ -80,6 +80,8 @@ collect(){
       fi
    done
 
+   #ADD MANUALLY ADDED
+   cat exceptions/$1samereturn.add >> samereturn.tmp
    #GET RID OF DUPLICATES    
    cat samereturn.tmp | cut -d ':' -f 1 | sort | uniq > $RESULTS/$1samereturn/functionnamesonly.out
    cp $RESULTS/$1samereturn/functionnamesonly.out $COLLECTED/${REASSIGN}_$1_functionsonly.out
@@ -142,10 +144,6 @@ collect(){
    grep -A $PRINT_LINES -F -f $RESULTS/$1arbitrary/functionnamesonly.out $RESULTS/$1/results.out > $RESULTS/$1arbitrary/results.out
    cp $RESULTS/$1arbitrary/results.out $COLLECTED/${ARBITRARY}_$1.out
 
-   #GET ALL FUNCTIONS THAT APPEAR MORE THAN ONCE IN THE RESULTS
-   cat $RESULTS/$1/results.out | grep ">" | sort | uniq -d > doubled.tmp
-   grep -A $PRINT_LINES -F -f doubled.tmp $RESULTS/$1/results.out > $RESULTS/$1doubled.out
-
    #RETRIEVE FULL FUNCTION NAMES ONLY WITH ALL INFORMATION FOR COLLECTED
    grep "^>" $COLLECTED/${REASSIGN}_$1.out | sort | uniq > $COLLECTED/${REASSIGN}_$1_functionsonly.out
    grep "^>" $COLLECTED/${STRICT}_$1.out | sort | uniq > $COLLECTED/${STRICT}_$1_functionsonly.out
@@ -167,8 +165,6 @@ collect(){
    grep "^>" $RESULTS/$1ereport/functionnamesonly.out | cut -d ':' -f 1 | wc -l >> $STATS_FILE
    echo "SIGNATURE:" >> $STATS_FILE
    grep "^>" $RESULTS/$1signature/functionnamesonly.out | wc -l >> $STATS_FILE
-   #echo "ALL WITHOUT REASSIGNED:" >> $STATS_FILE
-   #grep "^>" allwithoutreassigned.tmp | sort | uniq | wc -l >> $STATS_FILE
    echo "ALL WITHOUT REASSIGNED AND STRICT:" >> $STATS_FILE
    grep "^>" allwithoutreassignedstrict.tmp | sort | uniq | wc -l >> $STATS_FILE
    echo "ALL WITHOUT REASSIGNED, STRICT, AND DEPENDENT:" >> $STATS_FILE
@@ -179,8 +175,6 @@ collect(){
    grep "^>" $RESULTS/$1strictwithouthsignature.out | sort | uniq | wc -l >> $STATS_FILE
    echo "SIGNATURE WITHOUT STRICT:" >> $STATS_FILE
    grep "^>" $RESULTS/$1signaturewithouthstrict.out | sort | uniq | wc -l >> $STATS_FILE
-   echo "DOUBLE:" >> $STATS_FILE
-   grep "^>" $RESULTS/$1doubled.out | sort | uniq | wc -l >> $STATS_FILE
    echo "" >> $STATS_FILE
 
    #PRINT STATS TO THE OUTPUT

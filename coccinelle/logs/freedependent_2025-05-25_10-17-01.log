@@ -2282,7 +2282,7 @@ HANDLING: /usr/local/src/postgresql/src/bin/pg_dump/pg_backup_tar.c
 HANDLING: /usr/local/src/postgresql/src/bin/pg_dump/pg_backup_db.c
 HANDLING: /usr/local/src/postgresql/src/bin/pg_dump/parallel.c
 HANDLING: /usr/local/src/postgresql/src/bin/pg_dump/pg_dump.c
-Note: processing took    18.4s: /usr/local/src/postgresql/src/bin/pg_dump/pg_dump.c
+Note: processing took    18.6s: /usr/local/src/postgresql/src/bin/pg_dump/pg_dump.c
 HANDLING: /usr/local/src/postgresql/src/bin/pg_dump/filter.c
 HANDLING: /usr/local/src/postgresql/src/bin/pg_dump/pg_backup_null.c
 HANDLING: /usr/local/src/postgresql/src/bin/pg_dump/pg_backup_directory.c
@@ -2314,7 +2314,6 @@ HANDLING: /usr/local/src/postgresql/src/bin/pgbench/exprscan.c
 HANDLING: /usr/local/src/postgresql/src/bin/pgbench/exprparse.c
 Unable to parse #if condition: defined size_t
 HANDLING: /usr/local/src/postgresql/src/bin/pgbench/pgbench.c
-Note: processing took    10.1s: /usr/local/src/postgresql/src/bin/pgbench/pgbench.c
 HANDLING: /usr/local/src/postgresql/src/bin/psql/startup.c
 HANDLING: /usr/local/src/postgresql/src/bin/psql/describe.c
 HANDLING: /usr/local/src/postgresql/src/bin/psql/crosstabview.c
@@ -2525,7 +2524,7 @@ HANDLING: /usr/local/src/postgresql/src/backend/utils/adt/jsonpath_gram.c
 Unable to parse #if condition: defined size_t
 HANDLING: /usr/local/src/postgresql/src/backend/utils/adt/array_typanalyze.c
 HANDLING: /usr/local/src/postgresql/src/backend/utils/adt/ruleutils.c
-Note: processing took    11.5s: /usr/local/src/postgresql/src/backend/utils/adt/ruleutils.c
+Note: processing took    11.6s: /usr/local/src/postgresql/src/backend/utils/adt/ruleutils.c
 HANDLING: /usr/local/src/postgresql/src/backend/utils/adt/regproc.c
 HANDLING: /usr/local/src/postgresql/src/backend/utils/adt/timestamp.c
 HANDLING: /usr/local/src/postgresql/src/backend/utils/adt/varchar.c
@@ -2782,7 +2781,7 @@ HANDLING: /usr/local/src/postgresql/src/backend/commands/proclang.c
 HANDLING: /usr/local/src/postgresql/src/backend/commands/discard.c
 HANDLING: /usr/local/src/postgresql/src/backend/commands/vacuumparallel.c
 HANDLING: /usr/local/src/postgresql/src/backend/commands/tablecmds.c
-Note: processing took    15.6s: /usr/local/src/postgresql/src/backend/commands/tablecmds.c
+Note: processing took    15.3s: /usr/local/src/postgresql/src/backend/commands/tablecmds.c
 HANDLING: /usr/local/src/postgresql/src/backend/commands/policy.c
 HANDLING: /usr/local/src/postgresql/src/backend/commands/prepare.c
 HANDLING: /usr/local/src/postgresql/src/backend/commands/conversioncmds.c
@@ -2872,7 +2871,7 @@ HANDLING: /usr/local/src/postgresql/src/backend/port/atomics.c
 HANDLING: /usr/local/src/postgresql/src/backend/catalog/pg_shdepend.c
 HANDLING: /usr/local/src/postgresql/src/backend/catalog/pg_range.c
 HANDLING: /usr/local/src/postgresql/src/backend/catalog/objectaddress.c
-Note: processing took    11.1s: /usr/local/src/postgresql/src/backend/catalog/objectaddress.c
+Note: processing took    11.0s: /usr/local/src/postgresql/src/backend/catalog/objectaddress.c
 HANDLING: /usr/local/src/postgresql/src/backend/catalog/pg_parameter_acl.c
 HANDLING: /usr/local/src/postgresql/src/backend/catalog/pg_conversion.c
 HANDLING: /usr/local/src/postgresql/src/backend/catalog/pg_db_role_setting.c
@@ -2926,7 +2925,7 @@ HANDLING: /usr/local/src/postgresql/src/backend/snowball/libstemmer/stem_UTF_8_r
 HANDLING: /usr/local/src/postgresql/src/backend/snowball/libstemmer/stem_UTF_8_turkish.c
 HANDLING: /usr/local/src/postgresql/src/backend/snowball/libstemmer/stem_UTF_8_italian.c
 HANDLING: /usr/local/src/postgresql/src/backend/snowball/libstemmer/stem_UTF_8_serbian.c
-Note: processing took    12.3s: /usr/local/src/postgresql/src/backend/snowball/libstemmer/stem_UTF_8_serbian.c
+Note: processing took    13.0s: /usr/local/src/postgresql/src/backend/snowball/libstemmer/stem_UTF_8_serbian.c
 HANDLING: /usr/local/src/postgresql/src/backend/snowball/libstemmer/stem_UTF_8_tamil.c
 HANDLING: /usr/local/src/postgresql/src/backend/snowball/libstemmer/stem_ISO_8859_2_romanian.c
 HANDLING: /usr/local/src/postgresql/src/backend/snowball/libstemmer/stem_ISO_8859_1_spanish.c
@@ -3333,11 +3332,11 @@ HANDLING: /usr/local/src/postgresql/src/backend/parser/parse_expr.c
 HANDLING: /usr/local/src/postgresql/src/backend/parser/parse_relation.c
 HANDLING: /usr/local/src/postgresql/src/backend/parser/parse_coerce.c
 HANDLING: /usr/local/src/postgresql/src/backend/parser/scan.c
-Note: processing took    17.0s: /usr/local/src/postgresql/src/backend/parser/scan.c
+Note: processing took    13.0s: /usr/local/src/postgresql/src/backend/parser/scan.c
 HANDLING: /usr/local/src/postgresql/src/backend/parser/parse_utilcmd.c
 HANDLING: /usr/local/src/postgresql/src/backend/parser/gram.c
 Unable to parse #if condition: defined size_t
-Note: processing took    24.0s: /usr/local/src/postgresql/src/backend/parser/gram.c
+Note: processing took    23.9s: /usr/local/src/postgresql/src/backend/parser/gram.c
 HANDLING: /usr/local/src/postgresql/src/backend/parser/parse_node.c
 HANDLING: /usr/local/src/postgresql/src/backend/parser/parse_param.c
 HANDLING: /usr/local/src/postgresql/src/backend/parser/scansup.c
@@ -3455,7 +3454,7 @@ HANDLING: /usr/local/src/postgresql/src/interfaces/ecpg/preproc/type.c
 HANDLING: /usr/local/src/postgresql/src/interfaces/ecpg/preproc/ecpg_keywords.c
 HANDLING: /usr/local/src/postgresql/src/interfaces/ecpg/preproc/preproc.c
 Unable to parse #if condition: defined size_t
-Note: processing took    64.7s: /usr/local/src/postgresql/src/interfaces/ecpg/preproc/preproc.c
+Note: processing took    63.2s: /usr/local/src/postgresql/src/interfaces/ecpg/preproc/preproc.c
 HANDLING: /usr/local/src/postgresql/src/interfaces/ecpg/pgtypeslib/timestamp.c
 HANDLING: /usr/local/src/postgresql/src/interfaces/ecpg/pgtypeslib/common.c
 HANDLING: /usr/local/src/postgresql/src/interfaces/ecpg/pgtypeslib/interval.c
@@ -3776,7 +3775,7 @@ HANDLING: /usr/local/src/postgresql/contrib/ltree/crc32.c
 HANDLING: /usr/local/src/postgresql/contrib/ltree/ltxtquery_io.c
 HANDLING: /usr/local/src/postgresql/contrib/pgrowlocks/pgrowlocks.c
 #################################
-TIME PASSED: 1401 SECONDS
+TIME PASSED: 1391 SECONDS
 ########## ITERATION 1 ##########
 init_defs_builtins: /usr/lib/coccinelle/standard.h
 warning: ReorderBufferFreeSnap00: metavariable t2 not used in the - or context code
@@ -5355,4 +5354,4 @@ TIME PASSED: 18 SECONDS
 #################################
 DONE
 NUMBER OF ITERATIONS: 2
-TIME PASSED OVERALL: 23 MINUTES 39 SECONDS
+TIME PASSED OVERALL: 23 MINUTES 29 SECONDS

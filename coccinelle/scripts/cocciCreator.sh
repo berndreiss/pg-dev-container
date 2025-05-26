@@ -79,6 +79,9 @@ createScript(){
    if [ "$ftype" = "yy_size_t" ]; then
       continue
    fi
+   if [ "$ftype" = "yyscan_t" ]; then
+      continue
+   fi
    if [ "$ftype" = "Size" ]; then
       continue
    fi
@@ -137,7 +140,7 @@ fi
 #WE KEEP TRACK OF FUNCTIONS FOUND IN THE PREVIOUS ITERATION IN
 #THE FILE 'functionsLastIteration'
 #PASS INITIAL FUNCTION NAMES FOR 'ITERATION -1'
-if [[ "$PROTOTYPE" == "dependent" || "$PROTOTYPE" == "ereport" ]]; then
+if [[ "$PROTOTYPE" == "dependent" || "$PROTOTYPE" == "ereport" || "$PROTOTYPE" == "double" ]]; then
   grep "^>" $RESULTS/$FUNCTION/$RESULTS_FILE_NAME | sort | uniq >> $TMP_PATH/functionsLastIteration
 else
   echo ">$FUNCTION,void *" >> $TMP_PATH/functionsLastIteration

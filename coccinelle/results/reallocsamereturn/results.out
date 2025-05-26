@@ -33,6 +33,9 @@ Ret. Type: void *
 Used: realloc
 Ret. Type: void *
 --
+>ecpg_realloc,void *, /usr/local/src/postgresql/src/interfaces/ecpg/ecpglib/memory.c:35:25
+Used: realloc
+Ret. Type: char *
 >yyrealloc,void *, /usr/local/src/postgresql/src/test/isolation/specscanner.c:2194:8
 Used: realloc
 Ret. Type: void *

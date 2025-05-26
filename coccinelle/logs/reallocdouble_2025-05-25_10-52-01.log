@@ -1,251 +1,46 @@
 STARTING -> /usr/local/src/postgresql
 ########## ITERATION 0 ##########
 init_defs_builtins: /usr/lib/coccinelle/standard.h
-warning: addHLParsedLex0: metavariable t2 not used in the - or context code
-warning: addHLParsedLex1: metavariable t2 not used in the - or context code
-warning: add_partial_path2: metavariable t2 not used in the - or context code
-warning: add_path3: metavariable t2 not used in the - or context code
-warning: array_free_iterator4: metavariable t2 not used in the - or context code
-warning: avlFree5: metavariable t2 not used in the - or context code
-warning: bbstreamer_gzip_decompressor_free6: metavariable t2 not used in the - or context code
-warning: bbstreamer_lz4_compressor_free7: metavariable t2 not used in the - or context code
-warning: bbstreamer_lz4_decompressor_free8: metavariable t2 not used in the - or context code
-warning: bbstreamer_recovery_injector_free9: metavariable t2 not used in the - or context code
-warning: bbstreamer_tar_archiver_free10: metavariable t2 not used in the - or context code
-warning: bbstreamer_tar_terminator_free11: metavariable t2 not used in the - or context code
-warning: bbstreamer_zstd_compressor_free12: metavariable t2 not used in the - or context code
-warning: bbstreamer_zstd_decompressor_free13: metavariable t2 not used in the - or context code
-warning: binaryheap_free14: metavariable t2 not used in the - or context code
-warning: BipartiteMatchFree15: metavariable t2 not used in the - or context code
-warning: BlockRefTableFreeEntry16: metavariable t2 not used in the - or context code
-warning: bloom_free17: metavariable t2 not used in the - or context code
-warning: bms_add_members18: metavariable t2 not used in the - or context code
-warning: bms_del_member19: metavariable t2 not used in the - or context code
-warning: bms_del_members20: metavariable t2 not used in the - or context code
-warning: bms_free21: metavariable t2 not used in the - or context code
-warning: bms_int_members22: metavariable t2 not used in the - or context code
-warning: bms_int_members23: metavariable t2 not used in the - or context code
-warning: bms_replace_members24: metavariable t2 not used in the - or context code
-warning: bool_substitute_hook25: metavariable t2 not used in the - or context code
-warning: brin_free_tuple26: metavariable t2 not used in the - or context code
-warning: brinRevmapTerminate27: metavariable t2 not used in the - or context code
-warning: _bt_insertonpg28: metavariable t2 not used in the - or context code
-warning: _bt_spooldestroy29: metavariable t2 not used in the - or context code
-warning: BufFileClose30: metavariable t2 not used in the - or context code
-warning: buf_finalize31: metavariable t2 not used in the - or context code
-warning: BumpBlockFree32: metavariable t2 not used in the - or context code
-warning: BumpDelete33: metavariable t2 not used in the - or context code
-warning: cat2_str34: metavariable t2 not used in the - or context code
-warning: cat2_str35: metavariable t2 not used in the - or context code
-warning: CatalogCloseIndexes36: metavariable t2 not used in the - or context code
-warning: CatCacheRemoveCList37: metavariable t2 not used in the - or context code
-warning: CatCacheRemoveCTup38: metavariable t2 not used in the - or context code
-warning: clean_NOT_intree39: metavariable t2 not used in the - or context code
-warning: clean_NOT_intree40: metavariable t2 not used in the - or context code
-warning: clean_NOT_intree41: metavariable t2 not used in the - or context code
-warning: clean_stopword_intree42: metavariable t2 not used in the - or context code
-warning: clean_stopword_intree43: metavariable t2 not used in the - or context code
-warning: clean_stopword_intree44: metavariable t2 not used in the - or context code
-warning: clear_and_pfree45: metavariable t2 not used in the - or context code
-warning: closedir46: metavariable t2 not used in the - or context code
-warning: close_tsvector_parser47: metavariable t2 not used in the - or context code
-warning: combo_free48: metavariable t2 not used in the - or context code
-warning: conditional_stack_destroy49: metavariable t2 not used in the - or context code
-warning: copy_dest_destroy50: metavariable t2 not used in the - or context code
-warning: CopyMultiInsertBufferCleanup51: metavariable t2 not used in the - or context code
-warning: createNewConnection53: metavariable t2 not used in the - or context code
-warning: dblink_security_check54: metavariable t2 not used in the - or context code
-warning: deallocate_one55: metavariable t2 not used in the - or context code
-warning: DeCloneArchive56: metavariable t2 not used in the - or context code
-warning: DependencyGenerator_free57: metavariable t2 not used in the - or context code
-warning: descriptor_free58: metavariable t2 not used in the - or context code
-warning: DestroyBlockRefTableReader59: metavariable t2 not used in the - or context code
-warning: DestroyBlockRefTableWriter60: metavariable t2 not used in the - or context code
-warning: DestroyParallelContext61: metavariable t2 not used in the - or context code
-warning: destroyPQExpBuffer62: metavariable t2 not used in the - or context code
-warning: destroyStringInfo63: metavariable t2 not used in the - or context code
-warning: DestroyTupleQueueReader64: metavariable t2 not used in the - or context code
-warning: digest_free65: metavariable t2 not used in the - or context code
-warning: dir_free66: metavariable t2 not used in the - or context code
-warning: dofindsubquery67: metavariable t2 not used in the - or context code
-warning: dsa_detach68: metavariable t2 not used in the - or context code
-warning: dshash_destroy69: metavariable t2 not used in the - or context code
-warning: dshash_detach70: metavariable t2 not used in the - or context code
-warning: dsm_detach71: metavariable t2 not used in the - or context code
-warning: dump_variables72: metavariable t2 not used in the - or context code
-warning: ecpg_finish73: metavariable t2 not used in the - or context code
-warning: ECPGfree_type74: metavariable t2 not used in the - or context code
-warning: emit_audit_message77: metavariable t2 not used in the - or context code
-warning: emit_audit_message78: metavariable t2 not used in the - or context code
-warning: EndCompressFileHandle79: metavariable t2 not used in the - or context code
-warning: EndCompressor80: metavariable t2 not used in the - or context code
-warning: EndCopy81: metavariable t2 not used in the - or context code
-warning: EndCopyFrom82: metavariable t2 not used in the - or context code
-warning: end_tup_output83: metavariable t2 not used in the - or context code
-warning: ExecDropSingleTupleTableSlot84: metavariable t2 not used in the - or context code
-warning: ExecForceStoreHeapTuple85: metavariable t2 not used in the - or context code
-warning: ExecForceStoreHeapTuple86: metavariable t2 not used in the - or context code
-warning: ExecForceStoreMinimalTuple87: metavariable t2 not used in the - or context code
-warning: ExecHashTableDestroy88: metavariable t2 not used in the - or context code
-warning: ExecParallelCleanup89: metavariable t2 not used in the - or context code
-warning: finish_edata90: metavariable t2 not used in the - or context code
-warning: FreeAccessStrategy91: metavariable t2 not used in the - or context code
-warning: freeAndGetParent92: metavariable t2 not used in the - or context code
-warning: free_attrmap93: metavariable t2 not used in the - or context code
-warning: FreeBulkInsertState94: metavariable t2 not used in the - or context code
-warning: free_child_join_sjinfo95: metavariable t2 not used in the - or context code
-warning: free_chromo96: metavariable t2 not used in the - or context code
-warning: free_city_table97: metavariable t2 not used in the - or context code
-warning: free_command98: metavariable t2 not used in the - or context code
-warning: FreeConfigVariable99: metavariable t2 not used in the - or context code
-warning: free_conversion_map100: metavariable t2 not used in the - or context code
-warning: free_copy_options101: metavariable t2 not used in the - or context code
-warning: free_edge_table102: metavariable t2 not used in the - or context code
-warning: FreeErrorData103: metavariable t2 not used in the - or context code
-warning: FreeExprContext104: metavariable t2 not used in the - or context code
-warning: FreeFakeRelcacheEntry105: metavariable t2 not used in the - or context code
-warning: freeGinBtreeStack106: metavariable t2 not used in the - or context code
-warning: freeJsonLexContext107: metavariable t2 not used in the - or context code
-warning: free_object_addresses109: metavariable t2 not used in the - or context code
-warning: free_openssl_cipher110: metavariable t2 not used in the - or context code
-warning: free_openssl_digest111: metavariable t2 not used in the - or context code
-warning: free_parsestate112: metavariable t2 not used in the - or context code
-warning: freePGconn113: metavariable t2 not used in the - or context code
-warning: free_pool114: metavariable t2 not used in the - or context code
-warning: FreeQueryDesc115: metavariable t2 not used in the - or context code
-warning: free_readfile116: metavariable t2 not used in the - or context code
-warning: FreeSnapshot117: metavariable t2 not used in the - or context code
-warning: free_socket_set118: metavariable t2 not used in the - or context code
-warning: free_socket_set119: metavariable t2 not used in the - or context code
-warning: free_statement120: metavariable t2 not used in the - or context code
-warning: FreeSubscription121: metavariable t2 not used in the - or context code
-warning: freetree122: metavariable t2 not used in the - or context code
-warning: FreeTriggerDesc123: metavariable t2 not used in the - or context code
-warning: FreeTupleDesc124: metavariable t2 not used in the - or context code
-warning: free_variable125: metavariable t2 not used in the - or context code
-warning: FreeWaitEventSetAfterFork126: metavariable t2 not used in the - or context code
-warning: FreeWaitEventSet127: metavariable t2 not used in the - or context code
-warning: GenerationBlockFree128: metavariable t2 not used in the - or context code
-warning: GenerationDelete129: metavariable t2 not used in the - or context code
-warning: generator_free130: metavariable t2 not used in the - or context code
-warning: GenericXLogAbort131: metavariable t2 not used in the - or context code
-warning: GenericXLogFinish132: metavariable t2 not used in the - or context code
-warning: gen_ossl_free133: metavariable t2 not used in the - or context code
-warning: ginFinishSplit134: metavariable t2 not used in the - or context code
-warning: HandleEndOfCopyStream138: metavariable t2 not used in the - or context code
-warning: heap_free_minimal_tuple139: metavariable t2 not used in the - or context code
-warning: heap_freetuple140: metavariable t2 not used in the - or context code
-warning: hmac_free141: metavariable t2 not used in the - or context code
-warning: _h_spooldestroy142: metavariable t2 not used in the - or context code
-warning: IndexScanEnd143: metavariable t2 not used in the - or context code
-warning: init_spawned_worker_win32144: metavariable t2 not used in the - or context code
-warning: insert_tobeinserted145: metavariable t2 not used in the - or context code
-warning: insert_tobeinserted146: metavariable t2 not used in the - or context code
-warning: intorel_destroy147: metavariable t2 not used in the - or context code
-warning: inv_close148: metavariable t2 not used in the - or context code
-warning: irbt_free149: metavariable t2 not used in the - or context code
-warning: jit_release_context150: metavariable t2 not used in the - or context code
-warning: json_manifest_object_field_start151: metavariable t2 not used in the - or context code
-warning: json_manifest_scalar152: metavariable t2 not used in the - or context code
-warning: json_parse_manifest_incremental_shutdown153: metavariable t2 not used in the - or context code
-warning: libpqrcv_disconnect155: metavariable t2 not used in the - or context code
-warning: list_free_private156: metavariable t2 not used in the - or context code
-warning: local_destroy157: metavariable t2 not used in the - or context code
-warning: LogicalTapeClose158: metavariable t2 not used in the - or context code
-warning: LogicalTapeSetClose159: metavariable t2 not used in the - or context code
-warning: lrq_free160: metavariable t2 not used in the - or context code
-warning: make2_str161: metavariable t2 not used in the - or context code
-warning: make2_str162: metavariable t2 not used in the - or context code
-warning: make3_str163: metavariable t2 not used in the - or context code
-warning: make3_str164: metavariable t2 not used in the - or context code
-warning: make3_str165: metavariable t2 not used in the - or context code
-warning: make_func166: metavariable t2 not used in the - or context code
-warning: mbuf_free167: metavariable t2 not used in the - or context code
-warning: merge_clump168: metavariable t2 not used in the - or context code
-warning: output_deallocate_prepare_statement169: metavariable t2 not used in the - or context code
-warning: output_prepare_statement170: metavariable t2 not used in the - or context code
-warning: output_simple_statement171: metavariable t2 not used in the - or context code
-warning: output_statement172: metavariable t2 not used in the - or context code
-warning: pa_free_worker_info173: metavariable t2 not used in the - or context code
-warning: PageRestoreTempPage174: metavariable t2 not used in the - or context code
-warning: pairingheap_free176: metavariable t2 not used in the - or context code
-warning: ParallelBackupEnd177: metavariable t2 not used in the - or context code
-warning: parallel_vacuum_end178: metavariable t2 not used in the - or context code
-warning: pgfnames_cleanup180: metavariable t2 not used in the - or context code
-warning: pgp_cfb_free182: metavariable t2 not used in the - or context code
-warning: pgp_free183: metavariable t2 not used in the - or context code
-warning: pgp_key_free184: metavariable t2 not used in the - or context code
-warning: pgp_mpi_free185: metavariable t2 not used in the - or context code
-warning: pgstat_release_entry_ref186: metavariable t2 not used in the - or context code
-warning: PGTYPESchar_free187: metavariable t2 not used in the - or context code
-warning: PGTYPESdate_free188: metavariable t2 not used in the - or context code
-warning: PGTYPESdecimal_free189: metavariable t2 not used in the - or context code
-warning: PGTYPESinterval_free190: metavariable t2 not used in the - or context code
-warning: PGTYPESnumeric_free191: metavariable t2 not used in the - or context code
-warning: pg_tzenumerate_end192: metavariable t2 not used in the - or context code
-warning: pg_xml_done193: metavariable t2 not used in the - or context code
-warning: plainnode194: metavariable t2 not used in the - or context code
-warning: PLy_function_drop_args195: metavariable t2 not used in the - or context code
-warning: PLy_function_restore_args196: metavariable t2 not used in the - or context code
-warning: PortalDrop197: metavariable t2 not used in the - or context code
-warning: PQclear198: metavariable t2 not used in the - or context code
-warning: PQconninfoFree199: metavariable t2 not used in the - or context code
-warning: PQfreeCancel200: metavariable t2 not used in the - or context code
-warning: PQfreeNotify202: metavariable t2 not used in the - or context code
-warning: printtup_destroy203: metavariable t2 not used in the - or context code
-warning: psql_scan_destroy204: metavariable t2 not used in the - or context code
-warning: pullf_free205: metavariable t2 not used in the - or context code
-warning: pushf_free206: metavariable t2 not used in the - or context code
-warning: QTNFree207: metavariable t2 not used in the - or context code
-warning: quote_postgres208: metavariable t2 not used in the - or context code
-warning: read_stream_end209: metavariable t2 not used in the - or context code
-warning: recursive_revoke210: metavariable t2 not used in the - or context code
-warning: RelationDestroyRelation211: metavariable t2 not used in the - or context code
-warning: ReleaseDummy212: metavariable t2 not used in the - or context code
-warning: ReorderBufferFreeSnap213: metavariable t2 not used in the - or context code
-warning: ReorderBufferIterTXNFinish214: metavariable t2 not used in the - or context code
-warning: ReorderBufferReturnChange215: metavariable t2 not used in the - or context code
-warning: ReorderBufferReturnRelids216: metavariable t2 not used in the - or context code
-warning: ReorderBufferReturnTupleBuf217: metavariable t2 not used in the - or context code
-warning: ReorderBufferReturnTXN218: metavariable t2 not used in the - or context code
-warning: report_corruption_internal219: metavariable t2 not used in the - or context code
-warning: ResourceOwnerDelete220: metavariable t2 not used in the - or context code
-warning: restore_global_locale221: metavariable t2 not used in the - or context code
-warning: restorePsetInfo222: metavariable t2 not used in the - or context code
-warning: serializeAnalyzeDestroy223: metavariable t2 not used in the - or context code
-warning: shm_mq_detach224: metavariable t2 not used in the - or context code
-warning: SlabDelete225: metavariable t2 not used in the - or context code
-warning: SnapBuildFreeSnapshot226: metavariable t2 not used in the - or context code
-warning: SN_close_env227: metavariable t2 not used in the - or context code
-warning: spgFreeSearchItem228: metavariable t2 not used in the - or context code
-warning: sqlfunction_destroy230: metavariable t2 not used in the - or context code
-warning: SSLerrfree231: metavariable t2 not used in the - or context code
-warning: string_to_text232: metavariable t2 not used in the - or context code
-warning: systable_endscan_ordered233: metavariable t2 not used in the - or context code
-warning: systable_endscan234: metavariable t2 not used in the - or context code
-warning: tar_free235: metavariable t2 not used in the - or context code
-warning: tbm_end_iterate236: metavariable t2 not used in the - or context code
-warning: tbm_end_shared_iterate237: metavariable t2 not used in the - or context code
-warning: tbm_free238: metavariable t2 not used in the - or context code
-warning: terminate_brin_buildstate239: metavariable t2 not used in the - or context code
-warning: TidStoreDestroy240: metavariable t2 not used in the - or context code
-warning: TidStoreDetach241: metavariable t2 not used in the - or context code
-warning: TidStoreEndIterate242: metavariable t2 not used in the - or context code
-warning: toast_close_indexes243: metavariable t2 not used in the - or context code
-warning: TParserClose244: metavariable t2 not used in the - or context code
-warning: TParserCopyClose245: metavariable t2 not used in the - or context code
-warning: tqueueDestroyReceiver246: metavariable t2 not used in the - or context code
-warning: transientrel_destroy247: metavariable t2 not used in the - or context code
-warning: tstoreDestroyReceiver248: metavariable t2 not used in the - or context code
-warning: tuplestore_end249: metavariable t2 not used in the - or context code
-warning: updateAclDependenciesWorker250: metavariable t2 not used in the - or context code
-warning: updateAclDependenciesWorker251: metavariable t2 not used in the - or context code
-warning: vac_close_indexes252: metavariable t2 not used in the - or context code
-warning: writefile253: metavariable t2 not used in the - or context code
-warning: XLogPrefetcherFree254: metavariable t2 not used in the - or context code
-warning: XLogReaderFree255: metavariable t2 not used in the - or context code
-warning: XLogReaderFree256: metavariable t2 not used in the - or context code
-warning: XLogReaderFree257: metavariable t2 not used in the - or context code
+warning: addCompiledLexeme00: metavariable t2 not used in the - or context code
+warning: addCompiledLexeme01: metavariable t2 not used in the - or context code
+warning: bms_add_member10: metavariable t2 not used in the - or context code
+warning: bms_add_member11: metavariable t2 not used in the - or context code
+warning: bms_add_range20: metavariable t2 not used in the - or context code
+warning: bms_add_range21: metavariable t2 not used in the - or context code
+warning: bms_replace_members30: metavariable t2 not used in the - or context code
+warning: bms_replace_members31: metavariable t2 not used in the - or context code
+warning: brin_copy_tuple40: metavariable t2 not used in the - or context code
+warning: brin_copy_tuple41: metavariable t2 not used in the - or context code
+warning: gistjoinvector80: metavariable t2 not used in the - or context code
+warning: gistjoinvector81: metavariable t2 not used in the - or context code
+warning: resize_intArrayType140: metavariable t2 not used in the - or context code
+warning: resize_intArrayType141: metavariable t2 not used in the - or context code
+warning: SetConstraintStateAddItem150: metavariable t2 not used in the - or context code
+warning: SetConstraintStateAddItem151: metavariable t2 not used in the - or context code
+warning: yyensure_buffer_stack180: metavariable t2 not used in the - or context code
+warning: yyensure_buffer_stack181: metavariable t2 not used in the - or context code
+warning: yyensure_buffer_stack190: metavariable t2 not used in the - or context code
+warning: yyensure_buffer_stack191: metavariable t2 not used in the - or context code
+warning: yyensure_buffer_stack200: metavariable t2 not used in the - or context code
+warning: yyensure_buffer_stack201: metavariable t2 not used in the - or context code
+warning: yyensure_buffer_stack210: metavariable t2 not used in the - or context code
+warning: yyensure_buffer_stack211: metavariable t2 not used in the - or context code
+warning: yy_get_next_buffer220: metavariable t2 not used in the - or context code
+warning: yy_get_next_buffer221: metavariable t2 not used in the - or context code
+warning: yy_get_next_buffer230: metavariable t2 not used in the - or context code
+warning: yy_get_next_buffer231: metavariable t2 not used in the - or context code
+warning: yy_get_next_buffer240: metavariable t2 not used in the - or context code
+warning: yy_get_next_buffer241: metavariable t2 not used in the - or context code
+warning: yy_get_next_buffer250: metavariable t2 not used in the - or context code
+warning: yy_get_next_buffer251: metavariable t2 not used in the - or context code
+warning: yy_get_next_buffer260: metavariable t2 not used in the - or context code
+warning: yy_get_next_buffer261: metavariable t2 not used in the - or context code
+warning: yy_get_next_buffer270: metavariable t2 not used in the - or context code
+warning: yy_get_next_buffer271: metavariable t2 not used in the - or context code
+warning: yy_get_next_buffer280: metavariable t2 not used in the - or context code
+warning: yy_get_next_buffer281: metavariable t2 not used in the - or context code
+warning: yy_get_next_buffer290: metavariable t2 not used in the - or context code
+warning: yy_get_next_buffer291: metavariable t2 not used in the - or context code
 HANDLING: /usr/local/src/postgresql/src/tools/testint128.c
 HANDLING: /usr/local/src/postgresql/src/tools/pg_bsd_indent/lexi.c
 HANDLING: /usr/local/src/postgresql/src/tools/pg_bsd_indent/io.c
@@ -1436,7 +1231,7 @@ HANDLING: /usr/local/src/postgresql/src/interfaces/ecpg/preproc/type.c
 HANDLING: /usr/local/src/postgresql/src/interfaces/ecpg/preproc/ecpg_keywords.c
 HANDLING: /usr/local/src/postgresql/src/interfaces/ecpg/preproc/preproc.c
 Unable to parse #if condition: defined size_t
-Note: processing took    12.8s: /usr/local/src/postgresql/src/interfaces/ecpg/preproc/preproc.c
+Note: processing took    11.2s: /usr/local/src/postgresql/src/interfaces/ecpg/preproc/preproc.c
 HANDLING: /usr/local/src/postgresql/src/interfaces/ecpg/pgtypeslib/timestamp.c
 HANDLING: /usr/local/src/postgresql/src/interfaces/ecpg/pgtypeslib/common.c
 HANDLING: /usr/local/src/postgresql/src/interfaces/ecpg/pgtypeslib/interval.c
@@ -1757,12 +1552,14 @@ HANDLING: /usr/local/src/postgresql/contrib/ltree/crc32.c
 HANDLING: /usr/local/src/postgresql/contrib/ltree/ltxtquery_io.c
 HANDLING: /usr/local/src/postgresql/contrib/pgrowlocks/pgrowlocks.c
 #################################
-TIME PASSED: 137 SECONDS
+TIME PASSED: 66 SECONDS
 ########## ITERATION 1 ##########
 init_defs_builtins: /usr/lib/coccinelle/standard.h
-warning: createNewConnection0: metavariable t2 not used in the - or context code
-warning: dblink_security_check1: metavariable t2 not used in the - or context code
-(ONCE) Expected tokens remoteConn ereport dblink_security_check createNewConnection
+warning: gistjoinvector00: metavariable t2 not used in the - or context code
+warning: gistjoinvector01: metavariable t2 not used in the - or context code
+warning: brin_copy_tuple10: metavariable t2 not used in the - or context code
+warning: brin_copy_tuple11: metavariable t2 not used in the - or context code
+(ONCE) Expected tokens gistjoinvector IndexTuple brin_copy_tuple BrinTuple
 Skipping: /usr/local/src/postgresql/src/tools/testint128.c
 Skipping: /usr/local/src/postgresql/src/tools/pg_bsd_indent/lexi.c
 Skipping: /usr/local/src/postgresql/src/tools/pg_bsd_indent/io.c
@@ -2781,13 +2578,13 @@ Skipping: /usr/local/src/postgresql/src/backend/access/hash/hashinsert.c
 Skipping: /usr/local/src/postgresql/src/backend/access/hash/hashpage.c
 Skipping: /usr/local/src/postgresql/src/backend/access/hash/hash.c
 Skipping: /usr/local/src/postgresql/src/backend/access/gist/gistbuildbuffers.c
-Skipping: /usr/local/src/postgresql/src/backend/access/gist/gistutil.c
-Skipping: /usr/local/src/postgresql/src/backend/access/gist/gist.c
+HANDLING: /usr/local/src/postgresql/src/backend/access/gist/gistutil.c
+HANDLING: /usr/local/src/postgresql/src/backend/access/gist/gist.c
 Skipping: /usr/local/src/postgresql/src/backend/access/gist/gistproc.c
 Skipping: /usr/local/src/postgresql/src/backend/access/gist/gistxlog.c
 Skipping: /usr/local/src/postgresql/src/backend/access/gist/gistget.c
 Skipping: /usr/local/src/postgresql/src/backend/access/gist/gistscan.c
-Skipping: /usr/local/src/postgresql/src/backend/access/gist/gistbuild.c
+HANDLING: /usr/local/src/postgresql/src/backend/access/gist/gistbuild.c
 Skipping: /usr/local/src/postgresql/src/backend/access/gist/gistsplit.c
 Skipping: /usr/local/src/postgresql/src/backend/access/gist/gistvalidate.c
 Skipping: /usr/local/src/postgresql/src/backend/access/gist/gistvacuum.c
@@ -2800,14 +2597,14 @@ Skipping: /usr/local/src/postgresql/src/backend/access/table/tableam.c
 Skipping: /usr/local/src/postgresql/src/backend/access/table/table.c
 Skipping: /usr/local/src/postgresql/src/backend/access/table/tableamapi.c
 Skipping: /usr/local/src/postgresql/src/backend/access/brin/brin_minmax_multi.c
-Skipping: /usr/local/src/postgresql/src/backend/access/brin/brin_pageops.c
-Skipping: /usr/local/src/postgresql/src/backend/access/brin/brin.c
+HANDLING: /usr/local/src/postgresql/src/backend/access/brin/brin_pageops.c
+HANDLING: /usr/local/src/postgresql/src/backend/access/brin/brin.c
 Skipping: /usr/local/src/postgresql/src/backend/access/brin/brin_xlog.c
 Skipping: /usr/local/src/postgresql/src/backend/access/brin/brin_revmap.c
 Skipping: /usr/local/src/postgresql/src/backend/access/brin/brin_bloom.c
 Skipping: /usr/local/src/postgresql/src/backend/access/brin/brin_minmax.c
 Skipping: /usr/local/src/postgresql/src/backend/access/brin/brin_validate.c
-Skipping: /usr/local/src/postgresql/src/backend/access/brin/brin_tuple.c
+HANDLING: /usr/local/src/postgresql/src/backend/access/brin/brin_tuple.c
 Skipping: /usr/local/src/postgresql/src/backend/access/brin/brin_inclusion.c
 Skipping: /usr/local/src/postgresql/src/backend/lib/dshash.c
 Skipping: /usr/local/src/postgresql/src/backend/lib/bipartite_match.c
@@ -3166,7 +2963,7 @@ Skipping: /usr/local/src/postgresql/contrib/pg_surgery/heap_surgery.c
 Skipping: /usr/local/src/postgresql/contrib/citext/citext.c
 Skipping: /usr/local/src/postgresql/contrib/oid2name/oid2name.c
 Skipping: /usr/local/src/postgresql/contrib/tablefunc/tablefunc.c
-HANDLING: /usr/local/src/postgresql/contrib/dblink/dblink.c
+Skipping: /usr/local/src/postgresql/contrib/dblink/dblink.c
 Skipping: /usr/local/src/postgresql/contrib/hstore/hstore_subs.c
 Skipping: /usr/local/src/postgresql/contrib/hstore/hstore_gist.c
 Skipping: /usr/local/src/postgresql/contrib/hstore/hstore_gin.c
@@ -3264,8 +3061,8 @@ Skipping: /usr/local/src/postgresql/contrib/ltree/crc32.c
 Skipping: /usr/local/src/postgresql/contrib/ltree/ltxtquery_io.c
 Skipping: /usr/local/src/postgresql/contrib/pgrowlocks/pgrowlocks.c
 #################################
-TIME PASSED: 0 SECONDS
+TIME PASSED: 1 SECONDS
 #################################
 DONE
 NUMBER OF ITERATIONS: 2
-TIME PASSED OVERALL: 2 MINUTES 17 SECONDS
+TIME PASSED OVERALL: 1 MINUTES 7 SECONDS

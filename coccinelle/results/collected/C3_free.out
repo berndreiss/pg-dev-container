@@ -1,48 +1,6 @@
->ParallelBackupEnd,ParallelState *, /usr/local/src/postgresql/src/bin/pg_dump/parallel.c:1090:1
-Used: free
-Ret. Type: void
---
->dump_variables,struct arguments *, /usr/local/src/postgresql/src/interfaces/ecpg/preproc/variable.c:460:2
-Used: free
-Ret. Type: void
---
->PQclear,PGresult *, /usr/local/src/postgresql/src/interfaces/libpq/fe-exec.c:770:1
-Used: free
-Ret. Type: void
---
->bool_substitute_hook,char *, /usr/local/src/postgresql/src/bin/psql/startup.c:868:2
-Used: pg_free
-Ret. Type: char *
->avlFree,avl_node *, /usr/local/src/postgresql/src/bin/psql/crosstabview.c:464:3
-Used: pg_free
-Ret. Type: void
---
->quote_postgres,char *, /usr/local/src/postgresql/src/interfaces/ecpg/ecpglib/execute.c:77:2
-Used: ecpg_free
-Ret. Type: char *
---
->pagetable_free,void *, /usr/local/src/postgresql/src/backend/nodes/tidbitmap.c:1528:2
+>createNewConnection,remoteConn *, /usr/local/src/postgresql/contrib/dblink/dblink.c:2572:2
 Used: pfree
 Ret. Type: void
---
->ReorderBufferFreeSnap,Snapshot, /usr/local/src/postgresql/src/backend/replication/logical/reorderbuffer.c:1895:2
-Used: pfree
-Ret. Type: void
---
->ExecForceStoreHeapTuple,HeapTuple, /usr/local/src/postgresql/src/backend/executor/execTuples.c:1577:3
-Used: pfree
-Ret. Type: void
->ExecForceStoreHeapTuple,HeapTuple, /usr/local/src/postgresql/src/backend/executor/execTuples.c:1589:3
-Used: pfree
-Ret. Type: void
->ExecForceStoreMinimalTuple,MinimalTuple, /usr/local/src/postgresql/src/backend/executor/execTuples.c:1622:3
-Used: pfree
-Ret. Type: void
---
->ginFinishSplit,GinBtreeStack *, /usr/local/src/postgresql/src/backend/access/gin/ginbtree.c:752:3
-Used: pfree
-Ret. Type: void
---
->_bt_insertonpg,IndexTuple, /usr/local/src/postgresql/src/backend/access/nbtree/nbtinsert.c:1435:2
+>dblink_security_check,remoteConn *, /usr/local/src/postgresql/contrib/dblink/dblink.c:2628:2
 Used: pfree
 Ret. Type: void
