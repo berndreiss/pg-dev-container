@@ -1,13 +1,6 @@
 >bms_replace_members,Bitmapset *, /usr/local/src/postgresql/src/backend/nodes/bitmapset.c:988:20
 Used: repalloc
 Ret. Type: Bitmapset *
->SetConstraintStateAddItem,SetConstraintState, /usr/local/src/postgresql/src/backend/commands/trigger.c:5639:3
-Used: repalloc
-Ret. Type: SetConstraintState
---
->addCompiledLexeme,TheLexeme *, /usr/local/src/postgresql/src/backend/tsearch/dict_thesaurus.c:308:26
-Used: repalloc
-Ret. Type: TheLexeme *
 --
 >brin_copy_tuple,BrinTuple *, /usr/local/src/postgresql/src/backend/access/brin/brin_tuple.c:452:9
 Used: repalloc

@@ -258,3 +258,4 @@
 >XLogReaderFree,XLogReaderState *, /usr/local/src/postgresql/src/bin/pg_waldump/xlogreader.c:173:1
 >xml_pfree,void *, /usr/local/src/postgresql/src/backend/utils/adt/xml.c:1978:2
 >z_free,void *, /usr/local/src/postgresql/contrib/pgcrypto/pgp-compress.c:66:1
+>free,void *

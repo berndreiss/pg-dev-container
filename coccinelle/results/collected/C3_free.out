@@ -1,6 +1,30 @@
->createNewConnection,remoteConn *, /usr/local/src/postgresql/contrib/dblink/dblink.c:2572:2
+>bms_add_members,Bitmapset *, /usr/local/src/postgresql/src/backend/nodes/bitmapset.c:957:2
+Used: pfree
+Ret. Type: Bitmapset *
+>bms_del_member,Bitmapset *, /usr/local/src/postgresql/src/backend/nodes/bitmapset.c:907:2
+Used: pfree
+Ret. Type: Bitmapset *
+>bms_del_members,Bitmapset *, /usr/local/src/postgresql/src/backend/nodes/bitmapset.c:1211:3
+Used: pfree
+Ret. Type: Bitmapset *
+--
+>bms_int_members,Bitmapset *, /usr/local/src/postgresql/src/backend/nodes/bitmapset.c:1123:2
+Used: pfree
+Ret. Type: Bitmapset *
+>bms_int_members,Bitmapset *, /usr/local/src/postgresql/src/backend/nodes/bitmapset.c:1142:2
+Used: pfree
+Ret. Type: Bitmapset *
+>bms_replace_members,Bitmapset *, /usr/local/src/postgresql/src/backend/nodes/bitmapset.c:983:2
+Used: pfree
+Ret. Type: Bitmapset *
+--
+>add_partial_path,Path *, /usr/local/src/postgresql/src/backend/optimizer/util/pathnode.c:850:2
 Used: pfree
 Ret. Type: void
->dblink_security_check,remoteConn *, /usr/local/src/postgresql/contrib/dblink/dblink.c:2628:2
+>add_path,Path *, /usr/local/src/postgresql/src/backend/optimizer/util/pathnode.c:620:3
+Used: pfree
+Ret. Type: void
+--
+>freeJsonLexContext,JsonLexContext *, /usr/local/src/postgresql/src/common/jsonapi.c:502:2
 Used: pfree
 Ret. Type: void

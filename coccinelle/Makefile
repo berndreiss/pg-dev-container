@@ -10,6 +10,7 @@ cocci:
 
 freeall:
 	@$(MAKE) --no-print-directory free
+	@$(MAKE) --no-print-directory freestatic
 	@$(MAKE) --no-print-directory freestrict
 	@$(MAKE) --no-print-directory freesignature
 	@$(MAKE) --no-print-directory freedependent
@@ -18,6 +19,7 @@ freeall:
 
 reallocall:
 	@$(MAKE) --no-print-directory realloc
+	@$(MAKE) --no-print-directory reallocstatic
 	@$(MAKE) --no-print-directory reallocstrict
 	@$(MAKE) --no-print-directory reallocsignature
 	@$(MAKE) --no-print-directory reallocdependent
@@ -31,6 +33,14 @@ free:
 realloc:
 	@echo "Running script for realloc..."
 	@cd scripts && bash runCocci.sh realloc ""
+
+freestatic:
+	@echo "Running script for freestatic..."
+	@cd scripts && bash runCocci.sh free "static"
+
+reallocstatic:
+	@echo "Running script for reallocstatic..."
+	@cd scripts && bash runCocci.sh realloc "static"
 
 freestrict:
 	@echo "Running script for freestrict..."

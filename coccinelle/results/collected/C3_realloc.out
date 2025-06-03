@@ -1,0 +1,10 @@
+>bms_add_member,Bitmapset *, /usr/local/src/postgresql/src/backend/nodes/bitmapset.c:836:20
+Used: repalloc
+Ret. Type: Bitmapset *
+>bms_add_range,Bitmapset *, /usr/local/src/postgresql/src/backend/nodes/bitmapset.c:1055:20
+Used: repalloc
+Ret. Type: Bitmapset *
+--
+>resize_intArrayType,ArrayType *, /usr/local/src/postgresql/contrib/intarray/_int_tool.c:268:19
+Used: repalloc
+Ret. Type: ArrayType *
