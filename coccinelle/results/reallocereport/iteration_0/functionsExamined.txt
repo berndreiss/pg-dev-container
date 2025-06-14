@@ -61,3 +61,4 @@
 >yyrealloc,yy_size_t, /usr/local/src/postgresql/src/fe_utils/psqlscan.c:5216:8
 >yyrealloc,yy_size_t, /usr/local/src/postgresql/src/interfaces/ecpg/preproc/pgc.c:5072:8
 >yyrealloc,yy_size_t, /usr/local/src/postgresql/src/test/isolation/specscanner.c:2194:8
+>realloc,void *

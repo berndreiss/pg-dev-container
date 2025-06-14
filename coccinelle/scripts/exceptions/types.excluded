@@ -3,3 +3,4 @@ long
 Size
 size_t
 yy_size_t
+yyscan_t

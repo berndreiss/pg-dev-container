@@ -1,20 +1,11 @@
->addCompiledLexeme,TheLexeme *, /usr/local/src/postgresql/src/backend/tsearch/dict_thesaurus.c:308:26
->bms_add_member,Bitmapset *, /usr/local/src/postgresql/src/backend/nodes/bitmapset.c:836:20
->bms_add_range,Bitmapset *, /usr/local/src/postgresql/src/backend/nodes/bitmapset.c:1055:20
->bms_replace_members,Bitmapset *, /usr/local/src/postgresql/src/backend/nodes/bitmapset.c:988:20
->brin_copy_tuple,BrinTuple *, /usr/local/src/postgresql/src/backend/access/brin/brin_tuple.c:452:9
 >core_yyrealloc,void *, /usr/local/src/postgresql/src/backend/parser/scan.c:11816:9
->erealloc,void *, /usr/local/src/postgresql/src/timezone/zic.c:442:17
+>ecpg_realloc,void *, /usr/local/src/postgresql/src/interfaces/ecpg/ecpglib/memory.c:35:25
 >gistjoinvector,IndexTuple *, /usr/local/src/postgresql/src/backend/access/gist/gistutil.c:115:24
->growalloc,void *, /usr/local/src/postgresql/src/timezone/zic.c:464:9
 >jsonpath_yyrealloc,void *, /usr/local/src/postgresql/src/backend/utils/adt/jsonpath_scan.c:6175:9
 >pg_realloc,void *, /usr/local/src/postgresql/src/common/fe_memutils.c:72:7
 >repalloc0,void *, /usr/local/src/postgresql/src/backend/utils/mmgr/mcxt.c:1627:7
 >repalloc,void *, /usr/local/src/postgresql/src/common/fe_memutils.c:174:8
->resize_intArrayType,ArrayType *, /usr/local/src/postgresql/contrib/intarray/_int_tool.c:268:19
->SetConstraintStateAddItem,SetConstraintState, /usr/local/src/postgresql/src/backend/commands/trigger.c:5639:3
 >SPI_repalloc,void *, /usr/local/src/postgresql/src/backend/executor/spi.c:1350:8
->xml_repalloc,void *, /usr/local/src/postgresql/src/backend/utils/adt/xml.c:1969:8
 >yyrealloc,void *, /usr/local/src/postgresql/src/backend/bootstrap/bootscanner.c:2245:8
 >yyrealloc,void *, /usr/local/src/postgresql/src/backend/replication/repl_scanner.c:2476:8
 >yyrealloc,void *, /usr/local/src/postgresql/src/backend/replication/syncrep_scanner.c:2111:8

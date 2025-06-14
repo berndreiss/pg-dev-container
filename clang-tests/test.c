@@ -27,18 +27,14 @@ int main(int a, char **args){
   char *str = malloc(10 * sizeof(char));
   strcpy(str, "Hello World\0");
 
-  int i = 1;if (i == 0)
-    free(str);
-  //pfree(str);
+  //int i = 0;if (i == 0)
+
+  pfree(str);
   //first(str);
   //otherFileFree(str);
-  //str = malloc(10 * sizeof(char));
-  //pfree(test.pointer);
-  //char c = test.pointer[0];
-  //free(test.pointer);
+  //pfreedependent(str, 42);
   printf(str);
-  //printf("%c", c);
 
-  free(str);
+  //free(str);
 }
 

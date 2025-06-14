@@ -18,6 +18,11 @@ REALLOC=$(grep -A 1 "ALL:" $STATS_FILE_REALLOC | tail -n 1)
 echo "      All Functions& $FREE & $REALLOC \\\\
 " >> $LATEX_FILE
 
+FREE=$(grep -A 1 "ALL WITHOUT STATIC:" $STATS_FILE_FREE | tail -n 1)
+REALLOC=$(grep -A 1 "ALL WITHOUT STATIC:" $STATS_FILE_REALLOC | tail -n 1)
+echo "      All without static& $FREE & $REALLOC \\\\
+" >> $LATEX_FILE
+
 FREE=$(grep -A 1 "^STRICT:" $STATS_FILE_FREE | tail -n 1)
 REALLOC=$(grep -A 1 "^STRICT:" $STATS_FILE_REALLOC | tail -n 1)
 echo "      $CATEGORY$COUNT: Strict Functions& $FREE & $REALLOC \\\\
@@ -30,15 +35,15 @@ echo "      $CATEGORY$COUNT: Dependent Functions& $FREE & $REALLOC \\\\
 " >> $LATEX_FILE
 COUNT=$((COUNT+1))
 
-FREE=$(grep -A 1 "^EREPORT:" $STATS_FILE_FREE | tail -n 1)
-REALLOC=$(grep -A 1 "^EREPORT:" $STATS_FILE_REALLOC | tail -n 1)
-echo "      $CATEGORY$COUNT: On Error Functions& $FREE & $REALLOC \\\\
-" >> $LATEX_FILE
-COUNT=$((COUNT+1))
+#FREE=$(grep -A 1 "^EREPORT:" $STATS_FILE_FREE | tail -n 1)
+#REALLOC=$(grep -A 1 "^EREPORT:" $STATS_FILE_REALLOC | tail -n 1)
+#echo "      $CATEGORY$COUNT: On Error Functions& $FREE & $REALLOC \\\\
+#" >> $LATEX_FILE
+#COUNT=$((COUNT+1))
 
 
-FREE=$(grep -A 1 "ALL WITHOUT REASSIGNED, STRICT, DEPENDENT, AND EREPORT:" $STATS_FILE_FREE | tail -n 1)
-REALLOC=$(grep -A 1 "ALL WITHOUT REASSIGNED, STRICT, DEPENDENT, AND EREPORT:" $STATS_FILE_REALLOC | tail -n 1)
+FREE=$(grep -A 1 "ARBITRARY:" $STATS_FILE_FREE | tail -n 1)
+REALLOC=$(grep -A 1 "ARBITRARY:" $STATS_FILE_REALLOC | tail -n 1)
 echo "      $CATEGORY$COUNT: Arbitrary Functions& $FREE & $REALLOC \\\\
 " >> $LATEX_FILE
 COUNT=$((COUNT+1))

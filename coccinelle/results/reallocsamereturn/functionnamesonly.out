@@ -4,6 +4,7 @@
 >bms_replace_members,Bitmapset *, /usr/local/src/postgresql/src/backend/nodes/bitmapset.c
 >brin_copy_tuple,BrinTuple *, /usr/local/src/postgresql/src/backend/access/brin/brin_tuple.c
 >core_yyrealloc,void *, /usr/local/src/postgresql/src/backend/parser/scan.c
+>ecpg_realloc,void *, /usr/local/src/postgresql/src/interfaces/ecpg/ecpglib/memory.c
 >erealloc,void *, /usr/local/src/postgresql/src/timezone/zic.c
 >gistjoinvector,IndexTuple *, /usr/local/src/postgresql/src/backend/access/gist/gistutil.c
 >growalloc,void *, /usr/local/src/postgresql/src/timezone/zic.c

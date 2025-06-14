@@ -1,3 +1,4 @@
 
 void *palloc(int size);
-void pfree(void *p);
+void pfree(void *pf);
+void pfreedependent(void *pfd, int free);

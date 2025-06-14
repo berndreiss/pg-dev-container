@@ -33,11 +33,10 @@ Ret. Type: void *
 Used: realloc
 Ret. Type: void *
 --
->yyrealloc,void *, /usr/local/src/postgresql/src/test/isolation/specscanner.c:2194:8
+>ecpg_realloc,void *, /usr/local/src/postgresql/src/interfaces/ecpg/ecpglib/memory.c:35:25
 Used: realloc
-Ret. Type: void *
---
->erealloc,void *, /usr/local/src/postgresql/src/timezone/zic.c:442:17
+Ret. Type: char *
+>yyrealloc,void *, /usr/local/src/postgresql/src/test/isolation/specscanner.c:2194:8
 Used: realloc
 Ret. Type: void *
 --
@@ -45,36 +44,14 @@ Ret. Type: void *
 Used: pg_realloc
 Ret. Type: void *
 --
->growalloc,void *, /usr/local/src/postgresql/src/timezone/zic.c:464:9
-Used: erealloc
-Ret. Type: void *
 >jsonpath_yyrealloc,void *, /usr/local/src/postgresql/src/backend/utils/adt/jsonpath_scan.c:6175:9
 Used: repalloc
 Ret. Type: void *
 --
->xml_repalloc,void *, /usr/local/src/postgresql/src/backend/utils/adt/xml.c:1969:8
-Used: repalloc
-Ret. Type: void *
 >repalloc0,void *, /usr/local/src/postgresql/src/backend/utils/mmgr/mcxt.c:1627:7
 Used: repalloc
 Ret. Type: void *
 --
->bms_add_member,Bitmapset *, /usr/local/src/postgresql/src/backend/nodes/bitmapset.c:836:20
-Used: repalloc
-Ret. Type: Bitmapset *
->bms_add_range,Bitmapset *, /usr/local/src/postgresql/src/backend/nodes/bitmapset.c:1055:20
-Used: repalloc
-Ret. Type: Bitmapset *
->bms_replace_members,Bitmapset *, /usr/local/src/postgresql/src/backend/nodes/bitmapset.c:988:20
-Used: repalloc
-Ret. Type: Bitmapset *
->SetConstraintStateAddItem,SetConstraintState, /usr/local/src/postgresql/src/backend/commands/trigger.c:5639:3
-Used: repalloc
-Ret. Type: SetConstraintState
---
->addCompiledLexeme,TheLexeme *, /usr/local/src/postgresql/src/backend/tsearch/dict_thesaurus.c:308:26
-Used: repalloc
-Ret. Type: TheLexeme *
 >SPI_repalloc,void *, /usr/local/src/postgresql/src/backend/executor/spi.c:1350:8
 Used: repalloc
 Ret. Type: void *
@@ -82,14 +59,7 @@ Ret. Type: void *
 >gistjoinvector,IndexTuple *, /usr/local/src/postgresql/src/backend/access/gist/gistutil.c:115:24
 Used: repalloc
 Ret. Type: IndexTuple *
->brin_copy_tuple,BrinTuple *, /usr/local/src/postgresql/src/backend/access/brin/brin_tuple.c:452:9
-Used: repalloc
-Ret. Type: BrinTuple *
 --
 >core_yyrealloc,void *, /usr/local/src/postgresql/src/backend/parser/scan.c:11816:9
 Used: repalloc
 Ret. Type: void *
---
->resize_intArrayType,ArrayType *, /usr/local/src/postgresql/contrib/intarray/_int_tool.c:268:19
-Used: repalloc
-Ret. Type: ArrayType *
