@@ -1,14 +1,9 @@
-@test@
-expression E;
-position p;
-constant c;
+@exists@
+type t;
+identifier x;
 @@
+t x;
+...
+-free(x);
++pfree(x);
 
-pfree@p(E, c);
-
-@script:python@
-e << test.E;
-p << test.p;
-c << test.c;
-@@
-print(f"Expression: {c}");
