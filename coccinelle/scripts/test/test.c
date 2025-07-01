@@ -1,5 +1,5 @@
 
-int test(int i){
+int test(const int i){
    somefunc();
    free(i);
 }
@@ -26,6 +26,13 @@ void testreturn(int i){
    free(i);
 }
 
+void testconcreteint(int i ){
+	int j = 0;
+	if (j>0)
+	  free(i);
+	printf(i);
+}
+
 int testreturnifdef(int i){
 
 #ifdef something
@@ -43,12 +50,12 @@ int testTwice(int i){
    free(i);
 }
 
-int testNULL(int i){
+int testNULL(char *i){
    if (i == NULL)
       return;
    free(i);
 }
-int testNIL(int i){
+int testNIL(char *i){
    if (i == NIL)
       return;
    free(i);

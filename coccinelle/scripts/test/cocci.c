@@ -16,10 +16,13 @@ int main() {
     strcpy(s, "Hello, world!");
     char *c = s;
 
+    int i = 3;
+    if (s == NIL)
+	    pfree(s, test.filed);
+
     struct Test test;
     test.field = 4;
     printf("%d", test.field);
-    pfree(s, test.field);
     //free(c);
     printf(s);
     return 0;

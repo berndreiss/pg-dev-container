@@ -1,4 +1,4 @@
-@ bug exists @
+@ bug forall @
 expression E; position p1, p2;
 @@
 (

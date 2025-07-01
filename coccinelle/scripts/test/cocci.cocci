@@ -1,14 +1,17 @@
-@test@
-expression E;
+@test forall@
+type t1, t2;
+identifier f, i;
 position p;
-constant c;
 @@
-
-pfree@p(E, c);
+t1 f(...) {
+  ...
+  if (!i){...
+  pfree@p(i, ...);
+  ...}
+  ...
+}
 
 @script:python@
-e << test.E;
 p << test.p;
-c << test.c;
 @@
-print(f"Expression: {c}");
+print(p[0].line);
