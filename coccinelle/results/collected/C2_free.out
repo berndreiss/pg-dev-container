@@ -9,13 +9,3 @@ Ret. Type: void
 >PQclear,PGresult *, /usr/local/src/postgresql/src/interfaces/libpq/fe-exec.c:770:1
 Used: free
 Ret. Type: void
---
->ExecForceStoreHeapTuple,HeapTuple, /usr/local/src/postgresql/src/backend/executor/execTuples.c:1577:3
-Used: pfree
-Ret. Type: void
->ExecForceStoreHeapTuple,HeapTuple, /usr/local/src/postgresql/src/backend/executor/execTuples.c:1589:3
-Used: pfree
-Ret. Type: void
->ExecForceStoreMinimalTuple,MinimalTuple, /usr/local/src/postgresql/src/backend/executor/execTuples.c:1622:3
-Used: pfree
-Ret. Type: void

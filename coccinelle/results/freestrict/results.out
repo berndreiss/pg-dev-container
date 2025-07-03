@@ -138,6 +138,9 @@ Ret. Type: void
 >PQfreeCancel,PGcancel *, /usr/local/src/postgresql/src/interfaces/libpq/fe-cancel.c:419:1
 Used: free
 Ret. Type: void
+>RunWorker,ArchiveHandle *, /usr/local/src/postgresql/src/bin/pg_dump/parallel.c:866:1
+Used: DeCloneArchive
+Ret. Type: void
 >EndCompressFileHandle,CompressFileHandle *, /usr/local/src/postgresql/src/bin/pg_dump/compress_io.c:296:1
 Used: free_keep_errno
 Ret. Type: bool
@@ -162,6 +165,153 @@ Ret. Type: void
 >tar_free,WalWriteMethod *, /usr/local/src/postgresql/src/bin/pg_basebackup/walmethods.c:1345:1
 Used: pg_free
 Ret. Type: void
+>close_destination_dir,DIR *, /usr/local/src/postgresql/src/bin/pg_basebackup/pg_receivewal.c:255:5
+Used: closedir
+Ret. Type: void
+>dutch_ISO_8859_1_close_env,struct SN_env *, /usr/local/src/postgresql/src/backend/snowball/libstemmer/stem_ISO_8859_1_dutch.c:602:60
+Used: SN_close_env
+Ret. Type: void
+>arabic_UTF_8_close_env,struct SN_env *, /usr/local/src/postgresql/src/backend/snowball/libstemmer/stem_UTF_8_arabic.c:1663:56
+Used: SN_close_env
+Ret. Type: void
+>italian_ISO_8859_1_close_env,struct SN_env *, /usr/local/src/postgresql/src/backend/snowball/libstemmer/stem_ISO_8859_1_italian.c:1021:62
+Used: SN_close_env
+Ret. Type: void
+>dutch_UTF_8_close_env,struct SN_env *, /usr/local/src/postgresql/src/backend/snowball/libstemmer/stem_UTF_8_dutch.c:612:55
+Used: SN_close_env
+Ret. Type: void
+>nepali_UTF_8_close_env,struct SN_env *, /usr/local/src/postgresql/src/backend/snowball/libstemmer/stem_UTF_8_nepali.c:420:56
+Used: SN_close_env
+Ret. Type: void
+>indonesian_ISO_8859_1_close_env,struct SN_env *, /usr/local/src/postgresql/src/backend/snowball/libstemmer/stem_ISO_8859_1_indonesian.c:406:65
+Used: SN_close_env
+Ret. Type: void
+>swedish_UTF_8_close_env,struct SN_env *, /usr/local/src/postgresql/src/backend/snowball/libstemmer/stem_UTF_8_swedish.c:291:57
+Used: SN_close_env
+Ret. Type: void
+>russian_KOI8_R_close_env,struct SN_env *, /usr/local/src/postgresql/src/backend/snowball/libstemmer/stem_KOI8_R_russian.c:681:58
+Used: SN_close_env
+Ret. Type: void
+>russian_UTF_8_close_env,struct SN_env *, /usr/local/src/postgresql/src/backend/snowball/libstemmer/stem_UTF_8_russian.c:677:57
+Used: SN_close_env
+Ret. Type: void
+>turkish_UTF_8_close_env,struct SN_env *, /usr/local/src/postgresql/src/backend/snowball/libstemmer/stem_UTF_8_turkish.c:2095:57
+Used: SN_close_env
+Ret. Type: void
+>italian_UTF_8_close_env,struct SN_env *, /usr/local/src/postgresql/src/backend/snowball/libstemmer/stem_UTF_8_italian.c:1029:57
+Used: SN_close_env
+Ret. Type: void
+>serbian_UTF_8_close_env,struct SN_env *, /usr/local/src/postgresql/src/backend/snowball/libstemmer/stem_UTF_8_serbian.c:6542:57
+Used: SN_close_env
+Ret. Type: void
+>tamil_UTF_8_close_env,struct SN_env *, /usr/local/src/postgresql/src/backend/snowball/libstemmer/stem_UTF_8_tamil.c:1877:55
+Used: SN_close_env
+Ret. Type: void
+>romanian_ISO_8859_2_close_env,struct SN_env *, /usr/local/src/postgresql/src/backend/snowball/libstemmer/stem_ISO_8859_2_romanian.c:964:63
+Used: SN_close_env
+Ret. Type: void
+>spanish_ISO_8859_1_close_env,struct SN_env *, /usr/local/src/postgresql/src/backend/snowball/libstemmer/stem_ISO_8859_1_spanish.c:1040:62
+Used: SN_close_env
+Ret. Type: void
+>danish_ISO_8859_1_close_env,struct SN_env *, /usr/local/src/postgresql/src/backend/snowball/libstemmer/stem_ISO_8859_1_danish.c:313:61
+Used: SN_close_env
+Ret. Type: void
+>swedish_ISO_8859_1_close_env,struct SN_env *, /usr/local/src/postgresql/src/backend/snowball/libstemmer/stem_ISO_8859_1_swedish.c:287:62
+Used: SN_close_env
+Ret. Type: void
+>french_ISO_8859_1_close_env,struct SN_env *, /usr/local/src/postgresql/src/backend/snowball/libstemmer/stem_ISO_8859_1_french.c:1251:61
+Used: SN_close_env
+Ret. Type: void
+>hungarian_ISO_8859_2_close_env,struct SN_env *, /usr/local/src/postgresql/src/backend/snowball/libstemmer/stem_ISO_8859_2_hungarian.c:861:64
+Used: SN_close_env
+Ret. Type: void
+>porter_ISO_8859_1_close_env,struct SN_env *, /usr/local/src/postgresql/src/backend/snowball/libstemmer/stem_ISO_8859_1_porter.c:716:61
+Used: SN_close_env
+Ret. Type: void
+>irish_ISO_8859_1_close_env,struct SN_env *, /usr/local/src/postgresql/src/backend/snowball/libstemmer/stem_ISO_8859_1_irish.c:469:60
+Used: SN_close_env
+Ret. Type: void
+>english_UTF_8_close_env,struct SN_env *, /usr/local/src/postgresql/src/backend/snowball/libstemmer/stem_UTF_8_english.c:1073:57
+Used: SN_close_env
+Ret. Type: void
+>portuguese_UTF_8_close_env,struct SN_env *, /usr/local/src/postgresql/src/backend/snowball/libstemmer/stem_UTF_8_portuguese.c:966:60
+Used: SN_close_env
+Ret. Type: void
+>catalan_UTF_8_close_env,struct SN_env *, /usr/local/src/postgresql/src/backend/snowball/libstemmer/stem_UTF_8_catalan.c:1448:57
+Used: SN_close_env
+Ret. Type: void
+>lithuanian_UTF_8_close_env,struct SN_env *, /usr/local/src/postgresql/src/backend/snowball/libstemmer/stem_UTF_8_lithuanian.c:836:60
+Used: SN_close_env
+Ret. Type: void
+>finnish_ISO_8859_1_close_env,struct SN_env *, /usr/local/src/postgresql/src/backend/snowball/libstemmer/stem_ISO_8859_1_finnish.c:717:62
+Used: SN_close_env
+Ret. Type: void
+>german_UTF_8_close_env,struct SN_env *, /usr/local/src/postgresql/src/backend/snowball/libstemmer/stem_UTF_8_german.c:499:56
+Used: SN_close_env
+Ret. Type: void
+>romanian_UTF_8_close_env,struct SN_env *, /usr/local/src/postgresql/src/backend/snowball/libstemmer/stem_UTF_8_romanian.c:970:58
+Used: SN_close_env
+Ret. Type: void
+>german_ISO_8859_1_close_env,struct SN_env *, /usr/local/src/postgresql/src/backend/snowball/libstemmer/stem_ISO_8859_1_german.c:489:61
+Used: SN_close_env
+Ret. Type: void
+>portuguese_ISO_8859_1_close_env,struct SN_env *, /usr/local/src/postgresql/src/backend/snowball/libstemmer/stem_ISO_8859_1_portuguese.c:960:65
+Used: SN_close_env
+Ret. Type: void
+>porter_UTF_8_close_env,struct SN_env *, /usr/local/src/postgresql/src/backend/snowball/libstemmer/stem_UTF_8_porter.c:722:56
+Used: SN_close_env
+Ret. Type: void
+>catalan_ISO_8859_1_close_env,struct SN_env *, /usr/local/src/postgresql/src/backend/snowball/libstemmer/stem_ISO_8859_1_catalan.c:1445:62
+Used: SN_close_env
+Ret. Type: void
+>english_ISO_8859_1_close_env,struct SN_env *, /usr/local/src/postgresql/src/backend/snowball/libstemmer/stem_ISO_8859_1_english.c:1061:62
+Used: SN_close_env
+Ret. Type: void
+>greek_UTF_8_close_env,struct SN_env *, /usr/local/src/postgresql/src/backend/snowball/libstemmer/stem_UTF_8_greek.c:3672:55
+Used: SN_close_env
+Ret. Type: void
+>armenian_UTF_8_close_env,struct SN_env *, /usr/local/src/postgresql/src/backend/snowball/libstemmer/stem_UTF_8_armenian.c:558:58
+Used: SN_close_env
+Ret. Type: void
+>irish_UTF_8_close_env,struct SN_env *, /usr/local/src/postgresql/src/backend/snowball/libstemmer/stem_UTF_8_irish.c:469:55
+Used: SN_close_env
+Ret. Type: void
+>norwegian_ISO_8859_1_close_env,struct SN_env *, /usr/local/src/postgresql/src/backend/snowball/libstemmer/stem_ISO_8859_1_norwegian.c:271:64
+Used: SN_close_env
+Ret. Type: void
+>hindi_UTF_8_close_env,struct SN_env *, /usr/local/src/postgresql/src/backend/snowball/libstemmer/stem_UTF_8_hindi.c:321:55
+Used: SN_close_env
+Ret. Type: void
+>hungarian_UTF_8_close_env,struct SN_env *, /usr/local/src/postgresql/src/backend/snowball/libstemmer/stem_UTF_8_hungarian.c:867:59
+Used: SN_close_env
+Ret. Type: void
+>spanish_UTF_8_close_env,struct SN_env *, /usr/local/src/postgresql/src/backend/snowball/libstemmer/stem_UTF_8_spanish.c:1044:57
+Used: SN_close_env
+Ret. Type: void
+>norwegian_UTF_8_close_env,struct SN_env *, /usr/local/src/postgresql/src/backend/snowball/libstemmer/stem_UTF_8_norwegian.c:275:59
+Used: SN_close_env
+Ret. Type: void
+>danish_UTF_8_close_env,struct SN_env *, /usr/local/src/postgresql/src/backend/snowball/libstemmer/stem_UTF_8_danish.c:317:56
+Used: SN_close_env
+Ret. Type: void
+>french_UTF_8_close_env,struct SN_env *, /usr/local/src/postgresql/src/backend/snowball/libstemmer/stem_UTF_8_french.c:1261:56
+Used: SN_close_env
+Ret. Type: void
+>basque_ISO_8859_1_close_env,struct SN_env *, /usr/local/src/postgresql/src/backend/snowball/libstemmer/stem_ISO_8859_1_basque.c:1181:61
+Used: SN_close_env
+Ret. Type: void
+>finnish_UTF_8_close_env,struct SN_env *, /usr/local/src/postgresql/src/backend/snowball/libstemmer/stem_UTF_8_finnish.c:721:57
+Used: SN_close_env
+Ret. Type: void
+>yiddish_UTF_8_close_env,struct SN_env *, /usr/local/src/postgresql/src/backend/snowball/libstemmer/stem_UTF_8_yiddish.c:1232:57
+Used: SN_close_env
+Ret. Type: void
+>basque_UTF_8_close_env,struct SN_env *, /usr/local/src/postgresql/src/backend/snowball/libstemmer/stem_UTF_8_basque.c:1183:56
+Used: SN_close_env
+Ret. Type: void
+>indonesian_UTF_8_close_env,struct SN_env *, /usr/local/src/postgresql/src/backend/snowball/libstemmer/stem_UTF_8_indonesian.c:406:60
+Used: SN_close_env
+Ret. Type: void
 >pfree,void *, /usr/local/src/postgresql/src/common/fe_memutils.c:135:1
 Used: pg_free
 Ret. Type: void
@@ -177,6 +327,9 @@ Ret. Type: void
 >PQfreeNotify,PGnotify *, /usr/local/src/postgresql/src/interfaces/libpq/fe-exec.c:4051:1
 Used: PQfreemem
 Ret. Type: void
+>PQfinish,PGconn *, /usr/local/src/postgresql/src/interfaces/libpq/fe-connect.c:4883:2
+Used: freePGconn
+Ret. Type: void
 >local_destroy,rewind_source *, /usr/local/src/postgresql/src/bin/pg_rewind/local_source.c:186:1
 Used: pfree
 Ret. Type: void
@@ -188,6 +341,9 @@ Used: pfree
 Ret. Type: void
 >bbstreamer_lz4_decompressor_free,bbstreamer *, /usr/local/src/postgresql/src/bin/pg_basebackup/bbstreamer_lz4.c:420:1
 Used: pfree
+Ret. Type: void
+>disconnect_database,PGconn *, /usr/local/src/postgresql/src/bin/pg_basebackup/pg_createsubscriber.c:549:1
+Used: PQfinish
 Ret. Type: void
 >bbstreamer_zstd_compressor_free,bbstreamer *, /usr/local/src/postgresql/src/bin/pg_basebackup/bbstreamer_zstd.c:249:1
 Used: pfree
@@ -609,6 +765,36 @@ Ret. Type: void
 >DestroyBlockRefTableWriter,BlockRefTableWriter *, /usr/local/src/postgresql/src/common/blkreftable.c:858:1
 Used: pfree
 Ret. Type: void
+>disconnectDatabase,PGconn *, /usr/local/src/postgresql/src/fe_utils/connect_utils.c:170:1
+Used: PQfinish
+Ret. Type: void
+>descriptor_deallocate_all,struct descriptor *, /usr/local/src/postgresql/src/interfaces/ecpg/ecpglib/descriptor.c:786:2
+Used: descriptor_free
+Ret. Type: void
+>ecpg_do_epilogue,struct statement *, /usr/local/src/postgresql/src/interfaces/ecpg/ecpglib/execute.c:2234:1
+Used: free_statement
+Ret. Type: void
+>exit_nicely,PGconn *, /usr/local/src/postgresql/src/test/examples/testlibpq4.c:18:2
+Used: PQfinish
+Ret. Type: void
+>exit_nicely,PGconn *, /usr/local/src/postgresql/src/test/examples/testlibpq4.c:20:2
+Used: PQfinish
+Ret. Type: void
+>exit_nicely,PGconn *, /usr/local/src/postgresql/src/test/examples/testlibpq.c:16:1
+Used: PQfinish
+Ret. Type: void
+>exit_nicely,PGconn *, /usr/local/src/postgresql/src/test/examples/testlo64.c:217:1
+Used: PQfinish
+Ret. Type: void
+>exit_nicely,PGconn *, /usr/local/src/postgresql/src/test/examples/testlibpq2.c:44:1
+Used: PQfinish
+Ret. Type: void
+>exit_nicely,PGconn *, /usr/local/src/postgresql/src/test/examples/testlibpq3.c:50:1
+Used: PQfinish
+Ret. Type: void
+>exit_nicely,PGconn *, /usr/local/src/postgresql/src/test/examples/testlo.c:195:1
+Used: PQfinish
+Ret. Type: void
 >emit_audit_message,char *, /usr/local/src/postgresql/src/test/modules/test_oat_hooks/test_oat_hooks.c:253:2
 Used: pfree
 Ret. Type: void
@@ -617,6 +803,9 @@ Used: pfree
 Ret. Type: void
 >irbt_free,RBTNode *, /usr/local/src/postgresql/src/test/modules/test_rbtree/test_rbtree.c:73:1
 Used: pfree
+Ret. Type: void
+>exit_nicely,PGconn *, /usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:63:1
+Used: PQfinish
 Ret. Type: void
 >pg_tzenumerate_end,pg_tzenum *, /usr/local/src/postgresql/src/timezone/pgtz.c:422:1
 Used: pfree
@@ -668,4 +857,81 @@ Used: pfree
 Ret. Type: void
 >report_corruption_internal,char *, /usr/local/src/postgresql/contrib/amcheck/verify_heapam.c:841:1
 Used: pfree
+Ret. Type: void
+>list_free,List *, /usr/local/src/postgresql/src/backend/nodes/list.c:1548:1
+Used: list_free_private
+Ret. Type: void
+>list_free_deep,List *, /usr/local/src/postgresql/src/backend/nodes/list.c:1566:1
+Used: list_free_private
+Ret. Type: void
+>bms_copy_and_free,Bitmapset *, /usr/local/src/postgresql/src/backend/nodes/bitmapset.c:113:1
+Used: bms_free
+Ret. Type: Bitmapset *
+>EndCopyTo,CopyToState, /usr/local/src/postgresql/src/backend/commands/copyto.c:738:1
+Used: EndCopy
+Ret. Type: void
+>ReorderBufferResetTXN,ReorderBufferChange *, /usr/local/src/postgresql/src/backend/replication/logical/reorderbuffer.c:2078:2
+Used: ReorderBufferReturnChange
+Ret. Type: void
+>ReorderBufferCleanupTXN,ReorderBufferTXN *, /usr/local/src/postgresql/src/backend/replication/logical/reorderbuffer.c:1618:1
+Used: ReorderBufferReturnTXN
+Ret. Type: void
+>updateAclDependencies,Oid *, /usr/local/src/postgresql/src/backend/catalog/pg_shdepend.c:496:1
+Used: updateAclDependenciesWorker
+Ret. Type: void
+--
+>updateAclDependencies,Oid *, /usr/local/src/postgresql/src/backend/catalog/pg_shdepend.c:496:1
+Used: updateAclDependenciesWorker
+Ret. Type: void
+>updateInitAclDependencies,Oid *, /usr/local/src/postgresql/src/backend/catalog/pg_shdepend.c:516:1
+Used: updateAclDependenciesWorker
+Ret. Type: void
+--
+>updateInitAclDependencies,Oid *, /usr/local/src/postgresql/src/backend/catalog/pg_shdepend.c:516:1
+Used: updateAclDependenciesWorker
+Ret. Type: void
+>SPI_cursor_close,Portal, /usr/local/src/postgresql/src/backend/executor/spi.c:1867:1
+Used: PortalDrop
+Ret. Type: void
+>SPI_freetuple,HeapTuple, /usr/local/src/postgresql/src/backend/executor/spi.c:1382:1
+Used: heap_freetuple
+Ret. Type: void
+>index_endscan,IndexScanDesc, /usr/local/src/postgresql/src/backend/access/index/indexam.c:400:1
+Used: IndexScanEnd
+Ret. Type: void
+>psql_end_command,StringInfo, /usr/local/src/postgresql/src/test/regress/pg_regress.c:1180:1
+Used: destroyStringInfo
+Ret. Type: void
+>audit_attempt,char *, /usr/local/src/postgresql/src/test/modules/test_oat_hooks/test_oat_hooks.c:261:1
+Used: emit_audit_message
+Ret. Type: void
+--
+>audit_attempt,char *, /usr/local/src/postgresql/src/test/modules/test_oat_hooks/test_oat_hooks.c:261:1
+Used: emit_audit_message
+Ret. Type: void
+>audit_failure,char *, /usr/local/src/postgresql/src/test/modules/test_oat_hooks/test_oat_hooks.c:273:1
+Used: emit_audit_message
+Ret. Type: void
+--
+>audit_failure,char *, /usr/local/src/postgresql/src/test/modules/test_oat_hooks/test_oat_hooks.c:273:1
+Used: emit_audit_message
+Ret. Type: void
+>audit_success,char *, /usr/local/src/postgresql/src/test/modules/test_oat_hooks/test_oat_hooks.c:267:1
+Used: emit_audit_message
+Ret. Type: void
+--
+>audit_success,char *, /usr/local/src/postgresql/src/test/modules/test_oat_hooks/test_oat_hooks.c:267:1
+Used: emit_audit_message
+Ret. Type: void
+>pushf_free_all,PushFilter *, /usr/local/src/postgresql/contrib/pgcrypto/mbuf.c:418:2
+Used: pushf_free
+Ret. Type: void
+>report_corruption,char *, /usr/local/src/postgresql/contrib/amcheck/verify_heapam.c:857:1
+Used: report_corruption_internal
+Ret. Type: void
+>report_toast_corruption,char *, /usr/local/src/postgresql/contrib/amcheck/verify_heapam.c:874:1
+Used: report_corruption_internal
+Ret. Type: void
+>CloseTableList,List *, /usr/local/src/postgresql/src/backend/commands/publicationcmds.c:1711:1
+Used: list_free_deep
 Ret. Type: void

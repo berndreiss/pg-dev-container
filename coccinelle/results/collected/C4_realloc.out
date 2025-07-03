@@ -80,3 +80,6 @@ Ret. Type: void *
 >resize_intArrayType,ArrayType *, /usr/local/src/postgresql/contrib/intarray/_int_tool.c:268:19
 Used: repalloc
 Ret. Type: ArrayType *
+>_int_unique,ArrayType *, /usr/local/src/postgresql/contrib/intarray/_int_tool.c:319:8
+Used: resize_intArrayType
+Ret. Type: ArrayType *

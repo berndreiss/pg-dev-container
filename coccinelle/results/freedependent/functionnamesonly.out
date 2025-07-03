@@ -1,14 +1,8 @@
 >avlFree,avl_node *, /usr/local/src/postgresql/src/bin/psql/crosstabview.c
 >bool_substitute_hook,char *, /usr/local/src/postgresql/src/bin/psql/startup.c
->_bt_insertonpg,IndexTuple, /usr/local/src/postgresql/src/backend/access/nbtree/nbtinsert.c
 >CatCacheRemoveCTup,CatCTup *, /usr/local/src/postgresql/src/backend/utils/cache/catcache.c
 >dump_variables,struct arguments *, /usr/local/src/postgresql/src/interfaces/ecpg/preproc/variable.c
 >ecpg_finish,struct connection *, /usr/local/src/postgresql/src/interfaces/ecpg/ecpglib/connect.c
->ExecForceStoreHeapTuple,HeapTuple, /usr/local/src/postgresql/src/backend/executor/execTuples.c
->ExecForceStoreMinimalTuple,MinimalTuple, /usr/local/src/postgresql/src/backend/executor/execTuples.c
->ginFinishSplit,GinBtreeStack *, /usr/local/src/postgresql/src/backend/access/gin/ginbtree.c
 >pagetable_free,void *, /usr/local/src/postgresql/src/backend/nodes/tidbitmap.c
 >ParallelBackupEnd,ParallelState *, /usr/local/src/postgresql/src/bin/pg_dump/parallel.c
 >PQclear,PGresult *, /usr/local/src/postgresql/src/interfaces/libpq/fe-exec.c
->quote_postgres,char *, /usr/local/src/postgresql/src/interfaces/ecpg/ecpglib/execute.c
->ReorderBufferFreeSnap,Snapshot, /usr/local/src/postgresql/src/backend/replication/logical/reorderbuffer.c

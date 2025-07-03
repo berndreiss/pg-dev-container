@@ -4,7 +4,7 @@ identifier f, i;
 position p;
 
 @@
-t1 f(..., int i, ...) {
+t1 f(..., t2 i, ...) {
   <+...
   free@p(..., i, ...)
   ...+>

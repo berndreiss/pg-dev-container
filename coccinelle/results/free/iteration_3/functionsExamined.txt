@@ -1,7 +1,15 @@
+>dumpRoleGUCPrivs,PGconn *, /usr/local/src/postgresql/src/bin/pg_dump/pg_dumpall.c:1196:3
+>dumpRoleMembership,PGconn *, /usr/local/src/postgresql/src/bin/pg_dump/pg_dumpall.c:1061:4
+>dumpTablespaces,PGconn *, /usr/local/src/postgresql/src/bin/pg_dump/pg_dumpall.c:1323:3
+>executeCommand,PGconn *, /usr/local/src/postgresql/src/bin/pg_dump/pg_dumpall.c:1918:2
+>executeQuery,PGconn *, /usr/local/src/postgresql/src/bin/pg_dump/pg_dumpall.c:1895:2
+>expand_dbname_patterns,PGconn *, /usr/local/src/postgresql/src/bin/pg_dump/pg_dumpall.c:1469:3
+>ParallelBackupStart,ArchiveHandle *, /usr/local/src/postgresql/src/bin/pg_dump/parallel.c:1008:3
 >local_destroy,rewind_source *, /usr/local/src/postgresql/src/bin/pg_rewind/local_source.c:186:1
 >XLogReaderFree,XLogReaderState *, /usr/local/src/postgresql/src/bin/pg_rewind/xlogreader.c:173:1
 >bbstreamer_lz4_compressor_free,bbstreamer *, /usr/local/src/postgresql/src/bin/pg_basebackup/bbstreamer_lz4.c:266:1
 >bbstreamer_lz4_decompressor_free,bbstreamer *, /usr/local/src/postgresql/src/bin/pg_basebackup/bbstreamer_lz4.c:420:1
+>disconnect_database,PGconn *, /usr/local/src/postgresql/src/bin/pg_basebackup/pg_createsubscriber.c:549:1
 >bbstreamer_zstd_compressor_free,bbstreamer *, /usr/local/src/postgresql/src/bin/pg_basebackup/bbstreamer_zstd.c:249:1
 >bbstreamer_zstd_decompressor_free,bbstreamer *, /usr/local/src/postgresql/src/bin/pg_basebackup/bbstreamer_zstd.c:366:1
 >bbstreamer_tar_archiver_free,bbstreamer *, /usr/local/src/postgresql/src/bin/pg_basebackup/bbstreamer_tar.c:454:1
@@ -10,6 +18,10 @@
 >gzip_pfree,void *, /usr/local/src/postgresql/src/bin/pg_basebackup/bbstreamer_gzip.c:362:1
 >bbstreamer_recovery_injector_free,bbstreamer *, /usr/local/src/postgresql/src/bin/pg_basebackup/bbstreamer_inject.c:212:1
 >XLogReaderFree,XLogReaderState *, /usr/local/src/postgresql/src/bin/pg_waldump/xlogreader.c:173:1
+>executeQueryOrDie,PGconn *, /usr/local/src/postgresql/src/bin/pg_upgrade/server.c:142:2
+>appendQualifiedRelation,PGconn *, /usr/local/src/postgresql/src/bin/scripts/common.c:111:2
+>get_parallel_object_list,PGconn *, /usr/local/src/postgresql/src/bin/scripts/reindexdb.c:767:2
+>run_reindex_command,PGconn *, /usr/local/src/postgresql/src/bin/scripts/reindexdb.c:606:3
 >PLy_function_drop_args,PLySavedArgs *, /usr/local/src/postgresql/src/pl/plpython/plpy_exec.c:599:1
 >PLy_function_restore_args,PLySavedArgs *, /usr/local/src/postgresql/src/pl/plpython/plpy_exec.c:577:1
 >CatCacheRemoveCList,CatCList *, /usr/local/src/postgresql/src/backend/utils/cache/catcache.c:582:1
@@ -169,9 +181,22 @@
 >BlockRefTableFreeEntry,BlockRefTableEntry *, /usr/local/src/postgresql/src/common/blkreftable.c:1142:1
 >DestroyBlockRefTableReader,BlockRefTableReader *, /usr/local/src/postgresql/src/common/blkreftable.c:780:1
 >DestroyBlockRefTableWriter,BlockRefTableWriter *, /usr/local/src/postgresql/src/common/blkreftable.c:858:1
+>disconnectDatabase,PGconn *, /usr/local/src/postgresql/src/fe_utils/connect_utils.c:170:1
+>executeCommand,PGconn *, /usr/local/src/postgresql/src/fe_utils/query_utils.c:60:2
+>executeQuery,PGconn *, /usr/local/src/postgresql/src/fe_utils/query_utils.c:35:2
+>descriptor_deallocate_all,struct descriptor *, /usr/local/src/postgresql/src/interfaces/ecpg/ecpglib/descriptor.c:786:2
+>ecpg_do_epilogue,struct statement *, /usr/local/src/postgresql/src/interfaces/ecpg/ecpglib/execute.c:2234:1
+>exit_nicely,PGconn *, /usr/local/src/postgresql/src/test/examples/testlibpq4.c:18:2
+>exit_nicely,PGconn *, /usr/local/src/postgresql/src/test/examples/testlibpq4.c:20:2
+>exit_nicely,PGconn *, /usr/local/src/postgresql/src/test/examples/testlibpq.c:16:1
+>exit_nicely,PGconn *, /usr/local/src/postgresql/src/test/examples/testlo64.c:217:1
+>exit_nicely,PGconn *, /usr/local/src/postgresql/src/test/examples/testlibpq2.c:44:1
+>exit_nicely,PGconn *, /usr/local/src/postgresql/src/test/examples/testlibpq3.c:50:1
+>exit_nicely,PGconn *, /usr/local/src/postgresql/src/test/examples/testlo.c:195:1
 >emit_audit_message,char *, /usr/local/src/postgresql/src/test/modules/test_oat_hooks/test_oat_hooks.c:253:2
 >emit_audit_message,char *, /usr/local/src/postgresql/src/test/modules/test_oat_hooks/test_oat_hooks.c:255:2
 >irbt_free,RBTNode *, /usr/local/src/postgresql/src/test/modules/test_rbtree/test_rbtree.c:73:1
+>exit_nicely,PGconn *, /usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:63:1
 >pg_tzenumerate_end,pg_tzenum *, /usr/local/src/postgresql/src/timezone/pgtz.c:422:1
 >pgp_cfb_free,PGP_CFB *, /usr/local/src/postgresql/contrib/pgcrypto/pgp-cfb.c:87:1
 >clear_and_pfree,text *, /usr/local/src/postgresql/contrib/pgcrypto/pgp-pgsql.c:100:1
@@ -188,6 +213,7 @@
 >gen_ossl_free,PX_Cipher *, /usr/local/src/postgresql/contrib/pgcrypto/openssl.c:341:1
 >z_free,void *, /usr/local/src/postgresql/contrib/pgcrypto/pgp-compress.c:66:1
 >hmac_free,PX_HMAC *, /usr/local/src/postgresql/contrib/pgcrypto/px-hmac.c:135:1
+>sql_exec,PGconn *, /usr/local/src/postgresql/contrib/oid2name/oid2name.c:394:2
 >createNewConnection,remoteConn *, /usr/local/src/postgresql/contrib/dblink/dblink.c:2572:2
 >dblink_security_check,remoteConn *, /usr/local/src/postgresql/contrib/dblink/dblink.c:2628:2
 >report_corruption_internal,char *, /usr/local/src/postgresql/contrib/amcheck/verify_heapam.c:841:1

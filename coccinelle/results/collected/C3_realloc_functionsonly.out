@@ -1,3 +1,4 @@
 >bms_add_member,Bitmapset *, /usr/local/src/postgresql/src/backend/nodes/bitmapset.c:836:20
 >bms_add_range,Bitmapset *, /usr/local/src/postgresql/src/backend/nodes/bitmapset.c:1055:20
+>_int_unique,ArrayType *, /usr/local/src/postgresql/contrib/intarray/_int_tool.c:319:8
 >resize_intArrayType,ArrayType *, /usr/local/src/postgresql/contrib/intarray/_int_tool.c:268:19

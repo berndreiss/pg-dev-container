@@ -4,7 +4,7 @@ identifier f, i;
 position p;
 
 @@
-static t1 f(..., __TYPE__ i, ...) {
+static t1 f(..., t2 i, ...) {
   <+...
   __FUNCTION__@p(..., i, ...)
   ...+>
@@ -17,6 +17,7 @@ t << __METAFUNCTION__.t2;
 rt << __METAFUNCTION__.t1;
 
 @@
-print(f">{f},__PYTHONTYPE__, " + p[0].file + ":" + p[0].line + ":" + p[0].column)
-print(f"Used: __FUNCTION__")
-print(f"Ret. Type: {rt}")
+if t == __TYPE__:
+  print(f">{f},__PYTHONTYPE__, " + p[0].file + ":" + p[0].line + ":" + p[0].column)
+  print(f"Used: __FUNCTION__")
+  print(f"Ret. Type: {rt}")

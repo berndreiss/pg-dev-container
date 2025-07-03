@@ -1,17 +1,9 @@
-@test forall@
-type t1, t2;
-identifier f, i;
-position p;
+@exists@
+type t;
+identifier x;
 @@
-t1 f(...) {
-  ...
-  if (!i){...
-  pfree@p(i, ...);
-  ...}
-  ...
-}
+t x;
+...
+-free(x);
++pfree(x);
 
-@script:python@
-p << test.p;
-@@
-print(p[0].line);

@@ -28,27 +28,3 @@ Ret. Type: void
 >pagetable_free,void *, /usr/local/src/postgresql/src/backend/nodes/tidbitmap.c:1528:2
 Used: pfree
 Ret. Type: void
->ReorderBufferFreeSnap,Snapshot, /usr/local/src/postgresql/src/backend/replication/logical/reorderbuffer.c:1895:2,snap->copied
-Used: pfree
-Ret. Type: void
->ExecForceStoreHeapTuple,HeapTuple, /usr/local/src/postgresql/src/backend/executor/execTuples.c:1577:3,shouldFree
-Used: pfree
-Ret. Type: void
->ExecForceStoreHeapTuple,HeapTuple, /usr/local/src/postgresql/src/backend/executor/execTuples.c:1589:3,shouldFree
-Used: pfree
-Ret. Type: void
->ExecForceStoreMinimalTuple,MinimalTuple, /usr/local/src/postgresql/src/backend/executor/execTuples.c:1622:3,shouldFree
-Used: pfree
-Ret. Type: void
->ginFinishSplit,GinBtreeStack *, /usr/local/src/postgresql/src/backend/access/gin/ginbtree.c:752:3,freestack
-Used: pfree
-Ret. Type: void
->_bt_insertonpg,IndexTuple, /usr/local/src/postgresql/src/backend/access/nbtree/nbtinsert.c:1435:2,postingoff
-Used: pfree
-Ret. Type: void
->dump_variables,struct arguments *, /usr/local/src/postgresql/src/interfaces/ecpg/preproc/variable.c:460:2,mode
-Used: free
-Ret. Type: void
->quote_postgres,char *, /usr/local/src/postgresql/src/interfaces/ecpg/ecpglib/execute.c:77:2,quote
-Used: ecpg_free
-Ret. Type: char *

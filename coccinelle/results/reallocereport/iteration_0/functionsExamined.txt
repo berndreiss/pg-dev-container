@@ -16,6 +16,7 @@
 >erealloc,void *, /usr/local/src/postgresql/src/timezone/zic.c:442:17
 >gistjoinvector,IndexTuple *, /usr/local/src/postgresql/src/backend/access/gist/gistutil.c:115:24
 >growalloc,void *, /usr/local/src/postgresql/src/timezone/zic.c:464:9
+>_int_unique,ArrayType *, /usr/local/src/postgresql/contrib/intarray/_int_tool.c:319:8
 >jsonpath_yyrealloc,void *, /usr/local/src/postgresql/src/backend/utils/adt/jsonpath_scan.c:6175:9
 >jsonpath_yyrealloc,yy_size_t, /usr/local/src/postgresql/src/backend/utils/adt/jsonpath_scan.c:6175:9
 >pg_realloc,size_t, /usr/local/src/postgresql/src/common/fe_memutils.c:72:7

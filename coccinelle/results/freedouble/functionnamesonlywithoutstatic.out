@@ -1,3 +1,0 @@
->output_prepare_statement,char *, /usr/local/src/postgresql/src/interfaces/ecpg/preproc/output.c
->PageRestoreTempPage,Page, /usr/local/src/postgresql/src/backend/storage/page/bufpage.c
->restorePsetInfo,printQueryOpt *, /usr/local/src/postgresql/src/bin/psql/command.c

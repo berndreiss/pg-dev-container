@@ -3,20 +3,17 @@
 >BipartiteMatchFree,BipartiteMatchState *, /usr/local/src/postgresql/src/backend/lib/bipartite_match.c
 >BlockRefTableFreeEntry,BlockRefTableEntry *, /usr/local/src/postgresql/src/common/blkreftable.c
 >bloom_free,bloom_filter *, /usr/local/src/postgresql/src/backend/lib/bloomfilter.c
->bms_copy_and_free,Bitmapset *, /usr/local/src/postgresql/src/backend/nodes/bitmapset.c
 >bms_free,Bitmapset *, /usr/local/src/postgresql/src/backend/nodes/bitmapset.c
 >brin_free_tuple,BrinTuple *, /usr/local/src/postgresql/src/backend/access/brin/brin_tuple.c
 >brinRevmapTerminate,BrinRevmap *, /usr/local/src/postgresql/src/backend/access/brin/brin_revmap.c
 >BufFileClose,BufFile *, /usr/local/src/postgresql/src/backend/storage/file/buffile.c
 >BumpDelete,MemoryContext, /usr/local/src/postgresql/src/backend/utils/mmgr/bump.c
 >CatalogCloseIndexes,CatalogIndexState, /usr/local/src/postgresql/src/backend/catalog/indexing.c
->ClearOrSaveResult,PGresult *, /usr/local/src/postgresql/src/bin/psql/common.c
 >closedir,DIR *, /usr/local/src/postgresql/src/port/dirent.c
 >close_tsvector_parser,TSVectorParseState, /usr/local/src/postgresql/src/backend/utils/adt/tsvector_parser.c
 >conditional_stack_destroy,ConditionalStack, /usr/local/src/postgresql/src/fe_utils/conditional.c
 >DeCloneArchive,ArchiveHandle *, /usr/local/src/postgresql/src/bin/pg_dump/pg_backup_archiver.c
 >DecrTupleDescRefCount,TupleDesc, /usr/local/src/postgresql/src/backend/access/common/tupdesc.c
->descriptor_deallocate_all,struct descriptor *, /usr/local/src/postgresql/src/interfaces/ecpg/ecpglib/descriptor.c
 >descriptor_destructor,void *, /usr/local/src/postgresql/src/interfaces/ecpg/ecpglib/descriptor.c
 >DestroyBlockRefTableReader,BlockRefTableReader *, /usr/local/src/postgresql/src/common/blkreftable.c
 >DestroyBlockRefTableWriter,BlockRefTableWriter *, /usr/local/src/postgresql/src/common/blkreftable.c
@@ -29,9 +26,6 @@
 >dshash_destroy,dshash_table *, /usr/local/src/postgresql/src/backend/lib/dshash.c
 >dshash_detach,dshash_table *, /usr/local/src/postgresql/src/backend/lib/dshash.c
 >dsm_detach,dsm_segment *, /usr/local/src/postgresql/src/backend/storage/ipc/dsm.c
->dumpRoleGUCPrivs,PGconn *, /usr/local/src/postgresql/src/bin/pg_dump/pg_dumpall.c
->dumpRoleMembership,PGconn *, /usr/local/src/postgresql/src/bin/pg_dump/pg_dumpall.c
->dumpTablespaces,PGconn *, /usr/local/src/postgresql/src/bin/pg_dump/pg_dumpall.c
 >ecpg_do_epilogue,struct statement *, /usr/local/src/postgresql/src/interfaces/ecpg/ecpglib/execute.c
 >ECPGfree_type,struct ECPGtype *, /usr/local/src/postgresql/src/interfaces/ecpg/preproc/type.c
 >ecpg_free,void *, /usr/local/src/postgresql/src/interfaces/ecpg/ecpglib/memory.c
@@ -42,12 +36,6 @@
 >ExecDropSingleTupleTableSlot,TupleTableSlot *, /usr/local/src/postgresql/src/backend/executor/execTuples.c
 >ExecHashTableDestroy,HashJoinTable, /usr/local/src/postgresql/src/backend/executor/nodeHash.c
 >ExecParallelCleanup,ParallelExecutorInfo *, /usr/local/src/postgresql/src/backend/executor/execParallel.c
->exit_nicely,PGconn *, /usr/local/src/postgresql/src/test/examples/testlibpq2.c
->exit_nicely,PGconn *, /usr/local/src/postgresql/src/test/examples/testlibpq3.c
->exit_nicely,PGconn *, /usr/local/src/postgresql/src/test/examples/testlibpq.c
->exit_nicely,PGconn *, /usr/local/src/postgresql/src/test/examples/testlo64.c
->exit_nicely,PGconn *, /usr/local/src/postgresql/src/test/examples/testlo.c
->exit_nicely,PGconn *, /usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c
 >FreeAccessStrategy,BufferAccessStrategy, /usr/local/src/postgresql/src/backend/storage/buffer/freelist.c
 >free_attrmap,AttrMap *, /usr/local/src/postgresql/src/backend/access/common/attmap.c
 >FreeBulkInsertState,BulkInsertState, /usr/local/src/postgresql/src/backend/access/heap/heapam.c
@@ -82,7 +70,6 @@
 >LogicalTapeSetClose,LogicalTapeSet *, /usr/local/src/postgresql/src/backend/utils/sort/logtape.c
 >mbuf_free,MBuf *, /usr/local/src/postgresql/contrib/pgcrypto/mbuf.c
 >output_deallocate_prepare_statement,char *, /usr/local/src/postgresql/src/interfaces/ecpg/preproc/output.c
->pa_free_worker,ParallelApplyWorkerInfo *, /usr/local/src/postgresql/src/backend/replication/logical/applyparallelworker.c
 >pairingheap_free,pairingheap *, /usr/local/src/postgresql/src/backend/lib/pairingheap.c
 >pfree,void *, /usr/local/src/postgresql/src/common/fe_memutils.c
 >pgfnames_cleanup,char * *, /usr/local/src/postgresql/src/common/pgfnames.c
@@ -121,12 +108,10 @@
 >tbm_end_iterate,TBMIterator *, /usr/local/src/postgresql/src/backend/nodes/tidbitmap.c
 >tbm_end_shared_iterate,TBMSharedIterator *, /usr/local/src/postgresql/src/backend/nodes/tidbitmap.c
 >tbm_free,TIDBitmap *, /usr/local/src/postgresql/src/backend/nodes/tidbitmap.c
->test_nosync,PGconn *, /usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c
 >TidStoreDestroy,TidStore *, /usr/local/src/postgresql/src/backend/access/common/tidstore.c
 >TidStoreDetach,TidStore *, /usr/local/src/postgresql/src/backend/access/common/tidstore.c
 >TidStoreEndIterate,TidStoreIter *, /usr/local/src/postgresql/src/backend/access/common/tidstore.c
 >tuplestore_end,Tuplestorestate *, /usr/local/src/postgresql/src/backend/utils/sort/tuplestore.c
->UnregisterSnapshotNoOwner,Snapshot, /usr/local/src/postgresql/src/backend/utils/time/snapmgr.c
 >XLogPrefetcherFree,XLogPrefetcher *, /usr/local/src/postgresql/src/backend/access/transam/xlogprefetcher.c
 >XLogReaderFree,XLogReaderState *, /usr/local/src/postgresql/src/backend/access/transam/xlogreader.c
 >XLogReaderFree,XLogReaderState *, /usr/local/src/postgresql/src/bin/pg_rewind/xlogreader.c

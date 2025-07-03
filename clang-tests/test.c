@@ -12,12 +12,11 @@ struct Test{
 void customFree(char *s){
   pfree(s);
 }
-void second(char *s, int i){
+void dependent(char *s, int i){
     pfree(s);
 }
 void first(char *s){
-  second(s, 0);
-
+  dependent(s, 0);
 }
 
 int main(int a, char **args){
@@ -35,6 +34,7 @@ int main(int a, char **args){
   if (i > 0){
     pfree(str);
   }
+  dependent(str, 0)
   //first(str);
   //otherFileFree(str);
   //pfreedependent(str, 42);

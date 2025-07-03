@@ -1,9 +1,24 @@
 >addHLParsedLex,ParsedLex *, /usr/local/src/postgresql/src/backend/tsearch/ts_parse.c
 >addHLParsedLex,TSLexeme *, /usr/local/src/postgresql/src/backend/tsearch/ts_parse.c
 >add_partial_path,Path *, /usr/local/src/postgresql/src/backend/optimizer/util/pathnode.c
+>add_part_relids,Bitmapset *, /usr/local/src/postgresql/src/backend/partitioning/partprune.c
 >add_path,Path *, /usr/local/src/postgresql/src/backend/optimizer/util/pathnode.c
+>appendQualifiedRelation,PGconn *, /usr/local/src/postgresql/src/bin/scripts/common.c
+>ApplyRetrieveRule,List *, /usr/local/src/postgresql/src/backend/rewrite/rewriteHandler.c
+>arabic_UTF_8_close_env,struct SN_env *, /usr/local/src/postgresql/src/backend/snowball/libstemmer/stem_UTF_8_arabic.c
+>armenian_UTF_8_close_env,struct SN_env *, /usr/local/src/postgresql/src/backend/snowball/libstemmer/stem_UTF_8_armenian.c
 >array_free_iterator,ArrayIterator, /usr/local/src/postgresql/src/backend/utils/adt/arrayfuncs.c
+>ATController,Relation, /usr/local/src/postgresql/src/backend/commands/tablecmds.c
+>AtEOSubXact_cleanup,Relation, /usr/local/src/postgresql/src/backend/utils/cache/relcache.c
+>AtEOXact_cleanup,Relation, /usr/local/src/postgresql/src/backend/utils/cache/relcache.c
+>ATExecDetachPartition,Relation, /usr/local/src/postgresql/src/backend/commands/tablecmds.c
+>ATExecDropColumn,ObjectAddresses *, /usr/local/src/postgresql/src/backend/commands/tablecmds.c
+>audit_attempt,char *, /usr/local/src/postgresql/src/test/modules/test_oat_hooks/test_oat_hooks.c
+>audit_failure,char *, /usr/local/src/postgresql/src/test/modules/test_oat_hooks/test_oat_hooks.c
+>audit_success,char *, /usr/local/src/postgresql/src/test/modules/test_oat_hooks/test_oat_hooks.c
 >avlFree,avl_node *, /usr/local/src/postgresql/src/bin/psql/crosstabview.c
+>basque_ISO_8859_1_close_env,struct SN_env *, /usr/local/src/postgresql/src/backend/snowball/libstemmer/stem_ISO_8859_1_basque.c
+>basque_UTF_8_close_env,struct SN_env *, /usr/local/src/postgresql/src/backend/snowball/libstemmer/stem_UTF_8_basque.c
 >bbstreamer_gzip_decompressor_free,bbstreamer *, /usr/local/src/postgresql/src/bin/pg_basebackup/bbstreamer_gzip.c
 >bbstreamer_lz4_compressor_free,bbstreamer *, /usr/local/src/postgresql/src/bin/pg_basebackup/bbstreamer_lz4.c
 >bbstreamer_lz4_decompressor_free,bbstreamer *, /usr/local/src/postgresql/src/bin/pg_basebackup/bbstreamer_lz4.c
@@ -16,40 +31,64 @@
 >BipartiteMatchFree,BipartiteMatchState *, /usr/local/src/postgresql/src/backend/lib/bipartite_match.c
 >BlockRefTableFreeEntry,BlockRefTableEntry *, /usr/local/src/postgresql/src/common/blkreftable.c
 >bloom_free,bloom_filter *, /usr/local/src/postgresql/src/backend/lib/bloomfilter.c
+>bms_add_member,Bitmapset *, /usr/local/src/postgresql/src/backend/nodes/bitmapset.c
 >bms_add_members,Bitmapset *, /usr/local/src/postgresql/src/backend/nodes/bitmapset.c
+>bms_add_range,Bitmapset *, /usr/local/src/postgresql/src/backend/nodes/bitmapset.c
+>bms_copy_and_free,Bitmapset *, /usr/local/src/postgresql/src/backend/nodes/bitmapset.c
 >bms_del_member,Bitmapset *, /usr/local/src/postgresql/src/backend/nodes/bitmapset.c
 >bms_del_members,Bitmapset *, /usr/local/src/postgresql/src/backend/nodes/bitmapset.c
 >bms_free,Bitmapset *, /usr/local/src/postgresql/src/backend/nodes/bitmapset.c
 >bms_int_members,Bitmapset *, /usr/local/src/postgresql/src/backend/nodes/bitmapset.c
+>bms_join,Bitmapset *, /usr/local/src/postgresql/src/backend/nodes/bitmapset.c
 >bms_replace_members,Bitmapset *, /usr/local/src/postgresql/src/backend/nodes/bitmapset.c
 >bool_substitute_hook,char *, /usr/local/src/postgresql/src/bin/psql/startup.c
 >brin_free_tuple,BrinTuple *, /usr/local/src/postgresql/src/backend/access/brin/brin_tuple.c
 >brinRevmapTerminate,BrinRevmap *, /usr/local/src/postgresql/src/backend/access/brin/brin_revmap.c
+>_bt_doinsert,IndexTuple, /usr/local/src/postgresql/src/backend/access/nbtree/nbtinsert.c
 >_bt_insertonpg,IndexTuple, /usr/local/src/postgresql/src/backend/access/nbtree/nbtinsert.c
 >_bt_spooldestroy,BTSpool *, /usr/local/src/postgresql/src/backend/access/nbtree/nbtsort.c
 >BufFileClose,BufFile *, /usr/local/src/postgresql/src/backend/storage/file/buffile.c
 >buf_finalize,StringInfo, /usr/local/src/postgresql/src/backend/utils/adt/xid8funcs.c
+>buildShSecLabels,PGconn *, /usr/local/src/postgresql/src/bin/pg_dump/pg_dumpall.c
 >BumpBlockFree,BumpBlock *, /usr/local/src/postgresql/src/backend/utils/mmgr/bump.c
 >BumpDelete,MemoryContext, /usr/local/src/postgresql/src/backend/utils/mmgr/bump.c
 >cat2_str,char *, /usr/local/src/postgresql/src/interfaces/ecpg/preproc/preproc.c
+>catalan_ISO_8859_1_close_env,struct SN_env *, /usr/local/src/postgresql/src/backend/snowball/libstemmer/stem_ISO_8859_1_catalan.c
+>catalan_UTF_8_close_env,struct SN_env *, /usr/local/src/postgresql/src/backend/snowball/libstemmer/stem_UTF_8_catalan.c
 >CatalogCloseIndexes,CatalogIndexState, /usr/local/src/postgresql/src/backend/catalog/indexing.c
 >CatCacheRemoveCList,CatCList *, /usr/local/src/postgresql/src/backend/utils/cache/catcache.c
 >CatCacheRemoveCTup,CatCTup *, /usr/local/src/postgresql/src/backend/utils/cache/catcache.c
+>check_and_drop_existing_subscriptions,PGconn *, /usr/local/src/postgresql/src/bin/pg_basebackup/pg_createsubscriber.c
+>CheckAttributeType,List *, /usr/local/src/postgresql/src/backend/catalog/heap.c
 >clean_NOT_intree,NODE *, /usr/local/src/postgresql/src/backend/utils/adt/tsquery_cleanup.c
 >clean_stopword_intree,NODE *, /usr/local/src/postgresql/src/backend/utils/adt/tsquery_cleanup.c
 >clear_and_pfree,text *, /usr/local/src/postgresql/contrib/pgcrypto/pgp-pgsql.c
+>ClearOrSaveResult,PGresult *, /usr/local/src/postgresql/src/bin/psql/common.c
+>_CloseArchive,ArchiveHandle *, /usr/local/src/postgresql/src/bin/pg_dump/pg_backup_directory.c
+>close_destination_dir,DIR *, /usr/local/src/postgresql/src/bin/pg_basebackup/pg_receivewal.c
 >closedir,DIR *, /usr/local/src/postgresql/src/port/dirent.c
+>CloseTableList,List *, /usr/local/src/postgresql/src/backend/commands/publicationcmds.c
 >close_tsvector_parser,TSVectorParseState, /usr/local/src/postgresql/src/backend/utils/adt/tsvector_parser.c
 >combo_free,PX_Combo *, /usr/local/src/postgresql/contrib/pgcrypto/px.c
+>compile_database_list,PGconn *, /usr/local/src/postgresql/src/bin/pg_amcheck/pg_amcheck.c
+>compile_relation_list_one_db,PGconn *, /usr/local/src/postgresql/src/bin/pg_amcheck/pg_amcheck.c
 >conditional_stack_destroy,ConditionalStack, /usr/local/src/postgresql/src/fe_utils/conditional.c
 >copy_dest_destroy,DestReceiver *, /usr/local/src/postgresql/src/backend/commands/copyto.c
 >CopyMultiInsertBufferCleanup,CopyMultiInsertBuffer *, /usr/local/src/postgresql/src/backend/commands/copyfrom.c
 >core_yyfree,void *, /usr/local/src/postgresql/src/backend/parser/scan.c
 >createNewConnection,remoteConn *, /usr/local/src/postgresql/contrib/dblink/dblink.c
+>create_one_window_path,Path *, /usr/local/src/postgresql/src/backend/optimizer/plan/planner.c
+>create_publication,PGconn *, /usr/local/src/postgresql/src/bin/pg_basebackup/pg_createsubscriber.c
+>create_subscription,PGconn *, /usr/local/src/postgresql/src/bin/pg_basebackup/pg_createsubscriber.c
+>danish_ISO_8859_1_close_env,struct SN_env *, /usr/local/src/postgresql/src/backend/snowball/libstemmer/stem_ISO_8859_1_danish.c
+>danish_UTF_8_close_env,struct SN_env *, /usr/local/src/postgresql/src/backend/snowball/libstemmer/stem_UTF_8_danish.c
+>dblink_res_error,PGresult *, /usr/local/src/postgresql/contrib/dblink/dblink.c
 >dblink_security_check,remoteConn *, /usr/local/src/postgresql/contrib/dblink/dblink.c
 >deallocate_one,struct prepared_statement *, /usr/local/src/postgresql/src/interfaces/ecpg/ecpglib/prepare.c
 >DeCloneArchive,ArchiveHandle *, /usr/local/src/postgresql/src/bin/pg_dump/pg_backup_archiver.c
+>DecrTupleDescRefCount,TupleDesc, /usr/local/src/postgresql/src/backend/access/common/tupdesc.c
 >DependencyGenerator_free,DependencyGenerator, /usr/local/src/postgresql/src/backend/statistics/dependencies.c
+>descriptor_deallocate_all,struct descriptor *, /usr/local/src/postgresql/src/interfaces/ecpg/ecpglib/descriptor.c
 >descriptor_free,struct descriptor *, /usr/local/src/postgresql/src/interfaces/ecpg/ecpglib/descriptor.c
 >DestroyBlockRefTableReader,BlockRefTableReader *, /usr/local/src/postgresql/src/common/blkreftable.c
 >DestroyBlockRefTableWriter,BlockRefTableWriter *, /usr/local/src/postgresql/src/common/blkreftable.c
@@ -59,28 +98,84 @@
 >DestroyTupleQueueReader,TupleQueueReader *, /usr/local/src/postgresql/src/backend/executor/tqueue.c
 >digest_free,PX_MD *, /usr/local/src/postgresql/contrib/pgcrypto/openssl.c
 >dir_free,WalWriteMethod *, /usr/local/src/postgresql/src/bin/pg_basebackup/walmethods.c
+>disconnect_database,PGconn *, /usr/local/src/postgresql/src/bin/pg_basebackup/pg_createsubscriber.c
+>disconnectDatabase,PGconn *, /usr/local/src/postgresql/src/fe_utils/connect_utils.c
 >dofindsubquery,QTNode *, /usr/local/src/postgresql/src/backend/utils/adt/tsquery_rewrite.c
+>dropDBs,PGconn *, /usr/local/src/postgresql/src/bin/pg_dump/pg_dumpall.c
+>drop_existing_subscriptions,PGconn *, /usr/local/src/postgresql/src/bin/pg_basebackup/pg_createsubscriber.c
+>dropRoles,PGconn *, /usr/local/src/postgresql/src/bin/pg_dump/pg_dumpall.c
+>dropTablespaces,PGconn *, /usr/local/src/postgresql/src/bin/pg_dump/pg_dumpall.c
 >dsa_detach,dsa_area *, /usr/local/src/postgresql/src/backend/utils/mmgr/dsa.c
 >dshash_destroy,dshash_table *, /usr/local/src/postgresql/src/backend/lib/dshash.c
 >dshash_detach,dshash_table *, /usr/local/src/postgresql/src/backend/lib/dshash.c
 >dsm_detach,dsm_segment *, /usr/local/src/postgresql/src/backend/storage/ipc/dsm.c
+>dumpDatabases,PGconn *, /usr/local/src/postgresql/src/bin/pg_dump/pg_dumpall.c
+>dumpRoleGUCPrivs,PGconn *, /usr/local/src/postgresql/src/bin/pg_dump/pg_dumpall.c
+>dumpRoleMembership,PGconn *, /usr/local/src/postgresql/src/bin/pg_dump/pg_dumpall.c
+>dumpRoles,PGconn *, /usr/local/src/postgresql/src/bin/pg_dump/pg_dumpall.c
+>dumpTablespaces,PGconn *, /usr/local/src/postgresql/src/bin/pg_dump/pg_dumpall.c
+>dumpUserConfig,PGconn *, /usr/local/src/postgresql/src/bin/pg_dump/pg_dumpall.c
 >dump_variables,struct arguments *, /usr/local/src/postgresql/src/interfaces/ecpg/preproc/variable.c
+>dutch_ISO_8859_1_close_env,struct SN_env *, /usr/local/src/postgresql/src/backend/snowball/libstemmer/stem_ISO_8859_1_dutch.c
+>dutch_UTF_8_close_env,struct SN_env *, /usr/local/src/postgresql/src/backend/snowball/libstemmer/stem_UTF_8_dutch.c
+>ecpg_check_PQresult,PGresult *, /usr/local/src/postgresql/src/interfaces/ecpg/ecpglib/error.c
+>ecpg_do_epilogue,struct statement *, /usr/local/src/postgresql/src/interfaces/ecpg/ecpglib/execute.c
 >ecpg_finish,struct connection *, /usr/local/src/postgresql/src/interfaces/ecpg/ecpglib/connect.c
 >ECPGfree_type,struct ECPGtype *, /usr/local/src/postgresql/src/interfaces/ecpg/preproc/type.c
 >ecpg_free,void *, /usr/local/src/postgresql/src/interfaces/ecpg/ecpglib/memory.c
 >ecpg_sqlca_key_destructor,void *, /usr/local/src/postgresql/src/interfaces/ecpg/ecpglib/misc.c
 >emit_audit_message,char *, /usr/local/src/postgresql/src/test/modules/test_oat_hooks/test_oat_hooks.c
+>enable_subscription,PGconn *, /usr/local/src/postgresql/src/bin/pg_basebackup/pg_createsubscriber.c
 >EndCompressFileHandle,CompressFileHandle *, /usr/local/src/postgresql/src/bin/pg_dump/compress_io.c
 >EndCompressor,CompressorState *, /usr/local/src/postgresql/src/bin/pg_dump/compress_io.c
 >EndCopy,CopyToState, /usr/local/src/postgresql/src/backend/commands/copyto.c
 >EndCopyFrom,CopyFromState, /usr/local/src/postgresql/src/backend/commands/copyfrom.c
+>EndCopyTo,CopyToState, /usr/local/src/postgresql/src/backend/commands/copyto.c
 >end_tup_output,TupOutputState *, /usr/local/src/postgresql/src/backend/executor/execTuples.c
+>english_ISO_8859_1_close_env,struct SN_env *, /usr/local/src/postgresql/src/backend/snowball/libstemmer/stem_ISO_8859_1_english.c
+>english_UTF_8_close_env,struct SN_env *, /usr/local/src/postgresql/src/backend/snowball/libstemmer/stem_UTF_8_english.c
+>ExecARDeleteTriggers,HeapTuple, /usr/local/src/postgresql/src/backend/commands/trigger.c
+>ExecARUpdateTriggers,HeapTuple, /usr/local/src/postgresql/src/backend/commands/trigger.c
+>ExecBRUpdateTriggers,HeapTuple, /usr/local/src/postgresql/src/backend/commands/trigger.c
+>ExecDeleteEpilogue,HeapTuple, /usr/local/src/postgresql/src/backend/executor/nodeModifyTable.c
+>ExecDelete,HeapTuple, /usr/local/src/postgresql/src/backend/executor/nodeModifyTable.c
 >ExecDropSingleTupleTableSlot,TupleTableSlot *, /usr/local/src/postgresql/src/backend/executor/execTuples.c
 >ExecForceStoreHeapTuple,HeapTuple, /usr/local/src/postgresql/src/backend/executor/execTuples.c
 >ExecForceStoreMinimalTuple,MinimalTuple, /usr/local/src/postgresql/src/backend/executor/execTuples.c
 >ExecHashTableDestroy,HashJoinTable, /usr/local/src/postgresql/src/backend/executor/nodeHash.c
+>ExecIRDeleteTriggers,HeapTuple, /usr/local/src/postgresql/src/backend/commands/trigger.c
+>ExecIRUpdateTriggers,HeapTuple, /usr/local/src/postgresql/src/backend/commands/trigger.c
+>ExecMergeMatched,HeapTuple, /usr/local/src/postgresql/src/backend/executor/nodeModifyTable.c
 >ExecParallelCleanup,ParallelExecutorInfo *, /usr/local/src/postgresql/src/backend/executor/execParallel.c
+>ExecPrepareTuplestoreResult,TupleDesc, /usr/local/src/postgresql/src/backend/executor/execSRF.c
+>ExecResetTupleTable,List *, /usr/local/src/postgresql/src/backend/executor/execTuples.c
+>ExecUpdateEpilogue,HeapTuple, /usr/local/src/postgresql/src/backend/executor/nodeModifyTable.c
+>ExecUpdate,HeapTuple, /usr/local/src/postgresql/src/backend/executor/nodeModifyTable.c
+>ExecUpdatePrologue,HeapTuple, /usr/local/src/postgresql/src/backend/executor/nodeModifyTable.c
+>executeCommand,PGconn *, /usr/local/src/postgresql/src/bin/pg_dump/pg_dumpall.c
+>executeCommand,PGconn *, /usr/local/src/postgresql/src/fe_utils/query_utils.c
+>executeQueryOrDie,PGconn *, /usr/local/src/postgresql/src/bin/pg_upgrade/server.c
+>executeQuery,PGconn *, /usr/local/src/postgresql/src/bin/pg_dump/pg_dumpall.c
+>executeQuery,PGconn *, /usr/local/src/postgresql/src/fe_utils/query_utils.c
+>exit_nicely,PGconn *, /usr/local/src/postgresql/src/test/examples/testlibpq2.c
+>exit_nicely,PGconn *, /usr/local/src/postgresql/src/test/examples/testlibpq3.c
+>exit_nicely,PGconn *, /usr/local/src/postgresql/src/test/examples/testlibpq4.c
+>exit_nicely,PGconn *, /usr/local/src/postgresql/src/test/examples/testlibpq.c
+>exit_nicely,PGconn *, /usr/local/src/postgresql/src/test/examples/testlo64.c
+>exit_nicely,PGconn *, /usr/local/src/postgresql/src/test/examples/testlo.c
+>exit_nicely,PGconn *, /usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c
+>expand_dbname_patterns,PGconn *, /usr/local/src/postgresql/src/bin/pg_dump/pg_dumpall.c
+>ExplainCustomChildren,List *, /usr/local/src/postgresql/src/backend/commands/explain.c
+>ExplainMemberNodes,List *, /usr/local/src/postgresql/src/backend/commands/explain.c
+>ExplainNode,List *, /usr/local/src/postgresql/src/backend/commands/explain.c
+>ExplainSubPlans,List *, /usr/local/src/postgresql/src/backend/commands/explain.c
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c
+>findeq,QTNode *, /usr/local/src/postgresql/src/backend/utils/adt/tsquery_rewrite.c
+>findsubquery,QTNode *, /usr/local/src/postgresql/src/backend/utils/adt/tsquery_rewrite.c
 >finish_edata,ApplyExecutionData *, /usr/local/src/postgresql/src/backend/replication/logical/worker.c
+>finnish_ISO_8859_1_close_env,struct SN_env *, /usr/local/src/postgresql/src/backend/snowball/libstemmer/stem_ISO_8859_1_finnish.c
+>finnish_UTF_8_close_env,struct SN_env *, /usr/local/src/postgresql/src/backend/snowball/libstemmer/stem_UTF_8_finnish.c
+>fireRIRrules,List *, /usr/local/src/postgresql/src/backend/rewrite/rewriteHandler.c
 >FreeAccessStrategy,BufferAccessStrategy, /usr/local/src/postgresql/src/backend/storage/buffer/freelist.c
 >freeAndGetParent,JsonbIterator *, /usr/local/src/postgresql/src/backend/utils/adt/jsonb_util.c
 >free_attrmap,AttrMap *, /usr/local/src/postgresql/src/backend/access/common/attmap.c
@@ -92,6 +187,7 @@
 >FreeConfigVariable,ConfigVariable *, /usr/local/src/postgresql/src/backend/utils/misc/guc-file.c
 >free_conversion_map,TupleConversionMap *, /usr/local/src/postgresql/src/backend/access/common/tupconvert.c
 >free_copy_options,struct copy_options *, /usr/local/src/postgresql/src/bin/psql/copy.c
+>FreeDir,DIR *, /usr/local/src/postgresql/src/backend/storage/file/fd.c
 >free_edge_table,Edge *, /usr/local/src/postgresql/src/backend/optimizer/geqo/geqo_erx.c
 >FreeErrorData,ErrorData *, /usr/local/src/postgresql/src/backend/utils/error/elog.c
 >FreeExprContext,ExprContext *, /usr/local/src/postgresql/src/backend/executor/execUtils.c
@@ -117,34 +213,67 @@
 >free_variable,struct variable *, /usr/local/src/postgresql/src/interfaces/ecpg/ecpglib/execute.c
 >FreeWaitEventSetAfterFork,WaitEventSet *, /usr/local/src/postgresql/src/backend/storage/ipc/latch.c
 >FreeWaitEventSet,WaitEventSet *, /usr/local/src/postgresql/src/backend/storage/ipc/latch.c
+>french_ISO_8859_1_close_env,struct SN_env *, /usr/local/src/postgresql/src/backend/snowball/libstemmer/stem_ISO_8859_1_french.c
+>french_UTF_8_close_env,struct SN_env *, /usr/local/src/postgresql/src/backend/snowball/libstemmer/stem_UTF_8_french.c
+>generate_object_name,PGconn *, /usr/local/src/postgresql/src/bin/pg_basebackup/pg_createsubscriber.c
 >GenerationBlockFree,GenerationBlock *, /usr/local/src/postgresql/src/backend/utils/mmgr/generation.c
 >GenerationDelete,MemoryContext, /usr/local/src/postgresql/src/backend/utils/mmgr/generation.c
 >generator_free,CombinationGenerator *, /usr/local/src/postgresql/src/backend/statistics/mvdistinct.c
 >GenericXLogAbort,GenericXLogState *, /usr/local/src/postgresql/src/backend/access/transam/generic_xlog.c
 >GenericXLogFinish,GenericXLogState *, /usr/local/src/postgresql/src/backend/access/transam/generic_xlog.c
 >gen_ossl_free,PX_Cipher *, /usr/local/src/postgresql/contrib/pgcrypto/openssl.c
+>german_ISO_8859_1_close_env,struct SN_env *, /usr/local/src/postgresql/src/backend/snowball/libstemmer/stem_ISO_8859_1_german.c
+>german_UTF_8_close_env,struct SN_env *, /usr/local/src/postgresql/src/backend/snowball/libstemmer/stem_UTF_8_german.c
+>get_parallel_object_list,PGconn *, /usr/local/src/postgresql/src/bin/scripts/reindexdb.c
+>ginFinishOldSplit,GinBtreeStack *, /usr/local/src/postgresql/src/backend/access/gin/ginbtree.c
 >ginFinishSplit,GinBtreeStack *, /usr/local/src/postgresql/src/backend/access/gin/ginbtree.c
+>ginInsertValue,GinBtreeStack *, /usr/local/src/postgresql/src/backend/access/gin/ginbtree.c
+>greek_UTF_8_close_env,struct SN_env *, /usr/local/src/postgresql/src/backend/snowball/libstemmer/stem_UTF_8_greek.c
 >guc_free,void *, /usr/local/src/postgresql/src/backend/utils/misc/guc.c
 >gzip_pfree,void *, /usr/local/src/postgresql/src/backend/backup/basebackup_gzip.c
 >gzip_pfree,void *, /usr/local/src/postgresql/src/bin/pg_basebackup/bbstreamer_gzip.c
 >HandleEndOfCopyStream,char *, /usr/local/src/postgresql/src/bin/pg_basebackup/receivelog.c
 >heap_free_minimal_tuple,MinimalTuple, /usr/local/src/postgresql/src/backend/access/common/heaptuple.c
 >heap_freetuple,HeapTuple, /usr/local/src/postgresql/src/backend/access/common/heaptuple.c
+>hindi_UTF_8_close_env,struct SN_env *, /usr/local/src/postgresql/src/backend/snowball/libstemmer/stem_UTF_8_hindi.c
 >hmac_free,PX_HMAC *, /usr/local/src/postgresql/contrib/pgcrypto/px-hmac.c
 >_h_spooldestroy,HSpool *, /usr/local/src/postgresql/src/backend/access/hash/hashsort.c
+>hungarian_ISO_8859_2_close_env,struct SN_env *, /usr/local/src/postgresql/src/backend/snowball/libstemmer/stem_ISO_8859_2_hungarian.c
+>hungarian_UTF_8_close_env,struct SN_env *, /usr/local/src/postgresql/src/backend/snowball/libstemmer/stem_UTF_8_hungarian.c
+>index_close,Relation, /usr/local/src/postgresql/src/backend/access/index/indexam.c
+>index_endscan,IndexScanDesc, /usr/local/src/postgresql/src/backend/access/index/indexam.c
 >IndexScanEnd,IndexScanDesc, /usr/local/src/postgresql/src/backend/access/index/genam.c
+>indonesian_ISO_8859_1_close_env,struct SN_env *, /usr/local/src/postgresql/src/backend/snowball/libstemmer/stem_ISO_8859_1_indonesian.c
+>indonesian_UTF_8_close_env,struct SN_env *, /usr/local/src/postgresql/src/backend/snowball/libstemmer/stem_UTF_8_indonesian.c
 >init_spawned_worker_win32,WorkerInfo *, /usr/local/src/postgresql/src/bin/pg_dump/parallel.c
+>InsertPgAttributeTuples,CatalogIndexState, /usr/local/src/postgresql/src/backend/catalog/heap.c
 >insert_tobeinserted,char *, /usr/local/src/postgresql/src/interfaces/ecpg/ecpglib/execute.c
 >intorel_destroy,DestReceiver *, /usr/local/src/postgresql/src/backend/commands/createas.c
 >inv_close,LargeObjectDesc *, /usr/local/src/postgresql/src/backend/storage/large_object/inv_api.c
 >irbt_free,RBTNode *, /usr/local/src/postgresql/src/test/modules/test_rbtree/test_rbtree.c
+>irish_ISO_8859_1_close_env,struct SN_env *, /usr/local/src/postgresql/src/backend/snowball/libstemmer/stem_ISO_8859_1_irish.c
+>irish_UTF_8_close_env,struct SN_env *, /usr/local/src/postgresql/src/backend/snowball/libstemmer/stem_UTF_8_irish.c
+>italian_ISO_8859_1_close_env,struct SN_env *, /usr/local/src/postgresql/src/backend/snowball/libstemmer/stem_ISO_8859_1_italian.c
+>italian_UTF_8_close_env,struct SN_env *, /usr/local/src/postgresql/src/backend/snowball/libstemmer/stem_UTF_8_italian.c
 >jit_release_context,JitContext *, /usr/local/src/postgresql/src/backend/jit/jit.c
 >json_manifest_object_field_start,char *, /usr/local/src/postgresql/src/common/parse_manifest.c
 >json_manifest_scalar,char *, /usr/local/src/postgresql/src/common/parse_manifest.c
 >json_parse_manifest_incremental_shutdown,JsonManifestParseIncrementalState *, /usr/local/src/postgresql/src/common/parse_manifest.c
 >jsonpath_yyfree,void *, /usr/local/src/postgresql/src/backend/utils/adt/jsonpath_scan.c
 >libpqrcv_disconnect,WalReceiverConn *, /usr/local/src/postgresql/src/backend/replication/libpqwalreceiver/libpqwalreceiver.c
+>list_delete_cell,List *, /usr/local/src/postgresql/src/backend/nodes/list.c
+>list_delete_first,List *, /usr/local/src/postgresql/src/backend/nodes/list.c
+>list_delete_first_n,List *, /usr/local/src/postgresql/src/backend/nodes/list.c
+>list_delete_int,List *, /usr/local/src/postgresql/src/backend/nodes/list.c
+>list_delete_last,List *, /usr/local/src/postgresql/src/backend/nodes/list.c
+>list_delete,List *, /usr/local/src/postgresql/src/backend/nodes/list.c
+>list_delete_nth_cell,List *, /usr/local/src/postgresql/src/backend/nodes/list.c
+>list_delete_oid,List *, /usr/local/src/postgresql/src/backend/nodes/list.c
+>list_delete_ptr,List *, /usr/local/src/postgresql/src/backend/nodes/list.c
+>list_free_deep,List *, /usr/local/src/postgresql/src/backend/nodes/list.c
+>list_free,List *, /usr/local/src/postgresql/src/backend/nodes/list.c
 >list_free_private,List *, /usr/local/src/postgresql/src/backend/nodes/list.c
+>lithuanian_UTF_8_close_env,struct SN_env *, /usr/local/src/postgresql/src/backend/snowball/libstemmer/stem_UTF_8_lithuanian.c
 >local_destroy,rewind_source *, /usr/local/src/postgresql/src/bin/pg_rewind/local_source.c
 >LogicalTapeClose,LogicalTape *, /usr/local/src/postgresql/src/backend/utils/sort/logtape.c
 >LogicalTapeSetClose,LogicalTapeSet *, /usr/local/src/postgresql/src/backend/utils/sort/logtape.c
@@ -152,25 +281,40 @@
 >make2_str,char *, /usr/local/src/postgresql/src/interfaces/ecpg/preproc/preproc.c
 >make3_str,char *, /usr/local/src/postgresql/src/interfaces/ecpg/preproc/preproc.c
 >make_func,PgBenchExprList *, /usr/local/src/postgresql/src/bin/pgbench/exprparse.c
+>materializeResult,PGresult *, /usr/local/src/postgresql/contrib/dblink/dblink.c
 >mbuf_free,MBuf *, /usr/local/src/postgresql/contrib/pgcrypto/mbuf.c
+>MergeAttributes,List *, /usr/local/src/postgresql/src/backend/commands/tablecmds.c
 >merge_clump,Clump *, /usr/local/src/postgresql/src/backend/optimizer/geqo/geqo_eval.c
+>nepali_UTF_8_close_env,struct SN_env *, /usr/local/src/postgresql/src/backend/snowball/libstemmer/stem_UTF_8_nepali.c
+>norwegian_ISO_8859_1_close_env,struct SN_env *, /usr/local/src/postgresql/src/backend/snowball/libstemmer/stem_ISO_8859_1_norwegian.c
+>norwegian_UTF_8_close_env,struct SN_env *, /usr/local/src/postgresql/src/backend/snowball/libstemmer/stem_UTF_8_norwegian.c
 >output_deallocate_prepare_statement,char *, /usr/local/src/postgresql/src/interfaces/ecpg/preproc/output.c
 >output_prepare_statement,char *, /usr/local/src/postgresql/src/interfaces/ecpg/preproc/output.c
 >output_simple_statement,char *, /usr/local/src/postgresql/src/interfaces/ecpg/preproc/output.c
 >output_statement,char *, /usr/local/src/postgresql/src/interfaces/ecpg/preproc/output.c
 >pa_free_worker_info,ParallelApplyWorkerInfo *, /usr/local/src/postgresql/src/backend/replication/logical/applyparallelworker.c
+>pa_free_worker,ParallelApplyWorkerInfo *, /usr/local/src/postgresql/src/backend/replication/logical/applyparallelworker.c
 >PageRestoreTempPage,Page, /usr/local/src/postgresql/src/backend/storage/page/bufpage.c
 >pagetable_free,void *, /usr/local/src/postgresql/src/backend/nodes/tidbitmap.c
 >pairingheap_free,pairingheap *, /usr/local/src/postgresql/src/backend/lib/pairingheap.c
 >ParallelBackupEnd,ParallelState *, /usr/local/src/postgresql/src/bin/pg_dump/parallel.c
+>ParallelBackupStart,ArchiveHandle *, /usr/local/src/postgresql/src/bin/pg_dump/parallel.c
+>ParallelSlotsAdoptConn,PGconn *, /usr/local/src/postgresql/src/fe_utils/parallel_slot.c
 >parallel_vacuum_end,ParallelVacuumState *, /usr/local/src/postgresql/src/backend/commands/vacuumparallel.c
+>pa_xact_finish,ParallelApplyWorkerInfo *, /usr/local/src/postgresql/src/backend/replication/logical/applyparallelworker.c
 >pfree,void *, /usr/local/src/postgresql/src/common/fe_memutils.c
+>pgfdw_report_error,PGresult *, /usr/local/src/postgresql/contrib/postgres_fdw/connection.c
 >pgfnames_cleanup,char * *, /usr/local/src/postgresql/src/common/pgfnames.c
 >pg_free,void *, /usr/local/src/postgresql/src/common/fe_memutils.c
 >pgp_cfb_free,PGP_CFB *, /usr/local/src/postgresql/contrib/pgcrypto/pgp-cfb.c
 >pgp_free,PGP_Context *, /usr/local/src/postgresql/contrib/pgcrypto/pgp.c
 >pgp_key_free,PGP_PubKey *, /usr/local/src/postgresql/contrib/pgcrypto/pgp-pubkey.c
 >pgp_mpi_free,PGP_MPI *, /usr/local/src/postgresql/contrib/pgcrypto/pgp-mpi.c
+>pg_relpages_impl,Relation, /usr/local/src/postgresql/contrib/pgstattuple/pgstatindex.c
+>pgstat_heap,Relation, /usr/local/src/postgresql/contrib/pgstattuple/pgstattuple.c
+>pgstatindex_impl,Relation, /usr/local/src/postgresql/contrib/pgstattuple/pgstatindex.c
+>pgstat_index,Relation, /usr/local/src/postgresql/contrib/pgstattuple/pgstattuple.c
+>pgstat_relation,Relation, /usr/local/src/postgresql/contrib/pgstattuple/pgstattuple.c
 >pgstat_release_entry_ref,PgStat_EntryRef *, /usr/local/src/postgresql/src/backend/utils/activity/pgstat_shmem.c
 >PGTYPESchar_free,char *, /usr/local/src/postgresql/src/interfaces/ecpg/pgtypeslib/common.c
 >PGTYPESdate_free,date *, /usr/local/src/postgresql/src/interfaces/ecpg/pgtypeslib/datetime.c
@@ -180,51 +324,113 @@
 >pg_tzenumerate_end,pg_tzenum *, /usr/local/src/postgresql/src/timezone/pgtz.c
 >pg_xml_done,PgXmlErrorContext *, /usr/local/src/postgresql/src/backend/utils/adt/xml.c
 >plainnode,NODE *, /usr/local/src/postgresql/src/backend/utils/adt/tsquery_cleanup.c
+>plaintree,NODE *, /usr/local/src/postgresql/src/backend/utils/adt/tsquery_cleanup.c
 >PLy_function_drop_args,PLySavedArgs *, /usr/local/src/postgresql/src/pl/plpython/plpy_exec.c
 >PLy_function_restore_args,PLySavedArgs *, /usr/local/src/postgresql/src/pl/plpython/plpy_exec.c
 >PortalDrop,Portal, /usr/local/src/postgresql/src/backend/utils/mmgr/portalmem.c
+>porter_ISO_8859_1_close_env,struct SN_env *, /usr/local/src/postgresql/src/backend/snowball/libstemmer/stem_ISO_8859_1_porter.c
+>porter_UTF_8_close_env,struct SN_env *, /usr/local/src/postgresql/src/backend/snowball/libstemmer/stem_UTF_8_porter.c
+>portuguese_ISO_8859_1_close_env,struct SN_env *, /usr/local/src/postgresql/src/backend/snowball/libstemmer/stem_ISO_8859_1_portuguese.c
+>portuguese_UTF_8_close_env,struct SN_env *, /usr/local/src/postgresql/src/backend/snowball/libstemmer/stem_UTF_8_portuguese.c
 >PQclear,PGresult *, /usr/local/src/postgresql/src/interfaces/libpq/fe-exec.c
 >PQconninfoFree,PQconninfoOption *, /usr/local/src/postgresql/src/interfaces/libpq/fe-connect.c
+>PQfinish,PGconn *, /usr/local/src/postgresql/src/interfaces/libpq/fe-connect.c
 >PQfreeCancel,PGcancel *, /usr/local/src/postgresql/src/interfaces/libpq/fe-cancel.c
 >PQfreemem,void *, /usr/local/src/postgresql/src/interfaces/libpq/fe-exec.c
 >PQfreeNotify,PGnotify *, /usr/local/src/postgresql/src/interfaces/libpq/fe-exec.c
 >printtup_destroy,DestReceiver *, /usr/local/src/postgresql/src/backend/access/common/printtup.c
+>processQueryResult,PGresult *, /usr/local/src/postgresql/src/fe_utils/parallel_slot.c
+>process_result,PGresult *, /usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c
+>psql_end_command,StringInfo, /usr/local/src/postgresql/src/test/regress/pg_regress.c
 >psql_scan_destroy,PsqlScanState, /usr/local/src/postgresql/src/fe_utils/psqlscan.c
 >pullf_free,PullFilter *, /usr/local/src/postgresql/contrib/pgcrypto/mbuf.c
+>pushf_free_all,PushFilter *, /usr/local/src/postgresql/contrib/pgcrypto/mbuf.c
 >pushf_free,PushFilter *, /usr/local/src/postgresql/contrib/pgcrypto/mbuf.c
 >QTNFree,QTNode *, /usr/local/src/postgresql/src/backend/utils/adt/tsquery_util.c
 >quote_postgres,char *, /usr/local/src/postgresql/src/interfaces/ecpg/ecpglib/execute.c
 >read_stream_end,ReadStream *, /usr/local/src/postgresql/src/backend/storage/aio/read_stream.c
+>rebuild_relation,Relation, /usr/local/src/postgresql/src/backend/commands/cluster.c
 >recursive_revoke,Acl *, /usr/local/src/postgresql/src/backend/utils/adt/acl.c
+>reform_and_rewrite_tuple,HeapTuple, /usr/local/src/postgresql/src/backend/access/heap/heapam_handler.c
+>RelationClearRelation,Relation, /usr/local/src/postgresql/src/backend/utils/cache/relcache.c
+>RelationCloseCleanup,Relation, /usr/local/src/postgresql/src/backend/utils/cache/relcache.c
+>relation_close,Relation, /usr/local/src/postgresql/src/backend/access/common/relation.c
+>RelationClose,Relation, /usr/local/src/postgresql/src/backend/utils/cache/relcache.c
 >RelationDestroyRelation,Relation, /usr/local/src/postgresql/src/backend/utils/cache/relcache.c
+>RelationFlushRelation,Relation, /usr/local/src/postgresql/src/backend/utils/cache/relcache.c
+>relation_is_updatable,Bitmapset *, /usr/local/src/postgresql/src/backend/rewrite/rewriteHandler.c
+>relation_is_updatable,List *, /usr/local/src/postgresql/src/backend/rewrite/rewriteHandler.c
+>ReleaseCatCacheList,CatCList *, /usr/local/src/postgresql/src/backend/utils/cache/catcache.c
+>ReleaseCatCacheListWithOwner,CatCList *, /usr/local/src/postgresql/src/backend/utils/cache/catcache.c
 >ReleaseDummy,HeapTuple, /usr/local/src/postgresql/src/backend/utils/adt/selfuncs.c
+>ReorderBufferCleanupTXN,ReorderBufferTXN *, /usr/local/src/postgresql/src/backend/replication/logical/reorderbuffer.c
 >ReorderBufferFreeSnap,Snapshot, /usr/local/src/postgresql/src/backend/replication/logical/reorderbuffer.c
 >ReorderBufferIterTXNFinish,ReorderBufferIterTXNState *, /usr/local/src/postgresql/src/backend/replication/logical/reorderbuffer.c
+>ReorderBufferProcessTXN,ReorderBufferTXN *, /usr/local/src/postgresql/src/backend/replication/logical/reorderbuffer.c
+>ReorderBufferQueueChange,ReorderBufferChange *, /usr/local/src/postgresql/src/backend/replication/logical/reorderbuffer.c
+>ReorderBufferReplay,ReorderBufferTXN *, /usr/local/src/postgresql/src/backend/replication/logical/reorderbuffer.c
+>ReorderBufferResetTXN,ReorderBufferChange *, /usr/local/src/postgresql/src/backend/replication/logical/reorderbuffer.c
 >ReorderBufferReturnChange,ReorderBufferChange *, /usr/local/src/postgresql/src/backend/replication/logical/reorderbuffer.c
 >ReorderBufferReturnRelids,Oid *, /usr/local/src/postgresql/src/backend/replication/logical/reorderbuffer.c
 >ReorderBufferReturnTupleBuf,HeapTuple, /usr/local/src/postgresql/src/backend/replication/logical/reorderbuffer.c
 >ReorderBufferReturnTXN,ReorderBufferTXN *, /usr/local/src/postgresql/src/backend/replication/logical/reorderbuffer.c
+>ReorderBufferStreamCommit,ReorderBufferTXN *, /usr/local/src/postgresql/src/backend/replication/logical/reorderbuffer.c
+>ReorderBufferStreamTXN,ReorderBufferTXN *, /usr/local/src/postgresql/src/backend/replication/logical/reorderbuffer.c
+>report_corruption,char *, /usr/local/src/postgresql/contrib/amcheck/verify_heapam.c
 >report_corruption_internal,char *, /usr/local/src/postgresql/contrib/amcheck/verify_heapam.c
+>report_toast_corruption,char *, /usr/local/src/postgresql/contrib/amcheck/verify_heapam.c
 >ResourceOwnerDelete,ResourceOwner, /usr/local/src/postgresql/src/backend/utils/resowner/resowner.c
 >restore_global_locale,save_locale_t, /usr/local/src/postgresql/src/bin/initdb/initdb.c
 >restorePsetInfo,printQueryOpt *, /usr/local/src/postgresql/src/bin/psql/command.c
+>rewrite_heap_tuple,HeapTuple, /usr/local/src/postgresql/src/backend/access/heap/rewriteheap.c
+>RewriteQuery,List *, /usr/local/src/postgresql/src/backend/rewrite/rewriteHandler.c
+>romanian_ISO_8859_2_close_env,struct SN_env *, /usr/local/src/postgresql/src/backend/snowball/libstemmer/stem_ISO_8859_2_romanian.c
+>romanian_UTF_8_close_env,struct SN_env *, /usr/local/src/postgresql/src/backend/snowball/libstemmer/stem_UTF_8_romanian.c
+>run_reindex_command,PGconn *, /usr/local/src/postgresql/src/bin/scripts/reindexdb.c
+>RunWorker,ArchiveHandle *, /usr/local/src/postgresql/src/bin/pg_dump/parallel.c
+>russian_KOI8_R_close_env,struct SN_env *, /usr/local/src/postgresql/src/backend/snowball/libstemmer/stem_KOI8_R_russian.c
+>russian_UTF_8_close_env,struct SN_env *, /usr/local/src/postgresql/src/backend/snowball/libstemmer/stem_UTF_8_russian.c
+>sequence_close,Relation, /usr/local/src/postgresql/src/backend/access/sequence/sequence.c
+>serbian_UTF_8_close_env,struct SN_env *, /usr/local/src/postgresql/src/backend/snowball/libstemmer/stem_UTF_8_serbian.c
 >serializeAnalyzeDestroy,DestReceiver *, /usr/local/src/postgresql/src/backend/commands/explain.c
+>server_is_in_recovery,PGconn *, /usr/local/src/postgresql/src/bin/pg_basebackup/pg_createsubscriber.c
+>set_replication_progress,PGconn *, /usr/local/src/postgresql/src/bin/pg_basebackup/pg_createsubscriber.c
 >shm_mq_detach,shm_mq_handle *, /usr/local/src/postgresql/src/backend/storage/ipc/shm_mq.c
+>show_agg_keys,List *, /usr/local/src/postgresql/src/backend/commands/explain.c
+>show_group_keys,List *, /usr/local/src/postgresql/src/backend/commands/explain.c
 >SlabDelete,MemoryContext, /usr/local/src/postgresql/src/backend/utils/mmgr/slab.c
 >SnapBuildFreeSnapshot,Snapshot, /usr/local/src/postgresql/src/backend/replication/logical/snapbuild.c
+>SnapBuildSnapDecRefcount,Snapshot, /usr/local/src/postgresql/src/backend/replication/logical/snapbuild.c
 >SN_close_env,struct SN_env *, /usr/local/src/postgresql/src/backend/snowball/libstemmer/api.c
+>spanish_ISO_8859_1_close_env,struct SN_env *, /usr/local/src/postgresql/src/backend/snowball/libstemmer/stem_ISO_8859_1_spanish.c
+>spanish_UTF_8_close_env,struct SN_env *, /usr/local/src/postgresql/src/backend/snowball/libstemmer/stem_UTF_8_spanish.c
 >spgFreeSearchItem,SpGistSearchItem *, /usr/local/src/postgresql/src/backend/access/spgist/spgscan.c
+>SPI_cursor_close,Portal, /usr/local/src/postgresql/src/backend/executor/spi.c
+>SPI_freetuple,HeapTuple, /usr/local/src/postgresql/src/backend/executor/spi.c
 >SPI_pfree,void *, /usr/local/src/postgresql/src/backend/executor/spi.c
+>sql_exec_dumpalldbs,PGconn *, /usr/local/src/postgresql/contrib/oid2name/oid2name.c
+>sql_exec_dumpalltables,PGconn *, /usr/local/src/postgresql/contrib/oid2name/oid2name.c
+>sql_exec_dumpalltbspc,PGconn *, /usr/local/src/postgresql/contrib/oid2name/oid2name.c
+>sql_exec,PGconn *, /usr/local/src/postgresql/contrib/oid2name/oid2name.c
+>sql_exec_searchtables,PGconn *, /usr/local/src/postgresql/contrib/oid2name/oid2name.c
 >sqlfunction_destroy,DestReceiver *, /usr/local/src/postgresql/src/backend/executor/functions.c
 >SSLerrfree,char *, /usr/local/src/postgresql/src/interfaces/libpq/fe-secure-openssl.c
+>store_returning_result,PGresult *, /usr/local/src/postgresql/contrib/postgres_fdw/postgres_fdw.c
 >string_to_text,char *, /usr/local/src/postgresql/src/backend/utils/adt/ruleutils.c
+>swedish_ISO_8859_1_close_env,struct SN_env *, /usr/local/src/postgresql/src/backend/snowball/libstemmer/stem_ISO_8859_1_swedish.c
+>swedish_UTF_8_close_env,struct SN_env *, /usr/local/src/postgresql/src/backend/snowball/libstemmer/stem_UTF_8_swedish.c
 >systable_endscan_ordered,SysScanDesc, /usr/local/src/postgresql/src/backend/access/index/genam.c
 >systable_endscan,SysScanDesc, /usr/local/src/postgresql/src/backend/access/index/genam.c
+>table_close,Relation, /usr/local/src/postgresql/src/backend/access/table/table.c
+>TableCommandResultHandler,PGresult *, /usr/local/src/postgresql/src/fe_utils/parallel_slot.c
+>tamil_UTF_8_close_env,struct SN_env *, /usr/local/src/postgresql/src/backend/snowball/libstemmer/stem_UTF_8_tamil.c
 >tar_free,WalWriteMethod *, /usr/local/src/postgresql/src/bin/pg_basebackup/walmethods.c
 >tbm_end_iterate,TBMIterator *, /usr/local/src/postgresql/src/backend/nodes/tidbitmap.c
 >tbm_end_shared_iterate,TBMSharedIterator *, /usr/local/src/postgresql/src/backend/nodes/tidbitmap.c
 >tbm_free,TIDBitmap *, /usr/local/src/postgresql/src/backend/nodes/tidbitmap.c
 >terminate_brin_buildstate,BrinBuildState *, /usr/local/src/postgresql/src/backend/access/brin/brin.c
+>test_nosync,PGconn *, /usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c
+>test_pipelined_insert,PGconn *, /usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c
 >TidStoreDestroy,TidStore *, /usr/local/src/postgresql/src/backend/access/common/tidstore.c
 >TidStoreDetach,TidStore *, /usr/local/src/postgresql/src/backend/access/common/tidstore.c
 >TidStoreEndIterate,TidStoreIter *, /usr/local/src/postgresql/src/backend/access/common/tidstore.c
@@ -235,7 +441,13 @@
 >transientrel_destroy,DestReceiver *, /usr/local/src/postgresql/src/backend/commands/matview.c
 >tstoreDestroyReceiver,DestReceiver *, /usr/local/src/postgresql/src/backend/executor/tstoreReceiver.c
 >tuplestore_end,Tuplestorestate *, /usr/local/src/postgresql/src/backend/utils/sort/tuplestore.c
+>turkish_UTF_8_close_env,struct SN_env *, /usr/local/src/postgresql/src/backend/snowball/libstemmer/stem_UTF_8_turkish.c
+>UnregisterSnapshotFromOwner,Snapshot, /usr/local/src/postgresql/src/backend/utils/time/snapmgr.c
+>UnregisterSnapshotNoOwner,Snapshot, /usr/local/src/postgresql/src/backend/utils/time/snapmgr.c
+>UnregisterSnapshot,Snapshot, /usr/local/src/postgresql/src/backend/utils/time/snapmgr.c
+>updateAclDependencies,Oid *, /usr/local/src/postgresql/src/backend/catalog/pg_shdepend.c
 >updateAclDependenciesWorker,Oid *, /usr/local/src/postgresql/src/backend/catalog/pg_shdepend.c
+>updateInitAclDependencies,Oid *, /usr/local/src/postgresql/src/backend/catalog/pg_shdepend.c
 >vac_close_indexes,Relation *, /usr/local/src/postgresql/src/backend/commands/vacuum.c
 >writefile,char * *, /usr/local/src/postgresql/src/bin/initdb/initdb.c
 >XLogPrefetcherFree,XLogPrefetcher *, /usr/local/src/postgresql/src/backend/access/transam/xlogprefetcher.c
@@ -243,4 +455,5 @@
 >XLogReaderFree,XLogReaderState *, /usr/local/src/postgresql/src/bin/pg_rewind/xlogreader.c
 >XLogReaderFree,XLogReaderState *, /usr/local/src/postgresql/src/bin/pg_waldump/xlogreader.c
 >xml_pfree,void *, /usr/local/src/postgresql/src/backend/utils/adt/xml.c
+>yiddish_UTF_8_close_env,struct SN_env *, /usr/local/src/postgresql/src/backend/snowball/libstemmer/stem_UTF_8_yiddish.c
 >z_free,void *, /usr/local/src/postgresql/contrib/pgcrypto/pgp-compress.c

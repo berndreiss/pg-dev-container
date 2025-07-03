@@ -1,3 +1,24 @@
+>dumpRoleGUCPrivs,PGconn *, /usr/local/src/postgresql/src/bin/pg_dump/pg_dumpall.c:1196:3
+Used: PQfinish
+Ret. Type: void
+>dumpRoleMembership,PGconn *, /usr/local/src/postgresql/src/bin/pg_dump/pg_dumpall.c:1061:4
+Used: PQfinish
+Ret. Type: void
+>dumpTablespaces,PGconn *, /usr/local/src/postgresql/src/bin/pg_dump/pg_dumpall.c:1323:3
+Used: PQfinish
+Ret. Type: void
+>executeCommand,PGconn *, /usr/local/src/postgresql/src/bin/pg_dump/pg_dumpall.c:1918:2
+Used: PQfinish
+Ret. Type: void
+>executeQuery,PGconn *, /usr/local/src/postgresql/src/bin/pg_dump/pg_dumpall.c:1895:2
+Used: PQfinish
+Ret. Type: PGresult *
+>expand_dbname_patterns,PGconn *, /usr/local/src/postgresql/src/bin/pg_dump/pg_dumpall.c:1469:3
+Used: PQfinish
+Ret. Type: void
+>ParallelBackupStart,ArchiveHandle *, /usr/local/src/postgresql/src/bin/pg_dump/parallel.c:1008:3
+Used: RunWorker
+Ret. Type: ParallelState *
 >local_destroy,rewind_source *, /usr/local/src/postgresql/src/bin/pg_rewind/local_source.c:186:1
 Used: pfree
 Ret. Type: void
@@ -9,6 +30,9 @@ Used: pfree
 Ret. Type: void
 >bbstreamer_lz4_decompressor_free,bbstreamer *, /usr/local/src/postgresql/src/bin/pg_basebackup/bbstreamer_lz4.c:420:1
 Used: pfree
+Ret. Type: void
+>disconnect_database,PGconn *, /usr/local/src/postgresql/src/bin/pg_basebackup/pg_createsubscriber.c:549:1
+Used: PQfinish
 Ret. Type: void
 >bbstreamer_zstd_compressor_free,bbstreamer *, /usr/local/src/postgresql/src/bin/pg_basebackup/bbstreamer_zstd.c:249:1
 Used: pfree
@@ -33,6 +57,18 @@ Used: pfree
 Ret. Type: void
 >XLogReaderFree,XLogReaderState *, /usr/local/src/postgresql/src/bin/pg_waldump/xlogreader.c:173:1
 Used: pfree
+Ret. Type: void
+>executeQueryOrDie,PGconn *, /usr/local/src/postgresql/src/bin/pg_upgrade/server.c:142:2
+Used: PQfinish
+Ret. Type: PGresult *
+>appendQualifiedRelation,PGconn *, /usr/local/src/postgresql/src/bin/scripts/common.c:111:2
+Used: PQfinish
+Ret. Type: void
+>get_parallel_object_list,PGconn *, /usr/local/src/postgresql/src/bin/scripts/reindexdb.c:767:2
+Used: PQfinish
+Ret. Type: SimpleStringList *
+>run_reindex_command,PGconn *, /usr/local/src/postgresql/src/bin/scripts/reindexdb.c:606:3
+Used: PQfinish
 Ret. Type: void
 >PLy_function_drop_args,PLySavedArgs *, /usr/local/src/postgresql/src/pl/plpython/plpy_exec.c:599:1
 Used: pfree
@@ -511,6 +547,42 @@ Ret. Type: void
 >DestroyBlockRefTableWriter,BlockRefTableWriter *, /usr/local/src/postgresql/src/common/blkreftable.c:858:1
 Used: pfree
 Ret. Type: void
+>disconnectDatabase,PGconn *, /usr/local/src/postgresql/src/fe_utils/connect_utils.c:170:1
+Used: PQfinish
+Ret. Type: void
+>executeCommand,PGconn *, /usr/local/src/postgresql/src/fe_utils/query_utils.c:60:2
+Used: PQfinish
+Ret. Type: void
+>executeQuery,PGconn *, /usr/local/src/postgresql/src/fe_utils/query_utils.c:35:2
+Used: PQfinish
+Ret. Type: PGresult *
+>descriptor_deallocate_all,struct descriptor *, /usr/local/src/postgresql/src/interfaces/ecpg/ecpglib/descriptor.c:786:2
+Used: descriptor_free
+Ret. Type: void
+>ecpg_do_epilogue,struct statement *, /usr/local/src/postgresql/src/interfaces/ecpg/ecpglib/execute.c:2234:1
+Used: free_statement
+Ret. Type: void
+>exit_nicely,PGconn *, /usr/local/src/postgresql/src/test/examples/testlibpq4.c:18:2
+Used: PQfinish
+Ret. Type: void
+>exit_nicely,PGconn *, /usr/local/src/postgresql/src/test/examples/testlibpq4.c:20:2
+Used: PQfinish
+Ret. Type: void
+>exit_nicely,PGconn *, /usr/local/src/postgresql/src/test/examples/testlibpq.c:16:1
+Used: PQfinish
+Ret. Type: void
+>exit_nicely,PGconn *, /usr/local/src/postgresql/src/test/examples/testlo64.c:217:1
+Used: PQfinish
+Ret. Type: void
+>exit_nicely,PGconn *, /usr/local/src/postgresql/src/test/examples/testlibpq2.c:44:1
+Used: PQfinish
+Ret. Type: void
+>exit_nicely,PGconn *, /usr/local/src/postgresql/src/test/examples/testlibpq3.c:50:1
+Used: PQfinish
+Ret. Type: void
+>exit_nicely,PGconn *, /usr/local/src/postgresql/src/test/examples/testlo.c:195:1
+Used: PQfinish
+Ret. Type: void
 >emit_audit_message,char *, /usr/local/src/postgresql/src/test/modules/test_oat_hooks/test_oat_hooks.c:253:2
 Used: pfree
 Ret. Type: void
@@ -519,6 +591,9 @@ Used: pfree
 Ret. Type: void
 >irbt_free,RBTNode *, /usr/local/src/postgresql/src/test/modules/test_rbtree/test_rbtree.c:73:1
 Used: pfree
+Ret. Type: void
+>exit_nicely,PGconn *, /usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:63:1
+Used: PQfinish
 Ret. Type: void
 >pg_tzenumerate_end,pg_tzenum *, /usr/local/src/postgresql/src/timezone/pgtz.c:422:1
 Used: pfree
@@ -568,6 +643,9 @@ Ret. Type: void
 >hmac_free,PX_HMAC *, /usr/local/src/postgresql/contrib/pgcrypto/px-hmac.c:135:1
 Used: pfree
 Ret. Type: void
+>sql_exec,PGconn *, /usr/local/src/postgresql/contrib/oid2name/oid2name.c:394:2
+Used: PQfinish
+Ret. Type: int
 >createNewConnection,remoteConn *, /usr/local/src/postgresql/contrib/dblink/dblink.c:2572:2
 Used: pfree
 Ret. Type: void

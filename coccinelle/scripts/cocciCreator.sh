@@ -99,7 +99,9 @@ createScript(){
    pythonType=$ftype
    if [ "$ftype" = "void *" ]; then
       pythonType="{t}"
-      ftype="t2"
+      ftype="t"
+    else
+      ftype="\"$ftype\""
    fi
 
    #GET THE PROTOFILE -> THE IF CONDITION CHECKS, WHETHER

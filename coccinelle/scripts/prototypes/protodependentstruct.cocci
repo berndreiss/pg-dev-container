@@ -4,7 +4,7 @@ identifier f, i, a;
 position p;
 
 @@
-t1 f(..., __TYPE__ i, ...) {
+t1 f(..., t2 i, ...) {
   <+...
   if (i.a) {... __FUNCTION__@p(..., i, ...) ...}
   ...+>
@@ -19,9 +19,10 @@ a << __METAFUNCTION__12.a;
 i << __METAFUNCTION__12.i;
 
 @@
-print(f">{f},__PYTHONTYPE__, " + p[0].file + ":" + p[0].line + ":" + p[0].column + f", {i}.{a}")
-print(f"Used: __FUNCTION__")
-print(f"Ret. Type: {rt}")
+if t == __TYPE__:
+  print(f">{f},__PYTHONTYPE__, " + p[0].file + ":" + p[0].line + ":" + p[0].column + f", {i}.{a}")
+  print(f"Used: __FUNCTION__")
+  print(f"Ret. Type: {rt}")
 
 @__METAFUNCTION__13 exists@
 type t1, t2;
@@ -29,7 +30,7 @@ identifier f, i, a;
 position p;
 
 @@
-t1 f(..., __TYPE__ i, ...) {
+t1 f(..., t2 i, ...) {
   <+...
   if (i.a) {... __FUNCTION__@p(..., i, ...) ...}
   else{...}
@@ -45,7 +46,8 @@ a << __METAFUNCTION__13.a;
 i << __METAFUNCTION__13.i;
 
 @@
-print(f">{f},__PYTHONTYPE__, " + p[0].file + ":" + p[0].line + ":" + p[0].column + f", {i}.{a}")
-print(f"Used: __FUNCTION__")
-print(f"Ret. Type: {rt}")
+if t == __TYPE__:
+  print(f">{f},__PYTHONTYPE__, " + p[0].file + ":" + p[0].line + ":" + p[0].column + f", {i}.{a}")
+  print(f"Used: __FUNCTION__")
+  print(f"Ret. Type: {rt}")
 
