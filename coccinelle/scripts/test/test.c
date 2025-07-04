@@ -1,230 +1,140 @@
-
-int test(int i){
-   somefunc();
-   free(i);
+#define NULL ((void*)0)
+#define NIL ((void*)0)
+typedef enum { false = 0, true = 1 } bool;
+void somefunc();
+void free(void *ptr);
+void test(void *ptr);
+typedef struct {
+  int dummy_field;
+} Type;
+typedef struct {
+  int b;
+} OtherType;
+void pfree(Type *i){
+  free(i);
 }
-
-int test2(int i, Othertype o){
-   free(i);
+void oneParameter(Type *i){
+  somefunc();
+  pfree(i);
 }
-
-int test_OTHER(int i){
-   test(i);
+void threeParameters(OtherType a, Type *i, OtherType o){
+  pfree(i);
 }
-
-int testif(int i){
-
-   if (i > 3)
-      free(i);
-
+void twoParameters(Type *i, OtherType o){
+  pfree(i);
 }
-void testreturn(int i){
-
-   if (i > 3)
-      return;
-
-   free(i);
+void noFree(Type *i){
+  test(i);
 }
-
-int testreturnifdef(int i){
-
+void conditional(Type *i){
+  int integer = 0;
+  if (integer > 3)
+    pfree(i);
+}
+void conditionalReturn(Type *i){
+  int integer = 0;
+  if (integer > 3)
+    pfree(i);
+}
+void returnifdef(Type *i){
 #ifdef something
-      return 3;
+  return;
 #endif
-   free(i);
+  pfree(i);
 }
-
-int test_OTHER_ONCE(int i){
-    free(i);
-    test(i);
+void test_OTHER_ONCE(Type *i){
+  pfree(i);
+  test(i);
 }
-int testTwice(int i){
-   free(i);
-   free(i);
+void testTwice(Type *i){
+  pfree(i);
+  pfree(i);
 }
-
-int testNULL(int i){
-   if (i == NULL)
-      return;
-   free(i);
+void conditionalNULL(Type *i){
+  if (i == NULL)
+    return;
+  pfree(i);
 }
-int testNIL(int i){
-   if (i == NIL)
-      return;
-   free(i);
+void conditionalNIL(Type *i){
+  if (i == NIL)
+    return;
+  pfree(i);
 }
-
-
-int testEXCLAMATION(int i){
-   if (!i)
-      return;
-   free(i);
+void notI(Type *i){
+  if (!i)
+    return;
+  pfree(i);
 }
-
-int testIfI(int i){
-   if (i)
-      free(i);
+void confirmI(Type *i){
+  if (i)
+    pfree(i);
 }
-
-int testWhileI(int i){
-   while (i)
-      free(i);
+void whileI(Type *i){
+  while (i)
+    pfree(i);
 }
-
-int testIfINULL(int i){
-   if (i == NULL)
-      return;
-   if (i)
-      free(i);
+void ifINULLreturn(Type *i){
+  if (i == NULL)
+    return;
+  if (i)
+    pfree(i);
 }
-int testIfIfINULL(int i){
-   if (i == NULL)
-      return;
-   if (i < 3)
-      return;
-   if (i)
-      free(i);
+void ifINULLconditionalReturn(Type *i){
+  if (i == NULL)
+    return;
+  int integer = 0;
+  if (integer < 3)
+    return;
+  if (i)
+    pfree(i);
 }
-
-
-int testTwo(int i, int j){
-   free(i);
-   free(j);
+void doubleFree(Type *i, Type *j){
+  pfree(i);
+  pfree(j);
 }
-
-int dependant1(int i, bool b){
-   if (b)
-      free(i);
+void dependant(Type *i, bool b){
+  if (b)
+    pfree(i);
 }
-
-int dependantMULTIPLE(int i, bool b){
-   if (b)
-      free(i);
-   if (b)
-      free(i);
+void dependantMultiple(Type *i, bool b){
+  if (b)
+    pfree(i);
+  if (b)
+    pfree(i);
 }
-
-int dependant2(bool b, int i){
-   if (b)
-      free(i);
+void dependantBoolFirst(bool b, Type *i){
+  if (b)
+    pfree(i);
 }
-
-int dependant3(int i, void * B){
-   if (B->b)
-      free(i);
+void dependantFieldAccess(Type *i, OtherType *B){
+  if (B->b)
+    pfree(i);
 }
-
-int dependant3MULTIPLE(int i, void * B){
-   if (B->b)
-      free(i)
-   if (B->b)
-      free(i)
+void dependanFieldAccessMultiple(Type *i, OtherType * B){
+  if (B->b)
+    pfree(i);
+  if (B->b)
+    pfree(i);
 }
-int testIfINULL(int i){
-   if (i == NULL)
-      return;
-   if (i)
-      free(i);
+void twoParametersFreed(Type *i, Type *j){
+  pfree(i);
+  pfree(j);
 }
-int testIfIfINULL(int i){
-   if (i == NULL)
-      return;
-   if (i < 3)
-      return;
-   if (i)
-      free(i);
+void dependantElse(Type *i, OtherType *B){
+  if (B->b)
+    pfree(i);
+  else
+    return;
 }
-
-
-int testTwo(int i, int j){
-   free(i);
-   free(j);
+void dependantFieldAccessFirst(OtherType * B, Type *i){
+  if (B->b)
+    pfree(i);
 }
-
-int dependant1(int i, bool b){
-   if (b)
-      free(i);
+void dependantFieldAccessStructFirst(OtherType B, Type *i){
+  if (B.b)
+    pfree(i);
 }
-
-int dependantMULTIPLE(int i, bool b){
-   if (b)
-      free(i);
-   if (b)
-      free(i);
-}
-
-int dependant2(bool b, int i){
-   if (b)
-      free(i);
-}
-
-int dependant3(int i, void * B){
-   if (B->b)
-      free(i);
-}
-
-int dependant3ELSE(int i, void * B){
-   if (B->b)
-      free(i);
-   else
-      return;
-}
-
-
-int dependant3MULTIPLE(int i, void * B){
-   if (B->b)
-      free(i)
-   if (B->b)
-      free(i)
-}
-
-int dependant4(void * B, int i){
-   if (B->b)
-      free(i);
-}
-
-int dependant5(void * B, int i){
-   if (B.b)
-      free(i);
-}
-
-int dependant6(int i, void * B){
-   if (B.b)
-      free(i);
-}
-
-int dependant7Self(struct SOME i){
-   if (i.b)
-      free(i);
-}
-
-int dependent8Equ(void * B, int i){
-   if (2 == B->some)
-      free(i);
-}
-
-int dependent8Bigger(void *B, int i){
-   if (B->some == 1)
-      free(i);
-}
-
-
-int testEreport(int i){
-   if (i > 2){
-      if (i)
-         free(i);
-
-      ereport(ERROR);
-   }
-
-}
-int testEreport2(int i){
-      if (i > 3)
-         return;
-
-      if (i)
-         free(i);
-
-      ereport(ERROR);
-
+void dependantFieldAccessStruct(Type *i, OtherType B){
+  if (B.b)
+    pfree(i);
 }

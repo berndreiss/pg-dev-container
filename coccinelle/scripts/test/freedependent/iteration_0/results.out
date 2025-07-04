@@ -1,0 +1,21 @@
+>dependant,Type *, test.c:97:4,b
+Used: pfree
+Ret. Type: void
+>dependantMultiple,Type *, test.c:101:4,b
+Used: pfree
+Ret. Type: void
+>dependantBoolFirst,Type *, test.c:107:4,b
+Used: pfree
+Ret. Type: void
+>dependanFieldAccessMultiple,Type *, test.c:115:4,B->b
+Used: pfree
+Ret. Type: void
+>dependantFieldAccess,Type *, test.c:111:4,B->b
+Used: pfree
+Ret. Type: void
+>dependantFieldAccessFirst,Type *, test.c:131:4,B->b
+Used: pfree
+Ret. Type: void
+>dependantElse,Type *, test.c:125:4,B->b
+Used: pfree
+Ret. Type: void

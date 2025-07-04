@@ -1,0 +1,3 @@
+>pfree,Type *, test.c:14:2
+Used: free
+Ret. Type: void

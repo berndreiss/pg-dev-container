@@ -1,0 +1,16 @@
+STARTING -> test.c
+########## ITERATION 0 ##########
+cat: prototypes/protodependentstruct.cocci: No such file or directory
+init_defs_builtins: /usr/lib/coccinelle/standard.h
+HANDLING: test.c
+#################################
+TIME PASSED: 5 SECONDS
+########## ITERATION 1 ##########
+init_defs_builtins: /usr/lib/coccinelle/standard.h
+HANDLING: test.c
+#################################
+TIME PASSED: 0 SECONDS
+#################################
+DONE
+NUMBER OF ITERATIONS: 2
+TIME PASSED OVERALL: 0 MINUTES 5 SECONDS
