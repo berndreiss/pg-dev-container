@@ -1,6 +1,0 @@
->jsonpath_yyrealloc,yy_size_t, /usr/local/src/postgresql/src/backend/utils/adt/jsonpath_scan.c:6175:9,ptr
-Used: repalloc
-Ret. Type: void *
->core_yyrealloc,yy_size_t, /usr/local/src/postgresql/src/backend/parser/scan.c:11816:9,ptr
-Used: repalloc
-Ret. Type: void *

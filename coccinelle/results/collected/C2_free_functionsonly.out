@@ -1,3 +1,0 @@
->dump_variables,struct arguments *, /usr/local/src/postgresql/src/interfaces/ecpg/preproc/variable.c:460:2
->ParallelBackupEnd,ParallelState *, /usr/local/src/postgresql/src/bin/pg_dump/parallel.c:1090:1
->PQclear,PGresult *, /usr/local/src/postgresql/src/interfaces/libpq/fe-exec.c:770:1

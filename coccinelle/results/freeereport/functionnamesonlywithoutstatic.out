@@ -1,3 +1,0 @@
->CheckAttributeType,List *, /usr/local/src/postgresql/src/backend/catalog/heap.c
->ExecMergeMatched,HeapTuple, /usr/local/src/postgresql/src/backend/executor/nodeModifyTable.c
->ExecUpdate,HeapTuple, /usr/local/src/postgresql/src/backend/executor/nodeModifyTable.c
