@@ -1,0 +1,186 @@
+>fireRIRrules,List *, /usr/local/src/postgresql/src/backend/rewrite/rewriteHandler.c:2152:17
+Used: ApplyRetrieveRule
+Ret. Type: Query *
+>CheckAttributeType,List *, /usr/local/src/postgresql/src/backend/catalog/heap.c:593:2
+Used: CheckAttributeType
+Ret. Type: void
+>CheckAttributeType,List *, /usr/local/src/postgresql/src/backend/catalog/heap.c:630:3
+Used: CheckAttributeType
+Ret. Type: void
+>CheckAttributeType,List *, /usr/local/src/postgresql/src/backend/catalog/heap.c:645:2
+Used: CheckAttributeType
+Ret. Type: void
+>CheckAttributeType,List *, /usr/local/src/postgresql/src/backend/catalog/heap.c:655:2
+Used: CheckAttributeType
+Ret. Type: void
+>CheckAttributeType,List *, /usr/local/src/postgresql/src/backend/catalog/heap.c:593:2
+Used: CheckAttributeType
+Ret. Type: void
+>CheckAttributeType,List *, /usr/local/src/postgresql/src/backend/catalog/heap.c:630:3
+Used: CheckAttributeType
+Ret. Type: void
+>CheckAttributeType,List *, /usr/local/src/postgresql/src/backend/catalog/heap.c:645:2
+Used: CheckAttributeType
+Ret. Type: void
+>CheckAttributeType,List *, /usr/local/src/postgresql/src/backend/catalog/heap.c:655:2
+Used: CheckAttributeType
+Ret. Type: void
+>CheckAttributeType,List *, /usr/local/src/postgresql/src/backend/catalog/heap.c:593:2
+Used: CheckAttributeType
+Ret. Type: void
+>CheckAttributeType,List *, /usr/local/src/postgresql/src/backend/catalog/heap.c:630:3
+Used: CheckAttributeType
+Ret. Type: void
+>CheckAttributeType,List *, /usr/local/src/postgresql/src/backend/catalog/heap.c:645:2
+Used: CheckAttributeType
+Ret. Type: void
+>CheckAttributeType,List *, /usr/local/src/postgresql/src/backend/catalog/heap.c:655:2
+Used: CheckAttributeType
+Ret. Type: void
+>CheckAttributeType,List *, /usr/local/src/postgresql/src/backend/catalog/heap.c:593:2
+Used: CheckAttributeType
+Ret. Type: void
+>CheckAttributeType,List *, /usr/local/src/postgresql/src/backend/catalog/heap.c:630:3
+Used: CheckAttributeType
+Ret. Type: void
+>CheckAttributeType,List *, /usr/local/src/postgresql/src/backend/catalog/heap.c:645:2
+Used: CheckAttributeType
+Ret. Type: void
+>CheckAttributeType,List *, /usr/local/src/postgresql/src/backend/catalog/heap.c:655:2
+Used: CheckAttributeType
+Ret. Type: void
+>CheckAttributeType,List *, /usr/local/src/postgresql/src/backend/catalog/heap.c:593:2
+Used: CheckAttributeType
+Ret. Type: void
+>CheckAttributeType,List *, /usr/local/src/postgresql/src/backend/catalog/heap.c:630:3
+Used: CheckAttributeType
+Ret. Type: void
+>CheckAttributeType,List *, /usr/local/src/postgresql/src/backend/catalog/heap.c:645:2
+Used: CheckAttributeType
+Ret. Type: void
+>CheckAttributeType,List *, /usr/local/src/postgresql/src/backend/catalog/heap.c:655:2
+Used: CheckAttributeType
+Ret. Type: void
+>ExecMergeMatched,HeapTuple, /usr/local/src/postgresql/src/backend/executor/nodeModifyTable.c:2914:2
+Used: ExecForceStoreHeapTuple
+Ret. Type: TupleTableSlot *
+>ExecMergeMatched,HeapTuple, /usr/local/src/postgresql/src/backend/executor/nodeModifyTable.c:2914:2
+Used: ExecForceStoreHeapTuple
+Ret. Type: TupleTableSlot *
+>ExecMergeMatched,HeapTuple, /usr/local/src/postgresql/src/backend/executor/nodeModifyTable.c:3069:10
+Used: ExecIRDeleteTriggers
+Ret. Type: TupleTableSlot *
+>ExecMergeMatched,HeapTuple, /usr/local/src/postgresql/src/backend/executor/nodeModifyTable.c:3016:10
+Used: ExecIRUpdateTriggers
+Ret. Type: TupleTableSlot *
+>ExecUpdate,HeapTuple, /usr/local/src/postgresql/src/backend/executor/nodeModifyTable.c:2335:11
+Used: ExecUpdateAct
+Ret. Type: TupleTableSlot *
+>ExecUpdate,HeapTuple, /usr/local/src/postgresql/src/backend/executor/nodeModifyTable.c:2288:6
+Used: ExecUpdatePrologue
+Ret. Type: TupleTableSlot *
+>fireRIRrules,List *, /usr/local/src/postgresql/src/backend/rewrite/rewriteHandler.c:2052:19
+Used: fireRIRrules
+Ret. Type: Query *
+>fireRIRrules,List *, /usr/local/src/postgresql/src/backend/rewrite/rewriteHandler.c:2052:19
+Used: fireRIRrules
+Ret. Type: Query *
+>fireRIRrules,List *, /usr/local/src/postgresql/src/backend/rewrite/rewriteHandler.c:2172:3
+Used: fireRIRrules
+Ret. Type: Query *
+>fireRIRrules,List *, /usr/local/src/postgresql/src/backend/rewrite/rewriteHandler.c:2052:19
+Used: fireRIRrules
+Ret. Type: Query *
+>fireRIRrules,List *, /usr/local/src/postgresql/src/backend/rewrite/rewriteHandler.c:2052:19
+Used: fireRIRrules
+Ret. Type: Query *
+>fireRIRrules,List *, /usr/local/src/postgresql/src/backend/rewrite/rewriteHandler.c:2172:3
+Used: fireRIRrules
+Ret. Type: Query *
+>fireRIRrules,List *, /usr/local/src/postgresql/src/backend/rewrite/rewriteHandler.c:2052:19
+Used: fireRIRrules
+Ret. Type: Query *
+>fireRIRrules,List *, /usr/local/src/postgresql/src/backend/rewrite/rewriteHandler.c:2052:19
+Used: fireRIRrules
+Ret. Type: Query *
+>fireRIRrules,List *, /usr/local/src/postgresql/src/backend/rewrite/rewriteHandler.c:2172:3
+Used: fireRIRrules
+Ret. Type: Query *
+>fireRIRrules,List *, /usr/local/src/postgresql/src/backend/rewrite/rewriteHandler.c:2052:19
+Used: fireRIRrules
+Ret. Type: Query *
+>fireRIRrules,List *, /usr/local/src/postgresql/src/backend/rewrite/rewriteHandler.c:2052:19
+Used: fireRIRrules
+Ret. Type: Query *
+>fireRIRrules,List *, /usr/local/src/postgresql/src/backend/rewrite/rewriteHandler.c:2172:3
+Used: fireRIRrules
+Ret. Type: Query *
+>fireRIRrules,List *, /usr/local/src/postgresql/src/backend/rewrite/rewriteHandler.c:2052:19
+Used: fireRIRrules
+Ret. Type: Query *
+>fireRIRrules,List *, /usr/local/src/postgresql/src/backend/rewrite/rewriteHandler.c:2052:19
+Used: fireRIRrules
+Ret. Type: Query *
+>fireRIRrules,List *, /usr/local/src/postgresql/src/backend/rewrite/rewriteHandler.c:2172:3
+Used: fireRIRrules
+Ret. Type: Query *
+>CheckAttributeType,List *, /usr/local/src/postgresql/src/backend/catalog/heap.c:638:24
+Used: list_delete_last
+Ret. Type: void
+>RewriteQuery,List *, /usr/local/src/postgresql/src/backend/rewrite/rewriteHandler.c:4306:20
+Used: list_delete_last
+Ret. Type: List *
+>fireRIRrules,List *, /usr/local/src/postgresql/src/backend/rewrite/rewriteHandler.c:2159:17
+Used: list_delete_last
+Ret. Type: Query *
+>fireRIRrules,List *, /usr/local/src/postgresql/src/backend/rewrite/rewriteHandler.c:2159:17
+Used: list_delete_last
+Ret. Type: Query *
+>fireRIRrules,List *, /usr/local/src/postgresql/src/backend/rewrite/rewriteHandler.c:2287:17
+Used: list_delete_last
+Ret. Type: Query *
+>MergeAttributes,List *, /usr/local/src/postgresql/src/backend/commands/tablecmds.c:2547:15
+Used: list_delete_nth_cell
+Ret. Type: List *
+>recursive_revoke,Acl *, /usr/local/src/postgresql/src/backend/utils/adt/acl.c:1336:3
+Used: pfree
+Ret. Type: Acl *
+>createNewConnection,remoteConn *, /usr/local/src/postgresql/contrib/dblink/dblink.c:2572:2
+Used: pfree
+Ret. Type: void
+>dblink_security_check,remoteConn *, /usr/local/src/postgresql/contrib/dblink/dblink.c:2628:2
+Used: pfree
+Ret. Type: void
+>dblink_res_error,PGresult *, /usr/local/src/postgresql/contrib/dblink/dblink.c:2757:1
+Used: PQclear
+Ret. Type: void
+>RewriteQuery,List *, /usr/local/src/postgresql/src/backend/rewrite/rewriteHandler.c:3911:13
+Used: RewriteQuery
+Ret. Type: List *
+>RewriteQuery,List *, /usr/local/src/postgresql/src/backend/rewrite/rewriteHandler.c:3911:13
+Used: RewriteQuery
+Ret. Type: List *
+>RewriteQuery,List *, /usr/local/src/postgresql/src/backend/rewrite/rewriteHandler.c:4299:15
+Used: RewriteQuery
+Ret. Type: List *
+>RewriteQuery,List *, /usr/local/src/postgresql/src/backend/rewrite/rewriteHandler.c:3911:13
+Used: RewriteQuery
+Ret. Type: List *
+>RewriteQuery,List *, /usr/local/src/postgresql/src/backend/rewrite/rewriteHandler.c:3911:13
+Used: RewriteQuery
+Ret. Type: List *
+>RewriteQuery,List *, /usr/local/src/postgresql/src/backend/rewrite/rewriteHandler.c:4299:15
+Used: RewriteQuery
+Ret. Type: List *
+>RewriteQuery,List *, /usr/local/src/postgresql/src/backend/rewrite/rewriteHandler.c:3911:13
+Used: RewriteQuery
+Ret. Type: List *
+>RewriteQuery,List *, /usr/local/src/postgresql/src/backend/rewrite/rewriteHandler.c:3911:13
+Used: RewriteQuery
+Ret. Type: List *
+>RewriteQuery,List *, /usr/local/src/postgresql/src/backend/rewrite/rewriteHandler.c:4299:15
+Used: RewriteQuery
+Ret. Type: List *
+>ATExecDetachPartition,Relation, /usr/local/src/postgresql/src/backend/commands/tablecmds.c:19183:2
+Used: table_close
+Ret. Type: ObjectAddress

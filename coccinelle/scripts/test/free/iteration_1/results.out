@@ -1,102 +1,87 @@
->conditional,Type *,test.c:32:4
+>conditional,Type *, test.c:32:4
 Used: pfree
 Ret. Type: void
->conditionalNIL,Type *,test.c:61:2
+>conditionalNIL,Type *, test.c:58:2
 Used: pfree
 Ret. Type: void
->conditionalNULL,Type *,test.c:56:2
+>conditionalNULL,Type *, test.c:53:2
 Used: pfree
 Ret. Type: void
->conditionalReturn,Type *,test.c:37:4
+>conditionalReturn,Type *, test.c:38:2
 Used: pfree
 Ret. Type: void
->confirmI,Type *,test.c:70:4
+>confirmI,Type *, test.c:67:4
 Used: pfree
 Ret. Type: void
->dependanFieldAccessMultiple,Type *,test.c:115:4
+>dependant,Type *, test.c:94:4
 Used: pfree
 Ret. Type: void
->dependanFieldAccessMultiple,Type *,test.c:115:4
+>dependantBoolFirst,Type *, test.c:104:4
 Used: pfree
 Ret. Type: void
->dependanFieldAccessMultiple,Type *,test.c:117:4
+>dependantElse,Type *, test.c:118:4
 Used: pfree
 Ret. Type: void
->dependant,Type *,test.c:97:4
+>dependantFieldAccess,Type *, test.c:108:4
 Used: pfree
 Ret. Type: void
->dependantBoolFirst,Type *,test.c:107:4
+>dependantFieldAccessFirst,Type *, test.c:124:4
 Used: pfree
 Ret. Type: void
->dependantElse,Type *,test.c:125:4
+>dependantFieldAccessMultiple,Type *, test.c:112:4
 Used: pfree
 Ret. Type: void
->dependantFieldAccess,Type *,test.c:111:4
+>dependantFieldAccessMultiple,Type *, test.c:112:4
 Used: pfree
 Ret. Type: void
->dependantFieldAccessFirst,Type *,test.c:131:4
+>dependantFieldAccessMultiple,Type *, test.c:114:4
 Used: pfree
 Ret. Type: void
->dependantFieldAccessStruct,Type *,test.c:139:4
+>dependantFieldAccessStruct,Type *, test.c:132:4
 Used: pfree
 Ret. Type: void
->dependantFieldAccessStructFirst,Type *,test.c:135:4
+>dependantFieldAccessStructFirst,Type *, test.c:128:4
 Used: pfree
 Ret. Type: void
->dependantMultiple,Type *,test.c:101:4
+>dependantMultiple,Type *, test.c:98:4
 Used: pfree
 Ret. Type: void
->dependantMultiple,Type *,test.c:101:4
+>dependantMultiple,Type *, test.c:98:4
 Used: pfree
 Ret. Type: void
->dependantMultiple,Type *,test.c:103:4
+>dependantMultiple,Type *, test.c:100:4
 Used: pfree
 Ret. Type: void
->dependentIfBigger,Type *,test.c:147:4
+>doubleFree,Type *, test.c:89:2
 Used: pfree
 Ret. Type: void
->dependentIfEqu,Type *,test.c:143:4
+>doubleFree,Type *, test.c:90:2
 Used: pfree
 Ret. Type: void
->doubleFree,Type *,test.c:92:2
+>ifINULLconditionalReturn,Type *, test.c:86:4
 Used: pfree
 Ret. Type: void
->doubleFree,Type *,test.c:93:2
+>ifINULLreturn,Type *, test.c:77:4
 Used: pfree
 Ret. Type: void
->ifINULLconditionalReturn,Type *,test.c:89:4
+>notI,Type *, test.c:63:2
 Used: pfree
 Ret. Type: void
->ifINULLreturn,Type *,test.c:80:4
+>oneParameter,Type *, test.c:18:2
 Used: pfree
 Ret. Type: void
->notI,Type *,test.c:66:2
+>returnifdef,Type *, test.c:44:2
 Used: pfree
 Ret. Type: void
->oneParameter,Type *,test.c:18:2
+>threeParameters,Type *, test.c:21:2
 Used: pfree
 Ret. Type: void
->returnifdef,Type *,test.c:43:2
+>twice,Type *, test.c:47:2
 Used: pfree
 Ret. Type: void
->testTwice,Type *,test.c:50:2
+>twoParameters,Type *, test.c:24:2
 Used: pfree
 Ret. Type: void
->test_OTHER_ONCE,Type *,test.c:46:2
-Used: pfree
-Ret. Type: void
->threeParameters,Type *,test.c:21:2
-Used: pfree
-Ret. Type: void
->twoParameters,Type *,test.c:24:2
-Used: pfree
-Ret. Type: void
->twoParametersFreed,Type *,test.c:120:2
-Used: pfree
-Ret. Type: void
->twoParametersFreed,Type *,test.c:121:2
-Used: pfree
-Ret. Type: void
->whileI,Type *,test.c:74:4
+>whileI,Type *, test.c:71:4
 Used: pfree
 Ret. Type: void

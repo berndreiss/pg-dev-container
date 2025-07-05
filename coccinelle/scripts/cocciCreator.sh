@@ -30,6 +30,7 @@ TMP_PATH=tmp
 PRINTED_LINES=2
 MANUALLY_ADDED=exceptions/$FUNCTION$PROTOTYPE.add
 MANUALLY_EXCLUDED=exceptions/$FUNCTION$PROTOTYPE.exclude
+SCRIPTS_CREATED=0
 
 if [ -d $TMP_PATH ]; then
    rm -rf $TMP_PATH
@@ -46,7 +47,7 @@ mkdir  $TMP_PATH
 
 #FUNCTION THAT CREATES A COCCI SCRIPT THAT CHECKS FOR ALL FUNCTION/TYPE
 #NAMES PASSED TO IT IN THE TMP_PATH AS $ITERATION.cocci
-createScript(){
+createScripts(){
    #COUNTER ADDED TO FUNCTION NAMES IN RULES TO BE UNAMBIGUOUS
    counter=0
 
@@ -117,7 +118,7 @@ createScript(){
             -e "s/__FUNCTION__/$fname/g" \
             -e "s/__TYPE__/$ftype/g" \
             -e "s/__PYTHONTYPE__/$pythonType/g" \
-            >> $TMP_PATH/$ITERATION.cocci
+            >> $TMP_PATH/$ITERATION$counter.cocci
 
    #FOR DEPENDENT ADD STRUCT LIKE ACCESS IF THE TYPE IS NOT A POINTER
    #ALLOWS FOR STATEMENTS LIKE if (B.a) IN THE COCCI SCRIPTS
@@ -127,11 +128,12 @@ createScript(){
                -e "s/__FUNCTION__/$fname/g" \
                -e "s/__TYPE__/$ftype/g" \
                -e "s/__PYTHONTYPE__/$pythonType/g" \
-               >> $TMP_PATH/$ITERATION.cocci
+               >> $TMP_PATH/$ITERATION$counter.cocci
    fi
 
    counter=$((counter+1))
    done
+   SCRIPTS_CREATED=$counter
 }
 
 #CREATE THE RESULTS FILE IF IT DOES NOT EXIST
@@ -172,6 +174,13 @@ START_OVERALL=$(date +%s)
 #KEEP ITERATING WHILE FILE functionsLastIteration EXISTS
 while [ -f $TMP_PATH/functionsLastIteration ]; do
    
+   #WE'VE ALREADY LOOKED AT ALL FUNCTIONS THERE ARE
+   if [[ "$PROTOTYPE" == "dependent" || "$PROTOTYPE" == "static" ]]; then
+     if [ $ITERATION -gt 0 ]; then
+       break 
+     fi
+   fi
+   
    #LOGGING
    START=$(date +%s)
    echo "########## ITERATION $ITERATION ##########"
@@ -189,8 +198,14 @@ while [ -f $TMP_PATH/functionsLastIteration ]; do
    rm $TMP_PATH/functionsLastIteration
 
    #CREATE THE COCCINELLE SCRIPT AND RUN IT
-   createScript $functionNames
-   spatch --sp-file $TMP_PATH/$ITERATION.cocci $CODE_BASE >> $IT_RESULTS_FILE
+   createScripts $functionNames
+   
+   #SPLIT SCRIPTS IN FILES TO AVOID STACK OVERFLOW
+   for i in $(seq 0 $((SCRIPTS_CREATED-1)));
+   do
+     echo "### Function $((i+1)) of $SCRIPTS_CREATED ($FUNCTION $PROTOTYPE iteration $ITERATION) ###" 
+      spatch --sp-file $TMP_PATH/$ITERATION$i.cocci $CODE_BASE >> $IT_RESULTS_FILE
+   done
 
    #GET ALL FUNCTION NAMES FROM THE RESULTS
    grep '>' $IT_RESULTS_FILE | while IFS= read -r line; do

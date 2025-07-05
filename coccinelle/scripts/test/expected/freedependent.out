@@ -1,0 +1,7 @@
+>dependantBoolFirst,Type *, test.c
+>dependantElse,Type *, test.c
+>dependantFieldAccessFirst,Type *, test.c
+>dependantFieldAccessMultiple,Type *, test.c
+>dependantFieldAccess,Type *, test.c
+>dependantMultiple,Type *, test.c
+>dependant,Type *, test.c

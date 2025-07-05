@@ -1,0 +1,1 @@
+>CloseTableList,List *, /usr/local/src/postgresql/src/backend/commands/publicationcmds.c:1711:1

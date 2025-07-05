@@ -1,0 +1,13 @@
+>bms_replace_members,Bitmapset *, /usr/local/src/postgresql/src/backend/nodes/bitmapset.c:988:20
+Used: repalloc
+Ret. Type: Bitmapset *
+--
+>brin_copy_tuple,BrinTuple *, /usr/local/src/postgresql/src/backend/access/brin/brin_tuple.c:452:9
+Used: repalloc
+Ret. Type: BrinTuple *
+>jsonpath_yyrealloc,yy_size_t, /usr/local/src/postgresql/src/backend/utils/adt/jsonpath_scan.c:6175:9,ptr
+Used: repalloc
+Ret. Type: void *
+>core_yyrealloc,yy_size_t, /usr/local/src/postgresql/src/backend/parser/scan.c:11816:9,ptr
+Used: repalloc
+Ret. Type: void *

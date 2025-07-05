@@ -1,0 +1,6 @@
+>executeCommand,PGconn *, /usr/local/src/postgresql/src/fe_utils/query_utils.c
+>executeQuery,PGconn *, /usr/local/src/postgresql/src/fe_utils/query_utils.c
+>pfree,void *, /usr/local/src/postgresql/src/common/fe_memutils.c
+>XLogReaderFree,XLogReaderState *, /usr/local/src/postgresql/src/backend/access/transam/xlogreader.c
+>XLogReaderFree,XLogReaderState *, /usr/local/src/postgresql/src/bin/pg_rewind/xlogreader.c
+>XLogReaderFree,XLogReaderState *, /usr/local/src/postgresql/src/bin/pg_waldump/xlogreader.c

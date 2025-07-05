@@ -1,0 +1,3 @@
+>repalloc,void *, /usr/local/src/postgresql/src/common/fe_memutils.c:174:8
+Used: pg_realloc
+Ret. Type: void *

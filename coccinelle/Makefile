@@ -7,6 +7,7 @@ cocci:
 	@$(MAKE) --no-print-directory freeall
 	@$(MAKE) --no-print-directory reallocall
 	@$(MAKE) --no-print-directory collect
+	@$(MAKE) --no-print-directory duplicates
 
 freeall:
 	@$(MAKE) --no-print-directory free
@@ -84,6 +85,9 @@ reallocdouble:
 
 collect:
 	@cd scripts && bash collectResults.sh && bash formatLatex.sh
+
+duplicates:
+	@cd scripts && bash getDuplicates.sh 
 
 print:
 	@@if [ -f results/pfree/results.log ]; then cat results/pfree/results.log; fi

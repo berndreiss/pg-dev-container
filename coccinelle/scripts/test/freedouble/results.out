@@ -1,0 +1,6 @@
+>doubleFree,Type *, test.c:89:2
+Used: pfree
+Ret. Type: void
+>doubleFree,Type *, test.c:90:2
+Used: pfree
+Ret. Type: void

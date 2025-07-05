@@ -4,7 +4,7 @@ type t1, t2;
 position p;
 
 @@
-t1 f(..., t2 i, ..., __TYPE__ j, ...) {
+t1 f(..., t2 i, ..., t2 j, ...) {
   <+...
   __FUNCTION__@p(..., i, ...)
   ...+>
@@ -28,7 +28,7 @@ identifier f, i, j;
 position p; 
 
 @@
-t1 f(..., t2 i, ..., __TYPE__ j, ...) {
+t1 f(..., t2 i, ..., t2 j, ...) {
   <+...
   __FUNCTION__@p(..., j, ...)
   ...+>

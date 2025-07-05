@@ -1,0 +1,12 @@
+>conditionalNIL,Type *, test.c
+>conditionalNULL,Type *, test.c
+>confirmI,Type *, test.c
+>doubleFree,Type *, test.c
+>ifINULLreturn,Type *, test.c
+>notI,Type *, test.c
+>oneParameter,Type *, test.c
+>pfree,Type *, test.c
+>threeParameters,Type *, test.c
+>twice,Type *, test.c
+>twoParameters,Type *, test.c
+>whileI,Type *, test.c

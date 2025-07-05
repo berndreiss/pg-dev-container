@@ -1,0 +1,36 @@
+>conditional,Type *, test.c:32:4
+Used: pfree
+Ret. Type: void
+>conditionalNIL,Type *, test.c:58:2
+Used: pfree
+Ret. Type: void
+>conditionalNULL,Type *, test.c:53:2
+Used: pfree
+Ret. Type: void
+>conditionalReturn,Type *, test.c:38:2
+Used: pfree
+Ret. Type: void
+>confirmI,Type *, test.c:67:4
+Used: pfree
+Ret. Type: void
+>ifINULLconditionalReturn,Type *, test.c:86:4
+Used: pfree
+Ret. Type: void
+>ifINULLreturn,Type *, test.c:77:4
+Used: pfree
+Ret. Type: void
+>notI,Type *, test.c:63:2
+Used: pfree
+Ret. Type: void
+>oneParameter,Type *, test.c:18:2
+Used: pfree
+Ret. Type: void
+>returnifdef,Type *, test.c:44:2
+Used: pfree
+Ret. Type: void
+>twice,Type *, test.c:47:2
+Used: pfree
+Ret. Type: void
+>whileI,Type *, test.c:71:4
+Used: pfree
+Ret. Type: void

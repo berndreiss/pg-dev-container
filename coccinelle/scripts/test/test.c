@@ -34,7 +34,8 @@ void conditional(Type *i){
 void conditionalReturn(Type *i){
   int integer = 0;
   if (integer > 3)
-    pfree(i);
+    return;
+  pfree(i);
 }
 void returnifdef(Type *i){
 #ifdef something
@@ -42,11 +43,7 @@ void returnifdef(Type *i){
 #endif
   pfree(i);
 }
-void test_OTHER_ONCE(Type *i){
-  pfree(i);
-  test(i);
-}
-void testTwice(Type *i){
+void twice(Type *i){
   pfree(i);
   pfree(i);
 }
@@ -110,15 +107,11 @@ void dependantFieldAccess(Type *i, OtherType *B){
   if (B->b)
     pfree(i);
 }
-void dependanFieldAccessMultiple(Type *i, OtherType * B){
+void dependantFieldAccessMultiple(Type *i, OtherType * B){
   if (B->b)
     pfree(i);
   if (B->b)
     pfree(i);
-}
-void twoParametersFreed(Type *i, Type *j){
-  pfree(i);
-  pfree(j);
 }
 void dependantElse(Type *i, OtherType *B){
   if (B->b)

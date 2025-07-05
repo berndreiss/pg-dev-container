@@ -1,4 +1,4 @@
-@__METAFUNCTION__12 exists@
+@__METAFUNCTION__14 exists@
 type t1, t2;
 identifier f, i, a;
 position p;
@@ -11,12 +11,12 @@ t1 f(..., t2 i, ...) {
 }
 
 @script:python@
-f << __METAFUNCTION__12.f;
-p << __METAFUNCTION__12.p;
-t << __METAFUNCTION__12.t2;
-rt << __METAFUNCTION__12.t1;
-a << __METAFUNCTION__12.a;
-i << __METAFUNCTION__12.i;
+f << __METAFUNCTION__14.f;
+p << __METAFUNCTION__14.p;
+t << __METAFUNCTION__14.t2;
+rt << __METAFUNCTION__14.t1;
+a << __METAFUNCTION__14.a;
+i << __METAFUNCTION__14.i;
 
 @@
 if t == __TYPE__:
@@ -24,7 +24,7 @@ if t == __TYPE__:
   print(f"Used: __FUNCTION__")
   print(f"Ret. Type: {rt}")
 
-@__METAFUNCTION__13 exists@
+@__METAFUNCTION__15 exists@
 type t1, t2;
 identifier f, i, a;
 position p;
@@ -38,12 +38,12 @@ t1 f(..., t2 i, ...) {
 }
 
 @script:python@
-f << __METAFUNCTION__13.f;
-p << __METAFUNCTION__13.p;
-t << __METAFUNCTION__13.t2;
-rt << __METAFUNCTION__13.t1;
-a << __METAFUNCTION__13.a;
-i << __METAFUNCTION__13.i;
+f << __METAFUNCTION__15.f;
+p << __METAFUNCTION__15.p;
+t << __METAFUNCTION__15.t2;
+rt << __METAFUNCTION__15.t1;
+a << __METAFUNCTION__15.a;
+i << __METAFUNCTION__15.i;
 
 @@
 if t == __TYPE__:
