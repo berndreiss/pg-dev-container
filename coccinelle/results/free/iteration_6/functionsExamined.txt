@@ -11,6 +11,3 @@
 >ReorderBufferReplay,ReorderBufferTXN *, /usr/local/src/postgresql/src/backend/replication/logical/reorderbuffer.c:2730:1
 >ReorderBufferStreamTXN,ReorderBufferTXN *, /usr/local/src/postgresql/src/backend/replication/logical/reorderbuffer.c:4151:1
 >ReorderBufferReplay,ReorderBufferTXN *, /usr/local/src/postgresql/src/backend/replication/logical/reorderbuffer.c:2704:2
->ExecUpdate,HeapTuple, /usr/local/src/postgresql/src/backend/executor/nodeModifyTable.c:2288:6
->ExecCrossPartitionUpdate,HeapTuple, /usr/local/src/postgresql/src/backend/executor/nodeModifyTable.c:1806:1
->ExecMerge,HeapTuple, /usr/local/src/postgresql/src/backend/executor/nodeModifyTable.c:2810:10

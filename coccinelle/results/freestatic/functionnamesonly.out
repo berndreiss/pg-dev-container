@@ -24,7 +24,6 @@
 >_bt_insertonpg,IndexTuple, /usr/local/src/postgresql/src/backend/access/nbtree/nbtinsert.c
 >_bt_spooldestroy,BTSpool *, /usr/local/src/postgresql/src/backend/access/nbtree/nbtsort.c
 >buf_finalize,StringInfo, /usr/local/src/postgresql/src/backend/utils/adt/xid8funcs.c
->buildShSecLabels,PGconn *, /usr/local/src/postgresql/src/bin/pg_dump/pg_dumpall.c
 >BumpBlockFree,BumpBlock *, /usr/local/src/postgresql/src/backend/utils/mmgr/bump.c
 >cat2_str,char *, /usr/local/src/postgresql/src/interfaces/ecpg/preproc/preproc.c
 >CatCacheRemoveCList,CatCList *, /usr/local/src/postgresql/src/backend/utils/cache/catcache.c
@@ -56,33 +55,16 @@
 >dir_free,WalWriteMethod *, /usr/local/src/postgresql/src/bin/pg_basebackup/walmethods.c
 >disconnect_database,PGconn *, /usr/local/src/postgresql/src/bin/pg_basebackup/pg_createsubscriber.c
 >dofindsubquery,QTNode *, /usr/local/src/postgresql/src/backend/utils/adt/tsquery_rewrite.c
->dropDBs,PGconn *, /usr/local/src/postgresql/src/bin/pg_dump/pg_dumpall.c
 >drop_existing_subscriptions,PGconn *, /usr/local/src/postgresql/src/bin/pg_basebackup/pg_createsubscriber.c
->dropRoles,PGconn *, /usr/local/src/postgresql/src/bin/pg_dump/pg_dumpall.c
->dropTablespaces,PGconn *, /usr/local/src/postgresql/src/bin/pg_dump/pg_dumpall.c
->dumpDatabases,PGconn *, /usr/local/src/postgresql/src/bin/pg_dump/pg_dumpall.c
 >dumpRoleGUCPrivs,PGconn *, /usr/local/src/postgresql/src/bin/pg_dump/pg_dumpall.c
 >dumpRoleMembership,PGconn *, /usr/local/src/postgresql/src/bin/pg_dump/pg_dumpall.c
->dumpRoles,PGconn *, /usr/local/src/postgresql/src/bin/pg_dump/pg_dumpall.c
 >dumpTablespaces,PGconn *, /usr/local/src/postgresql/src/bin/pg_dump/pg_dumpall.c
->dumpUserConfig,PGconn *, /usr/local/src/postgresql/src/bin/pg_dump/pg_dumpall.c
 >ecpg_finish,struct connection *, /usr/local/src/postgresql/src/interfaces/ecpg/ecpglib/connect.c
 >ecpg_sqlca_key_destructor,void *, /usr/local/src/postgresql/src/interfaces/ecpg/ecpglib/misc.c
 >emit_audit_message,char *, /usr/local/src/postgresql/src/test/modules/test_oat_hooks/test_oat_hooks.c
 >enable_subscription,PGconn *, /usr/local/src/postgresql/src/bin/pg_basebackup/pg_createsubscriber.c
 >EndCopy,CopyToState, /usr/local/src/postgresql/src/backend/commands/copyto.c
->ExecCrossPartitionUpdate,HeapTuple, /usr/local/src/postgresql/src/backend/executor/nodeModifyTable.c
->ExecDeleteEpilogue,HeapTuple, /usr/local/src/postgresql/src/backend/executor/nodeModifyTable.c
->ExecDelete,HeapTuple, /usr/local/src/postgresql/src/backend/executor/nodeModifyTable.c
->ExecMerge,HeapTuple, /usr/local/src/postgresql/src/backend/executor/nodeModifyTable.c
->ExecMergeMatched,HeapTuple, /usr/local/src/postgresql/src/backend/executor/nodeModifyTable.c
 >ExecPrepareTuplestoreResult,TupleDesc, /usr/local/src/postgresql/src/backend/executor/execSRF.c
->ExecUpdateAct,HeapTuple, /usr/local/src/postgresql/src/backend/executor/nodeModifyTable.c
->ExecUpdateEpilogue,HeapTuple, /usr/local/src/postgresql/src/backend/executor/nodeModifyTable.c
->ExecUpdate,HeapTuple, /usr/local/src/postgresql/src/backend/executor/nodeModifyTable.c
->ExecUpdatePrologue,HeapTuple, /usr/local/src/postgresql/src/backend/executor/nodeModifyTable.c
->executeCommand,PGconn *, /usr/local/src/postgresql/src/bin/pg_dump/pg_dumpall.c
->executeQuery,PGconn *, /usr/local/src/postgresql/src/bin/pg_dump/pg_dumpall.c
 >exit_nicely,PGconn *, /usr/local/src/postgresql/src/test/examples/testlibpq2.c
 >exit_nicely,PGconn *, /usr/local/src/postgresql/src/test/examples/testlibpq3.c
 >exit_nicely,PGconn *, /usr/local/src/postgresql/src/test/examples/testlibpq4.c

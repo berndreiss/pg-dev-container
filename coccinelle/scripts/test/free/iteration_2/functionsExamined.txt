@@ -10,12 +10,11 @@
 >dependantFieldAccessFirst,Type *, test.c:124:4
 >dependantFieldAccessMultiple,Type *, test.c:112:4
 >dependantFieldAccessMultiple,Type *, test.c:114:4
->dependantFieldAccessStruct,Type *, test.c:132:4
->dependantFieldAccessStructFirst,Type *, test.c:128:4
 >dependantMultiple,Type *, test.c:98:4
 >dependantMultiple,Type *, test.c:100:4
 >doubleFree,Type *, test.c:89:2
 >doubleFree,Type *, test.c:90:2
+>excludeStrict,Type *, test.c:130:2
 >ifINULLconditionalReturn,Type *, test.c:86:4
 >ifINULLreturn,Type *, test.c:77:4
 >notI,Type *, test.c:63:2

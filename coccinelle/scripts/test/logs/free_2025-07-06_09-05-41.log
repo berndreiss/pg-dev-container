@@ -1,0 +1,50 @@
+STARTING -> test.c
+########## ITERATION 0 ##########
+init_defs_builtins: /usr/lib/coccinelle/standard.h
+HANDLING: test.c
+grep: exceptions/free.exclude: No such file or directory
+#################################
+TIME PASSED: 0 SECONDS
+########## ITERATION 1 ##########
+init_defs_builtins: /usr/lib/coccinelle/standard.h
+HANDLING: test.c
+grep: exceptions/free.exclude: No such file or directory
+grep: exceptions/free.exclude: No such file or directory
+grep: exceptions/free.exclude: No such file or directory
+grep: exceptions/free.exclude: No such file or directory
+grep: exceptions/free.exclude: No such file or directory
+grep: exceptions/free.exclude: No such file or directory
+grep: exceptions/free.exclude: No such file or directory
+grep: exceptions/free.exclude: No such file or directory
+grep: exceptions/free.exclude: No such file or directory
+grep: exceptions/free.exclude: No such file or directory
+grep: exceptions/free.exclude: No such file or directory
+grep: exceptions/free.exclude: No such file or directory
+grep: exceptions/free.exclude: No such file or directory
+grep: exceptions/free.exclude: No such file or directory
+grep: exceptions/free.exclude: No such file or directory
+grep: exceptions/free.exclude: No such file or directory
+grep: exceptions/free.exclude: No such file or directory
+grep: exceptions/free.exclude: No such file or directory
+grep: exceptions/free.exclude: No such file or directory
+grep: exceptions/free.exclude: No such file or directory
+grep: exceptions/free.exclude: No such file or directory
+grep: exceptions/free.exclude: No such file or directory
+grep: exceptions/free.exclude: No such file or directory
+grep: exceptions/free.exclude: No such file or directory
+grep: exceptions/free.exclude: No such file or directory
+grep: exceptions/free.exclude: No such file or directory
+grep: exceptions/free.exclude: No such file or directory
+grep: exceptions/free.exclude: No such file or directory
+grep: exceptions/free.exclude: No such file or directory
+#################################
+TIME PASSED: 1 SECONDS
+########## ITERATION 2 ##########
+init_defs_builtins: /usr/lib/coccinelle/standard.h
+HANDLING: test.c
+#################################
+TIME PASSED: 0 SECONDS
+#################################
+DONE
+NUMBER OF ITERATIONS: 3
+TIME PASSED OVERALL: 0 MINUTES 1 SECONDS

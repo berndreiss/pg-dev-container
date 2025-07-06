@@ -1,0 +1,20 @@
+>executeQueryOrDie,PGconn *, /usr/local/src/postgresql/src/bin/pg_upgrade/server.c
+>appendQualifiedRelation,PGconn *, /usr/local/src/postgresql/src/bin/scripts/common.c
+>executeCommand,PGconn *, /usr/local/src/postgresql/src/fe_utils/query_utils.c
+>executeQuery,PGconn *, /usr/local/src/postgresql/src/fe_utils/query_utils.c
+>sql_exec,PGconn *, /usr/local/src/postgresql/contrib/oid2name/oid2name.c
+>appendQualifiedRelation,PGconn *, /usr/local/src/postgresql/src/bin/scripts/common.c
+>ExecARDeleteTriggers,HeapTuple, /usr/local/src/postgresql/src/backend/commands/trigger.c
+>ExecARUpdateTriggers,HeapTuple, /usr/local/src/postgresql/src/backend/commands/trigger.c
+>ExecBRUpdateTriggers,HeapTuple, /usr/local/src/postgresql/src/backend/commands/trigger.c
+>ExecIRDeleteTriggers,HeapTuple, /usr/local/src/postgresql/src/backend/commands/trigger.c
+>ExecIRUpdateTriggers,HeapTuple, /usr/local/src/postgresql/src/backend/commands/trigger.c
+>sql_exec_dumpalldbs,PGconn *, /usr/local/src/postgresql/contrib/oid2name/oid2name.c
+>sql_exec_dumpalltables,PGconn *, /usr/local/src/postgresql/contrib/oid2name/oid2name.c
+>sql_exec_dumpalltbspc,PGconn *, /usr/local/src/postgresql/contrib/oid2name/oid2name.c
+>sql_exec_searchtables,PGconn *, /usr/local/src/postgresql/contrib/oid2name/oid2name.c
+>ExecDelete,HeapTuple, /usr/local/src/postgresql/src/backend/executor/nodeModifyTable.c
+>ExecMergeMatched,HeapTuple, /usr/local/src/postgresql/src/backend/executor/nodeModifyTable.c
+>ExecUpdate,HeapTuple, /usr/local/src/postgresql/src/backend/executor/nodeModifyTable.c
+>executeCommand,PGconn *, /usr/local/src/postgresql/src/bin/pg_dump/pg_dumpall.c
+>executeQuery,PGconn *, /usr/local/src/postgresql/src/bin/pg_dump/pg_dumpall.c

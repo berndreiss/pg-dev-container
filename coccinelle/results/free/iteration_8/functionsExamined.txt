@@ -16,4 +16,3 @@
 >ExplainNode,List *, /usr/local/src/postgresql/src/backend/commands/explain.c:2407:2
 >ExplainNode,List *, /usr/local/src/postgresql/src/backend/commands/explain.c:2201:3
 >ExplainNode,List *, /usr/local/src/postgresql/src/backend/commands/explain.c:2217:3
->ExecUpdate,HeapTuple, /usr/local/src/postgresql/src/backend/executor/nodeModifyTable.c:2335:11

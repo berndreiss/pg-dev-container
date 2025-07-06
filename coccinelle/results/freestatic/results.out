@@ -1,28 +1,6 @@
 >create_one_window_path,Path *, /usr/local/src/postgresql/src/backend/optimizer/plan/planner.c:4739:1
 Used: add_path
 Ret. Type: void
->get_parallel_object_list,PGconn *, /usr/local/src/postgresql/src/bin/scripts/reindexdb.c:728:5
-Used: appendQualifiedRelation
-Ret. Type: SimpleStringList *
---
->get_parallel_object_list,PGconn *, /usr/local/src/postgresql/src/bin/scripts/reindexdb.c:728:5
-Used: appendQualifiedRelation
-Ret. Type: SimpleStringList *
---
->get_parallel_object_list,PGconn *, /usr/local/src/postgresql/src/bin/scripts/reindexdb.c:728:5
-Used: appendQualifiedRelation
-Ret. Type: SimpleStringList *
->run_reindex_command,PGconn *, /usr/local/src/postgresql/src/bin/scripts/reindexdb.c:559:3
-Used: appendQualifiedRelation
-Ret. Type: void
---
->run_reindex_command,PGconn *, /usr/local/src/postgresql/src/bin/scripts/reindexdb.c:559:3
-Used: appendQualifiedRelation
-Ret. Type: void
---
->run_reindex_command,PGconn *, /usr/local/src/postgresql/src/bin/scripts/reindexdb.c:559:3
-Used: appendQualifiedRelation
-Ret. Type: void
 >fireRIRrules,List *, /usr/local/src/postgresql/src/backend/rewrite/rewriteHandler.c:2152:17
 Used: ApplyRetrieveRule
 Ret. Type: Query *
@@ -154,12 +132,6 @@ Ret. Type: Bitmapset *
 >bms_copy_and_free,Bitmapset *, /usr/local/src/postgresql/src/backend/nodes/bitmapset.c:113:1
 Used: bms_free
 Ret. Type: Bitmapset *
->dumpRoles,PGconn *, /usr/local/src/postgresql/src/bin/pg_dump/pg_dumpall.c:925:3
-Used: buildShSecLabels
-Ret. Type: void
->dumpTablespaces,PGconn *, /usr/local/src/postgresql/src/bin/pg_dump/pg_dumpall.c:1335:3
-Used: buildShSecLabels
-Ret. Type: void
 >ReleaseCatCacheListWithOwner,CatCList *, /usr/local/src/postgresql/src/backend/utils/cache/catcache.c:2007:2
 Used: CatCacheRemoveCList
 Ret. Type: void
@@ -268,9 +240,6 @@ Ret. Type: QTNode *
 >check_and_drop_existing_subscriptions,PGconn *, /usr/local/src/postgresql/src/bin/pg_basebackup/pg_createsubscriber.c:1129:2
 Used: drop_existing_subscriptions
 Ret. Type: void
->dumpRoles,PGconn *, /usr/local/src/postgresql/src/bin/pg_dump/pg_dumpall.c:941:2
-Used: dumpUserConfig
-Ret. Type: void
 >descriptor_free,struct descriptor *, /usr/local/src/postgresql/src/interfaces/ecpg/ecpglib/descriptor.c:744:1
 Used: ecpg_free
 Ret. Type: void
@@ -316,146 +285,6 @@ Ret. Type: void
 >audit_success,char *, /usr/local/src/postgresql/src/test/modules/test_oat_hooks/test_oat_hooks.c:267:1
 Used: emit_audit_message
 Ret. Type: void
->ExecDeleteEpilogue,HeapTuple, /usr/local/src/postgresql/src/backend/executor/nodeModifyTable.c:1400:1
-Used: ExecARDeleteTriggers
-Ret. Type: void
->ExecDeleteEpilogue,HeapTuple, /usr/local/src/postgresql/src/backend/executor/nodeModifyTable.c:1386:2
-Used: ExecARUpdateTriggers
-Ret. Type: void
->ExecUpdateEpilogue,HeapTuple, /usr/local/src/postgresql/src/backend/executor/nodeModifyTable.c:2146:1
-Used: ExecARUpdateTriggers
-Ret. Type: void
->ExecUpdatePrologue,HeapTuple, /usr/local/src/postgresql/src/backend/executor/nodeModifyTable.c:1929:9
-Used: ExecBRUpdateTriggers
-Ret. Type: bool
->ExecUpdateAct,HeapTuple, /usr/local/src/postgresql/src/backend/executor/nodeModifyTable.c:2042:6
-Used: ExecCrossPartitionUpdate
-Ret. Type: TM_Result
->ExecCrossPartitionUpdate,HeapTuple, /usr/local/src/postgresql/src/backend/executor/nodeModifyTable.c:1806:1
-Used: ExecDelete
-Ret. Type: bool
->ExecDelete,HeapTuple, /usr/local/src/postgresql/src/backend/executor/nodeModifyTable.c:1461:13
-Used: ExecIRDeleteTriggers
-Ret. Type: TupleTableSlot *
->ExecMergeMatched,HeapTuple, /usr/local/src/postgresql/src/backend/executor/nodeModifyTable.c:3069:10
-Used: ExecIRDeleteTriggers
-Ret. Type: TupleTableSlot *
->ExecMergeMatched,HeapTuple, /usr/local/src/postgresql/src/backend/executor/nodeModifyTable.c:3016:10
-Used: ExecIRUpdateTriggers
-Ret. Type: TupleTableSlot *
->ExecUpdate,HeapTuple, /usr/local/src/postgresql/src/backend/executor/nodeModifyTable.c:2295:7
-Used: ExecIRUpdateTriggers
-Ret. Type: TupleTableSlot *
->ExecMerge,HeapTuple, /usr/local/src/postgresql/src/backend/executor/nodeModifyTable.c:2810:10
-Used: ExecMergeMatched
-Ret. Type: TupleTableSlot *
->ExecMerge,HeapTuple, /usr/local/src/postgresql/src/backend/executor/nodeModifyTable.c:2810:10
-Used: ExecMergeMatched
-Ret. Type: TupleTableSlot *
->ExecUpdate,HeapTuple, /usr/local/src/postgresql/src/backend/executor/nodeModifyTable.c:2335:11
-Used: ExecUpdateAct
-Ret. Type: TupleTableSlot *
->ExecUpdate,HeapTuple, /usr/local/src/postgresql/src/backend/executor/nodeModifyTable.c:2288:6
-Used: ExecUpdatePrologue
-Ret. Type: TupleTableSlot *
->compile_database_list,PGconn *, /usr/local/src/postgresql/src/bin/pg_amcheck/pg_amcheck.c:1690:7
-Used: executeQuery
-Ret. Type: void
---
->compile_database_list,PGconn *, /usr/local/src/postgresql/src/bin/pg_amcheck/pg_amcheck.c:1690:7
-Used: executeQuery
-Ret. Type: void
->compile_relation_list_one_db,PGconn *, /usr/local/src/postgresql/src/bin/pg_amcheck/pg_amcheck.c:2135:7
-Used: executeQuery
-Ret. Type: void
---
->compile_relation_list_one_db,PGconn *, /usr/local/src/postgresql/src/bin/pg_amcheck/pg_amcheck.c:2135:7
-Used: executeQuery
-Ret. Type: void
->buildShSecLabels,PGconn *, /usr/local/src/postgresql/src/bin/pg_dump/pg_dumpall.c:1645:7
-Used: executeQuery
-Ret. Type: void
---
->buildShSecLabels,PGconn *, /usr/local/src/postgresql/src/bin/pg_dump/pg_dumpall.c:1645:7
-Used: executeQuery
-Ret. Type: void
->dropDBs,PGconn *, /usr/local/src/postgresql/src/bin/pg_dump/pg_dumpall.c:1363:7
-Used: executeQuery
-Ret. Type: void
---
->dropDBs,PGconn *, /usr/local/src/postgresql/src/bin/pg_dump/pg_dumpall.c:1363:7
-Used: executeQuery
-Ret. Type: void
->dropRoles,PGconn *, /usr/local/src/postgresql/src/bin/pg_dump/pg_dumpall.c:722:7
-Used: executeQuery
-Ret. Type: void
---
->dropRoles,PGconn *, /usr/local/src/postgresql/src/bin/pg_dump/pg_dumpall.c:722:7
-Used: executeQuery
-Ret. Type: void
->dropTablespaces,PGconn *, /usr/local/src/postgresql/src/bin/pg_dump/pg_dumpall.c:1224:7
-Used: executeQuery
-Ret. Type: void
---
->dropTablespaces,PGconn *, /usr/local/src/postgresql/src/bin/pg_dump/pg_dumpall.c:1224:7
-Used: executeQuery
-Ret. Type: void
->dumpDatabases,PGconn *, /usr/local/src/postgresql/src/bin/pg_dump/pg_dumpall.c:1506:7
-Used: executeQuery
-Ret. Type: void
---
->dumpDatabases,PGconn *, /usr/local/src/postgresql/src/bin/pg_dump/pg_dumpall.c:1506:7
-Used: executeQuery
-Ret. Type: void
->dumpRoleGUCPrivs,PGconn *, /usr/local/src/postgresql/src/bin/pg_dump/pg_dumpall.c:1168:7
-Used: executeQuery
-Ret. Type: void
---
->dumpRoleGUCPrivs,PGconn *, /usr/local/src/postgresql/src/bin/pg_dump/pg_dumpall.c:1168:7
-Used: executeQuery
-Ret. Type: void
->dumpRoleMembership,PGconn *, /usr/local/src/postgresql/src/bin/pg_dump/pg_dumpall.c:999:7
-Used: executeQuery
-Ret. Type: void
---
->dumpRoleMembership,PGconn *, /usr/local/src/postgresql/src/bin/pg_dump/pg_dumpall.c:999:7
-Used: executeQuery
-Ret. Type: void
->dumpRoles,PGconn *, /usr/local/src/postgresql/src/bin/pg_dump/pg_dumpall.c:807:7
-Used: executeQuery
-Ret. Type: void
---
->dumpRoles,PGconn *, /usr/local/src/postgresql/src/bin/pg_dump/pg_dumpall.c:807:7
-Used: executeQuery
-Ret. Type: void
->dumpTablespaces,PGconn *, /usr/local/src/postgresql/src/bin/pg_dump/pg_dumpall.c:1259:7
-Used: executeQuery
-Ret. Type: void
---
->dumpTablespaces,PGconn *, /usr/local/src/postgresql/src/bin/pg_dump/pg_dumpall.c:1259:7
-Used: executeQuery
-Ret. Type: void
->dumpUserConfig,PGconn *, /usr/local/src/postgresql/src/bin/pg_dump/pg_dumpall.c:1413:7
-Used: executeQuery
-Ret. Type: void
---
->dumpUserConfig,PGconn *, /usr/local/src/postgresql/src/bin/pg_dump/pg_dumpall.c:1413:7
-Used: executeQuery
-Ret. Type: void
->expand_dbname_patterns,PGconn *, /usr/local/src/postgresql/src/bin/pg_dump/pg_dumpall.c:1473:8
-Used: executeQuery
-Ret. Type: void
---
->expand_dbname_patterns,PGconn *, /usr/local/src/postgresql/src/bin/pg_dump/pg_dumpall.c:1473:8
-Used: executeQuery
-Ret. Type: void
->get_parallel_object_list,PGconn *, /usr/local/src/postgresql/src/bin/scripts/reindexdb.c:757:7
-Used: executeQuery
-Ret. Type: SimpleStringList *
---
->get_parallel_object_list,PGconn *, /usr/local/src/postgresql/src/bin/scripts/reindexdb.c:757:7
-Used: executeQuery
-Ret. Type: SimpleStringList *
 >test_nosync,PGconn *, /usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:647:3
 Used: exit_nicely
 Ret. Type: void
@@ -2797,12 +2626,6 @@ Ret. Type: void
 >dumpTablespaces,PGconn *, /usr/local/src/postgresql/src/bin/pg_dump/pg_dumpall.c:1323:3
 Used: PQfinish
 Ret. Type: void
->executeCommand,PGconn *, /usr/local/src/postgresql/src/bin/pg_dump/pg_dumpall.c:1918:2
-Used: PQfinish
-Ret. Type: void
->executeQuery,PGconn *, /usr/local/src/postgresql/src/bin/pg_dump/pg_dumpall.c:1895:2
-Used: PQfinish
-Ret. Type: PGresult *
 >expand_dbname_patterns,PGconn *, /usr/local/src/postgresql/src/bin/pg_dump/pg_dumpall.c:1469:3
 Used: PQfinish
 Ret. Type: void

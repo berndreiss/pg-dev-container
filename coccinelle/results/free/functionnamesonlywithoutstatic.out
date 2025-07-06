@@ -1,6 +1,5 @@
 >add_partial_path,Path *, /usr/local/src/postgresql/src/backend/optimizer/util/pathnode.c
 >add_path,Path *, /usr/local/src/postgresql/src/backend/optimizer/util/pathnode.c
->appendQualifiedRelation,PGconn *, /usr/local/src/postgresql/src/bin/scripts/common.c
 >arabic_UTF_8_close_env,struct SN_env *, /usr/local/src/postgresql/src/backend/snowball/libstemmer/stem_UTF_8_arabic.c
 >armenian_UTF_8_close_env,struct SN_env *, /usr/local/src/postgresql/src/backend/snowball/libstemmer/stem_UTF_8_armenian.c
 >array_free_iterator,ArrayIterator, /usr/local/src/postgresql/src/backend/utils/adt/arrayfuncs.c
@@ -61,20 +60,12 @@
 >end_tup_output,TupOutputState *, /usr/local/src/postgresql/src/backend/executor/execTuples.c
 >english_ISO_8859_1_close_env,struct SN_env *, /usr/local/src/postgresql/src/backend/snowball/libstemmer/stem_ISO_8859_1_english.c
 >english_UTF_8_close_env,struct SN_env *, /usr/local/src/postgresql/src/backend/snowball/libstemmer/stem_UTF_8_english.c
->ExecARDeleteTriggers,HeapTuple, /usr/local/src/postgresql/src/backend/commands/trigger.c
->ExecARUpdateTriggers,HeapTuple, /usr/local/src/postgresql/src/backend/commands/trigger.c
->ExecBRUpdateTriggers,HeapTuple, /usr/local/src/postgresql/src/backend/commands/trigger.c
 >ExecDropSingleTupleTableSlot,TupleTableSlot *, /usr/local/src/postgresql/src/backend/executor/execTuples.c
 >ExecForceStoreHeapTuple,HeapTuple, /usr/local/src/postgresql/src/backend/executor/execTuples.c
 >ExecForceStoreMinimalTuple,MinimalTuple, /usr/local/src/postgresql/src/backend/executor/execTuples.c
 >ExecHashTableDestroy,HashJoinTable, /usr/local/src/postgresql/src/backend/executor/nodeHash.c
->ExecIRDeleteTriggers,HeapTuple, /usr/local/src/postgresql/src/backend/commands/trigger.c
->ExecIRUpdateTriggers,HeapTuple, /usr/local/src/postgresql/src/backend/commands/trigger.c
 >ExecParallelCleanup,ParallelExecutorInfo *, /usr/local/src/postgresql/src/backend/executor/execParallel.c
 >ExecResetTupleTable,List *, /usr/local/src/postgresql/src/backend/executor/execTuples.c
->executeCommand,PGconn *, /usr/local/src/postgresql/src/fe_utils/query_utils.c
->executeQueryOrDie,PGconn *, /usr/local/src/postgresql/src/bin/pg_upgrade/server.c
->executeQuery,PGconn *, /usr/local/src/postgresql/src/fe_utils/query_utils.c
 >findsubquery,QTNode *, /usr/local/src/postgresql/src/backend/utils/adt/tsquery_rewrite.c
 >finnish_ISO_8859_1_close_env,struct SN_env *, /usr/local/src/postgresql/src/backend/snowball/libstemmer/stem_ISO_8859_1_finnish.c
 >finnish_UTF_8_close_env,struct SN_env *, /usr/local/src/postgresql/src/backend/snowball/libstemmer/stem_UTF_8_finnish.c
@@ -218,11 +209,6 @@
 >SPI_cursor_close,Portal, /usr/local/src/postgresql/src/backend/executor/spi.c
 >SPI_freetuple,HeapTuple, /usr/local/src/postgresql/src/backend/executor/spi.c
 >SPI_pfree,void *, /usr/local/src/postgresql/src/backend/executor/spi.c
->sql_exec_dumpalldbs,PGconn *, /usr/local/src/postgresql/contrib/oid2name/oid2name.c
->sql_exec_dumpalltables,PGconn *, /usr/local/src/postgresql/contrib/oid2name/oid2name.c
->sql_exec_dumpalltbspc,PGconn *, /usr/local/src/postgresql/contrib/oid2name/oid2name.c
->sql_exec,PGconn *, /usr/local/src/postgresql/contrib/oid2name/oid2name.c
->sql_exec_searchtables,PGconn *, /usr/local/src/postgresql/contrib/oid2name/oid2name.c
 >swedish_ISO_8859_1_close_env,struct SN_env *, /usr/local/src/postgresql/src/backend/snowball/libstemmer/stem_ISO_8859_1_swedish.c
 >swedish_UTF_8_close_env,struct SN_env *, /usr/local/src/postgresql/src/backend/snowball/libstemmer/stem_UTF_8_swedish.c
 >systable_endscan_ordered,SysScanDesc, /usr/local/src/postgresql/src/backend/access/index/genam.c

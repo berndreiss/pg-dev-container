@@ -1,9 +1,13 @@
 #/bin/bash
 
+#TESTS WHETHER THE PROTOTYPES PRODUCE THE RESULTS IN expected
+#ALSO TESTS WHETHER FUNCTIONS IN exceptions ARE REMOVED 
+
 rm -r logs
 rm -r free*
 mkdir -p logs
 datetime="$(date '+%Y-%m-%d_%H-%M-%S')"
+
 echo "TESTING FREE"
 bash cocciCreator.sh test.c free "" > logs/free_$datetime.log 2>&1;
 freeResults=$(cat free/results.out | grep ">" | cut -d ":" -f 1 | sort | uniq)
@@ -13,6 +17,7 @@ if [[ "$freeResults" != "$freeExpected" ]]; then
 else
   echo "All good :)"
 fi
+
 echo "TESTING FREE STRICT"
 bash cocciCreator.sh test.c free "strict" > logs/freestrict_$datetime.log 2>&1;
 freeResults=$(cat freestrict/results.out | grep ">" | cut -d ":" -f 1 | sort | uniq)
@@ -22,6 +27,7 @@ if [[ "$freeResults" != "$freeExpected" ]]; then
 else
   echo "All good :)"
 fi
+
 echo "TESTING FREE DEPENDENT"
 bash cocciCreator.sh test.c free "dependent" > logs/freedependent_$datetime.log 2>&1;
 freeResults=$(cat freedependent/results.out | grep ">" | cut -d ":" -f 1 | sort | uniq)
@@ -31,6 +37,7 @@ if [[ "$freeResults" != "$freeExpected" ]]; then
 else
   echo "All good :)"
 fi
+
 echo "TESTING FREE DOUBLE"
 bash cocciCreator.sh test.c free "double" > logs/freedouble_$datetime.log 2>&1;
 freeResults=$(cat freedouble/results.out | grep ">" | cut -d ":" -f 1 | sort | uniq)
@@ -40,6 +47,7 @@ if [[ "$freeResults" != "$freeExpected" ]]; then
 else
   echo "All good :)"
 fi
+
 echo "TESTING FREE SIGNATURE"
 bash cocciCreator.sh test.c free "signature" > logs/freedouble_$datetime.log 2>&1;
 freeResults=$(cat freesignature/results.out | grep ">" | cut -d ":" -f 1 | sort | uniq)

@@ -67,18 +67,6 @@ Ret. Type: TupleTableSlot *
 >ExecMergeMatched,HeapTuple, /usr/local/src/postgresql/src/backend/executor/nodeModifyTable.c:2914:2
 Used: ExecForceStoreHeapTuple
 Ret. Type: TupleTableSlot *
->ExecMergeMatched,HeapTuple, /usr/local/src/postgresql/src/backend/executor/nodeModifyTable.c:3069:10
-Used: ExecIRDeleteTriggers
-Ret. Type: TupleTableSlot *
->ExecMergeMatched,HeapTuple, /usr/local/src/postgresql/src/backend/executor/nodeModifyTable.c:3016:10
-Used: ExecIRUpdateTriggers
-Ret. Type: TupleTableSlot *
->ExecUpdate,HeapTuple, /usr/local/src/postgresql/src/backend/executor/nodeModifyTable.c:2335:11
-Used: ExecUpdateAct
-Ret. Type: TupleTableSlot *
->ExecUpdate,HeapTuple, /usr/local/src/postgresql/src/backend/executor/nodeModifyTable.c:2288:6
-Used: ExecUpdatePrologue
-Ret. Type: TupleTableSlot *
 >fireRIRrules,List *, /usr/local/src/postgresql/src/backend/rewrite/rewriteHandler.c:2052:19
 Used: fireRIRrules
 Ret. Type: Query *

@@ -976,30 +976,6 @@ Ret. Type: void
 >ATExecDropColumn,ObjectAddresses *, /usr/local/src/postgresql/src/backend/commands/tablecmds.c:9082:5
 Used: ATExecDropColumn
 Ret. Type: ObjectAddress
->ExecDeleteEpilogue,HeapTuple, /usr/local/src/postgresql/src/backend/executor/nodeModifyTable.c:1400:1
-Used: ExecARDeleteTriggers
-Ret. Type: void
->ExecDeleteEpilogue,HeapTuple, /usr/local/src/postgresql/src/backend/executor/nodeModifyTable.c:1386:2
-Used: ExecARUpdateTriggers
-Ret. Type: void
->ExecUpdateEpilogue,HeapTuple, /usr/local/src/postgresql/src/backend/executor/nodeModifyTable.c:2146:1
-Used: ExecARUpdateTriggers
-Ret. Type: void
->ExecUpdatePrologue,HeapTuple, /usr/local/src/postgresql/src/backend/executor/nodeModifyTable.c:1929:9
-Used: ExecBRUpdateTriggers
-Ret. Type: bool
->ExecDelete,HeapTuple, /usr/local/src/postgresql/src/backend/executor/nodeModifyTable.c:1461:13
-Used: ExecIRDeleteTriggers
-Ret. Type: TupleTableSlot *
->ExecMergeMatched,HeapTuple, /usr/local/src/postgresql/src/backend/executor/nodeModifyTable.c:3069:10
-Used: ExecIRDeleteTriggers
-Ret. Type: TupleTableSlot *
->ExecMergeMatched,HeapTuple, /usr/local/src/postgresql/src/backend/executor/nodeModifyTable.c:3016:10
-Used: ExecIRUpdateTriggers
-Ret. Type: TupleTableSlot *
->ExecUpdate,HeapTuple, /usr/local/src/postgresql/src/backend/executor/nodeModifyTable.c:2295:7
-Used: ExecIRUpdateTriggers
-Ret. Type: TupleTableSlot *
 >ginFinishOldSplit,GinBtreeStack *, /usr/local/src/postgresql/src/backend/access/gin/ginbtree.c:800:1
 Used: ginFinishSplit
 Ret. Type: void
@@ -1014,27 +990,6 @@ Used: rewrite_heap_tuple
 Ret. Type: void
 >reform_and_rewrite_tuple,HeapTuple, /usr/local/src/postgresql/src/backend/access/heap/heapam_handler.c:2534:1
 Used: rewrite_heap_tuple
-Ret. Type: void
->get_parallel_object_list,PGconn *, /usr/local/src/postgresql/src/bin/scripts/reindexdb.c:728:5
-Used: appendQualifiedRelation
-Ret. Type: SimpleStringList *
->run_reindex_command,PGconn *, /usr/local/src/postgresql/src/bin/scripts/reindexdb.c:559:3
-Used: appendQualifiedRelation
-Ret. Type: void
->dumpRoles,PGconn *, /usr/local/src/postgresql/src/bin/pg_dump/pg_dumpall.c:925:3
-Used: buildShSecLabels
-Ret. Type: void
->dumpTablespaces,PGconn *, /usr/local/src/postgresql/src/bin/pg_dump/pg_dumpall.c:1335:3
-Used: buildShSecLabels
-Ret. Type: void
->dumpRoles,PGconn *, /usr/local/src/postgresql/src/bin/pg_dump/pg_dumpall.c:941:2
-Used: dumpUserConfig
-Ret. Type: void
->get_parallel_object_list,PGconn *, /usr/local/src/postgresql/src/bin/scripts/reindexdb.c:728:5
-Used: appendQualifiedRelation
-Ret. Type: SimpleStringList *
->run_reindex_command,PGconn *, /usr/local/src/postgresql/src/bin/scripts/reindexdb.c:559:3
-Used: appendQualifiedRelation
 Ret. Type: void
 >check_and_drop_existing_subscriptions,PGconn *, /usr/local/src/postgresql/src/bin/pg_basebackup/pg_createsubscriber.c:1129:2
 Used: drop_existing_subscriptions

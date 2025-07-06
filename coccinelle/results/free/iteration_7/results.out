@@ -163,6 +163,3 @@ Ret. Type: void
 >ReorderBufferReplay,ReorderBufferTXN *, /usr/local/src/postgresql/src/backend/replication/logical/reorderbuffer.c:2704:2
 Used: ReorderBufferStreamCommit
 Ret. Type: void
->ExecUpdate,HeapTuple, /usr/local/src/postgresql/src/backend/executor/nodeModifyTable.c:2335:11
-Used: ExecUpdateAct
-Ret. Type: TupleTableSlot *

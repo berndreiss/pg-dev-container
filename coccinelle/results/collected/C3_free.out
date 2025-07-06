@@ -40,24 +40,6 @@ Ret. Type: void
 Used: pfree
 Ret. Type: void
 --
->executeQueryOrDie,PGconn *, /usr/local/src/postgresql/src/bin/pg_upgrade/server.c:142:2
-Used: PQfinish
-Ret. Type: PGresult *
->appendQualifiedRelation,PGconn *, /usr/local/src/postgresql/src/bin/scripts/common.c:111:2
-Used: PQfinish
-Ret. Type: void
---
->executeCommand,PGconn *, /usr/local/src/postgresql/src/fe_utils/query_utils.c:60:2
-Used: PQfinish
-Ret. Type: void
->executeQuery,PGconn *, /usr/local/src/postgresql/src/fe_utils/query_utils.c:35:2
-Used: PQfinish
-Ret. Type: PGresult *
---
->sql_exec,PGconn *, /usr/local/src/postgresql/contrib/oid2name/oid2name.c:394:2
-Used: PQfinish
-Ret. Type: int
---
 >findsubquery,QTNode *, /usr/local/src/postgresql/src/backend/utils/adt/tsquery_rewrite.c:271:8
 Used: dofindsubquery
 Ret. Type: QTNode *
@@ -76,42 +58,6 @@ Ret. Type: void
 >InsertPgAttributeTuples,CatalogIndexState, /usr/local/src/postgresql/src/backend/catalog/heap.c:806:2
 Used: CatalogCloseIndexes
 Ret. Type: void
---
->ExecARDeleteTriggers,HeapTuple, /usr/local/src/postgresql/src/backend/commands/trigger.c:2799:3
-Used: ExecForceStoreHeapTuple
-Ret. Type: void
---
->ExecARDeleteTriggers,HeapTuple, /usr/local/src/postgresql/src/backend/commands/trigger.c:2799:3
-Used: ExecForceStoreHeapTuple
-Ret. Type: void
->ExecARUpdateTriggers,HeapTuple, /usr/local/src/postgresql/src/backend/commands/trigger.c:3139:3
-Used: ExecForceStoreHeapTuple
-Ret. Type: void
---
->ExecARUpdateTriggers,HeapTuple, /usr/local/src/postgresql/src/backend/commands/trigger.c:3139:3
-Used: ExecForceStoreHeapTuple
-Ret. Type: void
->ExecBRUpdateTriggers,HeapTuple, /usr/local/src/postgresql/src/backend/commands/trigger.c:3012:2
-Used: ExecForceStoreHeapTuple
-Ret. Type: bool
---
->ExecBRUpdateTriggers,HeapTuple, /usr/local/src/postgresql/src/backend/commands/trigger.c:3012:2
-Used: ExecForceStoreHeapTuple
-Ret. Type: bool
->ExecIRDeleteTriggers,HeapTuple, /usr/local/src/postgresql/src/backend/commands/trigger.c:2824:1
-Used: ExecForceStoreHeapTuple
-Ret. Type: bool
---
->ExecIRDeleteTriggers,HeapTuple, /usr/local/src/postgresql/src/backend/commands/trigger.c:2824:1
-Used: ExecForceStoreHeapTuple
-Ret. Type: bool
->ExecIRUpdateTriggers,HeapTuple, /usr/local/src/postgresql/src/backend/commands/trigger.c:3171:1
-Used: ExecForceStoreHeapTuple
-Ret. Type: bool
---
->ExecIRUpdateTriggers,HeapTuple, /usr/local/src/postgresql/src/backend/commands/trigger.c:3171:1
-Used: ExecForceStoreHeapTuple
-Ret. Type: bool
 --
 >ginInsertValue,GinBtreeStack *, /usr/local/src/postgresql/src/backend/access/gin/ginbtree.c:831:2
 Used: freeGinBtreeStack
@@ -134,38 +80,10 @@ Ret. Type: void
 Used: _bt_insertonpg
 Ret. Type: bool
 --
->appendQualifiedRelation,PGconn *, /usr/local/src/postgresql/src/bin/scripts/common.c:95:1
-Used: executeCommand
-Ret. Type: void
---
->appendQualifiedRelation,PGconn *, /usr/local/src/postgresql/src/bin/scripts/common.c:95:1
-Used: executeCommand
-Ret. Type: void
---
->appendQualifiedRelation,PGconn *, /usr/local/src/postgresql/src/bin/scripts/common.c:103:7
-Used: executeQuery
-Ret. Type: void
---
->appendQualifiedRelation,PGconn *, /usr/local/src/postgresql/src/bin/scripts/common.c:103:7
-Used: executeQuery
-Ret. Type: void
---
 >ParallelSlotsAdoptConn,PGconn *, /usr/local/src/postgresql/src/fe_utils/parallel_slot.c:468:2
 Used: disconnectDatabase
 Ret. Type: void
 --
->sql_exec_dumpalldbs,PGconn *, /usr/local/src/postgresql/contrib/oid2name/oid2name.c:462:1
-Used: sql_exec
-Ret. Type: void
->sql_exec_dumpalltables,PGconn *, /usr/local/src/postgresql/contrib/oid2name/oid2name.c:493:1
-Used: sql_exec
-Ret. Type: void
->sql_exec_dumpalltbspc,PGconn *, /usr/local/src/postgresql/contrib/oid2name/oid2name.c:579:1
-Used: sql_exec
-Ret. Type: void
->sql_exec_searchtables,PGconn *, /usr/local/src/postgresql/contrib/oid2name/oid2name.c:567:1
-Used: sql_exec
-Ret. Type: void
 >ReleaseCatCacheList,CatCList *, /usr/local/src/postgresql/src/backend/utils/cache/catcache.c:1989:1
 Used: ReleaseCatCacheListWithOwner
 Ret. Type: void

@@ -123,11 +123,9 @@ void dependantFieldAccessFirst(OtherType * B, Type *i){
   if (B->b)
     pfree(i);
 }
-void dependantFieldAccessStructFirst(OtherType B, Type *i){
-  if (B.b)
-    pfree(i);
+void excludeAll(Type *i, OtherType b){
+  pfree(i);
 }
-void dependantFieldAccessStruct(Type *i, OtherType B){
-  if (B.b)
-    pfree(i);
+void excludeStrict(Type *i, OtherType b){
+  pfree(i);
 }

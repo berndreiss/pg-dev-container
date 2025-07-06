@@ -37,12 +37,6 @@ Ret. Type: void
 >dependantFieldAccessMultiple,Type *, test.c:114:4
 Used: pfree
 Ret. Type: void
->dependantFieldAccessStruct,Type *, test.c:132:4
-Used: pfree
-Ret. Type: void
->dependantFieldAccessStructFirst,Type *, test.c:128:4
-Used: pfree
-Ret. Type: void
 >dependantMultiple,Type *, test.c:98:4
 Used: pfree
 Ret. Type: void
@@ -56,6 +50,12 @@ Ret. Type: void
 Used: pfree
 Ret. Type: void
 >doubleFree,Type *, test.c:90:2
+Used: pfree
+Ret. Type: void
+>excludeAll,Type *, test.c:127:2
+Used: pfree
+Ret. Type: void
+>excludeStrict,Type *, test.c:130:2
 Used: pfree
 Ret. Type: void
 >ifINULLconditionalReturn,Type *, test.c:86:4

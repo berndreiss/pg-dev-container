@@ -3,7 +3,6 @@
 >add_partial_path,Path *, /usr/local/src/postgresql/src/backend/optimizer/util/pathnode.c
 >add_part_relids,Bitmapset *, /usr/local/src/postgresql/src/backend/partitioning/partprune.c
 >add_path,Path *, /usr/local/src/postgresql/src/backend/optimizer/util/pathnode.c
->appendQualifiedRelation,PGconn *, /usr/local/src/postgresql/src/bin/scripts/common.c
 >ApplyRetrieveRule,List *, /usr/local/src/postgresql/src/backend/rewrite/rewriteHandler.c
 >arabic_UTF_8_close_env,struct SN_env *, /usr/local/src/postgresql/src/backend/snowball/libstemmer/stem_UTF_8_arabic.c
 >armenian_UTF_8_close_env,struct SN_env *, /usr/local/src/postgresql/src/backend/snowball/libstemmer/stem_UTF_8_armenian.c
@@ -49,7 +48,6 @@
 >_bt_spooldestroy,BTSpool *, /usr/local/src/postgresql/src/backend/access/nbtree/nbtsort.c
 >BufFileClose,BufFile *, /usr/local/src/postgresql/src/backend/storage/file/buffile.c
 >buf_finalize,StringInfo, /usr/local/src/postgresql/src/backend/utils/adt/xid8funcs.c
->buildShSecLabels,PGconn *, /usr/local/src/postgresql/src/bin/pg_dump/pg_dumpall.c
 >BumpBlockFree,BumpBlock *, /usr/local/src/postgresql/src/backend/utils/mmgr/bump.c
 >BumpDelete,MemoryContext, /usr/local/src/postgresql/src/backend/utils/mmgr/bump.c
 >cat2_str,char *, /usr/local/src/postgresql/src/interfaces/ecpg/preproc/preproc.c
@@ -101,20 +99,14 @@
 >disconnect_database,PGconn *, /usr/local/src/postgresql/src/bin/pg_basebackup/pg_createsubscriber.c
 >disconnectDatabase,PGconn *, /usr/local/src/postgresql/src/fe_utils/connect_utils.c
 >dofindsubquery,QTNode *, /usr/local/src/postgresql/src/backend/utils/adt/tsquery_rewrite.c
->dropDBs,PGconn *, /usr/local/src/postgresql/src/bin/pg_dump/pg_dumpall.c
 >drop_existing_subscriptions,PGconn *, /usr/local/src/postgresql/src/bin/pg_basebackup/pg_createsubscriber.c
->dropRoles,PGconn *, /usr/local/src/postgresql/src/bin/pg_dump/pg_dumpall.c
->dropTablespaces,PGconn *, /usr/local/src/postgresql/src/bin/pg_dump/pg_dumpall.c
 >dsa_detach,dsa_area *, /usr/local/src/postgresql/src/backend/utils/mmgr/dsa.c
 >dshash_destroy,dshash_table *, /usr/local/src/postgresql/src/backend/lib/dshash.c
 >dshash_detach,dshash_table *, /usr/local/src/postgresql/src/backend/lib/dshash.c
 >dsm_detach,dsm_segment *, /usr/local/src/postgresql/src/backend/storage/ipc/dsm.c
->dumpDatabases,PGconn *, /usr/local/src/postgresql/src/bin/pg_dump/pg_dumpall.c
 >dumpRoleGUCPrivs,PGconn *, /usr/local/src/postgresql/src/bin/pg_dump/pg_dumpall.c
 >dumpRoleMembership,PGconn *, /usr/local/src/postgresql/src/bin/pg_dump/pg_dumpall.c
->dumpRoles,PGconn *, /usr/local/src/postgresql/src/bin/pg_dump/pg_dumpall.c
 >dumpTablespaces,PGconn *, /usr/local/src/postgresql/src/bin/pg_dump/pg_dumpall.c
->dumpUserConfig,PGconn *, /usr/local/src/postgresql/src/bin/pg_dump/pg_dumpall.c
 >dump_variables,struct arguments *, /usr/local/src/postgresql/src/interfaces/ecpg/preproc/variable.c
 >dutch_ISO_8859_1_close_env,struct SN_env *, /usr/local/src/postgresql/src/backend/snowball/libstemmer/stem_ISO_8859_1_dutch.c
 >dutch_UTF_8_close_env,struct SN_env *, /usr/local/src/postgresql/src/backend/snowball/libstemmer/stem_UTF_8_dutch.c
@@ -134,32 +126,13 @@
 >end_tup_output,TupOutputState *, /usr/local/src/postgresql/src/backend/executor/execTuples.c
 >english_ISO_8859_1_close_env,struct SN_env *, /usr/local/src/postgresql/src/backend/snowball/libstemmer/stem_ISO_8859_1_english.c
 >english_UTF_8_close_env,struct SN_env *, /usr/local/src/postgresql/src/backend/snowball/libstemmer/stem_UTF_8_english.c
->ExecARDeleteTriggers,HeapTuple, /usr/local/src/postgresql/src/backend/commands/trigger.c
->ExecARUpdateTriggers,HeapTuple, /usr/local/src/postgresql/src/backend/commands/trigger.c
->ExecBRUpdateTriggers,HeapTuple, /usr/local/src/postgresql/src/backend/commands/trigger.c
->ExecCrossPartitionUpdate,HeapTuple, /usr/local/src/postgresql/src/backend/executor/nodeModifyTable.c
->ExecDeleteEpilogue,HeapTuple, /usr/local/src/postgresql/src/backend/executor/nodeModifyTable.c
->ExecDelete,HeapTuple, /usr/local/src/postgresql/src/backend/executor/nodeModifyTable.c
 >ExecDropSingleTupleTableSlot,TupleTableSlot *, /usr/local/src/postgresql/src/backend/executor/execTuples.c
 >ExecForceStoreHeapTuple,HeapTuple, /usr/local/src/postgresql/src/backend/executor/execTuples.c
 >ExecForceStoreMinimalTuple,MinimalTuple, /usr/local/src/postgresql/src/backend/executor/execTuples.c
 >ExecHashTableDestroy,HashJoinTable, /usr/local/src/postgresql/src/backend/executor/nodeHash.c
->ExecIRDeleteTriggers,HeapTuple, /usr/local/src/postgresql/src/backend/commands/trigger.c
->ExecIRUpdateTriggers,HeapTuple, /usr/local/src/postgresql/src/backend/commands/trigger.c
->ExecMerge,HeapTuple, /usr/local/src/postgresql/src/backend/executor/nodeModifyTable.c
->ExecMergeMatched,HeapTuple, /usr/local/src/postgresql/src/backend/executor/nodeModifyTable.c
 >ExecParallelCleanup,ParallelExecutorInfo *, /usr/local/src/postgresql/src/backend/executor/execParallel.c
 >ExecPrepareTuplestoreResult,TupleDesc, /usr/local/src/postgresql/src/backend/executor/execSRF.c
 >ExecResetTupleTable,List *, /usr/local/src/postgresql/src/backend/executor/execTuples.c
->ExecUpdateAct,HeapTuple, /usr/local/src/postgresql/src/backend/executor/nodeModifyTable.c
->ExecUpdateEpilogue,HeapTuple, /usr/local/src/postgresql/src/backend/executor/nodeModifyTable.c
->ExecUpdate,HeapTuple, /usr/local/src/postgresql/src/backend/executor/nodeModifyTable.c
->ExecUpdatePrologue,HeapTuple, /usr/local/src/postgresql/src/backend/executor/nodeModifyTable.c
->executeCommand,PGconn *, /usr/local/src/postgresql/src/bin/pg_dump/pg_dumpall.c
->executeCommand,PGconn *, /usr/local/src/postgresql/src/fe_utils/query_utils.c
->executeQueryOrDie,PGconn *, /usr/local/src/postgresql/src/bin/pg_upgrade/server.c
->executeQuery,PGconn *, /usr/local/src/postgresql/src/bin/pg_dump/pg_dumpall.c
->executeQuery,PGconn *, /usr/local/src/postgresql/src/fe_utils/query_utils.c
 >exit_nicely,PGconn *, /usr/local/src/postgresql/src/test/examples/testlibpq2.c
 >exit_nicely,PGconn *, /usr/local/src/postgresql/src/test/examples/testlibpq3.c
 >exit_nicely,PGconn *, /usr/local/src/postgresql/src/test/examples/testlibpq4.c
@@ -411,11 +384,6 @@
 >SPI_cursor_close,Portal, /usr/local/src/postgresql/src/backend/executor/spi.c
 >SPI_freetuple,HeapTuple, /usr/local/src/postgresql/src/backend/executor/spi.c
 >SPI_pfree,void *, /usr/local/src/postgresql/src/backend/executor/spi.c
->sql_exec_dumpalldbs,PGconn *, /usr/local/src/postgresql/contrib/oid2name/oid2name.c
->sql_exec_dumpalltables,PGconn *, /usr/local/src/postgresql/contrib/oid2name/oid2name.c
->sql_exec_dumpalltbspc,PGconn *, /usr/local/src/postgresql/contrib/oid2name/oid2name.c
->sql_exec,PGconn *, /usr/local/src/postgresql/contrib/oid2name/oid2name.c
->sql_exec_searchtables,PGconn *, /usr/local/src/postgresql/contrib/oid2name/oid2name.c
 >sqlfunction_destroy,DestReceiver *, /usr/local/src/postgresql/src/backend/executor/functions.c
 >SSLerrfree,char *, /usr/local/src/postgresql/src/interfaces/libpq/fe-secure-openssl.c
 >store_returning_result,PGresult *, /usr/local/src/postgresql/contrib/postgres_fdw/postgres_fdw.c

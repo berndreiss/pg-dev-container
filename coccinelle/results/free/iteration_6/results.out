@@ -79,6 +79,3 @@ Ret. Type: void
 >ReorderBufferStreamCommit,ReorderBufferTXN *, /usr/local/src/postgresql/src/backend/replication/logical/reorderbuffer.c:1912:1
 Used: ReorderBufferStreamTXN
 Ret. Type: void
->ExecUpdateAct,HeapTuple, /usr/local/src/postgresql/src/backend/executor/nodeModifyTable.c:2042:6
-Used: ExecCrossPartitionUpdate
-Ret. Type: TM_Result

@@ -197,17 +197,11 @@
 >dumpRoleGUCPrivs,PGconn *, /usr/local/src/postgresql/src/bin/pg_dump/pg_dumpall.c:1196:3
 >dumpRoleMembership,PGconn *, /usr/local/src/postgresql/src/bin/pg_dump/pg_dumpall.c:1061:4
 >dumpTablespaces,PGconn *, /usr/local/src/postgresql/src/bin/pg_dump/pg_dumpall.c:1323:3
->executeCommand,PGconn *, /usr/local/src/postgresql/src/bin/pg_dump/pg_dumpall.c:1918:2
->executeQuery,PGconn *, /usr/local/src/postgresql/src/bin/pg_dump/pg_dumpall.c:1895:2
 >expand_dbname_patterns,PGconn *, /usr/local/src/postgresql/src/bin/pg_dump/pg_dumpall.c:1469:3
 >disconnect_database,PGconn *, /usr/local/src/postgresql/src/bin/pg_basebackup/pg_createsubscriber.c:549:1
->executeQueryOrDie,PGconn *, /usr/local/src/postgresql/src/bin/pg_upgrade/server.c:142:2
->appendQualifiedRelation,PGconn *, /usr/local/src/postgresql/src/bin/scripts/common.c:111:2
 >get_parallel_object_list,PGconn *, /usr/local/src/postgresql/src/bin/scripts/reindexdb.c:767:2
 >run_reindex_command,PGconn *, /usr/local/src/postgresql/src/bin/scripts/reindexdb.c:606:3
 >disconnectDatabase,PGconn *, /usr/local/src/postgresql/src/fe_utils/connect_utils.c:170:1
->executeCommand,PGconn *, /usr/local/src/postgresql/src/fe_utils/query_utils.c:60:2
->executeQuery,PGconn *, /usr/local/src/postgresql/src/fe_utils/query_utils.c:35:2
 >exit_nicely,PGconn *, /usr/local/src/postgresql/src/test/examples/testlibpq4.c:18:2
 >exit_nicely,PGconn *, /usr/local/src/postgresql/src/test/examples/testlibpq4.c:20:2
 >exit_nicely,PGconn *, /usr/local/src/postgresql/src/test/examples/testlibpq.c:16:1
@@ -216,4 +210,3 @@
 >exit_nicely,PGconn *, /usr/local/src/postgresql/src/test/examples/testlibpq3.c:50:1
 >exit_nicely,PGconn *, /usr/local/src/postgresql/src/test/examples/testlo.c:195:1
 >exit_nicely,PGconn *, /usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:63:1
->sql_exec,PGconn *, /usr/local/src/postgresql/contrib/oid2name/oid2name.c:394:2

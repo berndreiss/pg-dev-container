@@ -19,4 +19,3 @@
 >show_agg_keys,List *, /usr/local/src/postgresql/src/backend/commands/explain.c:2625:14
 >show_group_keys,List *, /usr/local/src/postgresql/src/backend/commands/explain.c:2750:13
 >ReorderBufferStreamCommit,ReorderBufferTXN *, /usr/local/src/postgresql/src/backend/replication/logical/reorderbuffer.c:1912:1
->ExecUpdateAct,HeapTuple, /usr/local/src/postgresql/src/backend/executor/nodeModifyTable.c:2042:6

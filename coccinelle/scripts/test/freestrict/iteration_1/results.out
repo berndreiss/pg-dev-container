@@ -4,6 +4,12 @@ Ret. Type: void
 >doubleFree,Type *, test.c:90:2
 Used: pfree
 Ret. Type: void
+>excludeAll,Type *, test.c:127:2
+Used: pfree
+Ret. Type: void
+>excludeStrict,Type *, test.c:130:2
+Used: pfree
+Ret. Type: void
 >oneParameter,Type *, test.c:18:2
 Used: pfree
 Ret. Type: void

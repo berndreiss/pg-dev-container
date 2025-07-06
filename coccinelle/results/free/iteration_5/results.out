@@ -436,15 +436,3 @@ Ret. Type: void
 >ATExecDropColumn,ObjectAddresses *, /usr/local/src/postgresql/src/backend/commands/tablecmds.c:9082:5
 Used: ATExecDropColumn
 Ret. Type: ObjectAddress
->ExecUpdate,HeapTuple, /usr/local/src/postgresql/src/backend/executor/nodeModifyTable.c:2288:6
-Used: ExecUpdatePrologue
-Ret. Type: TupleTableSlot *
->ExecCrossPartitionUpdate,HeapTuple, /usr/local/src/postgresql/src/backend/executor/nodeModifyTable.c:1806:1
-Used: ExecDelete
-Ret. Type: bool
->ExecMerge,HeapTuple, /usr/local/src/postgresql/src/backend/executor/nodeModifyTable.c:2810:10
-Used: ExecMergeMatched
-Ret. Type: TupleTableSlot *
->ExecMerge,HeapTuple, /usr/local/src/postgresql/src/backend/executor/nodeModifyTable.c:2810:10
-Used: ExecMergeMatched
-Ret. Type: TupleTableSlot *

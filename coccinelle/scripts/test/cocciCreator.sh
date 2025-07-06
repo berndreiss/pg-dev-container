@@ -30,6 +30,7 @@ TMP_PATH=tmp
 PRINTED_LINES=2
 MANUALLY_ADDED=exceptions/$FUNCTION$PROTOTYPE.add
 MANUALLY_EXCLUDED=exceptions/$FUNCTION$PROTOTYPE.exclude
+MANUALLY_EXCLUDED_ALL=exceptions/${FUNCTION}all.exclude
 
 if [ -d $TMP_PATH ]; then
    rm -rf $TMP_PATH
@@ -119,17 +120,6 @@ createScript(){
             -e "s/__PYTHONTYPE__/$pythonType/g" \
             >> $TMP_PATH/$ITERATION.cocci
 
-   #FOR DEPENDENT ADD STRUCT LIKE ACCESS IF THE TYPE IS NOT A POINTER
-   #ALLOWS FOR STATEMENTS LIKE if (B.a) IN THE COCCI SCRIPTS
-   if [[ ! "$ftype" == *"*"* && "$PROTOTYPE" == "dependent" ]]; then
-      cat prototypes/protodependentstruct.cocci \
-         | sed -e "s/__METAFUNCTION__/$fname$counter/g" \
-               -e "s/__FUNCTION__/$fname/g" \
-               -e "s/__TYPE__/$ftype/g" \
-               -e "s/__PYTHONTYPE__/$pythonType/g" \
-               >> $TMP_PATH/$ITERATION.cocci
-   fi
-
    counter=$((counter+1))
    done
 }
@@ -147,11 +137,6 @@ if [[ "$PROTOTYPE" == "dependent" || "$PROTOTYPE" == "ereport" || "$PROTOTYPE" =
 fi
 
 echo ">$FUNCTION,void *" >> $TMP_PATH/functionsLastIteration
-
-#RETRIEVE FUNCTIONS TO MANUALLY EXCLUDE IF FILE EXISTS
-if [ -f $MANUALLY_EXCLUDED ]; then
-   EXCLUDED=$(cat $MANUALLY_EXCLUDED)
-fi
 
 #RETRIEVE FUNCTIONS TO MANUALLY ADD IF FILE EXISTS
 if [ -f $MANUALLY_ADDED ]; then
@@ -195,7 +180,13 @@ while [ -f $TMP_PATH/functionsLastIteration ]; do
    #GET ALL FUNCTION NAMES FROM THE RESULTS
    grep '>' $IT_RESULTS_FILE | while IFS= read -r line; do
       
-      if [[ "$EXCLUDED" == *"$line"* ]]; then continue; fi
+      line_file_only=$(echo $line | cut -d ':' -f 1)
+      if grep -Fxq "${line_file_only}" "$MANUALLY_EXCLUDED"; then
+        continue;
+      fi
+      if grep -Fxq "${line_file_only}" "$MANUALLY_EXCLUDED_ALL"; then
+        continue;
+      fi
 
       #IF THEY HAVE NOT BEEN FOUND BEFORE, ADD THEM TO THE OVERALL RESULTS
       #AND EXAMINE THE FUNCTION WITH COCCINELLE IN THE NEXT ITERATION
