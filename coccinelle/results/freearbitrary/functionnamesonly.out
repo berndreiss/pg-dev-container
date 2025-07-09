@@ -11,7 +11,6 @@
 >ecpg_check_PQresult,PGresult *, /usr/local/src/postgresql/src/interfaces/ecpg/ecpglib/error.c
 >findsubquery,QTNode *, /usr/local/src/postgresql/src/backend/utils/adt/tsquery_rewrite.c
 >FreeDir,DIR *, /usr/local/src/postgresql/src/backend/storage/file/fd.c
->ginInsertValue,GinBtreeStack *, /usr/local/src/postgresql/src/backend/access/gin/ginbtree.c
 >index_close,Relation, /usr/local/src/postgresql/src/backend/access/index/indexam.c
 >InsertPgAttributeTuples,CatalogIndexState, /usr/local/src/postgresql/src/backend/catalog/heap.c
 >list_delete_int,List *, /usr/local/src/postgresql/src/backend/nodes/list.c
@@ -31,5 +30,3 @@
 >sequence_close,Relation, /usr/local/src/postgresql/src/backend/access/sequence/sequence.c
 >table_close,Relation, /usr/local/src/postgresql/src/backend/access/table/table.c
 >TableCommandResultHandler,PGresult *, /usr/local/src/postgresql/src/fe_utils/parallel_slot.c
->UnregisterSnapshotFromOwner,Snapshot, /usr/local/src/postgresql/src/backend/utils/time/snapmgr.c
->UnregisterSnapshot,Snapshot, /usr/local/src/postgresql/src/backend/utils/time/snapmgr.c

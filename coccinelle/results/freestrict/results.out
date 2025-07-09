@@ -1,3 +1,10 @@
+>ginInsertValue,GinBtreeStack *, /usr/local/src/postgresql/src/backend/access/gin/ginbtree.c:831:2
+Used: freeGinBtreeStack
+Ret. Type: void
+--
+>ginInsertValue,GinBtreeStack *, /usr/local/src/postgresql/src/backend/access/gin/ginbtree.c:834:2
+Used: ginFinishSplit
+Ret. Type: void
 >init_spawned_worker_win32,WorkerInfo *, /usr/local/src/postgresql/src/bin/pg_dump/parallel.c:880:1
 Used: free
 Ret. Type: unsigned __stdcall 

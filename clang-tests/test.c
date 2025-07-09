@@ -1,45 +1,85 @@
-#include "test.h"
-#include "otherfile.c"
-#include <stdio.h>
+#include <stddef.h>
 #include <stdlib.h>
-#include <string.h>
+#include <stdbool.h>
+#include <stdio.h>
+#include "test.h"
+//#include "otherfile.c"
+//#include "PostgresTypes.h"
 
-struct Test{
-  int field;
-  char * pointer;
-};
+typedef struct TupleDescData{
+  int tdrefcount;
+}TupleDescData;
+typedef struct TupleDescData *TupleDesc;
+void DecrTupleDescRefCount(TupleDesc tupdesc);
+void use_tupledesc(TupleDesc tupdesc);
 
-void customFree(char *s){
-  pfree(s);
+
+typedef struct{}Path;
+typedef struct{}RelOptInfo;
+
+void use_path(Path *path){}
+void add_partial_path(RelOptInfo *parent_rel, Path *new_path);
+void pfree(void *);
+
+typedef struct {} Bitmapset;
+Bitmapset *bms_int_members(Bitmapset *a, const Bitmapset *b);
+void use_bms(Bitmapset *a);
+const Bitmapset * get_bms();
+void DecrTupleDescRefCount(TupleDesc tupdesc){
+  tupdesc->tdrefcount--; 
 }
-void dependent(char *s, int i){
-    pfree(s);
-}
-void first(char *s){
-  dependent(s, 0);
-}
+int main(int argnum, char **args){
+  RelOptInfo *parent=malloc(sizeof(RelOptInfo));
+  Path *new_path = malloc(sizeof(Path));
+  add_partial_path(parent, new_path);
+  use_path(new_path);
+   TupleDesc tupdesc = palloc(sizeof(TupleDescData));
+  tupdesc->tdrefcount = 2;
+  DecrTupleDescRefCount(tupdesc);
+  use_tupledesc(tupdesc);
+  tupdesc->tdrefcount = 1;
+  DecrTupleDescRefCount(tupdesc); // expected-note{{Freeing function: DecrTupleDescRefCount}}
+  use_tupledesc(tupdesc); // expected-warning{{Attempt to use re
+  //
+/*
+int natts = 3; // Number of attributes
 
-int main(int a, char **args){
-  //struct Test test;
-  //test.pointer = malloc(10 * sizeof(char));
-  //strcpy(test.pointer, "Hello World\0");
-  char *str = malloc(10 * sizeof(char));
-  strcpy(str, "Hello World\0");
+    // Allocate memory: base size + space for N attributes
+    TupleDesc desc = palloc(sizeof(TupleDescData) + sizeof(CompactAttribute) * natts);
+    if (!desc) {
+        return 1;
+    }
 
-  char *str2 = str;
-  //int i = 0;if (i == 0)
+    // Initialize fields
+    desc->natts = natts;
+    desc->tdtypeid = 1234;
+    desc->tdtypmod = -1;
+    desc->tdrefcount = 1;  // Means "do not count references"
+    desc->constr = NULL;
 
-  //customFree(str);
-  int i = 0;
-  if (i > 0){
-    pfree(str);
+    // Initialize attributes
+    for (int i = 0; i < natts; i++) {
+        desc->compact_attrs[i].attcacheoff = -1;
+        desc->compact_attrs[i].attlen = sizeof(int32);
+        desc->compact_attrs[i].attbyval = true;
+        desc->compact_attrs[i].attispackable = false;
+        desc->compact_attrs[i].atthasmissing = false;
+        desc->compact_attrs[i].attisdropped = false;
+        desc->compact_attrs[i].attgenerated = false;
+        desc->compact_attrs[i].attnullability = 0;
+        desc->compact_attrs[i].attalignby = 4;
+    }
+
+    DecrTupleDescRefCount(desc);
+    // Access a field like tdrefcount
+    if (desc->tdrefcount == -1) {
+        printf("Refcount is disabled\n");
+    } else {
+        printf("Refcount: %d\n", desc->tdrefcount);
   }
-  dependent(str, 0)
-  //first(str);
-  //otherFileFree(str);
-  //pfreedependent(str, 42);
-  printf(str2);
 
-  //free(str);
+    // Cleanup
+    free(desc);
+    return 0;*/
 }
 

@@ -46,6 +46,9 @@ Ret. Type: void
 Used: FreeTupleDesc
 Ret. Type: void
 --
+>UnregisterSnapshotFromOwner,Snapshot, /usr/local/src/postgresql/src/backend/utils/time/snapmgr.c:855:1
+Used: UnregisterSnapshotNoOwner
+Ret. Type: void
 >list_delete_first_n,List *, /usr/local/src/postgresql/src/backend/nodes/list.c:994:2
 Used: list_free
 Ret. Type: List *
@@ -57,6 +60,10 @@ Used: list_free
 Ret. Type: List *
 >ExecResetTupleTable,List *, /usr/local/src/postgresql/src/backend/executor/execTuples.c:1312:2
 Used: list_free
+Ret. Type: void
+--
+>UnregisterSnapshot,Snapshot, /usr/local/src/postgresql/src/backend/utils/time/snapmgr.c:841:1
+Used: UnregisterSnapshotFromOwner
 Ret. Type: void
 --
 >list_delete_cell,List *, /usr/local/src/postgresql/src/backend/nodes/list.c:843:8

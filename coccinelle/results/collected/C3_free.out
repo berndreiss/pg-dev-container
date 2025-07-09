@@ -59,14 +59,6 @@ Ret. Type: void
 Used: CatalogCloseIndexes
 Ret. Type: void
 --
->ginInsertValue,GinBtreeStack *, /usr/local/src/postgresql/src/backend/access/gin/ginbtree.c:831:2
-Used: freeGinBtreeStack
-Ret. Type: void
---
->ginInsertValue,GinBtreeStack *, /usr/local/src/postgresql/src/backend/access/gin/ginbtree.c:834:2
-Used: ginFinishSplit
-Ret. Type: void
---
 >rewrite_heap_tuple,HeapTuple, /usr/local/src/postgresql/src/backend/access/heap/rewriteheap.c:491:5
 Used: heap_freetuple
 Ret. Type: void
@@ -86,10 +78,6 @@ Ret. Type: void
 --
 >ReleaseCatCacheList,CatCList *, /usr/local/src/postgresql/src/backend/utils/cache/catcache.c:1989:1
 Used: ReleaseCatCacheListWithOwner
-Ret. Type: void
---
->UnregisterSnapshotFromOwner,Snapshot, /usr/local/src/postgresql/src/backend/utils/time/snapmgr.c:855:1
-Used: UnregisterSnapshotNoOwner
 Ret. Type: void
 --
 >bms_add_member,Bitmapset *, /usr/local/src/postgresql/src/backend/nodes/bitmapset.c:854:5
@@ -129,16 +117,10 @@ Ret. Type: int
 Used: pa_free_worker
 Ret. Type: void
 --
->ginInsertValue,GinBtreeStack *, /usr/local/src/postgresql/src/backend/access/gin/ginbtree.c:823:2
-Used: ginFinishOldSplit
-Ret. Type: void
---
 >RelationClose,Relation, /usr/local/src/postgresql/src/backend/utils/cache/relcache.c:2199:1
 Used: RelationCloseCleanup
 Ret. Type: void
->UnregisterSnapshot,Snapshot, /usr/local/src/postgresql/src/backend/utils/time/snapmgr.c:841:1
-Used: UnregisterSnapshotFromOwner
-Ret. Type: void
+--
 >CheckAttributeType,List *, /usr/local/src/postgresql/src/backend/catalog/heap.c:638:24
 Used: list_delete_last
 Ret. Type: void

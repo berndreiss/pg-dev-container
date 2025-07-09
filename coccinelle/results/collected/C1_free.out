@@ -608,6 +608,14 @@ Ret. Type: void
 Used: updateAclDependenciesWorker
 Ret. Type: void
 --
+>ginInsertValue,GinBtreeStack *, /usr/local/src/postgresql/src/backend/access/gin/ginbtree.c:831:2
+Used: freeGinBtreeStack
+Ret. Type: void
+--
+>ginInsertValue,GinBtreeStack *, /usr/local/src/postgresql/src/backend/access/gin/ginbtree.c:834:2
+Used: ginFinishSplit
+Ret. Type: void
+--
 >SPI_freetuple,HeapTuple, /usr/local/src/postgresql/src/backend/executor/spi.c:1382:1
 Used: heap_freetuple
 Ret. Type: void
@@ -618,4 +626,8 @@ Ret. Type: void
 --
 >pushf_free_all,PushFilter *, /usr/local/src/postgresql/contrib/pgcrypto/mbuf.c:418:2
 Used: pushf_free
+Ret. Type: void
+--
+>ginInsertValue,GinBtreeStack *, /usr/local/src/postgresql/src/backend/access/gin/ginbtree.c:823:2
+Used: ginFinishOldSplit
 Ret. Type: void
