@@ -6,6 +6,7 @@
 >notI,Type *, test.c
 >oneParameter,Type *, test.c
 >pfree,Type *, test.c
+>staticFunc,Type *, test.c
 >threeParameters,Type *, test.c
 >twice,Type *, test.c
 >twoParameters,Type *, test.c

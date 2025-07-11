@@ -1,6 +1,3 @@
->_CloseArchive,ArchiveHandle *, /usr/local/src/postgresql/src/bin/pg_dump/pg_backup_directory.c:594:16
-Used: ParallelBackupStart
-Ret. Type: void
 >ReleaseCatCacheListWithOwner,CatCList *, /usr/local/src/postgresql/src/backend/utils/cache/catcache.c:2007:2
 Used: CatCacheRemoveCList
 Ret. Type: void

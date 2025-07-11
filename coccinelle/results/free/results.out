@@ -394,9 +394,6 @@ Ret. Type: void
 >PQfinish,PGconn *, /usr/local/src/postgresql/src/interfaces/libpq/fe-connect.c:4883:2
 Used: freePGconn
 Ret. Type: void
->ParallelBackupStart,ArchiveHandle *, /usr/local/src/postgresql/src/bin/pg_dump/parallel.c:1008:3
-Used: RunWorker
-Ret. Type: ParallelState *
 >local_destroy,rewind_source *, /usr/local/src/postgresql/src/bin/pg_rewind/local_source.c:186:1
 Used: pfree
 Ret. Type: void
@@ -1029,9 +1026,6 @@ Used: PQfinish
 Ret. Type: void
 >exit_nicely,PGconn *, /usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:63:1
 Used: PQfinish
-Ret. Type: void
->_CloseArchive,ArchiveHandle *, /usr/local/src/postgresql/src/bin/pg_dump/pg_backup_directory.c:594:16
-Used: ParallelBackupStart
 Ret. Type: void
 >ReleaseCatCacheListWithOwner,CatCList *, /usr/local/src/postgresql/src/backend/utils/cache/catcache.c:2007:2
 Used: CatCacheRemoveCList

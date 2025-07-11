@@ -89,37 +89,37 @@ void doubleFree(Type *i, Type *j){
   pfree(i);
   pfree(j);
 }
-void dependant(Type *i, bool b){
+void dependent(Type *i, bool b){
   if (b)
     pfree(i);
 }
-void dependantMultiple(Type *i, bool b){
+void dependentMultiple(Type *i, bool b){
   if (b)
     pfree(i);
   if (b)
     pfree(i);
 }
-void dependantBoolFirst(bool b, Type *i){
+void dependentBoolFirst(bool b, Type *i){
   if (b)
     pfree(i);
 }
-void dependantFieldAccess(Type *i, OtherType *B){
+void dependentFieldAccess(Type *i, OtherType *B){
   if (B->b)
     pfree(i);
 }
-void dependantFieldAccessMultiple(Type *i, OtherType * B){
+void dependentFieldAccessMultiple(Type *i, OtherType * B){
   if (B->b)
     pfree(i);
   if (B->b)
     pfree(i);
 }
-void dependantElse(Type *i, OtherType *B){
+void dependentElse(Type *i, OtherType *B){
   if (B->b)
     pfree(i);
   else
     return;
 }
-void dependantFieldAccessFirst(OtherType * B, Type *i){
+void dependentFieldAccessFirst(OtherType * B, Type *i){
   if (B->b)
     pfree(i);
 }
@@ -127,5 +127,16 @@ void excludeAll(Type *i, OtherType b){
   pfree(i);
 }
 void excludeStrict(Type *i, OtherType b){
+  pfree(i);
+}
+void excludeDependent(Type *i, bool b){
+  if (b)
+    pfree(i);
+}
+void excludeDependentAll(Type *i, bool b){
+  if (b)
+    pfree(i);
+}
+static void staticFunc(Type *i, OtherType b){
   pfree(i);
 }

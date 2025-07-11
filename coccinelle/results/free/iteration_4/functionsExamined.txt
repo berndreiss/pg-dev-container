@@ -1,4 +1,3 @@
->_CloseArchive,ArchiveHandle *, /usr/local/src/postgresql/src/bin/pg_dump/pg_backup_directory.c:594:16
 >ReleaseCatCacheListWithOwner,CatCList *, /usr/local/src/postgresql/src/backend/utils/cache/catcache.c:2007:2
 >RelationClearRelation,Relation, /usr/local/src/postgresql/src/backend/utils/cache/relcache.c:2633:2
 >dofindsubquery,QTNode *, /usr/local/src/postgresql/src/backend/utils/adt/tsquery_rewrite.c:230:20

@@ -1,5 +1,5 @@
+>ParallelBackupStart,ArchiveHandle *, /usr/local/src/postgresql/src/bin/pg_dump/parallel.c
 >executeQueryOrDie,PGconn *, /usr/local/src/postgresql/src/bin/pg_upgrade/server.c
->appendQualifiedRelation,PGconn *, /usr/local/src/postgresql/src/bin/scripts/common.c
 >executeCommand,PGconn *, /usr/local/src/postgresql/src/fe_utils/query_utils.c
 >executeQuery,PGconn *, /usr/local/src/postgresql/src/fe_utils/query_utils.c
 >sql_exec,PGconn *, /usr/local/src/postgresql/contrib/oid2name/oid2name.c

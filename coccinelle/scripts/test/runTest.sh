@@ -8,6 +8,11 @@ rm -r free*
 mkdir -p logs
 datetime="$(date '+%Y-%m-%d_%H-%M-%S')"
 
+cp ../cocciCreator.sh .
+sed -i 's/RESULTS=\.\.\/results/RESULTS=./' cocciCreator.sh
+sed -i 's/PROTO_FILE=prototypes\/proto/PROTO_FILE=..\/prototypes\/proto/g' cocciCreator.sh
+sed -i 's/if \[ -f prototypes\/proto/if [ -f ..\/prototypes\/proto/g' cocciCreator.sh
+
 echo "TESTING FREE"
 bash cocciCreator.sh test.c free "" > logs/free_$datetime.log 2>&1;
 freeResults=$(cat free/results.out | grep ">" | cut -d ":" -f 1 | sort | uniq)
@@ -38,6 +43,16 @@ else
   echo "All good :)"
 fi
 
+echo "TESTING STATIC"
+bash cocciCreator.sh test.c free "static" > logs/freestatic_$datetime.log 2>&1;
+freeResults=$(cat freestatic/results.out | grep ">" | cut -d ":" -f 1 | sort | uniq)
+freeExpected=$(cat expected/freestatic.out)
+if [[ "$freeResults" != "$freeExpected" ]]; then
+  echo "Prototype for free static unexpected results"
+else
+  echo "All good :)"
+fi
+
 echo "TESTING FREE DOUBLE"
 bash cocciCreator.sh test.c free "double" > logs/freedouble_$datetime.log 2>&1;
 freeResults=$(cat freedouble/results.out | grep ">" | cut -d ":" -f 1 | sort | uniq)
@@ -57,3 +72,6 @@ if [[ "$freeResults" != "$freeExpected" ]]; then
 else
   echo "All good :)"
 fi
+
+rm -r free*
+rm cocciCreator.sh

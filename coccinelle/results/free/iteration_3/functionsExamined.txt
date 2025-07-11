@@ -1,4 +1,3 @@
->ParallelBackupStart,ArchiveHandle *, /usr/local/src/postgresql/src/bin/pg_dump/parallel.c:1008:3
 >local_destroy,rewind_source *, /usr/local/src/postgresql/src/bin/pg_rewind/local_source.c:186:1
 >XLogReaderFree,XLogReaderState *, /usr/local/src/postgresql/src/bin/pg_rewind/xlogreader.c:173:1
 >bbstreamer_lz4_compressor_free,bbstreamer *, /usr/local/src/postgresql/src/bin/pg_basebackup/bbstreamer_lz4.c:266:1

@@ -1,7 +1,0 @@
->dependant,Type *, test.c:94:4,b
->dependantMultiple,Type *, test.c:98:4,b
->dependantBoolFirst,Type *, test.c:104:4,b
->dependantFieldAccess,Type *, test.c:108:4,B->b
->dependantFieldAccessMultiple,Type *, test.c:112:4,B->b
->dependantFieldAccessFirst,Type *, test.c:124:4,B->b
->dependantElse,Type *, test.c:118:4,B->b

@@ -7,6 +7,10 @@ cocci:
 	@$(MAKE) --no-print-directory freeall
 	@$(MAKE) --no-print-directory reallocall
 	@$(MAKE) --no-print-directory collect
+	@cd scripts && bash getArgumentPosition.sh free C1
+	@cd scripts && bash getArgumentPosition.sh free C3
+	@cd scripts && bash getArgumentPosition.sh realloc C1
+	@cd scripts && bash getArgumentPosition.sh realloc C3
 	@$(MAKE) --no-print-directory duplicates
 
 freeall:
@@ -15,7 +19,6 @@ freeall:
 	@$(MAKE) --no-print-directory freestrict
 	@$(MAKE) --no-print-directory freesignature
 	@$(MAKE) --no-print-directory freedependent
-	@$(MAKE) --no-print-directory freeereport
 	@$(MAKE) --no-print-directory freedouble
 
 reallocall:
@@ -24,7 +27,6 @@ reallocall:
 	@$(MAKE) --no-print-directory reallocstrict
 	@$(MAKE) --no-print-directory reallocsignature
 	@$(MAKE) --no-print-directory reallocdependent
-	@$(MAKE) --no-print-directory reallocereport
 	@$(MAKE) --no-print-directory reallocdouble
 
 free:
@@ -66,14 +68,6 @@ freedependent:
 reallocdependent:
 	@echo "Running script for reallocdependent..."
 	@cd scripts && bash runCocci.sh realloc "dependent"
-
-freeereport:
-	@echo "Running script for freeereport..."
-	@cd scripts && bash runCocci.sh free "ereport"
-
-reallocereport:
-	@echo "Running script for reallocereport..."
-	@cd scripts && bash runCocci.sh realloc "ereport"
 
 freedouble:
 	@echo "Running script for freedouble..."

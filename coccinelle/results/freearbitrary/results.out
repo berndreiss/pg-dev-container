@@ -19,10 +19,6 @@ Ret. Type: bool
 Used: PQclear
 Ret. Type: bool
 --
->ParallelBackupStart,ArchiveHandle *, /usr/local/src/postgresql/src/bin/pg_dump/parallel.c:1008:3
-Used: RunWorker
-Ret. Type: ParallelState *
---
 >bms_add_members,Bitmapset *, /usr/local/src/postgresql/src/backend/nodes/bitmapset.c:957:2
 Used: pfree
 Ret. Type: Bitmapset *

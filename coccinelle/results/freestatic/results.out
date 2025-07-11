@@ -2299,9 +2299,6 @@ Ret. Type: void
 >pa_free_worker,ParallelApplyWorkerInfo *, /usr/local/src/postgresql/src/backend/replication/logical/applyparallelworker.c:581:2
 Used: pa_free_worker_info
 Ret. Type: void
->_CloseArchive,ArchiveHandle *, /usr/local/src/postgresql/src/bin/pg_dump/pg_backup_directory.c:594:16
-Used: ParallelBackupStart
-Ret. Type: void
 >local_destroy,rewind_source *, /usr/local/src/postgresql/src/bin/pg_rewind/local_source.c:186:1
 Used: pfree
 Ret. Type: void

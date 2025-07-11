@@ -146,7 +146,6 @@
 >PageRestoreTempPage,Page, /usr/local/src/postgresql/src/backend/storage/page/bufpage.c
 >pairingheap_free,pairingheap *, /usr/local/src/postgresql/src/backend/lib/pairingheap.c
 >ParallelBackupEnd,ParallelState *, /usr/local/src/postgresql/src/bin/pg_dump/parallel.c
->ParallelBackupStart,ArchiveHandle *, /usr/local/src/postgresql/src/bin/pg_dump/parallel.c
 >ParallelSlotsAdoptConn,PGconn *, /usr/local/src/postgresql/src/fe_utils/parallel_slot.c
 >parallel_vacuum_end,ParallelVacuumState *, /usr/local/src/postgresql/src/backend/commands/vacuumparallel.c
 >pa_xact_finish,ParallelApplyWorkerInfo *, /usr/local/src/postgresql/src/backend/replication/logical/applyparallelworker.c

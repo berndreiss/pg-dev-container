@@ -1,1 +1,2 @@
 >excludeAll,Type *, test.c
+>excludeDependentAll,Type *, test.c

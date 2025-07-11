@@ -62,7 +62,6 @@
 >clean_stopword_intree,NODE *, /usr/local/src/postgresql/src/backend/utils/adt/tsquery_cleanup.c
 >clear_and_pfree,text *, /usr/local/src/postgresql/contrib/pgcrypto/pgp-pgsql.c
 >ClearOrSaveResult,PGresult *, /usr/local/src/postgresql/src/bin/psql/common.c
->_CloseArchive,ArchiveHandle *, /usr/local/src/postgresql/src/bin/pg_dump/pg_backup_directory.c
 >close_destination_dir,DIR *, /usr/local/src/postgresql/src/bin/pg_basebackup/pg_receivewal.c
 >closedir,DIR *, /usr/local/src/postgresql/src/port/dirent.c
 >CloseTableList,List *, /usr/local/src/postgresql/src/backend/commands/publicationcmds.c
@@ -274,7 +273,6 @@
 >pagetable_free,void *, /usr/local/src/postgresql/src/backend/nodes/tidbitmap.c
 >pairingheap_free,pairingheap *, /usr/local/src/postgresql/src/backend/lib/pairingheap.c
 >ParallelBackupEnd,ParallelState *, /usr/local/src/postgresql/src/bin/pg_dump/parallel.c
->ParallelBackupStart,ArchiveHandle *, /usr/local/src/postgresql/src/bin/pg_dump/parallel.c
 >ParallelSlotsAdoptConn,PGconn *, /usr/local/src/postgresql/src/fe_utils/parallel_slot.c
 >parallel_vacuum_end,ParallelVacuumState *, /usr/local/src/postgresql/src/backend/commands/vacuumparallel.c
 >pa_xact_finish,ParallelApplyWorkerInfo *, /usr/local/src/postgresql/src/backend/replication/logical/applyparallelworker.c

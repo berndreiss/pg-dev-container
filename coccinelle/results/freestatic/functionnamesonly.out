@@ -33,7 +33,6 @@
 >clean_stopword_intree,NODE *, /usr/local/src/postgresql/src/backend/utils/adt/tsquery_cleanup.c
 >clear_and_pfree,text *, /usr/local/src/postgresql/contrib/pgcrypto/pgp-pgsql.c
 >ClearOrSaveResult,PGresult *, /usr/local/src/postgresql/src/bin/psql/common.c
->_CloseArchive,ArchiveHandle *, /usr/local/src/postgresql/src/bin/pg_dump/pg_backup_directory.c
 >close_destination_dir,DIR *, /usr/local/src/postgresql/src/bin/pg_basebackup/pg_receivewal.c
 >CloseTableList,List *, /usr/local/src/postgresql/src/backend/commands/publicationcmds.c
 >combo_free,PX_Combo *, /usr/local/src/postgresql/contrib/pgcrypto/px.c
