@@ -10,9 +10,6 @@ RESULTS_FILE=$RESULTS_PATH/$RESULTS_FILE_NAME
 TMP_PATH=tmp
 MANUALLY_EXCLUDED=exceptions/$CATEGORY${FUNCTION}position.exclude
 
-output_file="${2:-results.txt}"
-> "$output_file"
-
 if [[ -f $RESULTS_PATH ]]; then
   rm -r $RESULTS_PATH
 fi
