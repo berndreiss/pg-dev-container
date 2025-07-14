@@ -3,7 +3,7 @@ parameter list params;
 identifier f;
 
 @@
- f (params) {
+f (params) {
   ...
 }
 @script:python@

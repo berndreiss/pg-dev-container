@@ -1,10 +1,10 @@
 @freeing exists@
-type t1, t2;
+type rt, t;
 identifier f, i;
 position p;
 
 @@
-t1 f(t2 i) {
+rt f(t i) {
   <+...
   __FUNCTION__@p(i)
   ...+>
@@ -13,8 +13,8 @@ t1 f(t2 i) {
 @script:python@
 f << freeing.f;
 p << freeing.p;
-t << freeing.t2;
-rt << freeing.t1;
+t << freeing.t;
+rt << freeing.rt;
 
 @@
 print(f">{f},{t}, " + p[0].file + ":" + p[0].line + ":" + p[0].column)

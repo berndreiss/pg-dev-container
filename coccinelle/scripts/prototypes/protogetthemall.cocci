@@ -1,17 +1,17 @@
 @function exists@
-type t;
+type rt;
 identifier f;
 position p;
 
 @@
-t f@p(...) {
+rt f@p(...) {
   ...
 }
 
 @script:python@
 f << function.f;
 p << function.p;
-rt << function.t;
+rt << function.rt;
 
 @@
 print(f">{f}, " + p[0].file + ":" + p[0].line + ":" + p[0].column)

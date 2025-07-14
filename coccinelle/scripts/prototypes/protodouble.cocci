@@ -1,10 +1,10 @@
 @freeing0 exists@
-type t1, t2;
+type rt, t;
   identifier f, i, j;
 position p;
 
 @@
-t1 f(..., t2 i, ..., t2 j, ...) {
+rt f(..., t i, ..., t j, ...) {
   <+...
   __FUNCTION__@p(..., i, ...)
   ...+>
@@ -13,8 +13,8 @@ t1 f(..., t2 i, ..., t2 j, ...) {
 @script:python@
 f << freeing0.f;
 p << freeing0.p;
-t << freeing0.t2;
-rt << freeing0.t1;
+t << freeing0.t;
+rt << freeing0.rt;
 
 @@
 if t == __CHECKTYPE__:
@@ -23,12 +23,12 @@ if t == __CHECKTYPE__:
   print(f"Ret. Type: {rt}")
 
 @freeing1 exists@
-type t1, t2;
+type rt, t;
 identifier f, i, j;
 position p; 
 
 @@
-t1 f(..., t2 i, ..., t2 j, ...) {
+rt f(..., t i, ..., t j, ...) {
   <+...
   __FUNCTION__@p(..., j, ...)
   ...+>
@@ -37,8 +37,8 @@ t1 f(..., t2 i, ..., t2 j, ...) {
 @script:python@
 f << freeing1.f;
 p << freeing1.p;
-t << freeing1.t2;
-rt << freeing1.t1;
+t << freeing1.t;
+rt << freeing1.rt;
 
 @@
 if t == __CHECKTYPE__:
