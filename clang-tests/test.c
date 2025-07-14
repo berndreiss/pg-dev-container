@@ -28,19 +28,38 @@ const Bitmapset * get_bms();
 void DecrTupleDescRefCount(TupleDesc tupdesc){
   tupdesc->tdrefcount--; 
 }
+
+typedef struct {}TupleTableSlot;
+typedef struct {}MinimalTupleStruct;
+typedef MinimalTupleStruct * MinimalTuple;
+typedef struct {}HeapTupleStruct;
+typedef HeapTupleStruct * HeapTuple;
+
+void ExecForceStoreMinimalTuple(MinimalTuple mtup, TupleTableSlot *slot, bool shouldFree);
+void ExecForceStoreHeapTuple(HeapTuple mtup, TupleTableSlot *slot, bool shouldFree);
+void useTuple(HeapTuple tuple);
+
 int main(int argnum, char **args){
-  RelOptInfo *parent=malloc(sizeof(RelOptInfo));
-  Path *new_path = malloc(sizeof(Path));
-  add_partial_path(parent, new_path);
-  use_path(new_path);
-   TupleDesc tupdesc = palloc(sizeof(TupleDescData));
-  tupdesc->tdrefcount = 2;
-  DecrTupleDescRefCount(tupdesc);
-  use_tupledesc(tupdesc);
-  tupdesc->tdrefcount = 1;
-  DecrTupleDescRefCount(tupdesc); // expected-note{{Freeing function: DecrTupleDescRefCount}}
-  use_tupledesc(tupdesc); // expected-warning{{Attempt to use re
+  //RelOptInfo *parent=malloc(sizeof(RelOptInfo));
+  //Path *new_path = malloc(sizeof(Path));
+  //add_partial_path(parent, new_path);
+  //use_path(new_path);
+   //TupleDesc tupdesc = palloc(sizeof(TupleDescData));
+  //tupdesc->tdrefcount = 2;
+  //DecrTupleDescRefCount(tupdesc);
+  //use_tupledesc(tupdesc);
+  //tupdesc->tdrefcount = 1;
+  //DecrTupleDescRefCount(tupdesc); // expected-note{{Freeing function: DecrTupleDescRefCount}}
+  //use_tupledesc(tupdesc); // expected-warning{{Attempt to use re
   //
+    HeapTuple tuple = palloc(sizeof(HeapTuple));
+  TupleTableSlot *slot = palloc(sizeof(TupleTableSlot));
+  ExecForceStoreHeapTuple(tuple, slot, false);
+  useTuple(tuple);
+  ExecForceStoreHeapTuple(tuple, slot, argnum); // expected-note{{Freeing function: ExecForceStoreHeapTuple}}
+  useTuple(tuple); // expected-warning{{Attempt to use potentially released memory}}
+
+
 /*
 int natts = 3; // Number of attributes
 

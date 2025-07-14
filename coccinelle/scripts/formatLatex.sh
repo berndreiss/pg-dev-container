@@ -50,7 +50,13 @@ COUNT=$((COUNT+1))
 
 FREE=$(grep -A 1 "SAME RETURN:" $STATS_FILE_FREE | tail -n 1)
 REALLOC=$(grep -A 1 "SAME RETURN:" $STATS_FILE_REALLOC | tail -n 1)
-echo "      $CATEGORY$COUNT: Functions To Reassign& $FREE & $REALLOC \\\\
+echo "      $CATEGORY$COUNT: Functions to Reassign& $FREE & $REALLOC \\\\
+" >> $LATEX_FILE
+COUNT=$((COUNT+1))
+
+FREE=$(grep -A 1 "BOOL RETURN:" $STATS_FILE_FREE | tail -n 1)
+REALLOC=$(grep -A 1 "BOOL RETURN:" $STATS_FILE_REALLOC | tail -n 1)
+echo "      $CATEGORY$COUNT: Functions Returning Boolean& $FREE & $REALLOC \\\\
 " >> $LATEX_FILE
 COUNT=$((COUNT+1))
 

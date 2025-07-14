@@ -115,10 +115,9 @@ createScripts(){
 
    #REPLACE THE PLACEHOLDERS WITH FUNCTION/TYPE NAMES
    cat $PROTO_FILE \
-      | sed -e "s/__METAFUNCTION__/$fname$counter/g" \
-            -e "s/__FUNCTION__/$fname/g" \
-            -e "s/__TYPE__/$ftype/g" \
-            -e "s/__PYTHONTYPE__/$pythonType/g" \
+      | sed -e "s/__FUNCTION__/$fname/g" \
+            -e "s/__CHECKTYPE__/$ftype/g" \
+            -e "s/__PRINTTYPE__/$pythonType/g" \
             >> $TMP_PATH/$ITERATION$counter.cocci
 
    counter=$((counter+1))
@@ -182,10 +181,10 @@ while [ -f $TMP_PATH/functionsLastIteration ]; do
    functionNames=$(grep "^>" $TMP_PATH/functionsLastIteration | cut -c2- | tr -d ' ' | tr '\n' ' ')
    rm $TMP_PATH/functionsLastIteration
 
-   #CREATE THE COCCINELLE SCRIPT AND RUN IT
+   #CREATE THE COCCINELLE SCRIPTS (SPLIT INTO SINGLE FILES TO AVOID STACK OVERFLOW)
    createScripts $functionNames
    
-   #SPLIT SCRIPTS IN FILES TO AVOID STACK OVERFLOW
+   #RUN SCRIPTS
    for i in $(seq 0 $((SCRIPTS_CREATED-1)));
    do
      echo "### Function $((i+1)) of $SCRIPTS_CREATED ($FUNCTION $PROTOTYPE iteration $ITERATION) ###" 

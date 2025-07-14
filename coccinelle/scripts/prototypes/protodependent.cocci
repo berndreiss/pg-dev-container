@@ -1,4 +1,4 @@
-@__METAFUNCTION__0 exists@
+@freeing0 exists@
 type t1, t2, t3;
 identifier f, i, b;
 position p;
@@ -11,19 +11,19 @@ t1 f(..., t2 i, ..., t3 b, ...) {
 }
 
 @script:python@
-f << __METAFUNCTION__0.f;
-p << __METAFUNCTION__0.p;
-t << __METAFUNCTION__0.t2;
-rt << __METAFUNCTION__0.t1;
-b << __METAFUNCTION__0.b;
+f << freeing0.f;
+p << freeing0.p;
+t << freeing0.t2;
+rt << freeing0.t1;
+b << freeing0.b;
 
 @@
-if t == __TYPE__:
-  print(f">{f},__PYTHONTYPE__, " + p[0].file + ":" + p[0].line + ":" + p[0].column + f",{b}")
+if t == __CHECKTYPE__:
+  print(f">{f},__PRINTTYPE__, " + p[0].file + ":" + p[0].line + ":" + p[0].column + f",{b}")
   print(f"Used: __FUNCTION__")
   print(f"Ret. Type: {rt}")
 
-@__METAFUNCTION__1 exists@
+@freeing1 exists@
 type t1, t2, t3;
 identifier f, i, b;
 position p;
@@ -36,19 +36,19 @@ t1 f(..., t3 b, ..., t2 i, ...) {
 }
 
 @script:python@
-f << __METAFUNCTION__1.f;
-p << __METAFUNCTION__1.p;
-t << __METAFUNCTION__1.t2;
-rt << __METAFUNCTION__1.t1;
-b << __METAFUNCTION__1.b;
+f << freeing1.f;
+p << freeing1.p;
+t << freeing1.t2;
+rt << freeing1.t1;
+b << freeing1.b;
 
 @@
-if t == __TYPE__:
-  print(f">{f},__PYTHONTYPE__, " + p[0].file + ":" + p[0].line + ":" + p[0].column + f",{b}")
+if t == __CHECKTYPE__:
+  print(f">{f},__PRINTTYPE__, " + p[0].file + ":" + p[0].line + ":" + p[0].column + f",{b}")
   print(f"Used: __FUNCTION__")
   print(f"Ret. Type: {rt}")
 
-@__METAFUNCTION__2 exists@
+@freeing2 exists@
 type t1, t2, t3;
 identifier f, i, b, a;
 position p;
@@ -61,20 +61,20 @@ t1 f(..., t2 i, ..., t3 b, ...) {
 }
 
 @script:python@
-f << __METAFUNCTION__2.f;
-p << __METAFUNCTION__2.p;
-t << __METAFUNCTION__2.t2;
-rt << __METAFUNCTION__2.t1;
-b << __METAFUNCTION__2.b;
-a << __METAFUNCTION__2.a;
+f << freeing2.f;
+p << freeing2.p;
+t << freeing2.t2;
+rt << freeing2.t1;
+b << freeing2.b;
+a << freeing2.a;
 
 @@
-if t == __TYPE__:
-  print(f">{f},__PYTHONTYPE__, " + p[0].file + ":" + p[0].line + ":" + p[0].column + F",{b}->{a}")
+if t == __CHECKTYPE__:
+  print(f">{f},__PRINTTYPE__, " + p[0].file + ":" + p[0].line + ":" + p[0].column + F",{b}->{a}")
   print(f"Used: __FUNCTION__")
   print(f"Ret. Type: {rt}")
 
-@__METAFUNCTION__3 exists@
+@freeing3 exists@
 type t1, t2, t3;
 identifier f, i, b, a;
 position p;
@@ -87,20 +87,20 @@ t1 f(..., t3 b, ..., t2 i, ...) {
 }
 
 @script:python@
-f << __METAFUNCTION__3.f;
-p << __METAFUNCTION__3.p;
-t << __METAFUNCTION__3.t2;
-rt << __METAFUNCTION__3.t1;
-b << __METAFUNCTION__3.b;
-a << __METAFUNCTION__3.a;
+f << freeing3.f;
+p << freeing3.p;
+t << freeing3.t2;
+rt << freeing3.t1;
+b << freeing3.b;
+a << freeing3.a;
 
 @@
-if t == __TYPE__:
-  print(f">{f},__PYTHONTYPE__, " + p[0].file + ":" + p[0].line + ":" + p[0].column + f",{b}->{a}")
+if t == __CHECKTYPE__:
+  print(f">{f},__PRINTTYPE__, " + p[0].file + ":" + p[0].line + ":" + p[0].column + f",{b}->{a}")
   print(f"Used: __FUNCTION__")
   print(f"Ret. Type: {rt}")
 
-@__METAFUNCTION__4 exists@
+@freeing4 exists@
 type t1, t2, t3;
 identifier f, i, b;
 position p;
@@ -114,19 +114,19 @@ t1 f(..., t2 i, ..., t3 b, ...) {
 }
 
 @script:python@
-f << __METAFUNCTION__4.f;
-p << __METAFUNCTION__4.p;
-t << __METAFUNCTION__4.t2;
-rt << __METAFUNCTION__4.t1;
-b << __METAFUNCTION__4.b;
+f << freeing4.f;
+p << freeing4.p;
+t << freeing4.t2;
+rt << freeing4.t1;
+b << freeing4.b;
 
 @@
-if t == __TYPE__:
-  print(f">{f},__PYTHONTYPE__, " + p[0].file + ":" + p[0].line + ":" + p[0].column + f",{b}")
+if t == __CHECKTYPE__:
+  print(f">{f},__PRINTTYPE__, " + p[0].file + ":" + p[0].line + ":" + p[0].column + f",{b}")
   print(f"Used: __FUNCTION__")
   print(f"Ret. Type: {rt}")
 
-@__METAFUNCTION__7 exists@
+@freeing7 exists@
 type t1, t2, t3;
 identifier f, i, b;
 position p;
@@ -140,19 +140,19 @@ t1 f(..., t3 b, ..., t2 i, ...) {
 }
 
 @script:python@
-f << __METAFUNCTION__7.f;
-p << __METAFUNCTION__7.p;
-t << __METAFUNCTION__7.t2;
-rt << __METAFUNCTION__7.t1;
-b << __METAFUNCTION__7.b;
+f << freeing7.f;
+p << freeing7.p;
+t << freeing7.t2;
+rt << freeing7.t1;
+b << freeing7.b;
 
 @@
-if t == __TYPE__:
-  print(f">{f},__PYTHONTYPE__, " + p[0].file + ":" + p[0].line + ":" + p[0].column + f",{b}")
+if t == __CHECKTYPE__:
+  print(f">{f},__PRINTTYPE__, " + p[0].file + ":" + p[0].line + ":" + p[0].column + f",{b}")
   print(f"Used: __FUNCTION__")
   print(f"Ret. Type: {rt}")
 
-@__METAFUNCTION__8 exists@
+@freeing8 exists@
 type t1, t2, t3;
 identifier f, i, b, a;
 position p;
@@ -166,20 +166,20 @@ t1 f(..., t2 i, ..., t3 b, ...) {
 }
 
 @script:python@
-f << __METAFUNCTION__8.f;
-p << __METAFUNCTION__8.p;
-t << __METAFUNCTION__8.t2;
-rt << __METAFUNCTION__8.t1;
-b << __METAFUNCTION__8.b;
-a << __METAFUNCTION__8.a;
+f << freeing8.f;
+p << freeing8.p;
+t << freeing8.t2;
+rt << freeing8.t1;
+b << freeing8.b;
+a << freeing8.a;
 
 @@
-if t == __TYPE__:
-  print(f">{f},__PYTHONTYPE__, " + p[0].file + ":" + p[0].line + ":" + p[0].column + f",{b}->{a}")
+if t == __CHECKTYPE__:
+  print(f">{f},__PRINTTYPE__, " + p[0].file + ":" + p[0].line + ":" + p[0].column + f",{b}->{a}")
   print(f"Used: __FUNCTION__")
   print(f"Ret. Type: {rt}")
 
-@__METAFUNCTION__9 exists@
+@freeing9 exists@
 type t1, t2, t3;
 identifier f, i, b, a;
 position p;
@@ -193,20 +193,20 @@ t1 f(..., t3 b, ..., t2 i, ...) {
 }
 
 @script:python@
-f << __METAFUNCTION__9.f;
-p << __METAFUNCTION__9.p;
-t << __METAFUNCTION__9.t2;
-rt << __METAFUNCTION__9.t1;
-b << __METAFUNCTION__9.b;
-a << __METAFUNCTION__9.a;
+f << freeing9.f;
+p << freeing9.p;
+t << freeing9.t2;
+rt << freeing9.t1;
+b << freeing9.b;
+a << freeing9.a;
 
 @@
-if t == __TYPE__:
-  print(f">{f},__PYTHONTYPE__, " + p[0].file + ":" + p[0].line + ":" + p[0].column + f",{b}.{a}")
+if t == __CHECKTYPE__:
+  print(f">{f},__PRINTTYPE__, " + p[0].file + ":" + p[0].line + ":" + p[0].column + f",{b}.{a}")
   print(f"Used: __FUNCTION__")
   print(f"Ret. Type: {rt}")
 
-@__METAFUNCTION__10 exists@
+@freeing10 exists@
 type t1, t2;
 identifier f, i, a;
 position p;
@@ -219,20 +219,20 @@ t1 f(..., t2 i, ...) {
 }
 
 @script:python@
-f << __METAFUNCTION__10.f;
-p << __METAFUNCTION__10.p;
-t << __METAFUNCTION__10.t2;
-rt << __METAFUNCTION__10.t1;
-a << __METAFUNCTION__10.a;
-i << __METAFUNCTION__10.i;
+f << freeing10.f;
+p << freeing10.p;
+t << freeing10.t2;
+rt << freeing10.t1;
+a << freeing10.a;
+i << freeing10.i;
 
 @@
-if t == __TYPE__:
-  print(f">{f},__PYTHONTYPE__, " + p[0].file + ":" + p[0].line + ":" + p[0].column + f",{i}->{a}")
+if t == __CHECKTYPE__:
+  print(f">{f},__PRINTTYPE__, " + p[0].file + ":" + p[0].line + ":" + p[0].column + f",{i}->{a}")
   print(f"Used: __FUNCTION__")
   print(f"Ret. Type: {rt}")
 
-@__METAFUNCTION__11 exists@
+@freeing11 exists@
 type t1, t2;
 identifier f, i, a;
 position p;
@@ -246,16 +246,16 @@ t1 f(..., t2 i, ...) {
 }
 
 @script:python@
-f << __METAFUNCTION__11.f;
-p << __METAFUNCTION__11.p;
-t << __METAFUNCTION__11.t2;
-rt << __METAFUNCTION__11.t1;
-a << __METAFUNCTION__11.a;
-i << __METAFUNCTION__11.i;
+f << freeing11.f;
+p << freeing11.p;
+t << freeing11.t2;
+rt << freeing11.t1;
+a << freeing11.a;
+i << freeing11.i;
 
 @@
-if t == __TYPE__:
-  print(f">{f},__PYTHONTYPE__, " + p[0].file + ":" + p[0].line + ":" + p[0].column + f",{i}->{a}")
+if t == __CHECKTYPE__:
+  print(f">{f},__PRINTTYPE__, " + p[0].file + ":" + p[0].line + ":" + p[0].column + f",{i}->{a}")
   print(f"Used: __FUNCTION__")
   print(f"Ret. Type: {rt}")
 

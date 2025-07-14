@@ -1,4 +1,4 @@
-@__METAFUNCTION__ exists@
+@freeing exists@
 type t1, t2;
 identifier f, i;
 position p;
@@ -11,10 +11,10 @@ t1 f(t2 i) {
 }
 
 @script:python@
-f << __METAFUNCTION__.f;
-p << __METAFUNCTION__.p;
-t << __METAFUNCTION__.t2;
-rt << __METAFUNCTION__.t1;
+f << freeing.f;
+p << freeing.p;
+t << freeing.t2;
+rt << freeing.t1;
 
 @@
 print(f">{f},{t}, " + p[0].file + ":" + p[0].line + ":" + p[0].column)

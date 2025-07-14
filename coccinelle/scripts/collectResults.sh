@@ -40,8 +40,13 @@ collect(){
    if [[ -d $RESULTS/$1samereturn ]]; then
       rm -rf $RESULTS/$1samereturn
    fi
+
+   if [[ -d $RESULTS/$1boolreturn ]]; then
+      rm -rf $RESULTS/$1boolreturn
+   fi
    mkdir $RESULTS/$1arbitrary
    mkdir $RESULTS/$1samereturn
+   mkdir $RESULTS/$1boolreturn
 
    #DEFINE FILE STATS WILL BE PRINTED TO
    STATS_FILE=$COLLECTED/stats_$1.out
@@ -52,7 +57,6 @@ collect(){
    grep "^>" $RESULTS/$1strict/results.out | cut -d ':' -f 1 | sort | uniq > $RESULTS/$1strict/functionnamesonly.out
    grep "^>" $RESULTS/$1signature/results.out | cut -d ':' -f 1 | sort | uniq > $RESULTS/$1signature/functionnamesonly.out
    grep "^>" $RESULTS/$1dependent/results.out | cut -d ':' -f 1 | sort | uniq > $RESULTS/$1dependent/functionnamesonly.out
-   grep "^>" $RESULTS/$1ereport/results.out | cut -d ':' -f 1 | sort | uniq > $RESULTS/$1ereport/functionnamesonly.out
    grep "^>" $RESULTS/$1double/results.out | cut -d ':' -f 1 | sort | uniq > $RESULTS/$1double/functionnamesonly.out
 
    #SANITIZE REALLOC RESULTS -> REMOVES ANY SIZE, int, ETC TYPES...
@@ -62,7 +66,6 @@ collect(){
       reduceRealloc strict
       reduceRealloc dependent
       reduceRealloc signature
-      reduceRealloc ereport
       reduceRealloc double
    fi
    
@@ -75,8 +78,6 @@ collect(){
    mv tmp $RESULTS/$1signature/functionnamesonlywithoutstatic.out
    comm -23 $RESULTS/$1dependent/functionnamesonly.out $RESULTS/$1static/functionnamesonly.out > tmp
    mv tmp $RESULTS/$1dependent/functionnamesonlywithoutstatic.out
-   comm -23 $RESULTS/$1ereport/functionnamesonly.out $RESULTS/$1static/functionnamesonly.out > tmp
-   mv tmp $RESULTS/$1ereport/functionnamesonlywithoutstatic.out
    comm -23 $RESULTS/$1double/functionnamesonly.out $RESULTS/$1static/functionnamesonly.out > tmp
    mv tmp $RESULTS/$1double/functionnamesonlywithoutstatic.out
 
@@ -93,30 +94,48 @@ collect(){
 
    while [[ $COUNTER -lt $OVERALL ]]; do
       COUNTER=$(( COUNTER + 1 ))
-      if [[ $(sed -n "${COUNTER}p" allfuncs.tmp | cut -d ',' -f 2) == $(sed -n "${COUNTER}p" alltypes.tmp) ]]; then
-         sed -n "${COUNTER}p" allfuncs.tmp >> samereturn.tmp
+      type=$(sed -n "${COUNTER}p" alltypes.tmp)
+      if [[ "$type" == $(sed -n "${COUNTER}p" allfuncs.tmp | cut -d ',' -f 2) ]]; then
+          sed -n "${COUNTER}p" allfuncs.tmp >> samereturn.tmp
+      else if [[ "$type" == "bool" ]]; then
+              if [[ -f exceptions/$1boolreturn.exclude ]]; then
+                  #REMOVE EXECPTIONS (ONLY INCLUDE FILE NAME AND ESCAPE SPECIAL CHARACTERS)
+                  if grep -q "$(sed -n "${COUNTER}p" allfuncs.tmp | cut -d ':' -f 1 | sed 's/[[\.*^$()+?{|]/\\&/g')" exceptions/$1boolreturn.exclude; then
+                      continue
+                  fi
+              fi
+              sed -n "${COUNTER}p" allfuncs.tmp >> boolreturn.tmp
+          fi
       fi
+
    done
 
    #ADD MANUALLY ADDED
-   cat exceptions/$1samereturn.add >> samereturn.tmp
+   if [[ -f exceptions/$1samereturn.add ]]; then
+       cat exceptions/$1samereturn.add >> samereturn.tmp
+   fi
+   if [[ -f exceptions/$1boolreturn.add ]]; then
+       cat exceptions/$1boolreturn.add >> boolreturn.tmp
+   fi
+
    #GET RID OF DUPLICATES    
    cat samereturn.tmp | cut -d ':' -f 1 | sort | uniq > $RESULTS/$1samereturn/functionnamesonly.out
+   cat boolreturn.tmp | cut -d ':' -f 1 | sort | uniq > $RESULTS/$1boolreturn/functionnamesonly.out
 
    #SANITIZE REALLOC RESULTS
    if [[ "$1" == "realloc" ]]; then
       reduceRealloc samereturn
+      reduceRealloc boolreturn
    fi
 
    #REMOVE STATIC
    comm -23 $RESULTS/$1samereturn/functionnamesonly.out $RESULTS/$1static/functionnamesonly.out > tmp
    mv tmp $RESULTS/$1samereturn/functionnamesonlywithoutstatic.out
+   comm -23 $RESULTS/$1boolreturn/functionnamesonly.out $RESULTS/$1static/functionnamesonly.out > tmp
+   mv tmp $RESULTS/$1boolreturn/functionnamesonlywithoutstatic.out
 
    #PRINT FUNCTIONS WITH INFORMATION
    grep -A $PRINT_LINES -F -f $RESULTS/$1samereturn/functionnamesonlywithoutstatic.out $RESULTS/$1/results.out > $COLLECTED/${REASSIGN}_$1.out
-
-   
-
 
    #REMOVE OVERLAPPING FUNCTIONS
    #  ->REMOVE SAME RETURN FROM STRICT
@@ -183,6 +202,8 @@ collect(){
    grep "^>" $RESULTS/$1/functionnamesonlywithoutstatic.out | sort | uniq | wc -l >> $STATS_FILE
    echo "SAME RETURN:" >> $STATS_FILE
    grep "^>" $RESULTS/$1samereturn/functionnamesonlywithoutstatic.out | cut -d ':' -f 1 | wc -l >> $STATS_FILE
+   echo "BOOL RETURN:" >> $STATS_FILE
+   grep "^>" $RESULTS/$1boolreturn/functionnamesonlywithoutstatic.out | cut -d ':' -f 1 | wc -l >> $STATS_FILE
    echo "STRICT:" >> $STATS_FILE
    grep "^>" $COLLECTED/${STRICT}_$1.out | cut -d ':' -f 1 | sort | uniq | wc -l >> $STATS_FILE
    echo "DEPENDENT:" >> $STATS_FILE
