@@ -12,8 +12,8 @@ if [[ -f $LATEX_FILE_NUMBERS ]]; then
 fi
 
 echo "\begin{table}[H]
-   \begin{center}
-   \begin{tabularx}{0.6\linewidth}{l|c|c}
+   \centering
+   \begin{tabularx}{0.7\linewidth}{l|c|c}
 
       Category & Free & Realloc \\\\
       \hline
@@ -81,7 +81,6 @@ echo "\\newcommand{\\freebool}{$FREE}" >> $LATEX_FILE_NUMBERS
 echo "\\newcommand{\\reallocbool}{$REALLOC}" >> $LATEX_FILE_NUMBERS
 
 echo "   \end{tabularx}
-\end{center}
    \caption{Count of Categories by Function.}
    \label{tab:categories:overview}
 \end{table}
