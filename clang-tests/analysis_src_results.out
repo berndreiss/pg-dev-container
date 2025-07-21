@@ -1,0 +1,219 @@
+PostgresChecker Static Analysis Results
+=============================================================
+Directory: /usr/local/src/postgresql/src
+Path: /usr/local/src/postgresql
+Started: Mon Jul 21 12:14:33 PM UTC 2025
+Clang version: Debian clang version 19.1.4 (1~deb12u1)
+
+========================================
+File: /usr/local/src/postgresql/src/backend/utils/misc/guc.c
+Time: Mon Jul 21 12:18:14 PM UTC 2025
+Status: ISSUES FOUND
+Errors: 0, Warnings: 3
+========================================
+/usr/local/src/postgresql/src/backend/utils/misc/guc.c:700:10: warning: Attempt to use released memory: ptr [postgres.PostgresChecker]
+  700 |                 Assert(GetMemoryChunkContext(ptr) == GUCMemoryContext);
+      |                        ^~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/include/c.h:875:9: note: expanded from macro 'Assert'
+  875 |                 if (!(condition)) \
+      |                       ^~~~~~~~~
+/usr/local/src/postgresql/src/backend/utils/misc/guc.c:701:3: note: Freeing function: pfree (ptr)
+  701 |                 pfree(ptr);
+      |                 ^
+/usr/local/src/postgresql/src/backend/utils/misc/guc.c:701:3: warning: Attempt to free released memory: ptr [postgres.PostgresChecker]
+  701 |                 pfree(ptr);
+      |                 ^~~~~~~~~~
+/usr/local/src/postgresql/src/backend/utils/misc/guc.c:701:3: note: Freeing function: pfree (ptr)
+/usr/local/src/postgresql/src/backend/utils/misc/guc.c:1729:6: warning: Attempt to use released memory [postgres.PostgresChecker]
+ 1729 |                                         elog(FATAL, "failed to initialize %s to \"%s\"",
+      |                                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 1730 |                                                  conf->gen.name, newval ? newval : "");
+      |                                                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/include/utils/elog.h:240:18: note: expanded from macro 'elog'
+  240 |         ereport(elevel, errmsg_internal(__VA_ARGS__))
+      |         ~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/include/utils/elog.h:164:37: note: expanded from macro 'ereport'
+  164 |         ereport_domain(elevel, TEXTDOMAIN, __VA_ARGS__)
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~
+/usr/local/src/postgresql/src/include/utils/elog.h:147:4: note: expanded from macro 'ereport_domain'
+  147 |                         __VA_ARGS__, errfinish(__FILE__, __LINE__, __func__); \
+      |                         ^~~~~~~~~~~
+/usr/local/src/postgresql/src/backend/utils/misc/guc.c:701:3: note: Freeing function: pfree (ptr)
+  701 |                 pfree(ptr);
+      |                 ^
+3 warnings generated.
+
+========================================
+File: /usr/local/src/postgresql/src/backend/commands/vacuumparallel.c
+Time: Mon Jul 21 12:19:38 PM UTC 2025
+Status: ISSUES FOUND
+Errors: 0, Warnings: 2
+========================================
+/usr/local/src/postgresql/src/backend/commands/vacuumparallel.c:488:54: warning: Attempt to use released memory: dead_items [postgres.PostgresChecker]
+  488 |         pvs->shared->dead_items_dsa_handle = dsa_get_handle(TidStoreGetDSA(dead_items));
+      |                                                             ^~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/backend/commands/vacuumparallel.c:483:2: note: Freeing function: TidStoreDestroy (dead_items)
+  483 |         TidStoreDestroy(dead_items);
+      |         ^
+/usr/local/src/postgresql/src/backend/commands/vacuumparallel.c:489:35: warning: Attempt to use released memory: dead_items [postgres.PostgresChecker]
+  489 |         pvs->shared->dead_items_handle = TidStoreGetHandle(dead_items);
+      |                                          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/backend/commands/vacuumparallel.c:483:2: note: Freeing function: TidStoreDestroy (dead_items)
+  483 |         TidStoreDestroy(dead_items);
+      |         ^
+2 warnings generated.
+
+========================================
+File: /usr/local/src/postgresql/src/backend/catalog/objectaddress.c
+Time: Mon Jul 21 12:21:07 PM UTC 2025
+Status: ISSUES FOUND
+Errors: 0, Warnings: 4
+========================================
+/usr/local/src/postgresql/src/backend/catalog/objectaddress.c:3942:5: warning: Attempt to use released memory: pubname [postgres.PostgresChecker]
+ 3942 |                                 appendStringInfo(&buffer, _("publication of schema %s in publication %s"),
+      |                                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 3943 |                                                                  nspname, pubname);
+      |                                                                  ~~~~~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/backend/catalog/objectaddress.c:2859:3: note: Freeing function: pfree
+ 2859 |                 pfree(*pubname);
+      |                 ^
+/usr/local/src/postgresql/src/backend/catalog/objectaddress.c:3944:5: warning: Attempt to free released memory: pubname [postgres.PostgresChecker]
+ 3944 |                                 pfree(pubname);
+      |                                 ^~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/backend/catalog/objectaddress.c:2859:3: note: Freeing function: pfree
+ 2859 |                 pfree(*pubname);
+      |                 ^
+/usr/local/src/postgresql/src/backend/catalog/objectaddress.c:5792:5: warning: Attempt to use released memory: pubname [postgres.PostgresChecker]
+ 5792 |                                 appendStringInfo(&buffer, "%s in publication %s",
+      |                                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 5793 |                                                                  nspname, pubname);
+      |                                                                  ~~~~~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/backend/catalog/objectaddress.c:2859:3: note: Freeing function: pfree
+ 2859 |                 pfree(*pubname);
+      |                 ^
+/usr/local/src/postgresql/src/backend/catalog/objectaddress.c:5798:6: warning: Attempt to free released memory: pubname [postgres.PostgresChecker]
+ 5798 |                                         pfree(pubname);
+      |                                         ^~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/backend/catalog/objectaddress.c:2859:3: note: Freeing function: pfree
+ 2859 |                 pfree(*pubname);
+      |                 ^
+4 warnings generated.
+
+========================================
+File: /usr/local/src/postgresql/src/backend/catalog/index.c
+Time: Mon Jul 21 12:21:37 PM UTC 2025
+Status: ISSUES FOUND
+Errors: 0, Warnings: 1
+========================================
+/usr/local/src/postgresql/src/backend/catalog/index.c:549:2: warning: Attempt to free potentially released memory: indstate [postgres.PostgresChecker]
+  549 |         CatalogCloseIndexes(indstate);
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/backend/catalog/index.c:547:2: note: Freeing function: InsertPgAttributeTuples (indstate)
+  547 |         InsertPgAttributeTuples(pg_attribute, indexTupDesc, InvalidOid, attrs_extra, indstate);
+      |         ^
+1 warning generated.
+
+========================================
+File: /usr/local/src/postgresql/src/backend/optimizer/util/inherit.c
+Time: Mon Jul 21 12:22:03 PM UTC 2025
+Status: ISSUES FOUND
+Errors: 0, Warnings: 1
+========================================
+/usr/local/src/postgresql/src/backend/optimizer/util/inherit.c:381:14: warning: Attempt to use potentially released memory: live_parts [postgres.PostgresChecker]
+  381 |         while ((i = bms_next_member(live_parts, i)) >= 0)
+      |                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/backend/optimizer/util/inherit.c:397:26: note: Freeing function: bms_del_member
+  397 |                         relinfo->live_parts = bms_del_member(relinfo->live_parts, i);
+      |                                               ^
+1 warning generated.
+
+========================================
+File: /usr/local/src/postgresql/src/backend/optimizer/path/indxpath.c
+Time: Mon Jul 21 12:22:32 PM UTC 2025
+Status: ISSUES FOUND
+Errors: 0, Warnings: 3
+========================================
+/usr/local/src/postgresql/src/backend/optimizer/path/indxpath.c:748:5: warning: Attempt to use potentially released memory [postgres.PostgresChecker]
+  748 |                         (ipath->path.pathkeys == NIL ||
+      |                          ^~~~~~~~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/backend/optimizer/path/indxpath.c:745:4: note: Freeing function: add_path (ipath)
+  745 |                         add_path(rel, (Path *) ipath);
+      |                         ^
+/usr/local/src/postgresql/src/backend/optimizer/path/indxpath.c:749:5: warning: Attempt to use potentially released memory [postgres.PostgresChecker]
+  749 |                          ipath->indexselectivity < 1.0))
+      |                          ^~~~~~~~~~~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/backend/optimizer/path/indxpath.c:745:4: note: Freeing function: add_path (ipath)
+  745 |                         add_path(rel, (Path *) ipath);
+      |                         ^
+/usr/local/src/postgresql/src/backend/optimizer/path/indxpath.c:750:21: warning: Attempt to use potentially released memory: ipath [postgres.PostgresChecker]
+  750 |                         *bitindexpaths = lappend(*bitindexpaths, ipath);
+      |                                          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/backend/optimizer/path/indxpath.c:745:4: note: Freeing function: add_path (ipath)
+  745 |                         add_path(rel, (Path *) ipath);
+      |                         ^
+3 warnings generated.
+
+========================================
+File: /usr/local/src/postgresql/src/backend/executor/execUtils.c
+Time: Mon Jul 21 12:24:06 PM UTC 2025
+Status: ISSUES FOUND
+Errors: 0, Warnings: 3
+========================================
+/usr/local/src/postgresql/src/backend/executor/execUtils.c:421:22: warning: Attempt to use released memory [postgres.PostgresChecker]
+  421 |         MemoryContextDelete(econtext->ecxt_per_tuple_memory);
+      |                             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/backend/executor/execUtils.c:428:2: note: Freeing function: pfree (econtext)
+  428 |         pfree(econtext);
+      |         ^
+/usr/local/src/postgresql/src/backend/executor/execUtils.c:423:11: warning: Attempt to use released memory [postgres.PostgresChecker]
+  423 |         estate = econtext->ecxt_estate;
+      |                  ^~~~~~~~~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/backend/executor/execUtils.c:428:2: note: Freeing function: pfree (econtext)
+  428 |         pfree(econtext);
+      |         ^
+/usr/local/src/postgresql/src/backend/executor/execUtils.c:428:2: warning: Attempt to free released memory: econtext [postgres.PostgresChecker]
+  428 |         pfree(econtext);
+      |         ^~~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/backend/executor/execUtils.c:428:2: note: Freeing function: pfree (econtext)
+3 warnings generated.
+
+========================================
+File: /usr/local/src/postgresql/src/backend/storage/large_object/inv_api.c
+Time: Mon Jul 21 12:24:42 PM UTC 2025
+Status: ISSUES FOUND
+Errors: 0, Warnings: 1
+========================================
+/usr/local/src/postgresql/src/backend/storage/large_object/inv_api.c:683:5: warning: Attempt to free released memory: datafield [postgres.PostgresChecker]
+  683 |                                 pfree(datafield);
+      |                                 ^~~~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/backend/storage/large_object/inv_api.c:683:5: note: Freeing function: pfree (datafield)
+1 warning generated.
+
+========================================
+File: /usr/local/src/postgresql/src/backend/access/nbtree/nbtree.c
+Time: Mon Jul 21 12:26:18 PM UTC 2025
+Status: ISSUES FOUND
+Errors: 0, Warnings: 1
+========================================
+/usr/local/src/postgresql/src/backend/access/nbtree/nbtree.c:197:2: warning: Attempt to free potentially released memory: itup [postgres.PostgresChecker]
+  197 |         pfree(itup);
+      |         ^~~~~~~~~~~
+/usr/local/src/postgresql/src/backend/access/nbtree/nbtree.c:195:11: note: Freeing function: _bt_doinsert (itup)
+  195 |         result = _bt_doinsert(rel, itup, checkUnique, indexUnchanged, heapRel);
+      |                  ^
+1 warning generated.
+
+========================================
+File: /usr/local/src/postgresql/src/common/parse_manifest.c
+Time: Mon Jul 21 12:28:01 PM UTC 2025
+Status: ISSUES FOUND
+Errors: 0, Warnings: 1
+========================================
+/usr/local/src/postgresql/src/common/parse_manifest.c:174:2: warning: Attempt to free potentially released memory: incstate [postgres.PostgresChecker]
+  174 |         pfree(incstate);
+      |         ^~~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/common/parse_manifest.c:172:2: note: Freeing function: freeJsonLexContext
+  172 |         freeJsonLexContext(&(incstate->lex));
+      |         ^
+1 warning generated.
+

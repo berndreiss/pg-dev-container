@@ -2,9 +2,11 @@
 #include <stdlib.h>
 #include <stdbool.h>
 #include <stdio.h>
-#include "test.h"
+//#include "test.h"
 //#include "otherfile.c"
-//#include "PostgresTypes.h"
+//#include "PostgresTypes.h"// stubs.c - dummy implementations for testing
+#include <stdlib.h>
+#include <stdio.h>
 
 typedef struct TupleDescData{
   int tdrefcount;
@@ -17,7 +19,7 @@ void use_tupledesc(TupleDesc tupdesc);
 typedef struct{}Path;
 typedef struct{}RelOptInfo;
 
-void use_path(Path *path){}
+void use_path(Path *path);
 void add_partial_path(RelOptInfo *parent_rel, Path *new_path);
 void pfree(void *);
 
@@ -39,26 +41,87 @@ void ExecForceStoreMinimalTuple(MinimalTuple mtup, TupleTableSlot *slot, bool sh
 void ExecForceStoreHeapTuple(HeapTuple mtup, TupleTableSlot *slot, bool shouldFree);
 void useTuple(HeapTuple tuple);
 
+typedef struct {}PGresult;
+typedef struct {}PGconn;
+
+void pgfdw_report_error(int elevel, PGresult *res, PGconn *conn, bool clear, const char *sql);
+
+static const PGresult OOM_result = {};
+
+struct arguments {};
+void dump_variables(struct arguments *list, int mode);
+void use_arguments(struct arguments *list);
+
+void* palloc(size_t size);
+
+void* getResult(void);
+
+void PQclear(void* result);
+
+void usePGresult(void* result);
+
+void testFree(RelOptInfo *parent_rel, Path *path){
+  add_partial_path(parent_rel, path);
+}
+
 int main(int argnum, char **args){
+  struct arguments *list1 = palloc(sizeof(struct arguments));
+  dump_variables(list1, 0);
+  use_arguments(list1);
+  //dump_variables(list1, 1); 
+  //use_arguments(list1); 
+  //dump_variables(list1, argnum); 
+  //use_arguments(list1);
   //RelOptInfo *parent=malloc(sizeof(RelOptInfo));
   //Path *new_path = malloc(sizeof(Path));
   //add_partial_path(parent, new_path);
+  //add_partial_path(parent, new_path);
+    int *array = palloc(sizeof(int)*2);
+  int *p = &array[0];
+  pfree(p); // expected-note{{Freeing function: pfree (p)}}
+  pfree(&array[0]); // ex
   //use_path(new_path);
    //TupleDesc tupdesc = palloc(sizeof(TupleDescData));
   //tupdesc->tdrefcount = 2;
   //DecrTupleDescRefCount(tupdesc);
   //use_tupledesc(tupdesc);
   //tupdesc->tdrefcount = 1;
-  //DecrTupleDescRefCount(tupdesc); // expected-note{{Freeing function: DecrTupleDescRefCount}}
-  //use_tupledesc(tupdesc); // expected-warning{{Attempt to use re
+  //DecrTupleDescRefCount(tupdesc); 
+  //use_tupledesc(tupdesc); 
   //
-    HeapTuple tuple = palloc(sizeof(HeapTuple));
-  TupleTableSlot *slot = palloc(sizeof(TupleTableSlot));
-  ExecForceStoreHeapTuple(tuple, slot, false);
-  useTuple(tuple);
-  ExecForceStoreHeapTuple(tuple, slot, argnum); // expected-note{{Freeing function: ExecForceStoreHeapTuple}}
-  useTuple(tuple); // expected-warning{{Attempt to use potentially released memory}}
+    //HeapTuple tuple = palloc(sizeof(HeapTuple));
+  //TupleTableSlot *slot = palloc(sizeof(TupleTableSlot));
+  //ExecForceStoreHeapTuple(tuple, slot, true);
+  //useTuple(tuple);
+  //ExecForceStoreHeapTuple(tuple, slot, argnum); 
+  //useTuple(tuple); // expected-warning{{Attempt to use potentially released memory}}
+    //PGresult *res = palloc(sizeof(PGresult));
+  //PGconn *conn = palloc(sizeof(PGconn));
+  //pgfdw_report_error(0, res, conn, true, "PG is great");
+  //pfree(res);
+  //usePGresult(res);
+  //usePGresult(res); 
+  //pgfdw_report_error(0, res, conn, true, "PG is great"); 
+  //usePGresult(res);
 
+   //Bitmapset *a = palloc(sizeof(Bitmapset));
+   //Bitmapset *b = palloc(sizeof(Bitmapset));
+  //Bitmapset *b = NULL;
+  //bms_int_members(a, b); 
+  //use_bms(a); 
+  //
+  //res = &OOM_result;
+  //PQclear(res);
+  //usePGresult(res);
+
+  //res = getResult();
+  //PQclear(res);
+  //usePGresult(res); 
+
+  //a = palloc(sizeof(Bitmapset));
+  //b = palloc(sizeof(Bitmapset));
+  //bms_int_members(a, b);
+  //use_bms(a);
 
 /*
 int natts = 3; // Number of attributes

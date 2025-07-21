@@ -1,0 +1,7 @@
+PostgresChecker Static Analysis Results
+=============================================================
+Directory: /workspaces/pg-dev-container/clang-tests
+Path: /usr/local/src/postgresql
+Started: Mon Jul 21 11:54:55 AM UTC 2025
+Clang version: Debian clang version 19.1.4 (1~deb12u1)
+

@@ -1,0 +1,7 @@
+PostgresChecker Static Analysis Results
+=============================================================
+Directory: /usr/local/src/postgresql/contrib
+Path: /usr/local/src/postgresql
+Started: Mon Jul 21 12:12:57 PM UTC 2025
+Clang version: Debian clang version 19.1.4 (1~deb12u1)
+

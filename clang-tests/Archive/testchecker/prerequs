@@ -1,3 +1,0 @@
-sudo pacman -S llvm clang lldb
-sudo pacman -S llvm-libs clang-libs
-

@@ -1,6 +1,5 @@
 #!/bin/bash
 
-ITERATION=0
 FUNCTION=$1
 CATEGORY=$2
 RESULTS_FILE_NAME=${CATEGORY}_$FUNCTION.position
@@ -10,10 +9,13 @@ RESULTS_FILE=$RESULTS_PATH/$RESULTS_FILE_NAME
 TMP_PATH=tmp
 MANUALLY_EXCLUDED=exceptions/$CATEGORY${FUNCTION}position.exclude
 
-if [[ -f $RESULTS_PATH ]]; then
-  rm -r $RESULTS_PATH
+if [[ ! -d "$RESULTS_PATH" ]]; then
+  mkdir "$RESULTS_PATH"
 fi
-mkdir $RESULTS_PATH
+
+if [[ -f "$RESULTS_FILE" ]]; then
+  rm "$RESULTS_FILE"
+fi
 
 mkdir -p $TMP_PATH
 while read -r line; do
@@ -31,13 +33,12 @@ while read -r line; do
     
     cat prototypes/protoPosition.cocci \
       | sed -e "s/__FUNCTION__/$func/g" \
-            -e "s/__TYPE__/$ptype/g" \
+            -e "s/__CHECKTYPE__/$ptype/g" \
             > $TMP_PATH/tmp.cocci
-    spatch --sp-file $TMP_PATH/tmp.cocci "$file" >> $RESULTS_FILE
-
+    spatch --sp-file $TMP_PATH/tmp.cocci "$file" >> "$RESULTS_FILE"
 
 done < $RESULTS/collected/${CATEGORY}_${FUNCTION}_functionsonly.out
 
-grep -vFf exceptions/$CATEGORY$FUNCTION.exclude $RESULTS_FILE > temp && mv temp $RESULTS_FILE
+grep -vFf exceptions/$CATEGORY$FUNCTION.exclude "$RESULTS_FILE" > temp && mv temp "$RESULTS_FILE"
 
 rm -r tmp
