@@ -5,7 +5,7 @@
 #  
 #  $1: THE CODE BASE
 #  $2: THE INTIAL FUNCTION TO BE EXAMINED
-#  $3: THE PROTOTYPE TO BE USED
+#  $3: THE TEMPLATE TO BE USED
 #
 #RESULTS WILL BE SAVED IN THE DEDICATED DIRECTORY DEFINED BELOW
 #FOR EACH ITERATION A SEPARATE SUB DIRECTORY IS CREATED
@@ -20,16 +20,16 @@ fi
 ITERATION=0
 CODE_BASE=$1
 FUNCTION=$2
-PROTOTYPE=$3
+TEMPLATE=$3
 RESULTS_FILE_NAME=results.out
 IT_PREFIX=iteration_
 RESULTS=../results
-RESULTS_PATH=$RESULTS/$FUNCTION$PROTOTYPE
+RESULTS_PATH=$RESULTS/$FUNCTION$TEMPLATE
 RESULTS_FILE=$RESULTS_PATH/$RESULTS_FILE_NAME
 TMP_PATH=tmp
 PRINTED_LINES=2
-MANUALLY_ADDED=exceptions/$FUNCTION$PROTOTYPE.add
-MANUALLY_EXCLUDED=exceptions/$FUNCTION$PROTOTYPE.exclude
+MANUALLY_ADDED=exceptions/$FUNCTION$TEMPLATE.add
+MANUALLY_EXCLUDED=exceptions/$FUNCTION$TEMPLATE.exclude
 MANUALLY_EXCLUDED_ALL=exceptions/${FUNCTION}all.exclude
 SCRIPTS_CREATED=0
 
@@ -61,10 +61,10 @@ createScripts(){
    ftype=$(echo "$arg" | cut -d',' -f2)
 
    #PREVENT TRYING TO ACCESS FIELDS OF char* AND char**
-   if [[ "$ftype" == "char*" && "$PROTOTYPE" == "dependent" ]]; then
+   if [[ "$ftype" == "char*" && "$TEMPLATE" == "dependent" ]]; then
       continue;
    fi
-   if [[ "$ftype" == "char**" && "$PROTOTYPE" == "dependent" ]]; then
+   if [[ "$ftype" == "char**" && "$TEMPLATE" == "dependent" ]]; then
       continue;
    fi
 
@@ -106,15 +106,15 @@ createScripts(){
       ftype="\"$ftype\""
    fi
 
-   #GET THE PROTOFILE -> THE IF CONDITION CHECKS, WHETHER
-   #THERE IS A FUNCTION SPECIFIC PROTOTYPE (I.E. FOR SIGNATURE)
-   PROTO_FILE=prototypes/proto$PROTOTYPE.cocci
-   if [ -f prototypes/proto$FUNCTION$PROTOTYPE.cocci ]; then
-      PROTO_FILE=prototypes/proto$FUNCTION$PROTOTYPE.cocci
+   #GET THE TEMPLATE -> THE IF CONDITION CHECKS, WHETHER
+   #THERE IS A FUNCTION SPECIFIC TEMPLATE (I.E. FOR SIGNATURE)
+   TEMPLATE_FILE=templates/template$TEMPLATE.cocci
+   if [ -f templates/template$FUNCTION$TEMPLATE.cocci ]; then
+      TEMPLATE_FILE=templates/template$FUNCTION$TEMPLATE.cocci
    fi
 
    #REPLACE THE PLACEHOLDERS WITH FUNCTION/TYPE NAMES
-   cat $PROTO_FILE \
+   cat $TEMPLATE_FILE \
       | sed -e "s/__FUNCTION__/$fname/g" \
             -e "s/__CHECKTYPE__/$ftype/g" \
             -e "s/__PRINTTYPE__/$pythonType/g" \
@@ -133,7 +133,7 @@ fi
 #WE KEEP TRACK OF FUNCTIONS FOUND IN THE PREVIOUS ITERATION IN
 #THE FILE 'functionsLastIteration'
 #PASS INITIAL FUNCTION NAMES FOR 'ITERATION -1'
-if [[ "$PROTOTYPE" == "dependent" || "$PROTOTYPE" == "ereport" || "$PROTOTYPE" == "double" || "$PROTOTYPE" == "static" ]]; then
+if [[ "$TEMPLATE" == "dependent" || "$TEMPLATE" == "ereport" || "$TEMPLATE" == "double" || "$TEMPLATE" == "static" ]]; then
   grep "^>" $RESULTS/$FUNCTION/$RESULTS_FILE_NAME | sort | uniq >> $TMP_PATH/functionsLastIteration
 fi
 
@@ -141,7 +141,7 @@ echo ">$FUNCTION,void *" >> $TMP_PATH/functionsLastIteration
 
 #RETRIEVE FUNCTIONS TO MANUALLY ADD IF FILE EXISTS
 if [ -f $MANUALLY_ADDED ]; then
-   if [[ "$PROTOTYPE" == "dependent" ]]; then 
+   if [[ "$TEMPLATE" == "dependent" ]]; then 
       cat $MANUALLY_ADDED | cut -d ',' -f 1,2,3 | sort | uniq > added.tmp
       grep -A $PRINTED_LINES -F -f added.tmp $RESULTS/$FUNCTION/$RESULTS_FILE_NAME >> $RESULTS_FILE
       awk -F ',' 'NR==FNR {key = $1 FS $2; map[key] = $0; next} {print (map[$0] ? map[$0] : $0)}' $MANUALLY_ADDED $RESULTS_FILE > out.tmp
@@ -159,7 +159,7 @@ START_OVERALL=$(date +%s)
 while [ -f $TMP_PATH/functionsLastIteration ]; do
    
    #WE'VE ALREADY LOOKED AT ALL FUNCTIONS THERE ARE
-   if [[ "$PROTOTYPE" == "dependent" || "$PROTOTYPE" == "static" ]]; then
+   if [[ "$TEMPLATE" == "dependent" || "$TEMPLATE" == "static" ]]; then
      if [ $ITERATION -gt 0 ]; then
        break 
      fi
@@ -187,7 +187,7 @@ while [ -f $TMP_PATH/functionsLastIteration ]; do
    #RUN SCRIPTS
    for i in $(seq 0 $((SCRIPTS_CREATED-1)));
    do
-     echo "### Function $((i+1)) of $SCRIPTS_CREATED ($FUNCTION $PROTOTYPE iteration $ITERATION) ###" 
+     echo "### Function $((i+1)) of $SCRIPTS_CREATED ($FUNCTION $TEMPLATE iteration $ITERATION) ###" 
       spatch --sp-file $TMP_PATH/$ITERATION$i.cocci $CODE_BASE >> $IT_RESULTS_FILE
    done
 
@@ -202,7 +202,7 @@ while [ -f $TMP_PATH/functionsLastIteration ]; do
           continue;
         fi
       fi
-      #EXCLUDE FUNCTIONS TO BE EXCLUDED FOR ALL PROTOTYPES
+      #EXCLUDE FUNCTIONS TO BE EXCLUDED FOR ALL TEMPLATES
       if [ -f $MANUALLY_EXCLUDED_ALL ]; then
         if grep -Fxq "${line_file_only}" "$MANUALLY_EXCLUDED_ALL"; then
           continue;

@@ -66,6 +66,7 @@ build_include_paths() {
     
     # Core PostgreSQL includes
     includes="$includes -I$PG_PATH/src/include"
+    #pg_config --includedir / pg_config -- includedir-server
     
     # Extension-specific includes 
     if [ -d "$ANALYSIS_DIR/src/include" ]; then

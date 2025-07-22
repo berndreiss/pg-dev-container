@@ -1,9 +1,0 @@
->repalloc,void *, /usr/local/src/postgresql/src/common/fe_memutils.c:174:8
-Used: pg_realloc
-Ret. Type: void *
->repalloc,Size, /usr/local/src/postgresql/src/common/fe_memutils.c:174:8
-Used: pg_realloc
-Ret. Type: void *
->growalloc,void *, /usr/local/src/postgresql/src/timezone/zic.c:464:9
-Used: erealloc
-Ret. Type: void *

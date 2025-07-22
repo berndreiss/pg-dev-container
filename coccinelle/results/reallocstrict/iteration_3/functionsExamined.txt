@@ -1,7 +1,0 @@
->xml_repalloc,size_t, /usr/local/src/postgresql/src/backend/utils/adt/xml.c:1969:8
->xml_repalloc,void *, /usr/local/src/postgresql/src/backend/utils/adt/xml.c:1969:8
->repalloc0,void *, /usr/local/src/postgresql/src/backend/utils/mmgr/mcxt.c:1627:7
->repalloc0,Size, /usr/local/src/postgresql/src/backend/utils/mmgr/mcxt.c:1627:7
->SPI_repalloc,void *, /usr/local/src/postgresql/src/backend/executor/spi.c:1350:8
->SPI_repalloc,Size, /usr/local/src/postgresql/src/backend/executor/spi.c:1350:8
->gistjoinvector,IndexTuple *, /usr/local/src/postgresql/src/backend/access/gist/gistutil.c:115:24

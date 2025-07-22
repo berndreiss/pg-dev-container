@@ -8,5 +8,6 @@
 *.dylib
 
 *.diffs
-
+coccinelle/results*
+coccinelle/log*
 regression.out

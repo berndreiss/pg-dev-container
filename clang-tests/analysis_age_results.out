@@ -2,12 +2,12 @@ PostgresChecker Static Analysis Results
 =============================================================
 Directory: /workspaces/pg-dev-container/Extensions/age
 Path: /usr/local/src/postgresql
-Started: Mon Jul 21 11:59:00 AM UTC 2025
+Started: Mon Jul 21 02:40:03 PM UTC 2025
 Clang version: Debian clang version 19.1.4 (1~deb12u1)
 
 ========================================
 File: /workspaces/pg-dev-container/Extensions/age/src/backend/utils/adt/age_vle.c
-Time: Mon Jul 21 11:59:04 AM UTC 2025
+Time: Mon Jul 21 02:40:07 PM UTC 2025
 Status: ISSUES FOUND
 Errors: 0, Warnings: 2
 ========================================

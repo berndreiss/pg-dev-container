@@ -1,8 +1,0 @@
->bms_join,Bitmapset *, /usr/local/src/postgresql/src/backend/nodes/bitmapset.c
->findsubquery,QTNode *, /usr/local/src/postgresql/src/backend/utils/adt/tsquery_rewrite.c
->output_prepare_statement,char *, /usr/local/src/postgresql/src/interfaces/ecpg/preproc/output.c
->PageRestoreTempPage,Page, /usr/local/src/postgresql/src/backend/storage/page/bufpage.c
->restorePsetInfo,printQueryOpt *, /usr/local/src/postgresql/src/bin/psql/command.c
->rewrite_heap_tuple,HeapTuple, /usr/local/src/postgresql/src/backend/access/heap/rewriteheap.c
->updateAclDependencies,Oid *, /usr/local/src/postgresql/src/backend/catalog/pg_shdepend.c
->updateInitAclDependencies,Oid *, /usr/local/src/postgresql/src/backend/catalog/pg_shdepend.c

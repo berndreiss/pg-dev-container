@@ -1,5 +1,0 @@
->addCompiledLexeme,TheLexeme *, /usr/local/src/postgresql/src/backend/tsearch/dict_thesaurus.c
->erealloc,void *, /usr/local/src/postgresql/src/timezone/zic.c
->growalloc,void *, /usr/local/src/postgresql/src/timezone/zic.c
->SetConstraintStateAddItem,SetConstraintState, /usr/local/src/postgresql/src/backend/commands/trigger.c
->xml_repalloc,void *, /usr/local/src/postgresql/src/backend/utils/adt/xml.c

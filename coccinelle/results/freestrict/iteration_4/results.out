@@ -1,3 +1,0 @@
->CloseTableList,List *, /usr/local/src/postgresql/src/backend/commands/publicationcmds.c:1711:1
-Used: list_free_deep
-Ret. Type: void

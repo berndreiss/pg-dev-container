@@ -66,20 +66,14 @@ void testFree(RelOptInfo *parent_rel, Path *path){
 
 int main(int argnum, char **args){
   struct arguments *list1 = palloc(sizeof(struct arguments));
-  dump_variables(list1, 0);
-  use_arguments(list1);
-  //dump_variables(list1, 1); 
-  //use_arguments(list1); 
-  //dump_variables(list1, argnum); 
+  //dump_variables(list1, 1);
   //use_arguments(list1);
+  dump_variables(list1, argnum); 
+  use_arguments(list1);
   //RelOptInfo *parent=malloc(sizeof(RelOptInfo));
   //Path *new_path = malloc(sizeof(Path));
   //add_partial_path(parent, new_path);
   //add_partial_path(parent, new_path);
-    int *array = palloc(sizeof(int)*2);
-  int *p = &array[0];
-  pfree(p); // expected-note{{Freeing function: pfree (p)}}
-  pfree(&array[0]); // ex
   //use_path(new_path);
    //TupleDesc tupdesc = palloc(sizeof(TupleDescData));
   //tupdesc->tdrefcount = 2;

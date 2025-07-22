@@ -1,6 +1,0 @@
->gistplacetopage,IndexTuple *, /usr/local/src/postgresql/src/backend/access/gist/gist.c:309:10
-Used: gistjoinvector
-Ret. Type: bool
->_int_unique,ArrayType *, /usr/local/src/postgresql/contrib/intarray/_int_tool.c:319:8
-Used: resize_intArrayType
-Ret. Type: ArrayType *
