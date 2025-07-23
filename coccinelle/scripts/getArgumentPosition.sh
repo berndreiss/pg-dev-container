@@ -31,7 +31,7 @@ while read -r line; do
     
     [[ -z "$func" || -z "$file" || ! -f "$file" ]] && continue
     
-    cat prototypes/protoPosition.cocci \
+    cat prototypes/protoposition.cocci \
       | sed -e "s/__FUNCTION__/$func/g" \
             -e "s/__CHECKTYPE__/$ptype/g" \
             > $TMP_PATH/tmp.cocci

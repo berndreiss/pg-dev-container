@@ -81,7 +81,7 @@ echo "\\newcommand{\\freebool}{$FREE}" >> $LATEX_FILE_NUMBERS
 echo "\\newcommand{\\reallocbool}{$REALLOC}" >> $LATEX_FILE_NUMBERS
 
 echo "   \end{tabularx}
-   \caption{Count of Categories by Function.}
+   \caption{Number of Categories by Function}
    \label{tab:categories:overview}
 \end{table}
 " >> $LATEX_FILE

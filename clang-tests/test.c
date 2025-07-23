@@ -27,9 +27,7 @@ typedef struct {} Bitmapset;
 Bitmapset *bms_int_members(Bitmapset *a, const Bitmapset *b);
 void use_bms(Bitmapset *a);
 const Bitmapset * get_bms();
-void DecrTupleDescRefCount(TupleDesc tupdesc){
-  tupdesc->tdrefcount--; 
-}
+void DecrTupleDescRefCount(TupleDesc tupdesc);
 
 typedef struct {}TupleTableSlot;
 typedef struct {}MinimalTupleStruct;
@@ -68,20 +66,21 @@ int main(int argnum, char **args){
   struct arguments *list1 = palloc(sizeof(struct arguments));
   //dump_variables(list1, 1);
   //use_arguments(list1);
-  dump_variables(list1, argnum); 
-  use_arguments(list1);
+  //pfree(list1); 
+  //use_arguments(list1);
+  //printf("\n");
   //RelOptInfo *parent=malloc(sizeof(RelOptInfo));
   //Path *new_path = malloc(sizeof(Path));
   //add_partial_path(parent, new_path);
   //add_partial_path(parent, new_path);
   //use_path(new_path);
-   //TupleDesc tupdesc = palloc(sizeof(TupleDescData));
-  //tupdesc->tdrefcount = 2;
-  //DecrTupleDescRefCount(tupdesc);
-  //use_tupledesc(tupdesc);
-  //tupdesc->tdrefcount = 1;
-  //DecrTupleDescRefCount(tupdesc); 
-  //use_tupledesc(tupdesc); 
+  TupleDesc tupdesc = palloc(sizeof(TupleDescData));
+  tupdesc->tdrefcount = 2;
+  DecrTupleDescRefCount(tupdesc);
+  use_tupledesc(tupdesc);
+  tupdesc->tdrefcount =1;
+  DecrTupleDescRefCount(tupdesc); 
+  use_tupledesc(tupdesc); 
   //
     //HeapTuple tuple = palloc(sizeof(HeapTuple));
   //TupleTableSlot *slot = palloc(sizeof(TupleTableSlot));
