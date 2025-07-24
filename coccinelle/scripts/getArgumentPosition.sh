@@ -31,7 +31,7 @@ while read -r line; do
     
     [[ -z "$func" || -z "$file" || ! -f "$file" ]] && continue
     
-    cat prototypes/protoposition.cocci \
+    cat templates/templateposition.cocci \
       | sed -e "s/__FUNCTION__/$func/g" \
             -e "s/__CHECKTYPE__/$ptype/g" \
             > $TMP_PATH/tmp.cocci
@@ -40,5 +40,7 @@ while read -r line; do
 done < $RESULTS/collected/${CATEGORY}_${FUNCTION}_functionsonly.out
 
 grep -vFf exceptions/$CATEGORY$FUNCTION.exclude "$RESULTS_FILE" > temp && mv temp "$RESULTS_FILE"
+
+sed 's/^\([^:]*\):\([0-9]*\)$/  {{"\1"}, {\2}},/' "$RESULTS_FILE" | sort | uniq > "$RESULTS_FILE".extracted
 
 rm -r tmp

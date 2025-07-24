@@ -64,9 +64,11 @@ echo "========================================="
 build_include_paths() {
     local includes=""
     
-    # Core PostgreSQL includes
-    includes="$includes -I$PG_PATH/src/include"
-    #pg_config --includedir / pg_config -- includedir-server
+    # Include server
+    includes="$includes -I$(pg_config --includedir-server)"
+
+    # Include client
+    includes="$includes -I$(pg_config --includedir)"
     
     # Extension-specific includes 
     if [ -d "$ANALYSIS_DIR/src/include" ]; then
@@ -76,6 +78,12 @@ build_include_paths() {
     # Additional backend includes
     if [ -d "$ANALYSIS_DIR/src/backend" ]; then
         includes="$includes -I$ANALYSIS_DIR/src/backend"
+    fi
+
+    # Try common build locations
+    if [ -d "$ANALYSIS_DIR/../build" ]; then
+        includes="$includes -I$ANALYSIS_DIR/../build"
+        includes="$includes -I$ANALYSIS_DIR/../build/src"
     fi
     
     echo "$includes"
