@@ -92,7 +92,7 @@ build_include_paths() {
 # Function to check if checker library exists
 check_checker_lib() {
     if [ -f "/usr/local/lib/libPostgresChecker.so" ]; then
-        echo -e "${GREEN}✓ PostgreSQL checker library found${NC}"
+        echo -e "${GREEN}[OK] PostgreSQL checker library found${NC}"
         return 0
     else
         echo -e "${YELLOW}! PostgreSQL checker library not found at /usr/local/lib/libPostgresChecker.so${NC}"
@@ -157,7 +157,7 @@ while IFS= read -r file; do
     
     # Run analysis
     if analyze_file "$file" "$temp_output" "$INCLUDE_PATHS" "$USE_CHECKER"; then
-        echo -e "${GREEN}  ✓ Analysis completed${NC}"
+        echo -e "${GREEN}  [OK] Analysis completed${NC}"
         ((analyzed_files++))
         
         # Check if there were any warnings or errors in the output
@@ -183,10 +183,10 @@ while IFS= read -r file; do
                 echo ""
             } >> ../"$OUTPUT_FILE"
         else
-            echo -e "${GREEN}  ✓ Clean (no issues)${NC}"
+            echo -e "${GREEN}  [OK] Clean (no issues)${NC}"
         fi
     else
-        echo -e "${RED}  ✗ Analysis failed${NC}"
+        echo -e "${RED}  [X] Analysis failed${NC}"
         ((failed_files++))
         cat "$temp_output"
         

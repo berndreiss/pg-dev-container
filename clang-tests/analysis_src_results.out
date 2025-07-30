@@ -1,7 +1,188 @@
-PostgresChecker Static Analysis Results
-=============================================================
-Directory: /workspaces/pg-dev-container/Extensions/timescaledb/src
-Path: /usr/local/src/postgresql
-Started: Thu Jul 24 02:57:02 PM UTC 2025
-Clang version: Debian clang version 19.1.4 (1~deb12u1)
+========================================
+File: /usr/local/src/postgresql/src/backend/utils/mmgr/generation.c
+Time: Mon Jul 28 02:17:18 PM UTC 2025
+Status: ISSUES FOUND
+Errors: 0, Warnings: 6
+========================================
+warning: Path diagnostic report is not generated. Current output format does not support diagnostics that cross file boundaries. Refer to --analyzer-output for valid output formats
+warning: Path diagnostic report is not generated. Current output format does not support diagnostics that cross file boundaries. Refer to --analyzer-output for valid output formats
+warning: Path diagnostic report is not generated. Current output format does not support diagnostics that cross file boundaries. Refer to --analyzer-output for valid output formats
+In file included from /usr/local/src/postgresql/src/backend/utils/mmgr/generation.c:38:
+/usr/local/postgresql-17.2/include/server/lib/ilist.h:505:9: warning: Attempt to use released memory [postgres.PostgresChecker]
+  505 |         return node->next != &head->head;
+      |                ^~~~~~~~~~
+/usr/local/src/postgresql/src/backend/utils/mmgr/generation.c:680:2: note: Freeing function: free (block)
+  680 |         free(block);
+      |         ^
+In file included from /usr/local/src/postgresql/src/backend/utils/mmgr/generation.c:38:
+/usr/local/postgresql-17.2/include/server/lib/ilist.h:558:2: warning: Attempt to use released memory [postgres.PostgresChecker]
+  558 |         return (char *) head->head.next - off;
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/backend/utils/mmgr/generation.c:680:2: note: Freeing function: free (block)
+  680 |         free(block);
+      |         ^
+In file included from /usr/local/src/postgresql/src/backend/utils/mmgr/generation.c:38:
+/usr/local/postgresql-17.2/include/server/lib/ilist.h:567:2: warning: Attempt to use released memory [postgres.PostgresChecker]
+  567 |         return (dlist_node *) dlist_head_element_off(head, 0);
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/backend/utils/mmgr/generation.c:680:2: note: Freeing function: free (block)
+  680 |         free(block);
+      |         ^
+3 warnings generated.
+
+========================================
+File: /usr/local/src/postgresql/src/backend/utils/mmgr/bump.c
+Time: Mon Jul 28 02:17:23 PM UTC 2025
+Status: ISSUES FOUND
+Errors: 0, Warnings: 6
+========================================
+warning: Path diagnostic report is not generated. Current output format does not support diagnostics that cross file boundaries. Refer to --analyzer-output for valid output formats
+warning: Path diagnostic report is not generated. Current output format does not support diagnostics that cross file boundaries. Refer to --analyzer-output for valid output formats
+warning: Path diagnostic report is not generated. Current output format does not support diagnostics that cross file boundaries. Refer to --analyzer-output for valid output formats
+In file included from /usr/local/src/postgresql/src/backend/utils/mmgr/bump.c:41:
+/usr/local/postgresql-17.2/include/server/lib/ilist.h:505:9: warning: Attempt to use released memory [postgres.PostgresChecker]
+  505 |         return node->next != &head->head;
+      |                ^~~~~~~~~~
+/usr/local/src/postgresql/src/backend/utils/mmgr/bump.c:609:2: note: Freeing function: free (block)
+  609 |         free(block);
+      |         ^
+In file included from /usr/local/src/postgresql/src/backend/utils/mmgr/bump.c:41:
+/usr/local/postgresql-17.2/include/server/lib/ilist.h:558:2: warning: Attempt to use released memory [postgres.PostgresChecker]
+  558 |         return (char *) head->head.next - off;
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/backend/utils/mmgr/bump.c:609:2: note: Freeing function: free (block)
+  609 |         free(block);
+      |         ^
+In file included from /usr/local/src/postgresql/src/backend/utils/mmgr/bump.c:41:
+/usr/local/postgresql-17.2/include/server/lib/ilist.h:567:2: warning: Attempt to use released memory [postgres.PostgresChecker]
+  567 |         return (dlist_node *) dlist_head_element_off(head, 0);
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/backend/utils/mmgr/bump.c:609:2: note: Freeing function: free (block)
+  609 |         free(block);
+      |         ^
+3 warnings generated.
+
+========================================
+File: /usr/local/src/postgresql/src/backend/tsearch/to_tsany.c
+Time: Mon Jul 28 02:19:44 PM UTC 2025
+Status: ISSUES FOUND
+Errors: 0, Warnings: 2
+========================================
+/usr/local/src/postgresql/src/backend/tsearch/to_tsany.c:208:3: warning: Attempt to use released memory [postgres.PostgresChecker]
+  208 |                 memcpy(str + stroff, prs->words[i].word, prs->words[i].len);
+      |                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/backend/tsearch/to_tsany.c:137:4: note: Freeing function: pfree
+  137 |                         pfree(ptr->word);
+      |                         ^
+/usr/local/src/postgresql/src/backend/tsearch/to_tsany.c:210:3: warning: Attempt to free released memory [postgres.PostgresChecker]
+  210 |                 pfree(prs->words[i].word);
+      |                 ^~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/backend/tsearch/to_tsany.c:137:4: note: Freeing function: pfree
+  137 |                         pfree(ptr->word);
+      |                         ^
+2 warnings generated.
+
+========================================
+File: /usr/local/src/postgresql/src/backend/optimizer/util/inherit.c
+Time: Mon Jul 28 02:20:43 PM UTC 2025
+Status: ISSUES FOUND
+Errors: 0, Warnings: 1
+========================================
+/usr/local/src/postgresql/src/backend/optimizer/util/inherit.c:381:14: warning: Attempt to use potentially released memory: live_parts [postgres.PostgresChecker]
+  381 |         while ((i = bms_next_member(live_parts, i)) >= 0)
+      |                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/backend/optimizer/util/inherit.c:397:26: note: The return value should probably be reassigned
+  397 |                         relinfo->live_parts = bms_del_member(relinfo->live_parts, i);
+      |                                               ^
+1 warning generated.
+
+========================================
+File: /usr/local/src/postgresql/src/backend/optimizer/path/indxpath.c
+Time: Mon Jul 28 02:21:14 PM UTC 2025
+Status: ISSUES FOUND
+Errors: 0, Warnings: 3
+========================================
+/usr/local/src/postgresql/src/backend/optimizer/path/indxpath.c:748:5: warning: Attempt to use potentially released memory [postgres.PostgresChecker]
+  748 |                         (ipath->path.pathkeys == NIL ||
+      |                          ^~~~~~~~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/backend/optimizer/path/indxpath.c:745:4: note: Freeing function: add_path (ipath)
+  745 |                         add_path(rel, (Path *) ipath);
+      |                         ^
+/usr/local/src/postgresql/src/backend/optimizer/path/indxpath.c:749:5: warning: Attempt to use potentially released memory [postgres.PostgresChecker]
+  749 |                          ipath->indexselectivity < 1.0))
+      |                          ^~~~~~~~~~~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/backend/optimizer/path/indxpath.c:745:4: note: Freeing function: add_path (ipath)
+  745 |                         add_path(rel, (Path *) ipath);
+      |                         ^
+/usr/local/src/postgresql/src/backend/optimizer/path/indxpath.c:750:21: warning: Attempt to use potentially released memory: ipath [postgres.PostgresChecker]
+  750 |                         *bitindexpaths = lappend(*bitindexpaths, ipath);
+      |                                          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/backend/optimizer/path/indxpath.c:745:4: note: Freeing function: add_path (ipath)
+  745 |                         add_path(rel, (Path *) ipath);
+      |                         ^
+3 warnings generated.
+
+========================================
+File: /usr/local/src/postgresql/src/backend/storage/large_object/inv_api.c
+Time: Mon Jul 28 02:23:24 PM UTC 2025
+Status: ISSUES FOUND
+Errors: 0, Warnings: 1
+========================================
+/usr/local/src/postgresql/src/backend/storage/large_object/inv_api.c:683:5: warning: Attempt to free released memory: datafield [postgres.PostgresChecker]
+  683 |                                 pfree(datafield);
+      |                                 ^~~~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/backend/storage/large_object/inv_api.c:683:5: note: Freeing function: pfree (datafield)
+1 warning generated.
+
+========================================
+File: /usr/local/src/postgresql/src/backend/access/nbtree/nbtree.c
+Time: Mon Jul 28 02:24:55 PM UTC 2025
+Status: ISSUES FOUND
+Errors: 0, Warnings: 1
+========================================
+/usr/local/src/postgresql/src/backend/access/nbtree/nbtree.c:197:2: warning: Attempt to free potentially released memory: itup [postgres.PostgresChecker]
+  197 |         pfree(itup);
+      |         ^~~~~~~~~~~
+/usr/local/src/postgresql/src/backend/access/nbtree/nbtree.c:195:11: note: Freeing function: _bt_doinsert (itup)
+  195 |         result = _bt_doinsert(rel, itup, checkUnique, indexUnchanged, heapRel);
+      |                  ^
+1 warning generated.
+
+========================================
+File: /usr/local/src/postgresql/src/backend/utils/misc/guc.c
+Time: Mon Jul 28 02:17:08 PM UTC 2025
+Status: ISSUES FOUND
+Errors: 0, Warnings: 3
+========================================
+/usr/local/src/postgresql/src/backend/utils/misc/guc.c:700:10: warning: Attempt to use released memory: ptr [postgres.PostgresChecker]
+  700 |                 Assert(GetMemoryChunkContext(ptr) == GUCMemoryContext);
+      |                        ^~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/local/postgresql-17.2/include/server/c.h:875:9: note: expanded from macro 'Assert'
+  875 |                 if (!(condition)) \
+      |                       ^~~~~~~~~
+/usr/local/src/postgresql/src/backend/utils/misc/guc.c:701:3: note: Freeing function: pfree (ptr)
+  701 |                 pfree(ptr);
+      |                 ^
+/usr/local/src/postgresql/src/backend/utils/misc/guc.c:701:3: warning: Attempt to free released memory: ptr [postgres.PostgresChecker]
+  701 |                 pfree(ptr);
+      |                 ^~~~~~~~~~
+/usr/local/src/postgresql/src/backend/utils/misc/guc.c:701:3: note: Freeing function: pfree (ptr)
+/usr/local/src/postgresql/src/backend/utils/misc/guc.c:1729:6: warning: Attempt to use released memory [postgres.PostgresChecker]
+ 1729 |                                         elog(FATAL, "failed to initialize %s to \"%s\"",
+      |                                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 1730 |                                                  conf->gen.name, newval ? newval : "");
+      |                                                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/local/postgresql-17.2/include/server/utils/elog.h:240:18: note: expanded from macro 'elog'
+  240 |         ereport(elevel, errmsg_internal(__VA_ARGS__))
+      |         ~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/local/postgresql-17.2/include/server/utils/elog.h:164:37: note: expanded from macro 'ereport'
+  164 |         ereport_domain(elevel, TEXTDOMAIN, __VA_ARGS__)
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~
+/usr/local/postgresql-17.2/include/server/utils/elog.h:147:4: note: expanded from macro 'ereport_domain'
+  147 |                         __VA_ARGS__, errfinish(__FILE__, __LINE__, __func__); \
+      |                         ^~~~~~~~~~~
+/usr/local/src/postgresql/src/backend/utils/misc/guc.c:701:3: note: Freeing function: pfree (ptr)
+  701 |                 pfree(ptr);
+      |                 ^
+3 warnings generated.
 

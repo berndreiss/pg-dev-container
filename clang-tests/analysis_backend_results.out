@@ -1,7 +1,0 @@
-PostgresChecker Static Analysis Results
-=============================================================
-Directory: /workspaces/pg-dev-container/Extensions/citus/src/backend
-Path: /usr/local/src/postgresql
-Started: Thu Jul 24 03:37:02 PM UTC 2025
-Clang version: Debian clang version 19.1.4 (1~deb12u1)
-
