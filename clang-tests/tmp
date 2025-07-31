@@ -1,0 +1,649 @@
+=========================================
+PostgreSQL Directory Analysis
+=========================================
+Directory: /usr/local/src/postgresql/contrib
+Output file: analysis_contrib_results.out
+PostgreSQL path: /usr/local/src/postgresql
+Started: Wed Jul 30 08:31:21 PM UTC 2025
+=========================================
+[0;34mPreparing analysis...[0m
+Include paths:  -I/usr/local/postgresql-17.2/include/server -I/usr/local/postgresql-17.2/include
+[0;32m[OK] PostgreSQL checker library found[0m
+Command: clang-19 --analyze  -I/usr/local/postgresql-17.2/include/server -I/usr/local/postgresql-17.2/include -Xclang -load -Xclang /usr/local/lib/libPostgresChecker.so --analyzer-no-default-checks -Xclang -analyzer-checker=postgres.PostgresChecker
+[0;34mStarting analysis...[0m
+[1;33mAnalyzing (1):[0m /usr/local/src/postgresql/contrib/pg_visibility/pg_visibility.c
+[0;32m  [OK] Analysis completed[0m
+[0;32m  [OK] Clean (no issues)[0m
+[1;33mAnalyzing (2):[0m /usr/local/src/postgresql/contrib/isn/isn.c
+[0;32m  [OK] Analysis completed[0m
+[0;32m  [OK] Clean (no issues)[0m
+[1;33mAnalyzing (3):[0m /usr/local/src/postgresql/contrib/pgcrypto/pgp-pubenc.c
+[0;32m  [OK] Analysis completed[0m
+[0;32m  [OK] Clean (no issues)[0m
+[1;33mAnalyzing (4):[0m /usr/local/src/postgresql/contrib/pgcrypto/pgp-info.c
+[0;32m  [OK] Analysis completed[0m
+[0;32m  [OK] Clean (no issues)[0m
+[1;33mAnalyzing (5):[0m /usr/local/src/postgresql/contrib/pgcrypto/pgp-cfb.c
+[0;32m  [OK] Analysis completed[0m
+[0;32m  [OK] Clean (no issues)[0m
+[1;33mAnalyzing (6):[0m /usr/local/src/postgresql/contrib/pgcrypto/pgp-pgsql.c
+[0;32m  [OK] Analysis completed[0m
+[0;32m  [OK] Clean (no issues)[0m
+[1;33mAnalyzing (7):[0m /usr/local/src/postgresql/contrib/pgcrypto/crypt-gensalt.c
+[0;32m  [OK] Analysis completed[0m
+[0;32m  [OK] Clean (no issues)[0m
+[1;33mAnalyzing (8):[0m /usr/local/src/postgresql/contrib/pgcrypto/crypt-blowfish.c
+[0;32m  [OK] Analysis completed[0m
+[0;32m  [OK] Clean (no issues)[0m
+[1;33mAnalyzing (9):[0m /usr/local/src/postgresql/contrib/pgcrypto/pgp-mpi.c
+[0;32m  [OK] Analysis completed[0m
+[0;32m  [OK] Clean (no issues)[0m
+[1;33mAnalyzing (10):[0m /usr/local/src/postgresql/contrib/pgcrypto/pgp-decrypt.c
+[0;32m  [OK] Analysis completed[0m
+[0;32m  [OK] Clean (no issues)[0m
+[0;34mProgress: 10 files processed...[0m
+[1;33mAnalyzing (11):[0m /usr/local/src/postgresql/contrib/pgcrypto/crypt-des.c
+[0;32m  [OK] Analysis completed[0m
+[0;32m  [OK] Clean (no issues)[0m
+[1;33mAnalyzing (12):[0m /usr/local/src/postgresql/contrib/pgcrypto/crypt-md5.c
+[0;32m  [OK] Analysis completed[0m
+[0;32m  [OK] Clean (no issues)[0m
+[1;33mAnalyzing (13):[0m /usr/local/src/postgresql/contrib/pgcrypto/pgp-s2k.c
+[0;32m  [OK] Analysis completed[0m
+[0;32m  [OK] Clean (no issues)[0m
+[1;33mAnalyzing (14):[0m /usr/local/src/postgresql/contrib/pgcrypto/mbuf.c
+[0;32m  [OK] Analysis completed[0m
+[0;32m  [OK] Clean (no issues)[0m
+[1;33mAnalyzing (15):[0m /usr/local/src/postgresql/contrib/pgcrypto/px.c
+[0;32m  [OK] Analysis completed[0m
+[0;32m  [OK] Clean (no issues)[0m
+[1;33mAnalyzing (16):[0m /usr/local/src/postgresql/contrib/pgcrypto/pgp-pubkey.c
+[0;32m  [OK] Analysis completed[0m
+[0;32m  [OK] Clean (no issues)[0m
+[1;33mAnalyzing (17):[0m /usr/local/src/postgresql/contrib/pgcrypto/pgp-mpi-openssl.c
+[0;32m  [OK] Analysis completed[0m
+[0;32m  [OK] Clean (no issues)[0m
+[1;33mAnalyzing (18):[0m /usr/local/src/postgresql/contrib/pgcrypto/pgp-encrypt.c
+[0;32m  [OK] Analysis completed[0m
+[0;32m  [OK] Clean (no issues)[0m
+[1;33mAnalyzing (19):[0m /usr/local/src/postgresql/contrib/pgcrypto/pgp-armor.c
+[0;32m  [OK] Analysis completed[0m
+[0;32m  [OK] Clean (no issues)[0m
+[1;33mAnalyzing (20):[0m /usr/local/src/postgresql/contrib/pgcrypto/pgcrypto.c
+[0;32m  [OK] Analysis completed[0m
+[0;32m  [OK] Clean (no issues)[0m
+[0;34mProgress: 20 files processed...[0m
+[1;33mAnalyzing (21):[0m /usr/local/src/postgresql/contrib/pgcrypto/pgp.c
+[0;32m  [OK] Analysis completed[0m
+[0;32m  [OK] Clean (no issues)[0m
+[1;33mAnalyzing (22):[0m /usr/local/src/postgresql/contrib/pgcrypto/openssl.c
+[0;32m  [OK] Analysis completed[0m
+[0;32m  [OK] Clean (no issues)[0m
+[1;33mAnalyzing (23):[0m /usr/local/src/postgresql/contrib/pgcrypto/px-crypt.c
+[0;32m  [OK] Analysis completed[0m
+[0;32m  [OK] Clean (no issues)[0m
+[1;33mAnalyzing (24):[0m /usr/local/src/postgresql/contrib/pgcrypto/pgp-compress.c
+[0;32m  [OK] Analysis completed[0m
+[0;32m  [OK] Clean (no issues)[0m
+[1;33mAnalyzing (25):[0m /usr/local/src/postgresql/contrib/pgcrypto/px-hmac.c
+[0;32m  [OK] Analysis completed[0m
+[0;32m  [OK] Clean (no issues)[0m
+[1;33mAnalyzing (26):[0m /usr/local/src/postgresql/contrib/pgcrypto/pgp-pubdec.c
+[0;32m  [OK] Analysis completed[0m
+[0;32m  [OK] Clean (no issues)[0m
+[1;33mAnalyzing (27):[0m /usr/local/src/postgresql/contrib/spi/moddatetime.c
+[0;32m  [OK] Analysis completed[0m
+[0;32m  [OK] Clean (no issues)[0m
+[1;33mAnalyzing (28):[0m /usr/local/src/postgresql/contrib/spi/refint.c
+[0;32m  [OK] Analysis completed[0m
+[0;32m  [OK] Clean (no issues)[0m
+[1;33mAnalyzing (29):[0m /usr/local/src/postgresql/contrib/spi/autoinc.c
+[0;32m  [OK] Analysis completed[0m
+[0;32m  [OK] Clean (no issues)[0m
+[1;33mAnalyzing (30):[0m /usr/local/src/postgresql/contrib/spi/insert_username.c
+[0;32m  [OK] Analysis completed[0m
+[0;32m  [OK] Clean (no issues)[0m
+[0;34mProgress: 30 files processed...[0m
+[1;33mAnalyzing (31):[0m /usr/local/src/postgresql/contrib/btree_gist/btree_text.c
+[0;32m  [OK] Analysis completed[0m
+[0;32m  [OK] Clean (no issues)[0m
+[1;33mAnalyzing (32):[0m /usr/local/src/postgresql/contrib/btree_gist/btree_bool.c
+[0;32m  [OK] Analysis completed[0m
+[0;32m  [OK] Clean (no issues)[0m
+[1;33mAnalyzing (33):[0m /usr/local/src/postgresql/contrib/btree_gist/btree_bytea.c
+[0;32m  [OK] Analysis completed[0m
+[0;32m  [OK] Clean (no issues)[0m
+[1;33mAnalyzing (34):[0m /usr/local/src/postgresql/contrib/btree_gist/btree_enum.c
+[0;32m  [OK] Analysis completed[0m
+[0;32m  [OK] Clean (no issues)[0m
+[1;33mAnalyzing (35):[0m /usr/local/src/postgresql/contrib/btree_gist/btree_time.c
+[0;32m  [OK] Analysis completed[0m
+[0;32m  [OK] Clean (no issues)[0m
+[1;33mAnalyzing (36):[0m /usr/local/src/postgresql/contrib/btree_gist/btree_interval.c
+[0;32m  [OK] Analysis completed[0m
+[0;32m  [OK] Clean (no issues)[0m
+[1;33mAnalyzing (37):[0m /usr/local/src/postgresql/contrib/btree_gist/btree_ts.c
+[0;32m  [OK] Analysis completed[0m
+[0;32m  [OK] Clean (no issues)[0m
+[1;33mAnalyzing (38):[0m /usr/local/src/postgresql/contrib/btree_gist/btree_macaddr.c
+[0;32m  [OK] Analysis completed[0m
+[0;32m  [OK] Clean (no issues)[0m
+[1;33mAnalyzing (39):[0m /usr/local/src/postgresql/contrib/btree_gist/btree_macaddr8.c
+[0;32m  [OK] Analysis completed[0m
+[0;32m  [OK] Clean (no issues)[0m
+[1;33mAnalyzing (40):[0m /usr/local/src/postgresql/contrib/btree_gist/btree_date.c
+[0;32m  [OK] Analysis completed[0m
+[0;32m  [OK] Clean (no issues)[0m
+[0;34mProgress: 40 files processed...[0m
+[1;33mAnalyzing (41):[0m /usr/local/src/postgresql/contrib/btree_gist/btree_utils_num.c
+[0;32m  [OK] Analysis completed[0m
+[0;32m  [OK] Clean (no issues)[0m
+[1;33mAnalyzing (42):[0m /usr/local/src/postgresql/contrib/btree_gist/btree_utils_var.c
+[0;32m  [OK] Analysis completed[0m
+[0;32m  [OK] Clean (no issues)[0m
+[1;33mAnalyzing (43):[0m /usr/local/src/postgresql/contrib/btree_gist/btree_int8.c
+[0;32m  [OK] Analysis completed[0m
+[0;32m  [OK] Clean (no issues)[0m
+[1;33mAnalyzing (44):[0m /usr/local/src/postgresql/contrib/btree_gist/btree_int4.c
+[0;32m  [OK] Analysis completed[0m
+[0;32m  [OK] Clean (no issues)[0m
+[1;33mAnalyzing (45):[0m /usr/local/src/postgresql/contrib/btree_gist/btree_float4.c
+[0;32m  [OK] Analysis completed[0m
+[0;32m  [OK] Clean (no issues)[0m
+[1;33mAnalyzing (46):[0m /usr/local/src/postgresql/contrib/btree_gist/btree_float8.c
+[0;32m  [OK] Analysis completed[0m
+[0;32m  [OK] Clean (no issues)[0m
+[1;33mAnalyzing (47):[0m /usr/local/src/postgresql/contrib/btree_gist/btree_uuid.c
+[0;32m  [OK] Analysis completed[0m
+[0;32m  [OK] Clean (no issues)[0m
+[1;33mAnalyzing (48):[0m /usr/local/src/postgresql/contrib/btree_gist/btree_gist.c
+[0;32m  [OK] Analysis completed[0m
+[0;32m  [OK] Clean (no issues)[0m
+[1;33mAnalyzing (49):[0m /usr/local/src/postgresql/contrib/btree_gist/btree_bit.c
+[0;32m  [OK] Analysis completed[0m
+[0;32m  [OK] Clean (no issues)[0m
+[1;33mAnalyzing (50):[0m /usr/local/src/postgresql/contrib/btree_gist/btree_cash.c
+[0;32m  [OK] Analysis completed[0m
+[0;32m  [OK] Clean (no issues)[0m
+[0;34mProgress: 50 files processed...[0m
+[1;33mAnalyzing (51):[0m /usr/local/src/postgresql/contrib/btree_gist/btree_int2.c
+[0;32m  [OK] Analysis completed[0m
+[0;32m  [OK] Clean (no issues)[0m
+[1;33mAnalyzing (52):[0m /usr/local/src/postgresql/contrib/btree_gist/btree_inet.c
+[0;32m  [OK] Analysis completed[0m
+[0;32m  [OK] Clean (no issues)[0m
+[1;33mAnalyzing (53):[0m /usr/local/src/postgresql/contrib/btree_gist/btree_oid.c
+[0;32m  [OK] Analysis completed[0m
+[0;32m  [OK] Clean (no issues)[0m
+[1;33mAnalyzing (54):[0m /usr/local/src/postgresql/contrib/btree_gist/btree_numeric.c
+[0;32m  [OK] Analysis completed[0m
+[0;32m  [OK] Clean (no issues)[0m
+[1;33mAnalyzing (55):[0m /usr/local/src/postgresql/contrib/btree_gin/btree_gin.c
+[0;32m  [OK] Analysis completed[0m
+[0;32m  [OK] Clean (no issues)[0m
+[1;33mAnalyzing (56):[0m /usr/local/src/postgresql/contrib/file_fdw/file_fdw.c
+[0;32m  [OK] Analysis completed[0m
+[0;32m  [OK] Clean (no issues)[0m
+[1;33mAnalyzing (57):[0m /usr/local/src/postgresql/contrib/pg_surgery/heap_surgery.c
+[0;32m  [OK] Analysis completed[0m
+[0;32m  [OK] Clean (no issues)[0m
+[1;33mAnalyzing (58):[0m /usr/local/src/postgresql/contrib/citext/citext.c
+[0;32m  [OK] Analysis completed[0m
+[0;32m  [OK] Clean (no issues)[0m
+[1;33mAnalyzing (59):[0m /usr/local/src/postgresql/contrib/oid2name/oid2name.c
+[0;32m  [OK] Analysis completed[0m
+[0;32m  [OK] Clean (no issues)[0m
+[1;33mAnalyzing (60):[0m /usr/local/src/postgresql/contrib/tablefunc/tablefunc.c
+[0;32m  [OK] Analysis completed[0m
+[0;32m  [OK] Clean (no issues)[0m
+[0;34mProgress: 60 files processed...[0m
+[1;33mAnalyzing (61):[0m /usr/local/src/postgresql/contrib/dblink/dblink.c
+[0;32m  [OK] Analysis completed[0m
+[0;31m  ! Issues found[0m
+[0;31m    Errors: 0, Warnings: 15
+[1;33mAnalyzing (62):[0m /usr/local/src/postgresql/contrib/hstore/hstore_subs.c
+[0;32m  [OK] Analysis completed[0m
+[0;32m  [OK] Clean (no issues)[0m
+[1;33mAnalyzing (63):[0m /usr/local/src/postgresql/contrib/hstore/hstore_gist.c
+[0;32m  [OK] Analysis completed[0m
+[0;32m  [OK] Clean (no issues)[0m
+[1;33mAnalyzing (64):[0m /usr/local/src/postgresql/contrib/hstore/hstore_gin.c
+[0;32m  [OK] Analysis completed[0m
+[0;32m  [OK] Clean (no issues)[0m
+[1;33mAnalyzing (65):[0m /usr/local/src/postgresql/contrib/hstore/hstore_io.c
+[0;32m  [OK] Analysis completed[0m
+[0;32m  [OK] Clean (no issues)[0m
+[1;33mAnalyzing (66):[0m /usr/local/src/postgresql/contrib/hstore/hstore_op.c
+[0;32m  [OK] Analysis completed[0m
+[0;32m  [OK] Clean (no issues)[0m
+[1;33mAnalyzing (67):[0m /usr/local/src/postgresql/contrib/hstore/hstore_compat.c
+[0;32m  [OK] Analysis completed[0m
+[0;32m  [OK] Clean (no issues)[0m
+[1;33mAnalyzing (68):[0m /usr/local/src/postgresql/contrib/hstore_plperl/hstore_plperl.c
+[0;31m  [X] Analysis failed[0m
+/usr/local/src/postgresql/contrib/hstore_plperl/hstore_plperl.c:4:10: fatal error: 'hstore/hstore.h' file not found
+    4 | #include "hstore/hstore.h"
+      |          ^~~~~~~~~~~~~~~~~
+1 error generated.
+[1;33mAnalyzing (69):[0m /usr/local/src/postgresql/contrib/pg_trgm/trgm_gin.c
+[0;32m  [OK] Analysis completed[0m
+[0;32m  [OK] Clean (no issues)[0m
+[1;33mAnalyzing (70):[0m /usr/local/src/postgresql/contrib/pg_trgm/trgm_gist.c
+[0;32m  [OK] Analysis completed[0m
+[0;32m  [OK] Clean (no issues)[0m
+[0;34mProgress: 70 files processed...[0m
+[1;33mAnalyzing (71):[0m /usr/local/src/postgresql/contrib/pg_trgm/trgm_regexp.c
+[0;32m  [OK] Analysis completed[0m
+[0;32m  [OK] Clean (no issues)[0m
+[1;33mAnalyzing (72):[0m /usr/local/src/postgresql/contrib/pg_trgm/trgm_op.c
+[0;32m  [OK] Analysis completed[0m
+[0;32m  [OK] Clean (no issues)[0m
+[1;33mAnalyzing (73):[0m /usr/local/src/postgresql/contrib/lo/lo.c
+[0;32m  [OK] Analysis completed[0m
+[0;32m  [OK] Clean (no issues)[0m
+[1;33mAnalyzing (74):[0m /usr/local/src/postgresql/contrib/pg_buffercache/pg_buffercache_pages.c
+[0;32m  [OK] Analysis completed[0m
+[0;32m  [OK] Clean (no issues)[0m
+[1;33mAnalyzing (75):[0m /usr/local/src/postgresql/contrib/postgres_fdw/postgres_fdw.c
+[0;32m  [OK] Analysis completed[0m
+[0;31m  ! Issues found[0m
+[0;31m    Errors: 0, Warnings: 13
+[1;33mAnalyzing (76):[0m /usr/local/src/postgresql/contrib/postgres_fdw/connection.c
+[0;32m  [OK] Analysis completed[0m
+[0;31m  ! Issues found[0m
+[0;31m    Errors: 0, Warnings: 24
+[1;33mAnalyzing (77):[0m /usr/local/src/postgresql/contrib/postgres_fdw/option.c
+[0;32m  [OK] Analysis completed[0m
+[0;32m  [OK] Clean (no issues)[0m
+[1;33mAnalyzing (78):[0m /usr/local/src/postgresql/contrib/postgres_fdw/deparse.c
+[0;32m  [OK] Analysis completed[0m
+[0;32m  [OK] Clean (no issues)[0m
+[1;33mAnalyzing (79):[0m /usr/local/src/postgresql/contrib/postgres_fdw/shippable.c
+[0;32m  [OK] Analysis completed[0m
+[0;32m  [OK] Clean (no issues)[0m
+[1;33mAnalyzing (80):[0m /usr/local/src/postgresql/contrib/pgstattuple/pgstattuple.c
+[0;32m  [OK] Analysis completed[0m
+[0;32m  [OK] Clean (no issues)[0m
+[0;34mProgress: 80 files processed...[0m
+[1;33mAnalyzing (81):[0m /usr/local/src/postgresql/contrib/pgstattuple/pgstatindex.c
+[0;32m  [OK] Analysis completed[0m
+[0;32m  [OK] Clean (no issues)[0m
+[1;33mAnalyzing (82):[0m /usr/local/src/postgresql/contrib/pgstattuple/pgstatapprox.c
+[0;32m  [OK] Analysis completed[0m
+[0;32m  [OK] Clean (no issues)[0m
+[1;33mAnalyzing (83):[0m /usr/local/src/postgresql/contrib/tsm_system_time/tsm_system_time.c
+[0;32m  [OK] Analysis completed[0m
+[0;32m  [OK] Clean (no issues)[0m
+[1;33mAnalyzing (84):[0m /usr/local/src/postgresql/contrib/dict_int/dict_int.c
+[0;32m  [OK] Analysis completed[0m
+[0;32m  [OK] Clean (no issues)[0m
+[1;33mAnalyzing (85):[0m /usr/local/src/postgresql/contrib/bloom/blcost.c
+[0;32m  [OK] Analysis completed[0m
+[0;32m  [OK] Clean (no issues)[0m
+[1;33mAnalyzing (86):[0m /usr/local/src/postgresql/contrib/bloom/blscan.c
+[0;32m  [OK] Analysis completed[0m
+[0;32m  [OK] Clean (no issues)[0m
+[1;33mAnalyzing (87):[0m /usr/local/src/postgresql/contrib/bloom/blvacuum.c
+[0;32m  [OK] Analysis completed[0m
+[0;32m  [OK] Clean (no issues)[0m
+[1;33mAnalyzing (88):[0m /usr/local/src/postgresql/contrib/bloom/blutils.c
+[0;32m  [OK] Analysis completed[0m
+[0;32m  [OK] Clean (no issues)[0m
+[1;33mAnalyzing (89):[0m /usr/local/src/postgresql/contrib/bloom/blvalidate.c
+[0;32m  [OK] Analysis completed[0m
+[0;32m  [OK] Clean (no issues)[0m
+[1;33mAnalyzing (90):[0m /usr/local/src/postgresql/contrib/bloom/blinsert.c
+[0;32m  [OK] Analysis completed[0m
+[0;32m  [OK] Clean (no issues)[0m
+[0;34mProgress: 90 files processed...[0m
+[1;33mAnalyzing (91):[0m /usr/local/src/postgresql/contrib/pg_stat_statements/pg_stat_statements.c
+[0;32m  [OK] Analysis completed[0m
+[0;32m  [OK] Clean (no issues)[0m
+[1;33mAnalyzing (92):[0m /usr/local/src/postgresql/contrib/xml2/xslt_proc.c
+[0;32m  [OK] Analysis completed[0m
+[0;32m  [OK] Clean (no issues)[0m
+[1;33mAnalyzing (93):[0m /usr/local/src/postgresql/contrib/xml2/xpath.c
+[0;31m  [X] Analysis failed[0m
+/usr/local/src/postgresql/contrib/xml2/xpath.c:20:10: fatal error: 'libxml/xpath.h' file not found
+   20 | #include <libxml/xpath.h>
+      |          ^~~~~~~~~~~~~~~~
+1 error generated.
+[1;33mAnalyzing (94):[0m /usr/local/src/postgresql/contrib/intarray/_int_gist.c
+[0;32m  [OK] Analysis completed[0m
+[0;32m  [OK] Clean (no issues)[0m
+[1;33mAnalyzing (95):[0m /usr/local/src/postgresql/contrib/intarray/_int_bool.c
+[0;32m  [OK] Analysis completed[0m
+[0;32m  [OK] Clean (no issues)[0m
+[1;33mAnalyzing (96):[0m /usr/local/src/postgresql/contrib/intarray/_intbig_gist.c
+[0;32m  [OK] Analysis completed[0m
+[0;32m  [OK] Clean (no issues)[0m
+[1;33mAnalyzing (97):[0m /usr/local/src/postgresql/contrib/intarray/_int_selfuncs.c
+[0;32m  [OK] Analysis completed[0m
+[0;32m  [OK] Clean (no issues)[0m
+[1;33mAnalyzing (98):[0m /usr/local/src/postgresql/contrib/intarray/_int_gin.c
+[0;32m  [OK] Analysis completed[0m
+[0;32m  [OK] Clean (no issues)[0m
+[1;33mAnalyzing (99):[0m /usr/local/src/postgresql/contrib/intarray/_int_tool.c
+[0;32m  [OK] Analysis completed[0m
+[0;32m  [OK] Clean (no issues)[0m
+[1;33mAnalyzing (100):[0m /usr/local/src/postgresql/contrib/intarray/_int_op.c
+[0;32m  [OK] Analysis completed[0m
+[0;32m  [OK] Clean (no issues)[0m
+[0;34mProgress: 100 files processed...[0m
+[1;33mAnalyzing (101):[0m /usr/local/src/postgresql/contrib/pg_prewarm/pg_prewarm.c
+[0;32m  [OK] Analysis completed[0m
+[0;32m  [OK] Clean (no issues)[0m
+[1;33mAnalyzing (102):[0m /usr/local/src/postgresql/contrib/pg_prewarm/autoprewarm.c
+[0;32m  [OK] Analysis completed[0m
+[0;32m  [OK] Clean (no issues)[0m
+[1;33mAnalyzing (103):[0m /usr/local/src/postgresql/contrib/passwordcheck/passwordcheck.c
+[0;32m  [OK] Analysis completed[0m
+[0;32m  [OK] Clean (no issues)[0m
+[1;33mAnalyzing (104):[0m /usr/local/src/postgresql/contrib/dict_xsyn/dict_xsyn.c
+[0;32m  [OK] Analysis completed[0m
+[0;32m  [OK] Clean (no issues)[0m
+[1;33mAnalyzing (105):[0m /usr/local/src/postgresql/contrib/tcn/tcn.c
+[0;32m  [OK] Analysis completed[0m
+[0;32m  [OK] Clean (no issues)[0m
+[1;33mAnalyzing (106):[0m /usr/local/src/postgresql/contrib/jsonb_plperl/jsonb_plperl.c
+[0;31m  [X] Analysis failed[0m
+/usr/local/src/postgresql/contrib/jsonb_plperl/jsonb_plperl.c:6:10: fatal error: 'plperl.h' file not found
+    6 | #include "plperl.h"
+      |          ^~~~~~~~~~
+1 error generated.
+[1;33mAnalyzing (107):[0m /usr/local/src/postgresql/contrib/sepgsql/hooks.c
+[0;31m  [X] Analysis failed[0m
+In file included from /usr/local/src/postgresql/contrib/sepgsql/hooks.c:23:
+/usr/local/src/postgresql/contrib/sepgsql/sepgsql.h:17:10: fatal error: 'selinux/selinux.h' file not found
+   17 | #include <selinux/selinux.h>
+      |          ^~~~~~~~~~~~~~~~~~~
+1 error generated.
+[1;33mAnalyzing (108):[0m /usr/local/src/postgresql/contrib/sepgsql/dml.c
+[0;31m  [X] Analysis failed[0m
+In file included from /usr/local/src/postgresql/contrib/sepgsql/dml.c:27:
+/usr/local/src/postgresql/contrib/sepgsql/sepgsql.h:17:10: fatal error: 'selinux/selinux.h' file not found
+   17 | #include <selinux/selinux.h>
+      |          ^~~~~~~~~~~~~~~~~~~
+1 error generated.
+[1;33mAnalyzing (109):[0m /usr/local/src/postgresql/contrib/sepgsql/relation.c
+[0;31m  [X] Analysis failed[0m
+In file included from /usr/local/src/postgresql/contrib/sepgsql/relation.c:23:
+/usr/local/src/postgresql/contrib/sepgsql/sepgsql.h:17:10: fatal error: 'selinux/selinux.h' file not found
+   17 | #include <selinux/selinux.h>
+      |          ^~~~~~~~~~~~~~~~~~~
+1 error generated.
+[1;33mAnalyzing (110):[0m /usr/local/src/postgresql/contrib/sepgsql/label.c
+[0;31m  [X] Analysis failed[0m
+/usr/local/src/postgresql/contrib/sepgsql/label.c:13:10: fatal error: 'selinux/label.h' file not found
+   13 | #include <selinux/label.h>
+      |          ^~~~~~~~~~~~~~~~~
+1 error generated.
+[0;34mProgress: 110 files processed...[0m
+[1;33mAnalyzing (111):[0m /usr/local/src/postgresql/contrib/sepgsql/database.c
+[0;31m  [X] Analysis failed[0m
+In file included from /usr/local/src/postgresql/contrib/sepgsql/database.c:21:
+/usr/local/src/postgresql/contrib/sepgsql/sepgsql.h:17:10: fatal error: 'selinux/selinux.h' file not found
+   17 | #include <selinux/selinux.h>
+      |          ^~~~~~~~~~~~~~~~~~~
+1 error generated.
+[1;33mAnalyzing (112):[0m /usr/local/src/postgresql/contrib/sepgsql/proc.c
+[0;31m  [X] Analysis failed[0m
+In file included from /usr/local/src/postgresql/contrib/sepgsql/proc.c:23:
+/usr/local/src/postgresql/contrib/sepgsql/sepgsql.h:17:10: fatal error: 'selinux/selinux.h' file not found
+   17 | #include <selinux/selinux.h>
+      |          ^~~~~~~~~~~~~~~~~~~
+1 error generated.
+[1;33mAnalyzing (113):[0m /usr/local/src/postgresql/contrib/sepgsql/selinux.c
+[0;31m  [X] Analysis failed[0m
+In file included from /usr/local/src/postgresql/contrib/sepgsql/selinux.c:16:
+/usr/local/src/postgresql/contrib/sepgsql/sepgsql.h:17:10: fatal error: 'selinux/selinux.h' file not found
+   17 | #include <selinux/selinux.h>
+      |          ^~~~~~~~~~~~~~~~~~~
+1 error generated.
+[1;33mAnalyzing (114):[0m /usr/local/src/postgresql/contrib/sepgsql/uavc.c
+[0;31m  [X] Analysis failed[0m
+In file included from /usr/local/src/postgresql/contrib/sepgsql/uavc.c:18:
+/usr/local/src/postgresql/contrib/sepgsql/sepgsql.h:17:10: fatal error: 'selinux/selinux.h' file not found
+   17 | #include <selinux/selinux.h>
+      |          ^~~~~~~~~~~~~~~~~~~
+1 error generated.
+[1;33mAnalyzing (115):[0m /usr/local/src/postgresql/contrib/sepgsql/schema.c
+[0;31m  [X] Analysis failed[0m
+In file included from /usr/local/src/postgresql/contrib/sepgsql/schema.c:23:
+/usr/local/src/postgresql/contrib/sepgsql/sepgsql.h:17:10: fatal error: 'selinux/selinux.h' file not found
+   17 | #include <selinux/selinux.h>
+      |          ^~~~~~~~~~~~~~~~~~~
+1 error generated.
+[1;33mAnalyzing (116):[0m /usr/local/src/postgresql/contrib/jsonb_plpython/jsonb_plpython.c
+[0;31m  [X] Analysis failed[0m
+/usr/local/src/postgresql/contrib/jsonb_plpython/jsonb_plpython.c:3:10: fatal error: 'plpy_elog.h' file not found
+    3 | #include "plpy_elog.h"
+      |          ^~~~~~~~~~~~~
+1 error generated.
+[1;33mAnalyzing (117):[0m /usr/local/src/postgresql/contrib/ltree_plpython/ltree_plpython.c
+[0;31m  [X] Analysis failed[0m
+/usr/local/src/postgresql/contrib/ltree_plpython/ltree_plpython.c:4:10: fatal error: 'ltree/ltree.h' file not found
+    4 | #include "ltree/ltree.h"
+      |          ^~~~~~~~~~~~~~~
+1 error generated.
+[1;33mAnalyzing (118):[0m /usr/local/src/postgresql/contrib/tsm_system_rows/tsm_system_rows.c
+[0;32m  [OK] Analysis completed[0m
+[0;32m  [OK] Clean (no issues)[0m
+[1;33mAnalyzing (119):[0m /usr/local/src/postgresql/contrib/earthdistance/earthdistance.c
+[0;32m  [OK] Analysis completed[0m
+[0;32m  [OK] Clean (no issues)[0m
+[1;33mAnalyzing (120):[0m /usr/local/src/postgresql/contrib/amcheck/verify_nbtree.c
+[0;32m  [OK] Analysis completed[0m
+[0;32m  [OK] Clean (no issues)[0m
+[0;34mProgress: 120 files processed...[0m
+[1;33mAnalyzing (121):[0m /usr/local/src/postgresql/contrib/amcheck/verify_heapam.c
+[0;32m  [OK] Analysis completed[0m
+[0;32m  [OK] Clean (no issues)[0m
+[1;33mAnalyzing (122):[0m /usr/local/src/postgresql/contrib/bool_plperl/bool_plperl.c
+[0;31m  [X] Analysis failed[0m
+/usr/local/src/postgresql/contrib/bool_plperl/bool_plperl.c:4:10: fatal error: 'plperl.h' file not found
+    4 | #include "plperl.h"
+      |          ^~~~~~~~~~
+1 error generated.
+[1;33mAnalyzing (123):[0m /usr/local/src/postgresql/contrib/seg/seg.c
+[0;32m  [OK] Analysis completed[0m
+[0;32m  [OK] Clean (no issues)[0m
+[1;33mAnalyzing (124):[0m /usr/local/src/postgresql/contrib/seg/segscan.c
+[0;32m  [OK] Analysis completed[0m
+[0;32m  [OK] Clean (no issues)[0m
+[1;33mAnalyzing (125):[0m /usr/local/src/postgresql/contrib/seg/segparse.c
+[0;32m  [OK] Analysis completed[0m
+[0;32m  [OK] Clean (no issues)[0m
+[1;33mAnalyzing (126):[0m /usr/local/src/postgresql/contrib/sslinfo/sslinfo.c
+[0;32m  [OK] Analysis completed[0m
+[0;32m  [OK] Clean (no issues)[0m
+[1;33mAnalyzing (127):[0m /usr/local/src/postgresql/contrib/pg_walinspect/pg_walinspect.c
+[0;32m  [OK] Analysis completed[0m
+[0;32m  [OK] Clean (no issues)[0m
+[1;33mAnalyzing (128):[0m /usr/local/src/postgresql/contrib/hstore_plpython/hstore_plpython.c
+[0;31m  [X] Analysis failed[0m
+/usr/local/src/postgresql/contrib/hstore_plpython/hstore_plpython.c:4:10: fatal error: 'hstore/hstore.h' file not found
+    4 | #include "hstore/hstore.h"
+      |          ^~~~~~~~~~~~~~~~~
+1 error generated.
+[1;33mAnalyzing (129):[0m /usr/local/src/postgresql/contrib/pg_freespacemap/pg_freespacemap.c
+[0;32m  [OK] Analysis completed[0m
+[0;32m  [OK] Clean (no issues)[0m
+[1;33mAnalyzing (130):[0m /usr/local/src/postgresql/contrib/test_decoding/test_decoding.c
+[0;32m  [OK] Analysis completed[0m
+[0;32m  [OK] Clean (no issues)[0m
+[0;34mProgress: 130 files processed...[0m
+[1;33mAnalyzing (131):[0m /usr/local/src/postgresql/contrib/fuzzystrmatch/fuzzystrmatch.c
+[0;32m  [OK] Analysis completed[0m
+[0;32m  [OK] Clean (no issues)[0m
+[1;33mAnalyzing (132):[0m /usr/local/src/postgresql/contrib/fuzzystrmatch/dmetaphone.c
+[0;32m  [OK] Analysis completed[0m
+[0;32m  [OK] Clean (no issues)[0m
+[1;33mAnalyzing (133):[0m /usr/local/src/postgresql/contrib/fuzzystrmatch/daitch_mokotoff.c
+[0;32m  [OK] Analysis completed[0m
+[0;32m  [OK] Clean (no issues)[0m
+[1;33mAnalyzing (134):[0m /usr/local/src/postgresql/contrib/pageinspect/hashfuncs.c
+[0;32m  [OK] Analysis completed[0m
+[0;32m  [OK] Clean (no issues)[0m
+[1;33mAnalyzing (135):[0m /usr/local/src/postgresql/contrib/pageinspect/rawpage.c
+[0;32m  [OK] Analysis completed[0m
+[0;32m  [OK] Clean (no issues)[0m
+[1;33mAnalyzing (136):[0m /usr/local/src/postgresql/contrib/pageinspect/ginfuncs.c
+[0;32m  [OK] Analysis completed[0m
+[0;32m  [OK] Clean (no issues)[0m
+[1;33mAnalyzing (137):[0m /usr/local/src/postgresql/contrib/pageinspect/heapfuncs.c
+[0;32m  [OK] Analysis completed[0m
+[0;32m  [OK] Clean (no issues)[0m
+[1;33mAnalyzing (138):[0m /usr/local/src/postgresql/contrib/pageinspect/btreefuncs.c
+[0;32m  [OK] Analysis completed[0m
+[0;32m  [OK] Clean (no issues)[0m
+[1;33mAnalyzing (139):[0m /usr/local/src/postgresql/contrib/pageinspect/gistfuncs.c
+[0;32m  [OK] Analysis completed[0m
+[0;32m  [OK] Clean (no issues)[0m
+[1;33mAnalyzing (140):[0m /usr/local/src/postgresql/contrib/pageinspect/fsmfuncs.c
+[0;32m  [OK] Analysis completed[0m
+[0;32m  [OK] Clean (no issues)[0m
+[0;34mProgress: 140 files processed...[0m
+[1;33mAnalyzing (141):[0m /usr/local/src/postgresql/contrib/pageinspect/brinfuncs.c
+[0;32m  [OK] Analysis completed[0m
+[0;32m  [OK] Clean (no issues)[0m
+[1;33mAnalyzing (142):[0m /usr/local/src/postgresql/contrib/vacuumlo/vacuumlo.c
+[0;32m  [OK] Analysis completed[0m
+[0;32m  [OK] Clean (no issues)[0m
+[1;33mAnalyzing (143):[0m /usr/local/src/postgresql/contrib/uuid-ossp/uuid-ossp.c
+[0;31m  [X] Analysis failed[0m
+/usr/local/src/postgresql/contrib/uuid-ossp/uuid-ossp.c:40:2: error: "please use configure's --with-uuid switch to select a UUID library"
+   40 | #error "please use configure's --with-uuid switch to select a UUID library"
+      |  ^
+/usr/local/src/postgresql/contrib/uuid-ossp/uuid-ossp.c:275:11: error: expected ';' after expression
+  275 |                                 uuid_t          uu;
+      |                                       ^
+      |                                       ;
+/usr/local/src/postgresql/contrib/uuid-ossp/uuid-ossp.c:275:5: error: use of undeclared identifier 'uuid_t'
+  275 |                                 uuid_t          uu;
+      |                                 ^
+/usr/local/src/postgresql/contrib/uuid-ossp/uuid-ossp.c:275:13: error: use of undeclared identifier 'uu'
+  275 |                                 uuid_t          uu;
+      |                                                 ^
+/usr/local/src/postgresql/contrib/uuid-ossp/uuid-ossp.c:276:23: error: use of undeclared identifier 'uuid_s_ok'
+  276 |                                 uint32_t        status = uuid_s_ok;
+      |                                                          ^
+/usr/local/src/postgresql/contrib/uuid-ossp/uuid-ossp.c:279:5: error: call to undeclared function 'uuid_create'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
+  279 |                                 uuid_create(&uu, &status);
+      |                                 ^
+/usr/local/src/postgresql/contrib/uuid-ossp/uuid-ossp.c:279:18: error: use of undeclared identifier 'uu'
+  279 |                                 uuid_create(&uu, &status);
+      |                                              ^
+/usr/local/src/postgresql/contrib/uuid-ossp/uuid-ossp.c:281:19: error: use of undeclared identifier 'uuid_s_ok'
+  281 |                                 if (status == uuid_s_ok)
+      |                                               ^
+/usr/local/src/postgresql/contrib/uuid-ossp/uuid-ossp.c:283:6: error: call to undeclared function 'uuid_to_string'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
+  283 |                                         uuid_to_string(&uu, &str, &status);
+      |                                         ^
+/usr/local/src/postgresql/contrib/uuid-ossp/uuid-ossp.c:283:22: error: use of undeclared identifier 'uu'
+  283 |                                         uuid_to_string(&uu, &str, &status);
+      |                                                         ^
+/usr/local/src/postgresql/contrib/uuid-ossp/uuid-ossp.c:284:20: error: use of undeclared identifier 'uuid_s_ok'
+  284 |                                         if (status == uuid_s_ok)
+      |                                                       ^
+/usr/local/src/postgresql/contrib/uuid-ossp/uuid-ossp.c:311:19: error: use of undeclared identifier 'uuid_s_ok'
+  311 |                                 if (status != uuid_s_ok)
+      |                                               ^
+/usr/local/src/postgresql/contrib/uuid-ossp/uuid-ossp.c:323:15: error: expected ';' after expression
+  323 |                                 dce_uuid_t      uu;
+      |                                           ^
+      |                                           ;
+/usr/local/src/postgresql/contrib/uuid-ossp/uuid-ossp.c:323:5: error: use of undeclared identifier 'uuid_t'
+  323 |                                 dce_uuid_t      uu;
+      |                                 ^
+/usr/local/src/postgresql/contrib/uuid-ossp/uuid-ossp.c:75:20: note: expanded from macro 'dce_uuid_t'
+   75 | #define dce_uuid_t uuid_t
+      |                    ^
+/usr/local/src/postgresql/contrib/uuid-ossp/uuid-ossp.c:323:16: error: use of undeclared identifier 'uu'
+  323 |                                 dce_uuid_t      uu;
+      |                                                 ^
+/usr/local/src/postgresql/contrib/uuid-ossp/uuid-ossp.c:336:47: error: use of undeclared identifier 'uu'
+  336 |                                         if (pg_cryptohash_update(ctx, ns, sizeof(uu)) < 0 ||
+      |                                                                                  ^
+/usr/local/src/postgresql/contrib/uuid-ossp/uuid-ossp.c:341:54: error: use of undeclared identifier 'uu'
+  341 |                                         if (pg_cryptohash_final(ctx, (unsigned char *) &uu,
+      |                                                                                         ^
+/usr/local/src/postgresql/contrib/uuid-ossp/uuid-ossp.c:342:19: error: use of undeclared identifier 'uu'
+  342 |                                                                                         sizeof(uu)) < 0)
+      |                                                                                                ^
+/usr/local/src/postgresql/contrib/uuid-ossp/uuid-ossp.c:355:47: error: use of undeclared identifier 'uu'
+  355 |                                         if (pg_cryptohash_update(ctx, ns, sizeof(uu)) < 0 ||
+      |                                                                                  ^
+fatal error: too many errors emitted, stopping now [-ferror-limit=]
+20 errors generated.
+[1;33mAnalyzing (144):[0m /usr/local/src/postgresql/contrib/auto_explain/auto_explain.c
+[0;32m  [OK] Analysis completed[0m
+[0;32m  [OK] Clean (no issues)[0m
+[1;33mAnalyzing (145):[0m /usr/local/src/postgresql/contrib/unaccent/unaccent.c
+[0;32m  [OK] Analysis completed[0m
+[0;32m  [OK] Clean (no issues)[0m
+[1;33mAnalyzing (146):[0m /usr/local/src/postgresql/contrib/cube/cube.c
+[0;32m  [OK] Analysis completed[0m
+[0;32m  [OK] Clean (no issues)[0m
+[1;33mAnalyzing (147):[0m /usr/local/src/postgresql/contrib/cube/cubeparse.c
+[0;32m  [OK] Analysis completed[0m
+[0;32m  [OK] Clean (no issues)[0m
+[1;33mAnalyzing (148):[0m /usr/local/src/postgresql/contrib/cube/cubescan.c
+[0;32m  [OK] Analysis completed[0m
+[0;32m  [OK] Clean (no issues)[0m
+[1;33mAnalyzing (149):[0m /usr/local/src/postgresql/contrib/auth_delay/auth_delay.c
+[0;32m  [OK] Analysis completed[0m
+[0;32m  [OK] Clean (no issues)[0m
+[1;33mAnalyzing (150):[0m /usr/local/src/postgresql/contrib/basic_archive/basic_archive.c
+[0;32m  [OK] Analysis completed[0m
+[0;32m  [OK] Clean (no issues)[0m
+[0;34mProgress: 150 files processed...[0m
+[1;33mAnalyzing (151):[0m /usr/local/src/postgresql/contrib/basebackup_to_shell/basebackup_to_shell.c
+[0;31m  [X] Analysis failed[0m
+/usr/local/src/postgresql/contrib/basebackup_to_shell/basebackup_to_shell.c:14:10: fatal error: 'backup/basebackup_target.h' file not found
+   14 | #include "backup/basebackup_target.h"
+      |          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+1 error generated.
+[1;33mAnalyzing (152):[0m /usr/local/src/postgresql/contrib/ltree/ltree_io.c
+[0;32m  [OK] Analysis completed[0m
+[0;32m  [OK] Clean (no issues)[0m
+[1;33mAnalyzing (153):[0m /usr/local/src/postgresql/contrib/ltree/_ltree_op.c
+[0;32m  [OK] Analysis completed[0m
+[0;32m  [OK] Clean (no issues)[0m
+[1;33mAnalyzing (154):[0m /usr/local/src/postgresql/contrib/ltree/ltree_gist.c
+[0;32m  [OK] Analysis completed[0m
+[0;32m  [OK] Clean (no issues)[0m
+[1;33mAnalyzing (155):[0m /usr/local/src/postgresql/contrib/ltree/lquery_op.c
+[0;32m  [OK] Analysis completed[0m
+[0;32m  [OK] Clean (no issues)[0m
+[1;33mAnalyzing (156):[0m /usr/local/src/postgresql/contrib/ltree/ltxtquery_op.c
+[0;32m  [OK] Analysis completed[0m
+[0;32m  [OK] Clean (no issues)[0m
+[1;33mAnalyzing (157):[0m /usr/local/src/postgresql/contrib/ltree/ltree_op.c
+[0;32m  [OK] Analysis completed[0m
+[0;32m  [OK] Clean (no issues)[0m
+[1;33mAnalyzing (158):[0m /usr/local/src/postgresql/contrib/ltree/_ltree_gist.c
+[0;32m  [OK] Analysis completed[0m
+[0;32m  [OK] Clean (no issues)[0m
+[1;33mAnalyzing (159):[0m /usr/local/src/postgresql/contrib/ltree/crc32.c
+[0;32m  [OK] Analysis completed[0m
+[0;32m  [OK] Clean (no issues)[0m
+[1;33mAnalyzing (160):[0m /usr/local/src/postgresql/contrib/ltree/ltxtquery_io.c
+[0;32m  [OK] Analysis completed[0m
+[0;32m  [OK] Clean (no issues)[0m
+[0;34mProgress: 160 files processed...[0m
+[1;33mAnalyzing (161):[0m /usr/local/src/postgresql/contrib/pgrowlocks/pgrowlocks.c
+[0;32m  [OK] Analysis completed[0m
+[0;32m  [OK] Clean (no issues)[0m
+
+=========================================
+[0;32mANALYSIS COMPLETE[0m
+=========================================
+Total files found: 161
+Successfully analyzed: 143
+Failed to analyze: 18
+Files with warnings/errors: 3
+
+Results saved to: analysis_contrib_results.out
+
+=========================================
