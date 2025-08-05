@@ -1,3 +1,5 @@
+>_bt_doinsert,IndexTuple, /usr/local/src/postgresql/src/backend/access/nbtree/nbtinsert.c
+>_bt_insertonpg,IndexTuple, /usr/local/src/postgresql/src/backend/access/nbtree/nbtinsert.c
 >ParallelBackupStart,ArchiveHandle *, /usr/local/src/postgresql/src/bin/pg_dump/parallel.c
 >executeQueryOrDie,PGconn *, /usr/local/src/postgresql/src/bin/pg_upgrade/server.c
 >executeCommand,PGconn *, /usr/local/src/postgresql/src/fe_utils/query_utils.c

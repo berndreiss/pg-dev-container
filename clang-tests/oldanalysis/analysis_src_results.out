@@ -1,0 +1,1838 @@
+PostgresChecker Static Analysis Results
+=============================================================
+Directory: /usr/local/src/postgresql/src
+Path: /usr/local/src/postgresql
+Started: Wed Jul 30 08:37:08 PM UTC 2025
+Clang version: Debian clang version 19.1.4 (1~deb12u1)
+
+========================================
+File: /usr/local/src/postgresql/src/backend/utils/misc/guc.c
+Time: Wed Jul 30 08:40:55 PM UTC 2025
+Status: ISSUES FOUND
+Errors: 0, Warnings: 3
+========================================
+/usr/local/src/postgresql/src/backend/utils/misc/guc.c:700:10: warning: Attempt to use released memory: ptr [postgres.PostgresChecker]
+  700 |                 Assert(GetMemoryChunkContext(ptr) == GUCMemoryContext);
+      |                        ^~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/local/postgresql-17.2/include/server/c.h:875:9: note: expanded from macro 'Assert'
+  875 |                 if (!(condition)) \
+      |                       ^~~~~~~~~
+/usr/local/src/postgresql/src/backend/utils/misc/guc.c:701:3: note: Freeing function: pfree (ptr)
+  701 |                 pfree(ptr);
+      |                 ^
+/usr/local/src/postgresql/src/backend/utils/misc/guc.c:701:3: warning: Attempt to free released memory: ptr [postgres.PostgresChecker]
+  701 |                 pfree(ptr);
+      |                 ^~~~~~~~~~
+/usr/local/src/postgresql/src/backend/utils/misc/guc.c:701:3: note: Freeing function: pfree (ptr)
+/usr/local/src/postgresql/src/backend/utils/misc/guc.c:1729:6: warning: Attempt to use released memory [postgres.PostgresChecker]
+ 1729 |                                         elog(FATAL, "failed to initialize %s to \"%s\"",
+      |                                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 1730 |                                                  conf->gen.name, newval ? newval : "");
+      |                                                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/local/postgresql-17.2/include/server/utils/elog.h:240:18: note: expanded from macro 'elog'
+  240 |         ereport(elevel, errmsg_internal(__VA_ARGS__))
+      |         ~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/local/postgresql-17.2/include/server/utils/elog.h:164:37: note: expanded from macro 'ereport'
+  164 |         ereport_domain(elevel, TEXTDOMAIN, __VA_ARGS__)
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~
+/usr/local/postgresql-17.2/include/server/utils/elog.h:147:4: note: expanded from macro 'ereport_domain'
+  147 |                         __VA_ARGS__, errfinish(__FILE__, __LINE__, __func__); \
+      |                         ^~~~~~~~~~~
+/usr/local/src/postgresql/src/backend/utils/misc/guc.c:701:3: note: Freeing function: pfree (ptr)
+  701 |                 pfree(ptr);
+      |                 ^
+3 warnings generated.
+
+========================================
+File: /usr/local/src/postgresql/src/backend/utils/mmgr/generation.c
+Time: Wed Jul 30 08:41:05 PM UTC 2025
+Status: ISSUES FOUND
+Errors: 0, Warnings: 6
+========================================
+warning: Path diagnostic report is not generated. Current output format does not support diagnostics that cross file boundaries. Refer to --analyzer-output for valid output formats
+warning: Path diagnostic report is not generated. Current output format does not support diagnostics that cross file boundaries. Refer to --analyzer-output for valid output formats
+warning: Path diagnostic report is not generated. Current output format does not support diagnostics that cross file boundaries. Refer to --analyzer-output for valid output formats
+In file included from /usr/local/src/postgresql/src/backend/utils/mmgr/generation.c:38:
+/usr/local/postgresql-17.2/include/server/lib/ilist.h:505:9: warning: Attempt to use released memory [postgres.PostgresChecker]
+  505 |         return node->next != &head->head;
+      |                ^~~~~~~~~~
+/usr/local/src/postgresql/src/backend/utils/mmgr/generation.c:680:2: note: Freeing function: free (block)
+  680 |         free(block);
+      |         ^
+In file included from /usr/local/src/postgresql/src/backend/utils/mmgr/generation.c:38:
+/usr/local/postgresql-17.2/include/server/lib/ilist.h:558:2: warning: Attempt to use released memory [postgres.PostgresChecker]
+  558 |         return (char *) head->head.next - off;
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/backend/utils/mmgr/generation.c:680:2: note: Freeing function: free (block)
+  680 |         free(block);
+      |         ^
+In file included from /usr/local/src/postgresql/src/backend/utils/mmgr/generation.c:38:
+/usr/local/postgresql-17.2/include/server/lib/ilist.h:567:2: warning: Attempt to use released memory [postgres.PostgresChecker]
+  567 |         return (dlist_node *) dlist_head_element_off(head, 0);
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/backend/utils/mmgr/generation.c:680:2: note: Freeing function: free (block)
+  680 |         free(block);
+      |         ^
+3 warnings generated.
+
+========================================
+File: /usr/local/src/postgresql/src/backend/utils/mmgr/bump.c
+Time: Wed Jul 30 08:41:10 PM UTC 2025
+Status: ISSUES FOUND
+Errors: 0, Warnings: 6
+========================================
+warning: Path diagnostic report is not generated. Current output format does not support diagnostics that cross file boundaries. Refer to --analyzer-output for valid output formats
+warning: Path diagnostic report is not generated. Current output format does not support diagnostics that cross file boundaries. Refer to --analyzer-output for valid output formats
+warning: Path diagnostic report is not generated. Current output format does not support diagnostics that cross file boundaries. Refer to --analyzer-output for valid output formats
+In file included from /usr/local/src/postgresql/src/backend/utils/mmgr/bump.c:41:
+/usr/local/postgresql-17.2/include/server/lib/ilist.h:505:9: warning: Attempt to use released memory [postgres.PostgresChecker]
+  505 |         return node->next != &head->head;
+      |                ^~~~~~~~~~
+/usr/local/src/postgresql/src/backend/utils/mmgr/bump.c:609:2: note: Freeing function: free (block)
+  609 |         free(block);
+      |         ^
+In file included from /usr/local/src/postgresql/src/backend/utils/mmgr/bump.c:41:
+/usr/local/postgresql-17.2/include/server/lib/ilist.h:558:2: warning: Attempt to use released memory [postgres.PostgresChecker]
+  558 |         return (char *) head->head.next - off;
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/backend/utils/mmgr/bump.c:609:2: note: Freeing function: free (block)
+  609 |         free(block);
+      |         ^
+In file included from /usr/local/src/postgresql/src/backend/utils/mmgr/bump.c:41:
+/usr/local/postgresql-17.2/include/server/lib/ilist.h:567:2: warning: Attempt to use released memory [postgres.PostgresChecker]
+  567 |         return (dlist_node *) dlist_head_element_off(head, 0);
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/backend/utils/mmgr/bump.c:609:2: note: Freeing function: free (block)
+  609 |         free(block);
+      |         ^
+3 warnings generated.
+
+========================================
+File: /usr/local/src/postgresql/src/backend/commands/vacuumparallel.c
+Time: Wed Jul 30 08:42:14 PM UTC 2025
+Status: ISSUES FOUND
+Errors: 0, Warnings: 2
+========================================
+/usr/local/src/postgresql/src/backend/commands/vacuumparallel.c:488:54: warning: Attempt to use released memory: dead_items [postgres.PostgresChecker]
+  488 |         pvs->shared->dead_items_dsa_handle = dsa_get_handle(TidStoreGetDSA(dead_items));
+      |                                                             ^~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/backend/commands/vacuumparallel.c:483:2: note: Freeing function: TidStoreDestroy (dead_items)
+  483 |         TidStoreDestroy(dead_items);
+      |         ^
+/usr/local/src/postgresql/src/backend/commands/vacuumparallel.c:489:35: warning: Attempt to use released memory: dead_items [postgres.PostgresChecker]
+  489 |         pvs->shared->dead_items_handle = TidStoreGetHandle(dead_items);
+      |                                          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/backend/commands/vacuumparallel.c:483:2: note: Freeing function: TidStoreDestroy (dead_items)
+  483 |         TidStoreDestroy(dead_items);
+      |         ^
+2 warnings generated.
+
+========================================
+File: /usr/local/src/postgresql/src/backend/tsearch/to_tsany.c
+Time: Wed Jul 30 08:43:29 PM UTC 2025
+Status: ISSUES FOUND
+Errors: 0, Warnings: 2
+========================================
+/usr/local/src/postgresql/src/backend/tsearch/to_tsany.c:208:3: warning: Attempt to use released memory [postgres.PostgresChecker]
+  208 |                 memcpy(str + stroff, prs->words[i].word, prs->words[i].len);
+      |                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/backend/tsearch/to_tsany.c:137:4: note: Freeing function: pfree
+  137 |                         pfree(ptr->word);
+      |                         ^
+/usr/local/src/postgresql/src/backend/tsearch/to_tsany.c:210:3: warning: Attempt to free released memory [postgres.PostgresChecker]
+  210 |                 pfree(prs->words[i].word);
+      |                 ^~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/backend/tsearch/to_tsany.c:137:4: note: Freeing function: pfree
+  137 |                         pfree(ptr->word);
+      |                         ^
+2 warnings generated.
+
+========================================
+File: /usr/local/src/postgresql/src/backend/catalog/objectaddress.c
+Time: Wed Jul 30 08:43:34 PM UTC 2025
+Status: ISSUES FOUND
+Errors: 0, Warnings: 4
+========================================
+/usr/local/src/postgresql/src/backend/catalog/objectaddress.c:3942:5: warning: Attempt to use released memory: pubname [postgres.PostgresChecker]
+ 3942 |                                 appendStringInfo(&buffer, _("publication of schema %s in publication %s"),
+      |                                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 3943 |                                                                  nspname, pubname);
+      |                                                                  ~~~~~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/backend/catalog/objectaddress.c:2859:3: note: Freeing function: pfree
+ 2859 |                 pfree(*pubname);
+      |                 ^
+/usr/local/src/postgresql/src/backend/catalog/objectaddress.c:3944:5: warning: Attempt to free released memory: pubname [postgres.PostgresChecker]
+ 3944 |                                 pfree(pubname);
+      |                                 ^~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/backend/catalog/objectaddress.c:2859:3: note: Freeing function: pfree
+ 2859 |                 pfree(*pubname);
+      |                 ^
+/usr/local/src/postgresql/src/backend/catalog/objectaddress.c:5792:5: warning: Attempt to use released memory: pubname [postgres.PostgresChecker]
+ 5792 |                                 appendStringInfo(&buffer, "%s in publication %s",
+      |                                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 5793 |                                                                  nspname, pubname);
+      |                                                                  ~~~~~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/backend/catalog/objectaddress.c:2859:3: note: Freeing function: pfree
+ 2859 |                 pfree(*pubname);
+      |                 ^
+/usr/local/src/postgresql/src/backend/catalog/objectaddress.c:5798:6: warning: Attempt to free released memory: pubname [postgres.PostgresChecker]
+ 5798 |                                         pfree(pubname);
+      |                                         ^~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/backend/catalog/objectaddress.c:2859:3: note: Freeing function: pfree
+ 2859 |                 pfree(*pubname);
+      |                 ^
+4 warnings generated.
+
+========================================
+File: /usr/local/src/postgresql/src/backend/catalog/index.c
+Time: Wed Jul 30 08:44:02 PM UTC 2025
+Status: ISSUES FOUND
+Errors: 0, Warnings: 1
+========================================
+/usr/local/src/postgresql/src/backend/catalog/index.c:549:2: warning: Attempt to free potentially released memory: indstate [postgres.PostgresChecker]
+  549 |         CatalogCloseIndexes(indstate);
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/backend/catalog/index.c:547:2: note: Freeing function: InsertPgAttributeTuples (indstate)
+  547 |         InsertPgAttributeTuples(pg_attribute, indexTupDesc, InvalidOid, attrs_extra, indstate);
+      |         ^
+1 warning generated.
+
+========================================
+File: /usr/local/src/postgresql/src/backend/optimizer/util/inherit.c
+Time: Wed Jul 30 08:44:27 PM UTC 2025
+Status: ISSUES FOUND
+Errors: 0, Warnings: 1
+========================================
+/usr/local/src/postgresql/src/backend/optimizer/util/inherit.c:381:14: warning: Attempt to use potentially released memory: live_parts [postgres.PostgresChecker]
+  381 |         while ((i = bms_next_member(live_parts, i)) >= 0)
+      |                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/backend/optimizer/util/inherit.c:397:26: note: The return value should probably be reassigned
+  397 |                         relinfo->live_parts = bms_del_member(relinfo->live_parts, i);
+      |                                               ^
+1 warning generated.
+
+========================================
+File: /usr/local/src/postgresql/src/backend/optimizer/path/indxpath.c
+Time: Wed Jul 30 08:44:56 PM UTC 2025
+Status: ISSUES FOUND
+Errors: 0, Warnings: 3
+========================================
+/usr/local/src/postgresql/src/backend/optimizer/path/indxpath.c:748:5: warning: Attempt to use potentially released memory [postgres.PostgresChecker]
+  748 |                         (ipath->path.pathkeys == NIL ||
+      |                          ^~~~~~~~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/backend/optimizer/path/indxpath.c:745:4: note: Freeing function: add_path (ipath)
+  745 |                         add_path(rel, (Path *) ipath);
+      |                         ^
+/usr/local/src/postgresql/src/backend/optimizer/path/indxpath.c:749:5: warning: Attempt to use potentially released memory [postgres.PostgresChecker]
+  749 |                          ipath->indexselectivity < 1.0))
+      |                          ^~~~~~~~~~~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/backend/optimizer/path/indxpath.c:745:4: note: Freeing function: add_path (ipath)
+  745 |                         add_path(rel, (Path *) ipath);
+      |                         ^
+/usr/local/src/postgresql/src/backend/optimizer/path/indxpath.c:750:21: warning: Attempt to use potentially released memory: ipath [postgres.PostgresChecker]
+  750 |                         *bitindexpaths = lappend(*bitindexpaths, ipath);
+      |                                          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/backend/optimizer/path/indxpath.c:745:4: note: Freeing function: add_path (ipath)
+  745 |                         add_path(rel, (Path *) ipath);
+      |                         ^
+3 warnings generated.
+
+========================================
+File: /usr/local/src/postgresql/src/backend/executor/execUtils.c
+Time: Wed Jul 30 08:46:31 PM UTC 2025
+Status: ISSUES FOUND
+Errors: 0, Warnings: 3
+========================================
+/usr/local/src/postgresql/src/backend/executor/execUtils.c:421:22: warning: Attempt to use released memory [postgres.PostgresChecker]
+  421 |         MemoryContextDelete(econtext->ecxt_per_tuple_memory);
+      |                             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/backend/executor/execUtils.c:428:2: note: Freeing function: pfree (econtext)
+  428 |         pfree(econtext);
+      |         ^
+/usr/local/src/postgresql/src/backend/executor/execUtils.c:423:11: warning: Attempt to use released memory [postgres.PostgresChecker]
+  423 |         estate = econtext->ecxt_estate;
+      |                  ^~~~~~~~~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/backend/executor/execUtils.c:428:2: note: Freeing function: pfree (econtext)
+  428 |         pfree(econtext);
+      |         ^
+/usr/local/src/postgresql/src/backend/executor/execUtils.c:428:2: warning: Attempt to free released memory: econtext [postgres.PostgresChecker]
+  428 |         pfree(econtext);
+      |         ^~~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/backend/executor/execUtils.c:428:2: note: Freeing function: pfree (econtext)
+3 warnings generated.
+
+========================================
+File: /usr/local/src/postgresql/src/backend/storage/large_object/inv_api.c
+Time: Wed Jul 30 08:47:04 PM UTC 2025
+Status: ISSUES FOUND
+Errors: 0, Warnings: 1
+========================================
+/usr/local/src/postgresql/src/backend/storage/large_object/inv_api.c:683:5: warning: Attempt to free released memory: datafield [postgres.PostgresChecker]
+  683 |                                 pfree(datafield);
+      |                                 ^~~~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/backend/storage/large_object/inv_api.c:683:5: note: Freeing function: pfree (datafield)
+1 warning generated.
+
+========================================
+File: /usr/local/src/postgresql/src/backend/access/nbtree/nbtree.c
+Time: Wed Jul 30 08:48:33 PM UTC 2025
+Status: ISSUES FOUND
+Errors: 0, Warnings: 1
+========================================
+/usr/local/src/postgresql/src/backend/access/nbtree/nbtree.c:197:2: warning: Attempt to free potentially released memory: itup [postgres.PostgresChecker]
+  197 |         pfree(itup);
+      |         ^~~~~~~~~~~
+/usr/local/src/postgresql/src/backend/access/nbtree/nbtree.c:195:11: note: Freeing function: _bt_doinsert (itup)
+  195 |         result = _bt_doinsert(rel, itup, checkUnique, indexUnchanged, heapRel);
+      |                  ^
+1 warning generated.
+
+========================================
+File: /usr/local/src/postgresql/src/common/parse_manifest.c
+Time: Wed Jul 30 08:50:20 PM UTC 2025
+Status: ISSUES FOUND
+Errors: 0, Warnings: 1
+========================================
+/usr/local/src/postgresql/src/common/parse_manifest.c:174:2: warning: Attempt to free potentially released memory: incstate [postgres.PostgresChecker]
+  174 |         pfree(incstate);
+      |         ^~~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/common/parse_manifest.c:172:2: note: Freeing function: freeJsonLexContext
+  172 |         freeJsonLexContext(&(incstate->lex));
+      |         ^
+1 warning generated.
+
+========================================
+File: /usr/local/src/postgresql/src/interfaces/ecpg/ecpglib/prepare.c
+Time: Wed Jul 30 08:50:53 PM UTC 2025
+Status: ISSUES FOUND
+Errors: 0, Warnings: 2
+========================================
+/usr/local/src/postgresql/src/interfaces/ecpg/ecpglib/prepare.c:202:2: warning: Possible attempt to free potentially released memory: query [postgres.PostgresChecker]
+  202 |         PQclear(query);
+      |         ^~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/interfaces/ecpg/ecpglib/prepare.c:192:7: note: The return value should probably be checked
+  192 |         if (!ecpg_check_PQresult(query, stmt->lineno, stmt->connection->connection, stmt->compat))
+      |              ^
+/usr/local/src/postgresql/src/interfaces/ecpg/ecpglib/prepare.c:284:5: warning: Possible attempt to free potentially released memory: query [postgres.PostgresChecker]
+  284 |                                 PQclear(query);
+      |                                 ^~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/interfaces/ecpg/ecpglib/prepare.c:280:8: note: The return value should probably be checked
+  280 |                         if (ecpg_check_PQresult(query, lineno,
+      |                             ^
+2 warnings generated.
+
+========================================
+File: /usr/local/src/postgresql/src/interfaces/ecpg/ecpglib/execute.c
+Time: Wed Jul 30 08:50:54 PM UTC 2025
+Status: ISSUES FOUND
+Errors: 0, Warnings: 9
+========================================
+/usr/local/src/postgresql/src/interfaces/ecpg/ecpglib/execute.c:275:11: warning: Attempt to use potentially released memory: query [postgres.PostgresChecker]
+  275 |         else if (PQresultStatus(query) == PGRES_TUPLES_OK)
+      |                  ^~~~~~~~~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/interfaces/ecpg/ecpglib/execute.c:273:7: note: The return value should probably be checked
+  273 |         if (!ecpg_check_PQresult(query, stmt->lineno, stmt->connection->connection, stmt->compat))
+      |              ^
+/usr/local/src/postgresql/src/interfaces/ecpg/ecpglib/execute.c:277:7: warning: Attempt to use potentially released memory: query [postgres.PostgresChecker]
+  277 |                 if (PQntuples(query) == 0)
+      |                     ^~~~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/interfaces/ecpg/ecpglib/execute.c:273:7: note: The return value should probably be checked
+  273 |         if (!ecpg_check_PQresult(query, stmt->lineno, stmt->connection->connection, stmt->compat))
+      |              ^
+/usr/local/src/postgresql/src/interfaces/ecpg/ecpglib/execute.c:281:29: warning: Attempt to use potentially released memory: query [postgres.PostgresChecker]
+  281 |                         isarray = (atol((char *) PQgetvalue(query, 0, 0)) == -1) ? ECPG_ARRAY_ARRAY : ECPG_ARRAY_VECTOR;
+      |                                                  ^~~~~~~~~~~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/interfaces/ecpg/ecpglib/execute.c:273:7: note: The return value should probably be checked
+  273 |         if (!ecpg_check_PQresult(query, stmt->lineno, stmt->connection->connection, stmt->compat))
+      |              ^
+/usr/local/src/postgresql/src/interfaces/ecpg/ecpglib/execute.c:291:3: warning: Possible attempt to free potentially released memory: query [postgres.PostgresChecker]
+  291 |                 PQclear(query);
+      |                 ^~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/interfaces/ecpg/ecpglib/execute.c:273:7: note: The return value should probably be checked
+  273 |         if (!ecpg_check_PQresult(query, stmt->lineno, stmt->connection->connection, stmt->compat))
+      |              ^
+/usr/local/src/postgresql/src/interfaces/ecpg/ecpglib/execute.c:899:8: warning: Attempt to free potentially released memory: mallocedval [postgres.PostgresChecker]
+  899 |                                                         ecpg_free(mallocedval);
+      |                                                         ^~~~~~~~~~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/interfaces/ecpg/ecpglib/execute.c:897:23: note: Freeing function: ecpg_realloc (mallocedval)
+  897 |                                                 if (!(newcopy = ecpg_realloc(mallocedval, strlen(mallocedval) + slen + 2, lineno)))
+      |                                                                 ^
+/usr/local/src/postgresql/src/interfaces/ecpg/ecpglib/execute.c:946:8: warning: Attempt to free potentially released memory: mallocedval [postgres.PostgresChecker]
+  946 |                                                         ecpg_free(mallocedval);
+      |                                                         ^~~~~~~~~~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/interfaces/ecpg/ecpglib/execute.c:944:23: note: Freeing function: ecpg_realloc (mallocedval)
+  944 |                                                 if (!(newcopy = ecpg_realloc(mallocedval, strlen(mallocedval) + slen + 2, lineno)))
+      |                                                                 ^
+/usr/local/src/postgresql/src/interfaces/ecpg/ecpglib/execute.c:993:8: warning: Attempt to free potentially released memory: mallocedval [postgres.PostgresChecker]
+  993 |                                                         ecpg_free(mallocedval);
+      |                                                         ^~~~~~~~~~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/interfaces/ecpg/ecpglib/execute.c:991:23: note: Freeing function: ecpg_realloc (mallocedval)
+  991 |                                                 if (!(newcopy = ecpg_realloc(mallocedval, strlen(mallocedval) + slen + 2, lineno)))
+      |                                                                 ^
+/usr/local/src/postgresql/src/interfaces/ecpg/ecpglib/execute.c:1040:8: warning: Attempt to free potentially released memory: mallocedval [postgres.PostgresChecker]
+ 1040 |                                                         ecpg_free(mallocedval);
+      |                                                         ^~~~~~~~~~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/interfaces/ecpg/ecpglib/execute.c:1038:23: note: Freeing function: ecpg_realloc (mallocedval)
+ 1038 |                                                 if (!(newcopy = ecpg_realloc(mallocedval, strlen(mallocedval) + slen + 2, lineno)))
+      |                                                                 ^
+/usr/local/src/postgresql/src/interfaces/ecpg/ecpglib/execute.c:1591:3: warning: Possible attempt to free potentially released memory [postgres.PostgresChecker]
+ 1591 |                 PQclear(stmt->results);
+      |                 ^~~~~~~~~~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/interfaces/ecpg/ecpglib/execute.c:1586:8: note: The return value should probably be checked
+ 1586 |                 if (!ecpg_check_PQresult(stmt->results, stmt->lineno, stmt->connection->connection, stmt->compat))
+      |                      ^
+9 warnings generated.
+
+========================================
+File: /usr/local/src/postgresql/src/test/examples/testlibpq4.c
+Time: Wed Jul 30 08:51:06 PM UTC 2025
+Status: ISSUES FOUND
+Errors: 0, Warnings: 11
+========================================
+/usr/local/src/postgresql/src/test/examples/testlibpq4.c:111:2: warning: Possible attempt to free potentially released memory: res1 [postgres.PostgresChecker]
+  111 |         PQclear(res1);
+      |         ^~~~~~~~~~~~~
+/usr/local/src/postgresql/src/test/examples/testlibpq4.c:103:3: note: Freeing function: PQclear (res1)
+  103 |                 PQclear(res1);
+      |                 ^
+/usr/local/src/postgresql/src/test/examples/testlibpq4.c:116:9: warning: Attempt to use released memory: conn1 [postgres.PostgresChecker]
+  116 |         res1 = PQexec(conn1, "DECLARE myportal CURSOR FOR select * from pg_database");
+      |                ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/test/examples/testlibpq4.c:18:3: note: Freeing function: PQfinish (conn1)
+   18 |                 PQfinish(conn1);
+      |                 ^
+/usr/local/src/postgresql/src/test/examples/testlibpq4.c:123:2: warning: Possible attempt to free potentially released memory: res1 [postgres.PostgresChecker]
+  123 |         PQclear(res1);
+      |         ^~~~~~~~~~~~~
+/usr/local/src/postgresql/src/test/examples/testlibpq4.c:120:3: note: Freeing function: PQclear (res1)
+  120 |                 PQclear(res1);
+      |                 ^
+/usr/local/src/postgresql/src/test/examples/testlibpq4.c:125:9: warning: Attempt to use released memory: conn1 [postgres.PostgresChecker]
+  125 |         res1 = PQexec(conn1, "FETCH ALL in myportal");
+      |                ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/test/examples/testlibpq4.c:18:3: note: Freeing function: PQfinish (conn1)
+   18 |                 PQfinish(conn1);
+      |                 ^
+/usr/local/src/postgresql/src/test/examples/testlibpq4.c:134:12: warning: Attempt to use potentially released memory: res1 [postgres.PostgresChecker]
+  134 |         nFields = PQnfields(res1);
+      |                   ^~~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/test/examples/testlibpq4.c:129:3: note: Freeing function: PQclear (res1)
+  129 |                 PQclear(res1);
+      |                 ^
+/usr/local/src/postgresql/src/test/examples/testlibpq4.c:136:19: warning: Attempt to use potentially released memory: res1 [postgres.PostgresChecker]
+  136 |                 printf("%-15s", PQfname(res1, i));
+      |                                 ^~~~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/test/examples/testlibpq4.c:129:3: note: Freeing function: PQclear (res1)
+  129 |                 PQclear(res1);
+      |                 ^
+/usr/local/src/postgresql/src/test/examples/testlibpq4.c:140:18: warning: Attempt to use potentially released memory: res1 [postgres.PostgresChecker]
+  140 |         for (i = 0; i < PQntuples(res1); i++)
+      |                         ^~~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/test/examples/testlibpq4.c:129:3: note: Freeing function: PQclear (res1)
+  129 |                 PQclear(res1);
+      |                 ^
+/usr/local/src/postgresql/src/test/examples/testlibpq4.c:143:20: warning: Attempt to use potentially released memory: res1 [postgres.PostgresChecker]
+  143 |                         printf("%-15s", PQgetvalue(res1, i, j));
+      |                                         ^~~~~~~~~~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/test/examples/testlibpq4.c:129:3: note: Freeing function: PQclear (res1)
+  129 |                 PQclear(res1);
+      |                 ^
+/usr/local/src/postgresql/src/test/examples/testlibpq4.c:147:2: warning: Possible attempt to free potentially released memory: res1 [postgres.PostgresChecker]
+  147 |         PQclear(res1);
+      |         ^~~~~~~~~~~~~
+/usr/local/src/postgresql/src/test/examples/testlibpq4.c:129:3: note: Freeing function: PQclear (res1)
+  129 |                 PQclear(res1);
+      |                 ^
+/usr/local/src/postgresql/src/test/examples/testlibpq4.c:150:9: warning: Attempt to use released memory: conn1 [postgres.PostgresChecker]
+  150 |         res1 = PQexec(conn1, "CLOSE myportal");
+      |                ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/test/examples/testlibpq4.c:18:3: note: Freeing function: PQfinish (conn1)
+   18 |                 PQfinish(conn1);
+      |                 ^
+/usr/local/src/postgresql/src/test/examples/testlibpq4.c:154:9: warning: Attempt to use released memory: conn1 [postgres.PostgresChecker]
+  154 |         res1 = PQexec(conn1, "END");
+      |                ^~~~~~~~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/test/examples/testlibpq4.c:18:3: note: Freeing function: PQfinish (conn1)
+   18 |                 PQfinish(conn1);
+      |                 ^
+11 warnings generated.
+
+========================================
+File: /usr/local/src/postgresql/src/test/examples/testlibpq.c
+Time: Wed Jul 30 08:51:06 PM UTC 2025
+Status: ISSUES FOUND
+Errors: 0, Warnings: 14
+========================================
+/usr/local/src/postgresql/src/test/examples/testlibpq.c:51:8: warning: Attempt to use released memory: conn [postgres.PostgresChecker]
+   51 |         res = PQexec(conn,
+      |               ^~~~~~~~~~~~
+   52 |                                  "SELECT pg_catalog.set_config('search_path', '', false)");
+      |                                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/test/examples/testlibpq.c:16:2: note: Freeing function: PQfinish (conn)
+   16 |         PQfinish(conn);
+      |         ^
+/usr/local/src/postgresql/src/test/examples/testlibpq.c:64:2: warning: Possible attempt to free potentially released memory: res [postgres.PostgresChecker]
+   64 |         PQclear(res);
+      |         ^~~~~~~~~~~~
+/usr/local/src/postgresql/src/test/examples/testlibpq.c:56:3: note: Freeing function: PQclear (res)
+   56 |                 PQclear(res);
+      |                 ^
+/usr/local/src/postgresql/src/test/examples/testlibpq.c:74:8: warning: Attempt to use released memory: conn [postgres.PostgresChecker]
+   74 |         res = PQexec(conn, "BEGIN");
+      |               ^~~~~~~~~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/test/examples/testlibpq.c:16:2: note: Freeing function: PQfinish (conn)
+   16 |         PQfinish(conn);
+      |         ^
+/usr/local/src/postgresql/src/test/examples/testlibpq.c:81:2: warning: Possible attempt to free potentially released memory: res [postgres.PostgresChecker]
+   81 |         PQclear(res);
+      |         ^~~~~~~~~~~~
+/usr/local/src/postgresql/src/test/examples/testlibpq.c:78:3: note: Freeing function: PQclear (res)
+   78 |                 PQclear(res);
+      |                 ^
+/usr/local/src/postgresql/src/test/examples/testlibpq.c:86:8: warning: Attempt to use released memory: conn [postgres.PostgresChecker]
+   86 |         res = PQexec(conn, "DECLARE myportal CURSOR FOR select * from pg_database");
+      |               ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/test/examples/testlibpq.c:16:2: note: Freeing function: PQfinish (conn)
+   16 |         PQfinish(conn);
+      |         ^
+/usr/local/src/postgresql/src/test/examples/testlibpq.c:93:2: warning: Possible attempt to free potentially released memory: res [postgres.PostgresChecker]
+   93 |         PQclear(res);
+      |         ^~~~~~~~~~~~
+/usr/local/src/postgresql/src/test/examples/testlibpq.c:90:3: note: Freeing function: PQclear (res)
+   90 |                 PQclear(res);
+      |                 ^
+/usr/local/src/postgresql/src/test/examples/testlibpq.c:95:8: warning: Attempt to use released memory: conn [postgres.PostgresChecker]
+   95 |         res = PQexec(conn, "FETCH ALL in myportal");
+      |               ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/test/examples/testlibpq.c:16:2: note: Freeing function: PQfinish (conn)
+   16 |         PQfinish(conn);
+      |         ^
+/usr/local/src/postgresql/src/test/examples/testlibpq.c:104:12: warning: Attempt to use potentially released memory: res [postgres.PostgresChecker]
+  104 |         nFields = PQnfields(res);
+      |                   ^~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/test/examples/testlibpq.c:99:3: note: Freeing function: PQclear (res)
+   99 |                 PQclear(res);
+      |                 ^
+/usr/local/src/postgresql/src/test/examples/testlibpq.c:106:19: warning: Attempt to use potentially released memory: res [postgres.PostgresChecker]
+  106 |                 printf("%-15s", PQfname(res, i));
+      |                                 ^~~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/test/examples/testlibpq.c:99:3: note: Freeing function: PQclear (res)
+   99 |                 PQclear(res);
+      |                 ^
+/usr/local/src/postgresql/src/test/examples/testlibpq.c:110:18: warning: Attempt to use potentially released memory: res [postgres.PostgresChecker]
+  110 |         for (i = 0; i < PQntuples(res); i++)
+      |                         ^~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/test/examples/testlibpq.c:99:3: note: Freeing function: PQclear (res)
+   99 |                 PQclear(res);
+      |                 ^
+/usr/local/src/postgresql/src/test/examples/testlibpq.c:113:20: warning: Attempt to use potentially released memory: res [postgres.PostgresChecker]
+  113 |                         printf("%-15s", PQgetvalue(res, i, j));
+      |                                         ^~~~~~~~~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/test/examples/testlibpq.c:99:3: note: Freeing function: PQclear (res)
+   99 |                 PQclear(res);
+      |                 ^
+/usr/local/src/postgresql/src/test/examples/testlibpq.c:117:2: warning: Possible attempt to free potentially released memory: res [postgres.PostgresChecker]
+  117 |         PQclear(res);
+      |         ^~~~~~~~~~~~
+/usr/local/src/postgresql/src/test/examples/testlibpq.c:99:3: note: Freeing function: PQclear (res)
+   99 |                 PQclear(res);
+      |                 ^
+/usr/local/src/postgresql/src/test/examples/testlibpq.c:120:8: warning: Attempt to use released memory: conn [postgres.PostgresChecker]
+  120 |         res = PQexec(conn, "CLOSE myportal");
+      |               ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/test/examples/testlibpq.c:16:2: note: Freeing function: PQfinish (conn)
+   16 |         PQfinish(conn);
+      |         ^
+/usr/local/src/postgresql/src/test/examples/testlibpq.c:124:8: warning: Attempt to use released memory: conn [postgres.PostgresChecker]
+  124 |         res = PQexec(conn, "END");
+      |               ^~~~~~~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/test/examples/testlibpq.c:16:2: note: Freeing function: PQfinish (conn)
+   16 |         PQfinish(conn);
+      |         ^
+14 warnings generated.
+
+========================================
+File: /usr/local/src/postgresql/src/test/examples/testlo64.c
+Time: Wed Jul 30 08:51:06 PM UTC 2025
+Status: ISSUES FOUND
+Errors: 0, Warnings: 15
+========================================
+/usr/local/src/postgresql/src/test/examples/testlo64.c:85:12: warning: Attempt to use released memory: conn [postgres.PostgresChecker]
+   85 |         lobj_fd = lo_open(conn, lobjId, INV_READ);
+      |                   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/test/examples/testlo64.c:217:2: note: Freeing function: PQfinish (conn)
+  217 |         PQfinish(conn);
+      |         ^
+/usr/local/src/postgresql/src/test/examples/testlo64.c:89:6: warning: Attempt to use released memory: conn [postgres.PostgresChecker]
+   89 |         if (lo_lseek64(conn, lobj_fd, start, SEEK_SET) < 0)
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/test/examples/testlo64.c:217:2: note: Freeing function: PQfinish (conn)
+  217 |         PQfinish(conn);
+      |         ^
+/usr/local/src/postgresql/src/test/examples/testlo64.c:92:6: warning: Attempt to use released memory: conn [postgres.PostgresChecker]
+   92 |         if (lo_tell64(conn, lobj_fd) != start)
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/test/examples/testlo64.c:217:2: note: Freeing function: PQfinish (conn)
+  217 |         PQfinish(conn);
+      |         ^
+/usr/local/src/postgresql/src/test/examples/testlo64.c:100:12: warning: Attempt to use released memory: conn [postgres.PostgresChecker]
+  100 |                 nbytes = lo_read(conn, lobj_fd, buf, len - nread);
+      |                          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/test/examples/testlo64.c:217:2: note: Freeing function: PQfinish (conn)
+  217 |         PQfinish(conn);
+      |         ^
+/usr/local/src/postgresql/src/test/examples/testlo64.c:109:2: warning: Attempt to use released memory: conn [postgres.PostgresChecker]
+  109 |         lo_close(conn, lobj_fd);
+      |         ^~~~~~~~~~~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/test/examples/testlo64.c:217:2: note: Freeing function: PQfinish (conn)
+  217 |         PQfinish(conn);
+      |         ^
+/usr/local/src/postgresql/src/test/examples/testlo64.c:155:12: warning: Attempt to use released memory: conn [postgres.PostgresChecker]
+  155 |         lobj_fd = lo_open(conn, lobjId, INV_READ | INV_WRITE);
+      |                   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/test/examples/testlo64.c:217:2: note: Freeing function: PQfinish (conn)
+  217 |         PQfinish(conn);
+      |         ^
+/usr/local/src/postgresql/src/test/examples/testlo64.c:159:6: warning: Attempt to use released memory: conn [postgres.PostgresChecker]
+  159 |         if (lo_truncate64(conn, lobj_fd, len) < 0)
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/test/examples/testlo64.c:217:2: note: Freeing function: PQfinish (conn)
+  217 |         PQfinish(conn);
+      |         ^
+/usr/local/src/postgresql/src/test/examples/testlo64.c:162:2: warning: Attempt to use released memory: conn [postgres.PostgresChecker]
+  162 |         lo_close(conn, lobj_fd);
+      |         ^~~~~~~~~~~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/test/examples/testlo64.c:217:2: note: Freeing function: PQfinish (conn)
+  217 |         PQfinish(conn);
+      |         ^
+/usr/local/src/postgresql/src/test/examples/testlo64.c:257:8: warning: Attempt to use released memory: conn [postgres.PostgresChecker]
+  257 |         res = PQexec(conn,
+      |               ^~~~~~~~~~~~
+  258 |                                  "SELECT pg_catalog.set_config('search_path', '', false)");
+      |                                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/test/examples/testlo64.c:217:2: note: Freeing function: PQfinish (conn)
+  217 |         PQfinish(conn);
+      |         ^
+/usr/local/src/postgresql/src/test/examples/testlo64.c:265:2: warning: Possible attempt to free potentially released memory: res [postgres.PostgresChecker]
+  265 |         PQclear(res);
+      |         ^~~~~~~~~~~~
+/usr/local/src/postgresql/src/test/examples/testlo64.c:262:3: note: Freeing function: PQclear (res)
+  262 |                 PQclear(res);
+      |                 ^
+/usr/local/src/postgresql/src/test/examples/testlo64.c:267:8: warning: Attempt to use released memory: conn [postgres.PostgresChecker]
+  267 |         res = PQexec(conn, "begin");
+      |               ^~~~~~~~~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/test/examples/testlo64.c:217:2: note: Freeing function: PQfinish (conn)
+  217 |         PQfinish(conn);
+      |         ^
+/usr/local/src/postgresql/src/test/examples/testlo64.c:271:12: warning: Attempt to use released memory: conn [postgres.PostgresChecker]
+  271 |         lobjOid = lo_import(conn, in_filename);
+      |                   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/test/examples/testlo64.c:217:2: note: Freeing function: PQfinish (conn)
+  217 |         PQfinish(conn);
+      |         ^
+/usr/local/src/postgresql/src/test/examples/testlo64.c:286:7: warning: Attempt to use released memory: conn [postgres.PostgresChecker]
+  286 |                 if (lo_export(conn, lobjOid, out_filename) < 0)
+      |                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/test/examples/testlo64.c:217:2: note: Freeing function: PQfinish (conn)
+  217 |         PQfinish(conn);
+      |         ^
+/usr/local/src/postgresql/src/test/examples/testlo64.c:293:7: warning: Attempt to use released memory: conn [postgres.PostgresChecker]
+  293 |                 if (lo_export(conn, lobjOid, out_filename2) < 0)
+      |                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/test/examples/testlo64.c:217:2: note: Freeing function: PQfinish (conn)
+  217 |         PQfinish(conn);
+      |         ^
+/usr/local/src/postgresql/src/test/examples/testlo64.c:297:8: warning: Attempt to use released memory: conn [postgres.PostgresChecker]
+  297 |         res = PQexec(conn, "end");
+      |               ^~~~~~~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/test/examples/testlo64.c:217:2: note: Freeing function: PQfinish (conn)
+  217 |         PQfinish(conn);
+      |         ^
+15 warnings generated.
+
+========================================
+File: /usr/local/src/postgresql/src/test/examples/testlibpq2.c
+Time: Wed Jul 30 08:51:06 PM UTC 2025
+Status: ISSUES FOUND
+Errors: 0, Warnings: 5
+========================================
+/usr/local/src/postgresql/src/test/examples/testlibpq2.c:78:8: warning: Attempt to use released memory: conn [postgres.PostgresChecker]
+   78 |         res = PQexec(conn,
+      |               ^~~~~~~~~~~~
+   79 |                                  "SELECT pg_catalog.set_config('search_path', '', false)");
+      |                                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/test/examples/testlibpq2.c:44:2: note: Freeing function: PQfinish (conn)
+   44 |         PQfinish(conn);
+      |         ^
+/usr/local/src/postgresql/src/test/examples/testlibpq2.c:91:2: warning: Possible attempt to free potentially released memory: res [postgres.PostgresChecker]
+   91 |         PQclear(res);
+      |         ^~~~~~~~~~~~
+/usr/local/src/postgresql/src/test/examples/testlibpq2.c:83:3: note: Freeing function: PQclear (res)
+   83 |                 PQclear(res);
+      |                 ^
+/usr/local/src/postgresql/src/test/examples/testlibpq2.c:96:8: warning: Attempt to use released memory: conn [postgres.PostgresChecker]
+   96 |         res = PQexec(conn, "LISTEN TBL2");
+      |               ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/test/examples/testlibpq2.c:44:2: note: Freeing function: PQfinish (conn)
+   44 |         PQfinish(conn);
+      |         ^
+/usr/local/src/postgresql/src/test/examples/testlibpq2.c:103:2: warning: Possible attempt to free potentially released memory: res [postgres.PostgresChecker]
+  103 |         PQclear(res);
+      |         ^~~~~~~~~~~~
+/usr/local/src/postgresql/src/test/examples/testlibpq2.c:100:3: note: Freeing function: PQclear (res)
+  100 |                 PQclear(res);
+      |                 ^
+/usr/local/src/postgresql/src/test/examples/testlibpq2.c:117:10: warning: Attempt to use released memory: conn [postgres.PostgresChecker]
+  117 |                 sock = PQsocket(conn);
+      |                        ^~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/test/examples/testlibpq2.c:44:2: note: Freeing function: PQfinish (conn)
+   44 |         PQfinish(conn);
+      |         ^
+5 warnings generated.
+
+========================================
+File: /usr/local/src/postgresql/src/test/examples/testlibpq3.c
+Time: Wed Jul 30 08:51:06 PM UTC 2025
+Status: ISSUES FOUND
+Errors: 0, Warnings: 16
+========================================
+/usr/local/src/postgresql/src/test/examples/testlibpq3.c:69:11: warning: Attempt to use potentially released memory: res [postgres.PostgresChecker]
+   69 |         i_fnum = PQfnumber(res, "i");
+      |                  ^~~~~~~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/test/examples/testlibpq3.c:181:3: note: Freeing function: PQclear (res)
+  181 |                 PQclear(res);
+      |                 ^
+/usr/local/src/postgresql/src/test/examples/testlibpq3.c:70:11: warning: Attempt to use potentially released memory: res [postgres.PostgresChecker]
+   70 |         t_fnum = PQfnumber(res, "t");
+      |                  ^~~~~~~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/test/examples/testlibpq3.c:181:3: note: Freeing function: PQclear (res)
+  181 |                 PQclear(res);
+      |                 ^
+/usr/local/src/postgresql/src/test/examples/testlibpq3.c:71:11: warning: Attempt to use potentially released memory: res [postgres.PostgresChecker]
+   71 |         b_fnum = PQfnumber(res, "b");
+      |                  ^~~~~~~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/test/examples/testlibpq3.c:181:3: note: Freeing function: PQclear (res)
+  181 |                 PQclear(res);
+      |                 ^
+/usr/local/src/postgresql/src/test/examples/testlibpq3.c:73:18: warning: Attempt to use potentially released memory: res [postgres.PostgresChecker]
+   73 |         for (i = 0; i < PQntuples(res); i++)
+      |                         ^~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/test/examples/testlibpq3.c:219:3: note: Freeing function: PQclear (res)
+  219 |                 PQclear(res);
+      |                 ^
+/usr/local/src/postgresql/src/test/examples/testlibpq3.c:82:10: warning: Attempt to use potentially released memory: res [postgres.PostgresChecker]
+   82 |                 iptr = PQgetvalue(res, i, i_fnum);
+      |                        ^~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/test/examples/testlibpq3.c:219:3: note: Freeing function: PQclear (res)
+  219 |                 PQclear(res);
+      |                 ^
+/usr/local/src/postgresql/src/test/examples/testlibpq3.c:83:10: warning: Attempt to use potentially released memory: res [postgres.PostgresChecker]
+   83 |                 tptr = PQgetvalue(res, i, t_fnum);
+      |                        ^~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/test/examples/testlibpq3.c:219:3: note: Freeing function: PQclear (res)
+  219 |                 PQclear(res);
+      |                 ^
+/usr/local/src/postgresql/src/test/examples/testlibpq3.c:84:10: warning: Attempt to use potentially released memory: res [postgres.PostgresChecker]
+   84 |                 bptr = PQgetvalue(res, i, b_fnum);
+      |                        ^~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/test/examples/testlibpq3.c:219:3: note: Freeing function: PQclear (res)
+  219 |                 PQclear(res);
+      |                 ^
+/usr/local/src/postgresql/src/test/examples/testlibpq3.c:100:10: warning: Attempt to use potentially released memory: res [postgres.PostgresChecker]
+  100 |                 blen = PQgetlength(res, i, b_fnum);
+      |                        ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/test/examples/testlibpq3.c:219:3: note: Freeing function: PQclear (res)
+  219 |                 PQclear(res);
+      |                 ^
+/usr/local/src/postgresql/src/test/examples/testlibpq3.c:104:7: warning: Attempt to use potentially released memory: res [postgres.PostgresChecker]
+  104 |                            PQgetlength(res, i, i_fnum), ival);
+      |                            ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/test/examples/testlibpq3.c:219:3: note: Freeing function: PQclear (res)
+  219 |                 PQclear(res);
+      |                 ^
+/usr/local/src/postgresql/src/test/examples/testlibpq3.c:106:7: warning: Attempt to use potentially released memory: res [postgres.PostgresChecker]
+  106 |                            PQgetlength(res, i, t_fnum), tptr);
+      |                            ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/test/examples/testlibpq3.c:219:3: note: Freeing function: PQclear (res)
+  219 |                 PQclear(res);
+      |                 ^
+/usr/local/src/postgresql/src/test/examples/testlibpq3.c:146:8: warning: Attempt to use released memory: conn [postgres.PostgresChecker]
+  146 |         res = PQexec(conn, "SET search_path = testlibpq3");
+      |               ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/test/examples/testlibpq3.c:50:2: note: Freeing function: PQfinish (conn)
+   50 |         PQfinish(conn);
+      |         ^
+/usr/local/src/postgresql/src/test/examples/testlibpq3.c:153:2: warning: Possible attempt to free potentially released memory: res [postgres.PostgresChecker]
+  153 |         PQclear(res);
+      |         ^~~~~~~~~~~~
+/usr/local/src/postgresql/src/test/examples/testlibpq3.c:150:3: note: Freeing function: PQclear (res)
+  150 |                 PQclear(res);
+      |                 ^
+/usr/local/src/postgresql/src/test/examples/testlibpq3.c:169:8: warning: Attempt to use released memory: conn [postgres.PostgresChecker]
+  169 |         res = PQexecParams(conn,
+      |               ^~~~~~~~~~~~~~~~~~
+  170 |                                            "SELECT * FROM test1 WHERE t = $1",
+      |                                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  171 |                                            1,           /* one param */
+      |                                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  172 |                                            NULL,        /* let the backend deduce param type */
+      |                                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  173 |                                            paramValues,
+      |                                            ~~~~~~~~~~~~
+  174 |                                            NULL,        /* don't need param lengths since text */
+      |                                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  175 |                                            NULL,        /* default to all text params */
+      |                                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  176 |                                            1);          /* ask for binary results */
+      |                                            ~~
+/usr/local/src/postgresql/src/test/examples/testlibpq3.c:50:2: note: Freeing function: PQfinish (conn)
+   50 |         PQfinish(conn);
+      |         ^
+/usr/local/src/postgresql/src/test/examples/testlibpq3.c:187:2: warning: Possible attempt to free potentially released memory: res [postgres.PostgresChecker]
+  187 |         PQclear(res);
+      |         ^~~~~~~~~~~~
+/usr/local/src/postgresql/src/test/examples/testlibpq3.c:181:3: note: Freeing function: PQclear (res)
+  181 |                 PQclear(res);
+      |                 ^
+/usr/local/src/postgresql/src/test/examples/testlibpq3.c:207:8: warning: Attempt to use released memory: conn [postgres.PostgresChecker]
+  207 |         res = PQexecParams(conn,
+      |               ^~~~~~~~~~~~~~~~~~
+  208 |                                            "SELECT * FROM test1 WHERE i = $1::int4",
+      |                                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  209 |                                            1,           /* one param */
+      |                                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  210 |                                            NULL,        /* let the backend deduce param type */
+      |                                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  211 |                                            paramValues,
+      |                                            ~~~~~~~~~~~~
+  212 |                                            paramLengths,
+      |                                            ~~~~~~~~~~~~~
+  213 |                                            paramFormats,
+      |                                            ~~~~~~~~~~~~~
+  214 |                                            1);          /* ask for binary results */
+      |                                            ~~
+/usr/local/src/postgresql/src/test/examples/testlibpq3.c:50:2: note: Freeing function: PQfinish (conn)
+   50 |         PQfinish(conn);
+      |         ^
+/usr/local/src/postgresql/src/test/examples/testlibpq3.c:225:2: warning: Possible attempt to free potentially released memory: res [postgres.PostgresChecker]
+  225 |         PQclear(res);
+      |         ^~~~~~~~~~~~
+/usr/local/src/postgresql/src/test/examples/testlibpq3.c:219:3: note: Freeing function: PQclear (res)
+  219 |                 PQclear(res);
+      |                 ^
+16 warnings generated.
+
+========================================
+File: /usr/local/src/postgresql/src/test/examples/testlo.c
+Time: Wed Jul 30 08:51:06 PM UTC 2025
+Status: ISSUES FOUND
+Errors: 0, Warnings: 10
+========================================
+/usr/local/src/postgresql/src/test/examples/testlo.c:85:12: warning: Attempt to use released memory: conn [postgres.PostgresChecker]
+   85 |         lobj_fd = lo_open(conn, lobjId, INV_READ);
+      |                   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/test/examples/testlo.c:195:2: note: Freeing function: PQfinish (conn)
+  195 |         PQfinish(conn);
+      |         ^
+/usr/local/src/postgresql/src/test/examples/testlo.c:89:2: warning: Attempt to use released memory: conn [postgres.PostgresChecker]
+   89 |         lo_lseek(conn, lobj_fd, start, SEEK_SET);
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/test/examples/testlo.c:195:2: note: Freeing function: PQfinish (conn)
+  195 |         PQfinish(conn);
+      |         ^
+/usr/local/src/postgresql/src/test/examples/testlo.c:95:12: warning: Attempt to use released memory: conn [postgres.PostgresChecker]
+   95 |                 nbytes = lo_read(conn, lobj_fd, buf, len - nread);
+      |                          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/test/examples/testlo.c:195:2: note: Freeing function: PQfinish (conn)
+  195 |         PQfinish(conn);
+      |         ^
+/usr/local/src/postgresql/src/test/examples/testlo.c:104:2: warning: Attempt to use released memory: conn [postgres.PostgresChecker]
+  104 |         lo_close(conn, lobj_fd);
+      |         ^~~~~~~~~~~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/test/examples/testlo.c:195:2: note: Freeing function: PQfinish (conn)
+  195 |         PQfinish(conn);
+      |         ^
+/usr/local/src/postgresql/src/test/examples/testlo.c:233:8: warning: Attempt to use released memory: conn [postgres.PostgresChecker]
+  233 |         res = PQexec(conn,
+      |               ^~~~~~~~~~~~
+  234 |                                  "SELECT pg_catalog.set_config('search_path', '', false)");
+      |                                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/test/examples/testlo.c:195:2: note: Freeing function: PQfinish (conn)
+  195 |         PQfinish(conn);
+      |         ^
+/usr/local/src/postgresql/src/test/examples/testlo.c:241:2: warning: Possible attempt to free potentially released memory: res [postgres.PostgresChecker]
+  241 |         PQclear(res);
+      |         ^~~~~~~~~~~~
+/usr/local/src/postgresql/src/test/examples/testlo.c:238:3: note: Freeing function: PQclear (res)
+  238 |                 PQclear(res);
+      |                 ^
+/usr/local/src/postgresql/src/test/examples/testlo.c:243:8: warning: Attempt to use released memory: conn [postgres.PostgresChecker]
+  243 |         res = PQexec(conn, "begin");
+      |               ^~~~~~~~~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/test/examples/testlo.c:195:2: note: Freeing function: PQfinish (conn)
+  195 |         PQfinish(conn);
+      |         ^
+/usr/local/src/postgresql/src/test/examples/testlo.c:247:12: warning: Attempt to use released memory: conn [postgres.PostgresChecker]
+  247 |         lobjOid = lo_import(conn, in_filename);
+      |                   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/test/examples/testlo.c:195:2: note: Freeing function: PQfinish (conn)
+  195 |         PQfinish(conn);
+      |         ^
+/usr/local/src/postgresql/src/test/examples/testlo.c:262:7: warning: Attempt to use released memory: conn [postgres.PostgresChecker]
+  262 |                 if (lo_export(conn, lobjOid, out_filename) < 0)
+      |                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/test/examples/testlo.c:195:2: note: Freeing function: PQfinish (conn)
+  195 |         PQfinish(conn);
+      |         ^
+/usr/local/src/postgresql/src/test/examples/testlo.c:266:8: warning: Attempt to use released memory: conn [postgres.PostgresChecker]
+  266 |         res = PQexec(conn, "end");
+      |               ^~~~~~~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/test/examples/testlo.c:195:2: note: Freeing function: PQfinish (conn)
+  195 |         PQfinish(conn);
+      |         ^
+10 warnings generated.
+
+========================================
+File: /usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c
+Time: Wed Jul 30 08:51:15 PM UTC 2025
+Status: ISSUES FOUND
+Errors: 0, Warnings: 145
+========================================
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:185:47: warning: Attempt to use released memory: conn [postgres.PostgresChecker]
+  185 |         wait_for_connection_state(line, monitorConn, PQbackendPID(conn), "idle", NULL);
+      |                                                      ^~~~~~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:63:2: note: Freeing function: PQfinish (conn)
+   63 |         PQfinish(conn);
+      |         ^
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:191:6: warning: Attempt to use released memory: conn [postgres.PostgresChecker]
+  191 |         if (PQsendQueryParams(conn, "SELECT pg_sleep($1)", 1, paramTypes,
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  192 |                                                   &env_wait, NULL, NULL, 0) != 1)
+      |                                                   ~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:63:2: note: Freeing function: PQfinish (conn)
+   63 |         PQfinish(conn);
+      |         ^
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:199:47: warning: Attempt to use released memory: conn [postgres.PostgresChecker]
+  199 |         wait_for_connection_state(line, monitorConn, PQbackendPID(conn), NULL, "PgSleep");
+      |                                                      ^~~~~~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:63:2: note: Freeing function: PQfinish (conn)
+   63 |         PQfinish(conn);
+      |         ^
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:209:27: warning: Attempt to use released memory: conn [postgres.PostgresChecker]
+  209 |         PQconninfoOption *opts = PQconninfo(conn);
+      |                                  ^~~~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:63:2: note: Freeing function: PQfinish (conn)
+   63 |         PQfinish(conn);
+      |         ^
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:254:6: warning: Attempt to use released memory: conn [postgres.PostgresChecker]
+  254 |         if (PQsetnonblocking(conn, 1) != 0)
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:63:2: note: Freeing function: PQfinish (conn)
+   63 |         PQfinish(conn);
+      |         ^
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:266:11: warning: Attempt to use released memory: conn [postgres.PostgresChecker]
+  266 |         cancel = PQgetCancel(conn);
+      |                  ^~~~~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:63:2: note: Freeing function: PQfinish (conn)
+   63 |         PQfinish(conn);
+      |         ^
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:415:6: warning: Attempt to use released memory: conn [postgres.PostgresChecker]
+  415 |         if (PQisnonblocking(conn))
+      |             ^~~~~~~~~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:63:2: note: Freeing function: PQfinish (conn)
+   63 |         PQfinish(conn);
+      |         ^
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:418:6: warning: Attempt to use released memory: conn [postgres.PostgresChecker]
+  418 |         if (PQenterPipelineMode(conn) != 1)
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:63:2: note: Freeing function: PQfinish (conn)
+   63 |         PQfinish(conn);
+      |         ^
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:421:6: warning: Attempt to use released memory: conn [postgres.PostgresChecker]
+  421 |         if (PQpipelineStatus(conn) == PQ_PIPELINE_OFF)
+      |             ^~~~~~~~~~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:63:2: note: Freeing function: PQfinish (conn)
+   63 |         PQfinish(conn);
+      |         ^
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:425:8: warning: Attempt to use released memory: conn [postgres.PostgresChecker]
+  425 |         res = PQexec(conn, "SELECT 1");
+      |               ^~~~~~~~~~~~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:63:2: note: Freeing function: PQfinish (conn)
+   63 |         PQfinish(conn);
+      |         ^
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:434:6: warning: Attempt to use released memory: conn [postgres.PostgresChecker]
+  434 |         if (PQsendQuery(conn, "SELECT 1") != 0)
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:63:2: note: Freeing function: PQfinish (conn)
+   63 |         PQfinish(conn);
+      |         ^
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:442:6: warning: Attempt to use released memory: conn [postgres.PostgresChecker]
+  442 |         if (PQenterPipelineMode(conn) != 1)
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:63:2: note: Freeing function: PQfinish (conn)
+   63 |         PQfinish(conn);
+      |         ^
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:445:6: warning: Attempt to use released memory: conn [postgres.PostgresChecker]
+  445 |         if (PQisBusy(conn) != 0)
+      |             ^~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:63:2: note: Freeing function: PQfinish (conn)
+   63 |         PQfinish(conn);
+      |         ^
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:449:6: warning: Attempt to use released memory: conn [postgres.PostgresChecker]
+  449 |         if (PQexitPipelineMode(conn) != 1)
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:63:2: note: Freeing function: PQfinish (conn)
+   63 |         PQfinish(conn);
+      |         ^
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:452:6: warning: Attempt to use released memory: conn [postgres.PostgresChecker]
+  452 |         if (PQpipelineStatus(conn) != PQ_PIPELINE_OFF)
+      |             ^~~~~~~~~~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:63:2: note: Freeing function: PQfinish (conn)
+   63 |         PQfinish(conn);
+      |         ^
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:456:6: warning: Attempt to use released memory: conn [postgres.PostgresChecker]
+  456 |         if (PQexitPipelineMode(conn) != 1)
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:63:2: note: Freeing function: PQfinish (conn)
+   63 |         PQfinish(conn);
+      |         ^
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:460:8: warning: Attempt to use released memory: conn [postgres.PostgresChecker]
+  460 |         res = PQexec(conn, "SELECT 1");
+      |               ^~~~~~~~~~~~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:63:2: note: Freeing function: PQfinish (conn)
+   63 |         PQfinish(conn);
+      |         ^
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:481:6: warning: Attempt to use released memory: conn [postgres.PostgresChecker]
+  481 |         if (PQenterPipelineMode(conn) != 1)
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:63:2: note: Freeing function: PQfinish (conn)
+   63 |         PQfinish(conn);
+      |         ^
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:485:6: warning: Attempt to use released memory: conn [postgres.PostgresChecker]
+  485 |         if (PQsendQueryParams(conn, "SELECT $1", 1, dummy_param_oids,
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  486 |                                                   dummy_params, NULL, NULL, 0) != 1)
+      |                                                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:63:2: note: Freeing function: PQfinish (conn)
+   63 |         PQfinish(conn);
+      |         ^
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:489:6: warning: Attempt to use released memory: conn [postgres.PostgresChecker]
+  489 |         if (PQpipelineSync(conn) != 1)
+      |             ^~~~~~~~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:63:2: note: Freeing function: PQfinish (conn)
+   63 |         PQfinish(conn);
+      |         ^
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:493:6: warning: Attempt to use released memory: conn [postgres.PostgresChecker]
+  493 |         if (PQsendQueryParams(conn, "SELECT $1", 1, dummy_param_oids,
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  494 |                                                   dummy_params, NULL, NULL, 0) != 1)
+      |                                                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:63:2: note: Freeing function: PQfinish (conn)
+   63 |         PQfinish(conn);
+      |         ^
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:498:6: warning: Attempt to use released memory: conn [postgres.PostgresChecker]
+  498 |         if (PQsendPipelineSync(conn) != 1)
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:63:2: note: Freeing function: PQfinish (conn)
+   63 |         PQfinish(conn);
+      |         ^
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:502:6: warning: Attempt to use released memory: conn [postgres.PostgresChecker]
+  502 |         if (PQsendQueryParams(conn, "SELECT $1", 1, dummy_param_oids,
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  503 |                                                   dummy_params, NULL, NULL, 0) != 1)
+      |                                                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:63:2: note: Freeing function: PQfinish (conn)
+   63 |         PQfinish(conn);
+      |         ^
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:506:6: warning: Attempt to use released memory: conn [postgres.PostgresChecker]
+  506 |         if (PQpipelineSync(conn) != 1)
+      |             ^~~~~~~~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:63:2: note: Freeing function: PQfinish (conn)
+   63 |         PQfinish(conn);
+      |         ^
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:513:8: warning: Attempt to use released memory: conn [postgres.PostgresChecker]
+  513 |         res = PQgetResult(conn);
+      |               ^~~~~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:63:2: note: Freeing function: PQfinish (conn)
+   63 |         PQfinish(conn);
+      |         ^
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:524:6: warning: Attempt to use released memory: conn [postgres.PostgresChecker]
+  524 |         if (PQgetResult(conn) != NULL)
+      |             ^~~~~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:63:2: note: Freeing function: PQfinish (conn)
+   63 |         PQfinish(conn);
+      |         ^
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:527:6: warning: Attempt to use released memory: conn [postgres.PostgresChecker]
+  527 |         if (PQexitPipelineMode(conn) != 0)
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:63:2: note: Freeing function: PQfinish (conn)
+   63 |         PQfinish(conn);
+      |         ^
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:530:8: warning: Attempt to use released memory: conn [postgres.PostgresChecker]
+  530 |         res = PQgetResult(conn);
+      |               ^~~~~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:63:2: note: Freeing function: PQfinish (conn)
+   63 |         PQfinish(conn);
+      |         ^
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:542:8: warning: Attempt to use released memory: conn [postgres.PostgresChecker]
+  542 |         res = PQgetResult(conn);
+      |               ^~~~~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:63:2: note: Freeing function: PQfinish (conn)
+   63 |         PQfinish(conn);
+      |         ^
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:553:6: warning: Attempt to use released memory: conn [postgres.PostgresChecker]
+  553 |         if (PQgetResult(conn) != NULL)
+      |             ^~~~~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:63:2: note: Freeing function: PQfinish (conn)
+   63 |         PQfinish(conn);
+      |         ^
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:556:6: warning: Attempt to use released memory: conn [postgres.PostgresChecker]
+  556 |         if (PQexitPipelineMode(conn) != 0)
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:63:2: note: Freeing function: PQfinish (conn)
+   63 |         PQfinish(conn);
+      |         ^
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:559:8: warning: Attempt to use released memory: conn [postgres.PostgresChecker]
+  559 |         res = PQgetResult(conn);
+      |               ^~~~~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:63:2: note: Freeing function: PQfinish (conn)
+   63 |         PQfinish(conn);
+      |         ^
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:571:8: warning: Attempt to use released memory: conn [postgres.PostgresChecker]
+  571 |         res = PQgetResult(conn);
+      |               ^~~~~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:63:2: note: Freeing function: PQfinish (conn)
+   63 |         PQfinish(conn);
+      |         ^
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:580:8: warning: Attempt to use released memory: conn [postgres.PostgresChecker]
+  580 |         res = PQgetResult(conn);
+      |               ^~~~~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:63:2: note: Freeing function: PQfinish (conn)
+   63 |         PQfinish(conn);
+      |         ^
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:585:8: warning: Attempt to use released memory: conn [postgres.PostgresChecker]
+  585 |         res = PQgetResult(conn);
+      |               ^~~~~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:63:2: note: Freeing function: PQfinish (conn)
+   63 |         PQfinish(conn);
+      |         ^
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:595:6: warning: Attempt to use released memory: conn [postgres.PostgresChecker]
+  595 |         if (PQpipelineStatus(conn) == PQ_PIPELINE_OFF)
+      |             ^~~~~~~~~~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:63:2: note: Freeing function: PQfinish (conn)
+   63 |         PQfinish(conn);
+      |         ^
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:599:6: warning: Attempt to use released memory: conn [postgres.PostgresChecker]
+  599 |         if (PQexitPipelineMode(conn) != 1)
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:63:2: note: Freeing function: PQfinish (conn)
+   63 |         PQfinish(conn);
+      |         ^
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:603:6: warning: Attempt to use released memory: conn [postgres.PostgresChecker]
+  603 |         if (PQpipelineStatus(conn) != PQ_PIPELINE_OFF)
+      |             ^~~~~~~~~~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:63:2: note: Freeing function: PQfinish (conn)
+   63 |         PQfinish(conn);
+      |         ^
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:618:15: warning: Attempt to use released memory: conn [postgres.PostgresChecker]
+  618 |         int                     sock = PQsocket(conn);
+      |                                        ^~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:63:2: note: Freeing function: PQfinish (conn)
+   63 |         PQfinish(conn);
+      |         ^
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:625:6: warning: Attempt to use released memory: conn [postgres.PostgresChecker]
+  625 |         if (PQenterPipelineMode(conn) != 1)
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:63:2: note: Freeing function: PQfinish (conn)
+   63 |         PQfinish(conn);
+      |         ^
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:632:7: warning: Attempt to use released memory: conn [postgres.PostgresChecker]
+  632 |                 if (PQsendQueryParams(conn, "SELECT repeat('xyzxz', 12)",
+      |                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  633 |                                                           0, NULL, NULL, NULL, NULL, 0) != 1)
+      |                                                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:63:2: note: Freeing function: PQfinish (conn)
+   63 |         PQfinish(conn);
+      |         ^
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:635:3: warning: Attempt to use released memory: conn [postgres.PostgresChecker]
+  635 |                 PQflush(conn);
+      |                 ^~~~~~~~~~~~~
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:63:2: note: Freeing function: PQfinish (conn)
+   63 |         PQfinish(conn);
+      |         ^
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:1027:6: warning: Attempt to use released memory: conn [postgres.PostgresChecker]
+ 1027 |         if (PQenterPipelineMode(conn) != 1)
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:63:2: note: Freeing function: PQfinish (conn)
+   63 |         PQfinish(conn);
+      |         ^
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:1057:7: warning: Attempt to use released memory: conn [postgres.PostgresChecker]
+ 1057 |                 if (PQsendQueryParams(conn, sql,
+      |                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 1058 |                                                           0, NULL, NULL, NULL, NULL, 0) != 1)
+      |                                                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:63:2: note: Freeing function: PQfinish (conn)
+   63 |         PQfinish(conn);
+      |         ^
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:1064:6: warning: Attempt to use released memory: conn [postgres.PostgresChecker]
+ 1064 |         if (PQsendPrepare(conn, "my_insert", insert_sql2, 2, insert_param_oids) != 1)
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:63:2: note: Freeing function: PQfinish (conn)
+   63 |         PQfinish(conn);
+      |         ^
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:1076:6: warning: Attempt to use released memory: conn [postgres.PostgresChecker]
+ 1076 |         if (PQsetnonblocking(conn, 1) != 0)
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:63:2: note: Freeing function: PQfinish (conn)
+   63 |         PQfinish(conn);
+      |         ^
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:1085:10: warning: Attempt to use released memory: conn [postgres.PostgresChecker]
+ 1085 |                 sock = PQsocket(conn);
+      |                        ^~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:63:2: note: Freeing function: PQfinish (conn)
+   63 |         PQfinish(conn);
+      |         ^
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:1243:6: warning: Attempt to use released memory: conn [postgres.PostgresChecker]
+ 1243 |         if (PQexitPipelineMode(conn) != 1)
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:63:2: note: Freeing function: PQfinish (conn)
+   63 |         PQfinish(conn);
+      |         ^
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:1247:6: warning: Attempt to use released memory: conn [postgres.PostgresChecker]
+ 1247 |         if (PQsetnonblocking(conn, 0) != 0)
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:63:2: note: Freeing function: PQfinish (conn)
+   63 |         PQfinish(conn);
+      |         ^
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:1263:6: warning: Attempt to use released memory: conn [postgres.PostgresChecker]
+ 1263 |         if (PQenterPipelineMode(conn) != 1)
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:63:2: note: Freeing function: PQfinish (conn)
+   63 |         PQfinish(conn);
+      |         ^
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:1265:6: warning: Attempt to use released memory: conn [postgres.PostgresChecker]
+ 1265 |         if (PQsendPrepare(conn, "select_one", "SELECT $1, '42', $1::numeric, "
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 1266 |                                           "interval '1 sec'",
+      |                                           ~~~~~~~~~~~~~~~~~~~
+ 1267 |                                           1, param_oids) != 1)
+      |                                           ~~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:63:2: note: Freeing function: PQfinish (conn)
+   63 |         PQfinish(conn);
+      |         ^
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:1273:6: warning: Attempt to use released memory: conn [postgres.PostgresChecker]
+ 1273 |         if (PQsendDescribePrepared(conn, "select_one") != 1)
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:63:2: note: Freeing function: PQfinish (conn)
+   63 |         PQfinish(conn);
+      |         ^
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:1275:6: warning: Attempt to use released memory: conn [postgres.PostgresChecker]
+ 1275 |         if (PQpipelineSync(conn) != 1)
+      |             ^~~~~~~~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:63:2: note: Freeing function: PQfinish (conn)
+   63 |         PQfinish(conn);
+      |         ^
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:1278:8: warning: Attempt to use released memory: conn [postgres.PostgresChecker]
+ 1278 |         res = PQgetResult(conn);
+      |               ^~~~~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:63:2: note: Freeing function: PQfinish (conn)
+   63 |         PQfinish(conn);
+      |         ^
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:1284:8: warning: Attempt to use released memory: conn [postgres.PostgresChecker]
+ 1284 |         res = PQgetResult(conn);
+      |               ^~~~~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:63:2: note: Freeing function: PQfinish (conn)
+   63 |         PQfinish(conn);
+      |         ^
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:1288:8: warning: Attempt to use released memory: conn [postgres.PostgresChecker]
+ 1288 |         res = PQgetResult(conn);
+      |               ^~~~~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:63:2: note: Freeing function: PQfinish (conn)
+   63 |         PQfinish(conn);
+      |         ^
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:1304:8: warning: Attempt to use released memory: conn [postgres.PostgresChecker]
+ 1304 |         res = PQgetResult(conn);
+      |               ^~~~~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:63:2: note: Freeing function: PQfinish (conn)
+   63 |         PQfinish(conn);
+      |         ^
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:1308:8: warning: Attempt to use released memory: conn [postgres.PostgresChecker]
+ 1308 |         res = PQgetResult(conn);
+      |               ^~~~~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:63:2: note: Freeing function: PQfinish (conn)
+   63 |         PQfinish(conn);
+      |         ^
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:1313:6: warning: Attempt to use released memory: conn [postgres.PostgresChecker]
+ 1313 |         if (PQsendClosePrepared(conn, "select_one") != 1)
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:63:2: note: Freeing function: PQfinish (conn)
+   63 |         PQfinish(conn);
+      |         ^
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:1315:6: warning: Attempt to use released memory: conn [postgres.PostgresChecker]
+ 1315 |         if (PQpipelineSync(conn) != 1)
+      |             ^~~~~~~~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:63:2: note: Freeing function: PQfinish (conn)
+   63 |         PQfinish(conn);
+      |         ^
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:1318:8: warning: Attempt to use released memory: conn [postgres.PostgresChecker]
+ 1318 |         res = PQgetResult(conn);
+      |               ^~~~~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:63:2: note: Freeing function: PQfinish (conn)
+   63 |         PQfinish(conn);
+      |         ^
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:1324:8: warning: Attempt to use released memory: conn [postgres.PostgresChecker]
+ 1324 |         res = PQgetResult(conn);
+      |               ^~~~~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:63:2: note: Freeing function: PQfinish (conn)
+   63 |         PQfinish(conn);
+      |         ^
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:1327:8: warning: Attempt to use released memory: conn [postgres.PostgresChecker]
+ 1327 |         res = PQgetResult(conn);
+      |               ^~~~~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:63:2: note: Freeing function: PQfinish (conn)
+   63 |         PQfinish(conn);
+      |         ^
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:1331:6: warning: Attempt to use released memory: conn [postgres.PostgresChecker]
+ 1331 |         if (PQexitPipelineMode(conn) != 1)
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:63:2: note: Freeing function: PQfinish (conn)
+   63 |         PQfinish(conn);
+      |         ^
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:1335:8: warning: Attempt to use released memory: conn [postgres.PostgresChecker]
+ 1335 |         res = PQdescribePrepared(conn, "select_one");
+      |               ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:63:2: note: Freeing function: PQfinish (conn)
+   63 |         PQfinish(conn);
+      |         ^
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:1343:8: warning: Attempt to use released memory: conn [postgres.PostgresChecker]
+ 1343 |         res = PQclosePrepared(conn, "select_one");
+      |               ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:63:2: note: Freeing function: PQfinish (conn)
+   63 |         PQfinish(conn);
+      |         ^
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:1348:2: warning: Attempt to use released memory: conn [postgres.PostgresChecker]
+ 1348 |         PQexec(conn, "BEGIN");
+      |         ^~~~~~~~~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:63:2: note: Freeing function: PQfinish (conn)
+   63 |         PQfinish(conn);
+      |         ^
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:1349:2: warning: Attempt to use released memory: conn [postgres.PostgresChecker]
+ 1349 |         PQexec(conn, "DECLARE cursor_one CURSOR FOR SELECT 1");
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:63:2: note: Freeing function: PQfinish (conn)
+   63 |         PQfinish(conn);
+      |         ^
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:1350:2: warning: Attempt to use released memory: conn [postgres.PostgresChecker]
+ 1350 |         PQenterPipelineMode(conn);
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:63:2: note: Freeing function: PQfinish (conn)
+   63 |         PQfinish(conn);
+      |         ^
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:1351:6: warning: Attempt to use released memory: conn [postgres.PostgresChecker]
+ 1351 |         if (PQsendDescribePortal(conn, "cursor_one") != 1)
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:63:2: note: Freeing function: PQfinish (conn)
+   63 |         PQfinish(conn);
+      |         ^
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:1353:6: warning: Attempt to use released memory: conn [postgres.PostgresChecker]
+ 1353 |         if (PQpipelineSync(conn) != 1)
+      |             ^~~~~~~~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:63:2: note: Freeing function: PQfinish (conn)
+   63 |         PQfinish(conn);
+      |         ^
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:1355:8: warning: Attempt to use released memory: conn [postgres.PostgresChecker]
+ 1355 |         res = PQgetResult(conn);
+      |               ^~~~~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:63:2: note: Freeing function: PQfinish (conn)
+   63 |         PQfinish(conn);
+      |         ^
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:1366:8: warning: Attempt to use released memory: conn [postgres.PostgresChecker]
+ 1366 |         res = PQgetResult(conn);
+      |               ^~~~~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:63:2: note: Freeing function: PQfinish (conn)
+   63 |         PQfinish(conn);
+      |         ^
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:1369:8: warning: Attempt to use released memory: conn [postgres.PostgresChecker]
+ 1369 |         res = PQgetResult(conn);
+      |               ^~~~~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:63:2: note: Freeing function: PQfinish (conn)
+   63 |         PQfinish(conn);
+      |         ^
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:1374:6: warning: Attempt to use released memory: conn [postgres.PostgresChecker]
+ 1374 |         if (PQsendClosePortal(conn, "cursor_one") != 1)
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:63:2: note: Freeing function: PQfinish (conn)
+   63 |         PQfinish(conn);
+      |         ^
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:1376:6: warning: Attempt to use released memory: conn [postgres.PostgresChecker]
+ 1376 |         if (PQpipelineSync(conn) != 1)
+      |             ^~~~~~~~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:63:2: note: Freeing function: PQfinish (conn)
+   63 |         PQfinish(conn);
+      |         ^
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:1379:8: warning: Attempt to use released memory: conn [postgres.PostgresChecker]
+ 1379 |         res = PQgetResult(conn);
+      |               ^~~~~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:63:2: note: Freeing function: PQfinish (conn)
+   63 |         PQfinish(conn);
+      |         ^
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:1385:8: warning: Attempt to use released memory: conn [postgres.PostgresChecker]
+ 1385 |         res = PQgetResult(conn);
+      |               ^~~~~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:63:2: note: Freeing function: PQfinish (conn)
+   63 |         PQfinish(conn);
+      |         ^
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:1388:8: warning: Attempt to use released memory: conn [postgres.PostgresChecker]
+ 1388 |         res = PQgetResult(conn);
+      |               ^~~~~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:63:2: note: Freeing function: PQfinish (conn)
+   63 |         PQfinish(conn);
+      |         ^
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:1392:6: warning: Attempt to use released memory: conn [postgres.PostgresChecker]
+ 1392 |         if (PQexitPipelineMode(conn) != 1)
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:63:2: note: Freeing function: PQfinish (conn)
+   63 |         PQfinish(conn);
+      |         ^
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:1396:8: warning: Attempt to use released memory: conn [postgres.PostgresChecker]
+ 1396 |         res = PQdescribePortal(conn, "cursor_one");
+      |               ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:63:2: note: Freeing function: PQfinish (conn)
+   63 |         PQfinish(conn);
+      |         ^
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:1404:8: warning: Attempt to use released memory: conn [postgres.PostgresChecker]
+ 1404 |         res = PQclosePortal(conn, "cursor_one");
+      |               ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:63:2: note: Freeing function: PQfinish (conn)
+   63 |         PQfinish(conn);
+      |         ^
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:1430:2: warning: Attempt to use released memory: conn [postgres.PostgresChecker]
+ 1430 |         PQsetNoticeProcessor(conn, notice_processor, &n_notices);
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:63:2: note: Freeing function: PQfinish (conn)
+   63 |         PQfinish(conn);
+      |         ^
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:1433:6: warning: Attempt to use released memory: conn [postgres.PostgresChecker]
+ 1433 |         if (PQenterPipelineMode(conn) != 1)
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:63:2: note: Freeing function: PQfinish (conn)
+   63 |         PQfinish(conn);
+      |         ^
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:1435:6: warning: Attempt to use released memory: conn [postgres.PostgresChecker]
+ 1435 |         if (PQsendQueryParams(conn, "SELECT 1", 0, NULL, NULL, NULL, NULL, 0) != 1)
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:63:2: note: Freeing function: PQfinish (conn)
+   63 |         PQfinish(conn);
+      |         ^
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:1437:2: warning: Attempt to use released memory: conn [postgres.PostgresChecker]
+ 1437 |         PQsendFlushRequest(conn);
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:63:2: note: Freeing function: PQfinish (conn)
+   63 |         PQfinish(conn);
+      |         ^
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:1438:8: warning: Attempt to use released memory: conn [postgres.PostgresChecker]
+ 1438 |         res = PQgetResult(conn);
+      |               ^~~~~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:63:2: note: Freeing function: PQfinish (conn)
+   63 |         PQfinish(conn);
+      |         ^
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:1446:8: warning: Attempt to use released memory: conn [postgres.PostgresChecker]
+ 1446 |         res = PQgetResult(conn);
+      |               ^~~~~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:63:2: note: Freeing function: PQfinish (conn)
+   63 |         PQfinish(conn);
+      |         ^
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:1449:6: warning: Attempt to use released memory: conn [postgres.PostgresChecker]
+ 1449 |         if (PQsendQueryParams(conn, "SELECT 2", 0, NULL, NULL, NULL, NULL, 0) != 1)
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:63:2: note: Freeing function: PQfinish (conn)
+   63 |         PQfinish(conn);
+      |         ^
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:1451:6: warning: Attempt to use released memory: conn [postgres.PostgresChecker]
+ 1451 |         if (PQexitPipelineMode(conn) == 1)
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:63:2: note: Freeing function: PQfinish (conn)
+   63 |         PQfinish(conn);
+      |         ^
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:1457:2: warning: Attempt to use released memory: conn [postgres.PostgresChecker]
+ 1457 |         PQsendFlushRequest(conn);
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:63:2: note: Freeing function: PQfinish (conn)
+   63 |         PQfinish(conn);
+      |         ^
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:1458:8: warning: Attempt to use released memory: conn [postgres.PostgresChecker]
+ 1458 |         res = PQgetResult(conn);
+      |               ^~~~~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:63:2: note: Freeing function: PQfinish (conn)
+   63 |         PQfinish(conn);
+      |         ^
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:1463:8: warning: Attempt to use released memory: conn [postgres.PostgresChecker]
+ 1463 |         res = PQgetResult(conn);
+      |               ^~~~~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:63:2: note: Freeing function: PQfinish (conn)
+   63 |         PQfinish(conn);
+      |         ^
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:1466:6: warning: Attempt to use released memory: conn [postgres.PostgresChecker]
+ 1466 |         if (PQexitPipelineMode(conn) != 1)
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:63:2: note: Freeing function: PQfinish (conn)
+   63 |         PQfinish(conn);
+      |         ^
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:1474:6: warning: Attempt to use released memory: conn [postgres.PostgresChecker]
+ 1474 |         if (PQenterPipelineMode(conn) != 1)
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:63:2: note: Freeing function: PQfinish (conn)
+   63 |         PQfinish(conn);
+      |         ^
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:1476:6: warning: Attempt to use released memory: conn [postgres.PostgresChecker]
+ 1476 |         if (PQsendQueryParams(conn, "SELECT pg_catalog.pg_advisory_unlock(1,1)", 0, NULL, NULL, NULL, NULL, 0) != 1)
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:63:2: note: Freeing function: PQfinish (conn)
+   63 |         PQfinish(conn);
+      |         ^
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:1478:2: warning: Attempt to use released memory: conn [postgres.PostgresChecker]
+ 1478 |         PQsendFlushRequest(conn);
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:63:2: note: Freeing function: PQfinish (conn)
+   63 |         PQfinish(conn);
+      |         ^
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:1479:8: warning: Attempt to use released memory: conn [postgres.PostgresChecker]
+ 1479 |         res = PQgetResult(conn);
+      |               ^~~~~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:63:2: note: Freeing function: PQfinish (conn)
+   63 |         PQfinish(conn);
+      |         ^
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:1484:6: warning: Attempt to use released memory: conn [postgres.PostgresChecker]
+ 1484 |         if (PQexitPipelineMode(conn) != 1)
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:63:2: note: Freeing function: PQfinish (conn)
+   63 |         PQfinish(conn);
+      |         ^
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:1506:6: warning: Attempt to use released memory: conn [postgres.PostgresChecker]
+ 1506 |         if (PQisnonblocking(conn))
+      |             ^~~~~~~~~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:63:2: note: Freeing function: PQfinish (conn)
+   63 |         PQfinish(conn);
+      |         ^
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:1509:6: warning: Attempt to use released memory: conn [postgres.PostgresChecker]
+ 1509 |         if (PQenterPipelineMode(conn) != 1)
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:63:2: note: Freeing function: PQfinish (conn)
+   63 |         PQfinish(conn);
+      |         ^
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:1512:6: warning: Attempt to use released memory: conn [postgres.PostgresChecker]
+ 1512 |         if (PQsendQueryParams(conn, "SELECT $1",
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 1513 |                                                   1, dummy_param_oids, dummy_params,
+      |                                                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 1514 |                                                   NULL, NULL, 0) != 1)
+      |                                                   ~~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:63:2: note: Freeing function: PQfinish (conn)
+   63 |         PQfinish(conn);
+      |         ^
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:1517:6: warning: Attempt to use released memory: conn [postgres.PostgresChecker]
+ 1517 |         if (PQexitPipelineMode(conn) != 0)
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:63:2: note: Freeing function: PQfinish (conn)
+   63 |         PQfinish(conn);
+      |         ^
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:1520:6: warning: Attempt to use released memory: conn [postgres.PostgresChecker]
+ 1520 |         if (PQpipelineSync(conn) != 1)
+      |             ^~~~~~~~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:63:2: note: Freeing function: PQfinish (conn)
+   63 |         PQfinish(conn);
+      |         ^
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:1523:8: warning: Attempt to use released memory: conn [postgres.PostgresChecker]
+ 1523 |         res = PQgetResult(conn);
+      |               ^~~~~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:63:2: note: Freeing function: PQfinish (conn)
+   63 |         PQfinish(conn);
+      |         ^
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:1535:6: warning: Attempt to use released memory: conn [postgres.PostgresChecker]
+ 1535 |         if (PQgetResult(conn) != NULL)
+      |             ^~~~~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:63:2: note: Freeing function: PQfinish (conn)
+   63 |         PQfinish(conn);
+      |         ^
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:1542:6: warning: Attempt to use released memory: conn [postgres.PostgresChecker]
+ 1542 |         if (PQexitPipelineMode(conn) != 0)
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:63:2: note: Freeing function: PQfinish (conn)
+   63 |         PQfinish(conn);
+      |         ^
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:1545:8: warning: Attempt to use released memory: conn [postgres.PostgresChecker]
+ 1545 |         res = PQgetResult(conn);
+      |               ^~~~~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:63:2: note: Freeing function: PQfinish (conn)
+   63 |         PQfinish(conn);
+      |         ^
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:1557:6: warning: Attempt to use released memory: conn [postgres.PostgresChecker]
+ 1557 |         if (PQgetResult(conn) != NULL)
+      |             ^~~~~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:63:2: note: Freeing function: PQfinish (conn)
+   63 |         PQfinish(conn);
+      |         ^
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:1562:6: warning: Attempt to use released memory: conn [postgres.PostgresChecker]
+ 1562 |         if (PQpipelineStatus(conn) == PQ_PIPELINE_OFF)
+      |             ^~~~~~~~~~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:63:2: note: Freeing function: PQfinish (conn)
+   63 |         PQfinish(conn);
+      |         ^
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:1566:6: warning: Attempt to use released memory: conn [postgres.PostgresChecker]
+ 1566 |         if (PQexitPipelineMode(conn) != 1)
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:63:2: note: Freeing function: PQfinish (conn)
+   63 |         PQfinish(conn);
+      |         ^
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:1570:6: warning: Attempt to use released memory: conn [postgres.PostgresChecker]
+ 1570 |         if (PQpipelineStatus(conn) != PQ_PIPELINE_OFF)
+      |             ^~~~~~~~~~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:63:2: note: Freeing function: PQfinish (conn)
+   63 |         PQfinish(conn);
+      |         ^
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:1583:6: warning: Attempt to use released memory: conn [postgres.PostgresChecker]
+ 1583 |         if (PQenterPipelineMode(conn) != 1)
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:63:2: note: Freeing function: PQfinish (conn)
+   63 |         PQfinish(conn);
+      |         ^
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:1594:7: warning: Attempt to use released memory: conn [postgres.PostgresChecker]
+ 1594 |                 if (PQsendQueryParams(conn,
+      |                     ^~~~~~~~~~~~~~~~~~~~~~~
+ 1595 |                                                           "SELECT generate_series(42, $1)",
+      |                                                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 1596 |                                                           1,
+      |                                                           ~~
+ 1597 |                                                           NULL,
+      |                                                           ~~~~~
+ 1598 |                                                           (const char **) param,
+      |                                                           ~~~~~~~~~~~~~~~~~~~~~~
+ 1599 |                                                           NULL,
+      |                                                           ~~~~~
+ 1600 |                                                           NULL,
+      |                                                           ~~~~~
+ 1601 |                                                           0) != 1)
+      |                                                           ~~
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:63:2: note: Freeing function: PQfinish (conn)
+   63 |         PQfinish(conn);
+      |         ^
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:1606:6: warning: Attempt to use released memory: conn [postgres.PostgresChecker]
+ 1606 |         if (PQpipelineSync(conn) != 1)
+      |             ^~~~~~~~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:63:2: note: Freeing function: PQfinish (conn)
+   63 |         PQfinish(conn);
+      |         ^
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:1618:8: warning: Attempt to use released memory: conn [postgres.PostgresChecker]
+ 1618 |                         if (PQsetSingleRowMode(conn) != 1)
+      |                             ^~~~~~~~~~~~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:63:2: note: Freeing function: PQfinish (conn)
+   63 |         PQfinish(conn);
+      |         ^
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:1624:17: warning: Attempt to use released memory: conn [postgres.PostgresChecker]
+ 1624 |                 while ((res = PQgetResult(conn)) != NULL)
+      |                               ^~~~~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:63:2: note: Freeing function: PQfinish (conn)
+   63 |         PQfinish(conn);
+      |         ^
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:1779:8: warning: Attempt to use released memory: conn [postgres.PostgresChecker]
+ 1779 |         res = PQexec(conn, "DROP TABLE IF EXISTS pq_pipeline_tst;"
+      |               ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 1780 |                                  "CREATE TABLE pq_pipeline_tst (id int)");
+      |                                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:63:2: note: Freeing function: PQfinish (conn)
+   63 |         PQfinish(conn);
+      |         ^
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:1786:6: warning: Attempt to use released memory: conn [postgres.PostgresChecker]
+ 1786 |         if (PQenterPipelineMode(conn) != 1)
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:63:2: note: Freeing function: PQfinish (conn)
+   63 |         PQfinish(conn);
+      |         ^
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:1789:6: warning: Attempt to use released memory: conn [postgres.PostgresChecker]
+ 1789 |         if (PQsendPrepare(conn, "rollback", "ROLLBACK", 0, NULL) != 1)
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:63:2: note: Freeing function: PQfinish (conn)
+   63 |         PQfinish(conn);
+      |         ^
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:1793:6: warning: Attempt to use released memory: conn [postgres.PostgresChecker]
+ 1793 |         if (PQsendQueryParams(conn,
+      |             ^~~~~~~~~~~~~~~~~~~~~~~
+ 1794 |                                                   "BEGIN",
+      |                                                   ~~~~~~~~
+ 1795 |                                                   0, NULL, NULL, NULL, NULL, 0) != 1)
+      |                                                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:63:2: note: Freeing function: PQfinish (conn)
+   63 |         PQfinish(conn);
+      |         ^
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:1798:6: warning: Attempt to use released memory: conn [postgres.PostgresChecker]
+ 1798 |         if (PQsendQueryParams(conn,
+      |             ^~~~~~~~~~~~~~~~~~~~~~~
+ 1799 |                                                   "SELECT 0/0",
+      |                                                   ~~~~~~~~~~~~~
+ 1800 |                                                   0, NULL, NULL, NULL, NULL, 0) != 1)
+      |                                                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:63:2: note: Freeing function: PQfinish (conn)
+   63 |         PQfinish(conn);
+      |         ^
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:1808:6: warning: Attempt to use released memory: conn [postgres.PostgresChecker]
+ 1808 |         if (PQsendQueryPrepared(conn, "rollback", 0, NULL, NULL, NULL, 1) != 1)
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:63:2: note: Freeing function: PQfinish (conn)
+   63 |         PQfinish(conn);
+      |         ^
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:1813:6: warning: Attempt to use released memory: conn [postgres.PostgresChecker]
+ 1813 |         if (PQsendQueryParams(conn,
+      |             ^~~~~~~~~~~~~~~~~~~~~~~
+ 1814 |                                                   "INSERT INTO pq_pipeline_tst VALUES (1)",
+      |                                                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 1815 |                                                   0, NULL, NULL, NULL, NULL, 0) != 1)
+      |                                                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:63:2: note: Freeing function: PQfinish (conn)
+   63 |         PQfinish(conn);
+      |         ^
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:1818:6: warning: Attempt to use released memory: conn [postgres.PostgresChecker]
+ 1818 |         if (PQpipelineSync(conn) != 1)
+      |             ^~~~~~~~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:63:2: note: Freeing function: PQfinish (conn)
+   63 |         PQfinish(conn);
+      |         ^
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:1826:6: warning: Attempt to use released memory: conn [postgres.PostgresChecker]
+ 1826 |         if (PQsendQueryParams(conn,
+      |             ^~~~~~~~~~~~~~~~~~~~~~~
+ 1827 |                                                   "INSERT INTO pq_pipeline_tst VALUES (2)",
+      |                                                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 1828 |                                                   0, NULL, NULL, NULL, NULL, 0) != 1)
+      |                                                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:63:2: note: Freeing function: PQfinish (conn)
+   63 |         PQfinish(conn);
+      |         ^
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:1831:6: warning: Attempt to use released memory: conn [postgres.PostgresChecker]
+ 1831 |         if (PQpipelineSync(conn) != 1)
+      |             ^~~~~~~~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:63:2: note: Freeing function: PQfinish (conn)
+   63 |         PQfinish(conn);
+      |         ^
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:1839:6: warning: Attempt to use released memory: conn [postgres.PostgresChecker]
+ 1839 |         if (PQsendQueryPrepared(conn, "rollback", 0, NULL, NULL, NULL, 1) != 1)
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:63:2: note: Freeing function: PQfinish (conn)
+   63 |         PQfinish(conn);
+      |         ^
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:1847:6: warning: Attempt to use released memory: conn [postgres.PostgresChecker]
+ 1847 |         if (PQsendQueryParams(conn,
+      |             ^~~~~~~~~~~~~~~~~~~~~~~
+ 1848 |                                                   "INSERT INTO pq_pipeline_tst VALUES (3)",
+      |                                                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 1849 |                                                   0, NULL, NULL, NULL, NULL, 0) != 1)
+      |                                                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:63:2: note: Freeing function: PQfinish (conn)
+   63 |         PQfinish(conn);
+      |         ^
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:1853:6: warning: Attempt to use released memory: conn [postgres.PostgresChecker]
+ 1853 |         if (PQpipelineSync(conn) != 1)
+      |             ^~~~~~~~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:63:2: note: Freeing function: PQfinish (conn)
+   63 |         PQfinish(conn);
+      |         ^
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:1856:6: warning: Attempt to use released memory: conn [postgres.PostgresChecker]
+ 1856 |         if (PQpipelineSync(conn) != 1)
+      |             ^~~~~~~~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:63:2: note: Freeing function: PQfinish (conn)
+   63 |         PQfinish(conn);
+      |         ^
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:1865:9: warning: Attempt to use released memory: conn [postgres.PostgresChecker]
+ 1865 |                 res = PQgetResult(conn);
+      |                       ^~~~~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:63:2: note: Freeing function: PQfinish (conn)
+   63 |         PQfinish(conn);
+      |         ^
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:1895:6: warning: Attempt to use released memory: conn [postgres.PostgresChecker]
+ 1895 |         if (PQgetResult(conn) != NULL)
+      |             ^~~~~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:63:2: note: Freeing function: PQfinish (conn)
+   63 |         PQfinish(conn);
+      |         ^
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:1897:18: warning: Attempt to use potentially released memory: res [postgres.PostgresChecker]
+ 1897 |                                  PQresStatus(PQresultStatus(res)));
+      |                                              ^~~~~~~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:75:47: note: expanded from macro 'pg_fatal'
+   75 | #define pg_fatal(...) pg_fatal_impl(__LINE__, __VA_ARGS__)
+      |                                               ^~~~~~~~~~~
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:1886:3: note: Freeing function: PQclear (res)
+ 1886 |                 PQclear(res);
+      |                 ^
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:1899:6: warning: Attempt to use released memory: conn [postgres.PostgresChecker]
+ 1899 |         if (PQexitPipelineMode(conn) != 1)
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:63:2: note: Freeing function: PQfinish (conn)
+   63 |         PQfinish(conn);
+      |         ^
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:1903:8: warning: Attempt to use released memory: conn [postgres.PostgresChecker]
+ 1903 |         res = PQexec(conn, "SELECT * FROM pq_pipeline_tst");
+      |               ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:63:2: note: Freeing function: PQfinish (conn)
+   63 |         PQfinish(conn);
+      |         ^
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:1923:15: warning: Attempt to use released memory: conn [postgres.PostgresChecker]
+ 1923 |         int                     sock = PQsocket(conn);
+      |                                        ^~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:63:2: note: Freeing function: PQfinish (conn)
+   63 |         PQfinish(conn);
+      |         ^
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:1943:2: warning: Attempt to use released memory: conn [postgres.PostgresChecker]
+ 1943 |         PQsetnonblocking(conn, 1);
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:63:2: note: Freeing function: PQfinish (conn)
+   63 |         PQfinish(conn);
+      |         ^
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:1949:8: warning: Attempt to use released memory: conn [postgres.PostgresChecker]
+ 1949 |         res = PQexec(conn, "drop table if exists ppln_uniqviol;"
+      |               ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 1950 |                                  "create table ppln_uniqviol(id bigint primary key, idata bigint)");
+      |                                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:63:2: note: Freeing function: PQfinish (conn)
+   63 |         PQfinish(conn);
+      |         ^
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:1954:8: warning: Attempt to use released memory: conn [postgres.PostgresChecker]
+ 1954 |         res = PQexec(conn, "begin");
+      |               ^~~~~~~~~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:63:2: note: Freeing function: PQfinish (conn)
+   63 |         PQfinish(conn);
+      |         ^
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:1958:8: warning: Attempt to use released memory: conn [postgres.PostgresChecker]
+ 1958 |         res = PQprepare(conn, "insertion",
+      |               ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 1959 |                                         "insert into ppln_uniqviol values ($1, $2) returning id",
+      |                                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 1960 |                                         2, paramTypes);
+      |                                         ~~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:63:2: note: Freeing function: PQfinish (conn)
+   63 |         PQfinish(conn);
+      |         ^
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:1964:6: warning: Attempt to use released memory: conn [postgres.PostgresChecker]
+ 1964 |         if (PQenterPipelineMode(conn) != 1)
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:63:2: note: Freeing function: PQfinish (conn)
+   63 |         PQfinish(conn);
+      |         ^
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:1976:10: warning: Attempt to use released memory: conn [postgres.PostgresChecker]
+ 1976 |                 while (PQisBusy(conn) == 0)
+      |                        ^~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:63:2: note: Freeing function: PQfinish (conn)
+   63 |         PQfinish(conn);
+      |         ^
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:2228:8: warning: Attempt to use released memory: conn [postgres.PostgresChecker]
+ 2228 |         res = PQexec(conn, "SET lc_messages TO \"C\"");
+      |               ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:63:2: note: Freeing function: PQfinish (conn)
+   63 |         PQfinish(conn);
+      |         ^
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:2231:8: warning: Attempt to use released memory: conn [postgres.PostgresChecker]
+ 2231 |         res = PQexec(conn, "SET debug_parallel_query = off");
+      |               ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:63:2: note: Freeing function: PQfinish (conn)
+   63 |         PQfinish(conn);
+      |         ^
+145 warnings generated.
+
