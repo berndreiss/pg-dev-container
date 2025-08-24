@@ -1,0 +1,18 @@
+>ATController,Relation, /usr/local/src/postgresql/src/backend/commands/tablecmds.c:4760:1
+>sequence_close,Relation, /usr/local/src/postgresql/src/backend/access/sequence/sequence.c:60:1
+>table_close,Relation, /usr/local/src/postgresql/src/backend/access/table/table.c:128:1
+>pgstat_heap,Relation, /usr/local/src/postgresql/contrib/pgstattuple/pgstattuple.c:398:1
+>pgstat_index,Relation, /usr/local/src/postgresql/contrib/pgstattuple/pgstattuple.c:558:1
+>pg_relpages_impl,Relation, /usr/local/src/postgresql/contrib/pgstattuple/pgstatindex.c:471:1
+>pgstatindex_impl,Relation, /usr/local/src/postgresql/contrib/pgstattuple/pgstatindex.c:333:1
+>fireRIRrules,List *, /usr/local/src/postgresql/src/backend/rewrite/rewriteHandler.c:2152:17
+>ExplainCustomChildren,List *, /usr/local/src/postgresql/src/backend/commands/explain.c:4466:2
+>ExplainMemberNodes,List *, /usr/local/src/postgresql/src/backend/commands/explain.c:4390:2
+>ExplainNode,List *, /usr/local/src/postgresql/src/backend/commands/explain.c:2362:2
+>ExplainNode,List *, /usr/local/src/postgresql/src/backend/commands/explain.c:2367:2
+>ExplainNode,List *, /usr/local/src/postgresql/src/backend/commands/explain.c:2394:3
+>ExplainSubPlans,List *, /usr/local/src/postgresql/src/backend/commands/explain.c:4448:2
+>ExplainNode,List *, /usr/local/src/postgresql/src/backend/commands/explain.c:2358:2
+>ExplainNode,List *, /usr/local/src/postgresql/src/backend/commands/explain.c:2407:2
+>ExplainNode,List *, /usr/local/src/postgresql/src/backend/commands/explain.c:2201:3
+>ExplainNode,List *, /usr/local/src/postgresql/src/backend/commands/explain.c:2217:3

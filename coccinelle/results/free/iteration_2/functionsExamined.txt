@@ -1,0 +1,86 @@
+>RunWorker,ArchiveHandle *, /usr/local/src/postgresql/src/bin/pg_dump/parallel.c:866:1
+>EndCompressFileHandle,CompressFileHandle *, /usr/local/src/postgresql/src/bin/pg_dump/compress_io.c:296:1
+>close_destination_dir,DIR *, /usr/local/src/postgresql/src/bin/pg_basebackup/pg_receivewal.c:255:5
+>FreeDir,DIR *, /usr/local/src/postgresql/src/backend/storage/file/fd.c:2983:8
+>dutch_ISO_8859_1_close_env,struct SN_env *, /usr/local/src/postgresql/src/backend/snowball/libstemmer/stem_ISO_8859_1_dutch.c:602:60
+>arabic_UTF_8_close_env,struct SN_env *, /usr/local/src/postgresql/src/backend/snowball/libstemmer/stem_UTF_8_arabic.c:1663:56
+>italian_ISO_8859_1_close_env,struct SN_env *, /usr/local/src/postgresql/src/backend/snowball/libstemmer/stem_ISO_8859_1_italian.c:1021:62
+>dutch_UTF_8_close_env,struct SN_env *, /usr/local/src/postgresql/src/backend/snowball/libstemmer/stem_UTF_8_dutch.c:612:55
+>nepali_UTF_8_close_env,struct SN_env *, /usr/local/src/postgresql/src/backend/snowball/libstemmer/stem_UTF_8_nepali.c:420:56
+>indonesian_ISO_8859_1_close_env,struct SN_env *, /usr/local/src/postgresql/src/backend/snowball/libstemmer/stem_ISO_8859_1_indonesian.c:406:65
+>swedish_UTF_8_close_env,struct SN_env *, /usr/local/src/postgresql/src/backend/snowball/libstemmer/stem_UTF_8_swedish.c:291:57
+>russian_KOI8_R_close_env,struct SN_env *, /usr/local/src/postgresql/src/backend/snowball/libstemmer/stem_KOI8_R_russian.c:681:58
+>russian_UTF_8_close_env,struct SN_env *, /usr/local/src/postgresql/src/backend/snowball/libstemmer/stem_UTF_8_russian.c:677:57
+>turkish_UTF_8_close_env,struct SN_env *, /usr/local/src/postgresql/src/backend/snowball/libstemmer/stem_UTF_8_turkish.c:2095:57
+>italian_UTF_8_close_env,struct SN_env *, /usr/local/src/postgresql/src/backend/snowball/libstemmer/stem_UTF_8_italian.c:1029:57
+>serbian_UTF_8_close_env,struct SN_env *, /usr/local/src/postgresql/src/backend/snowball/libstemmer/stem_UTF_8_serbian.c:6542:57
+>tamil_UTF_8_close_env,struct SN_env *, /usr/local/src/postgresql/src/backend/snowball/libstemmer/stem_UTF_8_tamil.c:1877:55
+>romanian_ISO_8859_2_close_env,struct SN_env *, /usr/local/src/postgresql/src/backend/snowball/libstemmer/stem_ISO_8859_2_romanian.c:964:63
+>spanish_ISO_8859_1_close_env,struct SN_env *, /usr/local/src/postgresql/src/backend/snowball/libstemmer/stem_ISO_8859_1_spanish.c:1040:62
+>danish_ISO_8859_1_close_env,struct SN_env *, /usr/local/src/postgresql/src/backend/snowball/libstemmer/stem_ISO_8859_1_danish.c:313:61
+>swedish_ISO_8859_1_close_env,struct SN_env *, /usr/local/src/postgresql/src/backend/snowball/libstemmer/stem_ISO_8859_1_swedish.c:287:62
+>french_ISO_8859_1_close_env,struct SN_env *, /usr/local/src/postgresql/src/backend/snowball/libstemmer/stem_ISO_8859_1_french.c:1251:61
+>hungarian_ISO_8859_2_close_env,struct SN_env *, /usr/local/src/postgresql/src/backend/snowball/libstemmer/stem_ISO_8859_2_hungarian.c:861:64
+>porter_ISO_8859_1_close_env,struct SN_env *, /usr/local/src/postgresql/src/backend/snowball/libstemmer/stem_ISO_8859_1_porter.c:716:61
+>irish_ISO_8859_1_close_env,struct SN_env *, /usr/local/src/postgresql/src/backend/snowball/libstemmer/stem_ISO_8859_1_irish.c:469:60
+>english_UTF_8_close_env,struct SN_env *, /usr/local/src/postgresql/src/backend/snowball/libstemmer/stem_UTF_8_english.c:1073:57
+>portuguese_UTF_8_close_env,struct SN_env *, /usr/local/src/postgresql/src/backend/snowball/libstemmer/stem_UTF_8_portuguese.c:966:60
+>catalan_UTF_8_close_env,struct SN_env *, /usr/local/src/postgresql/src/backend/snowball/libstemmer/stem_UTF_8_catalan.c:1448:57
+>lithuanian_UTF_8_close_env,struct SN_env *, /usr/local/src/postgresql/src/backend/snowball/libstemmer/stem_UTF_8_lithuanian.c:836:60
+>finnish_ISO_8859_1_close_env,struct SN_env *, /usr/local/src/postgresql/src/backend/snowball/libstemmer/stem_ISO_8859_1_finnish.c:717:62
+>german_UTF_8_close_env,struct SN_env *, /usr/local/src/postgresql/src/backend/snowball/libstemmer/stem_UTF_8_german.c:499:56
+>romanian_UTF_8_close_env,struct SN_env *, /usr/local/src/postgresql/src/backend/snowball/libstemmer/stem_UTF_8_romanian.c:970:58
+>german_ISO_8859_1_close_env,struct SN_env *, /usr/local/src/postgresql/src/backend/snowball/libstemmer/stem_ISO_8859_1_german.c:489:61
+>portuguese_ISO_8859_1_close_env,struct SN_env *, /usr/local/src/postgresql/src/backend/snowball/libstemmer/stem_ISO_8859_1_portuguese.c:960:65
+>porter_UTF_8_close_env,struct SN_env *, /usr/local/src/postgresql/src/backend/snowball/libstemmer/stem_UTF_8_porter.c:722:56
+>catalan_ISO_8859_1_close_env,struct SN_env *, /usr/local/src/postgresql/src/backend/snowball/libstemmer/stem_ISO_8859_1_catalan.c:1445:62
+>english_ISO_8859_1_close_env,struct SN_env *, /usr/local/src/postgresql/src/backend/snowball/libstemmer/stem_ISO_8859_1_english.c:1061:62
+>greek_UTF_8_close_env,struct SN_env *, /usr/local/src/postgresql/src/backend/snowball/libstemmer/stem_UTF_8_greek.c:3672:55
+>armenian_UTF_8_close_env,struct SN_env *, /usr/local/src/postgresql/src/backend/snowball/libstemmer/stem_UTF_8_armenian.c:558:58
+>irish_UTF_8_close_env,struct SN_env *, /usr/local/src/postgresql/src/backend/snowball/libstemmer/stem_UTF_8_irish.c:469:55
+>norwegian_ISO_8859_1_close_env,struct SN_env *, /usr/local/src/postgresql/src/backend/snowball/libstemmer/stem_ISO_8859_1_norwegian.c:271:64
+>hindi_UTF_8_close_env,struct SN_env *, /usr/local/src/postgresql/src/backend/snowball/libstemmer/stem_UTF_8_hindi.c:321:55
+>hungarian_UTF_8_close_env,struct SN_env *, /usr/local/src/postgresql/src/backend/snowball/libstemmer/stem_UTF_8_hungarian.c:867:59
+>spanish_UTF_8_close_env,struct SN_env *, /usr/local/src/postgresql/src/backend/snowball/libstemmer/stem_UTF_8_spanish.c:1044:57
+>norwegian_UTF_8_close_env,struct SN_env *, /usr/local/src/postgresql/src/backend/snowball/libstemmer/stem_UTF_8_norwegian.c:275:59
+>danish_UTF_8_close_env,struct SN_env *, /usr/local/src/postgresql/src/backend/snowball/libstemmer/stem_UTF_8_danish.c:317:56
+>french_UTF_8_close_env,struct SN_env *, /usr/local/src/postgresql/src/backend/snowball/libstemmer/stem_UTF_8_french.c:1261:56
+>basque_ISO_8859_1_close_env,struct SN_env *, /usr/local/src/postgresql/src/backend/snowball/libstemmer/stem_ISO_8859_1_basque.c:1181:61
+>finnish_UTF_8_close_env,struct SN_env *, /usr/local/src/postgresql/src/backend/snowball/libstemmer/stem_UTF_8_finnish.c:721:57
+>yiddish_UTF_8_close_env,struct SN_env *, /usr/local/src/postgresql/src/backend/snowball/libstemmer/stem_UTF_8_yiddish.c:1232:57
+>basque_UTF_8_close_env,struct SN_env *, /usr/local/src/postgresql/src/backend/snowball/libstemmer/stem_UTF_8_basque.c:1183:56
+>indonesian_UTF_8_close_env,struct SN_env *, /usr/local/src/postgresql/src/backend/snowball/libstemmer/stem_UTF_8_indonesian.c:406:60
+>EndCompressor,CompressorState *, /usr/local/src/postgresql/src/bin/pg_dump/compress_io.c:152:1
+>make_func,PgBenchExprList *, /usr/local/src/postgresql/src/bin/pgbench/exprparse.c:2091:2
+>free_command,Command *, /usr/local/src/postgresql/src/bin/pgbench/pgbench.c:5590:1
+>free_socket_set,socket_set *, /usr/local/src/postgresql/src/bin/pgbench/pgbench.c:7801:1
+>free_socket_set,socket_set *, /usr/local/src/postgresql/src/bin/pgbench/pgbench.c:7868:1
+>bool_substitute_hook,char *, /usr/local/src/postgresql/src/bin/psql/startup.c:868:2
+>avlFree,avl_node *, /usr/local/src/postgresql/src/bin/psql/crosstabview.c:464:3
+>dir_free,WalWriteMethod *, /usr/local/src/postgresql/src/bin/pg_basebackup/walmethods.c:635:1
+>tar_free,WalWriteMethod *, /usr/local/src/postgresql/src/bin/pg_basebackup/walmethods.c:1345:1
+>pfree,void *, /usr/local/src/postgresql/src/common/fe_memutils.c:135:1
+>descriptor_free,struct descriptor *, /usr/local/src/postgresql/src/interfaces/ecpg/ecpglib/descriptor.c:744:1
+>ecpg_finish,struct connection *, /usr/local/src/postgresql/src/interfaces/ecpg/ecpglib/connect.c:139:2
+>deallocate_one,struct prepared_statement *, /usr/local/src/postgresql/src/interfaces/ecpg/ecpglib/prepare.c:309:1
+>free_statement,struct statement *, /usr/local/src/postgresql/src/interfaces/ecpg/ecpglib/execute.c:107:1
+>free_variable,struct variable *, /usr/local/src/postgresql/src/interfaces/ecpg/ecpglib/execute.c:90:2
+>insert_tobeinserted,char *, /usr/local/src/postgresql/src/interfaces/ecpg/ecpglib/execute.c:1135:2
+>insert_tobeinserted,char *, /usr/local/src/postgresql/src/interfaces/ecpg/ecpglib/execute.c:1154:1
+>quote_postgres,char *, /usr/local/src/postgresql/src/interfaces/ecpg/ecpglib/execute.c:77:2
+>ClearOrSaveResult,PGresult *, /usr/local/src/postgresql/src/bin/psql/common.c:536:4
+>TableCommandResultHandler,PGresult *, /usr/local/src/postgresql/src/fe_utils/parallel_slot.c:558:3
+>processQueryResult,PGresult *, /usr/local/src/postgresql/src/fe_utils/parallel_slot.c:48:1
+>ecpg_check_PQresult,PGresult *, /usr/local/src/postgresql/src/interfaces/ecpg/ecpglib/error.c:299:3
+>ecpg_check_PQresult,PGresult *, /usr/local/src/postgresql/src/interfaces/ecpg/ecpglib/error.c:310:3
+>ecpg_check_PQresult,PGresult *, /usr/local/src/postgresql/src/interfaces/ecpg/ecpglib/error.c:319:3
+>ecpg_check_PQresult,PGresult *, /usr/local/src/postgresql/src/interfaces/ecpg/ecpglib/error.c:326:3
+>process_result,PGresult *, /usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:2102:3
+>process_result,PGresult *, /usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:2112:3
+>dblink_res_error,PGresult *, /usr/local/src/postgresql/contrib/dblink/dblink.c:2757:1
+>materializeResult,PGresult *, /usr/local/src/postgresql/contrib/dblink/dblink.c:978:2
+>store_returning_result,PGresult *, /usr/local/src/postgresql/contrib/postgres_fdw/postgres_fdw.c:4362:2
+>pgfdw_report_error,PGresult *, /usr/local/src/postgresql/contrib/postgres_fdw/connection.c:914:3
+>HandleEndOfCopyStream,char *, /usr/local/src/postgresql/src/bin/pg_basebackup/receivelog.c:1202:1
+>PQfreeNotify,PGnotify *, /usr/local/src/postgresql/src/interfaces/libpq/fe-exec.c:4051:1
+>PQfinish,PGconn *, /usr/local/src/postgresql/src/interfaces/libpq/fe-connect.c:4883:2

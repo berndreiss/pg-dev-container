@@ -8,8 +8,6 @@
 *.dylib
 
 *.diffs
-coccinelle/results
-coccinelle/log
 archive
 sql
 regression.out

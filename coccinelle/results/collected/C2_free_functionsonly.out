@@ -1,0 +1,18 @@
+>bms_int_members,Bitmapset *, /usr/local/src/postgresql/src/backend/nodes/bitmapset.c:1123:2
+>bms_int_members,Bitmapset *, /usr/local/src/postgresql/src/backend/nodes/bitmapset.c:1142:2
+>bms_int_members,Bitmapset *, /usr/local/src/postgresql/src/backend/nodes/bitmapset.c:1150:5
+>bms_replace_members,Bitmapset *, /usr/local/src/postgresql/src/backend/nodes/bitmapset.c:1004:5
+>bms_replace_members,Bitmapset *, /usr/local/src/postgresql/src/backend/nodes/bitmapset.c:983:2
+>DecrTupleDescRefCount,TupleDesc, /usr/local/src/postgresql/src/backend/access/common/tupdesc.c:412:2
+>dump_variables,struct arguments *, /usr/local/src/postgresql/src/interfaces/ecpg/preproc/variable.c:460:2
+>ExecForceStoreHeapTuple,HeapTuple, /usr/local/src/postgresql/src/backend/executor/execTuples.c:1577:3
+>ExecForceStoreHeapTuple,HeapTuple, /usr/local/src/postgresql/src/backend/executor/execTuples.c:1589:3
+>ExecForceStoreMinimalTuple,MinimalTuple, /usr/local/src/postgresql/src/backend/executor/execTuples.c:1622:3
+>ExecResetTupleTable,List *, /usr/local/src/postgresql/src/backend/executor/execTuples.c:1312:2
+>freeJsonLexContext,JsonLexContext *, /usr/local/src/postgresql/src/common/jsonapi.c:502:2
+>ParallelBackupEnd,ParallelState *, /usr/local/src/postgresql/src/bin/pg_dump/parallel.c:1090:1
+>pgfdw_report_error,PGresult *, /usr/local/src/postgresql/contrib/postgres_fdw/connection.c:914:3
+>PQclear,PGresult *, /usr/local/src/postgresql/src/interfaces/libpq/fe-exec.c:770:1
+>SnapBuildSnapDecRefcount,Snapshot, /usr/local/src/postgresql/src/backend/replication/logical/snapbuild.c:487:2
+>UnregisterSnapshotFromOwner,Snapshot, /usr/local/src/postgresql/src/backend/utils/time/snapmgr.c:855:1
+>UnregisterSnapshot,Snapshot, /usr/local/src/postgresql/src/backend/utils/time/snapmgr.c:841:1

@@ -1,0 +1,181 @@
+>FreeDir,DIR *, /usr/local/src/postgresql/src/backend/storage/file/fd.c:2983:8
+Used: closedir
+Ret. Type: int
+--
+>TableCommandResultHandler,PGresult *, /usr/local/src/postgresql/src/fe_utils/parallel_slot.c:558:3
+Used: PQclear
+Ret. Type: bool
+--
+>ecpg_check_PQresult,PGresult *, /usr/local/src/postgresql/src/interfaces/ecpg/ecpglib/error.c:299:3
+Used: PQclear
+Ret. Type: bool
+>ecpg_check_PQresult,PGresult *, /usr/local/src/postgresql/src/interfaces/ecpg/ecpglib/error.c:310:3
+Used: PQclear
+Ret. Type: bool
+>ecpg_check_PQresult,PGresult *, /usr/local/src/postgresql/src/interfaces/ecpg/ecpglib/error.c:319:3
+Used: PQclear
+Ret. Type: bool
+>ecpg_check_PQresult,PGresult *, /usr/local/src/postgresql/src/interfaces/ecpg/ecpglib/error.c:326:3
+Used: PQclear
+Ret. Type: bool
+--
+>bms_add_members,Bitmapset *, /usr/local/src/postgresql/src/backend/nodes/bitmapset.c:957:2
+Used: pfree
+Ret. Type: Bitmapset *
+>bms_del_member,Bitmapset *, /usr/local/src/postgresql/src/backend/nodes/bitmapset.c:907:2
+Used: pfree
+Ret. Type: Bitmapset *
+>bms_del_members,Bitmapset *, /usr/local/src/postgresql/src/backend/nodes/bitmapset.c:1211:3
+Used: pfree
+Ret. Type: Bitmapset *
+--
+>add_partial_path,Path *, /usr/local/src/postgresql/src/backend/optimizer/util/pathnode.c:850:2
+Used: pfree
+Ret. Type: void
+>add_path,Path *, /usr/local/src/postgresql/src/backend/optimizer/util/pathnode.c:620:3
+Used: pfree
+Ret. Type: void
+--
+>findsubquery,QTNode *, /usr/local/src/postgresql/src/backend/utils/adt/tsquery_rewrite.c:271:8
+Used: dofindsubquery
+Ret. Type: QTNode *
+--
+>relation_is_updatable,Bitmapset *, /usr/local/src/postgresql/src/backend/rewrite/rewriteHandler.c:3007:21
+Used: bms_int_members
+Ret. Type: int
+>relation_is_updatable,Bitmapset *, /usr/local/src/postgresql/src/backend/rewrite/rewriteHandler.c:3007:21
+Used: bms_int_members
+Ret. Type: int
+--
+>ReorderBufferQueueChange,ReorderBufferChange *, /usr/local/src/postgresql/src/backend/replication/logical/reorderbuffer.c:806:2
+Used: ReorderBufferReturnChange
+Ret. Type: void
+--
+>InsertPgAttributeTuples,CatalogIndexState, /usr/local/src/postgresql/src/backend/catalog/heap.c:806:2
+Used: CatalogCloseIndexes
+Ret. Type: void
+--
+>rewrite_heap_tuple,HeapTuple, /usr/local/src/postgresql/src/backend/access/heap/rewriteheap.c:491:5
+Used: heap_freetuple
+Ret. Type: void
+>rewrite_heap_tuple,HeapTuple, /usr/local/src/postgresql/src/backend/access/heap/rewriteheap.c:491:5
+Used: heap_freetuple
+Ret. Type: void
+>rewrite_heap_tuple,HeapTuple, /usr/local/src/postgresql/src/backend/access/heap/rewriteheap.c:526:3
+Used: heap_freetuple
+Ret. Type: void
+--
+>ParallelSlotsAdoptConn,PGconn *, /usr/local/src/postgresql/src/fe_utils/parallel_slot.c:468:2
+Used: disconnectDatabase
+Ret. Type: void
+--
+>ReleaseCatCacheList,CatCList *, /usr/local/src/postgresql/src/backend/utils/cache/catcache.c:1989:1
+Used: ReleaseCatCacheListWithOwner
+Ret. Type: void
+--
+>list_delete_first_n,List *, /usr/local/src/postgresql/src/backend/nodes/list.c:994:2
+Used: list_free
+Ret. Type: List *
+>list_delete_last,List *, /usr/local/src/postgresql/src/backend/nodes/list.c:967:2
+Used: list_free
+Ret. Type: List *
+>list_delete_nth_cell,List *, /usr/local/src/postgresql/src/backend/nodes/list.c:780:2
+Used: list_free
+Ret. Type: List *
+--
+>bms_add_member,Bitmapset *, /usr/local/src/postgresql/src/backend/nodes/bitmapset.c:854:5
+Used: bms_copy_and_free
+Ret. Type: Bitmapset *
+>bms_add_members,Bitmapset *, /usr/local/src/postgresql/src/backend/nodes/bitmapset.c:933:6
+Used: bms_copy_and_free
+Ret. Type: Bitmapset *
+>bms_add_range,Bitmapset *, /usr/local/src/postgresql/src/backend/nodes/bitmapset.c:1033:6
+Used: bms_copy_and_free
+Ret. Type: Bitmapset *
+>bms_add_range,Bitmapset *, /usr/local/src/postgresql/src/backend/nodes/bitmapset.c:1098:5
+Used: bms_copy_and_free
+Ret. Type: Bitmapset *
+>bms_del_member,Bitmapset *, /usr/local/src/postgresql/src/backend/nodes/bitmapset.c:884:5
+Used: bms_copy_and_free
+Ret. Type: Bitmapset *
+>bms_del_members,Bitmapset *, /usr/local/src/postgresql/src/backend/nodes/bitmapset.c:1174:6
+Used: bms_copy_and_free
+Ret. Type: Bitmapset *
+>bms_del_members,Bitmapset *, /usr/local/src/postgresql/src/backend/nodes/bitmapset.c:1220:5
+Used: bms_copy_and_free
+Ret. Type: Bitmapset *
+--
+>bms_join,Bitmapset *, /usr/local/src/postgresql/src/backend/nodes/bitmapset.c:1244:6
+Used: bms_copy_and_free
+Ret. Type: Bitmapset *
+>bms_join,Bitmapset *, /usr/local/src/postgresql/src/backend/nodes/bitmapset.c:1252:6
+Used: bms_copy_and_free
+Ret. Type: Bitmapset *
+--
+>relation_is_updatable,Bitmapset *, /usr/local/src/postgresql/src/backend/rewrite/rewriteHandler.c:3032:19
+Used: relation_is_updatable
+Ret. Type: int
+--
+>pa_xact_finish,ParallelApplyWorkerInfo *, /usr/local/src/postgresql/src/backend/replication/logical/applyparallelworker.c:1638:1
+Used: pa_free_worker
+Ret. Type: void
+--
+>RelationClose,Relation, /usr/local/src/postgresql/src/backend/utils/cache/relcache.c:2199:1
+Used: RelationCloseCleanup
+Ret. Type: void
+--
+>CheckAttributeType,List *, /usr/local/src/postgresql/src/backend/catalog/heap.c:638:24
+Used: list_delete_last
+Ret. Type: void
+--
+>relation_is_updatable,List *, /usr/local/src/postgresql/src/backend/rewrite/rewriteHandler.c:3036:20
+Used: list_delete_last
+Ret. Type: int
+>list_delete_cell,List *, /usr/local/src/postgresql/src/backend/nodes/list.c:843:8
+Used: list_delete_nth_cell
+Ret. Type: List *
+>list_delete_first,List *, /usr/local/src/postgresql/src/backend/nodes/list.c:950:8
+Used: list_delete_nth_cell
+Ret. Type: List *
+--
+>relation_close,Relation, /usr/local/src/postgresql/src/backend/access/common/relation.c:212:1
+Used: RelationClose
+Ret. Type: void
+>index_close,Relation, /usr/local/src/postgresql/src/backend/access/index/indexam.c:184:1
+Used: RelationClose
+Ret. Type: void
+>CheckAttributeType,List *, /usr/local/src/postgresql/src/backend/catalog/heap.c:593:2
+Used: CheckAttributeType
+Ret. Type: void
+>CheckAttributeType,List *, /usr/local/src/postgresql/src/backend/catalog/heap.c:630:3
+Used: CheckAttributeType
+Ret. Type: void
+>CheckAttributeType,List *, /usr/local/src/postgresql/src/backend/catalog/heap.c:645:2
+Used: CheckAttributeType
+Ret. Type: void
+>CheckAttributeType,List *, /usr/local/src/postgresql/src/backend/catalog/heap.c:655:2
+Used: CheckAttributeType
+Ret. Type: void
+--
+>relation_is_updatable,List *, /usr/local/src/postgresql/src/backend/rewrite/rewriteHandler.c:3032:19
+Used: relation_is_updatable
+Ret. Type: int
+>list_delete,List *, /usr/local/src/postgresql/src/backend/nodes/list.c:863:10
+Used: list_delete_cell
+Ret. Type: List *
+>list_delete_int,List *, /usr/local/src/postgresql/src/backend/nodes/list.c:901:10
+Used: list_delete_cell
+Ret. Type: List *
+>list_delete_oid,List *, /usr/local/src/postgresql/src/backend/nodes/list.c:920:10
+Used: list_delete_cell
+Ret. Type: List *
+>list_delete_ptr,List *, /usr/local/src/postgresql/src/backend/nodes/list.c:882:10
+Used: list_delete_cell
+Ret. Type: List *
+--
+>sequence_close,Relation, /usr/local/src/postgresql/src/backend/access/sequence/sequence.c:60:1
+Used: relation_close
+Ret. Type: void
+>table_close,Relation, /usr/local/src/postgresql/src/backend/access/table/table.c:128:1
+Used: relation_close
+Ret. Type: void

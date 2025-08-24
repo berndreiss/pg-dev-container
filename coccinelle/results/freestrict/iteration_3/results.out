@@ -1,0 +1,69 @@
+>SPI_cursor_close,Portal, /usr/local/src/postgresql/src/backend/executor/spi.c:1867:1
+Used: PortalDrop
+Ret. Type: void
+>list_free,List *, /usr/local/src/postgresql/src/backend/nodes/list.c:1548:1
+Used: list_free_private
+Ret. Type: void
+>list_free_deep,List *, /usr/local/src/postgresql/src/backend/nodes/list.c:1566:1
+Used: list_free_private
+Ret. Type: void
+>bms_copy_and_free,Bitmapset *, /usr/local/src/postgresql/src/backend/nodes/bitmapset.c:113:1
+Used: bms_free
+Ret. Type: Bitmapset *
+>EndCopyTo,CopyToState, /usr/local/src/postgresql/src/backend/commands/copyto.c:738:1
+Used: EndCopy
+Ret. Type: void
+>ReorderBufferResetTXN,ReorderBufferChange *, /usr/local/src/postgresql/src/backend/replication/logical/reorderbuffer.c:2078:2
+Used: ReorderBufferReturnChange
+Ret. Type: void
+>ReorderBufferCleanupTXN,ReorderBufferTXN *, /usr/local/src/postgresql/src/backend/replication/logical/reorderbuffer.c:1618:1
+Used: ReorderBufferReturnTXN
+Ret. Type: void
+>updateAclDependencies,Oid *, /usr/local/src/postgresql/src/backend/catalog/pg_shdepend.c:496:1
+Used: updateAclDependenciesWorker
+Ret. Type: void
+>updateInitAclDependencies,Oid *, /usr/local/src/postgresql/src/backend/catalog/pg_shdepend.c:516:1
+Used: updateAclDependenciesWorker
+Ret. Type: void
+>updateAclDependencies,Oid *, /usr/local/src/postgresql/src/backend/catalog/pg_shdepend.c:496:1
+Used: updateAclDependenciesWorker
+Ret. Type: void
+>updateInitAclDependencies,Oid *, /usr/local/src/postgresql/src/backend/catalog/pg_shdepend.c:516:1
+Used: updateAclDependenciesWorker
+Ret. Type: void
+>SPI_freetuple,HeapTuple, /usr/local/src/postgresql/src/backend/executor/spi.c:1382:1
+Used: heap_freetuple
+Ret. Type: void
+>index_endscan,IndexScanDesc, /usr/local/src/postgresql/src/backend/access/index/indexam.c:400:1
+Used: IndexScanEnd
+Ret. Type: void
+>psql_end_command,StringInfo, /usr/local/src/postgresql/src/test/regress/pg_regress.c:1180:1
+Used: destroyStringInfo
+Ret. Type: void
+>audit_attempt,char *, /usr/local/src/postgresql/src/test/modules/test_oat_hooks/test_oat_hooks.c:261:1
+Used: emit_audit_message
+Ret. Type: void
+>audit_failure,char *, /usr/local/src/postgresql/src/test/modules/test_oat_hooks/test_oat_hooks.c:273:1
+Used: emit_audit_message
+Ret. Type: void
+>audit_success,char *, /usr/local/src/postgresql/src/test/modules/test_oat_hooks/test_oat_hooks.c:267:1
+Used: emit_audit_message
+Ret. Type: void
+>audit_attempt,char *, /usr/local/src/postgresql/src/test/modules/test_oat_hooks/test_oat_hooks.c:261:1
+Used: emit_audit_message
+Ret. Type: void
+>audit_failure,char *, /usr/local/src/postgresql/src/test/modules/test_oat_hooks/test_oat_hooks.c:273:1
+Used: emit_audit_message
+Ret. Type: void
+>audit_success,char *, /usr/local/src/postgresql/src/test/modules/test_oat_hooks/test_oat_hooks.c:267:1
+Used: emit_audit_message
+Ret. Type: void
+>pushf_free_all,PushFilter *, /usr/local/src/postgresql/contrib/pgcrypto/mbuf.c:418:2
+Used: pushf_free
+Ret. Type: void
+>report_corruption,char *, /usr/local/src/postgresql/contrib/amcheck/verify_heapam.c:857:1
+Used: report_corruption_internal
+Ret. Type: void
+>report_toast_corruption,char *, /usr/local/src/postgresql/contrib/amcheck/verify_heapam.c:874:1
+Used: report_corruption_internal
+Ret. Type: void

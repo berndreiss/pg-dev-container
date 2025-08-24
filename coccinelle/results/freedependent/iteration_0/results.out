@@ -1,0 +1,54 @@
+>ATExecDropColumn,ObjectAddresses *, /usr/local/src/postgresql/src/backend/commands/tablecmds.c:9082:5,recurse
+Used: ATExecDropColumn
+Ret. Type: ObjectAddress
+>ATExecDropColumn,ObjectAddresses *, /usr/local/src/postgresql/src/backend/commands/tablecmds.c:9082:5,recurse
+Used: ATExecDropColumn
+Ret. Type: ObjectAddress
+>quote_postgres,char *, /usr/local/src/postgresql/src/interfaces/ecpg/ecpglib/execute.c:77:2,quote
+Used: ecpg_free
+Ret. Type: char *
+>ExplainNode,List *, /usr/local/src/postgresql/src/backend/commands/explain.c:2358:2,planstate->initPlan
+Used: ExplainSubPlans
+Ret. Type: void
+>ExplainNode,List *, /usr/local/src/postgresql/src/backend/commands/explain.c:2407:2,planstate->subPlan
+Used: ExplainSubPlans
+Ret. Type: void
+>ExplainNode,List *, /usr/local/src/postgresql/src/backend/commands/explain.c:2358:2,planstate->initPlan
+Used: ExplainSubPlans
+Ret. Type: void
+>ExplainNode,List *, /usr/local/src/postgresql/src/backend/commands/explain.c:2407:2,planstate->subPlan
+Used: ExplainSubPlans
+Ret. Type: void
+>ginFinishSplit,GinBtreeStack *, /usr/local/src/postgresql/src/backend/access/gin/ginbtree.c:763:2,freestack
+Used: freeGinBtreeStack
+Ret. Type: void
+>ExecResetTupleTable,List *, /usr/local/src/postgresql/src/backend/executor/execTuples.c:1312:2,shouldFree
+Used: list_free
+Ret. Type: void
+>ReorderBufferFreeSnap,Snapshot, /usr/local/src/postgresql/src/backend/replication/logical/reorderbuffer.c:1895:2,snap->copied
+Used: pfree
+Ret. Type: void
+>ExecForceStoreHeapTuple,HeapTuple, /usr/local/src/postgresql/src/backend/executor/execTuples.c:1577:3,shouldFree
+Used: pfree
+Ret. Type: void
+>ExecForceStoreHeapTuple,HeapTuple, /usr/local/src/postgresql/src/backend/executor/execTuples.c:1589:3,shouldFree
+Used: pfree
+Ret. Type: void
+>ExecForceStoreMinimalTuple,MinimalTuple, /usr/local/src/postgresql/src/backend/executor/execTuples.c:1622:3,shouldFree
+Used: pfree
+Ret. Type: void
+>ginFinishSplit,GinBtreeStack *, /usr/local/src/postgresql/src/backend/access/gin/ginbtree.c:752:3,freestack
+Used: pfree
+Ret. Type: void
+>_bt_insertonpg,IndexTuple, /usr/local/src/postgresql/src/backend/access/nbtree/nbtinsert.c:1435:2,postingoff
+Used: pfree
+Ret. Type: void
+>pgfdw_report_error,PGresult *, /usr/local/src/postgresql/contrib/postgres_fdw/connection.c:914:3,clear
+Used: PQclear
+Ret. Type: void
+>ATExecDetachPartition,Relation, /usr/local/src/postgresql/src/backend/commands/tablecmds.c:19183:2,concurrent
+Used: table_close
+Ret. Type: ObjectAddress
+>dump_variables,struct arguments *, /usr/local/src/postgresql/src/interfaces/ecpg/preproc/variable.c:460:2,mode
+Used: free
+Ret. Type: void

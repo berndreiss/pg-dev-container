@@ -1,0 +1,69 @@
+>addCompiledLexeme,TheLexeme *, /usr/local/src/postgresql/src/backend/tsearch/dict_thesaurus.c:308:26
+>bms_add_member,Bitmapset *, /usr/local/src/postgresql/src/backend/nodes/bitmapset.c:836:20
+>bms_add_range,Bitmapset *, /usr/local/src/postgresql/src/backend/nodes/bitmapset.c:1055:20
+>bms_replace_members,Bitmapset *, /usr/local/src/postgresql/src/backend/nodes/bitmapset.c:988:20
+>brin_copy_tuple,BrinTuple *, /usr/local/src/postgresql/src/backend/access/brin/brin_tuple.c:452:9
+>brin_copy_tuple,Size, /usr/local/src/postgresql/src/backend/access/brin/brin_tuple.c:452:9
+>core_yyrealloc,void *, /usr/local/src/postgresql/src/backend/parser/scan.c:11816:9
+>core_yyrealloc,yy_size_t, /usr/local/src/postgresql/src/backend/parser/scan.c:11816:9
+>ecpg_realloc,long, /usr/local/src/postgresql/src/interfaces/ecpg/ecpglib/memory.c:35:25
+>ecpg_realloc,void *, /usr/local/src/postgresql/src/interfaces/ecpg/ecpglib/memory.c:35:25
+>ecpg_store_input,const int, /usr/local/src/postgresql/src/interfaces/ecpg/ecpglib/execute.c:1038:22
+>ecpg_store_input,const int, /usr/local/src/postgresql/src/interfaces/ecpg/ecpglib/execute.c:897:22
+>ecpg_store_input,const int, /usr/local/src/postgresql/src/interfaces/ecpg/ecpglib/execute.c:944:22
+>ecpg_store_input,const int, /usr/local/src/postgresql/src/interfaces/ecpg/ecpglib/execute.c:991:22
+>erealloc,size_t, /usr/local/src/postgresql/src/timezone/zic.c:442:17
+>erealloc,void *, /usr/local/src/postgresql/src/timezone/zic.c:442:17
+>gistjoinvector,IndexTuple *, /usr/local/src/postgresql/src/backend/access/gist/gistutil.c:115:24
+>growalloc,void *, /usr/local/src/postgresql/src/timezone/zic.c:464:9
+>_int_unique,ArrayType *, /usr/local/src/postgresql/contrib/intarray/_int_tool.c:319:8
+>jsonpath_yyrealloc,void *, /usr/local/src/postgresql/src/backend/utils/adt/jsonpath_scan.c:6175:9
+>jsonpath_yyrealloc,yy_size_t, /usr/local/src/postgresql/src/backend/utils/adt/jsonpath_scan.c:6175:9
+>pg_realloc,size_t, /usr/local/src/postgresql/src/common/fe_memutils.c:72:7
+>pg_realloc,void *, /usr/local/src/postgresql/src/common/fe_memutils.c:72:7
+>ReorderBufferSerializeReserve,Size, /usr/local/src/postgresql/src/backend/replication/logical/reorderbuffer.c:3529:15
+>repalloc0,Size, /usr/local/src/postgresql/src/backend/utils/mmgr/mcxt.c:1627:7
+>repalloc0,void *, /usr/local/src/postgresql/src/backend/utils/mmgr/mcxt.c:1627:7
+>repalloc,Size, /usr/local/src/postgresql/src/common/fe_memutils.c:174:8
+>repalloc,void *, /usr/local/src/postgresql/src/common/fe_memutils.c:174:8
+>resize_intArrayType,ArrayType *, /usr/local/src/postgresql/contrib/intarray/_int_tool.c:268:19
+>SetConstraintStateAddItem,SetConstraintState, /usr/local/src/postgresql/src/backend/commands/trigger.c:5639:3
+>SPI_repalloc,Size, /usr/local/src/postgresql/src/backend/executor/spi.c:1350:8
+>SPI_repalloc,void *, /usr/local/src/postgresql/src/backend/executor/spi.c:1350:8
+>xml_repalloc,size_t, /usr/local/src/postgresql/src/backend/utils/adt/xml.c:1969:8
+>xml_repalloc,void *, /usr/local/src/postgresql/src/backend/utils/adt/xml.c:1969:8
+>yyensure_buffer_stack,yyscan_t, /usr/local/src/postgresql/src/backend/parser/scan.c:10995:51
+>yyensure_buffer_stack,yyscan_t, /usr/local/src/postgresql/src/bin/pgbench/exprscan.c:2176:51
+>yyensure_buffer_stack,yyscan_t, /usr/local/src/postgresql/src/bin/psql/psqlscanslash.c:2663:51
+>yyensure_buffer_stack,yyscan_t, /usr/local/src/postgresql/src/fe_utils/psqlscan.c:4761:51
+>yy_get_next_buffer,yyscan_t, /usr/local/src/postgresql/src/backend/parser/scan.c:10551:5
+>yy_get_next_buffer,yyscan_t, /usr/local/src/postgresql/src/backend/parser/scan.c:10601:49
+>yy_get_next_buffer,yyscan_t, /usr/local/src/postgresql/src/bin/pgbench/exprscan.c:1711:5
+>yy_get_next_buffer,yyscan_t, /usr/local/src/postgresql/src/bin/pgbench/exprscan.c:1761:49
+>yy_get_next_buffer,yyscan_t, /usr/local/src/postgresql/src/bin/psql/psqlscanslash.c:2223:5
+>yy_get_next_buffer,yyscan_t, /usr/local/src/postgresql/src/bin/psql/psqlscanslash.c:2273:49
+>yy_get_next_buffer,yyscan_t, /usr/local/src/postgresql/src/fe_utils/psqlscan.c:4321:5
+>yy_get_next_buffer,yyscan_t, /usr/local/src/postgresql/src/fe_utils/psqlscan.c:4371:49
+>yyrealloc,void *, /usr/local/src/postgresql/contrib/cube/cubescan.c:2049:8
+>yyrealloc,void *, /usr/local/src/postgresql/contrib/seg/segscan.c:2031:8
+>yyrealloc,void *, /usr/local/src/postgresql/src/backend/bootstrap/bootscanner.c:2245:8
+>yyrealloc,void *, /usr/local/src/postgresql/src/backend/replication/repl_scanner.c:2476:8
+>yyrealloc,void *, /usr/local/src/postgresql/src/backend/replication/syncrep_scanner.c:2111:8
+>yyrealloc,void *, /usr/local/src/postgresql/src/backend/utils/misc/guc-file.c:2096:8
+>yyrealloc,void *, /usr/local/src/postgresql/src/bin/pgbench/exprscan.c:2631:8
+>yyrealloc,void *, /usr/local/src/postgresql/src/bin/psql/psqlscanslash.c:3118:8
+>yyrealloc,void *, /usr/local/src/postgresql/src/fe_utils/psqlscan.c:5216:8
+>yyrealloc,void *, /usr/local/src/postgresql/src/interfaces/ecpg/preproc/pgc.c:5072:8
+>yyrealloc,void *, /usr/local/src/postgresql/src/test/isolation/specscanner.c:2194:8
+>yyrealloc,yy_size_t, /usr/local/src/postgresql/contrib/cube/cubescan.c:2049:8
+>yyrealloc,yy_size_t, /usr/local/src/postgresql/contrib/seg/segscan.c:2031:8
+>yyrealloc,yy_size_t, /usr/local/src/postgresql/src/backend/bootstrap/bootscanner.c:2245:8
+>yyrealloc,yy_size_t, /usr/local/src/postgresql/src/backend/replication/repl_scanner.c:2476:8
+>yyrealloc,yy_size_t, /usr/local/src/postgresql/src/backend/replication/syncrep_scanner.c:2111:8
+>yyrealloc,yy_size_t, /usr/local/src/postgresql/src/backend/utils/misc/guc-file.c:2096:8
+>yyrealloc,yy_size_t, /usr/local/src/postgresql/src/bin/pgbench/exprscan.c:2631:8
+>yyrealloc,yy_size_t, /usr/local/src/postgresql/src/bin/psql/psqlscanslash.c:3118:8
+>yyrealloc,yy_size_t, /usr/local/src/postgresql/src/fe_utils/psqlscan.c:5216:8
+>yyrealloc,yy_size_t, /usr/local/src/postgresql/src/interfaces/ecpg/preproc/pgc.c:5072:8
+>yyrealloc,yy_size_t, /usr/local/src/postgresql/src/test/isolation/specscanner.c:2194:8
+>realloc,void *

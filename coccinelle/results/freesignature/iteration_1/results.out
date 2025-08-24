@@ -1,0 +1,48 @@
+>EndCompressFileHandle,CompressFileHandle *, /usr/local/src/postgresql/src/bin/pg_dump/compress_io.c:296:1
+Used: free_keep_errno
+Ret. Type: bool
+>FreeDir,DIR *, /usr/local/src/postgresql/src/backend/storage/file/fd.c:2983:8
+Used: closedir
+Ret. Type: int
+>free_command,Command *, /usr/local/src/postgresql/src/bin/pgbench/pgbench.c:5590:1
+Used: pg_free
+Ret. Type: void
+>free_socket_set,socket_set *, /usr/local/src/postgresql/src/bin/pgbench/pgbench.c:7801:1
+Used: pg_free
+Ret. Type: void
+>free_socket_set,socket_set *, /usr/local/src/postgresql/src/bin/pgbench/pgbench.c:7868:1
+Used: pg_free
+Ret. Type: void
+>bool_substitute_hook,char *, /usr/local/src/postgresql/src/bin/psql/startup.c:868:2
+Used: pg_free
+Ret. Type: char *
+>dir_free,WalWriteMethod *, /usr/local/src/postgresql/src/bin/pg_basebackup/walmethods.c:635:1
+Used: pg_free
+Ret. Type: void
+>tar_free,WalWriteMethod *, /usr/local/src/postgresql/src/bin/pg_basebackup/walmethods.c:1345:1
+Used: pg_free
+Ret. Type: void
+>pfree,void *, /usr/local/src/postgresql/src/common/fe_memutils.c:135:1
+Used: pg_free
+Ret. Type: void
+>descriptor_free,struct descriptor *, /usr/local/src/postgresql/src/interfaces/ecpg/ecpglib/descriptor.c:744:1
+Used: ecpg_free
+Ret. Type: void
+>ecpg_finish,struct connection *, /usr/local/src/postgresql/src/interfaces/ecpg/ecpglib/connect.c:139:2
+Used: ecpg_free
+Ret. Type: void
+>free_statement,struct statement *, /usr/local/src/postgresql/src/interfaces/ecpg/ecpglib/execute.c:107:1
+Used: ecpg_free
+Ret. Type: void
+>free_variable,struct variable *, /usr/local/src/postgresql/src/interfaces/ecpg/ecpglib/execute.c:90:2
+Used: ecpg_free
+Ret. Type: void
+>ClearOrSaveResult,PGresult *, /usr/local/src/postgresql/src/bin/psql/common.c:536:4
+Used: PQclear
+Ret. Type: void
+>PQfreeNotify,PGnotify *, /usr/local/src/postgresql/src/interfaces/libpq/fe-exec.c:4051:1
+Used: PQfreemem
+Ret. Type: void
+>PQfinish,PGconn *, /usr/local/src/postgresql/src/interfaces/libpq/fe-connect.c:4883:2
+Used: freePGconn
+Ret. Type: void

@@ -1,0 +1,9 @@
+>repalloc0,Size, /usr/local/src/postgresql/src/backend/utils/mmgr/mcxt.c:1627:7
+Used: repalloc
+Ret. Type: void *
+>gistjoinvector,IndexTuple *, /usr/local/src/postgresql/src/backend/access/gist/gistutil.c:115:24
+Used: repalloc
+Ret. Type: IndexTuple *
+>brin_copy_tuple,BrinTuple *, /usr/local/src/postgresql/src/backend/access/brin/brin_tuple.c:452:9
+Used: repalloc
+Ret. Type: BrinTuple *
