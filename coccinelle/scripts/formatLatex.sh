@@ -33,6 +33,8 @@ echo "      All without static& $FREE & $REALLOC \\\\
 echo "\\newcommand{\\freenostatic}{$FREE}" >> $LATEX_FILE_NUMBERS
 echo "\\newcommand{\\reallocnostatic}{$REALLOC}" >> $LATEX_FILE_NUMBERS
 
+echo "\\hline" >> $LATEX_FILE
+
 FREE=$(grep -A 1 "^STRICT:" $STATS_FILE_FREE | tail -n 1)
 REALLOC=$(grep -A 1 "^STRICT:" $STATS_FILE_REALLOC | tail -n 1)
 echo "      $CATEGORY$COUNT: Strict Functions& $FREE & $REALLOC \\\\

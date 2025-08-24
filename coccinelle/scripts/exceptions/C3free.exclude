@@ -1,2 +1,3 @@
 findsubquery:1
 findsubquery:2
+rewrite_heap_tuple:1

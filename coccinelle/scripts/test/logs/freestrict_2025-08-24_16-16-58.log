@@ -1,0 +1,59 @@
+STARTING -> test.c
+########## ITERATION 0 ##########
+### Function 1 of 1 (free strict iteration 0) ###
+init_defs_builtins: /usr/lib/coccinelle/standard.h
+HANDLING: test.c
+#################################
+TIME PASSED: 0 SECONDS
+########## ITERATION 1 ##########
+### Function 1 of 1 (free strict iteration 1) ###
+init_defs_builtins: /usr/lib/coccinelle/standard.h
+HANDLING: test.c
+#################################
+TIME PASSED: 0 SECONDS
+########## ITERATION 2 ##########
+### Function 1 of 13 (free strict iteration 2) ###
+init_defs_builtins: /usr/lib/coccinelle/standard.h
+HANDLING: test.c
+### Function 2 of 13 (free strict iteration 2) ###
+init_defs_builtins: /usr/lib/coccinelle/standard.h
+HANDLING: test.c
+### Function 3 of 13 (free strict iteration 2) ###
+init_defs_builtins: /usr/lib/coccinelle/standard.h
+HANDLING: test.c
+### Function 4 of 13 (free strict iteration 2) ###
+init_defs_builtins: /usr/lib/coccinelle/standard.h
+HANDLING: test.c
+### Function 5 of 13 (free strict iteration 2) ###
+init_defs_builtins: /usr/lib/coccinelle/standard.h
+HANDLING: test.c
+### Function 6 of 13 (free strict iteration 2) ###
+init_defs_builtins: /usr/lib/coccinelle/standard.h
+HANDLING: test.c
+### Function 7 of 13 (free strict iteration 2) ###
+init_defs_builtins: /usr/lib/coccinelle/standard.h
+HANDLING: test.c
+### Function 8 of 13 (free strict iteration 2) ###
+init_defs_builtins: /usr/lib/coccinelle/standard.h
+HANDLING: test.c
+### Function 9 of 13 (free strict iteration 2) ###
+init_defs_builtins: /usr/lib/coccinelle/standard.h
+HANDLING: test.c
+### Function 10 of 13 (free strict iteration 2) ###
+init_defs_builtins: /usr/lib/coccinelle/standard.h
+HANDLING: test.c
+### Function 11 of 13 (free strict iteration 2) ###
+init_defs_builtins: /usr/lib/coccinelle/standard.h
+HANDLING: test.c
+### Function 12 of 13 (free strict iteration 2) ###
+init_defs_builtins: /usr/lib/coccinelle/standard.h
+HANDLING: test.c
+### Function 13 of 13 (free strict iteration 2) ###
+init_defs_builtins: /usr/lib/coccinelle/standard.h
+HANDLING: test.c
+#################################
+TIME PASSED: 2 SECONDS
+#################################
+DONE
+NUMBER OF ITERATIONS: 3
+TIME PASSED OVERALL: 0 MINUTES 2 SECONDS

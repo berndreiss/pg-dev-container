@@ -1,0 +1,315 @@
+PostgresChecker Static Analysis Results
+=============================================================
+Directory: /usr/local/src/postgresql/contrib
+Path: /usr/local/src/postgresql
+Started: Wed Aug  6 10:48:06 AM UTC 2025
+Clang version: Debian clang version 19.1.4 (1~deb12u1)
+
+========================================
+File: /usr/local/src/postgresql/contrib/dblink/dblink.c
+Time: Wed Aug  6 10:48:30 AM UTC 2025
+Status: ISSUES FOUND
+Errors: 0, Warnings: 15
+========================================
+warning: Path diagnostic report is not generated. Current output format does not support diagnostics that cross file boundaries. Refer to --analyzer-output for valid output formats
+warning: Path diagnostic report is not generated. Current output format does not support diagnostics that cross file boundaries. Refer to --analyzer-output for valid output formats
+warning: Path diagnostic report is not generated. Current output format does not support diagnostics that cross file boundaries. Refer to --analyzer-output for valid output formats
+warning: Path diagnostic report is not generated. Current output format does not support diagnostics that cross file boundaries. Refer to --analyzer-output for valid output formats
+In file included from /usr/local/src/postgresql/contrib/dblink/dblink.c:52:
+/usr/local/postgresql-17.2/include/server/libpq/libpq-be-fe-helpers.h:76:2: warning: Attempt to use released memory: conn [postgres.PostgresChecker]
+   76 |         return conn;
+      |         ^~~~~~~~~~~
+/usr/local/postgresql-17.2/include/server/libpq/libpq-be-fe-helpers.h:238:3: note: Freeing function: PQfinish (conn)
+  238 |                 PQfinish(conn);
+      |                 ^
+/usr/local/postgresql-17.2/include/server/libpq/libpq-be-fe-helpers.h:258:7: warning: Attempt to use released memory: conn [postgres.PostgresChecker]
+  258 |         if (!PQsendQuery(conn, query))
+      |              ^~~~~~~~~~~~~~~~~~~~~~~~
+/usr/local/postgresql-17.2/include/server/libpq/libpq-be-fe-helpers.h:120:2: note: Freeing function: PQfinish (conn)
+  120 |         PQfinish(conn);
+      |         ^
+/usr/local/postgresql-17.2/include/server/libpq/libpq-be-fe-helpers.h:316:5: warning: Attempt to use released memory: conn [postgres.PostgresChecker]
+  316 |                                 PQstatus(conn) == CONNECTION_BAD)
+      |                                 ^~~~~~~~~~~~~~
+/usr/local/postgresql-17.2/include/server/libpq/libpq-be-fe-helpers.h:120:2: note: Freeing function: PQfinish (conn)
+  120 |         PQfinish(conn);
+      |         ^
+/usr/local/postgresql-17.2/include/server/libpq/libpq-be-fe-helpers.h:340:9: warning: Attempt to use released memory: conn [postgres.PostgresChecker]
+  340 |         while (PQisBusy(conn))
+      |                ^~~~~~~~~~~~~~
+/usr/local/postgresql-17.2/include/server/libpq/libpq-be-fe-helpers.h:120:2: note: Freeing function: PQfinish (conn)
+  120 |         PQfinish(conn);
+      |         ^
+/usr/local/postgresql-17.2/include/server/libpq/libpq-be-fe-helpers.h:347:11: warning: Attempt to use released memory: conn [postgres.PostgresChecker]
+  347 |                                                            PQsocket(conn),
+      |                                                            ^~~~~~~~~~~~~~
+/usr/local/postgresql-17.2/include/server/libpq/libpq-be-fe-helpers.h:120:2: note: Freeing function: PQfinish (conn)
+  120 |         PQfinish(conn);
+      |         ^
+/usr/local/postgresql-17.2/include/server/libpq/libpq-be-fe-helpers.h:359:7: warning: Attempt to use released memory: conn [postgres.PostgresChecker]
+  359 |                 if (PQconsumeInput(conn) == 0)
+      |                     ^~~~~~~~~~~~~~~~~~~~
+/usr/local/postgresql-17.2/include/server/libpq/libpq-be-fe-helpers.h:120:2: note: Freeing function: PQfinish (conn)
+  120 |         PQfinish(conn);
+      |         ^
+/usr/local/postgresql-17.2/include/server/libpq/libpq-be-fe-helpers.h:367:9: warning: Attempt to use released memory: conn [postgres.PostgresChecker]
+  367 |         return PQgetResult(conn);
+      |                ^~~~~~~~~~~~~~~~~
+/usr/local/postgresql-17.2/include/server/libpq/libpq-be-fe-helpers.h:120:2: note: Freeing function: PQfinish (conn)
+  120 |         PQfinish(conn);
+      |         ^
+/usr/local/src/postgresql/contrib/dblink/dblink.c:218:7: warning: Attempt to use released memory: conn [postgres.PostgresChecker]
+  218 |                 if (PQstatus(conn) == CONNECTION_BAD)
+      |                     ^~~~~~~~~~~~~~
+/usr/local/postgresql-17.2/include/server/libpq/libpq-be-fe-helpers.h:238:3: note: Freeing function: PQfinish (conn)
+  238 |                 PQfinish(conn);
+      |                 ^
+/usr/local/src/postgresql/contrib/dblink/dblink.c:229:7: warning: Attempt to use released memory: conn [postgres.PostgresChecker]
+  229 |                 if (PQclientEncoding(conn) != GetDatabaseEncoding())
+      |                     ^~~~~~~~~~~~~~~~~~~~~~
+/usr/local/postgresql-17.2/include/server/libpq/libpq-be-fe-helpers.h:120:2: note: Freeing function: PQfinish (conn)
+  120 |         PQfinish(conn);
+      |         ^
+/usr/local/src/postgresql/contrib/dblink/dblink.c:230:4: warning: Attempt to use released memory: conn [postgres.PostgresChecker]
+  230 |                         PQsetClientEncoding(conn, GetDatabaseEncodingName());
+      |                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/local/postgresql-17.2/include/server/libpq/libpq-be-fe-helpers.h:120:2: note: Freeing function: PQfinish (conn)
+  120 |         PQfinish(conn);
+      |         ^
+/usr/local/src/postgresql/contrib/dblink/dblink.c:2616:6: warning: Attempt to use released memory: conn [postgres.PostgresChecker]
+ 2616 |         if (PQconnectionUsedPassword(conn) && dblink_connstr_has_pw(connstr))
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/local/postgresql-17.2/include/server/libpq/libpq-be-fe-helpers.h:238:3: note: Freeing function: PQfinish (conn)
+  238 |                 PQfinish(conn);
+      |                 ^
+11 warnings generated.
+
+========================================
+File: /usr/local/src/postgresql/contrib/postgres_fdw/postgres_fdw.c
+Time: Wed Aug  6 10:48:55 AM UTC 2025
+Status: ISSUES FOUND
+Errors: 0, Warnings: 13
+========================================
+/usr/local/src/postgresql/contrib/postgres_fdw/postgres_fdw.c:1704:2: warning: Possible attempt to free released memory: res [postgres.PostgresChecker]
+ 1704 |         PQclear(res);
+      |         ^~~~~~~~~~~~
+/usr/local/src/postgresql/contrib/postgres_fdw/postgres_fdw.c:1703:3: note: Freeing function: pgfdw_report_error (res)
+ 1703 |                 pgfdw_report_error(ERROR, res, fsstate->conn, true, sql);
+      |                 ^
+/usr/local/src/postgresql/contrib/postgres_fdw/postgres_fdw.c:3776:2: warning: Possible attempt to free released memory: res [postgres.PostgresChecker]
+ 3776 |         PQclear(res);
+      |         ^~~~~~~~~~~~
+/usr/local/src/postgresql/contrib/postgres_fdw/postgres_fdw.c:3775:3: note: Freeing function: pgfdw_report_error (res)
+ 3775 |                 pgfdw_report_error(ERROR, res, conn, true, fsstate->query);
+      |                 ^
+/usr/local/src/postgresql/contrib/postgres_fdw/postgres_fdw.c:3957:2: warning: Possible attempt to free released memory: res [postgres.PostgresChecker]
+ 3957 |         PQclear(res);
+      |         ^~~~~~~~~~~~
+/usr/local/src/postgresql/contrib/postgres_fdw/postgres_fdw.c:3956:3: note: Freeing function: pgfdw_report_error (res)
+ 3956 |                 pgfdw_report_error(ERROR, res, conn, true, sql);
+      |                 ^
+/usr/local/src/postgresql/contrib/postgres_fdw/postgres_fdw.c:4181:12: warning: Attempt to use released memory: res [postgres.PostgresChecker]
+ 4181 |                 n_rows = PQntuples(res);
+      |                          ^~~~~~~~~~~~~~
+/usr/local/src/postgresql/contrib/postgres_fdw/postgres_fdw.c:4175:3: note: Freeing function: pgfdw_report_error (res)
+ 4175 |                 pgfdw_report_error(ERROR, res, fmstate->conn, true, fmstate->query);
+      |                 ^
+/usr/local/src/postgresql/contrib/postgres_fdw/postgres_fdw.c:4186:17: warning: Attempt to use released memory: res [postgres.PostgresChecker]
+ 4186 |                 n_rows = atoi(PQcmdTuples(res));
+      |                               ^~~~~~~~~~~~~~~~
+/usr/local/src/postgresql/contrib/postgres_fdw/postgres_fdw.c:4175:3: note: Freeing function: pgfdw_report_error (res)
+ 4175 |                 pgfdw_report_error(ERROR, res, fmstate->conn, true, fmstate->query);
+      |                 ^
+/usr/local/src/postgresql/contrib/postgres_fdw/postgres_fdw.c:4189:2: warning: Possible attempt to free potentially released memory: res [postgres.PostgresChecker]
+ 4189 |         PQclear(res);
+      |         ^~~~~~~~~~~~
+/usr/local/src/postgresql/contrib/postgres_fdw/postgres_fdw.c:4362:3: note: Freeing function: PQclear (res)
+ 4362 |                 PQclear(res);
+      |                 ^
+/usr/local/src/postgresql/contrib/postgres_fdw/postgres_fdw.c:4189:2: warning: Possible attempt to free released memory: res [postgres.PostgresChecker]
+ 4189 |         PQclear(res);
+      |         ^~~~~~~~~~~~
+/usr/local/src/postgresql/contrib/postgres_fdw/postgres_fdw.c:4175:3: note: Freeing function: pgfdw_report_error (res)
+ 4175 |                 pgfdw_report_error(ERROR, res, fmstate->conn, true, fmstate->query);
+      |                 ^
+/usr/local/src/postgresql/contrib/postgres_fdw/postgres_fdw.c:4245:2: warning: Possible attempt to free released memory: res [postgres.PostgresChecker]
+ 4245 |         PQclear(res);
+      |         ^~~~~~~~~~~~
+/usr/local/src/postgresql/contrib/postgres_fdw/postgres_fdw.c:4244:3: note: Freeing function: pgfdw_report_error (res)
+ 4244 |                 pgfdw_report_error(ERROR, res, fmstate->conn, true, fmstate->query);
+      |                 ^
+/usr/local/src/postgresql/contrib/postgres_fdw/postgres_fdw.c:4362:3: warning: Possible attempt to free released memory: res [postgres.PostgresChecker]
+ 4362 |                 PQclear(res);
+      |                 ^~~~~~~~~~~~
+/usr/local/src/postgresql/contrib/postgres_fdw/postgres_fdw.c:4175:3: note: Freeing function: pgfdw_report_error (res)
+ 4175 |                 pgfdw_report_error(ERROR, res, fmstate->conn, true, fmstate->query);
+      |                 ^
+/usr/local/src/postgresql/contrib/postgres_fdw/postgres_fdw.c:4409:2: warning: Possible attempt to free released memory: res [postgres.PostgresChecker]
+ 4409 |         PQclear(res);
+      |         ^~~~~~~~~~~~
+/usr/local/src/postgresql/contrib/postgres_fdw/postgres_fdw.c:4408:3: note: Freeing function: pgfdw_report_error (res)
+ 4408 |                 pgfdw_report_error(ERROR, res, fmstate->conn, true, sql);
+      |                 ^
+/usr/local/src/postgresql/contrib/postgres_fdw/postgres_fdw.c:4592:25: warning: Attempt to use released memory [postgres.PostgresChecker]
+ 4592 |                 dmstate->num_tuples = PQntuples(dmstate->result);
+      |                                       ^~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/local/src/postgresql/contrib/postgres_fdw/postgres_fdw.c:4587:3: note: Freeing function: pgfdw_report_error
+ 4587 |                 pgfdw_report_error(ERROR, dmstate->result, dmstate->conn, true,
+      |                 ^
+/usr/local/src/postgresql/contrib/postgres_fdw/postgres_fdw.c:4594:30: warning: Attempt to use released memory [postgres.PostgresChecker]
+ 4594 |                 dmstate->num_tuples = atoi(PQcmdTuples(dmstate->result));
+      |                                            ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/local/src/postgresql/contrib/postgres_fdw/postgres_fdw.c:4587:3: note: Freeing function: pgfdw_report_error
+ 4587 |                 pgfdw_report_error(ERROR, dmstate->result, dmstate->conn, true,
+      |                 ^
+/usr/local/src/postgresql/contrib/postgres_fdw/postgres_fdw.c:4650:4: warning: Possible attempt to free released memory [postgres.PostgresChecker]
+ 4650 |                         PQclear(dmstate->result);
+      |                         ^~~~~~~~~~~~~~~~~~~~~~~~
+/usr/local/src/postgresql/contrib/postgres_fdw/postgres_fdw.c:4587:3: note: Freeing function: pgfdw_report_error
+ 4587 |                 pgfdw_report_error(ERROR, dmstate->result, dmstate->conn, true,
+      |                 ^
+13 warnings generated.
+
+========================================
+File: /usr/local/src/postgresql/contrib/postgres_fdw/connection.c
+Time: Wed Aug  6 10:48:57 AM UTC 2025
+Status: ISSUES FOUND
+Errors: 0, Warnings: 24
+========================================
+warning: Path diagnostic report is not generated. Current output format does not support diagnostics that cross file boundaries. Refer to --analyzer-output for valid output formats
+warning: Path diagnostic report is not generated. Current output format does not support diagnostics that cross file boundaries. Refer to --analyzer-output for valid output formats
+warning: Path diagnostic report is not generated. Current output format does not support diagnostics that cross file boundaries. Refer to --analyzer-output for valid output formats
+warning: Path diagnostic report is not generated. Current output format does not support diagnostics that cross file boundaries. Refer to --analyzer-output for valid output formats
+warning: Path diagnostic report is not generated. Current output format does not support diagnostics that cross file boundaries. Refer to --analyzer-output for valid output formats
+warning: Path diagnostic report is not generated. Current output format does not support diagnostics that cross file boundaries. Refer to --analyzer-output for valid output formats
+warning: Path diagnostic report is not generated. Current output format does not support diagnostics that cross file boundaries. Refer to --analyzer-output for valid output formats
+warning: Path diagnostic report is not generated. Current output format does not support diagnostics that cross file boundaries. Refer to --analyzer-output for valid output formats
+warning: Path diagnostic report is not generated. Current output format does not support diagnostics that cross file boundaries. Refer to --analyzer-output for valid output formats
+warning: Path diagnostic report is not generated. Current output format does not support diagnostics that cross file boundaries. Refer to --analyzer-output for valid output formats
+warning: Path diagnostic report is not generated. Current output format does not support diagnostics that cross file boundaries. Refer to --analyzer-output for valid output formats
+In file included from /usr/local/src/postgresql/contrib/postgres_fdw/connection.c:21:
+/usr/local/postgresql-17.2/include/server/libpq/libpq-be-fe-helpers.h:97:2: warning: Attempt to use released memory: conn [postgres.PostgresChecker]
+   97 |         return conn;
+      |         ^~~~~~~~~~~
+/usr/local/postgresql-17.2/include/server/libpq/libpq-be-fe-helpers.h:238:3: note: Freeing function: PQfinish (conn)
+  238 |                 PQfinish(conn);
+      |                 ^
+/usr/local/src/postgresql/contrib/postgres_fdw/connection.c:286:4: warning: Attempt to use released memory [postgres.PostgresChecker]
+  286 |                         PQstatus(entry->conn) != CONNECTION_BAD ||
+      |                         ^~~~~~~~~~~~~~~~~~~~~
+/usr/local/postgresql-17.2/include/server/libpq/libpq-be-fe-helpers.h:238:3: note: Freeing function: PQfinish (conn)
+  238 |                 PQfinish(conn);
+      |                 ^
+/usr/local/src/postgresql/contrib/postgres_fdw/connection.c:312:6: warning: Attempt to use released memory [postgres.PostgresChecker]
+  311 |                 ereport(DEBUG3,
+      |                 ~~~~~~~~~~~~~~~
+  312 |                                 (errmsg_internal("could not start remote transaction on connection %p",
+      |                                 ~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  313 |                                                                  entry->conn)),
+      |                                                                  ~~~~~~~~~~~~~~
+  314 |                                 errdetail_internal("%s", pchomp(PQerrorMessage(entry->conn))));
+      |                                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/local/postgresql-17.2/include/server/utils/elog.h:164:37: note: expanded from macro 'ereport'
+  164 |         ereport_domain(elevel, TEXTDOMAIN, __VA_ARGS__)
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~
+/usr/local/postgresql-17.2/include/server/utils/elog.h:147:4: note: expanded from macro 'ereport_domain'
+  147 |                         __VA_ARGS__, errfinish(__FILE__, __LINE__, __func__); \
+      |                         ^~~~~~~~~~~
+/usr/local/postgresql-17.2/include/server/libpq/libpq-be-fe-helpers.h:238:3: note: Freeing function: PQfinish (conn)
+  238 |                 PQfinish(conn);
+      |                 ^
+/usr/local/src/postgresql/contrib/postgres_fdw/connection.c:316:3: warning: Attempt to use released memory [postgres.PostgresChecker]
+  316 |                 elog(DEBUG3, "closing connection %p to reestablish a new one",
+      |                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  317 |                          entry->conn);
+      |                          ~~~~~~~~~~~~
+/usr/local/postgresql-17.2/include/server/utils/elog.h:240:18: note: expanded from macro 'elog'
+  240 |         ereport(elevel, errmsg_internal(__VA_ARGS__))
+      |         ~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/local/postgresql-17.2/include/server/utils/elog.h:164:37: note: expanded from macro 'ereport'
+  164 |         ereport_domain(elevel, TEXTDOMAIN, __VA_ARGS__)
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~
+/usr/local/postgresql-17.2/include/server/utils/elog.h:147:4: note: expanded from macro 'ereport_domain'
+  147 |                         __VA_ARGS__, errfinish(__FILE__, __LINE__, __func__); \
+      |                         ^~~~~~~~~~~
+/usr/local/postgresql-17.2/include/server/libpq/libpq-be-fe-helpers.h:238:3: note: Freeing function: PQfinish (conn)
+  238 |                 PQfinish(conn);
+      |                 ^
+/usr/local/src/postgresql/contrib/postgres_fdw/connection.c:332:2: warning: Attempt to use released memory [postgres.PostgresChecker]
+  332 |         return entry->conn;
+      |         ^~~~~~~~~~~~~~~~~~
+/usr/local/postgresql-17.2/include/server/libpq/libpq-be-fe-helpers.h:238:3: note: Freeing function: PQfinish (conn)
+  238 |                 PQfinish(conn);
+      |                 ^
+/usr/local/src/postgresql/contrib/postgres_fdw/connection.c:395:2: warning: Attempt to use released memory [postgres.PostgresChecker]
+  395 |         elog(DEBUG3, "new postgres_fdw connection %p for server \"%s\" (user mapping oid %u, userid %u)",
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  396 |                  entry->conn, server->servername, user->umid, user->userid);
+      |                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/local/postgresql-17.2/include/server/utils/elog.h:240:18: note: expanded from macro 'elog'
+  240 |         ereport(elevel, errmsg_internal(__VA_ARGS__))
+      |         ~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/local/postgresql-17.2/include/server/utils/elog.h:164:37: note: expanded from macro 'ereport'
+  164 |         ereport_domain(elevel, TEXTDOMAIN, __VA_ARGS__)
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~
+/usr/local/postgresql-17.2/include/server/utils/elog.h:147:4: note: expanded from macro 'ereport_domain'
+  147 |                         __VA_ARGS__, errfinish(__FILE__, __LINE__, __func__); \
+      |                         ^~~~~~~~~~~
+/usr/local/postgresql-17.2/include/server/libpq/libpq-be-fe-helpers.h:238:3: note: Freeing function: PQfinish (conn)
+  238 |                 PQfinish(conn);
+      |                 ^
+/usr/local/src/postgresql/contrib/postgres_fdw/connection.c:423:6: warning: Attempt to use released memory: conn [postgres.PostgresChecker]
+  423 |         if (PQconnectionUsedPassword(conn))
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/local/postgresql-17.2/include/server/libpq/libpq-be-fe-helpers.h:238:3: note: Freeing function: PQfinish (conn)
+  238 |                 PQfinish(conn);
+      |                 ^
+/usr/local/src/postgresql/contrib/postgres_fdw/connection.c:548:16: warning: Attempt to use released memory: conn [postgres.PostgresChecker]
+  548 |                 if (!conn || PQstatus(conn) != CONNECTION_OK)
+      |                              ^~~~~~~~~~~~~~
+/usr/local/postgresql-17.2/include/server/libpq/libpq-be-fe-helpers.h:238:3: note: Freeing function: PQfinish (conn)
+  238 |                 PQfinish(conn);
+      |                 ^
+/usr/local/src/postgresql/contrib/postgres_fdw/connection.c:573:2: warning: Attempt to use released memory: conn [postgres.PostgresChecker]
+  573 |         return conn;
+      |         ^~~~~~~~~~~
+/usr/local/postgresql-17.2/include/server/libpq/libpq-be-fe-helpers.h:238:3: note: Freeing function: PQfinish (conn)
+  238 |                 PQfinish(conn);
+      |                 ^
+/usr/local/src/postgresql/contrib/postgres_fdw/connection.c:663:24: warning: Attempt to use released memory: conn [postgres.PostgresChecker]
+  663 |         int                     remoteversion = PQserverVersion(conn);
+      |                                                 ^~~~~~~~~~~~~~~~~~~~~
+/usr/local/postgresql-17.2/include/server/libpq/libpq-be-fe-helpers.h:238:3: note: Freeing function: PQfinish (conn)
+  238 |                 PQfinish(conn);
+      |                 ^
+/usr/local/src/postgresql/contrib/postgres_fdw/connection.c:708:7: warning: Attempt to use released memory: conn [postgres.PostgresChecker]
+  708 |         if (!PQsendQuery(conn, sql))
+      |              ^~~~~~~~~~~~~~~~~~~~~~
+/usr/local/postgresql-17.2/include/server/libpq/libpq-be-fe-helpers.h:238:3: note: Freeing function: PQfinish (conn)
+  238 |                 PQfinish(conn);
+      |                 ^
+/usr/local/src/postgresql/contrib/postgres_fdw/connection.c:728:2: warning: Possible attempt to free potentially released memory: res [postgres.PostgresChecker]
+  728 |         PQclear(res);
+      |         ^~~~~~~~~~~~
+/usr/local/src/postgresql/contrib/postgres_fdw/connection.c:914:4: note: Freeing function: PQclear (res)
+  914 |                         PQclear(res);
+      |                         ^
+/usr/local/src/postgresql/contrib/postgres_fdw/connection.c:751:3: warning: Attempt to use released memory [postgres.PostgresChecker]
+  751 |                 elog(DEBUG3, "starting remote transaction on connection %p",
+      |                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  752 |                          entry->conn);
+      |                          ~~~~~~~~~~~~
+/usr/local/postgresql-17.2/include/server/utils/elog.h:240:18: note: expanded from macro 'elog'
+  240 |         ereport(elevel, errmsg_internal(__VA_ARGS__))
+      |         ~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/local/postgresql-17.2/include/server/utils/elog.h:164:37: note: expanded from macro 'ereport'
+  164 |         ereport_domain(elevel, TEXTDOMAIN, __VA_ARGS__)
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~
+/usr/local/postgresql-17.2/include/server/utils/elog.h:147:4: note: expanded from macro 'ereport_domain'
+  147 |                         __VA_ARGS__, errfinish(__FILE__, __LINE__, __func__); \
+      |                         ^~~~~~~~~~~
+/usr/local/postgresql-17.2/include/server/libpq/libpq-be-fe-helpers.h:238:3: note: Freeing function: PQfinish (conn)
+  238 |                 PQfinish(conn);
+      |                 ^
+13 warnings generated.
+

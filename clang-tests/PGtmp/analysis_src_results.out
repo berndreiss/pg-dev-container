@@ -1,4 +1,0 @@
-Include paths:  -I/usr/local/postgresql-17.2/include/server -I/usr/local/postgresql-17.2/include
-Using custom checker: 
-Command: clang-19 --analyze  -I/usr/local/postgresql-17.2/include/server -I/usr/local/postgresql-17.2/include -Xclang -load -Xclang /usr/local/lib/libPostgresChecker.so --analyzer-no-default-checks -Xclang -analyzer-checker=postgres.PostgresChecker
-

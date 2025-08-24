@@ -65,7 +65,6 @@ void testFree(RelOptInfo *parent_rel, Path *path){
 int main(int argnum, char **args){
   struct arguments *list1 = palloc(sizeof(struct arguments));
   pfree(list1);
-  exit(1);
   pfree(list1);
   //dump_variables(list1, 1);
   //use_arguments(list1);
