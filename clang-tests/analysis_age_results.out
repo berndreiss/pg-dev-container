@@ -1,0 +1,33 @@
+PostgresChecker Static Analysis Results
+=============================================================
+Directory: /workspaces/pg-dev-container/clang-tests/age
+Path: /usr/local/src/postgresql
+Started: Mon Aug 25 07:27:50 AM UTC 2025
+Clang version: Debian clang version 19.1.4 (1~deb12u1)
+
+========================================
+File: /workspaces/pg-dev-container/clang-tests/age/src/backend/utils/adt/age_vle.c
+Time: Mon Aug 25 07:27:54 AM UTC 2025
+Status: ISSUES FOUND
+Errors: 0, Warnings: 2
+========================================
+/workspaces/pg-dev-container/clang-tests/age/src/backend/utils/adt/age_vle.c:1971:9: warning: Attempt to use released memory [postgres.PostgresChecker]
+ 1971 |     if (left_array[left_array_size - 1] != right_array[0])
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/workspaces/pg-dev-container/clang-tests/age/src/backend/utils/adt/age_vle.c:1953:5: note: Freeing function: pfree (agt_arg_vpc)
+ 1953 |     PG_FREE_IF_COPY(agt_arg_vpc, 0);
+      |     ^
+/usr/local/postgresql-17.2/include/server/fmgr.h:263:4: note: expanded from macro 'PG_FREE_IF_COPY'
+  263 |                         pfree(ptr); \
+      |                         ^
+/workspaces/pg-dev-container/clang-tests/age/src/backend/utils/adt/age_vle.c:1971:44: warning: Attempt to use released memory [postgres.PostgresChecker]
+ 1971 |     if (left_array[left_array_size - 1] != right_array[0])
+      |                                            ^~~~~~~~~~~~~~
+/workspaces/pg-dev-container/clang-tests/age/src/backend/utils/adt/age_vle.c:1969:5: note: Freeing function: pfree (agt_arg_vpc)
+ 1969 |     PG_FREE_IF_COPY(agt_arg_vpc, 1);
+      |     ^
+/usr/local/postgresql-17.2/include/server/fmgr.h:263:4: note: expanded from macro 'PG_FREE_IF_COPY'
+  263 |                         pfree(ptr); \
+      |                         ^
+2 warnings generated.
+
