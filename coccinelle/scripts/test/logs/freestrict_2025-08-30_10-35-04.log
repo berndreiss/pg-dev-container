@@ -52,8 +52,8 @@ HANDLING: test.c
 init_defs_builtins: /usr/lib/coccinelle/standard.h
 HANDLING: test.c
 #################################
-TIME PASSED: 2 SECONDS
+TIME PASSED: 1 SECONDS
 #################################
 DONE
 NUMBER OF ITERATIONS: 3
-TIME PASSED OVERALL: 0 MINUTES 2 SECONDS
+TIME PASSED OVERALL: 0 MINUTES 1 SECONDS

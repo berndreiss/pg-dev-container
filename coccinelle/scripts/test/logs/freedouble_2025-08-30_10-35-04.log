@@ -4,7 +4,7 @@ STARTING -> test.c
 init_defs_builtins: /usr/lib/coccinelle/standard.h
 HANDLING: test.c
 #################################
-TIME PASSED: 0 SECONDS
+TIME PASSED: 1 SECONDS
 ########## ITERATION 1 ##########
 ### Function 1 of 1 (free signature iteration 1) ###
 init_defs_builtins: /usr/lib/coccinelle/standard.h
@@ -49,7 +49,7 @@ HANDLING: test.c
 init_defs_builtins: /usr/lib/coccinelle/standard.h
 HANDLING: test.c
 #################################
-TIME PASSED: 1 SECONDS
+TIME PASSED: 0 SECONDS
 #################################
 DONE
 NUMBER OF ITERATIONS: 3
