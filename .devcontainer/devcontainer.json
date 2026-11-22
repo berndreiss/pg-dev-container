@@ -2,7 +2,7 @@
    "name": "PostgreSQL dev container",
    "build": {
         "dockerfile": "Dockerfile",
-        "args": { "PGVERSION": "17.2" }
+        "args": { "PGVERSION": "18.6" }
     },
     "runArgs": [ "--cap-add=SYS_PTRACE", "--security-opt", "seccomp=unconfined" ],
     "customizations": {
@@ -21,5 +21,6 @@
      },
     "remoteUser": "vscode",
     "postStartCommand": "pg_ctl start -D /home/vscode/pgdata -l /home/vscode/postgresql.log && cd /home/vscode && if [ ! -d pg_ladybug ]; then git clone https://github.com/berndreiss/pg_ladybug; cd pg_ladybug; else cd pg_ladybug; git pull; fi && cmake -S . -B build && make -C build && sudo make -C build install && sudo apt -y install clang llvm",
+    "postAttachCommand": "if [ ! -f /home/vscode/.pg-src-added ]; then code --add /usr/local/src/postgresql && touch /home/vscode/.pg-src-added; fi",
     "forwardPorts": [5432]
 }
