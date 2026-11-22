@@ -1,0 +1,7 @@
+PostgresChecker Static Analysis Results
+=============================================================
+Directory: /workspaces/pg-dev-container/timescaledb
+Path: /usr/local/src/postgresql
+Started: Fri Jan 23 08:01:40 PM UTC 2026
+Clang version: Debian clang version 19.1.7 (3~deb12u1)
+

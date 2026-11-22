@@ -1,20 +1,12 @@
 #!/bin/bash
 
-# PostgresChecker Directory Analyzer Script 
-# Usage: ./analyze_directory.sh [directory] [output_file]
+# PostgresChecker Directory Analyzer Script
+# Usage: ./baseChecker.sh [-I include_path] ... [directory] [output_file]
 
-DIRECTORY=${1:-"."}
-# Generate output filename based on directory name
-DIR_NAME=$(basename "$DIRECTORY")
 TMP_DIR=PGtmp
-# Replace . with current_directory for readability
-if [ "$DIR_NAME" = "." ]; then
-    DIR_NAME="current_directory"
-fi
-OUTPUT_FILE=${2:-"analysis_${DIR_NAME}_results.out"}
 
 # PostgreSQL source path
-if [ -z "${PG_PATH}" ]; then 
+if [ -z "${PG_PATH}" ]; then
     PG_PATH=/usr/local/src/postgresql
 fi
 if [ ! -d "$PG_PATH" ]; then
@@ -24,6 +16,41 @@ fi
 if [ ! -d "$TMP_DIR" ]; then
   mkdir "$TMP_DIR"
 fi
+
+# Parse command line options - collect include paths first
+# Convert relative paths to absolute before we cd into TMP_DIR
+CUSTOM_INCLUDES=""
+while getopts "I:" opt; do
+    case $opt in
+        I)
+            # Convert to absolute path if it exists
+            if [ -d "$OPTARG" ]; then
+                ABS_PATH=$(realpath "$OPTARG")
+                CUSTOM_INCLUDES="$CUSTOM_INCLUDES -I$ABS_PATH"
+            else
+                # Keep as-is if path doesn't exist (let clang report the error)
+                CUSTOM_INCLUDES="$CUSTOM_INCLUDES -I$OPTARG"
+            fi
+            ;;
+        \?)
+            echo "Invalid option: -$OPTARG" >&2
+            echo "Usage: $0 [-I include_path] ... [directory] [output_file]"
+            exit 1
+            ;;
+    esac
+done
+
+# Shift past the options to get positional parameters
+shift $((OPTIND-1))
+
+DIRECTORY=${1:-"."}
+# Generate output filename based on directory name
+DIR_NAME=$(basename "$DIRECTORY")
+# Replace . with current_directory for readability
+if [ "$DIR_NAME" = "." ]; then
+    DIR_NAME="current_directory"
+fi
+OUTPUT_FILE=${2:-"analysis_${DIR_NAME}_results.out"}
 
 # Get absolute path of the directory being analyzed
 ANALYSIS_DIR=$(realpath "$DIRECTORY")
@@ -43,10 +70,14 @@ echo "========================================="
 echo "Directory: $ANALYSIS_DIR"
 echo "Output file: $OUTPUT_FILE"
 echo "PostgreSQL path: $PG_PATH"
+if [ -n "$CUSTOM_INCLUDES" ]; then
+    echo "Custom includes: $CUSTOM_INCLUDES"
+fi
 echo "Started: $(date)"
 echo "========================================="
 
-# Clear output file
+# Create output directory if needed and clear output file
+mkdir -p "$(dirname "../$OUTPUT_FILE")"
 > ../"$OUTPUT_FILE"
 
 # Write header to output file
@@ -55,6 +86,9 @@ echo "========================================="
     echo "============================================================="
     echo "Directory: $ANALYSIS_DIR"
     echo "Path: $PG_PATH"
+    if [ -n "$CUSTOM_INCLUDES" ]; then
+        echo "Custom includes: $CUSTOM_INCLUDES"
+    fi
     echo "Started: $(date)"
     echo "Clang version: $(clang-19 --version | head -1)"
     echo ""
@@ -63,18 +97,18 @@ echo "========================================="
 # Function to build include paths dynamically
 build_include_paths() {
     local includes=""
-    
+
     # Include server
     includes="$includes -I$(pg_config --includedir-server)"
 
     # Include client
     includes="$includes -I$(pg_config --includedir)"
-    
-    # Extension-specific includes 
+
+    # Extension-specific includes
     if [ -d "$ANALYSIS_DIR/src/include" ]; then
         includes="$includes -I$ANALYSIS_DIR/src/include"
     fi
-    
+
     # Additional backend includes
     if [ -d "$ANALYSIS_DIR/src/backend" ]; then
         includes="$includes -I$ANALYSIS_DIR/src/backend"
@@ -85,7 +119,19 @@ build_include_paths() {
         includes="$includes -I$ANALYSIS_DIR/../build"
         includes="$includes -I$ANALYSIS_DIR/../build/src"
     fi
-    
+
+    if [ -d "$ANALYSIS_DIR/src" ]; then
+        includes="$includes -I$ANALYSIS_DIR/src"
+    fi
+
+
+    while IFS= read -r include_dir; do
+    includes="$includes -I$include_dir"
+done < <(find "$ANALYSIS_DIR" -type d -name "include")
+
+    # Append custom includes passed via -I option
+    includes="$includes $CUSTOM_INCLUDES"
+
     echo "$includes"
 }
 

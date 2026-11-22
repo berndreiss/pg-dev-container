@@ -1,0 +1,200 @@
+PostgresChecker Static Analysis Results
+=============================================================
+Directory: /workspaces/pg-dev-container/archive/Extensions/citus
+Path: /usr/local/src/postgresql
+Started: Tue Jan 20 04:31:21 PM UTC 2026
+Clang version: Debian clang version 19.1.4 (1~deb12u1)
+
+========================================
+File: /workspaces/pg-dev-container/archive/Extensions/citus/src/backend/distributed/utils/clonenode_utils.c
+Time: Tue Jan 20 04:31:34 PM UTC 2026
+Status: ISSUES FOUND
+Errors: 0, Warnings: 2
+========================================
+NOTES: this is the typical ERROR abort problem...
+========================================
+/workspaces/pg-dev-container/archive/Extensions/citus/src/backend/distributed/utils/clonenode_utils.c:341:8: warning: Attempt to use released memory [postgres.PostgresChecker]
+  341 |         pfree(replicationCheckQuery->data);
+      |               ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+/workspaces/pg-dev-container/archive/Extensions/citus/src/backend/distributed/utils/clonenode_utils.c:291:3: note: Freeing function: pfree (replicationCheckQuery)
+  291 |                 pfree(replicationCheckQuery);
+      |                 ^
+/workspaces/pg-dev-container/archive/Extensions/citus/src/backend/distributed/utils/clonenode_utils.c:342:2: warning: Attempt to free released memory: replicationCheckQuery [postgres.PostgresChecker]
+  342 |         pfree(replicationCheckQuery);
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/workspaces/pg-dev-container/archive/Extensions/citus/src/backend/distributed/utils/clonenode_utils.c:291:3: note: Freeing function: pfree (replicationCheckQuery)
+  291 |                 pfree(replicationCheckQuery);
+      |                 ^
+2 warnings generated.
+
+========================================
+File: /workspaces/pg-dev-container/archive/Extensions/citus/src/backend/distributed/utils/multi_partitioning_utils.c
+Time: Tue Jan 20 04:31:41 PM UTC 2026
+Status: ISSUES FOUND
+Errors: 0, Warnings: 1
+========================================
+NOTES: this is a bug, but only if RELCACHE_FORCE_RELEASE is set
+solution:
+
+char *relname = pstrdup(RelationGetRelationName(relation));
+relation_close(relation, NoLock);
+ereport(ERROR, (errmsg("... \"%s\" ...", relname)));
+========================================
+/workspaces/pg-dev-container/archive/Extensions/citus/src/backend/distributed/utils/multi_partitioning_utils.c:342:11: warning: Attempt to use potentially released memory [postgres.PostgresChecker]
+  339 |                 ereport(ERROR, (errmsg("Fixing shard index names is only applicable to "
+      |                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  340 |                                                            "partitioned tables or partitions, "
+      |                                                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  341 |                                                            "and \"%s\" is neither",
+      |                                                            ~~~~~~~~~~~~~~~~~~~~~~~~
+  342 |                                                            RelationGetRelationName(relation))));
+      |                                                            ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/local/postgresql-17.2/include/server/utils/rel.h:540:11: note: expanded from macro 'RelationGetRelationName'
+  540 |         (NameStr((relation)->rd_rel->relname))
+      |                  ^
+/usr/local/postgresql-17.2/include/server/c.h:746:25: note: expanded from macro 'NameStr'
+  746 | #define NameStr(name)   ((name).data)
+      |                           ^
+/workspaces/pg-dev-container/archive/Extensions/citus/src/include/distributed/log_utils.h:29:39: note: expanded from macro 'ereport'
+   29 |                         ereport_domain(elevel, TEXTDOMAIN, rest); \
+      |                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~
+/usr/local/postgresql-17.2/include/server/utils/elog.h:147:4: note: expanded from macro 'ereport_domain'
+  147 |                         __VA_ARGS__, errfinish(__FILE__, __LINE__, __func__); \
+      |                         ^~~~~~~~~~~
+/workspaces/pg-dev-container/archive/Extensions/citus/src/backend/distributed/utils/multi_partitioning_utils.c:338:3: note: Freeing function: relation_close (relation)
+  338 |                 relation_close(relation, NoLock);
+      |                 ^
+1 warning generated.
+
+========================================
+File: /workspaces/pg-dev-container/archive/Extensions/citus/src/backend/distributed/commands/alter_table.c
+Time: Tue Jan 20 04:32:55 PM UTC 2026
+Status: ISSUES FOUND
+Errors: 0, Warnings: 2
+========================================
+NOTES: again, this is a bug, but only if RELCACHE_FORCE_RELEASE is set
+========================================
+/workspaces/pg-dev-container/archive/Extensions/citus/src/backend/distributed/commands/alter_table.c:1366:13: warning: Attempt to use potentially released memory [postgres.PostgresChecker]
+ 1366 |                                                                                                 relation->rd_rel->relam));
+      |                                                                                                 ^~~~~~~~~~~~~~~~
+/workspaces/pg-dev-container/archive/Extensions/citus/src/backend/distributed/commands/alter_table.c:1357:2: note: Freeing function: relation_close (relation)
+ 1357 |         relation_close(relation, NoLock);
+      |         ^
+/workspaces/pg-dev-container/archive/Extensions/citus/src/backend/distributed/commands/alter_table.c:1370:12: warning: Attempt to use potentially released memory [postgres.PostgresChecker]
+ 1370 |                                                                    relation->rd_rel->relam)));
+      |                                                                    ^~~~~~~~~~~~~~~~
+/workspaces/pg-dev-container/archive/Extensions/citus/src/include/distributed/log_utils.h:29:39: note: expanded from macro 'ereport'
+   29 |                         ereport_domain(elevel, TEXTDOMAIN, rest); \
+      |                                                            ^~~~
+/usr/local/postgresql-17.2/include/server/utils/elog.h:147:4: note: expanded from macro 'ereport_domain'
+  147 |                         __VA_ARGS__, errfinish(__FILE__, __LINE__, __func__); \
+      |                         ^~~~~~~~~~~
+/workspaces/pg-dev-container/archive/Extensions/citus/src/backend/distributed/commands/alter_table.c:1357:2: note: Freeing function: relation_close (relation)
+ 1357 |         relation_close(relation, NoLock);
+      |         ^
+2 warnings generated.
+
+========================================
+File: /workspaces/pg-dev-container/archive/Extensions/citus/src/backend/distributed/commands/index.c
+Time: Tue Jan 20 04:33:13 PM UTC 2026
+Status: ISSUES FOUND
+Errors: 0, Warnings: 1
+========================================
+NOTES: again, this is a bug, but only if RELCACHE_FORCE_RELEASE is set
+========================================
+/workspaces/pg-dev-container/archive/Extensions/citus/src/backend/distributed/commands/index.c:200:23: warning: Attempt to use potentially released memory [postgres.PostgresChecker]
+  200 |                         transformIndexStmt(relation->rd_id, copyObject(createIndexStatement),
+      |                                            ^~~~~~~~~~~~~~~
+/workspaces/pg-dev-container/archive/Extensions/citus/src/backend/distributed/commands/index.c:176:2: note: Freeing function: table_close (relation)
+  176 |         table_close(relation, NoLock);
+      |         ^
+1 warning generated.
+
+========================================
+File: /workspaces/pg-dev-container/archive/Extensions/citus/src/backend/distributed/connection/remote_commands.c
+Time: Tue Jan 20 04:33:31 PM UTC 2026
+Status: ISSUES FOUND
+Errors: 0, Warnings: 10
+========================================
+NOTES: this is the ERROR issue again
+========================================
+/workspaces/pg-dev-container/archive/Extensions/citus/src/backend/distributed/connection/remote_commands.c:151:8: warning: Attempt to use potentially released memory: result [postgres.PostgresChecker]
+  151 |                         if (PQresultStatus(result) == PGRES_FATAL_ERROR)
+      |                             ^~~~~~~~~~~~~~~~~~~~~~
+/workspaces/pg-dev-container/archive/Extensions/citus/src/backend/distributed/connection/remote_commands.c:329:3: note: Freeing function: PQclear (result)
+  329 |                 PQclear(result);
+      |                 ^
+/workspaces/pg-dev-container/archive/Extensions/citus/src/backend/distributed/connection/remote_commands.c:153:5: warning: Possible attempt to free potentially released memory: result [postgres.PostgresChecker]
+  153 |                                 PQclear(result);
+      |                                 ^~~~~~~~~~~~~~~
+/workspaces/pg-dev-container/archive/Extensions/citus/src/backend/distributed/connection/remote_commands.c:329:3: note: Freeing function: PQclear (result)
+  329 |                 PQclear(result);
+      |                 ^
+/workspaces/pg-dev-container/archive/Extensions/citus/src/backend/distributed/connection/remote_commands.c:159:3: warning: Possible attempt to free potentially released memory: result [postgres.PostgresChecker]
+  159 |                 PQclear(result);
+      |                 ^~~~~~~~~~~~~~~
+/workspaces/pg-dev-container/archive/Extensions/citus/src/backend/distributed/connection/remote_commands.c:329:3: note: Freeing function: PQclear (result)
+  329 |                 PQclear(result);
+      |                 ^
+/workspaces/pg-dev-container/archive/Extensions/citus/src/backend/distributed/connection/remote_commands.c:613:2: warning: Possible attempt to free potentially released memory: queryResult [postgres.PostgresChecker]
+  613 |         PQclear(queryResult);
+      |         ^~~~~~~~~~~~~~~~~~~~
+/workspaces/pg-dev-container/archive/Extensions/citus/src/backend/distributed/connection/remote_commands.c:329:3: note: Freeing function: PQclear (result)
+  329 |                 PQclear(result);
+      |                 ^
+/workspaces/pg-dev-container/archive/Extensions/citus/src/backend/distributed/connection/remote_commands.c:1216:32: warning: Attempt to use potentially released memory: queryResult [postgres.PostgresChecker]
+ 1216 |         ExecStatusType resultStatus = PQresultStatus(queryResult);
+      |                                       ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+/workspaces/pg-dev-container/archive/Extensions/citus/src/backend/distributed/connection/remote_commands.c:329:3: note: Freeing function: PQclear (result)
+  329 |                 PQclear(result);
+      |                 ^
+/workspaces/pg-dev-container/archive/Extensions/citus/src/backend/distributed/connection/remote_commands.c:1219:25: warning: Attempt to use potentially released memory: queryResult [postgres.PostgresChecker]
+ 1219 |                 char *commandStatus = PQcmdStatus(queryResult);
+      |                                       ^~~~~~~~~~~~~~~~~~~~~~~~
+/workspaces/pg-dev-container/archive/Extensions/citus/src/backend/distributed/connection/remote_commands.c:329:3: note: Freeing function: PQclear (result)
+  329 |                 PQclear(result);
+      |                 ^
+/workspaces/pg-dev-container/archive/Extensions/citus/src/backend/distributed/connection/remote_commands.c:1225:17: warning: Attempt to use potentially released memory: queryResult [postgres.PostgresChecker]
+ 1225 |                 int ntuples = PQntuples(queryResult);
+      |                               ^~~~~~~~~~~~~~~~~~~~~~
+/workspaces/pg-dev-container/archive/Extensions/citus/src/backend/distributed/connection/remote_commands.c:329:3: note: Freeing function: PQclear (result)
+  329 |                 PQclear(result);
+      |                 ^
+/workspaces/pg-dev-container/archive/Extensions/citus/src/backend/distributed/connection/remote_commands.c:1226:17: warning: Attempt to use potentially released memory: queryResult [postgres.PostgresChecker]
+ 1226 |                 int nfields = PQnfields(queryResult);
+      |                               ^~~~~~~~~~~~~~~~~~~~~~
+/workspaces/pg-dev-container/archive/Extensions/citus/src/backend/distributed/connection/remote_commands.c:329:3: note: Freeing function: PQclear (result)
+  329 |                 PQclear(result);
+      |                 ^
+/workspaces/pg-dev-container/archive/Extensions/citus/src/backend/distributed/connection/remote_commands.c:1243:9: warning: Attempt to use potentially released memory: queryResult [postgres.PostgresChecker]
+ 1243 |                         if (!PQgetisnull(queryResult, row, column))
+      |                              ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/workspaces/pg-dev-container/archive/Extensions/citus/src/backend/distributed/connection/remote_commands.c:329:3: note: Freeing function: PQclear (result)
+  329 |                 PQclear(result);
+      |                 ^
+/workspaces/pg-dev-container/archive/Extensions/citus/src/backend/distributed/connection/remote_commands.c:1245:30: warning: Attempt to use potentially released memory: queryResult [postgres.PostgresChecker]
+ 1245 |                                 char *queryResultValue = PQgetvalue(queryResult, row, column);
+      |                                                          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/workspaces/pg-dev-container/archive/Extensions/citus/src/backend/distributed/connection/remote_commands.c:329:3: note: Freeing function: PQclear (result)
+  329 |                 PQclear(result);
+      |                 ^
+10 warnings generated.
+
+========================================
+File: /workspaces/pg-dev-container/archive/Extensions/citus/src/backend/distributed/worker/worker_data_fetch_protocol.c
+Time: Tue Jan 20 04:33:51 PM UTC 2026
+Status: ISSUES FOUND
+Errors: 0, Warnings: 2
+========================================
+/workspaces/pg-dev-container/archive/Extensions/citus/src/backend/distributed/worker/worker_data_fetch_protocol.c:488:4: warning: Attempt to free released memory [postgres.PostgresChecker]
+  488 |                         pfree(defElem->arg);
+      |                         ^~~~~~~~~~~~~~~~~~~
+/workspaces/pg-dev-container/archive/Extensions/citus/src/backend/distributed/worker/worker_data_fetch_protocol.c:488:4: note: Freeing function: pfree
+/workspaces/pg-dev-container/archive/Extensions/citus/src/backend/distributed/worker/worker_data_fetch_protocol.c:494:12: warning: Attempt to use released memory: arg [postgres.PostgresChecker]
+  494 |         defElem = makeDefElem((char *) name, arg, -1);
+      |                   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/workspaces/pg-dev-container/archive/Extensions/citus/src/backend/distributed/worker/worker_data_fetch_protocol.c:488:4: note: Freeing function: pfree
+  488 |                         pfree(defElem->arg);
+      |                         ^
+2 warnings generated.
+

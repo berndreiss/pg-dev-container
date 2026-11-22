@@ -22,6 +22,7 @@ typedef struct{}RelOptInfo;
 void use_path(Path *path);
 void add_partial_path(RelOptInfo *parent_rel, Path *new_path);
 void pfree(void *);
+void free(void *);
 
 typedef struct {} Bitmapset;
 Bitmapset *bms_int_members(Bitmapset *a, const Bitmapset *b);
@@ -60,12 +61,16 @@ void usePGresult(void* result);
 
 void testFree(RelOptInfo *parent_rel, Path *path){
   add_partial_path(parent_rel, path);
+  int i = 0;
+  if (i == 0)
+  free(path);
 }
 
 int main(int argnum, char **args){
   struct arguments *list1 = palloc(sizeof(struct arguments));
   pfree(list1);
   pfree(list1);
+  testFree(NULL, list1);
   //dump_variables(list1, 1);
   //use_arguments(list1);
   //pfree(list1); 

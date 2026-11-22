@@ -1,0 +1,22 @@
+PostgresChecker Static Analysis Results
+=============================================================
+Directory: /workspaces/pg-dev-container/postgis/postgis
+Path: /usr/local/src/postgresql
+Custom includes:  -I/usr/local/postgresql-17.2/include/server -I/workspaces/pg-dev-container/postgis -I/workspaces/pg-dev-container/postgis/liblwgeom -I/workspaces/pg-dev-container/postgis/libpgcommon -I/workspaces/pg-dev-container/postgis/deps/flatgeobuf -I/usr/include/json-c -I/usr/include/libxml2 -I/usr/include/CUnit
+Started: Fri Jan 23 09:30:36 PM UTC 2026
+Clang version: Debian clang version 19.1.7 (3~deb12u1)
+
+========================================
+File: /workspaces/pg-dev-container/postgis/postgis/gserialized_typmod.c
+Time: Fri Jan 23 09:30:45 PM UTC 2026
+Status: ISSUES FOUND
+Errors: 0, Warnings: 1
+========================================
+/workspaces/pg-dev-container/postgis/postgis/gserialized_typmod.c:144:8: warning: Attempt to use released memory: gser [postgres.PostgresChecker]
+  144 |                 if ( gserialized_is_geodetic(gser) )
+      |                      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/workspaces/pg-dev-container/postgis/postgis/gserialized_typmod.c:143:3: note: Freeing function: pfree (gser)
+  143 |                 pfree(gser);
+      |                 ^
+1 warning generated.
+
