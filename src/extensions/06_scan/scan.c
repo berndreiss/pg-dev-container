@@ -8,6 +8,7 @@
 #include "utils/builtins.h"
 #include "utils/fmgroids.h"
 #include "utils/lsyscache.h"
+#include "utils/memutils.h"
 #include "utils/sortsupport.h"
 #include "utils/syscache.h"
 #include "utils/tuplesort.h"
@@ -35,7 +36,7 @@ static void print_tuple(TupleTableSlot *slot, TupleDesc tupdesc)
             Oid typoid;
 
             /* lookup output func for the type */
-            typoid = tupdesc->attrs[i].atttypid;
+            typoid = TupleDescAttr(tupdesc, i)->atttypid;
             getTypeOutputInfo(typoid, &foutoid, &typisvarlena);
             text_value = OidOutputFunctionCall(foutoid, value);
         }
@@ -46,6 +47,17 @@ static void print_tuple(TupleTableSlot *slot, TupleDesc tupdesc)
     elog(INFO, "==========================");
 }
 
+/*
+ * Create a short-lived memory context for the per-tuple work of print_tuple().
+ */
+static MemoryContext
+create_tuple_context(void)
+{
+    return AllocSetContextCreate(CurrentMemoryContext,
+                                 "scan tuple context",
+                                 ALLOCSET_DEFAULT_SIZES);
+}
+
 PG_FUNCTION_INFO_V1(full_table_scan);
 
 Datum full_table_scan(PG_FUNCTION_ARGS)
@@ -54,6 +66,9 @@ Datum full_table_scan(PG_FUNCTION_ARGS)
     TableScanDesc tablescandesc;
     TupleTableSlot *slot;
     TupleDesc tupdesc;
+    Snapshot snapshot;
+    MemoryContext tuple_context;
+    MemoryContext old_context;
     Oid relid = PG_ARGISNULL(0) ? InvalidOid : PG_GETARG_OID(0);
 
     if (relid == InvalidOid)
@@ -68,28 +83,36 @@ Datum full_table_scan(PG_FUNCTION_ARGS)
     tupdesc = slot->tts_tupleDescriptor;
 
     /* Perform a full table scan */
-    tablescandesc = table_beginscan(relation, GetTransactionSnapshot(), 0, NULL);
+    snapshot = RegisterSnapshot(GetTransactionSnapshot());
+    tablescandesc = table_beginscan(relation, snapshot, 0, NULL);
 
     /* Log the attribute names of the table */
     for (int i = 0; i < tupdesc->natts; i++)
     {
-        char *attname = NameStr(relation->rd_att->attrs[i].attname);
+        char *attname = NameStr(TupleDescAttr(RelationGetDescr(relation), i)->attname);
         elog(INFO, "Attribute name %d: %s", i + 1, attname);
     }
     elog(INFO, "==========================");
 
     /* Iterate through the rows of the table */
+    tuple_context = create_tuple_context();
+
     while (table_scan_getnextslot(tablescandesc, ForwardScanDirection, slot))
     {
         /* The slot should be filled at this point */
         Assert(!TTS_EMPTY(slot));
 
-        /* Log the attributes of each row */
+        /* Log the attributes of each row and free them again */
+        old_context = MemoryContextSwitchTo(tuple_context);
         print_tuple(slot, tupdesc);
+        MemoryContextSwitchTo(old_context);
+        MemoryContextReset(tuple_context);
     }
 
     /* Clean up */
+    MemoryContextDelete(tuple_context);
     table_endscan(tablescandesc);
+    UnregisterSnapshot(snapshot);
     ExecDropSingleTupleTableSlot(slot);
     table_close(relation, AccessShareLock);
 
@@ -105,6 +128,9 @@ Datum table_scan_with_scankeys(PG_FUNCTION_ARGS)
     TupleTableSlot *slot;
     TupleDesc tupdesc;
     ScanKeyData scanKeys[2];
+    Snapshot snapshot;
+    MemoryContext tuple_context;
+    MemoryContext old_context;
     Oid relid = PG_ARGISNULL(0) ? InvalidOid : PG_GETARG_OID(0);
 
     if (relid == InvalidOid)
@@ -122,37 +148,45 @@ Datum table_scan_with_scankeys(PG_FUNCTION_ARGS)
     if (tupdesc->natts < 2)
         ereport(ERROR, (errmsg("relation has less than 2 attributes")));
 
-    if (tupdesc->attrs[0].atttypid != INT4OID)
+    if (TupleDescAttr(tupdesc, 0)->atttypid != INT4OID)
         ereport(ERROR, (errmsg("first attribute is not of type int4")));
-    ScanKeyInit(&scanKeys[0], 1, InvalidStrategy, F_INT4GE, Int64GetDatum(2));
+    ScanKeyInit(&scanKeys[0], 1, InvalidStrategy, F_INT4GE, Int32GetDatum(2));
 
-    if (tupdesc->attrs[1].atttypid != TEXTOID)
+    if (TupleDescAttr(tupdesc, 1)->atttypid != TEXTOID)
         ereport(ERROR, (errmsg("second attribute is not of type text")));
     ScanKeyInit(&scanKeys[1], 2, InvalidStrategy, F_TEXTEQ, PointerGetDatum(cstring_to_text("Bob")));
 
     /* Perform a full table scan */
-    tablescandesc = table_beginscan(relation, GetTransactionSnapshot(), 2, scanKeys);
+    snapshot = RegisterSnapshot(GetTransactionSnapshot());
+    tablescandesc = table_beginscan(relation, snapshot, 2, scanKeys);
 
     /* Log the attribute names of the table */
     for (int i = 0; i < tupdesc->natts; i++)
     {
-        char *attname = NameStr(relation->rd_att->attrs[i].attname);
+        char *attname = NameStr(TupleDescAttr(RelationGetDescr(relation), i)->attname);
         elog(INFO, "Attribute name %d: %s", i + 1, attname);
     }
     elog(INFO, "==========================");
 
     /* Iterate through the rows of the table */
+    tuple_context = create_tuple_context();
+
     while (table_scan_getnextslot(tablescandesc, ForwardScanDirection, slot))
     {
         /* The slot should be filled at this point */
         Assert(!TTS_EMPTY(slot));
 
-        /* Log the attributes of each row */
+        /* Log the attributes of each row and free them again */
+        old_context = MemoryContextSwitchTo(tuple_context);
         print_tuple(slot, tupdesc);
+        MemoryContextSwitchTo(old_context);
+        MemoryContextReset(tuple_context);
     }
 
     /* Clean up */
+    MemoryContextDelete(tuple_context);
     table_endscan(tablescandesc);
+    UnregisterSnapshot(snapshot);
     ExecDropSingleTupleTableSlot(slot);
     table_close(relation, AccessShareLock);
 
@@ -169,6 +203,9 @@ Datum table_scan_with_index(PG_FUNCTION_ARGS)
     TupleTableSlot *slot;
     TupleDesc tupdesc;
     ScanKeyData scanKeys[2];
+    Snapshot snapshot;
+    MemoryContext tuple_context;
+    MemoryContext old_context;
     Oid relid = PG_ARGISNULL(0) ? InvalidOid : PG_GETARG_OID(0);
     Oid indexrelid = PG_ARGISNULL(1) ? InvalidOid : PG_GETARG_OID(1);
 
@@ -193,38 +230,46 @@ Datum table_scan_with_index(PG_FUNCTION_ARGS)
     if (IndexRelationGetNumberOfKeyAttributes(indexrelation) < 2)
         ereport(ERROR, (errmsg("index has less than 2 attributes")));
 
-    if (indexrelation->rd_att->attrs[0].atttypid != INT4OID)
+    if (TupleDescAttr(indexrelation->rd_att, 0)->atttypid != INT4OID)
         ereport(ERROR, (errmsg("first attribute is not of type int4")));
-    ScanKeyInit(&scanKeys[0], 1, BTGreaterEqualStrategyNumber, F_INT4GE, Int64GetDatum(2));
+    ScanKeyInit(&scanKeys[0], 1, BTGreaterEqualStrategyNumber, F_INT4GE, Int32GetDatum(2));
 
-    if (indexrelation->rd_att->attrs[1].atttypid != TEXTOID)
+    if (TupleDescAttr(indexrelation->rd_att, 1)->atttypid != TEXTOID)
         ereport(ERROR, (errmsg("second attribute is not of type text")));
     ScanKeyInit(&scanKeys[1], 2, BTEqualStrategyNumber, F_TEXTEQ, PointerGetDatum(cstring_to_text("Bob")));
 
     /* Perform a full index scan */
-    indexscandesc = index_beginscan(relation, indexrelation, GetTransactionSnapshot(), 2, 0);
+    snapshot = RegisterSnapshot(GetTransactionSnapshot());
+    indexscandesc = index_beginscan(relation, indexrelation, snapshot, NULL, 2, 0);
     index_rescan(indexscandesc, scanKeys, 2, NULL, 0);
 
     /* Log the attribute names of the table */
     for (int i = 0; i < tupdesc->natts; i++)
     {
-        char *attname = NameStr(relation->rd_att->attrs[i].attname);
+        char *attname = NameStr(TupleDescAttr(RelationGetDescr(relation), i)->attname);
         elog(INFO, "Attribute name %d: %s", i + 1, attname);
     }
     elog(INFO, "==========================");
 
     /* Iterate through the rows of the index */
+    tuple_context = create_tuple_context();
+
     while (index_getnext_slot(indexscandesc, ForwardScanDirection, slot))
     {
         /* The slot should be filled at this point */
         Assert(!TTS_EMPTY(slot));
 
-        /* Log the attributes of each row */
+        /* Log the attributes of each row and free them again */
+        old_context = MemoryContextSwitchTo(tuple_context);
         print_tuple(slot, tupdesc);
+        MemoryContextSwitchTo(old_context);
+        MemoryContextReset(tuple_context);
     }
 
     /* Clean up */
+    MemoryContextDelete(tuple_context);
     index_endscan(indexscandesc);
+    UnregisterSnapshot(snapshot);
     ExecDropSingleTupleTableSlot(slot);
     index_close(indexrelation, AccessShareLock);
     table_close(relation, AccessShareLock);
@@ -237,8 +282,7 @@ PG_FUNCTION_INFO_V1(table_scan_and_sort_attribute);
 Datum table_scan_and_sort_attribute(PG_FUNCTION_ARGS)
 {
     Oid relid = PG_ARGISNULL(0) ? InvalidOid : PG_GETARG_OID(0);
-    text *sort_attr = PG_ARGISNULL(1) ? NULL : PG_GETARG_TEXT_P(1);
-    char *sort_attr_str = text_to_cstring(sort_attr);
+    char *sort_attr_str = text_to_cstring(PG_GETARG_TEXT_PP(1));
     TypeCacheEntry *sort_func;
     Relation relation;
     TableScanDesc tablescandesc;
@@ -250,7 +294,10 @@ Datum table_scan_and_sort_attribute(PG_FUNCTION_ARGS)
     Oid attr_type[1];
     Oid attr_collation[1];
     bool sort_nulls_first[1] = {false};
+    Snapshot snapshot;
     Tuplesortstate *tuplesortstate;
+    MemoryContext tuple_context;
+    MemoryContext old_context;
 
     if (relid == InvalidOid)
         ereport(ERROR, (errmsg("invalid relation OID")));
@@ -294,7 +341,8 @@ Datum table_scan_and_sort_attribute(PG_FUNCTION_ARGS)
                                           TUPLESORT_NONE);  /* sortopt */
 
     /* Perform a full table scan */
-    tablescandesc = table_beginscan(relation, GetTransactionSnapshot(), 0, NULL);
+    snapshot = RegisterSnapshot(GetTransactionSnapshot());
+    tablescandesc = table_beginscan(relation, snapshot, 0, NULL);
 
     /* Iterate through the rows of the table */
     while (table_scan_getnextslot(tablescandesc, ForwardScanDirection, slot))
@@ -311,16 +359,23 @@ Datum table_scan_and_sort_attribute(PG_FUNCTION_ARGS)
 
     /* Log the sorted tuples */
     sorted_slot = MakeTupleTableSlot(tupdesc, &TTSOpsMinimalTuple);
+    tuple_context = create_tuple_context();
 
     while (tuplesort_gettupleslot(tuplesortstate, true, false, sorted_slot, NULL))
     {
         Assert(!TTS_EMPTY(sorted_slot));
+
+        old_context = MemoryContextSwitchTo(tuple_context);
         print_tuple(sorted_slot, tupdesc);
+        MemoryContextSwitchTo(old_context);
+        MemoryContextReset(tuple_context);
     }
 
     /* Clean up */
+    MemoryContextDelete(tuple_context);
     tuplesort_end(tuplesortstate);
     table_endscan(tablescandesc);
+    UnregisterSnapshot(snapshot);
     ExecDropSingleTupleTableSlot(sorted_slot);
     table_close(relation, AccessShareLock);
 
