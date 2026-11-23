@@ -1,0 +1,61 @@
+>ExplainSubPlans,List *, /usr/local/src/postgresql/src/backend/commands/explain.c:5153:2
+>exit_nicely,PGconn *, /usr/local/src/postgresql/src/test/examples/testlibpq4.c:18:2
+>exit_nicely,PGconn *, /usr/local/src/postgresql/src/test/examples/testlibpq4.c:20:2
+>dofindsubquery,QTNode *, /usr/local/src/postgresql/src/backend/utils/adt/tsquery_rewrite.c:243:3
+>findeq,QTNode *, /usr/local/src/postgresql/src/backend/utils/adt/tsquery_rewrite.c:61:4
+>findeq,QTNode *, /usr/local/src/postgresql/src/backend/utils/adt/tsquery_rewrite.c:174:3
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:2749:22
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:2755:22
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:2769:22
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:2783:22
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:2799:22
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:2805:22
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:2811:22
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:2833:23
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:2867:23
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:2875:22
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:2881:22
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:2915:23
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:2924:22
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:2928:22
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:2941:23
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:2955:5
+>bms_join,Bitmapset *, /usr/local/src/postgresql/src/backend/nodes/bitmapset.c:1236:6
+>bms_join,Bitmapset *, /usr/local/src/postgresql/src/backend/nodes/bitmapset.c:1228:6
+>dofindsubquery,QTNode *, /usr/local/src/postgresql/src/backend/utils/adt/tsquery_rewrite.c:230:20
+>findsubquery,QTNode *, /usr/local/src/postgresql/src/backend/utils/adt/tsquery_rewrite.c:271:8
+>deallocate_one,struct prepared_statement *, /usr/local/src/postgresql/src/interfaces/ecpg/ecpglib/prepare.c:341:1
+>audit_attempt,char *, /usr/local/src/postgresql/src/test/modules/test_oat_hooks/test_oat_hooks.c:260:1
+>audit_failure,char *, /usr/local/src/postgresql/src/test/modules/test_oat_hooks/test_oat_hooks.c:272:1
+>audit_success,char *, /usr/local/src/postgresql/src/test/modules/test_oat_hooks/test_oat_hooks.c:266:1
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:2962:10
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:2997:10
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3012:10
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3027:10
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3042:10
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3200:16
+>dofindsubquery,QTNode *, /usr/local/src/postgresql/src/backend/utils/adt/tsquery_rewrite.c:215:8
+>rewrite_heap_tuple,HeapTuple, /usr/local/src/postgresql/src/backend/access/heap/rewriteheap.c:502:5
+>rewrite_heap_tuple,HeapTuple, /usr/local/src/postgresql/src/backend/access/heap/rewriteheap.c:537:3
+>rebuild_relation,Relation, /usr/local/src/postgresql/src/backend/commands/repack.c:1225:3
+>rebuild_relation,Relation, /usr/local/src/postgresql/src/backend/commands/repack.c:1240:3
+>ExplainSubPlans,List *, /usr/local/src/postgresql/src/backend/commands/explain.c:5156:14
+>AddRelationNotNullConstraints,List *, /usr/local/src/postgresql/src/backend/catalog/heap.c:3378:18
+>AddRelationNotNullConstraints,List *, /usr/local/src/postgresql/src/backend/catalog/heap.c:3490:19
+>dofindsubquery,QTNode *, /usr/local/src/postgresql/src/backend/utils/adt/tsquery_rewrite.c:250:3
+>updateAclDependenciesWorker,Oid *, /usr/local/src/postgresql/src/backend/catalog/pg_shdepend.c:594:2
+>updateAclDependenciesWorker,Oid *, /usr/local/src/postgresql/src/backend/catalog/pg_shdepend.c:596:2
+>free_child_join_sjinfo,SpecialJoinInfo *, /usr/local/src/postgresql/src/backend/optimizer/path/joinrels.c:1973:1
+>gzip_pfree,void *, /usr/local/src/postgresql/src/backend/backup/basebackup_gzip.c:310:1
+>PageRestoreTempPage,Page, /usr/local/src/postgresql/src/backend/storage/page/bufpage.c:433:1
+>gzip_pfree,void *, /usr/local/src/postgresql/src/fe_utils/astreamer_gzip.c:414:1
+>emit_audit_message,char *, /usr/local/src/postgresql/src/test/modules/test_oat_hooks/test_oat_hooks.c:252:2
+>emit_audit_message,char *, /usr/local/src/postgresql/src/test/modules/test_oat_hooks/test_oat_hooks.c:254:2
+>z_free,void *, /usr/local/src/postgresql/contrib/pgcrypto/pgp-compress.c:66:1
+>rebuild_relation,Relation, /usr/local/src/postgresql/src/backend/commands/repack.c:1227:2
+>rebuild_relation,Relation, /usr/local/src/postgresql/src/backend/commands/repack.c:1238:2
+>rebuild_relation_finish_concurrent,Relation, /usr/local/src/postgresql/src/backend/commands/repack.c:3572:1
+>rebuild_relation_finish_concurrent,Relation, /usr/local/src/postgresql/src/backend/commands/repack.c:3570:1
+>updateAclDependencies,Oid *, /usr/local/src/postgresql/src/backend/catalog/pg_shdepend.c:498:1
+>updateInitAclDependencies,Oid *, /usr/local/src/postgresql/src/backend/catalog/pg_shdepend.c:518:1
+>restorePsetInfo,printQueryOpt *, /usr/local/src/postgresql/src/bin/psql/command.c:5736:1

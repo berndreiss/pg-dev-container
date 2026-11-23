@@ -1,0 +1,6 @@
+>ReindexUnpinRelations,List *, /usr/local/src/postgresql/src/backend/commands/indexcmds.c:3629:1
+Used: list_free
+Ret. Type: void
+>CloseTableList,List *, /usr/local/src/postgresql/src/backend/commands/publicationcmds.c:2007:1
+Used: list_free_deep
+Ret. Type: void

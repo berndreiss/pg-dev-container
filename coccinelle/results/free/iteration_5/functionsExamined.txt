@@ -1,0 +1,46 @@
+>ReleaseCatCacheList,CatCList *, /usr/local/src/postgresql/src/backend/utils/cache/catcache.c:2129:1
+>AtEOSubXact_cleanup,Relation, /usr/local/src/postgresql/src/backend/utils/cache/relcache.c:3509:3
+>AtEOXact_cleanup,Relation, /usr/local/src/postgresql/src/backend/utils/cache/relcache.c:3399:3
+>RelationCloseCleanup,Relation, /usr/local/src/postgresql/src/backend/utils/cache/relcache.c:2298:2
+>RelationFlushRelation,Relation, /usr/local/src/postgresql/src/backend/utils/cache/relcache.c:2921:3
+>dofindsubquery,QTNode *, /usr/local/src/postgresql/src/backend/utils/adt/tsquery_rewrite.c:215:8
+>UnregisterSnapshotFromOwner,Snapshot, /usr/local/src/postgresql/src/backend/utils/time/snapmgr.c:885:1
+>list_delete_first_n,List *, /usr/local/src/postgresql/src/backend/nodes/list.c:994:2
+>list_delete_last,List *, /usr/local/src/postgresql/src/backend/nodes/list.c:967:2
+>list_delete_nth_cell,List *, /usr/local/src/postgresql/src/backend/nodes/list.c:780:2
+>ReindexUnpinRelations,List *, /usr/local/src/postgresql/src/backend/commands/indexcmds.c:3629:1
+>make_SAOP_expr,List *, /usr/local/src/postgresql/src/backend/optimizer/util/clauses.c:6804:2
+>ExecResetTupleTable,List *, /usr/local/src/postgresql/src/backend/executor/execTuples.c:1538:2
+>CloseTableList,List *, /usr/local/src/postgresql/src/backend/commands/publicationcmds.c:2007:1
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:2962:10
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:2997:10
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3012:10
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3027:10
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3042:10
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3200:16
+>bms_add_member,Bitmapset *, /usr/local/src/postgresql/src/backend/nodes/bitmapset.c:838:5
+>bms_add_members,Bitmapset *, /usr/local/src/postgresql/src/backend/nodes/bitmapset.c:917:6
+>bms_add_range,Bitmapset *, /usr/local/src/postgresql/src/backend/nodes/bitmapset.c:1017:6
+>bms_add_range,Bitmapset *, /usr/local/src/postgresql/src/backend/nodes/bitmapset.c:1082:5
+>bms_del_member,Bitmapset *, /usr/local/src/postgresql/src/backend/nodes/bitmapset.c:868:5
+>bms_del_members,Bitmapset *, /usr/local/src/postgresql/src/backend/nodes/bitmapset.c:1158:6
+>bms_del_members,Bitmapset *, /usr/local/src/postgresql/src/backend/nodes/bitmapset.c:1204:5
+>bms_int_members,Bitmapset *, /usr/local/src/postgresql/src/backend/nodes/bitmapset.c:1134:5
+>bms_join,Bitmapset *, /usr/local/src/postgresql/src/backend/nodes/bitmapset.c:1228:6
+>bms_join,Bitmapset *, /usr/local/src/postgresql/src/backend/nodes/bitmapset.c:1236:6
+>bms_replace_members,Bitmapset *, /usr/local/src/postgresql/src/backend/nodes/bitmapset.c:988:5
+>relation_is_updatable,Bitmapset *, /usr/local/src/postgresql/src/backend/rewrite/rewriteHandler.c:3101:19
+>ReorderBufferProcessTXN,ReorderBufferTXN *, /usr/local/src/postgresql/src/backend/replication/logical/reorderbuffer.c:2732:3
+>ReorderBufferProcessTXN,ReorderBufferTXN *, /usr/local/src/postgresql/src/backend/replication/logical/reorderbuffer.c:2815:3
+>ReorderBufferReplay,ReorderBufferTXN *, /usr/local/src/postgresql/src/backend/replication/logical/reorderbuffer.c:2878:3
+>ReorderBufferStreamCommit,ReorderBufferTXN *, /usr/local/src/postgresql/src/backend/replication/logical/reorderbuffer.c:2015:2
+>pa_xact_finish,ParallelApplyWorkerInfo *, /usr/local/src/postgresql/src/backend/replication/logical/applyparallelworker.c:1657:1
+>ReorderBufferFreeSnap,Snapshot, /usr/local/src/postgresql/src/backend/replication/logical/reorderbuffer.c:1976:2
+>ATExecDropColumn,ObjectAddresses *, /usr/local/src/postgresql/src/backend/commands/tablecmds.c:10078:5
+>populate_joinrel_with_paths,SpecialJoinInfo *, /usr/local/src/postgresql/src/backend/optimizer/path/joinrels.c:1276:1
+>ginInsertValue,GinBtreeStack *, /usr/local/src/postgresql/src/backend/access/gin/ginbtree.c:823:2
+>reform_and_rewrite_tuple,HeapTuple, /usr/local/src/postgresql/src/backend/access/heap/heapam_handler.c:2353:1
+>dumpRoles,PGconn *, /usr/local/src/postgresql/src/bin/pg_dump/pg_dumpall.c:1003:3
+>dumpTablespaces,PGconn *, /usr/local/src/postgresql/src/bin/pg_dump/pg_dumpall.c:1472:3
+>dumpRoles,PGconn *, /usr/local/src/postgresql/src/bin/pg_dump/pg_dumpall.c:1019:2
+>check_and_drop_existing_subscriptions,PGconn *, /usr/local/src/postgresql/src/bin/pg_basebackup/pg_createsubscriber.c:1330:2

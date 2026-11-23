@@ -1,0 +1,570 @@
+>astreamer_verify_free,astreamer *, /usr/local/src/postgresql/src/bin/pg_verifybackup/astreamer_verify.c:154:1
+Used: pfree
+Ret. Type: void
+>local_destroy,rewind_source *, /usr/local/src/postgresql/src/bin/pg_rewind/local_source.c:184:1
+Used: pfree
+Ret. Type: void
+>astreamer_recovery_injector_free,astreamer *, /usr/local/src/postgresql/src/bin/pg_basebackup/astreamer_inject.c:212:1
+Used: pfree
+Ret. Type: void
+>astreamer_waldump_free,astreamer *, /usr/local/src/postgresql/src/bin/pg_waldump/archive_waldump.c:800:1
+Used: pfree
+Ret. Type: void
+>FreeOldMultiXactReader,OldMultiXactReader *, /usr/local/src/postgresql/src/bin/pg_upgrade/multixact_read_v18.c:367:1
+Used: pfree
+Ret. Type: void
+>PLy_function_drop_args,PLySavedArgs *, /usr/local/src/postgresql/src/pl/plpython/plpy_exec.c:708:1
+Used: pfree
+Ret. Type: void
+>PLy_function_restore_args,PLySavedArgs *, /usr/local/src/postgresql/src/pl/plpython/plpy_exec.c:686:1
+Used: pfree
+Ret. Type: void
+>CatCacheRemoveCList,CatCList *, /usr/local/src/postgresql/src/backend/utils/cache/catcache.c:618:1
+Used: pfree
+Ret. Type: void
+>RelationDestroyRelation,Relation, /usr/local/src/postgresql/src/backend/utils/cache/relcache.c:2557:1
+Used: pfree
+Ret. Type: void
+>LogicalTapeClose,LogicalTape *, /usr/local/src/postgresql/src/backend/utils/sort/logtape.c:737:1
+Used: pfree
+Ret. Type: void
+>LogicalTapeSetClose,LogicalTapeSet *, /usr/local/src/postgresql/src/backend/utils/sort/logtape.c:671:1
+Used: pfree
+Ret. Type: void
+>tuplestore_end,Tuplestorestate *, /usr/local/src/postgresql/src/backend/utils/sort/tuplestore.c:501:1
+Used: pfree
+Ret. Type: void
+>FreeErrorData,ErrorData *, /usr/local/src/postgresql/src/backend/utils/error/elog.c:2024:1
+Used: pfree
+Ret. Type: void
+>array_free_iterator,ArrayIterator, /usr/local/src/postgresql/src/backend/utils/adt/arrayfuncs.c:4807:1
+Used: pfree
+Ret. Type: void
+>buf_finalize,StringInfo, /usr/local/src/postgresql/src/backend/utils/adt/xid8funcs.c:257:1
+Used: pfree
+Ret. Type: pg_snapshot *
+>string_to_text,char *, /usr/local/src/postgresql/src/backend/utils/adt/ruleutils.c:13769:1
+Used: pfree
+Ret. Type: text *
+>close_tsvector_parser,TSVectorParseState, /usr/local/src/postgresql/src/backend/utils/adt/tsvector_parser.c:93:1
+Used: pfree
+Ret. Type: void
+>freeAndGetParent,JsonbIterator *, /usr/local/src/postgresql/src/backend/utils/adt/jsonb_util.c:1172:1
+Used: pfree
+Ret. Type: JsonbIterator *
+>plainnode,NODE *, /usr/local/src/postgresql/src/backend/utils/adt/tsquery_cleanup.c:90:1
+Used: pfree
+Ret. Type: void
+>freetree,NODE *, /usr/local/src/postgresql/src/backend/utils/adt/tsquery_cleanup.c:126:1
+Used: pfree
+Ret. Type: void
+>QTNFree,QTNode *, /usr/local/src/postgresql/src/backend/utils/adt/tsquery_util.c:88:1
+Used: pfree
+Ret. Type: void
+>jsonpath_yyfree,void *, /usr/local/src/postgresql/src/backend/utils/adt/jsonpath_scan.c:6316:2
+Used: pfree
+Ret. Type: void
+>ReleaseDummy,HeapTuple, /usr/local/src/postgresql/src/backend/utils/adt/selfuncs.c:5613:1
+Used: pfree
+Ret. Type: void
+>pg_xml_done,PgXmlErrorContext *, /usr/local/src/postgresql/src/backend/utils/adt/xml.c:1376:1
+Used: pfree
+Ret. Type: void
+>xml_pfree,void *, /usr/local/src/postgresql/src/backend/utils/adt/xml.c:2024:2
+Used: pfree
+Ret. Type: void
+>FreeSnapshot,Snapshot, /usr/local/src/postgresql/src/backend/utils/time/snapmgr.c:670:1
+Used: pfree
+Ret. Type: void
+>ResourceOwnerDelete,ResourceOwner, /usr/local/src/postgresql/src/backend/utils/resowner/resowner.c:905:1
+Used: pfree
+Ret. Type: void
+>guc_free,void *, /usr/local/src/postgresql/src/backend/utils/misc/guc.c:698:2
+Used: pfree
+Ret. Type: void
+>FreeConfigVariable,ConfigVariable *, /usr/local/src/postgresql/src/backend/utils/misc/guc-file.c:2792:1
+Used: pfree
+Ret. Type: void
+>PortalDrop,Portal, /usr/local/src/postgresql/src/backend/utils/mmgr/portalmem.c:609:1
+Used: pfree
+Ret. Type: void
+>dsa_detach,dsa_area *, /usr/local/src/postgresql/src/backend/utils/mmgr/dsa.c:2021:1
+Used: pfree
+Ret. Type: void
+>pgstat_release_entry_ref,PgStat_EntryRef *, /usr/local/src/postgresql/src/backend/utils/activity/pgstat_shmem.c:673:2
+Used: pfree
+Ret. Type: void
+>list_free_private,List *, /usr/local/src/postgresql/src/backend/nodes/list.c:1534:1
+Used: pfree
+Ret. Type: void
+>tbm_end_private_iterate,TBMPrivateIterator *, /usr/local/src/postgresql/src/backend/nodes/tidbitmap.c:1149:1
+Used: pfree
+Ret. Type: void
+>tbm_end_shared_iterate,TBMSharedIterator *, /usr/local/src/postgresql/src/backend/nodes/tidbitmap.c:1161:1
+Used: pfree
+Ret. Type: void
+>tbm_free,TIDBitmap *, /usr/local/src/postgresql/src/backend/nodes/tidbitmap.c:320:1
+Used: pfree
+Ret. Type: void
+>bms_free,Bitmapset *, /usr/local/src/postgresql/src/backend/nodes/bitmapset.c:242:2
+Used: pfree
+Ret. Type: void
+>jit_release_context,JitContext *, /usr/local/src/postgresql/src/backend/jit/jit.c:143:1
+Used: pfree
+Ret. Type: void
+>yyfree,void *, /usr/local/src/postgresql/src/backend/bootstrap/bootscanner.c:2433:2
+Used: pfree
+Ret. Type: void
+>transientrel_destroy,DestReceiver *, /usr/local/src/postgresql/src/backend/commands/matview.c:555:1
+Used: pfree
+Ret. Type: void
+>serializeAnalyzeDestroy,DestReceiver *, /usr/local/src/postgresql/src/backend/commands/explain_dr.c:268:1
+Used: pfree
+Ret. Type: void
+>vac_close_indexes,Relation *, /usr/local/src/postgresql/src/backend/commands/vacuum.c:2448:1
+Used: pfree
+Ret. Type: void
+>intorel_destroy,DestReceiver *, /usr/local/src/postgresql/src/backend/commands/createas.c:636:1
+Used: pfree
+Ret. Type: void
+>FreeTriggerDesc,TriggerDesc *, /usr/local/src/postgresql/src/backend/commands/trigger.c:2190:1
+Used: pfree
+Ret. Type: void
+>EndCopy,CopyToState, /usr/local/src/postgresql/src/backend/commands/copyto.c:786:1
+Used: pfree
+Ret. Type: void
+>copy_dest_destroy,DestReceiver *, /usr/local/src/postgresql/src/backend/commands/copyto.c:1759:1
+Used: pfree
+Ret. Type: void
+>parallel_vacuum_end,ParallelVacuumState *, /usr/local/src/postgresql/src/backend/commands/vacuumparallel.c:549:1
+Used: pfree
+Ret. Type: void
+>CopyMultiInsertBufferCleanup,CopyMultiInsertBuffer *, /usr/local/src/postgresql/src/backend/commands/copyfrom.c:653:1
+Used: pfree
+Ret. Type: void
+>EndCopyFrom,CopyFromState, /usr/local/src/postgresql/src/backend/commands/copyfrom.c:1963:1
+Used: pfree
+Ret. Type: void
+>yyfree,void *, /usr/local/src/postgresql/src/backend/replication/repl_scanner.c:2761:2
+Used: pfree
+Ret. Type: void
+>finish_edata,ApplyExecutionData *, /usr/local/src/postgresql/src/backend/replication/logical/worker.c:959:1
+Used: pfree
+Ret. Type: void
+>ReorderBufferFreeChange,ReorderBufferChange *, /usr/local/src/postgresql/src/backend/replication/logical/reorderbuffer.c:587:1
+Used: pfree
+Ret. Type: void
+>ReorderBufferFreeRelids,Oid *, /usr/local/src/postgresql/src/backend/replication/logical/reorderbuffer.c:646:1
+Used: pfree
+Ret. Type: void
+>ReorderBufferFreeTXN,ReorderBufferTXN *, /usr/local/src/postgresql/src/backend/replication/logical/reorderbuffer.c:503:1
+Used: pfree
+Ret. Type: void
+>ReorderBufferFreeTupleBuf,HeapTuple, /usr/local/src/postgresql/src/backend/replication/logical/reorderbuffer.c:615:1
+Used: pfree
+Ret. Type: void
+>ReorderBufferIterTXNFinish,ReorderBufferIterTXNState *, /usr/local/src/postgresql/src/backend/replication/logical/reorderbuffer.c:1530:1
+Used: pfree
+Ret. Type: void
+>pa_free_worker_info,ParallelApplyWorkerInfo *, /usr/local/src/postgresql/src/backend/replication/logical/applyparallelworker.c:619:1
+Used: pfree
+Ret. Type: void
+>SnapBuildFreeSnapshot,Snapshot, /usr/local/src/postgresql/src/backend/replication/logical/snapbuild.c:274:1
+Used: pfree
+Ret. Type: void
+>yyfree,void *, /usr/local/src/postgresql/src/backend/replication/syncrep_scanner.c:2351:2
+Used: pfree
+Ret. Type: void
+>libpqrcv_disconnect,WalReceiverConn *, /usr/local/src/postgresql/src/backend/replication/libpqwalreceiver/libpqwalreceiver.c:833:1
+Used: pfree
+Ret. Type: void
+>ForgetBackgroundWorker,RegisteredBgWorker *, /usr/local/src/postgresql/src/backend/postmaster/bgworker.c:469:1
+Used: pfree
+Ret. Type: void
+>TParserClose,TParser *, /usr/local/src/postgresql/src/backend/tsearch/wparser_def.c:358:1
+Used: pfree
+Ret. Type: void
+>TParserCopyClose,TParser *, /usr/local/src/postgresql/src/backend/tsearch/wparser_def.c:378:1
+Used: pfree
+Ret. Type: void
+>addHLParsedLex,TSLexeme *, /usr/local/src/postgresql/src/backend/tsearch/ts_parse.c:552:2
+Used: pfree
+Ret. Type: void
+>addHLParsedLex,ParsedLex *, /usr/local/src/postgresql/src/backend/tsearch/ts_parse.c:538:2
+Used: pfree
+Ret. Type: void
+>updateAclDependenciesWorker,Oid *, /usr/local/src/postgresql/src/backend/catalog/pg_shdepend.c:594:2
+Used: pfree
+Ret. Type: void
+>updateAclDependenciesWorker,Oid *, /usr/local/src/postgresql/src/backend/catalog/pg_shdepend.c:596:2
+Used: pfree
+Ret. Type: void
+>CatalogCloseIndexes,CatalogIndexState, /usr/local/src/postgresql/src/backend/catalog/indexing.c:64:1
+Used: pfree
+Ret. Type: void
+>free_object_addresses,ObjectAddresses *, /usr/local/src/postgresql/src/backend/catalog/dependency.c:3073:1
+Used: pfree
+Ret. Type: void
+>FreeQueryDesc,QueryDesc *, /usr/local/src/postgresql/src/backend/tcop/pquery.c:117:1
+Used: pfree
+Ret. Type: void
+>free_chromo,Chromosome *, /usr/local/src/postgresql/src/backend/optimizer/geqo/geqo_pool.c:174:1
+Used: pfree
+Ret. Type: void
+>free_pool,Pool *, /usr/local/src/postgresql/src/backend/optimizer/geqo/geqo_pool.c:80:1
+Used: pfree
+Ret. Type: void
+>free_city_table,City *, /usr/local/src/postgresql/src/backend/optimizer/geqo/geqo_recombination.c:92:1
+Used: pfree
+Ret. Type: void
+>free_edge_table,Edge *, /usr/local/src/postgresql/src/backend/optimizer/geqo/geqo_erx.c:81:1
+Used: pfree
+Ret. Type: void
+>free_child_join_sjinfo,SpecialJoinInfo *, /usr/local/src/postgresql/src/backend/optimizer/path/joinrels.c:1973:1
+Used: pfree
+Ret. Type: void
+>ExecDropSingleTupleTableSlot,TupleTableSlot *, /usr/local/src/postgresql/src/backend/executor/execTuples.c:1582:1
+Used: pfree
+Ret. Type: void
+>end_tup_output,TupOutputState *, /usr/local/src/postgresql/src/backend/executor/execTuples.c:2690:1
+Used: pfree
+Ret. Type: void
+>sqlfunction_destroy,DestReceiver *, /usr/local/src/postgresql/src/backend/executor/functions.c:2695:1
+Used: pfree
+Ret. Type: void
+>DestroyTupleQueueReader,TupleQueueReader *, /usr/local/src/postgresql/src/backend/executor/tqueue.c:157:1
+Used: pfree
+Ret. Type: void
+>tqueueDestroyReceiver,DestReceiver *, /usr/local/src/postgresql/src/backend/executor/tqueue.c:112:1
+Used: pfree
+Ret. Type: void
+>ExecHashTableDestroy,HashJoinTable, /usr/local/src/postgresql/src/backend/executor/nodeHash.c:1005:1
+Used: pfree
+Ret. Type: void
+>tstoreDestroyReceiver,DestReceiver *, /usr/local/src/postgresql/src/backend/executor/tstoreReceiver.c:232:1
+Used: pfree
+Ret. Type: void
+>SPI_pfree,void *, /usr/local/src/postgresql/src/backend/executor/spi.c:1377:1
+Used: pfree
+Ret. Type: void
+>FreeExprContext,ExprContext *, /usr/local/src/postgresql/src/backend/executor/execUtils.c:435:1
+Used: pfree
+Ret. Type: void
+>ExecParallelCleanup,ParallelExecutorInfo *, /usr/local/src/postgresql/src/backend/executor/execParallel.c:1302:1
+Used: pfree
+Ret. Type: void
+>gzip_pfree,void *, /usr/local/src/postgresql/src/backend/backup/basebackup_gzip.c:310:1
+Used: pfree
+Ret. Type: void
+>FreeAccessStrategy,BufferAccessStrategy, /usr/local/src/postgresql/src/backend/storage/buffer/freelist.c:612:2
+Used: pfree
+Ret. Type: void
+>BufFileClose,BufFile *, /usr/local/src/postgresql/src/backend/storage/file/buffile.c:424:1
+Used: pfree
+Ret. Type: void
+>inv_close,LargeObjectDesc *, /usr/local/src/postgresql/src/backend/storage/large_object/inv_api.c:302:1
+Used: pfree
+Ret. Type: void
+>PageRestoreTempPage,Page, /usr/local/src/postgresql/src/backend/storage/page/bufpage.c:433:1
+Used: pfree
+Ret. Type: void
+>read_stream_end,ReadStream *, /usr/local/src/postgresql/src/backend/storage/aio/read_stream.c:1491:1
+Used: pfree
+Ret. Type: void
+>FreeWaitEventSet,WaitEventSet *, /usr/local/src/postgresql/src/backend/storage/ipc/waiteventset.c:517:1
+Used: pfree
+Ret. Type: void
+>FreeWaitEventSetAfterFork,WaitEventSet *, /usr/local/src/postgresql/src/backend/storage/ipc/waiteventset.c:534:1
+Used: pfree
+Ret. Type: void
+>dsm_detach,dsm_segment *, /usr/local/src/postgresql/src/backend/storage/ipc/dsm.c:912:1
+Used: pfree
+Ret. Type: void
+>shm_mq_detach,shm_mq_handle *, /usr/local/src/postgresql/src/backend/storage/ipc/shm_mq.c:866:1
+Used: pfree
+Ret. Type: void
+>generator_free,CombinationGenerator *, /usr/local/src/postgresql/src/backend/statistics/mvdistinct.c:649:1
+Used: pfree
+Ret. Type: void
+>statext_ndistinct_free,MVNDistinct *, /usr/local/src/postgresql/src/backend/statistics/mvdistinct.c:349:1
+Used: pfree
+Ret. Type: void
+>statext_mcv_free,MCVList *, /usr/local/src/postgresql/src/backend/statistics/mcv.c:2188:1
+Used: pfree
+Ret. Type: void
+>statext_mcv_import,Datum *, /usr/local/src/postgresql/src/backend/statistics/mcv.c:2318:1
+Used: pfree
+Ret. Type: Datum
+>statext_mcv_import,bool *, /usr/local/src/postgresql/src/backend/statistics/mcv.c:2319:1
+Used: pfree
+Ret. Type: Datum
+>DependencyGenerator_free,DependencyGenerator, /usr/local/src/postgresql/src/backend/statistics/dependencies.c:193:1
+Used: pfree
+Ret. Type: void
+>statext_dependencies_free,MVDependencies *, /usr/local/src/postgresql/src/backend/statistics/dependencies.c:590:1
+Used: pfree
+Ret. Type: void
+>freeGinBtreeStack,GinBtreeStack *, /usr/local/src/postgresql/src/backend/access/gin/ginbtree.c:207:2
+Used: pfree
+Ret. Type: void
+>GinBufferFree,GinBuffer *, /usr/local/src/postgresql/src/backend/access/gin/gininsert.c:1616:1
+Used: pfree
+Ret. Type: void
+>spgFreeSearchItem,SpGistSearchItem *, /usr/local/src/postgresql/src/backend/access/spgist/spgscan.c:100:1
+Used: pfree
+Ret. Type: void
+>XLogReaderFree,XLogReaderState *, /usr/local/src/postgresql/src/backend/access/transam/xlogreader.c:178:1
+Used: pfree
+Ret. Type: void
+>FreeFakeRelcacheEntry,Relation, /usr/local/src/postgresql/src/backend/access/transam/xlogutils.c:644:1
+Used: pfree
+Ret. Type: void
+>DestroyParallelContext,ParallelContext *, /usr/local/src/postgresql/src/backend/access/transam/parallel.c:1037:1
+Used: pfree
+Ret. Type: void
+>GenericXLogAbort,GenericXLogState *, /usr/local/src/postgresql/src/backend/access/transam/generic_xlog.c:446:1
+Used: pfree
+Ret. Type: void
+>GenericXLogFinish,GenericXLogState *, /usr/local/src/postgresql/src/backend/access/transam/generic_xlog.c:433:1
+Used: pfree
+Ret. Type: XLogRecPtr
+>XLogPrefetcherFree,XLogPrefetcher *, /usr/local/src/postgresql/src/backend/access/transam/xlogprefetcher.c:399:1
+Used: pfree
+Ret. Type: void
+>lrq_free,LsnReadQueue *, /usr/local/src/postgresql/src/backend/access/transam/xlogprefetcher.c:240:1
+Used: pfree
+Ret. Type: void
+>free_attrmap,AttrMap *, /usr/local/src/postgresql/src/backend/access/common/attmap.c:59:1
+Used: pfree
+Ret. Type: void
+>printtup_destroy,DestReceiver *, /usr/local/src/postgresql/src/backend/access/common/printtup.c:416:1
+Used: pfree
+Ret. Type: void
+>free_conversion_map,TupleConversionMap *, /usr/local/src/postgresql/src/backend/access/common/tupconvert.c:308:1
+Used: pfree
+Ret. Type: void
+>FreeTupleDesc,TupleDesc, /usr/local/src/postgresql/src/backend/access/common/tupdesc.c:791:1
+Used: pfree
+Ret. Type: void
+>heap_free_minimal_tuple,MinimalTuple, /usr/local/src/postgresql/src/backend/access/common/heaptuple.c:2195:1
+Used: pfree
+Ret. Type: void
+>heap_freetuple,HeapTuple, /usr/local/src/postgresql/src/backend/access/common/heaptuple.c:2101:1
+Used: pfree
+Ret. Type: void
+>TidStoreDestroy,TidStore *, /usr/local/src/postgresql/src/backend/access/common/tidstore.c:331:1
+Used: pfree
+Ret. Type: void
+>TidStoreDetach,TidStore *, /usr/local/src/postgresql/src/backend/access/common/tidstore.c:276:1
+Used: pfree
+Ret. Type: void
+>TidStoreEndIterate,TidStoreIter *, /usr/local/src/postgresql/src/backend/access/common/tidstore.c:525:1
+Used: pfree
+Ret. Type: void
+>toast_close_indexes,Relation *, /usr/local/src/postgresql/src/backend/access/common/toast_internals.c:622:1
+Used: pfree
+Ret. Type: void
+>_bt_spooldestroy,BTSpool *, /usr/local/src/postgresql/src/backend/access/nbtree/nbtsort.c:524:1
+Used: pfree
+Ret. Type: void
+>FreeBulkInsertState,BulkInsertState, /usr/local/src/postgresql/src/backend/access/heap/heapam.c:1962:1
+Used: pfree
+Ret. Type: void
+>_h_spooldestroy,HSpool *, /usr/local/src/postgresql/src/backend/access/hash/hashsort.c:102:1
+Used: pfree
+Ret. Type: void
+>IndexScanEnd,IndexScanDesc, /usr/local/src/postgresql/src/backend/access/index/genam.c:152:1
+Used: pfree
+Ret. Type: void
+>systable_endscan,SysScanDesc, /usr/local/src/postgresql/src/backend/access/index/genam.c:630:1
+Used: pfree
+Ret. Type: void
+>systable_endscan_ordered,SysScanDesc, /usr/local/src/postgresql/src/backend/access/index/genam.c:779:1
+Used: pfree
+Ret. Type: void
+>terminate_brin_buildstate,BrinBuildState *, /usr/local/src/postgresql/src/backend/access/brin/brin.c:1740:1
+Used: pfree
+Ret. Type: void
+>brinRevmapTerminate,BrinRevmap *, /usr/local/src/postgresql/src/backend/access/brin/brin_revmap.c:105:1
+Used: pfree
+Ret. Type: void
+>brin_free_tuple,BrinTuple *, /usr/local/src/postgresql/src/backend/access/brin/brin_tuple.c:435:1
+Used: pfree
+Ret. Type: void
+>dshash_destroy,dshash_table *, /usr/local/src/postgresql/src/backend/lib/dshash.c:363:1
+Used: pfree
+Ret. Type: void
+>dshash_detach,dshash_table *, /usr/local/src/postgresql/src/backend/lib/dshash.c:316:1
+Used: pfree
+Ret. Type: void
+>BipartiteMatchFree,BipartiteMatchState *, /usr/local/src/postgresql/src/backend/lib/bipartite_match.c:85:1
+Used: pfree
+Ret. Type: void
+>pairingheap_free,pairingheap *, /usr/local/src/postgresql/src/backend/lib/pairingheap.c:79:1
+Used: pfree
+Ret. Type: void
+>bloom_free,bloom_filter *, /usr/local/src/postgresql/src/backend/lib/bloomfilter.c:128:1
+Used: pfree
+Ret. Type: void
+>core_yyfree,void *, /usr/local/src/postgresql/src/backend/parser/scan.c:11748:2
+Used: pfree
+Ret. Type: void
+>free_parsestate,ParseState *, /usr/local/src/postgresql/src/backend/parser/parse_node.c:88:1
+Used: pfree
+Ret. Type: void
+>json_manifest_object_field_start,char *, /usr/local/src/postgresql/src/common/parse_manifest.c:496:1
+Used: pfree
+Ret. Type: JsonParseErrorType
+>json_parse_manifest_incremental_shutdown,JsonManifestParseIncrementalState *, /usr/local/src/postgresql/src/common/parse_manifest.c:174:1
+Used: pfree
+Ret. Type: void
+>destroyStringInfo,StringInfo, /usr/local/src/postgresql/src/common/stringinfo.c:415:1
+Used: pfree
+Ret. Type: void
+>pgfnames_cleanup,char * *, /usr/local/src/postgresql/src/common/pgfnames.c:92:1
+Used: pfree
+Ret. Type: void
+>binaryheap_free,binaryheap *, /usr/local/src/postgresql/src/common/binaryheap.c:75:1
+Used: pfree
+Ret. Type: void
+>BlockRefTableFreeEntry,BlockRefTableEntry *, /usr/local/src/postgresql/src/common/blkreftable.c:1177:1
+Used: pfree
+Ret. Type: void
+>DestroyBlockRefTableReader,BlockRefTableReader *, /usr/local/src/postgresql/src/common/blkreftable.c:816:1
+Used: pfree
+Ret. Type: void
+>DestroyBlockRefTableWriter,BlockRefTableWriter *, /usr/local/src/postgresql/src/common/blkreftable.c:894:1
+Used: pfree
+Ret. Type: void
+>astreamer_gzip_decompressor_free,astreamer *, /usr/local/src/postgresql/src/fe_utils/astreamer_gzip.c:394:1
+Used: pfree
+Ret. Type: void
+>gzip_pfree,void *, /usr/local/src/postgresql/src/fe_utils/astreamer_gzip.c:414:1
+Used: pfree
+Ret. Type: void
+>astreamer_lz4_compressor_free,astreamer *, /usr/local/src/postgresql/src/fe_utils/astreamer_lz4.c:269:1
+Used: pfree
+Ret. Type: void
+>astreamer_lz4_decompressor_free,astreamer *, /usr/local/src/postgresql/src/fe_utils/astreamer_lz4.c:436:1
+Used: pfree
+Ret. Type: void
+>astreamer_zstd_compressor_free,astreamer *, /usr/local/src/postgresql/src/fe_utils/astreamer_zstd.c:251:1
+Used: pfree
+Ret. Type: void
+>astreamer_zstd_decompressor_free,astreamer *, /usr/local/src/postgresql/src/fe_utils/astreamer_zstd.c:413:1
+Used: pfree
+Ret. Type: void
+>astreamer_tar_archiver_free,astreamer *, /usr/local/src/postgresql/src/fe_utils/astreamer_tar.c:490:1
+Used: pfree
+Ret. Type: void
+>astreamer_tar_parser_free,astreamer *, /usr/local/src/postgresql/src/fe_utils/astreamer_tar.c:380:1
+Used: pfree
+Ret. Type: void
+>astreamer_tar_terminator_free,astreamer *, /usr/local/src/postgresql/src/fe_utils/astreamer_tar.c:549:1
+Used: pfree
+Ret. Type: void
+>emit_audit_message,char *, /usr/local/src/postgresql/src/test/modules/test_oat_hooks/test_oat_hooks.c:252:2
+Used: pfree
+Ret. Type: void
+>emit_audit_message,char *, /usr/local/src/postgresql/src/test/modules/test_oat_hooks/test_oat_hooks.c:254:2
+Used: pfree
+Ret. Type: void
+>irbt_free,RBTNode *, /usr/local/src/postgresql/src/test/modules/test_rbtree/test_rbtree.c:73:1
+Used: pfree
+Ret. Type: void
+>pg_tzenumerate_end,pg_tzenum *, /usr/local/src/postgresql/src/timezone/pgtz.c:422:1
+Used: pfree
+Ret. Type: void
+>pgp_cfb_free,PGP_CFB *, /usr/local/src/postgresql/contrib/pgcrypto/pgp-cfb.c:89:1
+Used: pfree
+Ret. Type: void
+>clear_and_pfree,text *, /usr/local/src/postgresql/contrib/pgcrypto/pgp-pgsql.c:100:1
+Used: pfree
+Ret. Type: void
+>pgp_mpi_free,PGP_MPI *, /usr/local/src/postgresql/contrib/pgcrypto/pgp-mpi.c:75:1
+Used: pfree
+Ret. Type: int
+>mbuf_free,MBuf *, /usr/local/src/postgresql/contrib/pgcrypto/mbuf.c:69:1
+Used: pfree
+Ret. Type: int
+>pullf_free,PullFilter *, /usr/local/src/postgresql/contrib/pgcrypto/mbuf.c:241:1
+Used: pfree
+Ret. Type: void
+>pushf_free,PushFilter *, /usr/local/src/postgresql/contrib/pgcrypto/mbuf.c:407:1
+Used: pfree
+Ret. Type: void
+>combo_free,PX_Combo *, /usr/local/src/postgresql/contrib/pgcrypto/px.c:238:1
+Used: pfree
+Ret. Type: void
+>pgp_key_free,PGP_PubKey *, /usr/local/src/postgresql/contrib/pgcrypto/pgp-pubkey.c:80:1
+Used: pfree
+Ret. Type: void
+>pgp_free,PGP_Context *, /usr/local/src/postgresql/contrib/pgcrypto/pgp.c:220:1
+Used: pfree
+Ret. Type: int
+>digest_free,PX_MD *, /usr/local/src/postgresql/contrib/pgcrypto/openssl.c:155:1
+Used: pfree
+Ret. Type: void
+>free_openssl_cipher,OSSLCipher *, /usr/local/src/postgresql/contrib/pgcrypto/openssl.c:297:1
+Used: pfree
+Ret. Type: void
+>free_openssl_digest,OSSLDigest *, /usr/local/src/postgresql/contrib/pgcrypto/openssl.c:95:1
+Used: pfree
+Ret. Type: void
+>gen_ossl_free,PX_Cipher *, /usr/local/src/postgresql/contrib/pgcrypto/openssl.c:334:1
+Used: pfree
+Ret. Type: void
+>z_free,void *, /usr/local/src/postgresql/contrib/pgcrypto/pgp-compress.c:66:1
+Used: pfree
+Ret. Type: void
+>hmac_free,PX_HMAC *, /usr/local/src/postgresql/contrib/pgcrypto/px-hmac.c:135:1
+Used: pfree
+Ret. Type: void
+>free_remattrmap,RemoteAttributeMapping *, /usr/local/src/postgresql/contrib/postgres_fdw/postgres_fdw.c:5940:1
+Used: pfree
+Ret. Type: void
+>pgpa_destroy_join_unroller,pgpa_join_unroller *, /usr/local/src/postgresql/contrib/pg_plan_advice/pgpa_join.c:302:1
+Used: pfree
+Ret. Type: void
+>report_corruption_internal,char *, /usr/local/src/postgresql/contrib/amcheck/verify_heapam.c:939:1
+Used: pfree
+Ret. Type: void
+>descriptor_deallocate_all,struct descriptor *, /usr/local/src/postgresql/src/interfaces/ecpg/ecpglib/descriptor.c:803:2
+Used: descriptor_free
+Ret. Type: void
+>ecpg_do_epilogue,struct statement *, /usr/local/src/postgresql/src/interfaces/ecpg/ecpglib/execute.c:2252:1
+Used: free_statement
+Ret. Type: void
+>disconnect_database,PGconn *, /usr/local/src/postgresql/src/bin/pg_basebackup/pg_createsubscriber.c:630:1
+Used: PQfinish
+Ret. Type: void
+>disconnectDatabase,PGconn *, /usr/local/src/postgresql/src/fe_utils/connect_utils.c:170:1
+Used: PQfinish
+Ret. Type: void
+>exit_nicely,PGconn *, /usr/local/src/postgresql/src/test/examples/testlibpq4.c:18:2
+Used: PQfinish
+Ret. Type: void
+>exit_nicely,PGconn *, /usr/local/src/postgresql/src/test/examples/testlibpq4.c:20:2
+Used: PQfinish
+Ret. Type: void
+>exit_nicely,PGconn *, /usr/local/src/postgresql/src/test/examples/testlibpq.c:16:1
+Used: PQfinish
+Ret. Type: void
+>exit_nicely,PGconn *, /usr/local/src/postgresql/src/test/examples/testlo64.c:218:1
+Used: PQfinish
+Ret. Type: void
+>exit_nicely,PGconn *, /usr/local/src/postgresql/src/test/examples/testlibpq2.c:44:1
+Used: PQfinish
+Ret. Type: void
+>exit_nicely,PGconn *, /usr/local/src/postgresql/src/test/examples/testlibpq3.c:49:1
+Used: PQfinish
+Ret. Type: void
+>exit_nicely,PGconn *, /usr/local/src/postgresql/src/test/examples/testlo.c:195:1
+Used: PQfinish
+Ret. Type: void
+>exit_nicely,PGconn *, /usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:61:1
+Used: PQfinish
+Ret. Type: void
+>test_protocol_version,PGconn *, /usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:1425:1
+Used: PQfinish
+Ret. Type: void

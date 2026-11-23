@@ -1,0 +1,327 @@
+>cluster_rel,Relation, /usr/local/src/postgresql/src/backend/commands/repack.c:583:3
+Used: cluster_rel_recheck
+Ret. Type: void
+>cluster_rel,Relation, /usr/local/src/postgresql/src/backend/commands/repack.c:583:3
+Used: cluster_rel_recheck
+Ret. Type: void
+>cluster_rel,Relation, /usr/local/src/postgresql/src/backend/commands/repack.c:583:3
+Used: cluster_rel_recheck
+Ret. Type: void
+>cluster_rel,Relation, /usr/local/src/postgresql/src/backend/commands/repack.c:583:3
+Used: cluster_rel_recheck
+Ret. Type: void
+>get_tables_to_repack_partitioned,Relation, /usr/local/src/postgresql/src/backend/commands/repack.c:2489:1
+Used: table_close
+Ret. Type: List *
+>rebuild_relation,Relation, /usr/local/src/postgresql/src/backend/commands/repack.c:1238:2
+Used: table_close
+Ret. Type: void
+>rebuild_relation_finish_concurrent,Relation, /usr/local/src/postgresql/src/backend/commands/repack.c:3570:1
+Used: table_close
+Ret. Type: void
+>rebuild_relation_finish_concurrent,Relation, /usr/local/src/postgresql/src/backend/commands/repack.c:3572:1
+Used: table_close
+Ret. Type: void
+>ATExecDetachPartition,Relation, /usr/local/src/postgresql/src/backend/commands/tablecmds.c:22373:2
+Used: table_close
+Ret. Type: ObjectAddress
+>pgstat_relation,Relation, /usr/local/src/postgresql/contrib/pgstattuple/pgstattuple.c:260:9
+Used: pgstat_heap
+Ret. Type: Datum
+>pgstat_relation,Relation, /usr/local/src/postgresql/contrib/pgstattuple/pgstattuple.c:274:11
+Used: pgstat_index
+Ret. Type: Datum
+>pgstat_relation,Relation, /usr/local/src/postgresql/contrib/pgstattuple/pgstattuple.c:277:11
+Used: pgstat_index
+Ret. Type: Datum
+>pgstat_relation,Relation, /usr/local/src/postgresql/contrib/pgstattuple/pgstattuple.c:280:11
+Used: pgstat_index
+Ret. Type: Datum
+>cluster_rel,Relation, /usr/local/src/postgresql/src/backend/commands/repack.c:699:3
+Used: rebuild_relation
+Ret. Type: void
+>cluster_rel,Relation, /usr/local/src/postgresql/src/backend/commands/repack.c:705:2
+Used: rebuild_relation
+Ret. Type: void
+>cluster_rel,Relation, /usr/local/src/postgresql/src/backend/commands/repack.c:699:3
+Used: rebuild_relation
+Ret. Type: void
+>cluster_rel,Relation, /usr/local/src/postgresql/src/backend/commands/repack.c:705:2
+Used: rebuild_relation
+Ret. Type: void
+>ApplyRetrieveRule,List *, /usr/local/src/postgresql/src/backend/rewrite/rewriteHandler.c:1883:15
+Used: fireRIRrules
+Ret. Type: Query *
+>fireRIRrules,List *, /usr/local/src/postgresql/src/backend/rewrite/rewriteHandler.c:2088:19
+Used: fireRIRrules
+Ret. Type: Query *
+>fireRIRrules,List *, /usr/local/src/postgresql/src/backend/rewrite/rewriteHandler.c:2088:19
+Used: fireRIRrules
+Ret. Type: Query *
+>fireRIRrules,List *, /usr/local/src/postgresql/src/backend/rewrite/rewriteHandler.c:2208:3
+Used: fireRIRrules
+Ret. Type: Query *
+>ExplainNode,List *, /usr/local/src/postgresql/src/backend/commands/explain.c:2424:3
+Used: ExplainCustomChildren
+Ret. Type: void
+>ExplainNode,List *, /usr/local/src/postgresql/src/backend/commands/explain.c:2400:3
+Used: ExplainMemberNodes
+Ret. Type: void
+>ExplainNode,List *, /usr/local/src/postgresql/src/backend/commands/explain.c:2405:3
+Used: ExplainMemberNodes
+Ret. Type: void
+>ExplainNode,List *, /usr/local/src/postgresql/src/backend/commands/explain.c:2410:3
+Used: ExplainMemberNodes
+Ret. Type: void
+>ExplainNode,List *, /usr/local/src/postgresql/src/backend/commands/explain.c:2415:3
+Used: ExplainMemberNodes
+Ret. Type: void
+>ExplainCustomChildren,List *, /usr/local/src/postgresql/src/backend/commands/explain.c:5171:2
+Used: ExplainNode
+Ret. Type: void
+>ExplainMemberNodes,List *, /usr/local/src/postgresql/src/backend/commands/explain.c:5082:2
+Used: ExplainNode
+Ret. Type: void
+>ExplainNode,List *, /usr/local/src/postgresql/src/backend/commands/explain.c:2388:2
+Used: ExplainNode
+Ret. Type: void
+>ExplainNode,List *, /usr/local/src/postgresql/src/backend/commands/explain.c:2388:2
+Used: ExplainNode
+Ret. Type: void
+>ExplainNode,List *, /usr/local/src/postgresql/src/backend/commands/explain.c:2388:2
+Used: ExplainNode
+Ret. Type: void
+>ExplainNode,List *, /usr/local/src/postgresql/src/backend/commands/explain.c:2388:2
+Used: ExplainNode
+Ret. Type: void
+>ExplainNode,List *, /usr/local/src/postgresql/src/backend/commands/explain.c:2393:2
+Used: ExplainNode
+Ret. Type: void
+>ExplainNode,List *, /usr/local/src/postgresql/src/backend/commands/explain.c:2393:2
+Used: ExplainNode
+Ret. Type: void
+>ExplainNode,List *, /usr/local/src/postgresql/src/backend/commands/explain.c:2420:3
+Used: ExplainNode
+Ret. Type: void
+>ExplainSubPlans,List *, /usr/local/src/postgresql/src/backend/commands/explain.c:5153:2
+Used: ExplainNode
+Ret. Type: void
+>ExplainCustomChildren,List *, /usr/local/src/postgresql/src/backend/commands/explain.c:5171:2
+Used: ExplainNode
+Ret. Type: void
+>ExplainMemberNodes,List *, /usr/local/src/postgresql/src/backend/commands/explain.c:5082:2
+Used: ExplainNode
+Ret. Type: void
+>ExplainNode,List *, /usr/local/src/postgresql/src/backend/commands/explain.c:2388:2
+Used: ExplainNode
+Ret. Type: void
+>ExplainNode,List *, /usr/local/src/postgresql/src/backend/commands/explain.c:2388:2
+Used: ExplainNode
+Ret. Type: void
+>ExplainNode,List *, /usr/local/src/postgresql/src/backend/commands/explain.c:2388:2
+Used: ExplainNode
+Ret. Type: void
+>ExplainNode,List *, /usr/local/src/postgresql/src/backend/commands/explain.c:2388:2
+Used: ExplainNode
+Ret. Type: void
+>ExplainNode,List *, /usr/local/src/postgresql/src/backend/commands/explain.c:2393:2
+Used: ExplainNode
+Ret. Type: void
+>ExplainNode,List *, /usr/local/src/postgresql/src/backend/commands/explain.c:2393:2
+Used: ExplainNode
+Ret. Type: void
+>ExplainNode,List *, /usr/local/src/postgresql/src/backend/commands/explain.c:2420:3
+Used: ExplainNode
+Ret. Type: void
+>ExplainSubPlans,List *, /usr/local/src/postgresql/src/backend/commands/explain.c:5153:2
+Used: ExplainNode
+Ret. Type: void
+>ExplainCustomChildren,List *, /usr/local/src/postgresql/src/backend/commands/explain.c:5171:2
+Used: ExplainNode
+Ret. Type: void
+>ExplainMemberNodes,List *, /usr/local/src/postgresql/src/backend/commands/explain.c:5082:2
+Used: ExplainNode
+Ret. Type: void
+>ExplainNode,List *, /usr/local/src/postgresql/src/backend/commands/explain.c:2388:2
+Used: ExplainNode
+Ret. Type: void
+>ExplainNode,List *, /usr/local/src/postgresql/src/backend/commands/explain.c:2388:2
+Used: ExplainNode
+Ret. Type: void
+>ExplainNode,List *, /usr/local/src/postgresql/src/backend/commands/explain.c:2388:2
+Used: ExplainNode
+Ret. Type: void
+>ExplainNode,List *, /usr/local/src/postgresql/src/backend/commands/explain.c:2388:2
+Used: ExplainNode
+Ret. Type: void
+>ExplainNode,List *, /usr/local/src/postgresql/src/backend/commands/explain.c:2393:2
+Used: ExplainNode
+Ret. Type: void
+>ExplainNode,List *, /usr/local/src/postgresql/src/backend/commands/explain.c:2393:2
+Used: ExplainNode
+Ret. Type: void
+>ExplainNode,List *, /usr/local/src/postgresql/src/backend/commands/explain.c:2420:3
+Used: ExplainNode
+Ret. Type: void
+>ExplainSubPlans,List *, /usr/local/src/postgresql/src/backend/commands/explain.c:5153:2
+Used: ExplainNode
+Ret. Type: void
+>ExplainNode,List *, /usr/local/src/postgresql/src/backend/commands/explain.c:2384:2
+Used: ExplainSubPlans
+Ret. Type: void
+>ExplainNode,List *, /usr/local/src/postgresql/src/backend/commands/explain.c:2384:2
+Used: ExplainSubPlans
+Ret. Type: void
+>ExplainNode,List *, /usr/local/src/postgresql/src/backend/commands/explain.c:2433:2
+Used: ExplainSubPlans
+Ret. Type: void
+>ExplainCustomChildren,List *, /usr/local/src/postgresql/src/backend/commands/explain.c:5171:2
+Used: ExplainNode
+Ret. Type: void
+>ExplainMemberNodes,List *, /usr/local/src/postgresql/src/backend/commands/explain.c:5082:2
+Used: ExplainNode
+Ret. Type: void
+>ExplainNode,List *, /usr/local/src/postgresql/src/backend/commands/explain.c:2388:2
+Used: ExplainNode
+Ret. Type: void
+>ExplainNode,List *, /usr/local/src/postgresql/src/backend/commands/explain.c:2388:2
+Used: ExplainNode
+Ret. Type: void
+>ExplainNode,List *, /usr/local/src/postgresql/src/backend/commands/explain.c:2388:2
+Used: ExplainNode
+Ret. Type: void
+>ExplainNode,List *, /usr/local/src/postgresql/src/backend/commands/explain.c:2388:2
+Used: ExplainNode
+Ret. Type: void
+>ExplainNode,List *, /usr/local/src/postgresql/src/backend/commands/explain.c:2393:2
+Used: ExplainNode
+Ret. Type: void
+>ExplainNode,List *, /usr/local/src/postgresql/src/backend/commands/explain.c:2393:2
+Used: ExplainNode
+Ret. Type: void
+>ExplainNode,List *, /usr/local/src/postgresql/src/backend/commands/explain.c:2420:3
+Used: ExplainNode
+Ret. Type: void
+>ExplainSubPlans,List *, /usr/local/src/postgresql/src/backend/commands/explain.c:5153:2
+Used: ExplainNode
+Ret. Type: void
+>ExplainCustomChildren,List *, /usr/local/src/postgresql/src/backend/commands/explain.c:5171:2
+Used: ExplainNode
+Ret. Type: void
+>ExplainMemberNodes,List *, /usr/local/src/postgresql/src/backend/commands/explain.c:5082:2
+Used: ExplainNode
+Ret. Type: void
+>ExplainNode,List *, /usr/local/src/postgresql/src/backend/commands/explain.c:2388:2
+Used: ExplainNode
+Ret. Type: void
+>ExplainNode,List *, /usr/local/src/postgresql/src/backend/commands/explain.c:2388:2
+Used: ExplainNode
+Ret. Type: void
+>ExplainNode,List *, /usr/local/src/postgresql/src/backend/commands/explain.c:2388:2
+Used: ExplainNode
+Ret. Type: void
+>ExplainNode,List *, /usr/local/src/postgresql/src/backend/commands/explain.c:2388:2
+Used: ExplainNode
+Ret. Type: void
+>ExplainNode,List *, /usr/local/src/postgresql/src/backend/commands/explain.c:2393:2
+Used: ExplainNode
+Ret. Type: void
+>ExplainNode,List *, /usr/local/src/postgresql/src/backend/commands/explain.c:2393:2
+Used: ExplainNode
+Ret. Type: void
+>ExplainNode,List *, /usr/local/src/postgresql/src/backend/commands/explain.c:2420:3
+Used: ExplainNode
+Ret. Type: void
+>ExplainSubPlans,List *, /usr/local/src/postgresql/src/backend/commands/explain.c:5153:2
+Used: ExplainNode
+Ret. Type: void
+>ExplainCustomChildren,List *, /usr/local/src/postgresql/src/backend/commands/explain.c:5171:2
+Used: ExplainNode
+Ret. Type: void
+>ExplainMemberNodes,List *, /usr/local/src/postgresql/src/backend/commands/explain.c:5082:2
+Used: ExplainNode
+Ret. Type: void
+>ExplainNode,List *, /usr/local/src/postgresql/src/backend/commands/explain.c:2388:2
+Used: ExplainNode
+Ret. Type: void
+>ExplainNode,List *, /usr/local/src/postgresql/src/backend/commands/explain.c:2388:2
+Used: ExplainNode
+Ret. Type: void
+>ExplainNode,List *, /usr/local/src/postgresql/src/backend/commands/explain.c:2388:2
+Used: ExplainNode
+Ret. Type: void
+>ExplainNode,List *, /usr/local/src/postgresql/src/backend/commands/explain.c:2388:2
+Used: ExplainNode
+Ret. Type: void
+>ExplainNode,List *, /usr/local/src/postgresql/src/backend/commands/explain.c:2393:2
+Used: ExplainNode
+Ret. Type: void
+>ExplainNode,List *, /usr/local/src/postgresql/src/backend/commands/explain.c:2393:2
+Used: ExplainNode
+Ret. Type: void
+>ExplainNode,List *, /usr/local/src/postgresql/src/backend/commands/explain.c:2420:3
+Used: ExplainNode
+Ret. Type: void
+>ExplainSubPlans,List *, /usr/local/src/postgresql/src/backend/commands/explain.c:5153:2
+Used: ExplainNode
+Ret. Type: void
+>ExplainCustomChildren,List *, /usr/local/src/postgresql/src/backend/commands/explain.c:5171:2
+Used: ExplainNode
+Ret. Type: void
+>ExplainMemberNodes,List *, /usr/local/src/postgresql/src/backend/commands/explain.c:5082:2
+Used: ExplainNode
+Ret. Type: void
+>ExplainNode,List *, /usr/local/src/postgresql/src/backend/commands/explain.c:2388:2
+Used: ExplainNode
+Ret. Type: void
+>ExplainNode,List *, /usr/local/src/postgresql/src/backend/commands/explain.c:2388:2
+Used: ExplainNode
+Ret. Type: void
+>ExplainNode,List *, /usr/local/src/postgresql/src/backend/commands/explain.c:2388:2
+Used: ExplainNode
+Ret. Type: void
+>ExplainNode,List *, /usr/local/src/postgresql/src/backend/commands/explain.c:2388:2
+Used: ExplainNode
+Ret. Type: void
+>ExplainNode,List *, /usr/local/src/postgresql/src/backend/commands/explain.c:2393:2
+Used: ExplainNode
+Ret. Type: void
+>ExplainNode,List *, /usr/local/src/postgresql/src/backend/commands/explain.c:2393:2
+Used: ExplainNode
+Ret. Type: void
+>ExplainNode,List *, /usr/local/src/postgresql/src/backend/commands/explain.c:2420:3
+Used: ExplainNode
+Ret. Type: void
+>ExplainSubPlans,List *, /usr/local/src/postgresql/src/backend/commands/explain.c:5153:2
+Used: ExplainNode
+Ret. Type: void
+>ExplainCustomChildren,List *, /usr/local/src/postgresql/src/backend/commands/explain.c:5171:2
+Used: ExplainNode
+Ret. Type: void
+>ExplainMemberNodes,List *, /usr/local/src/postgresql/src/backend/commands/explain.c:5082:2
+Used: ExplainNode
+Ret. Type: void
+>ExplainNode,List *, /usr/local/src/postgresql/src/backend/commands/explain.c:2388:2
+Used: ExplainNode
+Ret. Type: void
+>ExplainNode,List *, /usr/local/src/postgresql/src/backend/commands/explain.c:2388:2
+Used: ExplainNode
+Ret. Type: void
+>ExplainNode,List *, /usr/local/src/postgresql/src/backend/commands/explain.c:2388:2
+Used: ExplainNode
+Ret. Type: void
+>ExplainNode,List *, /usr/local/src/postgresql/src/backend/commands/explain.c:2388:2
+Used: ExplainNode
+Ret. Type: void
+>ExplainNode,List *, /usr/local/src/postgresql/src/backend/commands/explain.c:2393:2
+Used: ExplainNode
+Ret. Type: void
+>ExplainNode,List *, /usr/local/src/postgresql/src/backend/commands/explain.c:2393:2
+Used: ExplainNode
+Ret. Type: void
+>ExplainNode,List *, /usr/local/src/postgresql/src/backend/commands/explain.c:2420:3
+Used: ExplainNode
+Ret. Type: void
+>ExplainSubPlans,List *, /usr/local/src/postgresql/src/backend/commands/explain.c:5153:2
+Used: ExplainNode
+Ret. Type: void

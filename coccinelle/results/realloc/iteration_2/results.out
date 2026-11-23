@@ -1,0 +1,81 @@
+>jsonpath_yyrealloc,void *, /usr/local/src/postgresql/src/backend/utils/adt/jsonpath_scan.c:6307:9
+Used: repalloc
+Ret. Type: void *
+>jsonpath_yyrealloc,yy_size_t, /usr/local/src/postgresql/src/backend/utils/adt/jsonpath_scan.c:6307:9
+Used: repalloc
+Ret. Type: void *
+>xml_repalloc,size_t, /usr/local/src/postgresql/src/backend/utils/adt/xml.c:2015:8
+Used: repalloc
+Ret. Type: void *
+>xml_repalloc,void *, /usr/local/src/postgresql/src/backend/utils/adt/xml.c:2015:8
+Used: repalloc
+Ret. Type: void *
+>repalloc0,void *, /usr/local/src/postgresql/src/backend/utils/mmgr/mcxt.c:1723:7
+Used: repalloc
+Ret. Type: void *
+>repalloc0,Size, /usr/local/src/postgresql/src/backend/utils/mmgr/mcxt.c:1723:7
+Used: repalloc
+Ret. Type: void *
+>repalloc_mul,void *, /usr/local/src/postgresql/src/backend/utils/mmgr/mcxt.c:1836:8
+Used: repalloc
+Ret. Type: void *
+>bms_add_member,Bitmapset *, /usr/local/src/postgresql/src/backend/nodes/bitmapset.c:820:20
+Used: repalloc
+Ret. Type: Bitmapset *
+>bms_add_range,Bitmapset *, /usr/local/src/postgresql/src/backend/nodes/bitmapset.c:1039:20
+Used: repalloc
+Ret. Type: Bitmapset *
+>bms_replace_members,Bitmapset *, /usr/local/src/postgresql/src/backend/nodes/bitmapset.c:972:20
+Used: repalloc
+Ret. Type: Bitmapset *
+>yyrealloc,void *, /usr/local/src/postgresql/src/backend/bootstrap/bootscanner.c:2424:9
+Used: repalloc
+Ret. Type: void *
+>yyrealloc,yy_size_t, /usr/local/src/postgresql/src/backend/bootstrap/bootscanner.c:2424:9
+Used: repalloc
+Ret. Type: void *
+>SetConstraintStateAddItem,SetConstraintState, /usr/local/src/postgresql/src/backend/commands/trigger.c:5761:3
+Used: repalloc
+Ret. Type: SetConstraintState
+>yyrealloc,void *, /usr/local/src/postgresql/src/backend/replication/repl_scanner.c:2752:9
+Used: repalloc
+Ret. Type: void *
+>yyrealloc,yy_size_t, /usr/local/src/postgresql/src/backend/replication/repl_scanner.c:2752:9
+Used: repalloc
+Ret. Type: void *
+>ReorderBufferSerializeReserve,Size, /usr/local/src/postgresql/src/backend/replication/logical/reorderbuffer.c:3921:15
+Used: repalloc
+Ret. Type: void
+>yyrealloc,void *, /usr/local/src/postgresql/src/backend/replication/syncrep_scanner.c:2342:9
+Used: repalloc
+Ret. Type: void *
+>yyrealloc,yy_size_t, /usr/local/src/postgresql/src/backend/replication/syncrep_scanner.c:2342:9
+Used: repalloc
+Ret. Type: void *
+>addCompiledLexeme,TheLexeme *, /usr/local/src/postgresql/src/backend/tsearch/dict_thesaurus.c:309:26
+Used: repalloc
+Ret. Type: TheLexeme *
+>SPI_repalloc,void *, /usr/local/src/postgresql/src/backend/executor/spi.c:1370:8
+Used: repalloc
+Ret. Type: void *
+>SPI_repalloc,Size, /usr/local/src/postgresql/src/backend/executor/spi.c:1370:8
+Used: repalloc
+Ret. Type: void *
+>brin_copy_tuple,BrinTuple *, /usr/local/src/postgresql/src/backend/access/brin/brin_tuple.c:452:9
+Used: repalloc
+Ret. Type: BrinTuple *
+>brin_copy_tuple,Size, /usr/local/src/postgresql/src/backend/access/brin/brin_tuple.c:452:9
+Used: repalloc
+Ret. Type: BrinTuple *
+>core_yyrealloc,void *, /usr/local/src/postgresql/src/backend/parser/scan.c:11739:9
+Used: repalloc
+Ret. Type: void *
+>core_yyrealloc,yy_size_t, /usr/local/src/postgresql/src/backend/parser/scan.c:11739:9
+Used: repalloc
+Ret. Type: void *
+>repalloc_mul,void *, /usr/local/src/postgresql/src/common/fe_memutils.c:362:8
+Used: repalloc
+Ret. Type: void *
+>resize_intArrayType,ArrayType *, /usr/local/src/postgresql/contrib/intarray/_int_tool.c:270:19
+Used: repalloc
+Ret. Type: ArrayType *

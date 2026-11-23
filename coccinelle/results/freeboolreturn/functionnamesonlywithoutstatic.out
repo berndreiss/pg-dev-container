@@ -1,0 +1,2 @@
+>ReleasePostmasterChildSlot,PMChild *, /usr/local/src/postgresql/src/backend/postmaster/pmchild.c
+>ecpg_check_PQresult,PGresult *, /usr/local/src/postgresql/src/interfaces/ecpg/ecpglib/error.c

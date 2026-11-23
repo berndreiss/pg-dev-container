@@ -1,0 +1,6 @@
+>cluster_rel,Relation, /usr/local/src/postgresql/src/backend/commands/repack.c:699:3
+Used: rebuild_relation
+Ret. Type: void
+>cluster_rel,Relation, /usr/local/src/postgresql/src/backend/commands/repack.c:705:2
+Used: rebuild_relation
+Ret. Type: void

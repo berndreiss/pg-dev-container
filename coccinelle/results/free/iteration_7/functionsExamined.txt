@@ -1,0 +1,23 @@
+>relation_close,Relation, /usr/local/src/postgresql/src/backend/access/common/relation.c:213:1
+>index_close,Relation, /usr/local/src/postgresql/src/backend/access/index/indexam.c:185:1
+>CheckAttributeType,List *, /usr/local/src/postgresql/src/backend/catalog/heap.c:620:2
+>CheckAttributeType,List *, /usr/local/src/postgresql/src/backend/catalog/heap.c:662:3
+>CheckAttributeType,List *, /usr/local/src/postgresql/src/backend/catalog/heap.c:677:2
+>CheckAttributeType,List *, /usr/local/src/postgresql/src/backend/catalog/heap.c:687:2
+>CheckAttributeType,List *, /usr/local/src/postgresql/src/backend/catalog/heap.c:697:2
+>RewriteQuery,List *, /usr/local/src/postgresql/src/backend/rewrite/rewriteHandler.c:4032:13
+>RewriteQuery,List *, /usr/local/src/postgresql/src/backend/rewrite/rewriteHandler.c:4421:15
+>ApplyRetrieveRule,List *, /usr/local/src/postgresql/src/backend/rewrite/rewriteHandler.c:1883:15
+>fireRIRrules,List *, /usr/local/src/postgresql/src/backend/rewrite/rewriteHandler.c:2088:19
+>fireRIRrules,List *, /usr/local/src/postgresql/src/backend/rewrite/rewriteHandler.c:2208:3
+>relation_is_updatable,List *, /usr/local/src/postgresql/src/backend/rewrite/rewriteHandler.c:3101:19
+>list_delete,List *, /usr/local/src/postgresql/src/backend/nodes/list.c:863:10
+>list_delete_int,List *, /usr/local/src/postgresql/src/backend/nodes/list.c:901:10
+>list_delete_oid,List *, /usr/local/src/postgresql/src/backend/nodes/list.c:920:10
+>list_delete_ptr,List *, /usr/local/src/postgresql/src/backend/nodes/list.c:882:10
+>ExplainNode,List *, /usr/local/src/postgresql/src/backend/commands/explain.c:2438:14
+>ExplainSubPlans,List *, /usr/local/src/postgresql/src/backend/commands/explain.c:5156:14
+>show_agg_keys,List *, /usr/local/src/postgresql/src/backend/commands/explain.c:2651:14
+>show_group_keys,List *, /usr/local/src/postgresql/src/backend/commands/explain.c:2776:13
+>show_window_def,List *, /usr/local/src/postgresql/src/backend/commands/explain.c:2934:13
+>ReorderBufferStreamCommit,ReorderBufferTXN *, /usr/local/src/postgresql/src/backend/replication/logical/reorderbuffer.c:1991:1

@@ -1,0 +1,2 @@
+>ReindexUnpinRelations,List *, /usr/local/src/postgresql/src/backend/commands/indexcmds.c:3629:1
+>CloseTableList,List *, /usr/local/src/postgresql/src/backend/commands/publicationcmds.c:2007:1

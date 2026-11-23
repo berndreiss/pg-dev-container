@@ -1,0 +1,76 @@
+>AddRelationNotNullConstraints,List *, /usr/local/src/postgresql/src/backend/catalog/heap.c:3378:18
+>AddRelationNotNullConstraints,List *, /usr/local/src/postgresql/src/backend/catalog/heap.c:3490:19
+>CheckAttributeType,List *, /usr/local/src/postgresql/src/backend/catalog/heap.c:620:2
+>CheckAttributeType,List *, /usr/local/src/postgresql/src/backend/catalog/heap.c:662:3
+>CheckAttributeType,List *, /usr/local/src/postgresql/src/backend/catalog/heap.c:670:24
+>CheckAttributeType,List *, /usr/local/src/postgresql/src/backend/catalog/heap.c:677:2
+>CheckAttributeType,List *, /usr/local/src/postgresql/src/backend/catalog/heap.c:687:2
+>CheckAttributeType,List *, /usr/local/src/postgresql/src/backend/catalog/heap.c:697:2
+>DecrTupleDescRefCount,TupleDesc, /usr/local/src/postgresql/src/backend/access/common/tupdesc.c:826:2
+>FreeDir,DIR *, /usr/local/src/postgresql/src/backend/storage/file/fd.c:3034:8
+>InsertPgAttributeTuples,CatalogIndexState, /usr/local/src/postgresql/src/backend/catalog/heap.c:861:2
+>PQclear,PGresult *, /usr/local/src/postgresql/src/interfaces/libpq/fe-exec.c:776:1
+>ParallelBackupEnd,ParallelState *, /usr/local/src/postgresql/src/bin/pg_dump/parallel.c:1094:1
+>ParallelSlotsAdoptConn,PGconn *, /usr/local/src/postgresql/src/fe_utils/parallel_slot.c:467:2
+>RelationClose,Relation, /usr/local/src/postgresql/src/backend/utils/cache/relcache.c:2272:1
+>ReleaseCatCacheList,CatCList *, /usr/local/src/postgresql/src/backend/utils/cache/catcache.c:2129:1
+>ReleasePostmasterChildSlot,PMChild *, /usr/local/src/postgresql/src/backend/postmaster/pmchild.c:258:2
+>ReorderBufferQueueChange,ReorderBufferChange *, /usr/local/src/postgresql/src/backend/replication/logical/reorderbuffer.c:831:2
+>ReportBackgroundWorkerExit,RegisteredBgWorker *, /usr/local/src/postgresql/src/backend/postmaster/bgworker.c:519:2
+>SnapBuildSnapDecRefcount,Snapshot, /usr/local/src/postgresql/src/backend/replication/logical/snapbuild.c:352:2
+>TableCommandResultHandler,PGresult *, /usr/local/src/postgresql/src/fe_utils/parallel_slot.c:556:3
+>UnregisterSnapshot,Snapshot, /usr/local/src/postgresql/src/backend/utils/time/snapmgr.c:871:1
+>UnregisterSnapshotFromOwner,Snapshot, /usr/local/src/postgresql/src/backend/utils/time/snapmgr.c:885:1
+>add_partial_path,Path *, /usr/local/src/postgresql/src/backend/optimizer/util/pathnode.c:898:2
+>add_path,Path *, /usr/local/src/postgresql/src/backend/optimizer/util/pathnode.c:664:3
+>bms_add_member,Bitmapset *, /usr/local/src/postgresql/src/backend/nodes/bitmapset.c:838:5
+>bms_add_members,Bitmapset *, /usr/local/src/postgresql/src/backend/nodes/bitmapset.c:917:6
+>bms_add_members,Bitmapset *, /usr/local/src/postgresql/src/backend/nodes/bitmapset.c:941:2
+>bms_add_range,Bitmapset *, /usr/local/src/postgresql/src/backend/nodes/bitmapset.c:1017:6
+>bms_add_range,Bitmapset *, /usr/local/src/postgresql/src/backend/nodes/bitmapset.c:1082:5
+>bms_del_member,Bitmapset *, /usr/local/src/postgresql/src/backend/nodes/bitmapset.c:868:5
+>bms_del_member,Bitmapset *, /usr/local/src/postgresql/src/backend/nodes/bitmapset.c:891:2
+>bms_del_members,Bitmapset *, /usr/local/src/postgresql/src/backend/nodes/bitmapset.c:1158:6
+>bms_del_members,Bitmapset *, /usr/local/src/postgresql/src/backend/nodes/bitmapset.c:1195:3
+>bms_del_members,Bitmapset *, /usr/local/src/postgresql/src/backend/nodes/bitmapset.c:1204:5
+>bms_int_members,Bitmapset *, /usr/local/src/postgresql/src/backend/nodes/bitmapset.c:1107:2
+>bms_int_members,Bitmapset *, /usr/local/src/postgresql/src/backend/nodes/bitmapset.c:1126:2
+>bms_int_members,Bitmapset *, /usr/local/src/postgresql/src/backend/nodes/bitmapset.c:1134:5
+>bms_join,Bitmapset *, /usr/local/src/postgresql/src/backend/nodes/bitmapset.c:1228:6
+>bms_join,Bitmapset *, /usr/local/src/postgresql/src/backend/nodes/bitmapset.c:1236:6
+>bms_replace_members,Bitmapset *, /usr/local/src/postgresql/src/backend/nodes/bitmapset.c:967:2
+>bms_replace_members,Bitmapset *, /usr/local/src/postgresql/src/backend/nodes/bitmapset.c:988:5
+>cached_function_compile,CachedFunction *, /usr/local/src/postgresql/src/backend/utils/cache/funccache.c:632:4
+>cluster_rel,Relation, /usr/local/src/postgresql/src/backend/commands/repack.c:583:3
+>cluster_rel,Relation, /usr/local/src/postgresql/src/backend/commands/repack.c:665:2
+>cluster_rel,Relation, /usr/local/src/postgresql/src/backend/commands/repack.c:699:3
+>cluster_rel,Relation, /usr/local/src/postgresql/src/backend/commands/repack.c:705:2
+>ecpg_check_PQresult,PGresult *, /usr/local/src/postgresql/src/interfaces/ecpg/ecpglib/error.c:306:3
+>ecpg_check_PQresult,PGresult *, /usr/local/src/postgresql/src/interfaces/ecpg/ecpglib/error.c:317:3
+>ecpg_check_PQresult,PGresult *, /usr/local/src/postgresql/src/interfaces/ecpg/ecpglib/error.c:326:3
+>ecpg_check_PQresult,PGresult *, /usr/local/src/postgresql/src/interfaces/ecpg/ecpglib/error.c:333:3
+>executeQuery,PGconn *, /usr/local/src/postgresql/src/bin/pg_dump/connectdb.c:290:2
+>findsubquery,QTNode *, /usr/local/src/postgresql/src/backend/utils/adt/tsquery_rewrite.c:271:8
+>index_close,Relation, /usr/local/src/postgresql/src/backend/access/index/indexam.c:185:1
+>list_delete,List *, /usr/local/src/postgresql/src/backend/nodes/list.c:863:10
+>list_delete_cell,List *, /usr/local/src/postgresql/src/backend/nodes/list.c:843:8
+>list_delete_first,List *, /usr/local/src/postgresql/src/backend/nodes/list.c:950:8
+>list_delete_first_n,List *, /usr/local/src/postgresql/src/backend/nodes/list.c:994:2
+>list_delete_int,List *, /usr/local/src/postgresql/src/backend/nodes/list.c:901:10
+>list_delete_last,List *, /usr/local/src/postgresql/src/backend/nodes/list.c:967:2
+>list_delete_nth_cell,List *, /usr/local/src/postgresql/src/backend/nodes/list.c:780:2
+>list_delete_oid,List *, /usr/local/src/postgresql/src/backend/nodes/list.c:920:10
+>list_delete_ptr,List *, /usr/local/src/postgresql/src/backend/nodes/list.c:882:10
+>make_SAOP_expr,List *, /usr/local/src/postgresql/src/backend/optimizer/util/clauses.c:6804:2
+>pa_xact_finish,ParallelApplyWorkerInfo *, /usr/local/src/postgresql/src/backend/replication/logical/applyparallelworker.c:1657:1
+>pgfdw_report,PGresult *, /usr/local/src/postgresql/contrib/postgres_fdw/connection.c:1149:1
+>pgfdw_report_error,PGresult *, /usr/local/src/postgresql/contrib/postgres_fdw/connection.c:1141:1
+>relation_close,Relation, /usr/local/src/postgresql/src/backend/access/common/relation.c:213:1
+>relation_is_updatable,Bitmapset *, /usr/local/src/postgresql/src/backend/rewrite/rewriteHandler.c:3076:21
+>relation_is_updatable,Bitmapset *, /usr/local/src/postgresql/src/backend/rewrite/rewriteHandler.c:3101:19
+>relation_is_updatable,List *, /usr/local/src/postgresql/src/backend/rewrite/rewriteHandler.c:3101:19
+>relation_is_updatable,List *, /usr/local/src/postgresql/src/backend/rewrite/rewriteHandler.c:3105:20
+>rewrite_heap_tuple,HeapTuple, /usr/local/src/postgresql/src/backend/access/heap/rewriteheap.c:502:5
+>rewrite_heap_tuple,HeapTuple, /usr/local/src/postgresql/src/backend/access/heap/rewriteheap.c:537:3
+>sequence_close,Relation, /usr/local/src/postgresql/src/backend/access/sequence/sequence.c:60:1
+>table_close,Relation, /usr/local/src/postgresql/src/backend/access/table/table.c:128:1

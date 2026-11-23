@@ -1,0 +1,7 @@
+>SPI_repalloc,void *, /usr/local/src/postgresql/src/backend/executor/spi.c
+>erealloc,void *, /usr/local/src/postgresql/src/timezone/zic.c
+>pg_realloc,void *, /usr/local/src/postgresql/src/common/fe_memutils.c
+>repalloc,void *, /usr/local/src/postgresql/src/common/fe_memutils.c
+>xml_repalloc,void *, /usr/local/src/postgresql/src/backend/utils/adt/xml.c
+>yyrealloc,void *, /usr/local/src/postgresql/src/interfaces/ecpg/preproc/pgc.c
+>yyrealloc,void *, /usr/local/src/postgresql/src/test/isolation/specscanner.c

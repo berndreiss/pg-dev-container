@@ -1,0 +1,6 @@
+>xml_repalloc,void *, /usr/local/src/postgresql/src/backend/utils/adt/xml.c:2015:8
+Used: repalloc
+Ret. Type: void *
+>SPI_repalloc,void *, /usr/local/src/postgresql/src/backend/executor/spi.c:1370:8
+Used: repalloc
+Ret. Type: void *

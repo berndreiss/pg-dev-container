@@ -1,0 +1,1758 @@
+>dofindsubquery,QTNode *, /usr/local/src/postgresql/src/backend/utils/adt/tsquery_rewrite.c:230:20
+Used: dofindsubquery
+Ret. Type: QTNode *
+>findsubquery,QTNode *, /usr/local/src/postgresql/src/backend/utils/adt/tsquery_rewrite.c:271:8
+Used: dofindsubquery
+Ret. Type: QTNode *
+>findsubquery,QTNode *, /usr/local/src/postgresql/src/backend/utils/adt/tsquery_rewrite.c:271:8
+Used: dofindsubquery
+Ret. Type: QTNode *
+>dofindsubquery,QTNode *, /usr/local/src/postgresql/src/backend/utils/adt/tsquery_rewrite.c:230:20
+Used: dofindsubquery
+Ret. Type: QTNode *
+>dofindsubquery,QTNode *, /usr/local/src/postgresql/src/backend/utils/adt/tsquery_rewrite.c:230:20
+Used: dofindsubquery
+Ret. Type: QTNode *
+>findsubquery,QTNode *, /usr/local/src/postgresql/src/backend/utils/adt/tsquery_rewrite.c:271:8
+Used: dofindsubquery
+Ret. Type: QTNode *
+>findsubquery,QTNode *, /usr/local/src/postgresql/src/backend/utils/adt/tsquery_rewrite.c:271:8
+Used: dofindsubquery
+Ret. Type: QTNode *
+>dofindsubquery,QTNode *, /usr/local/src/postgresql/src/backend/utils/adt/tsquery_rewrite.c:215:8
+Used: findeq
+Ret. Type: QTNode *
+>dofindsubquery,QTNode *, /usr/local/src/postgresql/src/backend/utils/adt/tsquery_rewrite.c:215:8
+Used: findeq
+Ret. Type: QTNode *
+>dofindsubquery,QTNode *, /usr/local/src/postgresql/src/backend/utils/adt/tsquery_rewrite.c:215:8
+Used: findeq
+Ret. Type: QTNode *
+>dofindsubquery,QTNode *, /usr/local/src/postgresql/src/backend/utils/adt/tsquery_rewrite.c:215:8
+Used: findeq
+Ret. Type: QTNode *
+>dofindsubquery,QTNode *, /usr/local/src/postgresql/src/backend/utils/adt/tsquery_rewrite.c:215:8
+Used: findeq
+Ret. Type: QTNode *
+>dofindsubquery,QTNode *, /usr/local/src/postgresql/src/backend/utils/adt/tsquery_rewrite.c:215:8
+Used: findeq
+Ret. Type: QTNode *
+>dofindsubquery,QTNode *, /usr/local/src/postgresql/src/backend/utils/adt/tsquery_rewrite.c:215:8
+Used: findeq
+Ret. Type: QTNode *
+>dofindsubquery,QTNode *, /usr/local/src/postgresql/src/backend/utils/adt/tsquery_rewrite.c:215:8
+Used: findeq
+Ret. Type: QTNode *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:2962:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:2962:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:2997:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:2997:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3012:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3012:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3027:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3027:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3042:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3042:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3200:16
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3200:16
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:2962:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:2962:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:2997:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:2997:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3012:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3012:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3027:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3027:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3042:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3042:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3200:16
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3200:16
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:2962:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:2962:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:2997:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:2997:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3012:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3012:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3027:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3027:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3042:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3042:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3200:16
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3200:16
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:2962:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:2962:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:2997:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:2997:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3012:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3012:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3027:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3027:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3042:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3042:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3200:16
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3200:16
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:2962:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:2962:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:2997:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:2997:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3012:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3012:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3027:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3027:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3042:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3042:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3200:16
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3200:16
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:2962:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:2962:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:2997:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:2997:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3012:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3012:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3027:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3027:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3042:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3042:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3200:16
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3200:16
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:2962:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:2962:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:2997:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:2997:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3012:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3012:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3027:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3027:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3042:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3042:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3200:16
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3200:16
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:2962:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:2962:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:2997:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:2997:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3012:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3012:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3027:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3027:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3042:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3042:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3200:16
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3200:16
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:2962:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:2962:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:2997:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:2997:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3012:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3012:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3027:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3027:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3042:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3042:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3200:16
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3200:16
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:2962:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:2962:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:2997:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:2997:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3012:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3012:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3027:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3027:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3042:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3042:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3200:16
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3200:16
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:2962:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:2962:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:2997:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:2997:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3012:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3012:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3027:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3027:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3042:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3042:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3200:16
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3200:16
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:2962:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:2962:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:2997:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:2997:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3012:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3012:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3027:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3027:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3042:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3042:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3200:16
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3200:16
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:2962:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:2962:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:2997:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:2997:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3012:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3012:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3027:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3027:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3042:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3042:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3200:16
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3200:16
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:2962:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:2962:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:2997:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:2997:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3012:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3012:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3027:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3027:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3042:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3042:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3200:16
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3200:16
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:2962:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:2962:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:2997:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:2997:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3012:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3012:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3027:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3027:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3042:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3042:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3200:16
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3200:16
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:2962:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:2962:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:2997:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:2997:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3012:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3012:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3027:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3027:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3042:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3042:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3200:16
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3200:16
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:2962:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:2962:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:2997:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:2997:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3012:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3012:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3027:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3027:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3042:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3042:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3200:16
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3200:16
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:2962:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:2962:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:2997:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:2997:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3012:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3012:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3027:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3027:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3042:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3042:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3200:16
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3200:16
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:2962:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:2962:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:2997:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:2997:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3012:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3012:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3027:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3027:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3042:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3042:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3200:16
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3200:16
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:2962:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:2962:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:2997:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:2997:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3012:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3012:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3027:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3027:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3042:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3042:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3200:16
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3200:16
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:2962:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:2962:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:2997:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:2997:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3012:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3012:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3027:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3027:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3042:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3042:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3200:16
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3200:16
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:2962:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:2962:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:2997:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:2997:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3012:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3012:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3027:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3027:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3042:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3042:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3200:16
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3200:16
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:2962:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:2962:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:2997:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:2997:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3012:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3012:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3027:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3027:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3042:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3042:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3200:16
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3200:16
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:2962:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:2962:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:2997:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:2997:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3012:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3012:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3027:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3027:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3042:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3042:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3200:16
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3200:16
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:2962:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:2962:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:2997:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:2997:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3012:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3012:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3027:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3027:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3042:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3042:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3200:16
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3200:16
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:2962:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:2962:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:2997:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:2997:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3012:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3012:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3027:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3027:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3042:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3042:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3200:16
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3200:16
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:2962:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:2962:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:2997:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:2997:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3012:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3012:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3027:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3027:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3042:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3042:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3200:16
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3200:16
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:2962:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:2962:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:2997:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:2997:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3012:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3012:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3027:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3027:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3042:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3042:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3200:16
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3200:16
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:2962:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:2962:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:2997:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:2997:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3012:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3012:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3027:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3027:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3042:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3042:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3200:16
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3200:16
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:2962:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:2962:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:2997:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:2997:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3012:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3012:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3027:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3027:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3042:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3042:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3200:16
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3200:16
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:2962:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:2962:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:2997:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:2997:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3012:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3012:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3027:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3027:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3042:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3042:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3200:16
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3200:16
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:2962:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:2962:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:2997:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:2997:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3012:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3012:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3027:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3027:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3042:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3042:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3200:16
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3200:16
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>dofindsubquery,QTNode *, /usr/local/src/postgresql/src/backend/utils/adt/tsquery_rewrite.c:230:20
+Used: dofindsubquery
+Ret. Type: QTNode *
+>findsubquery,QTNode *, /usr/local/src/postgresql/src/backend/utils/adt/tsquery_rewrite.c:271:8
+Used: dofindsubquery
+Ret. Type: QTNode *
+>findsubquery,QTNode *, /usr/local/src/postgresql/src/backend/utils/adt/tsquery_rewrite.c:271:8
+Used: dofindsubquery
+Ret. Type: QTNode *
+>dofindsubquery,QTNode *, /usr/local/src/postgresql/src/backend/utils/adt/tsquery_rewrite.c:230:20
+Used: dofindsubquery
+Ret. Type: QTNode *
+>dofindsubquery,QTNode *, /usr/local/src/postgresql/src/backend/utils/adt/tsquery_rewrite.c:230:20
+Used: dofindsubquery
+Ret. Type: QTNode *
+>findsubquery,QTNode *, /usr/local/src/postgresql/src/backend/utils/adt/tsquery_rewrite.c:271:8
+Used: dofindsubquery
+Ret. Type: QTNode *
+>findsubquery,QTNode *, /usr/local/src/postgresql/src/backend/utils/adt/tsquery_rewrite.c:271:8
+Used: dofindsubquery
+Ret. Type: QTNode *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:2962:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:2962:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:2997:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:2997:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3012:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3012:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3027:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3027:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3042:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3042:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3200:16
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3200:16
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:2962:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:2962:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:2997:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:2997:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3012:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3012:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3027:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3027:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3042:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3042:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3200:16
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3200:16
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:2962:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:2962:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:2997:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:2997:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3012:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3012:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3027:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3027:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3042:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3042:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3200:16
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3200:16
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:2962:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:2962:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:2997:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:2997:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3012:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3012:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3027:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3027:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3042:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3042:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3200:16
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3200:16
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:2962:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:2962:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:2997:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:2997:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3012:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3012:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3027:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3027:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3042:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3042:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3200:16
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3200:16
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:2962:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:2962:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:2997:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:2997:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3012:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3012:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3027:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3027:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3042:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3042:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3200:16
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3200:16
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:2962:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:2962:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:2997:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:2997:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3012:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3012:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3027:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3027:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3042:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3042:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3200:16
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3200:16
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:2962:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:2962:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:2997:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:2997:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3012:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3012:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3027:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3027:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3042:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3042:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3200:16
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3200:16
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:2962:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:2962:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:2997:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:2997:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3012:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3012:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3027:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3027:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3042:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3042:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3200:16
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3200:16
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:2962:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:2962:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:2997:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:2997:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3012:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3012:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3027:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3027:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3042:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3042:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3200:16
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3200:16
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:2962:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:2962:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:2997:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:2997:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3012:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3012:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3027:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3027:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3042:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3042:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3200:16
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3200:16
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:2962:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:2962:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:2997:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:2997:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3012:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3012:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3027:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3027:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3042:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3042:10
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3200:16
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:3200:16
+Used: finalize_plan
+Ret. Type: Bitmapset *
+>dofindsubquery,QTNode *, /usr/local/src/postgresql/src/backend/utils/adt/tsquery_rewrite.c:230:20
+Used: dofindsubquery
+Ret. Type: QTNode *
+>findsubquery,QTNode *, /usr/local/src/postgresql/src/backend/utils/adt/tsquery_rewrite.c:271:8
+Used: dofindsubquery
+Ret. Type: QTNode *
+>findsubquery,QTNode *, /usr/local/src/postgresql/src/backend/utils/adt/tsquery_rewrite.c:271:8
+Used: dofindsubquery
+Ret. Type: QTNode *
+>dofindsubquery,QTNode *, /usr/local/src/postgresql/src/backend/utils/adt/tsquery_rewrite.c:230:20
+Used: dofindsubquery
+Ret. Type: QTNode *
+>dofindsubquery,QTNode *, /usr/local/src/postgresql/src/backend/utils/adt/tsquery_rewrite.c:230:20
+Used: dofindsubquery
+Ret. Type: QTNode *
+>findsubquery,QTNode *, /usr/local/src/postgresql/src/backend/utils/adt/tsquery_rewrite.c:271:8
+Used: dofindsubquery
+Ret. Type: QTNode *
+>findsubquery,QTNode *, /usr/local/src/postgresql/src/backend/utils/adt/tsquery_rewrite.c:271:8
+Used: dofindsubquery
+Ret. Type: QTNode *
+>dofindsubquery,QTNode *, /usr/local/src/postgresql/src/backend/utils/adt/tsquery_rewrite.c:230:20
+Used: dofindsubquery
+Ret. Type: QTNode *
+>findsubquery,QTNode *, /usr/local/src/postgresql/src/backend/utils/adt/tsquery_rewrite.c:271:8
+Used: dofindsubquery
+Ret. Type: QTNode *
+>findsubquery,QTNode *, /usr/local/src/postgresql/src/backend/utils/adt/tsquery_rewrite.c:271:8
+Used: dofindsubquery
+Ret. Type: QTNode *
+>dofindsubquery,QTNode *, /usr/local/src/postgresql/src/backend/utils/adt/tsquery_rewrite.c:230:20
+Used: dofindsubquery
+Ret. Type: QTNode *
+>dofindsubquery,QTNode *, /usr/local/src/postgresql/src/backend/utils/adt/tsquery_rewrite.c:230:20
+Used: dofindsubquery
+Ret. Type: QTNode *
+>findsubquery,QTNode *, /usr/local/src/postgresql/src/backend/utils/adt/tsquery_rewrite.c:271:8
+Used: dofindsubquery
+Ret. Type: QTNode *
+>findsubquery,QTNode *, /usr/local/src/postgresql/src/backend/utils/adt/tsquery_rewrite.c:271:8
+Used: dofindsubquery
+Ret. Type: QTNode *
+>updateAclDependencies,Oid *, /usr/local/src/postgresql/src/backend/catalog/pg_shdepend.c:498:1
+Used: updateAclDependenciesWorker
+Ret. Type: void
+>updateInitAclDependencies,Oid *, /usr/local/src/postgresql/src/backend/catalog/pg_shdepend.c:518:1
+Used: updateAclDependenciesWorker
+Ret. Type: void
+>updateAclDependencies,Oid *, /usr/local/src/postgresql/src/backend/catalog/pg_shdepend.c:498:1
+Used: updateAclDependenciesWorker
+Ret. Type: void
+>updateInitAclDependencies,Oid *, /usr/local/src/postgresql/src/backend/catalog/pg_shdepend.c:518:1
+Used: updateAclDependenciesWorker
+Ret. Type: void
+>updateAclDependencies,Oid *, /usr/local/src/postgresql/src/backend/catalog/pg_shdepend.c:498:1
+Used: updateAclDependenciesWorker
+Ret. Type: void
+>updateInitAclDependencies,Oid *, /usr/local/src/postgresql/src/backend/catalog/pg_shdepend.c:518:1
+Used: updateAclDependenciesWorker
+Ret. Type: void
+>updateAclDependencies,Oid *, /usr/local/src/postgresql/src/backend/catalog/pg_shdepend.c:498:1
+Used: updateAclDependenciesWorker
+Ret. Type: void
+>updateInitAclDependencies,Oid *, /usr/local/src/postgresql/src/backend/catalog/pg_shdepend.c:518:1
+Used: updateAclDependenciesWorker
+Ret. Type: void
+>audit_attempt,char *, /usr/local/src/postgresql/src/test/modules/test_oat_hooks/test_oat_hooks.c:260:1
+Used: emit_audit_message
+Ret. Type: void
+>audit_failure,char *, /usr/local/src/postgresql/src/test/modules/test_oat_hooks/test_oat_hooks.c:272:1
+Used: emit_audit_message
+Ret. Type: void
+>audit_success,char *, /usr/local/src/postgresql/src/test/modules/test_oat_hooks/test_oat_hooks.c:266:1
+Used: emit_audit_message
+Ret. Type: void
+>audit_attempt,char *, /usr/local/src/postgresql/src/test/modules/test_oat_hooks/test_oat_hooks.c:260:1
+Used: emit_audit_message
+Ret. Type: void
+>audit_failure,char *, /usr/local/src/postgresql/src/test/modules/test_oat_hooks/test_oat_hooks.c:272:1
+Used: emit_audit_message
+Ret. Type: void
+>audit_success,char *, /usr/local/src/postgresql/src/test/modules/test_oat_hooks/test_oat_hooks.c:266:1
+Used: emit_audit_message
+Ret. Type: void
+>audit_attempt,char *, /usr/local/src/postgresql/src/test/modules/test_oat_hooks/test_oat_hooks.c:260:1
+Used: emit_audit_message
+Ret. Type: void
+>audit_failure,char *, /usr/local/src/postgresql/src/test/modules/test_oat_hooks/test_oat_hooks.c:272:1
+Used: emit_audit_message
+Ret. Type: void
+>audit_success,char *, /usr/local/src/postgresql/src/test/modules/test_oat_hooks/test_oat_hooks.c:266:1
+Used: emit_audit_message
+Ret. Type: void
+>audit_attempt,char *, /usr/local/src/postgresql/src/test/modules/test_oat_hooks/test_oat_hooks.c:260:1
+Used: emit_audit_message
+Ret. Type: void
+>audit_failure,char *, /usr/local/src/postgresql/src/test/modules/test_oat_hooks/test_oat_hooks.c:272:1
+Used: emit_audit_message
+Ret. Type: void
+>audit_success,char *, /usr/local/src/postgresql/src/test/modules/test_oat_hooks/test_oat_hooks.c:266:1
+Used: emit_audit_message
+Ret. Type: void
+>rebuild_relation,Relation, /usr/local/src/postgresql/src/backend/commands/repack.c:1227:2
+Used: rebuild_relation_finish_concurrent
+Ret. Type: void
+>rebuild_relation,Relation, /usr/local/src/postgresql/src/backend/commands/repack.c:1227:2
+Used: rebuild_relation_finish_concurrent
+Ret. Type: void

@@ -1,0 +1,14 @@
+>SPI_repalloc,void *, /usr/local/src/postgresql/src/backend/executor/spi.c:1370:8
+>ecpg_realloc,void *, /usr/local/src/postgresql/src/interfaces/ecpg/ecpglib/memory.c:35:25
+>pg_realloc,void *, /usr/local/src/postgresql/src/common/fe_memutils.c:78:7
+>pg_realloc_mul,void *, /usr/local/src/postgresql/src/common/fe_memutils.c:296:8
+>repalloc,void *, /usr/local/src/postgresql/src/common/fe_memutils.c:180:8
+>repalloc0,void *, /usr/local/src/postgresql/src/backend/utils/mmgr/mcxt.c:1723:7
+>repalloc_mul,void *, /usr/local/src/postgresql/src/backend/utils/mmgr/mcxt.c:1836:8
+>repalloc_mul,void *, /usr/local/src/postgresql/src/common/fe_memutils.c:362:8
+>yyrealloc,void *, /usr/local/src/postgresql/src/backend/utils/misc/guc-file.c:2228:8
+>yyrealloc,void *, /usr/local/src/postgresql/src/bin/pgbench/exprscan.c:2622:8
+>yyrealloc,void *, /usr/local/src/postgresql/src/bin/psql/psqlscanslash.c:3105:8
+>yyrealloc,void *, /usr/local/src/postgresql/src/fe_utils/psqlscan.c:5171:8
+>yyrealloc,void *, /usr/local/src/postgresql/src/interfaces/ecpg/preproc/pgc.c:5116:8
+>yyrealloc,void *, /usr/local/src/postgresql/src/test/isolation/specscanner.c:2194:8

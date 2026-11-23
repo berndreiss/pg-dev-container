@@ -32,6 +32,6 @@ RUN apt update \
 
 RUN su - root -c "apt -y install cmake llvm-19 llvm-19-dev clang-19 libclang-19-dev clang-tidy-19"
 RUN su - root -c "apt -y install neovim ninja-build coccinelle"
-RUN su - root -c "apt -y remove llvm-14*"
+RUN su - root -c "apt -y remove llvm-18*"
 
 VOLUME /home/vscode/pgdata

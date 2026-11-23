@@ -1,0 +1,10 @@
+>_int_unique,ArrayType *, /usr/local/src/postgresql/contrib/intarray/_int_tool.c
+>bms_add_member,Bitmapset *, /usr/local/src/postgresql/src/backend/nodes/bitmapset.c
+>bms_add_range,Bitmapset *, /usr/local/src/postgresql/src/backend/nodes/bitmapset.c
+>bms_replace_members,Bitmapset *, /usr/local/src/postgresql/src/backend/nodes/bitmapset.c
+>core_yyrealloc,void *, /usr/local/src/postgresql/src/backend/parser/scan.c
+>jsonpath_yyrealloc,void *, /usr/local/src/postgresql/src/backend/utils/adt/jsonpath_scan.c
+>resize_intArrayType,ArrayType *, /usr/local/src/postgresql/contrib/intarray/_int_tool.c
+>yyrealloc,void *, /usr/local/src/postgresql/src/backend/bootstrap/bootscanner.c
+>yyrealloc,void *, /usr/local/src/postgresql/src/backend/replication/repl_scanner.c
+>yyrealloc,void *, /usr/local/src/postgresql/src/backend/replication/syncrep_scanner.c

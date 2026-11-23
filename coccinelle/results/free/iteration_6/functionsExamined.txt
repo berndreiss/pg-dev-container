@@ -1,0 +1,17 @@
+>RelationClose,Relation, /usr/local/src/postgresql/src/backend/utils/cache/relcache.c:2272:1
+>UnregisterSnapshot,Snapshot, /usr/local/src/postgresql/src/backend/utils/time/snapmgr.c:871:1
+>CheckAttributeType,List *, /usr/local/src/postgresql/src/backend/catalog/heap.c:670:24
+>RewriteQuery,List *, /usr/local/src/postgresql/src/backend/rewrite/rewriteHandler.c:4429:20
+>fireRIRrules,List *, /usr/local/src/postgresql/src/backend/rewrite/rewriteHandler.c:2195:17
+>fireRIRrules,List *, /usr/local/src/postgresql/src/backend/rewrite/rewriteHandler.c:2323:17
+>relation_is_updatable,List *, /usr/local/src/postgresql/src/backend/rewrite/rewriteHandler.c:3105:20
+>list_delete_cell,List *, /usr/local/src/postgresql/src/backend/nodes/list.c:843:8
+>list_delete_first,List *, /usr/local/src/postgresql/src/backend/nodes/list.c:950:8
+>MergeAttributes,List *, /usr/local/src/postgresql/src/backend/commands/tablecmds.c:2671:15
+>AddRelationNotNullConstraints,List *, /usr/local/src/postgresql/src/backend/catalog/heap.c:3378:18
+>AddRelationNotNullConstraints,List *, /usr/local/src/postgresql/src/backend/catalog/heap.c:3490:19
+>mark_stmt,Bitmapset *, /usr/local/src/postgresql/src/pl/plpgsql/src/pl_funcs.c:651:17
+>ReorderBufferReplay,ReorderBufferTXN *, /usr/local/src/postgresql/src/backend/replication/logical/reorderbuffer.c:2885:1
+>ReorderBufferStreamTXN,ReorderBufferTXN *, /usr/local/src/postgresql/src/backend/replication/logical/reorderbuffer.c:4578:1
+>ReorderBufferReplay,ReorderBufferTXN *, /usr/local/src/postgresql/src/backend/replication/logical/reorderbuffer.c:2859:2
+>make_grouped_join_rel,SpecialJoinInfo *, /usr/local/src/postgresql/src/backend/optimizer/path/joinrels.c:1103:1

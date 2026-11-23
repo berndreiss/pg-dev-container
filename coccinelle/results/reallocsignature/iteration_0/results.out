@@ -1,0 +1,12 @@
+>pg_realloc,void *, /usr/local/src/postgresql/src/common/fe_memutils.c:78:7
+Used: realloc
+Ret. Type: void *
+>yyrealloc,void *, /usr/local/src/postgresql/src/interfaces/ecpg/preproc/pgc.c:5116:8
+Used: realloc
+Ret. Type: void *
+>yyrealloc,void *, /usr/local/src/postgresql/src/test/isolation/specscanner.c:2194:8
+Used: realloc
+Ret. Type: void *
+>erealloc,void *, /usr/local/src/postgresql/src/timezone/zic.c:460:17
+Used: realloc
+Ret. Type: void *

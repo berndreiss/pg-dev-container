@@ -1,0 +1,15 @@
+>jsonpath_yyrealloc,yy_size_t, /usr/local/src/postgresql/src/backend/utils/adt/jsonpath_scan.c:6307:9,ptr
+Used: repalloc
+Ret. Type: void *
+>yyrealloc,yy_size_t, /usr/local/src/postgresql/src/backend/bootstrap/bootscanner.c:2424:9,ptr
+Used: repalloc
+Ret. Type: void *
+>yyrealloc,yy_size_t, /usr/local/src/postgresql/src/backend/replication/repl_scanner.c:2752:9,ptr
+Used: repalloc
+Ret. Type: void *
+>yyrealloc,yy_size_t, /usr/local/src/postgresql/src/backend/replication/syncrep_scanner.c:2342:9,ptr
+Used: repalloc
+Ret. Type: void *
+>core_yyrealloc,yy_size_t, /usr/local/src/postgresql/src/backend/parser/scan.c:11739:9,ptr
+Used: repalloc
+Ret. Type: void *

@@ -1,0 +1,23 @@
+>ExecForceStoreHeapTuple,HeapTuple, /usr/local/src/postgresql/src/backend/executor/execTuples.c:1819:3
+>ExecForceStoreHeapTuple,HeapTuple, /usr/local/src/postgresql/src/backend/executor/execTuples.c:1832:3
+>ExecForceStoreMinimalTuple,MinimalTuple, /usr/local/src/postgresql/src/backend/executor/execTuples.c:1865:3
+>ExecResetTupleTable,List *, /usr/local/src/postgresql/src/backend/executor/execTuples.c:1538:2
+>dump_variables,struct arguments *, /usr/local/src/postgresql/src/interfaces/ecpg/preproc/variable.c:540:2
+>yy_delete_buffer,yyscan_t, /usr/local/src/postgresql/src/backend/bootstrap/bootscanner.c:1807:2
+>yy_delete_buffer,yyscan_t, /usr/local/src/postgresql/src/backend/bootstrap/bootscanner.c:1809:1
+>yy_delete_buffer,yyscan_t, /usr/local/src/postgresql/src/backend/parser/scan.c:10809:2
+>yy_delete_buffer,yyscan_t, /usr/local/src/postgresql/src/backend/parser/scan.c:10811:1
+>yy_delete_buffer,yyscan_t, /usr/local/src/postgresql/src/backend/replication/repl_scanner.c:2046:2
+>yy_delete_buffer,yyscan_t, /usr/local/src/postgresql/src/backend/replication/repl_scanner.c:2048:1
+>yy_delete_buffer,yyscan_t, /usr/local/src/postgresql/src/backend/replication/syncrep_scanner.c:1681:2
+>yy_delete_buffer,yyscan_t, /usr/local/src/postgresql/src/backend/replication/syncrep_scanner.c:1683:1
+>yy_delete_buffer,yyscan_t, /usr/local/src/postgresql/src/backend/utils/adt/jsonpath_scan.c:5332:2
+>yy_delete_buffer,yyscan_t, /usr/local/src/postgresql/src/backend/utils/adt/jsonpath_scan.c:5334:1
+>yy_delete_buffer,yyscan_t, /usr/local/src/postgresql/src/backend/utils/misc/guc-file.c:1635:2
+>yy_delete_buffer,yyscan_t, /usr/local/src/postgresql/src/backend/utils/misc/guc-file.c:1637:1
+>yy_delete_buffer,yyscan_t, /usr/local/src/postgresql/src/bin/pgbench/exprscan.c:2017:2
+>yy_delete_buffer,yyscan_t, /usr/local/src/postgresql/src/bin/pgbench/exprscan.c:2019:1
+>yy_delete_buffer,yyscan_t, /usr/local/src/postgresql/src/bin/psql/psqlscanslash.c:2500:2
+>yy_delete_buffer,yyscan_t, /usr/local/src/postgresql/src/bin/psql/psqlscanslash.c:2502:1
+>yy_delete_buffer,yyscan_t, /usr/local/src/postgresql/src/fe_utils/psqlscan.c:4566:2
+>yy_delete_buffer,yyscan_t, /usr/local/src/postgresql/src/fe_utils/psqlscan.c:4568:1

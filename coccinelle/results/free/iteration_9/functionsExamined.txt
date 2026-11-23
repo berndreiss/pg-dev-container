@@ -1,0 +1,17 @@
+>cluster_rel,Relation, /usr/local/src/postgresql/src/backend/commands/repack.c:583:3
+>get_tables_to_repack_partitioned,Relation, /usr/local/src/postgresql/src/backend/commands/repack.c:2489:1
+>rebuild_relation,Relation, /usr/local/src/postgresql/src/backend/commands/repack.c:1238:2
+>rebuild_relation_finish_concurrent,Relation, /usr/local/src/postgresql/src/backend/commands/repack.c:3570:1
+>rebuild_relation_finish_concurrent,Relation, /usr/local/src/postgresql/src/backend/commands/repack.c:3572:1
+>ATExecDetachPartition,Relation, /usr/local/src/postgresql/src/backend/commands/tablecmds.c:22373:2
+>pgstat_relation,Relation, /usr/local/src/postgresql/contrib/pgstattuple/pgstattuple.c:260:9
+>pgstat_relation,Relation, /usr/local/src/postgresql/contrib/pgstattuple/pgstattuple.c:274:11
+>pgstat_relation,Relation, /usr/local/src/postgresql/contrib/pgstattuple/pgstattuple.c:277:11
+>pgstat_relation,Relation, /usr/local/src/postgresql/contrib/pgstattuple/pgstattuple.c:280:11
+>cluster_rel,Relation, /usr/local/src/postgresql/src/backend/commands/repack.c:699:3
+>cluster_rel,Relation, /usr/local/src/postgresql/src/backend/commands/repack.c:705:2
+>ExplainNode,List *, /usr/local/src/postgresql/src/backend/commands/explain.c:2424:3
+>ExplainNode,List *, /usr/local/src/postgresql/src/backend/commands/explain.c:2400:3
+>ExplainNode,List *, /usr/local/src/postgresql/src/backend/commands/explain.c:2405:3
+>ExplainNode,List *, /usr/local/src/postgresql/src/backend/commands/explain.c:2410:3
+>ExplainNode,List *, /usr/local/src/postgresql/src/backend/commands/explain.c:2415:3

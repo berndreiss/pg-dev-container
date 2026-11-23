@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
  <key>clang_version</key>
-<string>Debian clang version 19.1.4 (1~deb12u1)</string>
+<string>Debian clang version 19.1.7 (3+b1)</string>
  <key>diagnostics</key>
  <array>
   <dict>
@@ -12,7 +12,7 @@
     <dict>
      <key>location</key>
      <dict>
-      <key>line</key><integer>67</integer>
+      <key>line</key><integer>71</integer>
       <key>col</key><integer>3</integer>
       <key>file</key><integer>0</integer>
      </dict>
@@ -25,10 +25,44 @@
    <key>path</key>
    <array>
     <dict>
+     <key>kind</key><string>control</string>
+     <key>edges</key>
+      <array>
+       <dict>
+        <key>start</key>
+         <array>
+          <dict>
+           <key>line</key><integer>70</integer>
+           <key>col</key><integer>3</integer>
+           <key>file</key><integer>0</integer>
+          </dict>
+          <dict>
+           <key>line</key><integer>70</integer>
+           <key>col</key><integer>8</integer>
+           <key>file</key><integer>0</integer>
+          </dict>
+         </array>
+        <key>end</key>
+         <array>
+          <dict>
+           <key>line</key><integer>72</integer>
+           <key>col</key><integer>3</integer>
+           <key>file</key><integer>0</integer>
+          </dict>
+          <dict>
+           <key>line</key><integer>72</integer>
+           <key>col</key><integer>7</integer>
+           <key>file</key><integer>0</integer>
+          </dict>
+         </array>
+       </dict>
+      </array>
+    </dict>
+    <dict>
      <key>kind</key><string>event</string>
      <key>location</key>
      <dict>
-      <key>line</key><integer>68</integer>
+      <key>line</key><integer>72</integer>
       <key>col</key><integer>3</integer>
       <key>file</key><integer>0</integer>
      </dict>
@@ -36,12 +70,12 @@
      <array>
        <array>
         <dict>
-         <key>line</key><integer>68</integer>
+         <key>line</key><integer>72</integer>
          <key>col</key><integer>3</integer>
          <key>file</key><integer>0</integer>
         </dict>
         <dict>
-         <key>line</key><integer>68</integer>
+         <key>line</key><integer>72</integer>
          <key>col</key><integer>14</integer>
          <key>file</key><integer>0</integer>
         </dict>
@@ -56,13 +90,16 @@
    </array>
    <key>description</key><string>Attempt to free released memory: list1</string>
    <key>category</key><string>Logic error</string>
-   <key>type</key><string>Attempt to free released memory</string>
+   <key>type</key><string>Use or free of released memory (PostgreSQL API)</string>
    <key>check_name</key><string>postgres.PostgresChecker</string>
    <!-- This hash is experimental and going to change! -->
-   <key>issue_hash_content_of_line_in_context</key><string>13bf2416760514c2f21a400da66539af</string>
+   <key>issue_hash_content_of_line_in_context</key><string>f926ca1331bdc0791275cecc58b7e337</string>
+  <key>issue_context_kind</key><string>function</string>
+  <key>issue_context</key><string>main</string>
+  <key>issue_hash_function_offset</key><string>3</string>
   <key>location</key>
   <dict>
-   <key>line</key><integer>68</integer>
+   <key>line</key><integer>72</integer>
    <key>col</key><integer>3</integer>
    <key>file</key><integer>0</integer>
   </dict>
@@ -70,8 +107,10 @@
   <dict>
    <key>0</key>
    <array>
-    <integer>67</integer>
-    <integer>68</integer>
+    <integer>69</integer>
+    <integer>70</integer>
+    <integer>71</integer>
+    <integer>72</integer>
    </array>
   </dict>
   </dict>

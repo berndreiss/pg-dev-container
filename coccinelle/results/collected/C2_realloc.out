@@ -1,0 +1,3 @@
+>brin_copy_tuple,BrinTuple *, /usr/local/src/postgresql/src/backend/access/brin/brin_tuple.c:452:9
+Used: repalloc
+Ret. Type: BrinTuple *

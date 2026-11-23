@@ -1,0 +1,26 @@
+>cluster_rel,Relation, /usr/local/src/postgresql/src/backend/commands/repack.c:665:2
+>cluster_rel_recheck,Relation, /usr/local/src/postgresql/src/backend/commands/repack.c:732:2
+>cluster_rel_recheck,Relation, /usr/local/src/postgresql/src/backend/commands/repack.c:746:2
+>cluster_rel_recheck,Relation, /usr/local/src/postgresql/src/backend/commands/repack.c:757:3
+>cluster_rel_recheck,Relation, /usr/local/src/postgresql/src/backend/commands/repack.c:768:3
+>ATController,Relation, /usr/local/src/postgresql/src/backend/commands/tablecmds.c:4932:1
+>sequence_close,Relation, /usr/local/src/postgresql/src/backend/access/sequence/sequence.c:60:1
+>table_close,Relation, /usr/local/src/postgresql/src/backend/access/table/table.c:128:1
+>pgstat_heap,Relation, /usr/local/src/postgresql/contrib/pgstattuple/pgstattuple.c:400:1
+>pgstat_index,Relation, /usr/local/src/postgresql/contrib/pgstattuple/pgstattuple.c:572:1
+>pg_relpages_impl,Relation, /usr/local/src/postgresql/contrib/pgstattuple/pgstatindex.c:489:1
+>pgstatindex_impl,Relation, /usr/local/src/postgresql/contrib/pgstattuple/pgstatindex.c:351:1
+>rebuild_relation,Relation, /usr/local/src/postgresql/src/backend/commands/repack.c:1225:3
+>rebuild_relation,Relation, /usr/local/src/postgresql/src/backend/commands/repack.c:1240:3
+>fireRIRrules,List *, /usr/local/src/postgresql/src/backend/rewrite/rewriteHandler.c:2188:17
+>ExplainCustomChildren,List *, /usr/local/src/postgresql/src/backend/commands/explain.c:5171:2
+>ExplainMemberNodes,List *, /usr/local/src/postgresql/src/backend/commands/explain.c:5082:2
+>ExplainNode,List *, /usr/local/src/postgresql/src/backend/commands/explain.c:2388:2
+>ExplainNode,List *, /usr/local/src/postgresql/src/backend/commands/explain.c:2393:2
+>ExplainNode,List *, /usr/local/src/postgresql/src/backend/commands/explain.c:2420:3
+>ExplainSubPlans,List *, /usr/local/src/postgresql/src/backend/commands/explain.c:5153:2
+>ExplainNode,List *, /usr/local/src/postgresql/src/backend/commands/explain.c:2384:2
+>ExplainNode,List *, /usr/local/src/postgresql/src/backend/commands/explain.c:2433:2
+>ExplainNode,List *, /usr/local/src/postgresql/src/backend/commands/explain.c:2212:3
+>ExplainNode,List *, /usr/local/src/postgresql/src/backend/commands/explain.c:2230:3
+>ExplainNode,List *, /usr/local/src/postgresql/src/backend/commands/explain.c:2220:3

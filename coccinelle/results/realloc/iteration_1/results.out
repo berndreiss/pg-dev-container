@@ -1,0 +1,672 @@
+>yy_get_next_buffer,yyscan_t, /usr/local/src/postgresql/src/bin/pgbench/exprscan.c:1702:5
+Used: yyrealloc
+Ret. Type: int
+>yy_get_next_buffer,yyscan_t, /usr/local/src/postgresql/src/bin/pgbench/exprscan.c:1702:5
+Used: yyrealloc
+Ret. Type: int
+>yy_get_next_buffer,yyscan_t, /usr/local/src/postgresql/src/bin/pgbench/exprscan.c:1752:49
+Used: yyrealloc
+Ret. Type: int
+>yyensure_buffer_stack,yyscan_t, /usr/local/src/postgresql/src/bin/pgbench/exprscan.c:2167:51
+Used: yyrealloc
+Ret. Type: void
+>yy_get_next_buffer,yyscan_t, /usr/local/src/postgresql/src/bin/psql/psqlscanslash.c:2210:5
+Used: yyrealloc
+Ret. Type: int
+>yy_get_next_buffer,yyscan_t, /usr/local/src/postgresql/src/bin/psql/psqlscanslash.c:2210:5
+Used: yyrealloc
+Ret. Type: int
+>yy_get_next_buffer,yyscan_t, /usr/local/src/postgresql/src/bin/psql/psqlscanslash.c:2260:49
+Used: yyrealloc
+Ret. Type: int
+>yyensure_buffer_stack,yyscan_t, /usr/local/src/postgresql/src/bin/psql/psqlscanslash.c:2650:51
+Used: yyrealloc
+Ret. Type: void
+>yy_get_next_buffer,yyscan_t, /usr/local/src/postgresql/src/backend/utils/adt/jsonpath_scan.c:5038:5
+Used: yyrealloc
+Ret. Type: int
+>yy_get_next_buffer,yyscan_t, /usr/local/src/postgresql/src/backend/utils/adt/jsonpath_scan.c:5038:5
+Used: yyrealloc
+Ret. Type: int
+>yy_get_next_buffer,yyscan_t, /usr/local/src/postgresql/src/backend/utils/adt/jsonpath_scan.c:5088:49
+Used: yyrealloc
+Ret. Type: int
+>yyensure_buffer_stack,yyscan_t, /usr/local/src/postgresql/src/backend/utils/adt/jsonpath_scan.c:5482:51
+Used: yyrealloc
+Ret. Type: void
+>yy_get_next_buffer,yyscan_t, /usr/local/src/postgresql/src/backend/utils/misc/guc-file.c:1320:5
+Used: yyrealloc
+Ret. Type: int
+>yy_get_next_buffer,yyscan_t, /usr/local/src/postgresql/src/backend/utils/misc/guc-file.c:1320:5
+Used: yyrealloc
+Ret. Type: int
+>yy_get_next_buffer,yyscan_t, /usr/local/src/postgresql/src/backend/utils/misc/guc-file.c:1370:49
+Used: yyrealloc
+Ret. Type: int
+>yyensure_buffer_stack,yyscan_t, /usr/local/src/postgresql/src/backend/utils/misc/guc-file.c:1785:51
+Used: yyrealloc
+Ret. Type: void
+>yy_get_next_buffer,yyscan_t, /usr/local/src/postgresql/src/backend/bootstrap/bootscanner.c:1489:5
+Used: yyrealloc
+Ret. Type: int
+>yy_get_next_buffer,yyscan_t, /usr/local/src/postgresql/src/backend/bootstrap/bootscanner.c:1489:5
+Used: yyrealloc
+Ret. Type: int
+>yy_get_next_buffer,yyscan_t, /usr/local/src/postgresql/src/backend/bootstrap/bootscanner.c:1539:49
+Used: yyrealloc
+Ret. Type: int
+>yyensure_buffer_stack,yyscan_t, /usr/local/src/postgresql/src/backend/bootstrap/bootscanner.c:1957:51
+Used: yyrealloc
+Ret. Type: void
+>yy_get_next_buffer,yyscan_t, /usr/local/src/postgresql/src/backend/replication/repl_scanner.c:1731:5
+Used: yyrealloc
+Ret. Type: int
+>yy_get_next_buffer,yyscan_t, /usr/local/src/postgresql/src/backend/replication/repl_scanner.c:1731:5
+Used: yyrealloc
+Ret. Type: int
+>yy_get_next_buffer,yyscan_t, /usr/local/src/postgresql/src/backend/replication/repl_scanner.c:1781:49
+Used: yyrealloc
+Ret. Type: int
+>yyensure_buffer_stack,yyscan_t, /usr/local/src/postgresql/src/backend/replication/repl_scanner.c:2196:51
+Used: yyrealloc
+Ret. Type: void
+>yy_get_next_buffer,yyscan_t, /usr/local/src/postgresql/src/backend/replication/syncrep_scanner.c:1366:5
+Used: yyrealloc
+Ret. Type: int
+>yy_get_next_buffer,yyscan_t, /usr/local/src/postgresql/src/backend/replication/syncrep_scanner.c:1366:5
+Used: yyrealloc
+Ret. Type: int
+>yy_get_next_buffer,yyscan_t, /usr/local/src/postgresql/src/backend/replication/syncrep_scanner.c:1416:49
+Used: yyrealloc
+Ret. Type: int
+>yyensure_buffer_stack,yyscan_t, /usr/local/src/postgresql/src/backend/replication/syncrep_scanner.c:1831:51
+Used: yyrealloc
+Ret. Type: void
+>yy_get_next_buffer,yyscan_t, /usr/local/src/postgresql/src/backend/parser/scan.c:10515:5
+Used: yyrealloc
+Ret. Type: int
+>yy_get_next_buffer,yyscan_t, /usr/local/src/postgresql/src/backend/parser/scan.c:10515:5
+Used: yyrealloc
+Ret. Type: int
+>yy_get_next_buffer,yyscan_t, /usr/local/src/postgresql/src/backend/parser/scan.c:10565:49
+Used: yyrealloc
+Ret. Type: int
+>yyensure_buffer_stack,yyscan_t, /usr/local/src/postgresql/src/backend/parser/scan.c:10959:51
+Used: yyrealloc
+Ret. Type: void
+>yy_get_next_buffer,yyscan_t, /usr/local/src/postgresql/src/fe_utils/psqlscan.c:4276:5
+Used: yyrealloc
+Ret. Type: int
+>yy_get_next_buffer,yyscan_t, /usr/local/src/postgresql/src/fe_utils/psqlscan.c:4276:5
+Used: yyrealloc
+Ret. Type: int
+>yy_get_next_buffer,yyscan_t, /usr/local/src/postgresql/src/fe_utils/psqlscan.c:4326:49
+Used: yyrealloc
+Ret. Type: int
+>yyensure_buffer_stack,yyscan_t, /usr/local/src/postgresql/src/fe_utils/psqlscan.c:4716:51
+Used: yyrealloc
+Ret. Type: void
+>yy_get_next_buffer,yyscan_t, /usr/local/src/postgresql/src/bin/pgbench/exprscan.c:1702:5
+Used: yyrealloc
+Ret. Type: int
+>yy_get_next_buffer,yyscan_t, /usr/local/src/postgresql/src/bin/pgbench/exprscan.c:1702:5
+Used: yyrealloc
+Ret. Type: int
+>yy_get_next_buffer,yyscan_t, /usr/local/src/postgresql/src/bin/pgbench/exprscan.c:1752:49
+Used: yyrealloc
+Ret. Type: int
+>yyensure_buffer_stack,yyscan_t, /usr/local/src/postgresql/src/bin/pgbench/exprscan.c:2167:51
+Used: yyrealloc
+Ret. Type: void
+>yy_get_next_buffer,yyscan_t, /usr/local/src/postgresql/src/bin/psql/psqlscanslash.c:2210:5
+Used: yyrealloc
+Ret. Type: int
+>yy_get_next_buffer,yyscan_t, /usr/local/src/postgresql/src/bin/psql/psqlscanslash.c:2210:5
+Used: yyrealloc
+Ret. Type: int
+>yy_get_next_buffer,yyscan_t, /usr/local/src/postgresql/src/bin/psql/psqlscanslash.c:2260:49
+Used: yyrealloc
+Ret. Type: int
+>yyensure_buffer_stack,yyscan_t, /usr/local/src/postgresql/src/bin/psql/psqlscanslash.c:2650:51
+Used: yyrealloc
+Ret. Type: void
+>yy_get_next_buffer,yyscan_t, /usr/local/src/postgresql/src/backend/utils/adt/jsonpath_scan.c:5038:5
+Used: yyrealloc
+Ret. Type: int
+>yy_get_next_buffer,yyscan_t, /usr/local/src/postgresql/src/backend/utils/adt/jsonpath_scan.c:5038:5
+Used: yyrealloc
+Ret. Type: int
+>yy_get_next_buffer,yyscan_t, /usr/local/src/postgresql/src/backend/utils/adt/jsonpath_scan.c:5088:49
+Used: yyrealloc
+Ret. Type: int
+>yyensure_buffer_stack,yyscan_t, /usr/local/src/postgresql/src/backend/utils/adt/jsonpath_scan.c:5482:51
+Used: yyrealloc
+Ret. Type: void
+>yy_get_next_buffer,yyscan_t, /usr/local/src/postgresql/src/backend/utils/misc/guc-file.c:1320:5
+Used: yyrealloc
+Ret. Type: int
+>yy_get_next_buffer,yyscan_t, /usr/local/src/postgresql/src/backend/utils/misc/guc-file.c:1320:5
+Used: yyrealloc
+Ret. Type: int
+>yy_get_next_buffer,yyscan_t, /usr/local/src/postgresql/src/backend/utils/misc/guc-file.c:1370:49
+Used: yyrealloc
+Ret. Type: int
+>yyensure_buffer_stack,yyscan_t, /usr/local/src/postgresql/src/backend/utils/misc/guc-file.c:1785:51
+Used: yyrealloc
+Ret. Type: void
+>yy_get_next_buffer,yyscan_t, /usr/local/src/postgresql/src/backend/bootstrap/bootscanner.c:1489:5
+Used: yyrealloc
+Ret. Type: int
+>yy_get_next_buffer,yyscan_t, /usr/local/src/postgresql/src/backend/bootstrap/bootscanner.c:1489:5
+Used: yyrealloc
+Ret. Type: int
+>yy_get_next_buffer,yyscan_t, /usr/local/src/postgresql/src/backend/bootstrap/bootscanner.c:1539:49
+Used: yyrealloc
+Ret. Type: int
+>yyensure_buffer_stack,yyscan_t, /usr/local/src/postgresql/src/backend/bootstrap/bootscanner.c:1957:51
+Used: yyrealloc
+Ret. Type: void
+>yy_get_next_buffer,yyscan_t, /usr/local/src/postgresql/src/backend/replication/repl_scanner.c:1731:5
+Used: yyrealloc
+Ret. Type: int
+>yy_get_next_buffer,yyscan_t, /usr/local/src/postgresql/src/backend/replication/repl_scanner.c:1731:5
+Used: yyrealloc
+Ret. Type: int
+>yy_get_next_buffer,yyscan_t, /usr/local/src/postgresql/src/backend/replication/repl_scanner.c:1781:49
+Used: yyrealloc
+Ret. Type: int
+>yyensure_buffer_stack,yyscan_t, /usr/local/src/postgresql/src/backend/replication/repl_scanner.c:2196:51
+Used: yyrealloc
+Ret. Type: void
+>yy_get_next_buffer,yyscan_t, /usr/local/src/postgresql/src/backend/replication/syncrep_scanner.c:1366:5
+Used: yyrealloc
+Ret. Type: int
+>yy_get_next_buffer,yyscan_t, /usr/local/src/postgresql/src/backend/replication/syncrep_scanner.c:1366:5
+Used: yyrealloc
+Ret. Type: int
+>yy_get_next_buffer,yyscan_t, /usr/local/src/postgresql/src/backend/replication/syncrep_scanner.c:1416:49
+Used: yyrealloc
+Ret. Type: int
+>yyensure_buffer_stack,yyscan_t, /usr/local/src/postgresql/src/backend/replication/syncrep_scanner.c:1831:51
+Used: yyrealloc
+Ret. Type: void
+>yy_get_next_buffer,yyscan_t, /usr/local/src/postgresql/src/backend/parser/scan.c:10515:5
+Used: yyrealloc
+Ret. Type: int
+>yy_get_next_buffer,yyscan_t, /usr/local/src/postgresql/src/backend/parser/scan.c:10515:5
+Used: yyrealloc
+Ret. Type: int
+>yy_get_next_buffer,yyscan_t, /usr/local/src/postgresql/src/backend/parser/scan.c:10565:49
+Used: yyrealloc
+Ret. Type: int
+>yyensure_buffer_stack,yyscan_t, /usr/local/src/postgresql/src/backend/parser/scan.c:10959:51
+Used: yyrealloc
+Ret. Type: void
+>yy_get_next_buffer,yyscan_t, /usr/local/src/postgresql/src/fe_utils/psqlscan.c:4276:5
+Used: yyrealloc
+Ret. Type: int
+>yy_get_next_buffer,yyscan_t, /usr/local/src/postgresql/src/fe_utils/psqlscan.c:4276:5
+Used: yyrealloc
+Ret. Type: int
+>yy_get_next_buffer,yyscan_t, /usr/local/src/postgresql/src/fe_utils/psqlscan.c:4326:49
+Used: yyrealloc
+Ret. Type: int
+>yyensure_buffer_stack,yyscan_t, /usr/local/src/postgresql/src/fe_utils/psqlscan.c:4716:51
+Used: yyrealloc
+Ret. Type: void
+>yy_get_next_buffer,yyscan_t, /usr/local/src/postgresql/src/bin/pgbench/exprscan.c:1702:5
+Used: yyrealloc
+Ret. Type: int
+>yy_get_next_buffer,yyscan_t, /usr/local/src/postgresql/src/bin/pgbench/exprscan.c:1702:5
+Used: yyrealloc
+Ret. Type: int
+>yy_get_next_buffer,yyscan_t, /usr/local/src/postgresql/src/bin/pgbench/exprscan.c:1752:49
+Used: yyrealloc
+Ret. Type: int
+>yyensure_buffer_stack,yyscan_t, /usr/local/src/postgresql/src/bin/pgbench/exprscan.c:2167:51
+Used: yyrealloc
+Ret. Type: void
+>yy_get_next_buffer,yyscan_t, /usr/local/src/postgresql/src/bin/psql/psqlscanslash.c:2210:5
+Used: yyrealloc
+Ret. Type: int
+>yy_get_next_buffer,yyscan_t, /usr/local/src/postgresql/src/bin/psql/psqlscanslash.c:2210:5
+Used: yyrealloc
+Ret. Type: int
+>yy_get_next_buffer,yyscan_t, /usr/local/src/postgresql/src/bin/psql/psqlscanslash.c:2260:49
+Used: yyrealloc
+Ret. Type: int
+>yyensure_buffer_stack,yyscan_t, /usr/local/src/postgresql/src/bin/psql/psqlscanslash.c:2650:51
+Used: yyrealloc
+Ret. Type: void
+>yy_get_next_buffer,yyscan_t, /usr/local/src/postgresql/src/backend/utils/adt/jsonpath_scan.c:5038:5
+Used: yyrealloc
+Ret. Type: int
+>yy_get_next_buffer,yyscan_t, /usr/local/src/postgresql/src/backend/utils/adt/jsonpath_scan.c:5038:5
+Used: yyrealloc
+Ret. Type: int
+>yy_get_next_buffer,yyscan_t, /usr/local/src/postgresql/src/backend/utils/adt/jsonpath_scan.c:5088:49
+Used: yyrealloc
+Ret. Type: int
+>yyensure_buffer_stack,yyscan_t, /usr/local/src/postgresql/src/backend/utils/adt/jsonpath_scan.c:5482:51
+Used: yyrealloc
+Ret. Type: void
+>yy_get_next_buffer,yyscan_t, /usr/local/src/postgresql/src/backend/utils/misc/guc-file.c:1320:5
+Used: yyrealloc
+Ret. Type: int
+>yy_get_next_buffer,yyscan_t, /usr/local/src/postgresql/src/backend/utils/misc/guc-file.c:1320:5
+Used: yyrealloc
+Ret. Type: int
+>yy_get_next_buffer,yyscan_t, /usr/local/src/postgresql/src/backend/utils/misc/guc-file.c:1370:49
+Used: yyrealloc
+Ret. Type: int
+>yyensure_buffer_stack,yyscan_t, /usr/local/src/postgresql/src/backend/utils/misc/guc-file.c:1785:51
+Used: yyrealloc
+Ret. Type: void
+>yy_get_next_buffer,yyscan_t, /usr/local/src/postgresql/src/backend/bootstrap/bootscanner.c:1489:5
+Used: yyrealloc
+Ret. Type: int
+>yy_get_next_buffer,yyscan_t, /usr/local/src/postgresql/src/backend/bootstrap/bootscanner.c:1489:5
+Used: yyrealloc
+Ret. Type: int
+>yy_get_next_buffer,yyscan_t, /usr/local/src/postgresql/src/backend/bootstrap/bootscanner.c:1539:49
+Used: yyrealloc
+Ret. Type: int
+>yyensure_buffer_stack,yyscan_t, /usr/local/src/postgresql/src/backend/bootstrap/bootscanner.c:1957:51
+Used: yyrealloc
+Ret. Type: void
+>yy_get_next_buffer,yyscan_t, /usr/local/src/postgresql/src/backend/replication/repl_scanner.c:1731:5
+Used: yyrealloc
+Ret. Type: int
+>yy_get_next_buffer,yyscan_t, /usr/local/src/postgresql/src/backend/replication/repl_scanner.c:1731:5
+Used: yyrealloc
+Ret. Type: int
+>yy_get_next_buffer,yyscan_t, /usr/local/src/postgresql/src/backend/replication/repl_scanner.c:1781:49
+Used: yyrealloc
+Ret. Type: int
+>yyensure_buffer_stack,yyscan_t, /usr/local/src/postgresql/src/backend/replication/repl_scanner.c:2196:51
+Used: yyrealloc
+Ret. Type: void
+>yy_get_next_buffer,yyscan_t, /usr/local/src/postgresql/src/backend/replication/syncrep_scanner.c:1366:5
+Used: yyrealloc
+Ret. Type: int
+>yy_get_next_buffer,yyscan_t, /usr/local/src/postgresql/src/backend/replication/syncrep_scanner.c:1366:5
+Used: yyrealloc
+Ret. Type: int
+>yy_get_next_buffer,yyscan_t, /usr/local/src/postgresql/src/backend/replication/syncrep_scanner.c:1416:49
+Used: yyrealloc
+Ret. Type: int
+>yyensure_buffer_stack,yyscan_t, /usr/local/src/postgresql/src/backend/replication/syncrep_scanner.c:1831:51
+Used: yyrealloc
+Ret. Type: void
+>yy_get_next_buffer,yyscan_t, /usr/local/src/postgresql/src/backend/parser/scan.c:10515:5
+Used: yyrealloc
+Ret. Type: int
+>yy_get_next_buffer,yyscan_t, /usr/local/src/postgresql/src/backend/parser/scan.c:10515:5
+Used: yyrealloc
+Ret. Type: int
+>yy_get_next_buffer,yyscan_t, /usr/local/src/postgresql/src/backend/parser/scan.c:10565:49
+Used: yyrealloc
+Ret. Type: int
+>yyensure_buffer_stack,yyscan_t, /usr/local/src/postgresql/src/backend/parser/scan.c:10959:51
+Used: yyrealloc
+Ret. Type: void
+>yy_get_next_buffer,yyscan_t, /usr/local/src/postgresql/src/fe_utils/psqlscan.c:4276:5
+Used: yyrealloc
+Ret. Type: int
+>yy_get_next_buffer,yyscan_t, /usr/local/src/postgresql/src/fe_utils/psqlscan.c:4276:5
+Used: yyrealloc
+Ret. Type: int
+>yy_get_next_buffer,yyscan_t, /usr/local/src/postgresql/src/fe_utils/psqlscan.c:4326:49
+Used: yyrealloc
+Ret. Type: int
+>yyensure_buffer_stack,yyscan_t, /usr/local/src/postgresql/src/fe_utils/psqlscan.c:4716:51
+Used: yyrealloc
+Ret. Type: void
+>pg_realloc_mul,void *, /usr/local/src/postgresql/src/common/fe_memutils.c:296:8
+Used: pg_realloc
+Ret. Type: void *
+>repalloc,void *, /usr/local/src/postgresql/src/common/fe_memutils.c:180:8
+Used: pg_realloc
+Ret. Type: void *
+>repalloc,Size, /usr/local/src/postgresql/src/common/fe_memutils.c:180:8
+Used: pg_realloc
+Ret. Type: void *
+>yy_get_next_buffer,yyscan_t, /usr/local/src/postgresql/src/bin/pgbench/exprscan.c:1702:5
+Used: yyrealloc
+Ret. Type: int
+>yy_get_next_buffer,yyscan_t, /usr/local/src/postgresql/src/bin/pgbench/exprscan.c:1702:5
+Used: yyrealloc
+Ret. Type: int
+>yy_get_next_buffer,yyscan_t, /usr/local/src/postgresql/src/bin/pgbench/exprscan.c:1752:49
+Used: yyrealloc
+Ret. Type: int
+>yyensure_buffer_stack,yyscan_t, /usr/local/src/postgresql/src/bin/pgbench/exprscan.c:2167:51
+Used: yyrealloc
+Ret. Type: void
+>yy_get_next_buffer,yyscan_t, /usr/local/src/postgresql/src/bin/psql/psqlscanslash.c:2210:5
+Used: yyrealloc
+Ret. Type: int
+>yy_get_next_buffer,yyscan_t, /usr/local/src/postgresql/src/bin/psql/psqlscanslash.c:2210:5
+Used: yyrealloc
+Ret. Type: int
+>yy_get_next_buffer,yyscan_t, /usr/local/src/postgresql/src/bin/psql/psqlscanslash.c:2260:49
+Used: yyrealloc
+Ret. Type: int
+>yyensure_buffer_stack,yyscan_t, /usr/local/src/postgresql/src/bin/psql/psqlscanslash.c:2650:51
+Used: yyrealloc
+Ret. Type: void
+>yy_get_next_buffer,yyscan_t, /usr/local/src/postgresql/src/backend/utils/adt/jsonpath_scan.c:5038:5
+Used: yyrealloc
+Ret. Type: int
+>yy_get_next_buffer,yyscan_t, /usr/local/src/postgresql/src/backend/utils/adt/jsonpath_scan.c:5038:5
+Used: yyrealloc
+Ret. Type: int
+>yy_get_next_buffer,yyscan_t, /usr/local/src/postgresql/src/backend/utils/adt/jsonpath_scan.c:5088:49
+Used: yyrealloc
+Ret. Type: int
+>yyensure_buffer_stack,yyscan_t, /usr/local/src/postgresql/src/backend/utils/adt/jsonpath_scan.c:5482:51
+Used: yyrealloc
+Ret. Type: void
+>yy_get_next_buffer,yyscan_t, /usr/local/src/postgresql/src/backend/utils/misc/guc-file.c:1320:5
+Used: yyrealloc
+Ret. Type: int
+>yy_get_next_buffer,yyscan_t, /usr/local/src/postgresql/src/backend/utils/misc/guc-file.c:1320:5
+Used: yyrealloc
+Ret. Type: int
+>yy_get_next_buffer,yyscan_t, /usr/local/src/postgresql/src/backend/utils/misc/guc-file.c:1370:49
+Used: yyrealloc
+Ret. Type: int
+>yyensure_buffer_stack,yyscan_t, /usr/local/src/postgresql/src/backend/utils/misc/guc-file.c:1785:51
+Used: yyrealloc
+Ret. Type: void
+>yy_get_next_buffer,yyscan_t, /usr/local/src/postgresql/src/backend/bootstrap/bootscanner.c:1489:5
+Used: yyrealloc
+Ret. Type: int
+>yy_get_next_buffer,yyscan_t, /usr/local/src/postgresql/src/backend/bootstrap/bootscanner.c:1489:5
+Used: yyrealloc
+Ret. Type: int
+>yy_get_next_buffer,yyscan_t, /usr/local/src/postgresql/src/backend/bootstrap/bootscanner.c:1539:49
+Used: yyrealloc
+Ret. Type: int
+>yyensure_buffer_stack,yyscan_t, /usr/local/src/postgresql/src/backend/bootstrap/bootscanner.c:1957:51
+Used: yyrealloc
+Ret. Type: void
+>yy_get_next_buffer,yyscan_t, /usr/local/src/postgresql/src/backend/replication/repl_scanner.c:1731:5
+Used: yyrealloc
+Ret. Type: int
+>yy_get_next_buffer,yyscan_t, /usr/local/src/postgresql/src/backend/replication/repl_scanner.c:1731:5
+Used: yyrealloc
+Ret. Type: int
+>yy_get_next_buffer,yyscan_t, /usr/local/src/postgresql/src/backend/replication/repl_scanner.c:1781:49
+Used: yyrealloc
+Ret. Type: int
+>yyensure_buffer_stack,yyscan_t, /usr/local/src/postgresql/src/backend/replication/repl_scanner.c:2196:51
+Used: yyrealloc
+Ret. Type: void
+>yy_get_next_buffer,yyscan_t, /usr/local/src/postgresql/src/backend/replication/syncrep_scanner.c:1366:5
+Used: yyrealloc
+Ret. Type: int
+>yy_get_next_buffer,yyscan_t, /usr/local/src/postgresql/src/backend/replication/syncrep_scanner.c:1366:5
+Used: yyrealloc
+Ret. Type: int
+>yy_get_next_buffer,yyscan_t, /usr/local/src/postgresql/src/backend/replication/syncrep_scanner.c:1416:49
+Used: yyrealloc
+Ret. Type: int
+>yyensure_buffer_stack,yyscan_t, /usr/local/src/postgresql/src/backend/replication/syncrep_scanner.c:1831:51
+Used: yyrealloc
+Ret. Type: void
+>yy_get_next_buffer,yyscan_t, /usr/local/src/postgresql/src/backend/parser/scan.c:10515:5
+Used: yyrealloc
+Ret. Type: int
+>yy_get_next_buffer,yyscan_t, /usr/local/src/postgresql/src/backend/parser/scan.c:10515:5
+Used: yyrealloc
+Ret. Type: int
+>yy_get_next_buffer,yyscan_t, /usr/local/src/postgresql/src/backend/parser/scan.c:10565:49
+Used: yyrealloc
+Ret. Type: int
+>yyensure_buffer_stack,yyscan_t, /usr/local/src/postgresql/src/backend/parser/scan.c:10959:51
+Used: yyrealloc
+Ret. Type: void
+>yy_get_next_buffer,yyscan_t, /usr/local/src/postgresql/src/fe_utils/psqlscan.c:4276:5
+Used: yyrealloc
+Ret. Type: int
+>yy_get_next_buffer,yyscan_t, /usr/local/src/postgresql/src/fe_utils/psqlscan.c:4276:5
+Used: yyrealloc
+Ret. Type: int
+>yy_get_next_buffer,yyscan_t, /usr/local/src/postgresql/src/fe_utils/psqlscan.c:4326:49
+Used: yyrealloc
+Ret. Type: int
+>yyensure_buffer_stack,yyscan_t, /usr/local/src/postgresql/src/fe_utils/psqlscan.c:4716:51
+Used: yyrealloc
+Ret. Type: void
+>yy_get_next_buffer,yyscan_t, /usr/local/src/postgresql/src/bin/pgbench/exprscan.c:1702:5
+Used: yyrealloc
+Ret. Type: int
+>yy_get_next_buffer,yyscan_t, /usr/local/src/postgresql/src/bin/pgbench/exprscan.c:1702:5
+Used: yyrealloc
+Ret. Type: int
+>yy_get_next_buffer,yyscan_t, /usr/local/src/postgresql/src/bin/pgbench/exprscan.c:1752:49
+Used: yyrealloc
+Ret. Type: int
+>yyensure_buffer_stack,yyscan_t, /usr/local/src/postgresql/src/bin/pgbench/exprscan.c:2167:51
+Used: yyrealloc
+Ret. Type: void
+>yy_get_next_buffer,yyscan_t, /usr/local/src/postgresql/src/bin/psql/psqlscanslash.c:2210:5
+Used: yyrealloc
+Ret. Type: int
+>yy_get_next_buffer,yyscan_t, /usr/local/src/postgresql/src/bin/psql/psqlscanslash.c:2210:5
+Used: yyrealloc
+Ret. Type: int
+>yy_get_next_buffer,yyscan_t, /usr/local/src/postgresql/src/bin/psql/psqlscanslash.c:2260:49
+Used: yyrealloc
+Ret. Type: int
+>yyensure_buffer_stack,yyscan_t, /usr/local/src/postgresql/src/bin/psql/psqlscanslash.c:2650:51
+Used: yyrealloc
+Ret. Type: void
+>yy_get_next_buffer,yyscan_t, /usr/local/src/postgresql/src/backend/utils/adt/jsonpath_scan.c:5038:5
+Used: yyrealloc
+Ret. Type: int
+>yy_get_next_buffer,yyscan_t, /usr/local/src/postgresql/src/backend/utils/adt/jsonpath_scan.c:5038:5
+Used: yyrealloc
+Ret. Type: int
+>yy_get_next_buffer,yyscan_t, /usr/local/src/postgresql/src/backend/utils/adt/jsonpath_scan.c:5088:49
+Used: yyrealloc
+Ret. Type: int
+>yyensure_buffer_stack,yyscan_t, /usr/local/src/postgresql/src/backend/utils/adt/jsonpath_scan.c:5482:51
+Used: yyrealloc
+Ret. Type: void
+>yy_get_next_buffer,yyscan_t, /usr/local/src/postgresql/src/backend/utils/misc/guc-file.c:1320:5
+Used: yyrealloc
+Ret. Type: int
+>yy_get_next_buffer,yyscan_t, /usr/local/src/postgresql/src/backend/utils/misc/guc-file.c:1320:5
+Used: yyrealloc
+Ret. Type: int
+>yy_get_next_buffer,yyscan_t, /usr/local/src/postgresql/src/backend/utils/misc/guc-file.c:1370:49
+Used: yyrealloc
+Ret. Type: int
+>yyensure_buffer_stack,yyscan_t, /usr/local/src/postgresql/src/backend/utils/misc/guc-file.c:1785:51
+Used: yyrealloc
+Ret. Type: void
+>yy_get_next_buffer,yyscan_t, /usr/local/src/postgresql/src/backend/bootstrap/bootscanner.c:1489:5
+Used: yyrealloc
+Ret. Type: int
+>yy_get_next_buffer,yyscan_t, /usr/local/src/postgresql/src/backend/bootstrap/bootscanner.c:1489:5
+Used: yyrealloc
+Ret. Type: int
+>yy_get_next_buffer,yyscan_t, /usr/local/src/postgresql/src/backend/bootstrap/bootscanner.c:1539:49
+Used: yyrealloc
+Ret. Type: int
+>yyensure_buffer_stack,yyscan_t, /usr/local/src/postgresql/src/backend/bootstrap/bootscanner.c:1957:51
+Used: yyrealloc
+Ret. Type: void
+>yy_get_next_buffer,yyscan_t, /usr/local/src/postgresql/src/backend/replication/repl_scanner.c:1731:5
+Used: yyrealloc
+Ret. Type: int
+>yy_get_next_buffer,yyscan_t, /usr/local/src/postgresql/src/backend/replication/repl_scanner.c:1731:5
+Used: yyrealloc
+Ret. Type: int
+>yy_get_next_buffer,yyscan_t, /usr/local/src/postgresql/src/backend/replication/repl_scanner.c:1781:49
+Used: yyrealloc
+Ret. Type: int
+>yyensure_buffer_stack,yyscan_t, /usr/local/src/postgresql/src/backend/replication/repl_scanner.c:2196:51
+Used: yyrealloc
+Ret. Type: void
+>yy_get_next_buffer,yyscan_t, /usr/local/src/postgresql/src/backend/replication/syncrep_scanner.c:1366:5
+Used: yyrealloc
+Ret. Type: int
+>yy_get_next_buffer,yyscan_t, /usr/local/src/postgresql/src/backend/replication/syncrep_scanner.c:1366:5
+Used: yyrealloc
+Ret. Type: int
+>yy_get_next_buffer,yyscan_t, /usr/local/src/postgresql/src/backend/replication/syncrep_scanner.c:1416:49
+Used: yyrealloc
+Ret. Type: int
+>yyensure_buffer_stack,yyscan_t, /usr/local/src/postgresql/src/backend/replication/syncrep_scanner.c:1831:51
+Used: yyrealloc
+Ret. Type: void
+>yy_get_next_buffer,yyscan_t, /usr/local/src/postgresql/src/backend/parser/scan.c:10515:5
+Used: yyrealloc
+Ret. Type: int
+>yy_get_next_buffer,yyscan_t, /usr/local/src/postgresql/src/backend/parser/scan.c:10515:5
+Used: yyrealloc
+Ret. Type: int
+>yy_get_next_buffer,yyscan_t, /usr/local/src/postgresql/src/backend/parser/scan.c:10565:49
+Used: yyrealloc
+Ret. Type: int
+>yyensure_buffer_stack,yyscan_t, /usr/local/src/postgresql/src/backend/parser/scan.c:10959:51
+Used: yyrealloc
+Ret. Type: void
+>yy_get_next_buffer,yyscan_t, /usr/local/src/postgresql/src/fe_utils/psqlscan.c:4276:5
+Used: yyrealloc
+Ret. Type: int
+>yy_get_next_buffer,yyscan_t, /usr/local/src/postgresql/src/fe_utils/psqlscan.c:4276:5
+Used: yyrealloc
+Ret. Type: int
+>yy_get_next_buffer,yyscan_t, /usr/local/src/postgresql/src/fe_utils/psqlscan.c:4326:49
+Used: yyrealloc
+Ret. Type: int
+>yyensure_buffer_stack,yyscan_t, /usr/local/src/postgresql/src/fe_utils/psqlscan.c:4716:51
+Used: yyrealloc
+Ret. Type: void
+>ecpg_store_input,const int, /usr/local/src/postgresql/src/interfaces/ecpg/ecpglib/execute.c:901:22
+Used: ecpg_realloc
+Ret. Type: bool
+>ecpg_store_input,const int, /usr/local/src/postgresql/src/interfaces/ecpg/ecpglib/execute.c:948:22
+Used: ecpg_realloc
+Ret. Type: bool
+>ecpg_store_input,const int, /usr/local/src/postgresql/src/interfaces/ecpg/ecpglib/execute.c:995:22
+Used: ecpg_realloc
+Ret. Type: bool
+>ecpg_store_input,const int, /usr/local/src/postgresql/src/interfaces/ecpg/ecpglib/execute.c:1042:22
+Used: ecpg_realloc
+Ret. Type: bool
+>yy_get_next_buffer,yyscan_t, /usr/local/src/postgresql/src/bin/pgbench/exprscan.c:1702:5
+Used: yyrealloc
+Ret. Type: int
+>yy_get_next_buffer,yyscan_t, /usr/local/src/postgresql/src/bin/pgbench/exprscan.c:1702:5
+Used: yyrealloc
+Ret. Type: int
+>yy_get_next_buffer,yyscan_t, /usr/local/src/postgresql/src/bin/pgbench/exprscan.c:1752:49
+Used: yyrealloc
+Ret. Type: int
+>yyensure_buffer_stack,yyscan_t, /usr/local/src/postgresql/src/bin/pgbench/exprscan.c:2167:51
+Used: yyrealloc
+Ret. Type: void
+>yy_get_next_buffer,yyscan_t, /usr/local/src/postgresql/src/bin/psql/psqlscanslash.c:2210:5
+Used: yyrealloc
+Ret. Type: int
+>yy_get_next_buffer,yyscan_t, /usr/local/src/postgresql/src/bin/psql/psqlscanslash.c:2210:5
+Used: yyrealloc
+Ret. Type: int
+>yy_get_next_buffer,yyscan_t, /usr/local/src/postgresql/src/bin/psql/psqlscanslash.c:2260:49
+Used: yyrealloc
+Ret. Type: int
+>yyensure_buffer_stack,yyscan_t, /usr/local/src/postgresql/src/bin/psql/psqlscanslash.c:2650:51
+Used: yyrealloc
+Ret. Type: void
+>yy_get_next_buffer,yyscan_t, /usr/local/src/postgresql/src/backend/utils/adt/jsonpath_scan.c:5038:5
+Used: yyrealloc
+Ret. Type: int
+>yy_get_next_buffer,yyscan_t, /usr/local/src/postgresql/src/backend/utils/adt/jsonpath_scan.c:5038:5
+Used: yyrealloc
+Ret. Type: int
+>yy_get_next_buffer,yyscan_t, /usr/local/src/postgresql/src/backend/utils/adt/jsonpath_scan.c:5088:49
+Used: yyrealloc
+Ret. Type: int
+>yyensure_buffer_stack,yyscan_t, /usr/local/src/postgresql/src/backend/utils/adt/jsonpath_scan.c:5482:51
+Used: yyrealloc
+Ret. Type: void
+>yy_get_next_buffer,yyscan_t, /usr/local/src/postgresql/src/backend/utils/misc/guc-file.c:1320:5
+Used: yyrealloc
+Ret. Type: int
+>yy_get_next_buffer,yyscan_t, /usr/local/src/postgresql/src/backend/utils/misc/guc-file.c:1320:5
+Used: yyrealloc
+Ret. Type: int
+>yy_get_next_buffer,yyscan_t, /usr/local/src/postgresql/src/backend/utils/misc/guc-file.c:1370:49
+Used: yyrealloc
+Ret. Type: int
+>yyensure_buffer_stack,yyscan_t, /usr/local/src/postgresql/src/backend/utils/misc/guc-file.c:1785:51
+Used: yyrealloc
+Ret. Type: void
+>yy_get_next_buffer,yyscan_t, /usr/local/src/postgresql/src/backend/bootstrap/bootscanner.c:1489:5
+Used: yyrealloc
+Ret. Type: int
+>yy_get_next_buffer,yyscan_t, /usr/local/src/postgresql/src/backend/bootstrap/bootscanner.c:1489:5
+Used: yyrealloc
+Ret. Type: int
+>yy_get_next_buffer,yyscan_t, /usr/local/src/postgresql/src/backend/bootstrap/bootscanner.c:1539:49
+Used: yyrealloc
+Ret. Type: int
+>yyensure_buffer_stack,yyscan_t, /usr/local/src/postgresql/src/backend/bootstrap/bootscanner.c:1957:51
+Used: yyrealloc
+Ret. Type: void
+>yy_get_next_buffer,yyscan_t, /usr/local/src/postgresql/src/backend/replication/repl_scanner.c:1731:5
+Used: yyrealloc
+Ret. Type: int
+>yy_get_next_buffer,yyscan_t, /usr/local/src/postgresql/src/backend/replication/repl_scanner.c:1731:5
+Used: yyrealloc
+Ret. Type: int
+>yy_get_next_buffer,yyscan_t, /usr/local/src/postgresql/src/backend/replication/repl_scanner.c:1781:49
+Used: yyrealloc
+Ret. Type: int
+>yyensure_buffer_stack,yyscan_t, /usr/local/src/postgresql/src/backend/replication/repl_scanner.c:2196:51
+Used: yyrealloc
+Ret. Type: void
+>yy_get_next_buffer,yyscan_t, /usr/local/src/postgresql/src/backend/replication/syncrep_scanner.c:1366:5
+Used: yyrealloc
+Ret. Type: int
+>yy_get_next_buffer,yyscan_t, /usr/local/src/postgresql/src/backend/replication/syncrep_scanner.c:1366:5
+Used: yyrealloc
+Ret. Type: int
+>yy_get_next_buffer,yyscan_t, /usr/local/src/postgresql/src/backend/replication/syncrep_scanner.c:1416:49
+Used: yyrealloc
+Ret. Type: int
+>yyensure_buffer_stack,yyscan_t, /usr/local/src/postgresql/src/backend/replication/syncrep_scanner.c:1831:51
+Used: yyrealloc
+Ret. Type: void
+>yy_get_next_buffer,yyscan_t, /usr/local/src/postgresql/src/backend/parser/scan.c:10515:5
+Used: yyrealloc
+Ret. Type: int
+>yy_get_next_buffer,yyscan_t, /usr/local/src/postgresql/src/backend/parser/scan.c:10515:5
+Used: yyrealloc
+Ret. Type: int
+>yy_get_next_buffer,yyscan_t, /usr/local/src/postgresql/src/backend/parser/scan.c:10565:49
+Used: yyrealloc
+Ret. Type: int
+>yyensure_buffer_stack,yyscan_t, /usr/local/src/postgresql/src/backend/parser/scan.c:10959:51
+Used: yyrealloc
+Ret. Type: void
+>yy_get_next_buffer,yyscan_t, /usr/local/src/postgresql/src/fe_utils/psqlscan.c:4276:5
+Used: yyrealloc
+Ret. Type: int
+>yy_get_next_buffer,yyscan_t, /usr/local/src/postgresql/src/fe_utils/psqlscan.c:4276:5
+Used: yyrealloc
+Ret. Type: int
+>yy_get_next_buffer,yyscan_t, /usr/local/src/postgresql/src/fe_utils/psqlscan.c:4326:49
+Used: yyrealloc
+Ret. Type: int
+>yyensure_buffer_stack,yyscan_t, /usr/local/src/postgresql/src/fe_utils/psqlscan.c:4716:51
+Used: yyrealloc
+Ret. Type: void
+>growalloc,void *, /usr/local/src/postgresql/src/timezone/zic.c:482:9
+Used: erealloc
+Ret. Type: void *

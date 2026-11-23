@@ -1,0 +1,131 @@
+>ReleaseCatCacheListWithOwner,CatCList *, /usr/local/src/postgresql/src/backend/utils/cache/catcache.c:2147:2
+>RelationClearRelation,Relation, /usr/local/src/postgresql/src/backend/utils/cache/relcache.c:2614:1
+>dofindsubquery,QTNode *, /usr/local/src/postgresql/src/backend/utils/adt/tsquery_rewrite.c:230:20
+>findsubquery,QTNode *, /usr/local/src/postgresql/src/backend/utils/adt/tsquery_rewrite.c:271:8
+>clean_NOT_intree,NODE *, /usr/local/src/postgresql/src/backend/utils/adt/tsquery_cleanup.c:146:2
+>clean_NOT_intree,NODE *, /usr/local/src/postgresql/src/backend/utils/adt/tsquery_cleanup.c:156:3
+>clean_stopword_intree,NODE *, /usr/local/src/postgresql/src/backend/utils/adt/tsquery_cleanup.c:262:3
+>clean_stopword_intree,NODE *, /usr/local/src/postgresql/src/backend/utils/adt/tsquery_cleanup.c:300:3
+>plaintree,NODE *, /usr/local/src/postgresql/src/backend/utils/adt/tsquery_cleanup.c:106:2
+>dofindsubquery,QTNode *, /usr/local/src/postgresql/src/backend/utils/adt/tsquery_rewrite.c:243:3
+>findeq,QTNode *, /usr/local/src/postgresql/src/backend/utils/adt/tsquery_rewrite.c:61:4
+>findeq,QTNode *, /usr/local/src/postgresql/src/backend/utils/adt/tsquery_rewrite.c:174:3
+>UnregisterSnapshotNoOwner,Snapshot, /usr/local/src/postgresql/src/backend/utils/time/snapmgr.c:900:2
+>free_placeholder,struct config_generic *, /usr/local/src/postgresql/src/backend/utils/misc/guc.c:5042:1
+>SPI_cursor_close,Portal, /usr/local/src/postgresql/src/backend/executor/spi.c:1887:1
+>list_free,List *, /usr/local/src/postgresql/src/backend/nodes/list.c:1548:1
+>list_free_deep,List *, /usr/local/src/postgresql/src/backend/nodes/list.c:1566:1
+>add_part_relids,Bitmapset *, /usr/local/src/postgresql/src/backend/partitioning/partprune.c:419:20
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:2749:22
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:2755:22
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:2769:22
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:2783:22
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:2799:22
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:2805:22
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:2811:22
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:2833:23
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:2867:23
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:2875:22
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:2881:22
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:2915:23
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:2924:22
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:2928:22
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:2941:23
+>finalize_plan,Bitmapset *, /usr/local/src/postgresql/src/backend/optimizer/plan/subselect.c:2955:5
+>pgpa_qf_add_rtis,Bitmapset *, /usr/local/src/postgresql/contrib/pg_plan_advice/pgpa_walker.c:745:15
+>mark_stmt,Bitmapset *, /usr/local/src/postgresql/src/pl/plpgsql/src/pl_funcs.c:654:3
+>bms_copy_and_free,Bitmapset *, /usr/local/src/postgresql/src/backend/nodes/bitmapset.c:113:1
+>relation_is_updatable,Bitmapset *, /usr/local/src/postgresql/src/backend/rewrite/rewriteHandler.c:3076:21
+>yy_delete_buffer,yyscan_t, /usr/local/src/postgresql/src/bin/pgbench/exprscan.c:2017:2
+>yy_delete_buffer,yyscan_t, /usr/local/src/postgresql/src/bin/pgbench/exprscan.c:2019:1
+>yylex_destroy,yyscan_t, /usr/local/src/postgresql/src/bin/pgbench/exprscan.c:2559:1
+>yy_delete_buffer,yyscan_t, /usr/local/src/postgresql/src/bin/psql/psqlscanslash.c:2500:2
+>yy_delete_buffer,yyscan_t, /usr/local/src/postgresql/src/bin/psql/psqlscanslash.c:2502:1
+>yylex_destroy,yyscan_t, /usr/local/src/postgresql/src/bin/psql/psqlscanslash.c:3042:1
+>yy_delete_buffer,yyscan_t, /usr/local/src/postgresql/src/backend/utils/adt/jsonpath_scan.c:5332:2
+>yy_delete_buffer,yyscan_t, /usr/local/src/postgresql/src/backend/utils/adt/jsonpath_scan.c:5334:1
+>yylex_destroy,yyscan_t, /usr/local/src/postgresql/src/backend/utils/adt/jsonpath_scan.c:5874:1
+>yy_delete_buffer,yyscan_t, /usr/local/src/postgresql/src/backend/utils/misc/guc-file.c:1635:2
+>yy_delete_buffer,yyscan_t, /usr/local/src/postgresql/src/backend/utils/misc/guc-file.c:1637:1
+>yylex_destroy,yyscan_t, /usr/local/src/postgresql/src/backend/utils/misc/guc-file.c:2165:1
+>yy_delete_buffer,yyscan_t, /usr/local/src/postgresql/src/backend/bootstrap/bootscanner.c:1807:2
+>yy_delete_buffer,yyscan_t, /usr/local/src/postgresql/src/backend/bootstrap/bootscanner.c:1809:1
+>yylex_destroy,yyscan_t, /usr/local/src/postgresql/src/backend/bootstrap/bootscanner.c:2349:1
+>yy_delete_buffer,yyscan_t, /usr/local/src/postgresql/src/backend/replication/repl_scanner.c:2046:2
+>yy_delete_buffer,yyscan_t, /usr/local/src/postgresql/src/backend/replication/repl_scanner.c:2048:1
+>yylex_destroy,yyscan_t, /usr/local/src/postgresql/src/backend/replication/repl_scanner.c:2588:1
+>yy_delete_buffer,yyscan_t, /usr/local/src/postgresql/src/backend/replication/syncrep_scanner.c:1681:2
+>yy_delete_buffer,yyscan_t, /usr/local/src/postgresql/src/backend/replication/syncrep_scanner.c:1683:1
+>yylex_destroy,yyscan_t, /usr/local/src/postgresql/src/backend/replication/syncrep_scanner.c:2223:1
+>yy_delete_buffer,yyscan_t, /usr/local/src/postgresql/src/backend/parser/scan.c:10809:2
+>yy_delete_buffer,yyscan_t, /usr/local/src/postgresql/src/backend/parser/scan.c:10811:1
+>yylex_destroy,yyscan_t, /usr/local/src/postgresql/src/backend/parser/scan.c:11363:1
+>yy_delete_buffer,yyscan_t, /usr/local/src/postgresql/src/fe_utils/psqlscan.c:4566:2
+>yy_delete_buffer,yyscan_t, /usr/local/src/postgresql/src/fe_utils/psqlscan.c:4568:1
+>yylex_destroy,yyscan_t, /usr/local/src/postgresql/src/fe_utils/psqlscan.c:5108:1
+>EndCopyTo,CopyToState, /usr/local/src/postgresql/src/backend/commands/copyto.c:1289:1
+>ReorderBufferQueueChange,ReorderBufferChange *, /usr/local/src/postgresql/src/backend/replication/logical/reorderbuffer.c:831:2
+>ReorderBufferCleanupTXN,ReorderBufferTXN *, /usr/local/src/postgresql/src/backend/replication/logical/reorderbuffer.c:1643:1
+>pa_free_worker,ParallelApplyWorkerInfo *, /usr/local/src/postgresql/src/backend/replication/logical/applyparallelworker.c:585:2
+>SnapBuildSnapDecRefcount,Snapshot, /usr/local/src/postgresql/src/backend/replication/logical/snapbuild.c:352:2
+>CleanupBackend,PMChild *, /usr/local/src/postgresql/src/backend/postmaster/postmaster.c:2661:6
+>ReportBackgroundWorkerExit,RegisteredBgWorker *, /usr/local/src/postgresql/src/backend/postmaster/bgworker.c:519:2
+>updateAclDependencies,Oid *, /usr/local/src/postgresql/src/backend/catalog/pg_shdepend.c:498:1
+>updateInitAclDependencies,Oid *, /usr/local/src/postgresql/src/backend/catalog/pg_shdepend.c:518:1
+>InsertPgAttributeTuples,CatalogIndexState, /usr/local/src/postgresql/src/backend/catalog/heap.c:861:2
+>ATExecDropColumn,ObjectAddresses *, /usr/local/src/postgresql/src/backend/commands/tablecmds.c:10126:2
+>create_one_window_path,Path *, /usr/local/src/postgresql/src/backend/optimizer/plan/planner.c:5076:1
+>try_partitionwise_join,SpecialJoinInfo *, /usr/local/src/postgresql/src/backend/optimizer/path/joinrels.c:1872:2
+>ginFinishSplit,GinBtreeStack *, /usr/local/src/postgresql/src/backend/access/gin/ginbtree.c:763:2
+>ginInsertValue,GinBtreeStack *, /usr/local/src/postgresql/src/backend/access/gin/ginbtree.c:831:2
+>ginFinishOldSplit,GinBtreeStack *, /usr/local/src/postgresql/src/backend/access/gin/ginbtree.c:800:1
+>ginInsertValue,GinBtreeStack *, /usr/local/src/postgresql/src/backend/access/gin/ginbtree.c:834:2
+>ExecPrepareTuplestoreResult,TupleDesc, /usr/local/src/postgresql/src/backend/executor/execSRF.c:959:3
+>DecrTupleDescRefCount,TupleDesc, /usr/local/src/postgresql/src/backend/access/common/tupdesc.c:826:2
+>SPI_freetuple,HeapTuple, /usr/local/src/postgresql/src/backend/executor/spi.c:1402:1
+>rewrite_heap_tuple,HeapTuple, /usr/local/src/postgresql/src/backend/access/heap/rewriteheap.c:502:5
+>rewrite_heap_tuple,HeapTuple, /usr/local/src/postgresql/src/backend/access/heap/rewriteheap.c:537:3
+>index_endscan,IndexScanDesc, /usr/local/src/postgresql/src/backend/access/index/indexam.c:416:1
+>psql_end_command,StringInfo, /usr/local/src/postgresql/src/test/regress/pg_regress.c:1196:1
+>audit_attempt,char *, /usr/local/src/postgresql/src/test/modules/test_oat_hooks/test_oat_hooks.c:260:1
+>audit_failure,char *, /usr/local/src/postgresql/src/test/modules/test_oat_hooks/test_oat_hooks.c:272:1
+>audit_success,char *, /usr/local/src/postgresql/src/test/modules/test_oat_hooks/test_oat_hooks.c:266:1
+>pushf_free_all,PushFilter *, /usr/local/src/postgresql/contrib/pgcrypto/mbuf.c:418:2
+>pgpa_walk_recursively,pgpa_join_unroller *, /usr/local/src/postgresql/contrib/pg_plan_advice/pgpa_walker.c:458:2
+>report_corruption,char *, /usr/local/src/postgresql/contrib/amcheck/verify_heapam.c:955:1
+>report_toast_corruption,char *, /usr/local/src/postgresql/contrib/amcheck/verify_heapam.c:972:1
+>compile_database_list,PGconn *, /usr/local/src/postgresql/src/bin/pg_amcheck/pg_amcheck.c:1692:7
+>buildShSecLabels,PGconn *, /usr/local/src/postgresql/src/bin/pg_dump/pg_dumpall.c:1791:7
+>dropDBs,PGconn *, /usr/local/src/postgresql/src/bin/pg_dump/pg_dumpall.c:1500:7
+>dropRoles,PGconn *, /usr/local/src/postgresql/src/bin/pg_dump/pg_dumpall.c:800:7
+>dropTablespaces,PGconn *, /usr/local/src/postgresql/src/bin/pg_dump/pg_dumpall.c:1361:7
+>dumpDatabases,PGconn *, /usr/local/src/postgresql/src/bin/pg_dump/pg_dumpall.c:1649:7
+>dumpRoleGUCPrivs,PGconn *, /usr/local/src/postgresql/src/bin/pg_dump/pg_dumpall.c:1305:7
+>dumpRoleMembership,PGconn *, /usr/local/src/postgresql/src/bin/pg_dump/pg_dumpall.c:1090:7
+>dumpRoles,PGconn *, /usr/local/src/postgresql/src/bin/pg_dump/pg_dumpall.c:885:7
+>dumpTablespaces,PGconn *, /usr/local/src/postgresql/src/bin/pg_dump/pg_dumpall.c:1396:7
+>dumpUserConfig,PGconn *, /usr/local/src/postgresql/src/bin/pg_dump/pg_dumpall.c:1550:7
+>expand_dbname_patterns,PGconn *, /usr/local/src/postgresql/src/bin/pg_dump/pg_dumpall.c:1616:8
+>retrieve_objects,PGconn *, /usr/local/src/postgresql/src/bin/scripts/vacuuming.c:798:7
+>get_parallel_tabidx_list,PGconn *, /usr/local/src/postgresql/src/bin/scripts/reindexdb.c:815:7
+>get_parallel_tables_list,PGconn *, /usr/local/src/postgresql/src/bin/scripts/reindexdb.c:706:7
+>check_and_drop_existing_subscriptions,PGconn *, /usr/local/src/postgresql/src/bin/pg_basebackup/pg_createsubscriber.c:1326:2
+>check_and_drop_publications,PGconn *, /usr/local/src/postgresql/src/bin/pg_basebackup/pg_createsubscriber.c:1945:3
+>create_publication,PGconn *, /usr/local/src/postgresql/src/bin/pg_basebackup/pg_createsubscriber.c:1816:2
+>create_publication,PGconn *, /usr/local/src/postgresql/src/bin/pg_basebackup/pg_createsubscriber.c:1830:2
+>create_publication,PGconn *, /usr/local/src/postgresql/src/bin/pg_basebackup/pg_createsubscriber.c:1855:3
+>create_subscription,PGconn *, /usr/local/src/postgresql/src/bin/pg_basebackup/pg_createsubscriber.c:2029:3
+>drop_existing_subscription,PGconn *, /usr/local/src/postgresql/src/bin/pg_basebackup/pg_createsubscriber.c:1291:3
+>enable_subscription,PGconn *, /usr/local/src/postgresql/src/bin/pg_basebackup/pg_createsubscriber.c:2171:3
+>find_publication,PGconn *, /usr/local/src/postgresql/src/bin/pg_basebackup/pg_createsubscriber.c:847:2
+>generate_object_name,PGconn *, /usr/local/src/postgresql/src/bin/pg_basebackup/pg_createsubscriber.c:799:2
+>generate_object_name,PGconn *, /usr/local/src/postgresql/src/bin/pg_basebackup/pg_createsubscriber.c:806:2
+>server_is_in_recovery,PGconn *, /usr/local/src/postgresql/src/bin/pg_basebackup/pg_createsubscriber.c:966:2
+>set_replication_progress,PGconn *, /usr/local/src/postgresql/src/bin/pg_basebackup/pg_createsubscriber.c:2074:2
+>set_replication_progress,PGconn *, /usr/local/src/postgresql/src/bin/pg_basebackup/pg_createsubscriber.c:2081:2
+>set_replication_progress,PGconn *, /usr/local/src/postgresql/src/bin/pg_basebackup/pg_createsubscriber.c:2124:3
+>compile_database_list,PGconn *, /usr/local/src/postgresql/src/bin/pg_amcheck/pg_amcheck.c:1697:2
+>compile_database_list,PGconn *, /usr/local/src/postgresql/src/bin/pg_amcheck/pg_amcheck.c:1751:3
+>ParallelSlotsAdoptConn,PGconn *, /usr/local/src/postgresql/src/fe_utils/parallel_slot.c:467:2
+>test_nosync,PGconn *, /usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:689:3
+>test_pipelined_insert,PGconn *, /usr/local/src/postgresql/src/test/modules/libpq_pipeline/libpq_pipeline.c:1073:3

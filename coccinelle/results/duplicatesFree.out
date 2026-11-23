@@ -1,0 +1,23 @@
+>executeQuery,PGconn *, /usr/local/src/postgresql/src/bin/pg_dump/connectdb.c
+>pfree,void *, /usr/local/src/postgresql/src/common/fe_memutils.c
+>yy_delete_buffer,yyscan_t, /usr/local/src/postgresql/src/backend/bootstrap/bootscanner.c
+>yy_delete_buffer,yyscan_t, /usr/local/src/postgresql/src/backend/parser/scan.c
+>yy_delete_buffer,yyscan_t, /usr/local/src/postgresql/src/backend/replication/repl_scanner.c
+>yy_delete_buffer,yyscan_t, /usr/local/src/postgresql/src/backend/replication/syncrep_scanner.c
+>yy_delete_buffer,yyscan_t, /usr/local/src/postgresql/src/backend/utils/adt/jsonpath_scan.c
+>yy_delete_buffer,yyscan_t, /usr/local/src/postgresql/src/backend/utils/misc/guc-file.c
+>yy_delete_buffer,yyscan_t, /usr/local/src/postgresql/src/bin/pgbench/exprscan.c
+>yy_delete_buffer,yyscan_t, /usr/local/src/postgresql/src/bin/psql/psqlscanslash.c
+>yy_delete_buffer,yyscan_t, /usr/local/src/postgresql/src/fe_utils/psqlscan.c
+>yyfree,void *, /usr/local/src/postgresql/src/backend/bootstrap/bootscanner.c
+>yyfree,void *, /usr/local/src/postgresql/src/backend/replication/repl_scanner.c
+>yyfree,void *, /usr/local/src/postgresql/src/backend/replication/syncrep_scanner.c
+>yylex_destroy,yyscan_t, /usr/local/src/postgresql/src/backend/bootstrap/bootscanner.c
+>yylex_destroy,yyscan_t, /usr/local/src/postgresql/src/backend/parser/scan.c
+>yylex_destroy,yyscan_t, /usr/local/src/postgresql/src/backend/replication/repl_scanner.c
+>yylex_destroy,yyscan_t, /usr/local/src/postgresql/src/backend/replication/syncrep_scanner.c
+>yylex_destroy,yyscan_t, /usr/local/src/postgresql/src/backend/utils/adt/jsonpath_scan.c
+>yylex_destroy,yyscan_t, /usr/local/src/postgresql/src/backend/utils/misc/guc-file.c
+>yylex_destroy,yyscan_t, /usr/local/src/postgresql/src/bin/pgbench/exprscan.c
+>yylex_destroy,yyscan_t, /usr/local/src/postgresql/src/bin/psql/psqlscanslash.c
+>yylex_destroy,yyscan_t, /usr/local/src/postgresql/src/fe_utils/psqlscan.c

@@ -1,0 +1,27 @@
+>jsonpath_yyrealloc,void *, /usr/local/src/postgresql/src/backend/utils/adt/jsonpath_scan.c:6307:9
+>jsonpath_yyrealloc,yy_size_t, /usr/local/src/postgresql/src/backend/utils/adt/jsonpath_scan.c:6307:9
+>xml_repalloc,size_t, /usr/local/src/postgresql/src/backend/utils/adt/xml.c:2015:8
+>xml_repalloc,void *, /usr/local/src/postgresql/src/backend/utils/adt/xml.c:2015:8
+>repalloc0,void *, /usr/local/src/postgresql/src/backend/utils/mmgr/mcxt.c:1723:7
+>repalloc0,Size, /usr/local/src/postgresql/src/backend/utils/mmgr/mcxt.c:1723:7
+>repalloc_mul,void *, /usr/local/src/postgresql/src/backend/utils/mmgr/mcxt.c:1836:8
+>bms_add_member,Bitmapset *, /usr/local/src/postgresql/src/backend/nodes/bitmapset.c:820:20
+>bms_add_range,Bitmapset *, /usr/local/src/postgresql/src/backend/nodes/bitmapset.c:1039:20
+>bms_replace_members,Bitmapset *, /usr/local/src/postgresql/src/backend/nodes/bitmapset.c:972:20
+>yyrealloc,void *, /usr/local/src/postgresql/src/backend/bootstrap/bootscanner.c:2424:9
+>yyrealloc,yy_size_t, /usr/local/src/postgresql/src/backend/bootstrap/bootscanner.c:2424:9
+>SetConstraintStateAddItem,SetConstraintState, /usr/local/src/postgresql/src/backend/commands/trigger.c:5761:3
+>yyrealloc,void *, /usr/local/src/postgresql/src/backend/replication/repl_scanner.c:2752:9
+>yyrealloc,yy_size_t, /usr/local/src/postgresql/src/backend/replication/repl_scanner.c:2752:9
+>ReorderBufferSerializeReserve,Size, /usr/local/src/postgresql/src/backend/replication/logical/reorderbuffer.c:3921:15
+>yyrealloc,void *, /usr/local/src/postgresql/src/backend/replication/syncrep_scanner.c:2342:9
+>yyrealloc,yy_size_t, /usr/local/src/postgresql/src/backend/replication/syncrep_scanner.c:2342:9
+>addCompiledLexeme,TheLexeme *, /usr/local/src/postgresql/src/backend/tsearch/dict_thesaurus.c:309:26
+>SPI_repalloc,void *, /usr/local/src/postgresql/src/backend/executor/spi.c:1370:8
+>SPI_repalloc,Size, /usr/local/src/postgresql/src/backend/executor/spi.c:1370:8
+>brin_copy_tuple,BrinTuple *, /usr/local/src/postgresql/src/backend/access/brin/brin_tuple.c:452:9
+>brin_copy_tuple,Size, /usr/local/src/postgresql/src/backend/access/brin/brin_tuple.c:452:9
+>core_yyrealloc,void *, /usr/local/src/postgresql/src/backend/parser/scan.c:11739:9
+>core_yyrealloc,yy_size_t, /usr/local/src/postgresql/src/backend/parser/scan.c:11739:9
+>repalloc_mul,void *, /usr/local/src/postgresql/src/common/fe_memutils.c:362:8
+>resize_intArrayType,ArrayType *, /usr/local/src/postgresql/contrib/intarray/_int_tool.c:270:19
